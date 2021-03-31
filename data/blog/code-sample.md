@@ -1,7 +1,7 @@
 ---
 title: Sample .md file
-date: '2016-03-08'
-tags: ['markdown', 'code', 'features']
+date: "2016-03-08"
+tags: ["markdown", "code", "features"]
 draft: false
 summary: Example of a markdown file with code blocks and syntax highlighting
 ---
@@ -18,10 +18,10 @@ Some Javascript code
 
 ```javascript
 var num1, num2, sum
-num1 = prompt('Enter first number')
-num2 = prompt('Enter second number')
+num1 = prompt("Enter first number")
+num2 = prompt("Enter second number")
 sum = parseInt(num1) + parseInt(num2) // "+" means "add"
-alert('Sum = ' + sum) // "+" means combine into a string
+alert("Sum = " + sum) // "+" means combine into a string
 ```
 
 Some Python code 🐍

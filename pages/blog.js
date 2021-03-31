@@ -1,10 +1,10 @@
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
-import { PageSeo } from '@/components/SEO'
+import { getAllFilesFrontMatter } from "@/lib/mdx"
+import siteMetadata from "@/data/siteMetadata"
+import ListLayout from "@/layouts/ListLayout"
+import { PageSeo } from "@/components/SEO"
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter("blog")
 
   return { props: { posts } }
 }

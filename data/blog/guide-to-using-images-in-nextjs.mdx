@@ -1,9 +1,9 @@
 ---
 title: Images in Next.js
-date: '2020-11-11'
-tags: ['next js', 'guide']
+date: "2020-11-11"
+tags: ["next js", "guide"]
 draft: false
-summary: 'In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component.'
+summary: "In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component."
 ---
 
 # Introduction
@@ -15,13 +15,18 @@ The tailwind starter blog has out of the box support for [Next.js's built-in ima
 To use in a new page route / javascript file, simply import the image component and call it e.g.
 
 ```js
-import Image from 'next/image'
+import Image from "next/image"
 
 function Home() {
   return (
     <>
       <h1>My Homepage</h1>
-      <Image src="/me.png" alt="Picture of the author" width={500} height={500} />
+      <Image
+        src="/me.png"
+        alt="Picture of the author"
+        width={500}
+        height={500}
+      />
       <p>Welcome to my homepage!</p>
     </>
   )
@@ -49,11 +54,11 @@ _Note_: If you try to save the image, it is in webp format, if your browser supp
 ![ocean](/static/images/ocean.jpeg)
 
 <p>
-  Photo by{' '}
+  Photo by{" "}
   <a href="https://unsplash.com/@yucar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
     YUCAR FotoGrafik
-  </a>{' '}
-  on{' '}
+  </a>{" "}
+  on{" "}
   <a href="https://unsplash.com/s/photos/sea?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
     Unsplash
   </a>

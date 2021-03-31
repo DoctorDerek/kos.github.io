@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
+import { useState } from "react"
+import Link from "./Link"
+import headerNavLinks from "@/data/headerNavLinks"
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -8,10 +8,10 @@ const MobileNav = () => {
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = "auto"
       } else {
         // Prevent scrolling
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = "hidden"
       }
       return !status
     })
@@ -48,7 +48,7 @@ const MobileNav = () => {
       </button>
       <div
         className={`fixed w-full h-full top-24 right-0 bg-gray-200 dark:bg-gray-800 opacity-95 z-10 transform ease-in-out duration-300 ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
+          navShow ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button

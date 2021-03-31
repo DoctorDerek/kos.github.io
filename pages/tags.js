@@ -1,12 +1,12 @@
-import siteMetadata from '@/data/siteMetadata'
-import { kebabCase } from '@/lib/utils'
-import { getAllTags } from '@/lib/tags'
-import Tag from '@/components/Tag'
-import Link from '@/components/Link'
-import { PageSeo } from '@/components/SEO'
+import siteMetadata from "@/data/siteMetadata"
+import { kebabCase } from "@/lib/utils"
+import { getAllTags } from "@/lib/tags"
+import Tag from "@/components/Tag"
+import Link from "@/components/Link"
+import { PageSeo } from "@/components/SEO"
 
 export async function getStaticProps() {
-  const tags = await getAllTags('blog')
+  const tags = await getAllTags("blog")
 
   return { props: { tags } }
 }
@@ -27,7 +27,7 @@ export default function Tags({ tags }) {
           </h1>
         </div>
         <div className="flex flex-wrap max-w-lg">
-          {Object.keys(tags).length === 0 && 'No tags found.'}
+          {Object.keys(tags).length === 0 && "No tags found."}
           {sortedTags.map((t) => {
             return (
               <div key={t} className="mt-2 mb-2 mr-5">
