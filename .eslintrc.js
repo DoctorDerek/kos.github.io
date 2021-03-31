@@ -35,7 +35,6 @@ module.exports = {
       },
     ],
     'react/prop-types': 0,
-    'no-unused-vars': 0,
     'react/no-unescaped-entities': 0,
   },
 }
