@@ -49,7 +49,6 @@ export default function Home({ posts }) {
 
   return (
     <>
-      <Slideshow />
       <div className="slider-wrapper theme-default">
         <canvas id="sea" />
         <div id="htmlcaption1" className="nivo-caption">
