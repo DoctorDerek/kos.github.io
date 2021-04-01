@@ -41,54 +41,6 @@ class MyDocument extends Document {
         <body className="home">
           <Main />
           <NextScript />
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.jquery }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.bootstrap }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.nivo }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.slick }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.magnific }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.waypoints }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.count }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.form }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.validate }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.custom }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.accessibility }}
-          ></script>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.theWeatherNetwork }}
-          ></script>
         </body>
       </Html>
     )
