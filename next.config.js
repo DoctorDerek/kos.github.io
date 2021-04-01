@@ -6,6 +6,9 @@ const fs = require("fs")
 
 module.exports = withBundleAnalyzer({
   env: {
+    googleAnalytics: fs
+      .readFileSync("./public/js/googleAnalytics.js")
+      .toString(),
     jquery: fs.readFileSync("./public/js/jquery.js").toString(),
     bootstrap: fs
       .readFileSync("./public/js/plugins/bootstrap.min.js")
@@ -28,6 +31,9 @@ module.exports = withBundleAnalyzer({
     custom: fs.readFileSync("./public/js/custom.js").toString(),
     accessibility: fs
       .readFileSync("./public/js/accessibilitymenu.js")
+      .toString(),
+    theWeatherNetwork: fs
+      .readFileSync("./public/js/theWeatherNetwork.js")
       .toString(),
   },
   pageExtensions: ["js", "jsx", "md", "mdx"],

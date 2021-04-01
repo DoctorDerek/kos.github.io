@@ -1,13 +1,14 @@
+/*
 import Link from "@/components/Link"
 import { PageSeo } from "@/components/SEO"
 import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata"
-import { getAllFilesFrontMatter } from "@/lib/mdx"
-
-import Slideshow from "@/components/Slideshow"
-
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
+*/
+import { getAllFilesFrontMatter } from "@/lib/mdx"
+
+//import Slideshow from "@/components/Slideshow"
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog")
@@ -34,7 +35,8 @@ const useScript = (url) => {
 }
 */
 
-export default function Home({ posts }) {
+//export default function Home({ posts }) {
+export default function Home() {
   /*  useScript("js/jquery.js")
   useScript("js/plugins/bootstrap.min.js")
   useScript("js/plugins/jquery.nivo.slider.js")
@@ -50,7 +52,21 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="slider-wrapper theme-default">
-        <canvas id="sea" />
+        <div id="slider" className="nivoSlider">
+          <img
+            src="images/slider/slide1.jpg"
+            title="#htmlcaption1"
+            data-thumb="images/slider/slide1.jpg"
+            alt=""
+          />
+          <img
+            src="images/slider/slide2.jpg"
+            title="#htmlcaption2"
+            data-thumb="images/slider/slide2.jpg"
+            alt=""
+          />
+        </div>
+        <canvas id="sea"></canvas>
         <div id="htmlcaption1" className="nivo-caption">
           <div className="vert-wrapper">
             <div className="vert">
@@ -988,39 +1004,39 @@ export default function Home({ posts }) {
                         <em style={{ fontWeight: 100 }}>Chalk Well Drilling</em>
                       </div>
                     </div>
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
-                        <p>
-                          Limestone Property Management has been a customer of
-                          KOS since 2001.&nbsp; We’re very pleased with their
-                          fast, friendly and courteous service.&nbsp; We’re
-                          happy with the services that we have with them, and
-                          enjoy partnering with a local company that works hard
-                          to support the communities they work in.&nbsp; I would
-                          highly recommend that you make KOS your first call if
-                          you are looking for internet service options.
-                        </p>
-                      </div>
-                      <div className="testimonials-username">
-                        Jason Ruffolo,
-                        <em style={{ fontWeight: 100 }}>
-                          Limestone Property Management (President)
-                        </em>
-                      </div>
+                  </div>
+                  <div className="testimonials-item">
+                    <div className="testimonials-text">
+                      <p>
+                        Limestone Property Management has been a customer of KOS
+                        since 2001.&nbsp; We’re very pleased with their fast,
+                        friendly and courteous service.&nbsp; We’re happy with
+                        the services that we have with them, and enjoy
+                        partnering with a local company that works hard to
+                        support the communities they work in.&nbsp; I would
+                        highly recommend that you make KOS your first call if
+                        you are looking for internet service options.
+                      </p>
                     </div>
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
-                        <p>
-                          We love K.O.S.! We wanted something local, reliable
-                          and affordable with no hidden surprises on our bill
-                          each month. Kingston Online Services provided all of
-                          that and more including fabulous customer service!
-                        </p>
-                      </div>
-                      <div className="testimonials-username">
-                        Kim and Jim Long,
-                        <em style={{ fontWeight: 100 }}>Must Love Chocolate</em>
-                      </div>
+                    <div className="testimonials-username">
+                      Jason Ruffolo,
+                      <em style={{ fontWeight: 100 }}>
+                        Limestone Property Management (President)
+                      </em>
+                    </div>
+                  </div>
+                  <div className="testimonials-item">
+                    <div className="testimonials-text">
+                      <p>
+                        We love K.O.S.! We wanted something local, reliable and
+                        affordable with no hidden surprises on our bill each
+                        month. Kingston Online Services provided all of that and
+                        more including fabulous customer service!
+                      </p>
+                    </div>
+                    <div className="testimonials-username">
+                      Kim and Jim Long,
+                      <em style={{ fontWeight: 100 }}>Must Love Chocolate</em>
                     </div>
                   </div>
                 </div>
@@ -1092,19 +1108,19 @@ export default function Home({ posts }) {
               <a href="http://www.theweathernetwork.com">The Weather Network</a>
             </div>
             <div className="copyright">
-              Copyright © KOS - 2021 |
+              Copyright © KOS - 2021 |{" "}
               <a style={{ color: "#ffffff" }} href="/policies/">
                 KOS Policies
-              </a>
-              {"{"}" "{"}"}|
+              </a>{" "}
+              |{" "}
               <a style={{ color: "#ffffff" }} href="/tac/">
                 Terms and Conditions
-              </a>
-              {"{"}" "{"}"}|
+              </a>{" "}
+              |{" "}
               <a style={{ color: "#ffffff" }} href="/e911">
                 e911
-              </a>
-              {"{"}" "{"}"}|
+              </a>{" "}
+              |{" "}
               <a style={{ color: "#ffffff" }} href="/wst/">
                 Personal Web Space TAC
               </a>
@@ -1112,43 +1128,43 @@ export default function Home({ posts }) {
               <div align="center">
                 <span style={{ color: "#ffffff" }}>
                   <strong>Serving Eastern Ontario:</strong>
-                </span>
+                </span>{" "}
                 <a
                   style={{ color: "#fff" }}
                   href="/kingston-internet-services/"
                 >
                   Kingston
-                </a>
-                |
+                </a>{" "}
+                |{" "}
                 <a
                   style={{ color: "#fff" }}
                   href="/gananoque-internet-services/"
                 >
                   Gananoque
-                </a>
-                |
+                </a>{" "}
+                |{" "}
                 <a style={{ color: "#fff" }} href="/picton-internet-services/">
                   Picton
-                </a>
-                |
+                </a>{" "}
+                |{" "}
                 <a
                   style={{ color: "#fff" }}
                   href="/brighton-internet-services/"
                 >
                   Brighton
-                </a>
-                |
+                </a>{" "}
+                |{" "}
                 <a style={{ color: "#fff" }} href="/trenton-internet-services/">
                   Trenton
-                </a>
-                |
+                </a>{" "}
+                |{" "}
                 <a
                   style={{ color: "#fff" }}
                   href="/belleville-internet-services/"
                 >
-                  Belleville{"{"}" "{"}"}
-                </a>
-                |
+                  Belleville
+                </a>{" "}
+                |{" "}
                 <a style={{ color: "#fff" }} href="/napanee-internet-services/">
                   Napanee
                 </a>
@@ -1161,6 +1177,7 @@ export default function Home({ posts }) {
                     className="icon icon-social-facebook"
                     href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
                     target="_blank"
+                    rel="noreferrer"
                   />
                 </li>
               </ul>
