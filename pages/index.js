@@ -4,6 +4,8 @@ import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata"
 import { getAllFilesFrontMatter } from "@/lib/mdx"
 
+import Slideshow from "@/components/Slideshow"
+
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
 
@@ -13,6 +15,7 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
+/*
 import { useEffect } from "react"
 
 const useScript = (url) => {
@@ -29,6 +32,7 @@ const useScript = (url) => {
     }
   }, [url])
 }
+*/
 
 export default function Home({ posts }) {
   /*  useScript("js/jquery.js")
@@ -45,21 +49,8 @@ export default function Home({ posts }) {
 
   return (
     <>
+      <Slideshow />
       <div className="slider-wrapper theme-default">
-        <div id="slider" className="nivoSlider">
-          <img
-            src="images/slider/slide1.jpg"
-            title="#htmlcaption1"
-            data-thumb="images/slider/slide1.jpg"
-            alt=""
-          />
-          <img
-            src="images/slider/slide2.jpg"
-            title="#htmlcaption2"
-            data-thumb="images/slider/slide2.jpg"
-            alt=""
-          />
-        </div>
         <canvas id="sea" />
         <div id="htmlcaption1" className="nivo-caption">
           <div className="vert-wrapper">
