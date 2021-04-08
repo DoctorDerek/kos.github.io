@@ -55,16 +55,16 @@ export default function Home() {
             src="images/slider/slide1.jpg"
             title="#htmlcaption1"
             data-thumb="images/slider/slide1.jpg"
-            alt=""
+            alt
           />
           <img
             src="images/slider/slide2.jpg"
             title="#htmlcaption2"
             data-thumb="images/slider/slide2.jpg"
-            alt=""
+            alt
           />
         </div>
-        <canvas id="sea"></canvas>
+        <canvas id="sea" />
         <div id="htmlcaption1" className="nivo-caption">
           <div className="vert-wrapper">
             <div className="vert">
@@ -81,7 +81,10 @@ export default function Home() {
                 </strong>
               </div>
               <div className="text text3">
-                <a href="/order/" className="btn btn-orange">
+                <a
+                  href="/order/"
+                  className="!mt-10 text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase transition-all duration-300 no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl border:none"
+                >
                   Get connected!
                 </a>
               </div>
@@ -104,7 +107,10 @@ export default function Home() {
                 </strong>
               </div>
               <div className="text text3">
-                <a href="/order/" className="btn btn-orange">
+                <a
+                  href="/order/"
+                  className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+                >
                   Get connected!
                 </a>
               </div>
@@ -113,10 +119,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block">
-        <div className="container">
-          <div className="row services-carousel">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap justify-between services-carousel">
             <div
-              className="col-sm-6 animation"
+              className="pl-4 pr-4 sm:w-1/2 animation"
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
@@ -127,7 +133,7 @@ export default function Home() {
                     src="/assets/images/home/icon-home.png"
                     width={196}
                     height={196}
-                    alt=""
+                    alt
                   />
                 </a>
                 <div className="service-title">
@@ -142,7 +148,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="col-sm-6 animation"
+              className="pl-4 pr-4 sm:w-1/2 animation"
               data-animation="fadeInUp"
               data-animation-delay="0s"
             >
@@ -153,7 +159,7 @@ export default function Home() {
                     src="/assets/images/home/icon-business.png"
                     width={196}
                     height={196}
-                    alt=""
+                    alt
                   />
                 </a>
                 <div className="service-title">
@@ -171,10 +177,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block bottom-sm-margin">
-        <div className="container">
-          <h2 className="text-center decor color">Internet Packages</h2>
-          <div className="row category-carousel">
-            <div className="col-sm-6 col-md-4">
+        <div className="container mx-auto">
+          <h2 className="text-center decor flex-growor">Internet Packages</h2>
+          <div className="flex flex-wrap category-carousel">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <a
                 href="/res/high-speed-cable/"
                 className="category-item animation"
@@ -184,7 +190,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/cable.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -206,13 +212,13 @@ export default function Home() {
                   Surf, shop, stream music. Stay connected with family and
                   friends.
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
             </div>
             <div
-              className="col-sm-6 col-md-4 animation"
+              className="pl-4 pr-4 sm:w-1/2 md:w-1/3 animation"
               data-animation="fadeIn"
               data-animation-delay="0s"
             >
@@ -220,7 +226,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/wireless.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -241,13 +247,13 @@ export default function Home() {
                 <div className="category-text">
                   High speed rural internet at a price that suits your needs.
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
             </div>
             <div
-              className="col-sm-6 col-md-4 animation"
+              className="pl-4 pr-4 sm:w-1/2 md:w-1/3 animation"
               data-animation="fadeInRight"
               data-animation-delay="0s"
             >
@@ -255,7 +261,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/dsl.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -276,12 +282,12 @@ export default function Home() {
                 <div className="category-text">
                   High speed internet plans beginning at only $26.95 / month!
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <a
                 href="/res/voip/"
                 className="category-item animation"
@@ -291,7 +297,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/voip.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -313,12 +319,12 @@ export default function Home() {
                   Premium phone service over your high speed internet
                   connection.
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <a
                 href="/res/mail/"
                 className="category-item animation"
@@ -328,7 +334,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/mail.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -350,12 +356,12 @@ export default function Home() {
                   Excellent, dynamic e-mail service with automatic spam and
                   virus protection.
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <a
                 href="/hosting/packages/"
                 className="category-item animation"
@@ -365,7 +371,7 @@ export default function Home() {
                 <div className="category-image">
                   <img
                     src="/assets/images/hosting.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                   />
                   <h5 className="category-title">
@@ -387,7 +393,7 @@ export default function Home() {
                   A variety of options for getting your information out onto the
                   Internet in style.
                   <span className="category-more-link">
-                    <span className="icon icon-right-arrow" />
+                    <span className="flex-wrap icon icon-right-arrow" />
                   </span>
                 </div>
               </a>
@@ -396,7 +402,7 @@ export default function Home() {
         </div>
       </div>
       <div className="block bg-2">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="pricing">
             <div className="pricing-box">
               <div className="inside">
@@ -415,7 +421,10 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="price-action">
-                      <a href="/order/" className="btn btn-orange">
+                      <a
+                        href="/order/"
+                        className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+                      >
                         Order now
                       </a>
                     </div>
@@ -437,7 +446,10 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="price-action">
-                      <a href="/order/" className="btn btn-orange">
+                      <a
+                        href="/order/"
+                        className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+                      >
                         Order now
                       </a>
                     </div>
@@ -459,7 +471,10 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="price-action">
-                      <a href="/order/" className="btn btn-orange">
+                      <a
+                        href="/order/"
+                        className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+                      >
                         Order now
                       </a>
                     </div>
@@ -471,10 +486,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block bottom-sm-margin">
-        <div className="container">
-          <h2 className="text-center decor color">Why choose us?</h2>
-          <div className="row text-icon-carousel step-animation-container">
-            <div className="col-sm-4">
+        <div className="container mx-auto">
+          <h2 className="text-center decor flex-growor">Why choose us?</h2>
+          <div className="flex flex-wrap text-icon-carousel step-animation-container">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -492,7 +507,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -510,7 +525,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -530,7 +545,7 @@ export default function Home() {
               </div>
             </div>
             <div className="clearfix hidden-xs" />
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -548,7 +563,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -568,7 +583,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div
                 className="text-icon step-animation"
                 data-animation="fadeInUp"
@@ -590,10 +605,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block bg-1">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="text-center decor decor-white">Let's Get Started</h2>
-          <div className="row">
-            <div className="col-sm-6">
+          <div className="flex flex-wrap lg:flex-nowrap">
+            <div className="pl-4 pr-4 sm:w-1/2">
               <div
                 className="text-num step-animation"
                 data-animation="fadeInLeft"
@@ -653,7 +668,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
+            <div className="pl-4 pr-4 sm:w-1/2">
               <p>
                 You have choices when it comes to internet. Switching to KOS is
                 quick and easy to do. Fill in the form below and get connected
@@ -832,7 +847,10 @@ export default function Home() {
                   placeholder="Message:"
                   defaultValue={""}
                 />
-                <button type="submit" className="btn btn-orange">
+                <button
+                  type="submit"
+                  className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+                >
                   GET STARTED
                 </button>
               </form>
@@ -841,10 +859,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block bottom-sm-margin">
-        <div className="container">
-          <h2 className="text-center decor color">News and Events</h2>
-          <div className="row news-item-row">
-            <div className="col-sm-6 col-md-4">
+        <div className="container mx-auto">
+          <h2 className="text-center decor flex-growor">News and Events</h2>
+          <div className="flex flex-wrap news-item-row">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
                 className="news-item animation"
                 data-animation="fadeInLeft"
@@ -853,7 +871,7 @@ export default function Home() {
                 <div className="news-item-image">
                   <img
                     src="/assets/images/news/logo.png"
-                    alt=""
+                    alt
                     className="img-responsive"
                     style={{ maxHeight: 230, width: "100%" }}
                   />
@@ -874,13 +892,13 @@ export default function Home() {
                   </p>
                   <span className="news-item-more-link">
                     <a href="/news/events/#57">
-                      <span className="icon icon-right-arrow" />
+                      <span className="flex-wrap icon icon-right-arrow" />
                     </a>
                   </span>
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
                 className="news-item animation"
                 data-animation="fadeInLeft"
@@ -889,7 +907,7 @@ export default function Home() {
                 <div className="news-item-image">
                   <img
                     src="/assets/images/news/logo.png"
-                    alt=""
+                    alt
                     className="img-responsive"
                     style={{ maxHeight: 230, width: "100%" }}
                   />
@@ -911,13 +929,13 @@ export default function Home() {
                   </p>
                   <span className="news-item-more-link">
                     <a href="/news/events/#51">
-                      <span className="icon icon-right-arrow" />
+                      <span className="flex-wrap icon icon-right-arrow" />
                     </a>
                   </span>
                 </div>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4">
+            <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
                 className="news-item animation"
                 data-animation="fadeInLeft"
@@ -926,7 +944,7 @@ export default function Home() {
                 <div className="news-item-image">
                   <img
                     src="/assets/images/news/814185689_news-unlimited-packages.jpg"
-                    alt=""
+                    alt
                     className="img-responsive"
                     style={{ maxHeight: 230, width: "100%" }}
                   />
@@ -946,7 +964,7 @@ export default function Home() {
                   </p>
                   <span className="news-item-more-link">
                     <a href="/news/events/#21">
-                      <span className="icon icon-right-arrow" />
+                      <span className="flex-wrap icon icon-right-arrow" />
                     </a>
                   </span>
                 </div>
@@ -956,9 +974,9 @@ export default function Home() {
         </div>
       </div>
       <div className="block bottom-md-margin">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full">
               <div
                 className="testimonials animation"
                 data-animation="fadeInLeft"
@@ -986,55 +1004,49 @@ export default function Home() {
                   <div className="testimonials-item">
                     <div className="testimonials-text">
                       <p>
-                        Kingston Online Services is a very forward thinking
-                        company and their innovative and up-to-date technology
-                        keeps our business running smoothly.&nbsp; We rely on
-                        our internet for several applications and any questions
-                        or concerns that I have are answered quickly and
-                        professionally.&nbsp; &nbsp;Their service people are
-                        always very prompt and courteous.&nbsp; We are proud to
-                        have KOS as a member of our team and would not hesitate
-                        to recommend them to anyone as a high speed internet
-                        provider.
+                        I have been a business customer of KOS for over 10
+                        years. I rely on my web site to drive traffic to my
+                        business and I depend on KOS to make sure that my site
+                        is up and running 24/7. When I do have any technical
+                        problems they are only a phone call away. The staff is
+                        wonderful to deal with.
                       </p>
-                      <div className="testimonials-username">
-                        Brenda,
-                        <em style={{ fontWeight: 100 }}>Chalk Well Drilling</em>
-                      </div>
+                    </div>
+                    <div className="testimonials-username">
+                      Donna,
+                      <em style={{ fontWeight: 100 }}> Creative Effects</em>
                     </div>
                   </div>
                   <div className="testimonials-item">
                     <div className="testimonials-text">
                       <p>
-                        Limestone Property Management has been a customer of KOS
-                        since 2001.&nbsp; We’re very pleased with their fast,
-                        friendly and courteous service.&nbsp; We’re happy with
-                        the services that we have with them, and enjoy
-                        partnering with a local company that works hard to
-                        support the communities they work in.&nbsp; I would
-                        highly recommend that you make KOS your first call if
-                        you are looking for internet service options.
+                        I have been a business customer of KOS for over 10
+                        years. I rely on my web site to drive traffic to my
+                        business and I depend on KOS to make sure that my site
+                        is up and running 24/7. When I do have any technical
+                        problems they are only a phone call away. The staff is
+                        wonderful to deal with.
                       </p>
                     </div>
                     <div className="testimonials-username">
-                      Jason Ruffolo,
-                      <em style={{ fontWeight: 100 }}>
-                        Limestone Property Management (President)
-                      </em>
+                      Donna,
+                      <em style={{ fontWeight: 100 }}> Creative Effects</em>
                     </div>
                   </div>
                   <div className="testimonials-item">
                     <div className="testimonials-text">
                       <p>
-                        We love K.O.S.! We wanted something local, reliable and
-                        affordable with no hidden surprises on our bill each
-                        month. Kingston Online Services provided all of that and
-                        more including fabulous customer service!
+                        I have been a business customer of KOS for over 10
+                        years. I rely on my web site to drive traffic to my
+                        business and I depend on KOS to make sure that my site
+                        is up and running 24/7. When I do have any technical
+                        problems they are only a phone call away. The staff is
+                        wonderful to deal with.
                       </p>
                     </div>
                     <div className="testimonials-username">
-                      Kim and Jim Long,
-                      <em style={{ fontWeight: 100 }}>Must Love Chocolate</em>
+                      Donna,
+                      <em style={{ fontWeight: 100 }}> Creative Effects</em>
                     </div>
                   </div>
                 </div>
@@ -1046,12 +1058,12 @@ export default function Home() {
       <div className="page-footer">
         <div className="back-to-top hidden-xs">
           <a href="#top">
-            <span className="icon icon-up-arrow" />
+            <span className="flex-wrap icon icon-up-arrow" />
           </a>
         </div>
-        <div className="container">
-          <div className="row footer-row">
-            <div className="col-sm-4">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap footer-row">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div className="location">
                 <i className="icon icon-location" />
                 The LaSalle Mews
@@ -1072,7 +1084,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="col-sm-4 first-mobile">
+            <div className="pl-4 pr-4 sm:w-1/3 first-mobile">
               <div className="location">
                 <i className="icon icon-location" />
                 183 Front Street
@@ -1092,7 +1104,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="col-sm-4">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div className="logo">
                 <a href="/">
                   <img src="/images/logo-invert.png" alt="Logo" />
@@ -1106,19 +1118,19 @@ export default function Home() {
               <a href="http://www.theweathernetwork.com">The Weather Network</a>
             </div>
             <div className="copyright">
-              Copyright © KOS - 2021 |{" "}
+              Copyright © KOS - 2021 |
               <a style={{ color: "#ffffff" }} href="/policies/">
                 KOS Policies
               </a>{" "}
-              |{" "}
+              |
               <a style={{ color: "#ffffff" }} href="/tac/">
                 Terms and Conditions
               </a>{" "}
-              |{" "}
+              |
               <a style={{ color: "#ffffff" }} href="/e911">
                 e911
               </a>{" "}
-              |{" "}
+              |
               <a style={{ color: "#ffffff" }} href="/wst/">
                 Personal Web Space TAC
               </a>
@@ -1126,43 +1138,43 @@ export default function Home() {
               <div align="center">
                 <span style={{ color: "#ffffff" }}>
                   <strong>Serving Eastern Ontario:</strong>
-                </span>{" "}
+                </span>
                 <a
                   style={{ color: "#fff" }}
                   href="/kingston-internet-services/"
                 >
                   Kingston
-                </a>{" "}
-                |{" "}
+                </a>
+                |
                 <a
                   style={{ color: "#fff" }}
                   href="/gananoque-internet-services/"
                 >
                   Gananoque
-                </a>{" "}
-                |{" "}
+                </a>
+                |
                 <a style={{ color: "#fff" }} href="/picton-internet-services/">
                   Picton
-                </a>{" "}
-                |{" "}
+                </a>
+                |
                 <a
                   style={{ color: "#fff" }}
                   href="/brighton-internet-services/"
                 >
                   Brighton
-                </a>{" "}
-                |{" "}
+                </a>
+                |
                 <a style={{ color: "#fff" }} href="/trenton-internet-services/">
                   Trenton
-                </a>{" "}
-                |{" "}
+                </a>
+                |
                 <a
                   style={{ color: "#fff" }}
                   href="/belleville-internet-services/"
                 >
-                  Belleville
-                </a>{" "}
-                |{" "}
+                  Belleville{" "}
+                </a>
+                |
                 <a style={{ color: "#fff" }} href="/napanee-internet-services/">
                   Napanee
                 </a>
@@ -1175,7 +1187,6 @@ export default function Home() {
                     className="icon icon-social-facebook"
                     href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
                     target="_blank"
-                    rel="noreferrer"
                   />
                 </li>
               </ul>
