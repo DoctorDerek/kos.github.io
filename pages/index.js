@@ -1118,26 +1118,26 @@ export default function Home() {
               <a href="http://www.theweathernetwork.com">The Weather Network</a>
             </div>
             <div className="copyright">
-              Copyright © KOS - 2021 |
+              Copyright © KOS - 2021 {" | "}
               <a style={{ color: "#ffffff" }} href="/policies/">
                 KOS Policies
-              </a>{" "}
-              |
+              </a>
+              {" | "}
               <a style={{ color: "#ffffff" }} href="/tac/">
                 Terms and Conditions
-              </a>{" "}
-              |
+              </a>
+              {" | "}
               <a style={{ color: "#ffffff" }} href="/e911">
                 e911
-              </a>{" "}
-              |
+              </a>
+              {" | "}
               <a style={{ color: "#ffffff" }} href="/wst/">
                 Personal Web Space TAC
               </a>
               <br />
               <div align="center">
                 <span style={{ color: "#ffffff" }}>
-                  <strong>Serving Eastern Ontario:</strong>
+                  <strong>Serving Eastern Ontario: </strong>
                 </span>
                 <a
                   style={{ color: "#fff" }}
@@ -1145,36 +1145,36 @@ export default function Home() {
                 >
                   Kingston
                 </a>
-                |
+                {" | "}
                 <a
                   style={{ color: "#fff" }}
                   href="/gananoque-internet-services/"
                 >
                   Gananoque
                 </a>
-                |
+                {" | "}
                 <a style={{ color: "#fff" }} href="/picton-internet-services/">
                   Picton
                 </a>
-                |
+                {" | "}
                 <a
                   style={{ color: "#fff" }}
                   href="/brighton-internet-services/"
                 >
                   Brighton
                 </a>
-                |
+                {" | "}
                 <a style={{ color: "#fff" }} href="/trenton-internet-services/">
                   Trenton
                 </a>
-                |
+                {" | "}
                 <a
                   style={{ color: "#fff" }}
                   href="/belleville-internet-services/"
                 >
                   Belleville{" "}
                 </a>
-                |
+                {" | "}
                 <a style={{ color: "#fff" }} href="/napanee-internet-services/">
                   Napanee
                 </a>
