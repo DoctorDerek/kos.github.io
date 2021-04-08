@@ -1,0 +1,21 @@
+@tailwind base;
+header .logo img {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    header .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+    header .logo img {
+        max-width: 250px;
+    }
+}
+
+a {
+    color: #000;
+}
+
+@tailwind components;
+@tailwind utilities;
