@@ -2,34 +2,867 @@
 @tailwind components;
 @tailwind utilities;
 
-.remark-code-title {
-  @apply px-5 py-3 font-mono text-sm font-bold text-gray-200 bg-gray-700 rounded-t;
+header .logo img {
+  max-width: 100%;
 }
 
-.remark-code-title + pre {
-  @apply mt-0 rounded-t-none;
+@media (max-width: 767px) {
+  header .logo {
+    text-align: center;
+    padding: 15px 0;
+  }
+  header .logo img {
+    max-width: 250px;
+  }
 }
 
-.task-list-item:before {
-  @apply hidden;
+a {
+  color: #000;
 }
 
+/*! CSS Used from: http://127.0.0.1:5500/css/plugins/animate.min.css */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*! CSS Used from: http://127.0.0.1:5500/css/plugins/nivo-slider.css */
+
+.nivoSlider {
+  @apply relative w-full h-auto overflow-hidden;
+}
+
+.nivoSlider img {
+  @apply absolute top-0 left-0 max-w-none;
+}
+
+.nivo-main-image {
+  @apply block relative w-full !important;
+}
+
+.nivo-box {
+  @apply absolute block overflow-hidden;
+  z-index: 5;
+}
+
+.nivo-box img {
+  @apply block;
+}
+
+.nivo-caption {
+  @apply box-border absolute bottom-0 left-0 hidden w-full overflow-hidden text-white;
+  background: #000;
+  z-index: 10000;
+  padding: 5px 10px;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.nivo-caption a {
+  @apply inline !important;
+}
+
+.nivo-directionNav a {
+  @apply absolute cursor-pointer;
+  top: 50%;
+  z-index: 9;
+}
+
+.nivo-prevNav {
+  @apply left-0;
+}
+
+.nivo-nextNav {
+  @apply right-0;
+}
+
+.theme-default .nivoSlider {
+  @apply relative mb-2 bg-white;
+}
+
+.theme-default .nivoSlider img {
+  @apply absolute top-0 left-0 hidden;
+}
+
+.theme-default .nivoSlider a {
+  @apply block border-none;
+}
+
+.theme-default .nivo-directionNav a {
+  @apply block w-16 h-16 -mt-8 text-center text-white no-underline border-none opacity-50 cursor-pointer;
+  z-index: 10000;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.theme-default .nivo-directionNav a:before {
+  content: "\e90f";
+  font-family: "pool";
+  font-size: 48px;
+  line-height: 70px;
+}
+
+.theme-default:hover .nivo-directionNav a {
+  @apply opacity-100;
+}
+
+.theme-default a.nivo-nextNav {
+  right: 15px;
+}
+
+.theme-default a.nivo-prevNav {
+  left: 15px;
+}
+
+@media (max-width: 767px) {
+  .theme-default .nivo-directionNav a {
+    @apply w-10;
+  }
+  .theme-default .nivo-directionNav a:before {
+    @apply text-3xl;
+    line-height: 70px;
+  }
+  .theme-default a.nivo-nextNav {
+    @apply right-0;
+  }
+  .theme-default a.nivo-prevNav {
+    @apply left-0;
+  }
+}
+
+.theme-default .nivo-directionNav a.nivo-prevNav:before {
+  content: "\e90e";
+}
+
+/*! CSS Used from: http://127.0.0.1:5500/css/plugins/slick.css */
+
+.slick-slider {
+  @apply box-border relative block select-none;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  @apply relative block p-0 m-0 overflow-hidden;
+}
+
+.slick-list:focus {
+  @apply outline-none;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  @apply relative top-0 left-0 block;
+}
+
+.slick-track:before,
+.slick-track:after {
+  @apply table;
+  content: "";
+}
+
+.slick-track:after {
+  @apply clear-both;
+}
+
+.slick-slide {
+  @apply hidden float-left h-full;
+  min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+  @apply block;
+}
+
+/*! CSS Used from: http://127.0.0.1:5500/css/plugins/magnific-popup.css */
+
+button::-moz-focus-inner {
+  @apply p-0 border-none;
+}
+
+/*! CSS Used from: http://127.0.0.1:5500/css/custom.css */
+
+/*! @import http://127.0.0.1:5500/css/accessibilitymenu.css */
+
+.accessibilityimage {
+  @apply w-10;
+}
+
+#slideout {
+  @apply fixed right-0 text-base;
+  top: 40px;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  z-index: 10000;
+  direction: ltr;
+}
+
+#slideout_inner {
+  @apply fixed w-64 p-5 bg-white;
+  top: 40px;
+  right: -250px;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  border: 1px solid #777;
+  z-index: 10000;
+}
+
+.accessibilityMenuButton {
+  @apply block w-full p-1 mb-1 font-bold bg-white cursor-pointer;
+  border: 1px solid #999;
+  color: #444;
+}
+
+.accessibilityMenuButton:disabled {
+  @apply cursor-not-allowed;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.accessibilityMenuButton:focus,
+.accessibilityMenuButton:active {
+  @apply text-indigo-600 border border-indigo-600;
+}
+
+#slideout_inner ul {
+  @apply pl-0 pr-0;
+}
+
+.transparentButton {
+  @apply p-0 bg-transparent border-none;
+}
+
+.alignLeft {
+  @apply text-left !important;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+/*! end @import */
+
+@media print {
+  .footer-bot {
+    @apply hidden;
+  }
+}
+
+.vert-wrapper {
+  @apply table w-full h-full;
+}
+
+.vert-wrapper .vert {
+  @apply table-cell h-full align-middle;
+}
+
+body,
 html {
-  scroll-behavior: smooth;
+  @apply overflow-x-hidden;
 }
 
-h1,
+.block {
+  @apply mb-24;
+}
+
+.block.bottom-md-margin {
+  @apply mb-20;
+}
+
+.block.bottom-sm-margin {
+  @apply mb-16;
+}
+
+.block.bg-1 {
+  @apply text-white bg-cover;
+  background: url(http://127.0.0.1:5500/images/block-bg.jpg) no-repeat fixed
+    center center;
+  padding: 75px 0 44px;
+}
+
+.block.bg-1 h2 {
+  @apply text-white;
+}
+
+.block.bg-2 {
+  @apply p-0 text-white bg-cover;
+  background: url(http://127.0.0.1:5500/images/block-bg-2.jpg) no-repeat fixed
+    center center;
+  min-height: 578px;
+}
+
+@media (max-width: 767px) {
+  .block {
+    @apply mb-12;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+header.page-header {
+  @apply relative p-0 m-0 font-normal border-none;
+  z-index: 1000;
+}
+
+header .header-top {
+  padding: 15px 0;
+}
+
+header .logo img {
+  @apply max-w-full;
+}
+
+header .phone {
+  @apply inline-block text-xs font-normal text-right text-blue-800 uppercase;
+  padding: 30px 0 0 0;
+}
+
+header .phone span {
+  @apply inline-block align-bottom;
+}
+
+header .phone .number {
+  @apply mb-1 text-3xl leading-8 text-gray-700;
+}
+
+header .phone .number .icon {
+  @apply text-4xl align-middle;
+  padding: 0 10px 0 0;
+}
+
+header .first-mobile {
+  @apply float-right;
+}
+
+@media (min-width: 768px) {
+  .navbar-header {
+    @apply float-none;
+  }
+  .navbar {
+    @apply p-0 mb-0 bg-transparent border-0 rounded-none;
+  }
+  .ecaret {
+    @apply hidden;
+  }
+  #slidemenu {
+    @apply pl-0 pr-0 text-center;
+  }
+  .navbar-nav {
+    @apply float-none;
+    margin: 0 auto -5px;
+  }
+  .navbar-nav > li > a {
+    @apply text-lg font-bold leading-7 uppercase;
+    padding: 22px 30px;
+    color: #333;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus {
+    @apply text-blue-800 bg-transparent;
+  }
+  .navbar-nav li.active > a {
+    @apply text-blue-800;
+  }
+  .slider-wrapper {
+    opacity: 0.99;
+  }
+  .margin10 {
+    @apply m-2;
+  }
+  .navbar-nav .dropdown .dropdown-menu {
+    @apply bottom-auto rounded-none;
+    z-index: 100001;
+    border: 0;
+    padding: 12px 0;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a {
+    @apply text-base leading-7 text-gray-600 uppercase;
+    padding: 10px 38px;
+    border-bottom: 1px solid #f0f0f0;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a:hover,
+  .navbar-nav .dropdown .dropdown-menu li > a:focus {
+    @apply text-blue-800 bg-transparent;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .navbar-nav .dropdown .dropdown-menu li:last-child > a {
+    @apply border-b-0;
+  }
+  .navbar-nav .dropdown .dropdown-menu .dropdown-menu {
+    top: -6px;
+  }
+  .navbar-nav .dropdown .dropdown-menu .ecaret {
+    @apply relative inline-block float-right w-0 h-0 mt-0 ml-0 -mr-2 align-middle border-none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+  .navbar-nav .dropdown .dropdown-menu .ecaret:before {
+    font-family: "pool";
+    content: "\e90f";
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a:hover .ecaret {
+    @apply -mr-5;
+  }
+}
+
+@media (max-width: 1199px) {
+  header .phone {
+    padding: 20px 0 0 0;
+    @apply text-sm;
+  }
+  header .phone .number {
+    @apply mb-2 text-3xl leading-8;
+  }
+  header .phone .number .icon {
+    @apply text-3xl;
+    padding: 0 10px 0 0;
+  }
+  header .navbar-nav > li > a {
+    @apply pl-5 pr-5;
+  }
+}
+
+@media (max-width: 991px) {
+  header .phone {
+    padding: 10px 0 0 0;
+    @apply text-sm;
+  }
+  header .phone .number {
+    @apply mb-2 text-3xl leading-8;
+  }
+  header .phone .number .icon {
+    @apply text-3xl;
+    padding: 0 10px 0 0;
+  }
+  header .navbar-nav > li > a {
+    @apply pl-4 pr-4;
+  }
+}
+
+@media (max-width: 767px) {
+  header.page-header {
+    @apply p-0 m-0;
+  }
+  header .header-top {
+    padding: 10px 0;
+  }
+  header .logo {
+    @apply text-center;
+    padding: 15px 0;
+  }
+  header .logo img {
+    max-width: 250px;
+  }
+  header .phone {
+    padding: 8px 0 0 50px;
+  }
+  header .phone div:not(.number) {
+    @apply hidden;
+  }
+  header .phone .number {
+    @apply mb-0 text-2xl leading-6;
+  }
+  header .phone .number .icon {
+    @apply text-2xl align-middle;
+    padding: 0 10px 0 0;
+  }
+  header .first-mobile {
+    @apply float-none;
+  }
+  header .navbar {
+    @apply static min-h-0 m-0 border-none;
+  }
+  header .dropdown-menu {
+    @apply rounded-none;
+  }
+  header .navbar-nav .ecaret {
+    @apply absolute top-0 right-0 block w-12 h-12;
+    border: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 100;
+  }
+  header .navbar-nav .ecaret:after {
+    @apply absolute top-0 w-full text-2xl text-center;
+    content: "+";
+    line-height: 50px;
+  }
+  header .navbar-nav li {
+    @apply relative bg-transparent;
+  }
+  header .navbar-nav > li > a,
+  header .navbar-nav > li > a:focus {
+    @apply text-xl leading-7 text-white uppercase bg-transparent;
+    padding: 10px 20px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  header .navbar-nav > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    @apply text-white;
+  }
+  header .navbar-toggle {
+    @apply absolute m-0 text-3xl text-blue-800;
+    top: 16px;
+    left: 5px;
+    padding: 0 10px;
+  }
+  header .navbar-toggle .icon-cancel {
+    @apply hidden text-2xl;
+  }
+  header .navbar-nav .dropdown-menu {
+    @apply relative hidden w-full p-0 m-0 bg-gray-200 border-none;
+  }
+  header .navbar-nav .dropdown-menu a,
+  header .navbar-nav .dropdown-menu a:focus {
+    @apply text-base leading-7 bg-transparent;
+    color: #333;
+    padding: 10px 15px 10px 20px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  header .navbar-nav .dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    @apply text-white;
+  }
+  header .navbar-nav .dropdown-menu .dropdown-menu {
+    background-color: #fcfcfc;
+  }
+}
+
+#page-content {
+  @apply relative left-0;
+}
+
+.navbar-header {
+  @apply relative;
+}
+
+@media (max-width: 767px) {
+  #slide-nav .container {
+    @apply m-0 p-0 h-full !important;
+  }
+  #slide-nav .navbar-header {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  #slide-nav #slidemenu {
+    @apply absolute top-0 min-w-0 pl-0 m-0;
+    left: -100%;
+    width: 270px;
+    z-index: 2;
+  }
+  #slide-nav #slidemenu .navbar-nav {
+    @apply w-full min-w-0;
+    margin: 10px 0 0;
+  }
+  #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    @apply w-full min-w-0 whitespace-normal;
+  }
+  #slide-nav {
+    @apply border-t-0;
+  }
+  #navbar-height-col {
+    @apply fixed top-0 bottom-0 h-full bg-blue-800;
+    width: 270px;
+    left: -270px;
+  }
+}
+
+@media (min-width: 768px) {
+  #page-content {
+    @apply left-0 !important;
+  }
+  .navbar-header {
+    @apply left-0 !important;
+  }
+}
+
+.page-footer {
+  @apply relative clear-both text-white;
+  background: url(http://127.0.0.1:5500/images/footer-bg.jpg) repeat-x center
+    bottom #0099e7;
+  padding: 48px 0 54px;
+}
+
+.page-footer .container {
+  @apply relative;
+  z-index: 100;
+}
+
+.page-footer .logo {
+  @apply text-center;
+}
+
+.page-footer .logo img {
+  @apply inline-block max-w-full;
+}
+
+.page-footer .location {
+  @apply relative text-base leading-5 text-left text-white uppercase;
+  margin: 32px 0 0 0;
+  padding: 0 0 0 38px;
+}
+
+.page-footer .location span {
+  @apply inline-block align-bottom;
+}
+
+.page-footer .location .icon {
+  @apply absolute top-0 text-2xl align-middle;
+  left: 2px;
+  padding: 0 7px 0 0;
+}
+
+.page-footer .first-mobile {
+  @apply float-right;
+}
+
+.page-footer .footer-bot {
+  @apply text-center;
+}
+
+.page-footer .copyright {
+  @apply text-base leading-5;
+  margin: 18px 0 20px;
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    padding: 30px 10px;
+  }
+  .page-footer .location {
+    @apply text-base leading-5;
+    margin: 0 0 10px;
+    padding: 0 0 0 38px;
+  }
+  .page-footer .first-mobile {
+    @apply float-none;
+  }
+}
+
+.back-to-top {
+  @apply absolute;
+  bottom: 205px;
+  right: 5%;
+}
+
+@media (max-width: 1199px) {
+  .back-to-top {
+    bottom: 50px;
+  }
+}
+
+.back-to-top a {
+  @apply block text-6xl text-center text-white no-underline;
+  line-height: 60px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.back-to-top:hover a {
+  @apply text-blue-800;
+}
+
+#footerSea {
+  @apply absolute bottom-0 z-0 w-full pointer-events-none;
+  opacity: 0.55;
+}
+
+.slider-wrapper {
+  @apply relative;
+}
+
+#slider {
+  @apply mb-24;
+  height: 700px;
+}
+
+@media (max-width: 767px) {
+  #slider {
+    @apply mb-12;
+    height: 400px;
+  }
+}
+
+#sea {
+  @apply absolute bottom-0 w-full pointer-events-none;
+  z-index: 1000;
+  opacity: 0.15;
+}
+
+.nivo-caption .text {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  -ms-animation-fill-mode: backwards;
+  -o-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: none;
+  animation-iteration-count: none;
+}
+
+.nivo-caption .text1 {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+  margin-bottom: 0.6em;
+  line-height: 1em;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@media (max-width: 1199px) {
+  .nivo-caption .text1 {
+    font-size: calc(3.8vw + 10px);
+  }
+}
+
+.nivo-caption .text2 {
+  @apply text-3xl font-light;
+  font-family: Lato, sans-serif;
+  margin-bottom: 1.7em;
+  line-height: 1em;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@media (max-width: 1199px) {
+  .nivo-caption .text2 {
+    font-size: calc(0.65vw + 15px);
+  }
+}
+
+@media (max-width: 767px) {
+  .nivo-caption .text2 {
+    margin-bottom: 1em;
+  }
+}
+
+.nivo-caption .text3 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.nivo-caption {
+  @apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden text-center opacity-100;
+  background: 0 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @apply text-sm font-medium leading-5 text-black;
+}
+
+@media (max-width: 767px) {
+  body {
+    @apply text-sm leading-5;
+  }
+}
+
+a {
+  @apply text-black;
+}
+
+p {
+  @apply mb-5 text-sm leading-5;
+}
+
+@media (max-width: 767px) {
+  p {
+    @apply mb-5 text-sm leading-5;
+  }
+}
+
+.color {
+  @apply text-blue-800;
+}
+
 h2 {
-  font-size: 52px;
+  @apply text-5xl font-semibold text-gray-700;
   line-height: 1em;
   padding: 0 0 20px;
   margin: 0 0 60px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  color: #4c4c4c;
 }
+
 @media (max-width: 767px) {
-  h1,
   h2 {
     font-size: 40px;
     line-height: 1em;
@@ -37,54 +870,2077 @@ h2 {
     margin: 0 0 30px;
   }
 }
+
+h2.decor {
+  padding: 0 0 48px;
+  margin-bottom: 33px;
+  background: url(http://127.0.0.1:5500/images/h-decor.png) no-repeat center
+    bottom;
+}
+
+@media (max-width: 767px) {
+  h2.decor {
+    padding: 0 0 25px;
+    margin-bottom: 25px;
+  }
+}
+
+h2.decor.decor-white {
+  background-image: url(http://127.0.0.1:5500/images/h-decor-white.png);
+}
+
 h3 {
+  @apply p-0 font-semibold text-gray-700;
   font-size: 42px;
   line-height: 1em;
-  padding: 0;
   margin: 0 0 40px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  color: #4c4c4c;
 }
+
 @media (max-width: 767px) {
   h3 {
-    font-size: 36px;
+    @apply text-4xl;
     line-height: 1em;
     padding: 0 0 10px;
     margin: 0 0 30px;
   }
 }
+
+h3.decor {
+  padding: 0 0 45px;
+  margin-bottom: 28px;
+  background: url(http://127.0.0.1:5500/images/h-decor.png) no-repeat center
+    bottom;
+}
+
+@media (max-width: 767px) {
+  h3.decor {
+    padding: 0 0 25px;
+    margin-bottom: 25px;
+  }
+}
+
 h4 {
-  font-size: 26px;
+  @apply p-0 text-2xl font-bold text-gray-700;
   line-height: 1.154em;
-  padding: 0;
   margin: 0 0 20px;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
-  color: #4c4c4c;
 }
+
 @media (max-width: 767px) {
   h4 {
-    font-size: 24px;
+    @apply text-2xl;
     margin: 0 0 15px;
   }
 }
+
 h5 {
-  font-size: 22px;
+  @apply p-0 text-xl font-bold text-gray-900 uppercase;
   line-height: 1.273em;
-  padding: 0;
   margin: 0 0 20px;
   font-family: "Lato", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #272727;
 }
+
 h6 {
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
-  padding: 0;
+  @apply p-0 m-0 text-lg font-bold leading-6 text-gray-900;
   font-family: "Lato", sans-serif;
-  font-weight: bold;
-  color: #272727;
+}
+
+.animated {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  @apply opacity-100;
+}
+
+.animation,
+.step-animation {
+  @apply opacity-0;
+  opacity: 1\9;
+}
+
+.input-custom {
+  @apply mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 13px 15px 13px;
+  min-height: 46px;
+  background: #fff;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.input-custom:hover,
+.input-custom:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.input-custom.input-full {
+  @apply w-full;
+}
+
+input::-webkit-input-placeholder {
+  @apply text-base leading-5 text-gray-700;
+}
+
+input::-moz-placeholder {
+  @apply text-base leading-5 text-gray-700;
+}
+
+input:-ms-input-placeholder {
+  @apply text-base leading-5 text-gray-700;
+}
+
+input:-moz-placeholder {
+  @apply text-base leading-5 text-gray-700;
+}
+
+input.input-custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.index-request-form-js label {
+  @apply text-white;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  @apply hidden;
+}
+
+label {
+  @apply mb-1 text-base font-medium leading-6 text-black;
+}
+
+.successform,
+.errorform {
+  @apply hidden;
+}
+
+button:focus,
+.btn:focus,
+button:active:focus,
+.btn:active:focus {
+  @apply shadow-none outline-none;
+  outline: 0;
+}
+
+button:hover,
+.btn:hover,
+button:focus,
+.btn:focus {
+  @apply shadow-none outline-none;
+  outline: 0;
+}
+
+button:active,
+.btn:active {
+  @apply shadow-none outline-none;
+  outline: 0;
+}
+
+.btn {
+  @apply h-12 text-base font-bold leading-5 no-underline uppercase align-top;
+  padding: 15px 22px;
+  font-family: "Lato", sans-serif;
+  border-radius: 10px;
+  border: 1px solid #005395;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+.btn,
+.btn:focus {
+  @apply text-white bg-blue-800;
+}
+
+.btn:hover,
+.btn:active {
+  @apply text-blue-800;
+  background: #fff;
+}
+
+.btn.btn-orange,
+.btn.btn-orange:focus {
+  @apply text-white border-none;
+  background: linear-gradient(to bottom, #b0243d 0%, #740018 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#b0243d', endColorstr='#740018', GradientType=0);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn.btn-orange:hover,
+.btn.btn-orange:active {
+  @apply text-white;
+  background: #740018;
+  background: -moz-linear-gradient(top, #740018 0%, #b0243d 100%);
+  background: -webkit-linear-gradient(top, #740018 0%, #b0243d 100%);
+  background: linear-gradient(to bottom, #740018 0%, #b0243d 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#740018', endColorstr='#b0243d', GradientType=0);
+}
+
+.social-links ul {
+  @apply p-0 m-0;
+}
+
+.social-links ul li {
+  @apply inline-block text-center list-none;
+  margin: 0 5px;
+}
+
+.social-links ul li a {
+  @apply text-white no-underline cursor-pointer;
+  font-size: 44px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+
+.social-links ul li a:hover {
+  @apply text-blue-800;
+}
+
+.service-item {
+  @apply relative mb-5 text-center;
+}
+
+.service-item .icon-circle {
+  @apply relative block w-48 h-48 overflow-hidden text-white no-underline bg-blue-500 rounded-full;
+  z-index: 1;
+  margin: 0 auto 45px;
+  background-color: #27b9e8;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#27b9e8),
+    to(#0b6fac)
+  );
+  background: -webkit-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -moz-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -ms-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -o-linear-gradient(top, #27b9e8, #0b6fac);
+}
+
+.service-item .icon-circle .icon-hover {
+  @apply absolute top-0 left-0 w-full h-full bg-blue-800 opacity-0;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+
+.service-item .service-title {
+  @apply mb-6;
+}
+
+.service-item .service-title a {
+  @apply text-gray-700 no-underline;
+}
+
+.service-item .service-title a:hover {
+  color: #005395;
+}
+
+.service-item .service-text {
+  @apply w-4/5 mx-auto my-0;
+}
+
+.service-item:hover .icon-hover {
+  @apply opacity-100;
+}
+
+.category-item {
+  @apply block mb-10 no-underline;
+}
+
+.category-item:hover {
+  @apply no-underline;
+}
+
+.category-item .category-image {
+  @apply relative mb-5 overflow-hidden;
+  z-index: 1;
+  border-radius: 20px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.category-item .category-image img {
+  border-radius: 25px;
+}
+
+.category-item .category-title {
+  @apply mb-3 text-blue-800;
+}
+
+.category-item .category-image h5.category-title {
+  @apply absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase;
+  z-index: 3;
+  bottom: 18px;
+  left: 22px;
+  font-family: "Lato", sans-serif;
+}
+
+.category-item .category-text {
+  @apply relative;
+  padding: 0 46px 0 0;
+}
+
+.category-item .wave-wrapper {
+  @apply w-full opacity-0;
+  left: -50%;
+  right: 50%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.category-item:hover .wave-wrapper {
+  @apply w-full opacity-100;
+  left: 25%;
+  right: 50%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.category-item .category-more-link {
+  @apply absolute bottom-0 right-0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.category-item .category-more-link > span {
+  @apply text-3xl text-blue-800 no-underline;
+}
+
+.category-item .category-more-link:hover {
+  right: -5px;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .category-item {
+    @apply mb-5;
+  }
+  .category-item .category-title {
+    @apply text-xl leading-5;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+.wave-wrapper {
+  @apply absolute top-0 bottom-0;
+  content: "";
+  background-color: rgba(40, 168, 225, 0.95);
+  -webkit-transform: skew(59deg) translateX(-75%);
+  -ms-transform: skew(59deg) translateX(-75%);
+  transform: skew(59deg) translateX(-75%);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+h2 + .category-carousel {
+  @apply mt-12;
+}
+
+.pricing {
+  @apply relative w-full text-white;
+  min-height: 614px;
+}
+
+.pricing:before {
+  @apply absolute top-0 bottom-0 z-0 text-base leading-6 bg-white opacity-0;
+  right: -100px;
+  width: 625px;
+  padding: 60px 100px;
+  content: "";
+  -webkit-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
+  transform: skew(-15deg);
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+}
+
+.pricing:hover:before {
+  opacity: 0.2;
+  right: -50px;
+}
+
+.pricing .pricing-box {
+  @apply absolute top-0 bottom-0 right-0 z-0 text-base leading-6;
+  width: 525px;
+  padding: 70px 100px 60px 120px;
+  content: "";
+  background-color: rgba(40, 168, 225, 0.95);
+  -webkit-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
+  transform: skew(-15deg);
+}
+
+@media (max-width: 767px) {
+  .pricing .pricing-box {
+    width: 410px;
+    right: -30px;
+    padding: 40px 40px 40px 100px;
+  }
+}
+
+.pricing .pricing-box .inside {
+  -webkit-transform: skew(15deg);
+  -ms-transform: skew(15deg);
+  transform: skew(15deg);
+}
+
+.pricing .pricing-box h3 {
+  @apply pb-8 mb-12 text-white;
+  line-height: 50px;
+  background: url(http://127.0.0.1:5500/images/h-decor-trans.png) 0 bottom
+    no-repeat;
+}
+
+.pricing .pricing-box .price-title {
+  @apply p-0 text-lg font-bold leading-6 text-white uppercase;
+  margin: 0 0 10px;
+  font-family: "Lato", sans-serif;
+}
+
+.pricing .pricing-box .price-text {
+  @apply pb-8 mb-6;
+  border-bottom: 1px solid #6bc0ed;
+}
+
+.pricing .pricing-box .price-action {
+  @apply mt-6;
+}
+
+.price-carousel .slick-prev,
+.price-carousel .slick-next {
+  top: 20%;
+}
+
+.text-num {
+  @apply relative mb-4;
+}
+
+.text-num-num {
+  @apply absolute w-16 text-center;
+  top: -15px;
+}
+
+.text-num-num span {
+  @apply relative block w-20 h-20 text-4xl font-normal text-blue-800 bg-white rounded-full;
+  line-height: 74px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.text-num:hover .text-num-num span {
+  @apply text-white bg-blue-500;
+}
+
+.text-num-info {
+  padding: 0 0 0 100px;
+}
+
+.text-num-title {
+  @apply p-0 font-bold leading-7 text-white uppercase;
+  font-family: "Lato", sans-serif;
+  margin: 20px 0 15px;
+}
+
+.text-num.last {
+  @apply mb-0;
+}
+
+@media (max-width: 767px) {
+  .text-num {
+    @apply text-center;
+  }
+  .text-num-num {
+    @apply relative top-0 w-16 ml-auto mr-auto text-center;
+  }
+  .text-num-info {
+    @apply p-0;
+  }
+  .text-num-title {
+    @apply text-xl leading-6;
+    margin: 15px 0 15px;
+  }
+}
+
+.text-icon {
+  @apply relative text-center;
+  margin: 16px 0 24px;
+}
+
+.text-icon-icon {
+  @apply mb-6 text-center;
+}
+
+.text-icon-icon span {
+  @apply relative inline-block w-20 h-20 text-xl font-bold rounded-full;
+  line-height: 82px;
+  background-color: #27b9e8;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#27b9e8),
+    to(#0b6fac)
+  );
+  background: -webkit-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -moz-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -ms-linear-gradient(top, #27b9e8, #0b6fac);
+  background: -o-linear-gradient(top, #27b9e8, #0b6fac);
+}
+
+.text-icon-icon span .icon {
+  @apply relative text-white;
+  z-index: 1;
+  font-size: 42px;
+  line-height: 82px;
+}
+
+.text-icon-icon .icon-hover {
+  @apply absolute top-0 left-0 z-0 w-full h-full bg-blue-800 opacity-0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+}
+
+.text-icon:hover .icon-hover {
+  @apply opacity-100;
+}
+
+.text-icon-title {
+  @apply mb-4 leading-7 text-gray-900 uppercase;
+}
+
+.testimonials-item {
+  @apply text-center;
+  margin: 12px 0 20px;
+  padding: 35px 0 0;
+}
+
+.testimonials-item .testimonials-username {
+  @apply text-lg font-bold text-gray-700;
+  margin: 40px 0 10px;
+}
+
+@media (max-width: 767px) {
+  .testimonials-item .testimonials-username {
+    @apply text-sm;
+  }
+}
+
+.testimonials-item .testimonials-text {
+  @apply relative text-xl italic text-gray-600 bg-gray-200;
+  padding: 50px 50px;
+  line-height: 1.5em;
+  border-radius: 16px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.testimonials-item .testimonials-text * {
+  @apply text-xl italic text-gray-600 bg-gray-200;
+  line-height: 1.5em;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+@media (max-width: 767px) {
+  .testimonials-item .testimonials-text {
+    @apply text-base;
+    padding: 24px 25px;
+  }
+}
+
+.testimonials-item .testimonials-text:before {
+  @apply absolute text-6xl not-italic text-blue-800;
+  content: "\e906";
+  left: 22px;
+  top: -25px;
+  font-family: "pool";
+}
+
+@media (max-width: 767px) {
+  .testimonials-item .testimonials-text:before {
+    font-size: 40px;
+    top: -15px;
+  }
+}
+
+.testimonials-item .testimonials-text:after {
+  @apply absolute w-0 h-0 -ml-4 pointer-events-none;
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  border-color: rgba(240, 246, 249, 0);
+  border-top-color: #f0f6f9;
+  border-width: 15px;
+}
+
+@media (max-width: 767px) {
+  .testimonials {
+    margin: 0 0 40px;
+  }
+}
+
+.testimonials-carousel {
+  margin: 0 0 65px;
+}
+
+@media (min-width: 768px) {
+  .news-item-row {
+    @apply flex;
+  }
+}
+
+.news-item {
+  @apply flex flex-col h-full mt-2;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+}
+
+.news-item-image img {
+  @apply w-full;
+  border-radius: 18px 18px 0 0;
+}
+
+.news-item-title {
+  @apply mb-2 text-blue-800;
+  line-height: 1.2em;
+}
+
+.news-item-text {
+  @apply relative;
+  padding: 25px 29px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.news-item-text p {
+  @apply pr-4 mb-3;
+}
+
+.news-item-more-link {
+  @apply absolute;
+  right: 18px;
+  bottom: 32px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.news-item-more-link a {
+  @apply text-3xl text-blue-800 no-underline;
+}
+
+.news-item-more-link:hover {
+  right: 13px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1199px) {
+  header .phone .number {
+    @apply mb-2 text-2xl leading-8;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  @apply absolute block w-5 h-5 p-0 -mt-3 text-transparent bg-transparent border-none outline-none cursor-pointer;
+  font-size: 0;
+  line-height: 0;
+  top: 50%;
+  z-index: 200;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  @apply text-transparent bg-transparent outline-none;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  @apply opacity-100;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  @apply text-4xl leading-8 text-white cursor-pointer;
+  font-family: "pool";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -55px;
+}
+
+.slick-prev:before {
+  content: "\e90e";
+}
+
+.slick-next {
+  right: -55px;
+}
+
+.slick-next:before {
+  content: "\e90f";
+}
+
+.slick-slider {
+  @apply p-0 m-0 list-none;
+}
+
+@media (max-width: 767px) {
+  .slick-slider {
+    @apply mb-8;
+  }
+}
+
+.slick-dots {
+  @apply absolute block w-full p-0 text-center list-none;
+  bottom: -45px;
+}
+
+@media (max-width: 767px) {
+  .slick-dots {
+    bottom: -25px;
+  }
+}
+
+.slick-dots li {
+  @apply relative inline-block p-0 cursor-pointer;
+  margin: 0 -4px 0 0;
+}
+
+.slick-dots li button {
+  @apply relative block w-4 h-4 text-transparent bg-transparent border-none outline-none;
+  margin: 0 5px;
+}
+
+.slick-dots li button:after {
+  @apply absolute block w-2 h-2 bg-blue-800 rounded-full;
+  content: "";
+  top: 4px;
+  left: 4px;
+}
+
+.slick-dots li.slick-active button:after,
+.slick-dots li.slick-active button:hover:after {
+  @apply bg-blue-500;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  @apply outline-none;
+}
+
+/*! CSS Used from: http://127.0.0.1:5500/font/icons/style.css */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  @apply not-italic font-normal leading-none normal-case;
+  font-family: "pool" !important;
+  speak: none;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before {
+  content: "\e915";
+}
+
+.icon-cancel:before {
+  content: "\e91b";
+}
+
+.icon-menu:before {
+  content: "\e91c";
+}
+
+.icon-wrench:before {
+  content: "\e900";
+}
+
+.icon-clock:before {
+  content: "\e903";
+}
+
+.icon-medal:before {
+  content: "\e905";
+}
+
+.icon-up-arrow:before {
+  content: "\e907";
+}
+
+.icon-social-facebook:before {
+  content: "\e908";
+}
+
+.icon-location:before {
+  content: "\e90b";
+}
+
+.icon-call-telephone:before {
+  content: "\e90c";
+}
+
+.icon-right-arrow:before {
+  content: "\e913";
+}
+
+/*! CSS Used keyframes */
+
+@-webkit-keyframes fadeIn {
+  0% {
+    @apply opacity-0;
+  }
+  100% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    @apply opacity-0;
+  }
+  100% {
+    @apply opacity-100;
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    @apply opacity-0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    @apply opacity-100;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*! CSS Used fontfaces */
+
+@font-face {
+  font-family: "pool";
+  src: url("http://127.0.0.1:5500/font/icons/fonts/pool.eot?dx1h4q");
+  src: url("http://127.0.0.1:5500/font/icons/fonts/pool.eot?dx1h4q#iefix")
+      format("embedded-opentype"),
+    url("http://127.0.0.1:5500/font/icons/fonts/pool.ttf?dx1h4q")
+      format("truetype"),
+    url("http://127.0.0.1:5500/font/icons/fonts/pool.woff?dx1h4q")
+      format("woff"),
+    url("http://127.0.0.1:5500/font/icons/fonts/pool.svg?dx1h4q#pool")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 100;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u-w4BMUTPHjxsIPx-mPCLQ7A.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 100;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u-w4BMUTPHjxsIPx-oPCI.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI9w2_FQft1dw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI9w2_Gwft.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAUi-qJCY.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-q.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI5wq_FQft1dw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI5wq_Gwft.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 900;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI3wi_FQft1dw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 900;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI3wi_Gwft.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 100;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHh30AUi-qJCY.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 100;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHh30AXC-q.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwaPGR_p.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXjeu.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGR_p.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh50XSwaPGR_p.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh50XSwiPGQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hmIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hvIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hnIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hoIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hkIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hlIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hrIqM.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0ddc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Vdc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0adc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Wdc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Xdc1UAw.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhmIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhvIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhnIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhoIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhkIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhlIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKXGUdhrIqM.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhmIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhvIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhnIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhoIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhkIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhlIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhrIqM.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hmIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hvIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hnIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hoIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hkIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hlIqOjjg.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKW-U9hrIqM.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bbck.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWZ0bbck.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVp0bbck.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bbck.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bbck.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOX-hpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOVuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOXuhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOXehpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOXOhpOqc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/*! CSS Used from: https://kos.net/css/plugins/bootstrap.min.css */
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*! CSS Used from: https://kos.net/css/plugins/bootstrap-submenu.css */
+
+.dropdown-submenu > a:after {
+  content: "";
+}
+
+@media (min-width: 768px) {
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    border-top-left-radius: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown-submenu .dropdown-menu {
+    position: static;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
+    padding-left: 30px;
+  }
+  .navbar-nav
+    > .dropdown
+    > .dropdown-menu
+    > .dropdown-submenu
+    > .dropdown-menu
+    > li
+    > a {
+    padding-left: 35px;
+  }
+}
+
+/*! CSS Used from: https://kos.net/css/custom.css */
+
+@media (min-width: 768px) {
+  .ecaret {
+    @apply hidden;
+  }
+  .navbar-nav .dropdown .dropdown-menu {
+    z-index: 100001;
+    @apply border-none rounded-none;
+    padding: 12px 0;
+    bottom: auto !important;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a {
+    @apply text-base leading-7 text-gray-600 uppercase;
+    padding: 10px 38px;
+    border-bottom: 1px solid #f0f0f0;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a:hover,
+  .navbar-nav .dropdown .dropdown-menu li > a:focus {
+    @apply text-blue-800 bg-transparent;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .navbar-nav .dropdown .dropdown-menu li:last-child > a {
+    border-bottom: 0;
+  }
+  .navbar-nav .dropdown .dropdown-menu .dropdown-menu {
+    top: -6px;
+  }
+  .navbar-nav .dropdown .dropdown-menu .ecaret {
+    @apply relative inline-block float-right w-0 h-0 mt-0 -mr-2 align-middle border-none;
+    margin-left: 2px;
+    margin-right: -10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+  }
+  .navbar-nav .dropdown .dropdown-menu .ecaret:before {
+    font-family: "pool";
+    content: "\e90f";
+  }
+  .navbar-nav .dropdown .dropdown-menu li > a:hover .ecaret {
+    @apply -mr-5;
+  }
+}
+
+@media (max-width: 767px) {
+  header .dropdown-menu {
+    @apply rounded-none;
+  }
+  header .navbar-nav .ecaret {
+    @apply absolute top-0 right-0 block w-12 h-12 border-none;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 100;
+  }
+  header .navbar-nav .ecaret:after {
+    @apply absolute top-0 w-full text-2xl text-center;
+    content: "+";
+    line-height: 50px;
+  }
+  header .navbar-nav li {
+    @apply relative bg-transparent;
+  }
+  header .navbar-nav .dropdown-menu {
+    @apply relative hidden w-full p-0 m-0 bg-gray-200 border-none;
+  }
+  header .navbar-nav .dropdown-menu a,
+  header .navbar-nav .dropdown-menu a:focus {
+    @apply text-base leading-7 bg-transparent;
+    color: #333;
+    padding: 10px 15px 10px 20px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+  }
+  header .navbar-nav .dropdown-menu a:hover {
+    @apply text-white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  header .navbar-nav .dropdown-menu .dropdown-menu {
+    background-color: #fcfcfc;
+  }
+}
+
+@media (max-width: 767px) {
+  #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    @apply w-full min-w-0 whitespace-normal;
+  }
 }
