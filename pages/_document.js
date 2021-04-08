@@ -21,14 +21,6 @@ class MyDocument extends Document {
             type="images/png"
             href="images/smallkos.png"
           />
-          <link href="css/plugins/bootstrap.min.css" rel="stylesheet" />
-          <link href="css/plugins/bootstrap-submenu.css" rel="stylesheet" />
-          <link href="css/plugins/animate.min.css" rel="stylesheet" />
-          <link href="css/plugins/nivo-slider.css" rel="stylesheet" />
-          <link href="css/plugins/slick.css" rel="stylesheet" />
-          <link href="css/plugins/magnific-popup.css" rel="stylesheet" />
-          <link href="css/custom.css" rel="stylesheet" />
-          <link href="font/icons/style.css" rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
             rel="stylesheet"
