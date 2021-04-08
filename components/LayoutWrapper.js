@@ -77,7 +77,6 @@ const LayoutWrapper = ({ children }) => {
                 <i className="icon icon-cancel" />
               </button>
             </div>
-            {/* SOF MENU */}
             <div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
               <ul className="py-10 nav lg:flex navbar-nav">
                 <li className="active">
