@@ -41,285 +41,52 @@
     border: 0;
     box-shadow: none;
   }
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li.dropdown-header,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
   .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,
   .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a,
   .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
     padding-left: 30px;
   }
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 40px;
   }
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 50px;
   }
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .dropup
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a,
-  .btn-group
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .dropup > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a,
+  .btn-group > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 60px;
   }
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li.dropdown-header,
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > a {
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li.dropdown-header,
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > a {
     padding-left: 35px;
   }
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 45px;
   }
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 55px;
   }
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li.dropdown-header,
-  .navbar-nav
-    > .dropdown
-    > .dropdown-menu
-    > .dropdown-submenu
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > .dropdown-menu
-    > li
-    > a {
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li.dropdown-header,
+  .navbar-nav > .dropdown > .dropdown-menu > .dropdown-submenu > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > .dropdown-menu > li > a {
     padding-left: 65px;
   }
 }
