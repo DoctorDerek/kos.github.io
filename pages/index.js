@@ -46,6 +46,7 @@ export default function Home() {
   useScript("js/plugins/jquery.validate.min.js")
   useScript("js/custom.js")
   useScript("js/accessibilitymenu.js")
+  useScript("js/theWeatherNetwork.js")
 
   return (
     <>
