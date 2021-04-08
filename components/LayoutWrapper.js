@@ -1,84 +1,113 @@
-import siteMetadata from "@/data/siteMetadata"
-import headerNavLinks from "@/data/headerNavLinks"
-import Logo from "@/data/logo.svg"
-import Link from "./Link"
-import SectionContainer from "./SectionContainer"
-import Footer from "./Footer"
-import MobileNav from "./MobileNav"
-import ThemeSwitch from "./ThemeSwitch"
-
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <header className="page-header">
-        <nav className="navbar" id="slide-nav">
-          <div className="container">
-            <div className="navbar-header">
-              <div className="header-top">
-                <div className="row">
-                  <div className="col-sm-8 col-md-4 first-mobile">
+      {" "}
+      <header className="py-4 page-header">
+        {/* Fixed navbar */}
+        <nav
+          className="flex flex-wrap pl-0 list-reset navbar"
+          id="slide-nav"
+          role="navigation"
+        >
+          <div className="container mx-auto">
+            <div className="flex flex-wrap pl-0 list-reset navbar-header">
+              <div className="header-top !w-full">
+                <div className="flex flex-wrap lg:flex-nowrap ">
+                  <div className=" lg:order-1 sm:w-2/3 md:w-1/3 first-mobile">
                     <div className="phone">
                       <div className="number">
-                        <i className="icon icon-call-telephone"></i>
-                        <span style={{ fontSize: "20px" }}>
+                        <i className="icon icon-call-telephone" />
+                        <span style={{ fontSize: 20 }}>
                           <strong>
-                            Kingston:
-                            <span style={{ color: "#a80532" }}>
+                            Kingston:{" "}
+                            <span style={{ color: "#A80532" }}>
                               613-549-8667
                             </span>
                           </strong>
                         </span>
                         <br />
-                        <span style={{ fontSize: "20px" }}>
+                        <span style={{ fontSize: 20 }}>
                           <strong>
-                            Belleville:
-                            <span style={{ color: "#a80532" }}>
+                            Belleville:{" "}
+                            <span style={{ color: "#A80532" }}>
                               613-968-7137
                             </span>
                           </strong>
                         </span>
                       </div>
-                      <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS</div>
+                      <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
                     </div>
                   </div>
-                  <div className="col-sm-4 col-lg-3">
-                    <div>
-                      <a href="/order/" className="btn btn-orange">
+                  {/* <div class="order-1 pl-4 pr-4 sm:w-2/3 md:w-1/3 first-mobile">
+                          <div class="phone text-[20px] text-[#4C4C4C] uppercase">
+                              <div class="mt-10">
+                                  <i class="icon icon-call-telephone"></i>
+                                  <strong class="font-bold ">Kingston: <span class="inline-block text-[#A80532] align-bottom">613-549-8667</span></strong>
+                                  </span><br>
+                                  <span><strong>Belleville: <span style="color:#A80532">613-968-7137</span></strong>
+                                  </span>
+                              </div>
+                              <div class="text-sm mt-4 text-[#005393]">CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
+                          </div>
+                      </div> */}
+                  <div className="pl-4 pr-4 sm:w-1/3 lg:w-1/4">
+                    <div className="!mt-6">
+                      <a
+                        href="/order/"
+                        className="!mt-10 text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none  uppercase transition-all duration-300 no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl border:none"
+                      >
                         Order now
                       </a>
                     </div>
                   </div>
-                  <div className="col-lg-1 visible-lg"></div>
-                  <div className="text-center col-sm-4">
+                  <div className="pl-4 pr-4 lg:w-1/6 visible-lg" />
+                  <div className="pl-4 pr-4 text-center sm:w-1/3">
                     <div className="logo">
                       <a href="/">
-                        <img src="/images/logo.png" alt="Logo" />
+                        <img
+                          className="max-w-full md:mx-w-[250px] md:text-center md:py-4 md:px-0"
+                          src="https://kos.net/images/logo.png"
+                          alt="Logo"
+                        />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <button type="button" className="navbar-toggle">
-                <i className="icon icon-menu"></i>
-                <i className="icon icon-cancel"></i>
+              {/*
+    <div style="text-align:right;margin:0 75px;"><form method="get" action="/search/">SEARCH: <input type="text" name="search"> <input type="submit" value="GO"></form><hr></div>
+    */}
+              <button
+                type="button"
+                className="flex flex-wrap pl-0 list-reset lg:hidden navbar-toggle"
+              >
+                <i className="icon icon-menu" />
+                <i className="icon icon-cancel" />
               </button>
             </div>
-
+            {/* SOF MENU */}
             <div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
-              <ul className="nav navbar-nav">
+              <ul className="py-10 nav lg:flex navbar-nav">
                 <li className="active">
                   <a href="/">home</a>
                 </li>
-                <li className="dropdown">
+                <li className="relative dropdown">
+                  {" "}
                   <a href="#" data-toggle="dropdown">
-                    services<span className="ecaret"></span>
+                    services
+                    <span className="ecaret" />
                   </a>
-                  <ul className="dropdown-menu" role="menu">
+                  <ul
+                    className="absolute z-50 hidden bg-white dropdown-menu"
+                    role="menu"
+                  >
                     <li className="dropdown-submenu">
+                      {" "}
                       <a href="/residential/" data-toggle="dropdown">
-                        Residential<span className="ecaret"></span>
+                        Residential
+                        <span className="ecaret" />
                       </a>
-                      <ul className="dropdown-menu">
+                      <ul className="absolute z-50 hidden bg-white dropdown-menu">
                         <li>
                           <a href="/res/high-speed-cable/">High Speed Cable</a>
                         </li>
@@ -102,10 +131,12 @@ const LayoutWrapper = ({ children }) => {
                       </ul>
                     </li>
                     <li className="dropdown-submenu">
+                      {" "}
                       <a href="/business/">
-                        Business<span className="ecaret"></span>
+                        Business
+                        <span className="ecaret" />
                       </a>
-                      <ul className="dropdown-menu">
+                      <ul className="absolute z-50 hidden bg-white dropdown-menu">
                         <li>
                           <a href="/bus/high-speed-cable/">High Speed Cable</a>
                         </li>
@@ -140,11 +171,15 @@ const LayoutWrapper = ({ children }) => {
                     </li>
                   </ul>
                 </li>
-                <li className="dropdown">
+                <li className="relative dropdown">
                   <a href="#" data-toggle="dropdown">
-                    Hosting<span className="ecaret"></span>
+                    Hosting
+                    <span className="ecaret" />
                   </a>
-                  <ul className="dropdown-menu" role="menu">
+                  <ul
+                    className="absolute z-50 hidden bg-white dropdown-menu"
+                    role="menu"
+                  >
                     <li>
                       <a href="/hosting/packages/">Packages &amp; Pricing</a>
                     </li>
@@ -153,11 +188,15 @@ const LayoutWrapper = ({ children }) => {
                     </li>
                   </ul>
                 </li>
-                <li className="dropdown">
+                <li className="relative dropdown">
                   <a href="/about/" data-toggle="dropdown">
-                    About Us<span className="ecaret"></span>
+                    About Us
+                    <span className="ecaret" />
                   </a>
-                  <ul className="dropdown-menu" role="menu">
+                  <ul
+                    className="absolute z-50 hidden bg-white dropdown-menu"
+                    role="menu"
+                  >
                     <li>
                       <a href="/about/">Our Company</a>
                     </li>
@@ -175,11 +214,15 @@ const LayoutWrapper = ({ children }) => {
                 <li>
                   <a href="/contact.php">Contact Us</a>
                 </li>
-                <li className="dropdown">
+                <li className="relative dropdown">
                   <a href="#" data-toggle="dropdown">
-                    My Account<span className="ecaret"></span>
+                    My Account
+                    <span className="ecaret" />
                   </a>
-                  <ul className="dropdown-menu" role="menu">
+                  <ul
+                    className="absolute z-50 hidden bg-white dropdown-menu"
+                    role="menu"
+                  >
                     <li>
                       <a href="https://webmail.kos.net/src/login.php">
                         My Email
@@ -208,9 +251,11 @@ const LayoutWrapper = ({ children }) => {
                 </li>
               </ul>
             </div>
+            {/* EOF MENUS */}
           </div>
         </nav>
-      </header>
+        <div id="navbar-height-col" />
+      </header>{" "}
       <div id="page-content">{children}</div>
     </>
   )
