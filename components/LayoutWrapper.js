@@ -11,7 +11,6 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <header className="py-4 page-header">
-        {/* Fixed navbar */}
         <nav
           className="flex flex-wrap pl-0 list-reset navbar"
           id="slide-nav"
@@ -46,18 +45,6 @@ const LayoutWrapper = ({ children }) => {
                       <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
                     </div>
                   </div>
-                  {/* <div class="order-1 pl-4 pr-4 sm:w-2/3 md:w-1/3 first-mobile">
-                          <div class="phone text-[20px] text-[#4C4C4C] uppercase">
-                              <div class="mt-10">
-                                  <i class="icon icon-call-telephone"></i>
-                                  <strong class="font-bold ">Kingston: <span class="inline-block text-[#A80532] align-bottom">613-549-8667</span></strong>
-                                  </span><br>
-                                  <span><strong>Belleville: <span style="color:#A80532">613-968-7137</span></strong>
-                                  </span>
-                              </div>
-                              <div class="text-sm mt-4 text-[#005393]">CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
-                          </div>
-                      </div> */}
                   <div className="pl-4 pr-4 sm:w-1/3 lg:w-1/4">
                     <div className="!mt-6">
                       <a
@@ -82,9 +69,6 @@ const LayoutWrapper = ({ children }) => {
                   </div>
                 </div>
               </div>
-              {/*
-    <div style="text-align:right;margin:0 75px;"><form method="get" action="/search/">SEARCH: <input type="text" name="search"> <input type="submit" value="GO"></form><hr></div>
-    */}
               <button
                 type="button"
                 className="flex flex-wrap pl-0 list-reset lg:hidden navbar-toggle"
@@ -259,7 +243,6 @@ const LayoutWrapper = ({ children }) => {
                 </li>
               </ul>
             </div>
-            {/* EOF MENUS */}
           </div>
         </nav>
         <div id="navbar-height-col" />
