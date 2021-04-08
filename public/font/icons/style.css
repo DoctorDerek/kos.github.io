@@ -1,18 +1,17 @@
 @font-face {
-  font-family: "pool";
-  src: url("fonts/pool.eot?dx1h4q");
-  src: url("fonts/pool.eot?dx1h4q#iefix") format("embedded-opentype"),
-    url("fonts/pool.ttf?dx1h4q") format("truetype"),
-    url("fonts/pool.woff?dx1h4q") format("woff"),
-    url("fonts/pool.svg?dx1h4q#pool") format("svg");
+  font-family: 'pool';
+  src:  url('fonts/pool.eot?dx1h4q');
+  src:  url('fonts/pool.eot?dx1h4q#iefix') format('embedded-opentype'),
+    url('fonts/pool.ttf?dx1h4q') format('truetype'),
+    url('fonts/pool.woff?dx1h4q') format('woff'),
+    url('fonts/pool.svg?dx1h4q#pool') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "pool" !important;
+  font-family: 'pool' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -115,3 +114,4 @@
 .icon-comments:before {
   content: "\e91a";
 }
+
