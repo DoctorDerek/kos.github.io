@@ -61,7 +61,7 @@ const LayoutWrapper = ({ children }) => {
                       <a href="/">
                         <img
                           className="max-w-full md:mx-w-[250px] md:text-center md:py-4 md:px-0"
-                          src="https://kos.net/images/logo.png"
+                          src="/images/logo.png"
                           alt="Logo"
                         />
                       </a>

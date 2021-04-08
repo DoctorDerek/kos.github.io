@@ -20,7 +20,7 @@ a {
   color: #000;
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/css/plugins/animate.min.css */
+/*! CSS Used from: /css/plugins/animate.min.css */
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -49,7 +49,7 @@ a {
   animation-name: fadeInUp;
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/css/plugins/nivo-slider.css */
+/*! CSS Used from: /css/plugins/nivo-slider.css */
 
 .nivoSlider {
   @apply relative w-full h-auto overflow-hidden;
@@ -162,7 +162,7 @@ a {
   content: "\e90e";
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/css/plugins/slick.css */
+/*! CSS Used from: /css/plugins/slick.css */
 
 .slick-slider {
   @apply box-border relative block select-none;
@@ -217,15 +217,15 @@ a {
   @apply block;
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/css/plugins/magnific-popup.css */
+/*! CSS Used from: /css/plugins/magnific-popup.css */
 
 button::-moz-focus-inner {
   @apply p-0 border-none;
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/css/custom.css */
+/*! CSS Used from: /css/custom.css */
 
-/*! @import http://127.0.0.1:5500/css/accessibilitymenu.css */
+/*! @import /css/accessibilitymenu.css */
 
 .accessibilityimage {
   @apply w-10;
@@ -322,8 +322,7 @@ html {
 
 .block.bg-1 {
   @apply text-white bg-cover;
-  background: url(http://127.0.0.1:5500/images/block-bg.jpg) no-repeat fixed
-    center center;
+  background: url(/images/block-bg.jpg) no-repeat fixed center center;
   padding: 75px 0 44px;
 }
 
@@ -333,8 +332,7 @@ html {
 
 .block.bg-2 {
   @apply p-0 text-white bg-cover;
-  background: url(http://127.0.0.1:5500/images/block-bg-2.jpg) no-repeat fixed
-    center center;
+  background: url(/images/block-bg-2.jpg) no-repeat fixed center center;
   min-height: 578px;
 }
 
@@ -647,8 +645,7 @@ header .first-mobile {
 
 .page-footer {
   @apply relative clear-both text-white;
-  background: url(http://127.0.0.1:5500/images/footer-bg.jpg) repeat-x center
-    bottom #0099e7;
+  background: url(/images/footer-bg.jpg) repeat-x center bottom #0099e7;
   padding: 48px 0 54px;
 }
 
@@ -874,8 +871,7 @@ h2 {
 h2.decor {
   padding: 0 0 48px;
   margin-bottom: 33px;
-  background: url(http://127.0.0.1:5500/images/h-decor.png) no-repeat center
-    bottom;
+  background: url(/images/h-decor.png) no-repeat center bottom;
 }
 
 @media (max-width: 767px) {
@@ -886,7 +882,7 @@ h2.decor {
 }
 
 h2.decor.decor-white {
-  background-image: url(http://127.0.0.1:5500/images/h-decor-white.png);
+  background-image: url(/images/h-decor-white.png);
 }
 
 h3 {
@@ -909,8 +905,7 @@ h3 {
 h3.decor {
   padding: 0 0 45px;
   margin-bottom: 28px;
-  background: url(http://127.0.0.1:5500/images/h-decor.png) no-repeat center
-    bottom;
+  background: url(/images/h-decor.png) no-repeat center bottom;
 }
 
 @media (max-width: 767px) {
@@ -1318,8 +1313,7 @@ h2 + .category-carousel {
 .pricing .pricing-box h3 {
   @apply pb-8 mb-12 text-white;
   line-height: 50px;
-  background: url(http://127.0.0.1:5500/images/h-decor-trans.png) 0 bottom
-    no-repeat;
+  background: url(/images/h-decor-trans.png) 0 bottom no-repeat;
 }
 
 .pricing .pricing-box .price-title {
@@ -1673,7 +1667,7 @@ h2 + .category-carousel {
   @apply outline-none;
 }
 
-/*! CSS Used from: http://127.0.0.1:5500/font/icons/style.css */
+/*! CSS Used from: /font/icons/style.css */
 
 [class^="icon-"],
 [class*=" icon-"] {
@@ -1857,15 +1851,12 @@ h2 + .category-carousel {
 
 @font-face {
   font-family: "pool";
-  src: url("http://127.0.0.1:5500/font/icons/fonts/pool.eot?dx1h4q");
-  src: url("http://127.0.0.1:5500/font/icons/fonts/pool.eot?dx1h4q#iefix")
+  src: url("/font/icons/fonts/pool.eot?dx1h4q");
+  src: url("/font/icons/fonts/pool.eot?dx1h4q#iefix")
       format("embedded-opentype"),
-    url("http://127.0.0.1:5500/font/icons/fonts/pool.ttf?dx1h4q")
-      format("truetype"),
-    url("http://127.0.0.1:5500/font/icons/fonts/pool.woff?dx1h4q")
-      format("woff"),
-    url("http://127.0.0.1:5500/font/icons/fonts/pool.svg?dx1h4q#pool")
-      format("svg");
+    url("/font/icons/fonts/pool.ttf?dx1h4q") format("truetype"),
+    url("/font/icons/fonts/pool.woff?dx1h4q") format("woff"),
+    url("/font/icons/fonts/pool.svg?dx1h4q#pool") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2760,7 +2751,7 @@ h2 + .category-carousel {
     U+FEFF, U+FFFD;
 }
 
-/*! CSS Used from: https://kos.net/css/plugins/bootstrap.min.css */
+/*! CSS Used from: /css/plugins/bootstrap.min.css */
 
 .dropdown-menu {
   position: absolute;
@@ -2808,7 +2799,7 @@ h2 + .category-carousel {
   border-top-right-radius: 0;
 }
 
-/*! CSS Used from: https://kos.net/css/plugins/bootstrap-submenu.css */
+/*! CSS Used from: /css/plugins/bootstrap-submenu.css */
 
 .dropdown-submenu > a:after {
   content: "";
@@ -2847,7 +2838,7 @@ h2 + .category-carousel {
   }
 }
 
-/*! CSS Used from: https://kos.net/css/custom.css */
+/*! CSS Used from: /css/custom.css */
 
 @media (min-width: 768px) {
   .ecaret {
