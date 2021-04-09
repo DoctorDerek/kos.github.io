@@ -38,7 +38,7 @@ if (sourceMenu == "accessible+") {
 var accessibilityIconStr =
   accessibilitySign === "classic"
     ? "/assets/images/accessibility_1.png"
-    : "./assets/images/access.png"
+    : "/assets/images/access.png"
 
 if (debugMode) console.log("loaded with language: " + lang)
 
@@ -284,8 +284,6 @@ function prepMenu() {
       menuHTML +=
         "<button class='accessibilityMenuButton alignLeft' id='btnLinksOff' onclick='ToggleUnderlineLinks(false);'><i class='fa fa-underline' aria-hidden='true'></i>&nbsp;&nbsp;Standard Links</button>"
       break
-      menuHTML =
-        "<button class='transparentButton' onclick='toggleAccessibilityMenu()'><img class='accessibilityimage' src='/assets/image/accessibility.png' alt='辅助功能菜单图䠇' role='navigation' title='辅助菜单'/></button>"
     case "zh_CN":
       menuHTML += "<div id='slideout_inner'>"
       menuHTML += "<ul class='ltr'>"
