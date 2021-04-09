@@ -1,3 +1,4 @@
+import Image from "@/components/Image"
 /*
 import Link from "@/components/Link"
 import { PageSeo } from "@/components/SEO"
@@ -51,14 +52,14 @@ export default function Home() {
   return (
     <>
       <div className="slider-wrapper theme-default">
-        <div id="slider" className="nivoSlider">
-          <img
+        <div id="slider" className="grid w-full nivoSlider h-96">
+          <Image
             src="/images/slider/slide1.jpg"
             title="#htmlcaption1"
             data-thumb="/images/slider/slide1.jpg"
             alt
           />
-          <img
+          <Image
             src="/images/slider/slide2.jpg"
             title="#htmlcaption2"
             data-thumb="/images/slider/slide2.jpg"
