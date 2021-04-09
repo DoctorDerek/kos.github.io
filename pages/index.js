@@ -177,7 +177,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             Internet Packages
-            <div className="mx-auto block-class">
+            <div className="block mx-auto">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -484,7 +484,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             Why choose us?
-            <div className="mx-auto block-class">
+            <div className="block mx-auto">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -880,7 +880,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             News and Events
-            <div className="mx-auto block-class">
+            <div className="block mx-auto">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -1005,7 +1005,7 @@ export default function Home() {
               >
                 <h3 className="text-center color decor">
                   What our customers are saying
-                  <div className="mx-auto block-class">
+                  <div className="block mx-auto">
                     <ImageFixed
                       src="/images/h-decor.png"
                       height="4px"
