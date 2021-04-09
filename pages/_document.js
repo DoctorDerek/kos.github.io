@@ -30,7 +30,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="home">
+        <body className="overflow-hidden home">
           <Main />
           <NextScript />
         </body>
