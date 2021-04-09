@@ -131,12 +131,9 @@ export default function Home() {
               <div className="service-item">
                 <a href="/residential/" className="icon-circle">
                   <div className="icon-hover" />
-                  <Image
-                    src="/assets/images/home/icon-home.png"
-                    width={196}
-                    height={196}
-                    alt
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/home/icon-home.png" alt />
+                  </div>
                 </a>
                 <div className="service-title">
                   <h4>
@@ -157,7 +154,7 @@ export default function Home() {
               <div className="service-item">
                 <a href="/business/" className="icon-circle">
                   <div className="icon-hover" />
-                  <Image
+                  <img
                     src="/assets/images/home/icon-business.png"
                     width={196}
                     height={196}
@@ -190,7 +187,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/cable.jpg"
                     alt
                     className="img-responsive"
@@ -226,7 +223,7 @@ export default function Home() {
             >
               <a href="/res/wireless-broadband/" className="category-item">
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/wireless.jpg"
                     alt
                     className="img-responsive"
@@ -261,7 +258,7 @@ export default function Home() {
             >
               <a href="/res/high-speed-dsl/" className="category-item">
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/dsl.jpg"
                     alt
                     className="img-responsive"
@@ -297,7 +294,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/voip.jpg"
                     alt
                     className="img-responsive"
@@ -334,7 +331,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/mail.jpg"
                     alt
                     className="img-responsive"
@@ -371,7 +368,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <Image
+                  <img
                     src="/assets/images/hosting.jpg"
                     alt
                     className="img-responsive"
@@ -871,7 +868,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <Image
+                  <img
                     src="/assets/images/news/logo.png"
                     alt
                     className="img-responsive"
@@ -907,7 +904,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <Image
+                  <img
                     src="/assets/images/news/logo.png"
                     alt
                     className="img-responsive"
@@ -944,7 +941,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <Image
+                  <img
                     src="/assets/images/news/814185689_news-unlimited-packages.jpg"
                     alt
                     className="img-responsive"
@@ -1109,7 +1106,7 @@ export default function Home() {
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="logo">
                 <a href="/">
-                  <Image src="/images/logo-invert.png" alt="Logo" />
+                  <img src="/images/logo-invert.png" alt="Logo" />
                 </a>
               </div>
             </div>
