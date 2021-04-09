@@ -1,5 +1,5 @@
 import Image from "@/components/Image"
-import ImageFixed from "next/Image"
+import ImageFixed from "next/image"
 /*
 import Link from "@/components/Link"
 import { PageSeo } from "@/components/SEO"
