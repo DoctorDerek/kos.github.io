@@ -1,4 +1,5 @@
 import Image from "@/components/Image"
+import ImageFixed from "next/Image"
 /*
 import Link from "@/components/Link"
 import { PageSeo } from "@/components/SEO"
@@ -174,7 +175,17 @@ export default function Home() {
       </div>
       <div className="block bottom-sm-margin">
         <div className="container mx-auto">
-          <h2 className="text-center decor flex-growor">Internet Packages</h2>
+          <h2 className="text-center decor flex-growor">
+            Internet Packages
+            <div className="block mx-auto">
+              <ImageFixed
+                src="/images/h-decor.png"
+                height="4px"
+                width="64px"
+                alt
+              />
+            </div>
+          </h2>
           <div className="flex flex-wrap category-carousel">
             <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <a
@@ -471,7 +482,17 @@ export default function Home() {
       </div>
       <div className="block bottom-sm-margin">
         <div className="container mx-auto">
-          <h2 className="text-center decor flex-growor">Why choose us?</h2>
+          <h2 className="text-center decor flex-growor">
+            Why choose us?
+            <div className="block mx-auto">
+              <ImageFixed
+                src="/images/h-decor.png"
+                height="4px"
+                width="64px"
+                alt
+              />
+            </div>
+          </h2>
           <div className="flex flex-wrap text-icon-carousel step-animation-container">
             <div className="pl-4 pr-4 sm:w-1/3">
               <div
@@ -590,7 +611,17 @@ export default function Home() {
       </div>
       <div className="block bg-1">
         <div className="container mx-auto">
-          <h2 className="text-center decor decor-white">Let's Get Started</h2>
+          <h2 className="text-center decor decor-white">
+            Let's Get Started
+            <div className="block mx-auto">
+              <ImageFixed
+                src="/images/h-decor-white.png"
+                height="4px"
+                width="64px"
+                alt
+              />
+            </div>
+          </h2>
           <div className="flex flex-wrap lg:flex-nowrap">
             <div className="pl-4 pr-4 sm:w-1/2">
               <div
@@ -844,7 +875,17 @@ export default function Home() {
       </div>
       <div className="block bottom-sm-margin">
         <div className="container mx-auto">
-          <h2 className="text-center decor flex-growor">News and Events</h2>
+          <h2 className="text-center decor flex-growor">
+            News and Events
+            <div className="block mx-auto">
+              <ImageFixed
+                src="/images/h-decor.png"
+                height="4px"
+                width="64px"
+                alt
+              />
+            </div>
+          </h2>
           <div className="flex flex-wrap news-item-row">
             <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
@@ -965,6 +1006,14 @@ export default function Home() {
               >
                 <h3 className="text-center color decor">
                   What our customers are saying
+                  <div className="block mx-auto">
+                    <ImageFixed
+                      src="/images/h-decor.png"
+                      height="4px"
+                      width="64px"
+                      alt
+                    />
+                  </div>
                 </h3>
                 <div className="testimonials-carousel">
                   <div className="testimonials-item">
