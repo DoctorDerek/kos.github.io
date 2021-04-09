@@ -527,7 +527,6 @@ header .first-mobile {
   }
   .navbar-nav > li > a {
     @apply text-lg font-bold leading-7 uppercase;
-    padding: 22px 30px;
     color: #333;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
