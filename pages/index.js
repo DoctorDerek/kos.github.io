@@ -894,12 +894,8 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <div className="grid w-48 h-48">
-                    <Image
-                      src="/assets/images/news/logo.png"
-                      style={{ maxHeight: 230, width: "100%" }}
-                      alt
-                    />
+                  <div className="grid w-full h-40">
+                    <Image src="/assets/images/news/logo.png" alt />
                   </div>
                 </div>
                 <div className="news-item-text">
@@ -931,7 +927,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <div className="grid w-48 h-48">
+                  <div className="grid w-full h-40">
                     <Image src="/assets/images/news/logo.png" alt />
                   </div>
                 </div>
@@ -965,7 +961,7 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <div className="grid w-48 h-48">
+                  <div className="grid w-full h-40">
                     <Image
                       src="/assets/images/news/814185689_news-unlimited-packages.jpg"
                       alt
