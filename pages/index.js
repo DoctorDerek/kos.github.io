@@ -154,12 +154,9 @@ export default function Home() {
               <div className="service-item">
                 <a href="/business/" className="icon-circle">
                   <div className="icon-hover" />
-                  <img
-                    src="/assets/images/home/icon-business.png"
-                    width={196}
-                    height={196}
-                    alt
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/home/icon-business.png" alt />
+                  </div>
                 </a>
                 <div className="service-title">
                   <h4>
@@ -187,11 +184,9 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <img
-                    src="/assets/images/cable.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/cable.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -223,11 +218,9 @@ export default function Home() {
             >
               <a href="/res/wireless-broadband/" className="category-item">
                 <div className="category-image">
-                  <img
-                    src="/assets/images/wireless.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/wireless.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -258,11 +251,9 @@ export default function Home() {
             >
               <a href="/res/high-speed-dsl/" className="category-item">
                 <div className="category-image">
-                  <img
-                    src="/assets/images/dsl.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/dsl.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -294,11 +285,9 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <img
-                    src="/assets/images/voip.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/voip.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -331,11 +320,9 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <img
-                    src="/assets/images/mail.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/mail.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -368,11 +355,9 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="category-image">
-                  <img
-                    src="/assets/images/hosting.jpg"
-                    alt
-                    className="img-responsive"
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/hosting.jpg" alt />
+                  </div>
                   <h5 className="category-title">
                     <span
                       style={{
@@ -868,12 +853,13 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <img
-                    src="/assets/images/news/logo.png"
-                    alt
-                    className="img-responsive"
-                    style={{ maxHeight: 230, width: "100%" }}
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image
+                      src="/assets/images/news/logo.png"
+                      style={{ maxHeight: 230, width: "100%" }}
+                      alt
+                    />
+                  </div>
                 </div>
                 <div className="news-item-text">
                   <h5 className="news-item-title">
@@ -904,12 +890,9 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <img
-                    src="/assets/images/news/logo.png"
-                    alt
-                    className="img-responsive"
-                    style={{ maxHeight: 230, width: "100%" }}
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image src="/assets/images/news/logo.png" alt />
+                  </div>
                 </div>
                 <div className="news-item-text">
                   <h5 className="news-item-title">COVID-19</h5>
@@ -941,12 +924,12 @@ export default function Home() {
                 data-animation-delay="0s"
               >
                 <div className="news-item-image">
-                  <img
-                    src="/assets/images/news/814185689_news-unlimited-packages.jpg"
-                    alt
-                    className="img-responsive"
-                    style={{ maxHeight: 230, width: "100%" }}
-                  />
+                  <div className="grid w-48 h-48">
+                    <Image
+                      src="/assets/images/news/814185689_news-unlimited-packages.jpg"
+                      alt
+                    />
+                  </div>
                 </div>
                 <div className="news-item-text">
                   <h5 className="news-item-title">
@@ -1106,7 +1089,9 @@ export default function Home() {
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="logo">
                 <a href="/">
-                  <img src="/images/logo-invert.png" alt="Logo" />
+                  <div className="grid w-48 h-48">
+                    <Image src="/images/logo-invert.png" alt="Logo" />{" "}
+                  </div>
                 </a>
               </div>
             </div>
