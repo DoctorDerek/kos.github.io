@@ -121,7 +121,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block">
+      <div className="block-class">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-between services-carousel">
             <div
@@ -173,11 +173,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bottom-sm-margin">
+      <div className="block-class bottom-sm-margin">
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             Internet Packages
-            <div className="block mx-auto">
+            <div className="mx-auto block-class">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -396,7 +396,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bg-2">
+      <div className="block-class bg-2">
         <div className="container mx-auto">
           <div className="pricing">
             <div className="pricing-box">
@@ -480,11 +480,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bottom-sm-margin">
+      <div className="block-class bottom-sm-margin">
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             Why choose us?
-            <div className="block mx-auto">
+            <div className="mx-auto block-class">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -609,8 +609,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bg-1">
-        <div className="container mx-auto">
+      <div className="block-class bg-1">
+        <div className="grid w-full h-[1000px]">
+          <Image src="/images/block-bg.jpg" alt />
+        </div>
+        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
           <h2 className="text-center decor decor-white">
             Let's Get Started
             <div className="block mx-auto">
@@ -873,11 +876,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bottom-sm-margin">
+      <div className="block-class bottom-sm-margin">
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
             News and Events
-            <div className="block mx-auto">
+            <div className="mx-auto block-class">
               <ImageFixed
                 src="/images/h-decor.png"
                 height="4px"
@@ -992,7 +995,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="block bottom-md-margin">
+      <div className="block-class bottom-md-margin">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
             <div className="w-full">
@@ -1002,7 +1005,7 @@ export default function Home() {
               >
                 <h3 className="text-center color decor">
                   What our customers are saying
-                  <div className="block mx-auto">
+                  <div className="mx-auto block-class">
                     <ImageFixed
                       src="/images/h-decor.png"
                       height="4px"

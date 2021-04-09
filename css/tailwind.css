@@ -433,36 +433,36 @@ html {
   @apply overflow-x-hidden;
 }
 
-.block {
+.block-class {
   @apply mb-24;
 }
 
-.block.bottom-md-margin {
+.block-class.bottom-md-margin {
   @apply mb-20;
 }
 
-.block.bottom-sm-margin {
+.block-class.bottom-sm-margin {
   @apply mb-16;
 }
 
-.block.bg-1 {
+.block-class.bg-1 {
   @apply text-white bg-cover;
   background: url(/images/block-bg.jpg) no-repeat fixed center center;
   padding: 75px 0 44px;
 }
 
-.block.bg-1 h2 {
+.block-class.bg-1 h2 {
   @apply text-white;
 }
 
-.block.bg-2 {
+.block-class.bg-2 {
   @apply p-0 text-white bg-cover;
   background: url(/images/block-bg-2.jpg) no-repeat fixed center center;
   min-height: 578px;
 }
 
 @media (max-width: 767px) {
-  .block {
+  .block-class {
     @apply mb-12;
   }
 }
