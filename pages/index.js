@@ -397,7 +397,10 @@ export default function Home() {
         </div>
       </div>
       <div className="block-class bg-2">
-        <div className="container mx-auto">
+        <div className="grid w-full h-[615px]">
+          <Image src="/images/block-bg-2.jpg" alt />
+        </div>
+        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-615px]">
           <div className="pricing">
             <div className="pricing-box">
               <div className="inside">
@@ -1085,13 +1088,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="page-footer">
+      <div className="page-footer w-full h-[380px]">
+        <div className="grid w-full h-[380px]">
+          <Image src="/images/footer-bg.jpg" alt />
+        </div>
         <div className="back-to-top hidden-xs">
           <a href="#top">
             <span className="flex-wrap icon icon-up-arrow" />
           </a>
         </div>
-        <div className="container mx-auto">
+        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-360px]">
           <div className="flex flex-wrap footer-row">
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="location">

@@ -447,7 +447,7 @@ html {
 
 .block-class.bg-1 {
   @apply text-white bg-cover;
-  background: url(/images/block-bg.jpg) no-repeat fixed center center;
+  /*background: url(/images/block-bg.jpg) no-repeat fixed center center;*/
   padding: 75px 0 44px;
 }
 
@@ -457,7 +457,7 @@ html {
 
 .block-class.bg-2 {
   @apply p-0 text-white bg-cover;
-  background: url(/images/block-bg-2.jpg) no-repeat fixed center center;
+  /*background: url(/images/block-bg-2.jpg) no-repeat fixed center center;*/
   min-height: 578px;
 }
 
@@ -769,7 +769,7 @@ header .first-mobile {
 
 .page-footer {
   @apply relative clear-both text-white;
-  background: url(/images/footer-bg.jpg) repeat-x center bottom #0099e7;
+  /*background: url(/images/footer-bg.jpg) repeat-x center bottom #0099e7;*/
   padding: 48px 0 54px;
 }
 
@@ -1029,7 +1029,7 @@ h3 {
 h3.decor {
   padding: 0 0 45px;
   margin-bottom: 28px;
-  background: url(/images/h-decor.png) no-repeat center bottom;
+  /*background: url(/images/h-decor.png) no-repeat center bottom;*/
 }
 
 @media (max-width: 767px) {
@@ -1437,7 +1437,7 @@ h2 + .category-carousel {
 .pricing .pricing-box h3 {
   @apply pb-8 mb-12 text-white;
   line-height: 50px;
-  background: url(/images/h-decor-trans.png) 0 bottom no-repeat;
+  /*background: url(/images/h-decor-trans.png) 0 bottom no-repeat;*/
 }
 
 .pricing .pricing-box .price-title {
