@@ -51,8 +51,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="slider-wrapper theme-default">
-        <div id="slider" className="grid w-full nivoSlider h-96">
+      <div className="grid w-full slider-wrapper theme-default h-112">
+        <div id="slider" className="nivoSlider">
           <Image
             src="/images/slider/slide1.jpg"
             title="#htmlcaption1"
