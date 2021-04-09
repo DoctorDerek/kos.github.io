@@ -53,15 +53,15 @@ export default function Home() {
       <div className="slider-wrapper theme-default">
         <div id="slider" className="nivoSlider">
           <img
-            src="images/slider/slide1.jpg"
+            src="/images/slider/slide1.jpg"
             title="#htmlcaption1"
-            data-thumb="images/slider/slide1.jpg"
+            data-thumb="/images/slider/slide1.jpg"
             alt
           />
           <img
-            src="images/slider/slide2.jpg"
+            src="/images/slider/slide2.jpg"
             title="#htmlcaption2"
-            data-thumb="images/slider/slide2.jpg"
+            data-thumb="/images/slider/slide2.jpg"
             alt
           />
         </div>
