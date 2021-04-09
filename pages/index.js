@@ -1115,6 +1115,15 @@ export default function Home() {
                 </span>
               </div>
             </div>
+            <div className="pl-4 pr-4 sm:w-1/3">
+              <div className="logo">
+                <a href="/">
+                  <div className="grid w-[300px] h-[125px]">
+                    <Image src="/images/logo-invert.png" alt="Logo" />
+                  </div>
+                </a>
+              </div>
+            </div>
             <div className="pl-4 pr-4 sm:w-1/3 first-mobile">
               <div className="location">
                 <i className="icon icon-location" />
@@ -1134,16 +1143,7 @@ export default function Home() {
                   613-968-7137
                 </span>
               </div>
-            </div>
-            <div className="pl-4 pr-4 sm:w-1/3">
-              <div className="logo">
-                <a href="/">
-                  <div className="grid w-48 h-48">
-                    <Image src="/images/logo-invert.png" alt="Logo" />{" "}
-                  </div>
-                </a>
-              </div>
-            </div>
+            </div>{" "}
           </div>
           <div className="footer-bot">
             <div>
