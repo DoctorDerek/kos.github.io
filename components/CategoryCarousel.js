@@ -21,7 +21,7 @@ export default function CategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/high-speed-cable/"
-              className="category-item animation"
+              className="category-item"
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
@@ -54,7 +54,7 @@ export default function CategoryCarousel() {
             </a>
           </div>
           <div
-            className="pl-4 pr-4 sm:w-1/2 md:w-1/3 animation"
+            className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeIn"
             data-animation-delay="0s"
           >
@@ -87,7 +87,7 @@ export default function CategoryCarousel() {
             </a>
           </div>
           <div
-            className="pl-4 pr-4 sm:w-1/2 md:w-1/3 animation"
+            className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeInRight"
             data-animation-delay="0s"
           >
@@ -122,7 +122,7 @@ export default function CategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/voip/"
-              className="category-item animation"
+              className="category-item"
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
@@ -156,7 +156,7 @@ export default function CategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/mail/"
-              className="category-item animation"
+              className="category-item"
               data-animation="fadeIn"
               data-animation-delay="0s"
             >
@@ -191,7 +191,7 @@ export default function CategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/hosting/packages/"
-              className="category-item animation"
+              className="category-item"
               data-animation="fadeInRight"
               data-animation-delay="0s"
             >
