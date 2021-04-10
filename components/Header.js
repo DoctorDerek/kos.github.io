@@ -36,12 +36,12 @@ export default function Header() {
                 </div>
                 <div className="pl-4 pr-4 sm:w-1/3 lg:w-1/4">
                   <div className="!mt-6">
-                    <a
+                    <button
                       href="/order/"
                       className="!mt-10 text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none  uppercase transition-all duration-300 no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl border:none"
                     >
                       Order now
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="pl-4 pr-4 lg:w-1/6 visible-lg" />
