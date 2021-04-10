@@ -19,7 +19,7 @@ export default function TextIconCarousel() {
         <div className="flex flex-wrap text-icon-carousel step-animation-container">
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="0s"
             >
@@ -37,7 +37,7 @@ export default function TextIconCarousel() {
           </div>
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="0.2s"
             >
@@ -55,7 +55,7 @@ export default function TextIconCarousel() {
           </div>
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="0.4s"
             >
@@ -75,7 +75,7 @@ export default function TextIconCarousel() {
           <div className="clearfix hidden-xs" />
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="0.6s"
             >
@@ -93,7 +93,7 @@ export default function TextIconCarousel() {
           </div>
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="0.8s"
             >
@@ -113,7 +113,7 @@ export default function TextIconCarousel() {
           </div>
           <div className="pl-4 pr-4 sm:w-1/3">
             <div
-              className="text-icon step-animation"
+              className="text-icon"
               data-animation="fadeInUp"
               data-animation-delay="1s"
             >
