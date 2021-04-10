@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react"
 import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 import SlideshowSlides from "@/components/SlideshowSlides"
 import Image from "@/components/Image"
 
@@ -43,7 +44,21 @@ const Slideshow = () => {
         ref={sliderRef}
         className="grid w-full grid-cols-1 text-white border-2 border-black border-solid keen-slider"
       >
-        <div className="grid grid-cols-1 transform-gpu keen-slider__slide">
+        <div className="grid grid-cols-1 bg-blue-500 transform-gpu keen-slider__slide h-96">
+          Slide 1
+        </div>
+        <div className="grid grid-cols-1 bg-red-500 transform-gpu keen-slider__slide h-96">
+          Slide 2
+        </div>
+        {/* <canvas id="sea" /> */}
+      </div>
+    </>
+  )
+}
+
+export default Slideshow
+
+/*            <div className="grid grid-cols-1 transform-gpu keen-slider__slide">
           <Image src="/images/slider/slide1.jpg" alt="" className="h-96" />
           <div className="absolute flex flex-col items-center justify-around w-full bg-blue-500 h-96 opacity-80">
             <div className="text text1">
@@ -92,19 +107,4 @@ const Slideshow = () => {
               </a>
             </div>
           </div>
-        </div>
-        {/* <canvas id="sea" /> */}
-      </div>
-    </>
-  )
-}
-
-export default Slideshow
-
-/*    <div
-      ref={sliderRef}
-      className="grid w-full grid-cols-1 border-2 border-black border-solid h-60 keen-slider"
-    >
-      <SlideshowSlides />
-    </div>
-  */
+        </div> */
