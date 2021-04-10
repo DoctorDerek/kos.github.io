@@ -1,13 +1,17 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
+
+/*
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-120818650-1"
+          ></script>
+*/
+
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-120818650-1"
-          ></script>
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{ __html: process.env.googleAnalytics }}
