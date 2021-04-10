@@ -16,7 +16,7 @@ const SlideshowSlide = ({
   return (
     <div className="grid grid-cols-1 transform-gpu keen-slider__slide h-96">
       <Image src={src} alt={alt} className="h-full" />
-      <div className="absolute flex flex-col items-center justify-around w-full h-full opacity-80">
+      <div className="absolute flex flex-col items-center justify-center w-full h-full opacity-80">
         <div className="text text1">
           <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
             {text1}
