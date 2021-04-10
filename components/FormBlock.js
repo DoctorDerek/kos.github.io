@@ -1,4 +1,6 @@
 import React from "react"
+import Image from "@/components/Image"
+import ImageFixed from "next/image"
 
 export default function FormBlock() {
   return (
