@@ -41,7 +41,7 @@ const Slideshow = () => {
     <>
       <div
         ref={sliderRef}
-        className="grid w-full grid-cols-1 text-white border-2 border-black border-solid keen-slider"
+        className="text-white keen-slider h-60 sm:h-80 md:h-112 lg:h-112 xl:h-128"
       >
         <SlideshowSlide
           src="/images/slider/slide1.jpg"
