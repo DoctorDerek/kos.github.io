@@ -557,7 +557,7 @@ export default function Home() {
           <div className="flex flex-wrap news-item-row">
             <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
-                className="news-item animation"
+                className="news-item"
                 data-animation="fadeInLeft"
                 data-animation-delay="0s"
               >
@@ -590,7 +590,7 @@ export default function Home() {
             </div>
             <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
-                className="news-item animation"
+                className="news-item"
                 data-animation="fadeInLeft"
                 data-animation-delay="0s"
               >
@@ -624,7 +624,7 @@ export default function Home() {
             </div>
             <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
               <div
-                className="news-item animation"
+                className="news-item"
                 data-animation="fadeInLeft"
                 data-animation-delay="0s"
               >
@@ -664,10 +664,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-wrap">
             <div className="w-full">
-              <div
-                className="testimonials animation"
-                data-animation="fadeInLeft"
-              >
+              <div className="testimonials" data-animation="fadeInLeft">
                 <h3 className="text-center color decor">
                   What our customers are saying
                   <div className="block mx-auto">
