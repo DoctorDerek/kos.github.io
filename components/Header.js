@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "@/components/Image"
 
 export default function Header() {
   return (
@@ -47,11 +48,9 @@ export default function Header() {
                 <div className="pl-4 pr-4 text-center sm:w-1/3">
                   <div className="logo">
                     <a href="/">
-                      <img
-                        className="max-w-full md:mx-w-[250px] md:text-center md:py-4 md:px-0"
-                        src="/images/logo.png"
-                        alt="Logo"
-                      />
+                      <div className="grid w-full h-40">
+                        <Image src="/assets/images/news/logo.png" alt />
+                      </div>
                     </a>
                   </div>
                 </div>
