@@ -11,6 +11,7 @@ const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
 import { getAllFilesFrontMatter } from "@/lib/mdx"
 
 import Slideshow from "@/components/Slideshow"
+import ServicesCarousel from "@/components/ServicesCarousel"
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog")
@@ -53,58 +54,7 @@ export default function Home() {
   return (
     <>
       <Slideshow />
-      <div className="block-class">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap justify-between services-carousel">
-            <div
-              className="pl-4 pr-4 sm:w-1/2 animation"
-              data-animation="fadeInLeft"
-              data-animation-delay="0s"
-            >
-              <div className="service-item">
-                <a href="/residential/" className="icon-circle">
-                  <div className="icon-hover" />
-                  <div className="grid w-48 h-48">
-                    <Image src="/assets/images/home/icon-home.png" alt />
-                  </div>
-                </a>
-                <div className="service-title">
-                  <h4>
-                    <a href="/residential/">
-                      RESIDENTIAL <br />
-                      SERVICES
-                    </a>
-                  </h4>
-                </div>
-                <div className="service-text">Stay connected with family</div>
-              </div>
-            </div>
-            <div
-              className="pl-4 pr-4 sm:w-1/2 animation"
-              data-animation="fadeInUp"
-              data-animation-delay="0s"
-            >
-              <div className="service-item">
-                <a href="/business/" className="icon-circle">
-                  <div className="icon-hover" />
-                  <div className="grid w-48 h-48">
-                    <Image src="/assets/images/home/icon-business.png" alt />
-                  </div>
-                </a>
-                <div className="service-title">
-                  <h4>
-                    <a href="/business/">
-                      BUSINESS <br />
-                      SERVICES
-                    </a>
-                  </h4>
-                </div>
-                <div className="service-text">Keep your business connected</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesCarousel />
       <div className="block-class bottom-sm-margin">
         <div className="container mx-auto">
           <h2 className="text-center decor flex-growor">
