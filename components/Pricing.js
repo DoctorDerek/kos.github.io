@@ -26,12 +26,12 @@ export default function Pricing() {
                     </p>
                   </div>
                   <div className="price-action">
-                    <a
+                    <button
                       href="/order/"
                       className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                     >
                       Order now
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="price-item">
@@ -51,12 +51,12 @@ export default function Pricing() {
                     </p>
                   </div>
                   <div className="price-action">
-                    <a
+                    <button
                       href="/order/"
                       className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                     >
                       Order now
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="price-item">
@@ -76,12 +76,12 @@ export default function Pricing() {
                     </p>
                   </div>
                   <div className="price-action">
-                    <a
+                    <button
                       href="/order/"
                       className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                     >
                       Order now
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
