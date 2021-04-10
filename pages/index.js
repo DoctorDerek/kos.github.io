@@ -81,7 +81,7 @@ export default function Home() {
           <div className="flex flex-wrap lg:flex-nowrap">
             <div className="pl-4 pr-4 sm:w-1/2">
               <div
-                className="text-num step-animation"
+                className="text-num"
                 data-animation="fadeInLeft"
                 data-animation-delay="0s"
               >
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="text-num step-animation"
+                className="text-num"
                 data-animation="fadeInRight"
                 data-animation-delay="0s"
               >
@@ -110,7 +110,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="text-num step-animation"
+                className="text-num"
                 data-animation="fadeInRight"
                 data-animation-delay="0s"
               >
@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="text-num last step-animation"
+                className="text-num last"
                 data-animation="fadeInLeft"
                 data-animation-delay="0.8s"
               >
