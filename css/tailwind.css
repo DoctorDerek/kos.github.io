@@ -50,7 +50,7 @@ a {
 }
 
 /*! CSS Used from: /css/plugins/nivo-slider.css */
-
+/*
 .nivoSlider {
   @apply relative w-full h-auto overflow-hidden;
 }
@@ -71,23 +71,9 @@ a {
 .nivo-box img {
   @apply block;
 }
+*/
 
-.nivo-caption {
-  @apply box-border absolute bottom-0 left-0 hidden w-full overflow-hidden text-white;
-  background: #000;
-  z-index: 10000;
-  padding: 5px 10px;
-  opacity: 0.8;
-  -moz-opacity: 0.8;
-  filter: alpha(opacity=8);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-.nivo-caption a {
-  @apply inline !important;
-}
-
+/*
 .nivo-directionNav a {
   @apply absolute cursor-pointer;
   top: 50%;
@@ -160,7 +146,7 @@ a {
 
 .theme-default .nivo-directionNav a.nivo-prevNav:before {
   content: "\e90e";
-}
+}*/
 
 /*! CSS Used from: /css/plugins/slick.css */
 
@@ -418,14 +404,6 @@ button::-moz-focus-inner {
   .footer-bot {
     @apply hidden;
   }
-}
-
-.vert-wrapper {
-  @apply table w-full h-full;
-}
-
-.vert-wrapper .vert {
-  @apply table-cell h-full align-middle;
 }
 
 body,
@@ -881,7 +859,7 @@ header .first-mobile {
   opacity: 0.15;
 }
 
-.nivo-caption .text {
+.keen-slider .text {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: backwards;
@@ -893,7 +871,7 @@ header .first-mobile {
   animation-iteration-count: none;
 }
 
-.nivo-caption .text1 {
+.keen-slider .text1 {
   font-family: Lato, sans-serif;
   font-weight: 400;
   font-size: 80px;
@@ -906,12 +884,12 @@ header .first-mobile {
 }
 
 @media (max-width: 1199px) {
-  .nivo-caption .text1 {
+  .keen-slider .text1 {
     font-size: calc(3.8vw + 10px);
   }
 }
 
-.nivo-caption .text2 {
+.keen-slider .text2 {
   @apply text-3xl font-light;
   font-family: Lato, sans-serif;
   margin-bottom: 1.7em;
@@ -923,27 +901,28 @@ header .first-mobile {
 }
 
 @media (max-width: 1199px) {
-  .nivo-caption .text2 {
+  .keen-slider .text2 {
     font-size: calc(0.65vw + 15px);
   }
 }
 
 @media (max-width: 767px) {
-  .nivo-caption .text2 {
+  .keen-slider .text2 {
     margin-bottom: 1em;
   }
 }
 
-.nivo-caption .text3 {
+.keen-slider .text3 {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
 
-.nivo-caption {
-  @apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden text-center opacity-100;
-  background: 0 0;
+.keen-slider {
+  /*@apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden text-center opacity-100;
+  background: 0 0;*/
+  @apply bg-blue-500 opacity-100;
 }
 
 body {

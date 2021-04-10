@@ -37,7 +37,7 @@ const useScript = (url) => {
 
 //export default function Home({ posts }) {
 export default function Home() {
-  useScript("js/jquery.js")
+  /*  useScript("js/jquery.js")
   useScript("js/plugins/bootstrap.min.js")
   useScript("js/plugins/jquery.nivo.slider.js")
   useScript("js/plugins/slick.min.js")
@@ -48,7 +48,7 @@ export default function Home() {
   useScript("js/plugins/jquery.validate.min.js")
   useScript("js/custom.js")
   useScript("js/accessibilitymenu.js")
-  useScript("js/theWeatherNetwork.js")
+  useScript("js/theWeatherNetwork.js")*/
 
   return (
     <>
