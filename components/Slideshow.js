@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react"
 import { useKeenSlider } from "keen-slider/react"
 import SlideshowSlides from "@/components/SlideshowSlides"
+import Image from "@/components/Image"
 
 const Slideshow = () => {
   const [pause, setPause] = useState(false)
@@ -15,7 +16,7 @@ const Slideshow = () => {
       setPause(false)
     },
   })
-
+  /*
   useEffect(() => {
     sliderRef.current.addEventListener("mouseover", () => {
       setPause(true)
@@ -23,7 +24,7 @@ const Slideshow = () => {
     sliderRef.current.addEventListener("mouseout", () => {
       setPause(false)
     })
-  }, [sliderRef])
+  }, [sliderRef])*/
 
   useEffect(() => {
     timer.current = setInterval(() => {
