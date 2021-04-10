@@ -837,22 +837,6 @@ header .first-mobile {
   opacity: 0.55;
 }
 
-.slider-wrapper {
-  @apply relative;
-}
-
-#slider {
-  @apply mb-24;
-  height: 700px;
-}
-
-@media (max-width: 767px) {
-  #slider {
-    @apply mb-12;
-    height: 400px;
-  }
-}
-
 #sea {
   @apply absolute bottom-0 w-full pointer-events-none;
   z-index: 1000;
@@ -917,12 +901,6 @@ header .first-mobile {
   animation-delay: 2s;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-}
-
-.keen-slider {
-  /*@apply absolute top-0 bottom-0 left-0 right-0 overflow-hidden text-center opacity-100;
-  background: 0 0;*/
-  @apply bg-blue-500 opacity-100;
 }
 
 body {
