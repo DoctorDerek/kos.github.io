@@ -26,7 +26,7 @@ export default function Header() {
             <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
           </div>
         </div>
-        <div className="pl-4 pr-4 sm:w-1/3 lg:w-1/4">
+        <div className="col-span-1">
           <div className="!mt-6">
             <button
               href="/order/"
@@ -36,8 +36,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="pl-4 pr-4 lg:w-1/6 visible-lg" />
-        <div className="pl-4 pr-4 text-center sm:w-1/3">
+        <div className="col-span-1">
           <div className="logo">
             <a href="/">
               <div className="grid w-full h-40">
