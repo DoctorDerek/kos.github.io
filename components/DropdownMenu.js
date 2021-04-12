@@ -1,6 +1,6 @@
 export default function DropdownMenu() {
   return (
-    <div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
+    <nav id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
       <ul className="justify-around py-10 nav md:flex navbar-nav">
         <li className="active">
           <a href="/">home</a>
@@ -160,6 +160,6 @@ export default function DropdownMenu() {
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
   )
 }
