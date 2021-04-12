@@ -7,31 +7,6 @@ const Column = ({ children }) => (
   </div>
 )
 
-/*
-
-header .phone {
-  @apply inline-block text-xs font-normal text-right text-blue-800 uppercase;
-  padding: 30px 0 0 0;
-}
-
-header .phone span {
-  @apply inline-block align-bottom;
-}
-
-header .phone .number {
-  @apply mb-1 text-3xl leading-8 text-gray-700;
-}
-
-header .phone .number .icon {
-  @apply text-4xl align-middle;
-  padding: 0 10px 0 0;
-}
-
-header .first-mobile {
-  @apply float-right;
-}
- */
-
 export default function Header() {
   return (
     <header className="container pt-2 mx-auto">
@@ -58,17 +33,17 @@ export default function Header() {
           </div>
         </Column>
         <Column>
-          <div className="phone">
-            <div className="number">
-              <i className="icon icon-call-telephone" />
-              <span style={{ fontSize: 20 }}>
+          <div className="inline-block text-xs font-normal text-right text-blue-800 uppercase">
+            <div className="mb-1 text-3xl leading-8 text-gray-700">
+              <i className="text-4xl align-middle icon-call-telephone" />
+              <span className="inline-block align-bottom text-[20px]">
                 <strong>
                   Kingston:{" "}
                   <span style={{ color: "#A80532" }}>613-549-8667</span>
                 </strong>
               </span>
               <br />
-              <span style={{ fontSize: 20 }}>
+              <span className="inline-block align-bottom text-[20px]">
                 <strong>
                   Belleville:{" "}
                   <span style={{ color: "#A80532" }}>613-968-7137</span>
