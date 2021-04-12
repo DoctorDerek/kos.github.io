@@ -3,12 +3,8 @@ import Image from "@/components/Image"
 
 export default function Header() {
   return (
-    <header className="py-4 page-header">
-      <nav
-        className="flex flex-wrap pl-0 list-reset navbar"
-        id="slide-nav"
-        role="navigation"
-      >
+    <header>
+      <nav role="navigation">
         <div className="container mx-auto">
           <div className="flex flex-wrap pl-0 list-reset navbar-header">
             <div className="header-top !w-full">
