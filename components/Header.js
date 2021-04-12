@@ -50,7 +50,9 @@ export default function Header() {
                 </strong>
               </span>
             </div>
-            <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
+            <div className="text-center">
+              CALL &amp; DISCUSS YOUR INTERNET NEEDS
+            </div>
           </div>
         </Column>
       </div>
