@@ -437,19 +437,6 @@ html {
   }
 }
 
-header.page-header {
-  @apply relative p-0 m-0 font-normal border-none;
-  z-index: 1000;
-}
-
-header .header-top {
-  padding: 15px 0;
-}
-
-header .logo img {
-  @apply max-w-full;
-}
-
 header .phone {
   @apply inline-block text-xs font-normal text-right text-blue-800 uppercase;
   padding: 30px 0 0 0;
