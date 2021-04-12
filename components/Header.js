@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <header>
       <nav role="navigation">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap pl-0 list-reset navbar-header">
-            <div className="header-top !w-full">
+        <div className="container pt-2 mx-auto">
+          <div>
+            <div>
               <div className="flex flex-wrap lg:flex-nowrap ">
                 <div className="sm:w-2/3 md:w-1/3">
                   <div className="phone">
