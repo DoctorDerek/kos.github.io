@@ -7,6 +7,31 @@ const Column = ({ children }) => (
   </div>
 )
 
+/*
+
+header .phone {
+  @apply inline-block text-xs font-normal text-right text-blue-800 uppercase;
+  padding: 30px 0 0 0;
+}
+
+header .phone span {
+  @apply inline-block align-bottom;
+}
+
+header .phone .number {
+  @apply mb-1 text-3xl leading-8 text-gray-700;
+}
+
+header .phone .number .icon {
+  @apply text-4xl align-middle;
+  padding: 0 10px 0 0;
+}
+
+header .first-mobile {
+  @apply float-right;
+}
+ */
+
 export default function Header() {
   return (
     <header className="container pt-2 mx-auto">
