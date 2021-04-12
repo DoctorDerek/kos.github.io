@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-header .logo img {
-  max-width: 100%;
-}
-
-@media (max-width: 767px) {
-  header .logo {
-    text-align: center;
-    padding: 15px 0;
-  }
-  header .logo img {
-    max-width: 250px;
-  }
-}
-
 a {
   color: #000;
 }
@@ -385,13 +371,13 @@ button::-moz-focus-inner {
     #slideout {
     position: sticky;
         float: left;
-    
-    
+
+
 }
 #slideout_inner {
     position: absolute;
     float: left;
-    
+
 }
     .transparentButton {
         margin-top: 40px;
