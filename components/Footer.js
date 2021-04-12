@@ -44,7 +44,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="pl-4 pr-4 sm:w-1/3 first-mobile">
+            <div className="pl-4 pr-4 sm:w-1/3">
               <div className="location">
                 <i className="icon icon-location" />
                 183 Front Street

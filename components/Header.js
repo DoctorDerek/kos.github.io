@@ -13,7 +13,7 @@ export default function Header() {
           <div className="flex flex-wrap pl-0 list-reset navbar-header">
             <div className="header-top !w-full">
               <div className="flex flex-wrap lg:flex-nowrap ">
-                <div className=" lg:order-1 sm:w-2/3 md:w-1/3 first-mobile">
+                <div className=" lg:order-1 sm:w-2/3 md:w-1/3">
                   <div className="phone">
                     <div className="number">
                       <i className="icon icon-call-telephone" />
