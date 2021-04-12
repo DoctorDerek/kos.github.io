@@ -1,28 +1,38 @@
-import Image from "@/components/Image"
+import ImageFixed from "next/Image"
 import DropdownMenu from "@/components/DropdownMenu"
+
+const Column = ({ children }) => (
+  <div className="flex items-center justify-center h-full col-span-1">
+    {children}
+  </div>
+)
 
 export default function Header() {
   return (
     <header className="container pt-2 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3">
-        <div className="flex items-center justify-center h-full col-span-1">
+        <Column>
           <button
             href="/order/"
             className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none  uppercase transition-all transform-gpu duration-300 no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl border:none"
           >
             Order now
           </button>
-        </div>
-        <div className="col-span-1">
+        </Column>
+
+        <Column>
           <div className="logo">
             <a href="/">
-              <div className="grid w-full h-40">
-                <Image src="/assets/images/news/logo.png" alt />
-              </div>
+              <ImageFixed
+                src="/assets/images/news/logo.png"
+                alt
+                height="125"
+                width="300"
+              />
             </a>
           </div>
-        </div>
-        <div className="col-span-1">
+        </Column>
+        <Column>
           <div className="phone">
             <div className="number">
               <i className="icon icon-call-telephone" />
@@ -42,7 +52,7 @@ export default function Header() {
             </div>
             <div>CALL &amp; DISCUSS YOUR INTERNET NEEDS </div>
           </div>
-        </div>
+        </Column>
       </div>
       <button
         type="button"
