@@ -2527,9 +2527,6 @@ h2 + .category-carousel {
 */
 
 @media (min-width: 768px) {
-  #slidemenu {
-    @apply text-center;
-  }
   .navbar-nav > li > a,
   .navbar-nav > li > button {
     @apply text-lg font-bold leading-7 uppercase;
