@@ -85,9 +85,11 @@ export default function DropdownMenu() {
       if (typeof destinationOrSubmenu === "string") {
         const href = destinationOrSubmenu
         return (
-          <Link {...{ href }}>
-            <div key={text + href}>{text}</div>
-          </Link>
+          <li>
+            <Link {...{ href }}>
+              <div key={text + href}>{text}</div>
+            </Link>
+          </li>
         )
       }
       if (
@@ -112,16 +114,18 @@ export default function DropdownMenu() {
               {text}
               {isOpen ? "👆" : "👇"}
             </button>
-            <div
+            <ul
               className={
                 "absolute z-50 hidden bg-white dropdown-menu " +
                 (isOpen ? "visible pl-4" : "hidden pl-4")
               }
               role="menu"
             >
-              {destinationOrSubmenu &&
-                makeNavigationMenu(destinationOrSubmenu, itemProps)}
-            </div>
+              <li className="dropdown-submenu">
+                {destinationOrSubmenu &&
+                  makeNavigationMenu(destinationOrSubmenu, itemProps)}
+              </li>
+            </ul>
           </li>
         )
       }
@@ -133,11 +137,29 @@ export default function DropdownMenu() {
         </li>
         */
 
+  /* <li className="dropdown-submenu">
+              {" "}
+              <a href="/business/">
+                Business
+                <span className="eCARROT" />
+              </a>
+              <ul className="absolute z-50 hidden bg-white dropdown-menu">
+                <li>
+                  <a href="/bus/high-speed-cable/">High Speed Cable</a>
+                </li> */
+
   return (
-    <nav id="slidemenu">
-      <ul className="justify-around py-10 nav md:flex navbar-nav">
-        {makeNavigationMenu(NAVIGATION_MENU_MAP)}
-      </ul>
+    <nav className="navbar" id="slide-nav" role="navigation">
+      <div className="container">
+        <div id="slidemenu">
+          <ul
+            className="justify-around py-10 nav md:flex navbar-nav"
+            role="menu"
+          >
+            {makeNavigationMenu(NAVIGATION_MENU_MAP)}
+          </ul>
+        </div>
+      </div>
     </nav>
   )
 }
