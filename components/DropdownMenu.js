@@ -23,18 +23,24 @@ export default function DropdownMenu() {
   )
 
   const makeNavigationMenu = (NavigationMap) =>
-    [...NavigationMap.entries()].map(([text, href]) =>
-      typeof href === "string" ? (
-        <div key={text + href}>
-          {text}👉{href}
-        </div>
-      ) : (
-        <>
-          <div>{text}👇</div>
-          {href && makeNavigationMenu(href)}
-        </>
-      )
-    )
+    [...NavigationMap.entries()].map(([text, href]) => {
+      if (typeof href === "string") {
+        return (
+          <div key={text + href}>
+            {text}👉{href}
+          </div>
+        )
+      }
+      if (href !== null && typeof href === "object") {
+        return (
+          <>
+            <div>{text}👇</div>
+            {href && makeNavigationMenu(href)}
+          </>
+        )
+      }
+      return null
+    })
 
   return <nav>{makeNavigationMenu(Navigation)}</nav>
 }
