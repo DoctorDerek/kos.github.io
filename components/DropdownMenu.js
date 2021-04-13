@@ -1,16 +1,6 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 import Link from "@/components/Link"
 
-/* TODO:
-                  <a href="/bus/high-speed-cable/">High Speed Cable</a>
-                  <a href="/bus/wireless/">Wireless</a>
-                  <a href="/bus/high-speed-dsl/">High Speed DSL</a>
-                  <a href="/bus/voip/">VoIP</a>
-                  <a href="/bus/mail/">Mail</a>
-                  <a href="/bus/colocate-server/">Co Locate Server</a>
-                  <a href="/bus/dial-up/">Dial Up</a>
-*/
-
 const NAVIGATION_MENU_MAP = new Map([
   ["Home", "/"],
   [
@@ -46,7 +36,13 @@ const NAVIGATION_MENU_MAP = new Map([
       ["Payment Options", "/payment/options/"],
     ]),
   ],
-  ["Hosting", null],
+  [
+    "Hosting",
+    new Map([
+      ["Packages & Pricing", "/hosting/packages/"],
+      ["Registering a Domain", "/domain/registration/"],
+    ]),
+  ],
   ["About Us", "/about/"],
   ["Order Now", "/order/"],
   ["Contact Us", "/contact.php"],
@@ -54,12 +50,6 @@ const NAVIGATION_MENU_MAP = new Map([
 ])
 
 /*
-
-<li className="relative dropdown">
-            Hosting
-              <a href="/hosting/packages/">Packages &amp; Pricing</a>
-              <a href="/domain/registration/">Registering a Domain</a>
-        </li>
         <li className="relative dropdown">
           <a href="/about/" data-toggle="dropdown">
             About Us
@@ -118,7 +108,7 @@ export default function DropdownMenu() {
         )
         return (
           <>
-            <button {...buttonProps}>
+            <button {...buttonProps} className="block">
               {text}
               {isOpen ? "👆" : "👇"}
             </button>
