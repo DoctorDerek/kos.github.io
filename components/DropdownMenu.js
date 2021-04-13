@@ -1,4 +1,10 @@
+import useDropdownMenu from "react-accessible-dropdown-menu-hook"
+
 export default function DropdownMenu() {
+  const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
+    numberOfItems
+  )
+
   return (
     <nav id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
       <ul className="justify-around py-10 nav md:flex navbar-nav">
@@ -84,10 +90,10 @@ export default function DropdownMenu() {
           </ul>
         </li>
         <li className="relative dropdown">
-          <a href="#" data-toggle="dropdown">
+          <button>
             Hosting
             <span className="ecaret" />
-          </a>
+          </button>
           <ul
             className="absolute z-50 hidden bg-white dropdown-menu"
             role="menu"
