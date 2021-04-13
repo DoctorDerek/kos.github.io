@@ -21,34 +21,34 @@ export default function Header() {
         </Column>
 
         <Column>
-          <div className="logo">
-            <a href="/">
-              <ImageFixed
-                src="/assets/images/news/logo.png"
-                alt
-                height="125"
-                width="300"
-              />
-            </a>
-          </div>
+          <a href="/">
+            <ImageFixed
+              src="/assets/images/news/logo.png"
+              alt
+              height="125"
+              width="300"
+            />
+          </a>
         </Column>
         <Column>
           <div className="inline-block text-xs font-normal text-right text-blue-800 uppercase">
-            <div className="mb-1 text-3xl leading-8 text-gray-700">
-              <i className="text-4xl align-middle icon-call-telephone" />
-              <span className="inline-block align-bottom text-[20px]">
-                <strong>
-                  Kingston:{" "}
-                  <span style={{ color: "#A80532" }}>613-549-8667</span>
-                </strong>
-              </span>
-              <br />
-              <span className="inline-block align-bottom text-[20px]">
-                <strong>
-                  Belleville:{" "}
-                  <span style={{ color: "#A80532" }}>613-968-7137</span>
-                </strong>
-              </span>
+            <div className="flex mb-1 text-3xl leading-8 text-gray-700">
+              <i className="self-center text-4xl align-middle icon-call-telephone" />
+              <div>
+                <span className="inline-block align-bottom text-[20px]">
+                  <strong>
+                    Kingston:{" "}
+                    <span style={{ color: "#A80532" }}>613-549-8667</span>
+                  </strong>
+                </span>
+                <br />
+                <span className="inline-block align-bottom text-[20px]">
+                  <strong>
+                    Belleville:{" "}
+                    <span style={{ color: "#A80532" }}>613-968-7137</span>
+                  </strong>
+                </span>
+              </div>
             </div>
             <div className="text-center">
               CALL &amp; DISCUSS YOUR INTERNET NEEDS
