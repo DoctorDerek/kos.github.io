@@ -108,6 +108,8 @@ export default function DropdownMenu() {
               className="block"
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
+              aria-haspopup="true"
+              aria-expanded={isOpen}
             >
               {text}
               {isOpen ? "👆" : "👇"}
