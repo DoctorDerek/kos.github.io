@@ -6,6 +6,10 @@ a {
   color: #000;
 }
 
+html {
+  @apply overflow-auto;
+}
+
 /*! CSS Used from: /css/plugins/animate.min.css */
 
 .animated {
@@ -390,11 +394,6 @@ button::-moz-focus-inner {
   .footer-bot {
     @apply hidden;
   }
-}
-
-body,
-html {
-  @apply overflow-x-hidden;
 }
 
 .block-class {
