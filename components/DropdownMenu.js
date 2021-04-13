@@ -2,7 +2,13 @@ import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 
 const Navigation = new Map([
   ["Home", "/"],
-  ["Services", null],
+  [
+    "Services",
+    new Map([
+      ["Residential", "/residential/"],
+      ["Business", "/business/"],
+    ]),
+  ],
   ["Hosting", null],
   ["About Us", "/about/"],
   ["Order Now", "/order/"],
@@ -16,20 +22,21 @@ export default function DropdownMenu() {
     numberOfItems
   )
 
-  return (
-    <nav>
-      {[...Navigation.entries()].map(([text, href]) =>
-        href ? (
-          <div key={text + href}>
-            {text}
-            {href}
-          </div>
-        ) : (
-          <div>"Menu!"</div>
-        )
-      )}
-    </nav>
-  )
+  const makeNavigationMenu = (NavigationMap) =>
+    [...NavigationMap.entries()].map(([text, href]) =>
+      typeof href === "string" ? (
+        <div key={text + href}>
+          {text}👉{href}
+        </div>
+      ) : (
+        <>
+          <div>{text}👇</div>
+          {href && makeNavigationMenu(href)}
+        </>
+      )
+    )
+
+  return <nav>{makeNavigationMenu(Navigation)}</nav>
 }
 /* HOME
 SERVICES
