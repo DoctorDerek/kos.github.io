@@ -1879,7 +1879,7 @@ h2 + .category-carousel {
 }
 
 /*! CSS Used fontfaces */
-
+/*
 @font-face {
   font-family: "pool";
   src: url("/font/icons/fonts/pool.eot?dx1h4q");
@@ -2781,6 +2781,7 @@ h2 + .category-carousel {
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+*/
 
 /*! CSS Used from: /css/plugins/bootstrap.min.css */
 
