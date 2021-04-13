@@ -86,7 +86,9 @@ export default function DropdownMenu() {
         const href = destinationOrSubmenu
         return (
           <li key={text + href}>
-            <Link {...{ href }}>{text}</Link>
+            <Link {...{ href }} className="block">
+              {text}
+            </Link>
           </li>
         )
       }
