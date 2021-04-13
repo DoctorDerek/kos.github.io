@@ -1,13 +1,49 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 import Link from "@/components/Link"
 
+/* TODO:
+                  <a href="/bus/high-speed-cable/">High Speed Cable</a>
+                  <a href="/bus/wireless/">Wireless</a>
+                  <a href="/bus/high-speed-dsl/">High Speed DSL</a>
+                  <a href="/bus/voip/">VoIP</a>
+                  <a href="/bus/mail/">Mail</a>
+                  <a href="/bus/colocate-server/">Co Locate Server</a>
+                  <a href="/bus/dial-up/">Dial Up</a>
+*/
+
 const Navigation = new Map([
   ["Home", "/"],
   [
     "Services",
     new Map([
-      ["Residential", "/residential/"],
-      ["Business", "/business/"],
+      [
+        "Residential",
+        new Map([
+          ["Residential Internet", "/residential/"],
+          ["High Speed Cable", "/res/high-speed-cable/"],
+          ["Wireless Broadband", "/res/wireless-broadband/"],
+          ["High Speed DSL", "/res/high-speed-dsl/"],
+          ["VoIP", "/res/voip/"],
+          ["Mail", "/res/mail/"],
+          ["Dial Up", "/res/dial-up/"],
+        ]),
+      ],
+      [
+        "Business",
+        new Map([
+          ["Business Internet", "/business/"],
+          ["High Speed Cable", "/bus/high-speed-cable/"],
+          ["Wireless", "/bus/wireless/"],
+          ["High Speed DSL", "/bus/high-speed-dsl/"],
+          ["VoIP", "/bus/voip/"],
+          ["Mail", "/bus/mail/"],
+          ["Co Locate Server", "/bus/colocate-server/"],
+          ["Dial Up", "/bus/dial-up/"],
+        ]),
+      ],
+      ["Campgrounds", "/campgrounds/"],
+      ["Availability Tool", "/availability/"],
+      ["Payment Options", "/payment/options/"],
     ]),
   ],
   ["Hosting", null],
@@ -16,6 +52,40 @@ const Navigation = new Map([
   ["Contact Us", "/contact.php"],
   ["My Account", null],
 ])
+
+/*
+
+<li className="relative dropdown">
+            Hosting
+              <a href="/hosting/packages/">Packages &amp; Pricing</a>
+              <a href="/domain/registration/">Registering a Domain</a>
+        </li>
+        <li className="relative dropdown">
+          <a href="/about/" data-toggle="dropdown">
+            About Us
+          </a>
+              <a href="/about/">Our Company</a>
+              <a href="/news/events/">News &amp; Events</a>
+              <a href="/coverage/">Coverage Area</a>
+          <a href="/order/">Order Now</a>
+          <a href="/contact.php">Contact Us</a>
+        </li>
+        <li className="relative dropdown">
+          <a href="#" data-toggle="dropdown">
+            My Account
+          </a>
+              <a href="https://webmail.kos.net/src/login.php">My Email</a>
+              <a href="https://usage.kos.net/">My Internet Usage</a>
+              <a href="https://vvs.directnet.ca/?">My VoIP Portal</a>
+              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
+                Web Hosting Support
+              </a>
+              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
+                Open a Support Ticket
+              </a>
+              <a href="/support/faqs/">Quick Support / FAQS</a>
+            </li>
+              */
 
 const isRequired = () => {
   throw new Error("Missing argument in DropdownMenu")
@@ -52,7 +122,10 @@ export default function DropdownMenu() {
               {text}
               {isOpen ? "👆" : "👇"}
             </button>
-            <div className={isOpen ? "visible" : "hidden"} role="menu">
+            <div
+              className={isOpen ? "visible pl-4" : "hidden pl-4"}
+              role="menu"
+            >
               {destinationOrSubmenu &&
                 makeNavigationMenu(destinationOrSubmenu, itemProps)}
             </div>
@@ -64,70 +137,3 @@ export default function DropdownMenu() {
 
   return <nav>{makeNavigationMenu(Navigation)}</nav>
 }
-/* HOME
-SERVICES
-HOSTING
-ABOUT US
-ORDER NOW
-CONTACT US
-MY ACCOUNT
-*/
-/*
-<a href="/">home</a>
-          <a href="#" data-toggle="dropdown">
-            services
-          </a>
-            <li className="dropdown-submenu">
-              <a href="/residential/" data-toggle="dropdown">
-                Residential
-              </a>
-                  <a href="/res/high-speed-cable/">High Speed Cable</a>
-                  <a href="/res/wireless-broadband/">Wireless Broadband</a>
-                  <a href="/res/high-speed-dsl/">High Speed DSL</a>
-                  <a href="/res/voip/">VoIP</a>
-                  <a href="/res/mail/">Mail</a>
-                  <a href="/res/dial-up/">Dial Up</a>
-              <a href="/business/">
-                Business
-              </a>
-                  <a href="/bus/high-speed-cable/">High Speed Cable</a>
-                  <a href="/bus/wireless/">Wireless</a>
-                  <a href="/bus/high-speed-dsl/">High Speed DSL</a>
-                  <a href="/bus/voip/">VoIP</a>
-                  <a href="/bus/mail/">Mail</a>
-                  <a href="/bus/colocate-server/">Co Locate Server</a>
-                  <a href="/bus/dial-up/">Dial Up</a>
-              <a href="/campgrounds/">Campgrounds</a>
-              <a href="/availability/">Availability Tool</a>
-              <a href="/payment/options/">Payment Options</a>
-        <li className="relative dropdown">
-            Hosting
-              <a href="/hosting/packages/">Packages &amp; Pricing</a>
-              <a href="/domain/registration/">Registering a Domain</a>
-        </li>
-        <li className="relative dropdown">
-          <a href="/about/" data-toggle="dropdown">
-            About Us
-          </a>
-              <a href="/about/">Our Company</a>
-              <a href="/news/events/">News &amp; Events</a>
-              <a href="/coverage/">Coverage Area</a>
-          <a href="/order/">Order Now</a>
-          <a href="/contact.php">Contact Us</a>
-        </li>
-        <li className="relative dropdown">
-          <a href="#" data-toggle="dropdown">
-            My Account
-          </a>
-              <a href="https://webmail.kos.net/src/login.php">My Email</a>
-              <a href="https://usage.kos.net/">My Internet Usage</a>
-              <a href="https://vvs.directnet.ca/?">My VoIP Portal</a>
-              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
-                Web Hosting Support
-              </a>
-              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
-                Open a Support Ticket
-              </a>
-              <a href="/support/faqs/">Quick Support / FAQS</a>
-            </li>
-*/
