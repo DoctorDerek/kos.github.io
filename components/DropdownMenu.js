@@ -111,6 +111,7 @@ export default function DropdownMenu() {
               {...buttonProps}
               aria-haspopup="true"
               aria-expanded={isOpen}
+              className="w-full"
             >
               {text}
               {isOpen ? "👆" : "👇"}
