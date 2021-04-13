@@ -2526,8 +2526,6 @@ h2 + .category-carousel {
 }
 */
 
-/* Nav-bar */
-/*
 @media (min-width: 768px) {
   .navbar-header {
     @apply float-none;
@@ -2778,6 +2776,8 @@ h2 + .category-carousel {
   }
 }
 
+/*! CSS Used from: /css/custom.css */
+
 @media (min-width: 768px) {
   .ecaret {
     @apply hidden;
@@ -2874,6 +2874,8 @@ h2 + .category-carousel {
   }
 }
 
+/*! CSS Used from: /css/plugins/bootstrap.min.css */
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2920,6 +2922,8 @@ h2 + .category-carousel {
   border-top-right-radius: 0;
 }
 
+/*! CSS Used from: /css/plugins/bootstrap-submenu.css */
+
 .dropdown-submenu > a:after {
   content: "";
 }
@@ -2956,4 +2960,3 @@ h2 + .category-carousel {
     padding-left: 35px;
   }
 }
-*/
