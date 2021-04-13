@@ -14,7 +14,10 @@ const SlideshowSlide = ({
   text3 = isRequired(),
 }) => {
   return (
-    <div className="grid grid-cols-1 transform-gpu keen-slider__slide h-96">
+    <div
+      className="grid grid-cols-1 transform-gpu keen-slider__slide h-96"
+      style={{ minWidth: 0, maxWidth: 0 }}
+    >
       <Image src={src} alt={alt} className="h-full" />
       <div className="absolute flex flex-col items-center justify-center w-full h-full opacity-80">
         <div className="text text1">
