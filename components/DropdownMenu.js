@@ -149,17 +149,10 @@ export default function DropdownMenu() {
                 </li> */
 
   return (
-    <nav className="navbar" id="slide-nav" role="navigation">
-      <div className="container">
-        <div id="slidemenu">
-          <ul
-            className="justify-around py-10 nav md:flex navbar-nav"
-            role="menu"
-          >
-            {makeNavigationMenu(NAVIGATION_MENU_MAP)}
-          </ul>
-        </div>
-      </div>
+    <nav>
+      <ul className="justify-around py-10 md:flex" role="menu">
+        {makeNavigationMenu(NAVIGATION_MENU_MAP)}
+      </ul>
     </nav>
   )
 }
