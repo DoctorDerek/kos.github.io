@@ -124,7 +124,7 @@ export default function DropdownMenu() {
           </>
         )
       }
-      return null
+      throw new Error("Unknown destinationOrSubmenu prop in DropdownMenu")
     })
 
   return <nav>{makeNavigationMenu(NAVIGATION_MENU_MAP)}</nav>
