@@ -43,39 +43,34 @@ const NAVIGATION_MENU_MAP = new Map([
       ["Registering a Domain", "/domain/registration/"],
     ]),
   ],
-  ["About Us", "/about/"],
+  [
+    "About Us",
+    new Map([
+      ["Our Company", "/about/"],
+      ["Registering a Domain", "/news/events/"],
+      ["Coverage Area", "/coverage/"],
+    ]),
+  ],
   ["Order Now", "/order/"],
   ["Contact Us", "/contact.php"],
-  ["My Account", null],
+  [
+    "My Account",
+    new Map([
+      ["My Email", "https://webmail.kos.net/src/login.php"],
+      ["My Internet Usage", "https://usage.kos.net/"],
+      ["My VoIP Portal", "https://vvs.directnet.ca/?"],
+      [
+        "Web Hosting Support",
+        "https://support.kos.net/helpdesk/index.php?action=submit",
+      ],
+      [
+        "Open a Support Ticket",
+        "https://support.kos.net/helpdesk/index.php?action=submit",
+      ],
+      ["Quick Support / FAQs", "/support/faqs/"],
+    ]),
+  ],
 ])
-
-/*
-        <li className="relative dropdown">
-          <a href="/about/" data-toggle="dropdown">
-            About Us
-          </a>
-              <a href="/about/">Our Company</a>
-              <a href="/news/events/">News &amp; Events</a>
-              <a href="/coverage/">Coverage Area</a>
-          <a href="/order/">Order Now</a>
-          <a href="/contact.php">Contact Us</a>
-        </li>
-        <li className="relative dropdown">
-          <a href="#" data-toggle="dropdown">
-            My Account
-          </a>
-              <a href="https://webmail.kos.net/src/login.php">My Email</a>
-              <a href="https://usage.kos.net/">My Internet Usage</a>
-              <a href="https://vvs.directnet.ca/?">My VoIP Portal</a>
-              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
-                Web Hosting Support
-              </a>
-              <a href="https://support.kos.net/helpdesk/index.php?action=submit">
-                Open a Support Ticket
-              </a>
-              <a href="/support/faqs/">Quick Support / FAQS</a>
-            </li>
-              */
 
 const isRequired = () => {
   throw new Error("Missing argument in DropdownMenu")
