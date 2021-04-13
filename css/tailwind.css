@@ -2671,7 +2671,7 @@ h2 + .category-carousel {
   }
   header .dropdown-menu {
     @apply rounded-none;
-  }
+  } /*
   header .navbar-nav .ecaret {
     @apply absolute top-0 right-0 block w-12 h-12;
     border: 0;
@@ -2682,7 +2682,7 @@ h2 + .category-carousel {
     @apply absolute top-0 w-full text-2xl text-center;
     content: "+";
     line-height: 50px;
-  }
+  }*/
   header .navbar-nav li {
     @apply relative bg-transparent;
   }
@@ -2802,6 +2802,7 @@ h2 + .category-carousel {
   header .dropdown-menu {
     @apply rounded-none;
   }
+  /*
   header .navbar-nav .ecaret {
     @apply absolute top-0 right-0 block w-12 h-12 border-none;
     background: rgba(255, 255, 255, 0.2);
@@ -2811,7 +2812,7 @@ h2 + .category-carousel {
     @apply absolute top-0 w-full text-2xl text-center;
     content: "+";
     line-height: 50px;
-  }
+  }*/
   header .navbar-nav li {
     @apply relative bg-transparent;
   }
