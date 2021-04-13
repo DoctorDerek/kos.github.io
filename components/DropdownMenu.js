@@ -15,7 +15,7 @@ export default function DropdownMenu() {
           {" "}
           <a href="#" data-toggle="dropdown">
             services
-            <span className="ecaret" />
+            <span className="eCARROT" />
           </a>
           <ul
             className="absolute z-50 hidden bg-white dropdown-menu"
@@ -25,7 +25,7 @@ export default function DropdownMenu() {
               {" "}
               <a href="/residential/" data-toggle="dropdown">
                 Residential
-                <span className="ecaret" />
+                <span className="eCARROT" />
               </a>
               <ul className="absolute z-50 hidden bg-white dropdown-menu">
                 <li>
@@ -52,7 +52,7 @@ export default function DropdownMenu() {
               {" "}
               <a href="/business/">
                 Business
-                <span className="ecaret" />
+                <span className="eCARROT" />
               </a>
               <ul className="absolute z-50 hidden bg-white dropdown-menu">
                 <li>
@@ -92,8 +92,8 @@ export default function DropdownMenu() {
         <li className="relative dropdown">
           <button>
             Hosting
-            <span className="ecaret" />
-          </button>
+            <span className="eCARROT" />
+          </a>
           <ul
             className="absolute z-50 hidden bg-white dropdown-menu"
             role="menu"
@@ -109,7 +109,7 @@ export default function DropdownMenu() {
         <li className="relative dropdown">
           <a href="/about/" data-toggle="dropdown">
             About Us
-            <span className="ecaret" />
+            <span className="eCARROT" />
           </a>
           <ul
             className="absolute z-50 hidden bg-white dropdown-menu"
@@ -135,7 +135,7 @@ export default function DropdownMenu() {
         <li className="relative dropdown">
           <a href="#" data-toggle="dropdown">
             My Account
-            <span className="ecaret" />
+            <span className="eCARROT" />
           </a>
           <ul
             className="absolute z-50 hidden bg-white dropdown-menu"
