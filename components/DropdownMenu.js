@@ -85,10 +85,8 @@ export default function DropdownMenu() {
       if (typeof destinationOrSubmenu === "string") {
         const href = destinationOrSubmenu
         return (
-          <li>
-            <Link {...{ href }}>
-              <div key={text + href}>{text}</div>
-            </Link>
+          <li key={text + href}>
+            <Link {...{ href }}>{text}</Link>
           </li>
         )
       }
