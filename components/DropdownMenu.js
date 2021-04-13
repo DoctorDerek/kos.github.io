@@ -102,15 +102,14 @@ export default function DropdownMenu() {
           numberOfItems
         )
         return (
-          <li className="relative dropdown">
-            <button
-              {...buttonProps}
-              className="block"
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
-              aria-haspopup="true"
-              aria-expanded={isOpen}
-            >
+          <li
+            className="relative dropdown"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+            aria-haspopup="true"
+            aria-expanded={isOpen}
+          >
+            <button {...buttonProps} className="block">
               {text}
               {isOpen ? "👆" : "👇"}
             </button>
@@ -120,8 +119,6 @@ export default function DropdownMenu() {
                 (isOpen ? "visible" : "hidden")
               }
               role="menu"
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
             >
               <li className="dropdown-submenu">
                 {destinationOrSubmenu &&
