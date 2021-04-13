@@ -86,9 +86,7 @@ export default function DropdownMenu() {
         const href = destinationOrSubmenu
         return (
           <Link {...{ href }}>
-            <div key={text + href}>
-              {text}👉{href}
-            </div>
+            <div key={text + href}>{text}</div>
           </Link>
         )
       }
@@ -102,7 +100,7 @@ export default function DropdownMenu() {
           numberOfItems
         )
         return (
-          <>
+          <li className="relative dropdown">
             <button
               {...buttonProps}
               className="block"
@@ -115,17 +113,31 @@ export default function DropdownMenu() {
               {isOpen ? "👆" : "👇"}
             </button>
             <div
-              className={isOpen ? "visible pl-4" : "hidden pl-4"}
+              className={
+                "absolute z-50 hidden bg-white dropdown-menu " +
+                (isOpen ? "visible pl-4" : "hidden pl-4")
+              }
               role="menu"
             >
               {destinationOrSubmenu &&
                 makeNavigationMenu(destinationOrSubmenu, itemProps)}
             </div>
-          </>
+          </li>
         )
       }
       throw new Error("Unknown destinationOrSubmenu prop in DropdownMenu")
     })
 
-  return <nav>{makeNavigationMenu(NAVIGATION_MENU_MAP)}</nav>
+  /*<li className="active">
+          <a href="/">home</a>
+        </li>
+        */
+
+  return (
+    <nav id="slidemenu">
+      <ul className="justify-around py-10 nav md:flex navbar-nav">
+        {makeNavigationMenu(NAVIGATION_MENU_MAP)}
+      </ul>
+    </nav>
+  )
 }
