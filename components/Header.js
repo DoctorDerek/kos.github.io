@@ -1,4 +1,5 @@
-import ImageFixed from "next/Image"
+import ImageFixed from "next/image"
+import Image from "@/components/Image"
 import DropdownMenu from "@/components/DropdownMenu"
 
 const Column = ({ children }) => (
@@ -31,18 +32,20 @@ export default function Header() {
           </a>
         </Column>
         <Column>
-          <div className="inline-block text-xs font-normal text-right text-blue-800 uppercase">
+          <div className="text-xs font-normal text-right text-blue-800 uppercase">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
-              <i className="self-center text-4xl align-middle icon-call-telephone" />
+              <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
+                <Image src="/assets/icons/phone.svg" alt="" />
+              </div>
               <div>
-                <span className="inline-block align-bottom text-[20px]">
+                <span className="text-[20px]">
                   <strong>
                     Kingston:{" "}
                     <span style={{ color: "#A80532" }}>613-549-8667</span>
                   </strong>
                 </span>
                 <br />
-                <span className="inline-block align-bottom text-[20px]">
+                <span className="text-[20px]">
                   <strong>
                     Belleville:{" "}
                     <span style={{ color: "#A80532" }}>613-968-7137</span>
