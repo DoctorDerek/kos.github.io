@@ -116,8 +116,8 @@ export default function DropdownMenu() {
             </button>
             <ul
               className={
-                "absolute z-50 hidden bg-white dropdown-menu " +
-                (isOpen ? "visible pl-4" : "hidden pl-4")
+                "absolute z-50 bg-white dropdown-menu " +
+                (isOpen ? "visible" : "hidden")
               }
               role="menu"
             >
