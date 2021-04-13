@@ -118,6 +118,8 @@ export default function DropdownMenu() {
                 (isOpen ? "visible" : "hidden")
               }
               role="menu"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
             >
               <li className="dropdown-submenu">
                 {destinationOrSubmenu &&
