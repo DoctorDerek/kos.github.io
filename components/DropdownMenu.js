@@ -1,4 +1,5 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
+import Link from "@/components/Link"
 
 const Navigation = new Map([
   ["Home", "/"],
@@ -16,26 +17,45 @@ const Navigation = new Map([
   ["My Account", null],
 ])
 
-export default function DropdownMenu() {
-  const numberOfItems = 2
-  const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
-    numberOfItems
-  )
+const isRequired = () => {
+  throw new Error("Missing argument in DropdownMenu")
+}
 
-  const makeNavigationMenu = (NavigationMap) =>
-    [...NavigationMap.entries()].map(([text, href]) => {
-      if (typeof href === "string") {
+export default function DropdownMenu() {
+  const makeNavigationMenu = (
+    NavigationMenu = isRequired(),
+    dropdownMenuItemProps = null
+  ) =>
+    [...NavigationMenu.entries()].map(([text, destinationOrSubmenu]) => {
+      if (typeof destinationOrSubmenu === "string") {
+        const href = destinationOrSubmenu
         return (
-          <div key={text + href}>
-            {text}👉{href}
-          </div>
+          <a {...{ href }}>
+            <div key={text + href}>
+              {text}👉{href}
+            </div>
+          </a>
         )
       }
-      if (href !== null && typeof href === "object") {
+      if (
+        destinationOrSubmenu !== null &&
+        typeof destinationOrSubmenu === "object"
+      ) {
+        const submenu = destinationOrSubmenu
+        const numberOfItems = submenu.length
+        const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
+          numberOfItems
+        )
         return (
           <>
-            <div>{text}👇</div>
-            {href && makeNavigationMenu(href)}
+            <button {...buttonProps}>
+              {text}
+              {isOpen ? "👆" : "👇"}
+            </button>
+            <div className={isOpen ? "visible" : "hidden"} role="menu">
+              {destinationOrSubmenu &&
+                makeNavigationMenu(destinationOrSubmenu, itemProps)}
+            </div>
           </>
         )
       }
