@@ -2820,7 +2820,9 @@ h2 + .category-carousel {
     @apply relative hidden w-full p-0 m-0 bg-gray-200 border-none;
   }
   header .navbar-nav .dropdown-menu a,
-  header .navbar-nav .dropdown-menu a:focus {
+  header .navbar-nav .dropdown-menu a:focus,
+  header .navbar-nav .dropdown-menu button,
+  header .navbar-nav .dropdown-menu button:focus {
     @apply text-base leading-7 bg-transparent;
     color: #333;
     padding: 10px 15px 10px 20px;
@@ -2829,7 +2831,8 @@ h2 + .category-carousel {
     -ms-transition: all 200ms ease;
     -o-transition: all 200ms ease;
   }
-  header .navbar-nav .dropdown-menu a:hover {
+  header .navbar-nav .dropdown-menu a:hover,
+  header .navbar-nav .dropdown-menu button:hover {
     @apply text-white;
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -2839,7 +2842,8 @@ h2 + .category-carousel {
 }
 
 @media (max-width: 767px) {
-  #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+  #slide-nav #slidemenu .navbar-nav .dropdown-menu li a,
+  #slide-nav #slidemenu .navbar-nav .dropdown-menu li button {
     @apply w-full min-w-0 whitespace-normal;
   }
 }
