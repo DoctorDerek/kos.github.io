@@ -11,7 +11,7 @@ import Link from "@/components/Link"
                   <a href="/bus/dial-up/">Dial Up</a>
 */
 
-const Navigation = new Map([
+const NAVIGATION_MENU_MAP = new Map([
   ["Home", "/"],
   [
     "Services",
@@ -135,5 +135,5 @@ export default function DropdownMenu() {
       return null
     })
 
-  return <nav>{makeNavigationMenu(Navigation)}</nav>
+  return <nav>{makeNavigationMenu(NAVIGATION_MENU_MAP)}</nav>
 }
