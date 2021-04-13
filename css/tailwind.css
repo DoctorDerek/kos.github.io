@@ -856,13 +856,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  @apply text-sm font-medium leading-5 text-black;
-}
-
-@media (max-width: 767px) {
-  body {
-    @apply text-sm leading-5;
-  }
+  @apply text-sm font-medium leading-5 text-black bg-white;
 }
 
 a {
