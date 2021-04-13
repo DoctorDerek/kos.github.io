@@ -103,7 +103,12 @@ export default function DropdownMenu() {
         )
         return (
           <>
-            <button {...buttonProps} className="block">
+            <button
+              {...buttonProps}
+              className="block"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
+            >
               {text}
               {isOpen ? "👆" : "👇"}
             </button>
