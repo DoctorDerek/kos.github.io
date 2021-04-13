@@ -13,6 +13,8 @@ const SlideshowSlide = ({
   href = isRequired(),
   text3 = isRequired(),
 }) => {
+  // Both transform-gpu and style={{ minWidth: 0, maxWidth: 0 }}
+  // are required to eliminate Cumulative Layout Shift (CLS) here.
   return (
     <div
       className="grid grid-cols-1 transform-gpu keen-slider__slide h-96"
