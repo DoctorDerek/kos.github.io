@@ -1,4 +1,4 @@
-import ImageFixed from "next/Image"
+import ImageFixed from "next/image"
 import DropdownMenu from "@/components/DropdownMenu"
 
 const Column = ({ children }) => (
