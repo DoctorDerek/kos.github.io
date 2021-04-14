@@ -82,79 +82,87 @@ export default function DropdownMenu() {
     NavigationMenu = isRequired(),
     dropdownMenuItemProps = null
   ) =>
-    [...NavigationMenu.entries()].map(([text, destinationOrSubmenu]) => {
-      if (typeof destinationOrSubmenu === "string") {
-        const href = destinationOrSubmenu
-        return (
-          <li key={text + href}>
-            <Link {...{ href }} className="block">
-              {text}
-            </Link>
-          </li>
-        )
-      }
-      if (
-        destinationOrSubmenu !== null &&
-        typeof destinationOrSubmenu === "object"
-      ) {
-        const submenu = destinationOrSubmenu
-        const numberOfItems = submenu.length
-        const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
-          numberOfItems
-        )
-        let arrowDirection
-        if (dropdownMenuItemProps) {
-          // we're inside a sub-menu
-          if (isOpen) {
-            arrowDirection = "left"
-          } else {
-            arrowDirection = "right"
+    [...NavigationMenu.entries()].map(
+      ([text, destinationOrSubmenu], itemIndex) => {
+        if (typeof destinationOrSubmenu === "string") {
+          const href = destinationOrSubmenu
+          let childProps = {}
+          if (dropdownMenuItemProps && dropdownMenuItemProps[itemIndex]) {
+            // pass in itemProps from react-accessible-dropdown-menu-hook
+            childProps = { ...dropdownMenuItemProps[itemIndex] }
           }
-        } else {
-          // we're a top-level menu
-          if (isOpen) {
-            arrowDirection = "up"
-          } else {
-            arrowDirection = "down"
-          }
+          childProps.key = text + href
+          return (
+            <li childProps>
+              <Link href={href} className="block">
+                {text}
+              </Link>
+            </li>
+          )
         }
-        return (
-          <li
-            className="relative dropdown"
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
-          >
-            <button
-              {...buttonProps}
-              aria-haspopup="true"
-              aria-expanded={isOpen}
-              className="w-full"
+        if (
+          destinationOrSubmenu !== null &&
+          typeof destinationOrSubmenu === "object"
+        ) {
+          const submenu = destinationOrSubmenu
+          const numberOfItems = submenu.length
+          const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
+            numberOfItems
+          )
+          let arrowDirection
+          if (dropdownMenuItemProps) {
+            // we're inside a sub-menu
+            if (isOpen) {
+              arrowDirection = "left"
+            } else {
+              arrowDirection = "right"
+            }
+          } else {
+            // we're a top-level menu
+            if (isOpen) {
+              arrowDirection = "up"
+            } else {
+              arrowDirection = "down"
+            }
+          }
+          return (
+            <li
+              className="relative dropdown"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseLeave={() => setIsOpen(false)}
             >
-              {text}
-              <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
-                <Image
-                  src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
-                  alt="" /* alt="" appropriate for decorative icon */
-                />
-              </div>
-            </button>
-            <ul
-              className={
-                "absolute z-50 bg-white dropdown-menu " +
-                (isOpen ? "visible" : "hidden")
-              }
-              role="menu"
-            >
-              <li className="dropdown-submenu">
-                {destinationOrSubmenu &&
-                  makeNavigationMenu(destinationOrSubmenu, itemProps)}
-              </li>
-            </ul>
-          </li>
-        )
+              <button
+                {...buttonProps}
+                aria-haspopup="true"
+                aria-expanded={isOpen}
+                className="w-full"
+              >
+                {text}
+                <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
+                  <Image
+                    src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
+                    alt="" /* alt="" appropriate for decorative icon */
+                  />
+                </div>
+              </button>
+              <ul
+                className={
+                  "absolute z-50 bg-white dropdown-menu " +
+                  (isOpen ? "visible" : "hidden")
+                }
+                role="menu"
+              >
+                <li className="dropdown-submenu">
+                  {destinationOrSubmenu &&
+                    makeNavigationMenu(destinationOrSubmenu, itemProps)}
+                </li>
+              </ul>
+            </li>
+          )
+        }
+        throw new Error("Unknown destinationOrSubmenu prop in DropdownMenu")
       }
-      throw new Error("Unknown destinationOrSubmenu prop in DropdownMenu")
-    })
+    )
 
   /*<li className="active">
           <a href="/">home</a>
