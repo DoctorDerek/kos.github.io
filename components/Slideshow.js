@@ -8,7 +8,7 @@ const Slideshow = () => {
   const timer = useRef()
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
-    duration: 10000, // animation duration in ms
+    duration: 3000, // animation duration in ms
     dragStart: () => {
       setPause(true)
     },
