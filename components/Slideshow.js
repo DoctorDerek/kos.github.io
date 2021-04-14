@@ -31,7 +31,7 @@ const Slideshow = () => {
       if (!pause && slider) {
         slider.next()
       }
-    }, 5000) // autoplay interval in ms
+    }, 15000) // autoplay interval in ms
     return () => {
       clearInterval(timer.current)
     }
