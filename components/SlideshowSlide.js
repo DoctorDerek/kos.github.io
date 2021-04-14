@@ -18,7 +18,7 @@ const SlideshowSlide = ({
   return (
     <div
       className={
-        "grid grid-cols-1 transform-gpu keen-slider__slide" +
+        "grid grid-cols-1 transform-gpu keen-slider__slide overflow-hidden" +
         (hidden ? " hidden invisible" : "")
       }
       style={{ minWidth: 0, maxWidth: 0 }}
