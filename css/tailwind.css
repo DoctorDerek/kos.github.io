@@ -2529,7 +2529,7 @@ h2 + .category-carousel {
 @media (min-width: 768px) {
   .navbar-nav > li > a,
   .navbar-nav > li > button {
-    @apply text-lg font-bold leading-7 uppercase;
+    @apply text-base font-bold leading-7 uppercase;
     color: #333;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
