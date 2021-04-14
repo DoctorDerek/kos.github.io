@@ -2529,7 +2529,7 @@ h2 + .category-carousel {
 @media (min-width: 768px) {
   .navbar-nav > li > a,
   .navbar-nav > li > button {
-    @apply text-base font-bold leading-7 uppercase;
+    @apply text-base font-bold leading-7 text-center uppercase;
     color: #333;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -2557,7 +2557,7 @@ h2 + .category-carousel {
   }
   .navbar-nav .dropdown .dropdown-menu li > a,
   .navbar-nav .dropdown .dropdown-menu li > button {
-    @apply text-base leading-7 text-gray-600 uppercase;
+    @apply text-base leading-7 text-left text-gray-600 uppercase;
     padding: 10px 38px;
     border-bottom: 1px solid #f0f0f0;
     -webkit-transition: all 200ms ease;
@@ -2772,7 +2772,7 @@ h2 + .category-carousel {
   }
   .navbar-nav .dropdown .dropdown-menu li > a,
   .navbar-nav .dropdown .dropdown-menu li > button {
-    @apply text-base leading-7 text-left text-gray-600 uppercase;
+    @apply text-base leading-7 text-gray-600 uppercase;
     padding: 10px 38px;
     border-bottom: 1px solid #f0f0f0;
     -webkit-transition: all 200ms ease;
@@ -2852,7 +2852,6 @@ h2 + .category-carousel {
   top: 100%;
   left: 0;
   z-index: 1000;
-  float: left;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
