@@ -1,6 +1,10 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 import Link from "@/components/Link"
 import Image from "@/components/Image"
+import DownArrow from "@/data/material-icons/keyboard_arrow_down_black_48dp.svg"
+import LeftArrow from "@/data/material-icons/keyboard_arrow_left_black_48dp.svg"
+import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
+import UpArrow from "@/data/material-icons/keyboard_arrow_up_black_48dp.svg"
 
 const NAVIGATION_MENU_MAP = new Map([
   ["Home", "/"],
@@ -109,20 +113,20 @@ export default function DropdownMenu() {
           const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
             numberOfItems
           )
-          let arrowDirection
+          let ArrowIcon
           if (dropdownMenuItemProps) {
             // we're inside a sub-menu
             if (isOpen) {
-              arrowDirection = "left"
+              ArrowIcon = <LeftArrow />
             } else {
-              arrowDirection = "right"
+              ArrowIcon = <RightArrow />
             }
           } else {
             // we're a top-level menu
             if (isOpen) {
-              arrowDirection = "up"
+              ArrowIcon = <UpArrow />
             } else {
-              arrowDirection = "down"
+              ArrowIcon = <DownArrow />
             }
           }
           return (
@@ -138,11 +142,8 @@ export default function DropdownMenu() {
                 className="flex w-full"
               >
                 {text}
-                <div className="grid self-center w-6 h-6 text-black rounded-full">
-                  <Image
-                    src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
-                    alt="" /* alt="" appropriate for decorative icon */
-                  />
+                <div className="grid self-center w-6 h-6 rounded-full fill-current">
+                  {ArrowIcon}
                 </div>
               </button>
               <ul
