@@ -17,11 +17,13 @@ const SlideshowSlide = ({
   // are required to eliminate Cumulative Layout Shift (CLS) here.
   return (
     <div
-      className="grid grid-cols-1 transform-gpu keen-slider__slide h-96"
+      className="grid grid-cols-1 transform-gpu keen-slider__slide"
       style={{ minWidth: 0, maxWidth: 0 }}
     >
-      <Image src={src} alt={alt} className="h-full" />
-      <div className="absolute flex flex-col items-center justify-center w-full h-full opacity-80">
+      <div className="grid w-full h-full">
+        <Image src={src} alt={alt} />
+      </div>
+      <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
         <div className="text text1">
           <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
             {text1}
@@ -37,7 +39,7 @@ const SlideshowSlide = ({
         <div className="text text3">
           <button
             href={href}
-            className="!mt-10 text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
+            className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
           >
             {text3}
           </button>
