@@ -35,7 +35,10 @@ export default function Header() {
           <div className="text-xs font-normal text-right text-blue-800 uppercase">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
               <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
-                <Image src="/assets/icons/phone.svg" alt="" />
+                <Image
+                  src="/assets/material-icons/phone_black_48dp.svg"
+                  alt=""
+                />
               </div>
               <div>
                 <span className="text-[20px]">
