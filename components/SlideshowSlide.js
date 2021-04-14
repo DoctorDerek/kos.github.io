@@ -1,3 +1,4 @@
+import React from "react"
 import Image from "@/components/Image"
 
 const isRequired = () => {
@@ -11,16 +12,12 @@ const SlideshowSlide = ({
   text2 = isRequired(),
   href = isRequired(),
   text3 = isRequired(),
-  hidden = false,
 }) => {
   // Both transform-gpu and style={{ minWidth: 0, maxWidth: 0 }}
   // are required to eliminate Cumulative Layout Shift (CLS) here.
   return (
     <div
-      className={
-        "grid grid-cols-1 transform-gpu keen-slider__slide" +
-        (hidden ? " hidden" : "")
-      }
+      className="grid grid-cols-1 transform-gpu keen-slider__slide"
       style={{ minWidth: 0, maxWidth: 0 }}
     >
       <div className="grid w-full h-full">

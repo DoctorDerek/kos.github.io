@@ -37,11 +37,6 @@ const Slideshow = () => {
     }
   }, [pause, slider])
 
-  const [loaded, setLoaded] = useState(false)
-  useEffect(() => {
-    setLoaded(true)
-  }, [])
-
   return (
     <>
       <div
@@ -63,7 +58,6 @@ const Slideshow = () => {
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
-          hidden={!loaded}
         />
         {/* <canvas id="sea" /> */}
       </div>
