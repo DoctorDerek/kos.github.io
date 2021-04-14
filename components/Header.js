@@ -25,7 +25,7 @@ export default function Header() {
           <a href="/">
             <ImageFixed
               src="/assets/images/news/logo.png"
-              alt
+              alt="ocean"
               height="125"
               width="300"
             />

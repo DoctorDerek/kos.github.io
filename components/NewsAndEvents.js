@@ -13,7 +13,7 @@ export default function NewsAndEvents() {
               src="/images/h-decor.png"
               height="4px"
               width="64px"
-              alt
+              alt="ocean"
             />
           </div>
         </h2>
@@ -95,7 +95,7 @@ export default function NewsAndEvents() {
                 <div className="grid w-full h-40">
                   <Image
                     src="/assets/images/news/814185689_news-unlimited-packages.jpg"
-                    alt
+                    alt="ocean"
                   />
                 </div>
               </div>

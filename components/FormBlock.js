@@ -16,7 +16,7 @@ export default function FormBlock() {
               src="/images/h-decor-white.png"
               height="4px"
               width="64px"
-              alt
+              alt="ocean"
             />
           </div>
         </h2>

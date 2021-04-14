@@ -15,7 +15,7 @@ export default function Testimonials() {
                     src="/images/h-decor.png"
                     height="4px"
                     width="64px"
-                    alt
+                    alt="ocean"
                   />
                 </div>
               </h3>

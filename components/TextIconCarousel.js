@@ -12,7 +12,7 @@ export default function TextIconCarousel() {
               src="/images/h-decor.png"
               height="4px"
               width="64px"
-              alt
+              alt="ocean"
             />
           </div>
         </h2>
