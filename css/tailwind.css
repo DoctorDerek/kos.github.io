@@ -559,7 +559,6 @@ button::-moz-focus-inner {
 }
 
 .keen-slider .text {
-  /*
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: backwards;
@@ -568,7 +567,7 @@ button::-moz-focus-inner {
   -o-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
   -webkit-animation-iteration-count: none;
-  animation-iteration-count: none;*/
+  animation-iteration-count: none;
 }
 
 .keen-slider .text1 {
@@ -577,16 +576,15 @@ button::-moz-focus-inner {
   font-size: 80px;
   margin-bottom: 0.6em;
   line-height: 1em;
-  /*
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;*/
+  animation-name: fadeInDown;
 }
 
 @media (max-width: 1199px) {
   .keen-slider .text1 {
-    /*font-size: calc(3.8vw + 10px);*/
+    font-size: calc(3.8vw + 10px);
   }
 }
 
@@ -595,16 +593,15 @@ button::-moz-focus-inner {
   font-family: Lato, sans-serif;
   margin-bottom: 1.7em;
   line-height: 1em;
-  /*
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
   -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;*/
+  animation-name: fadeIn;
 }
 
 @media (max-width: 1199px) {
   .keen-slider .text2 {
-    /*font-size: calc(0.65vw + 15px);*/
+    font-size: calc(0.65vw + 15px);
   }
 }
 
