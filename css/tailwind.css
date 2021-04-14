@@ -2529,8 +2529,7 @@ h2 + .category-carousel {
 @media (min-width: 768px) {
   .navbar-nav > li > a,
   .navbar-nav > li > button {
-    @apply text-base font-bold leading-7 text-center uppercase;
-    color: #333;
+    @apply text-base font-bold leading-7 text-center text-gray-700 uppercase;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -2710,8 +2709,7 @@ h2 + .category-carousel {
   }
   header .navbar-nav .dropdown-menu a,
   header .navbar-nav .dropdown-menu a:focus {
-    @apply text-base leading-7 bg-transparent;
-    color: #333;
+    @apply text-base leading-7 text-gray-700 bg-transparent;
     padding: 10px 15px 10px 20px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -2820,8 +2818,7 @@ h2 + .category-carousel {
   header .navbar-nav .dropdown-menu a:focus,
   header .navbar-nav .dropdown-menu button,
   header .navbar-nav .dropdown-menu button:focus {
-    @apply text-base leading-7 bg-transparent;
-    color: #333;
+    @apply text-base leading-7 text-gray-700 bg-transparent;
     padding: 10px 15px 10px 20px;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
@@ -2870,12 +2867,12 @@ h2 + .category-carousel {
 
 .dropdown-menu > li > a,
 .dropdown-menu > li > button {
+  @apply text-gray-700;
   display: block;
   padding: 3px 20px;
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #333;
   white-space: nowrap;
 }
 
