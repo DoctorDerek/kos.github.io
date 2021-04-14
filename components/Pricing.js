@@ -5,7 +5,7 @@ export default function Pricing() {
   return (
     <div className="container block-class bg-2">
       <div className="grid w-full h-[615px]">
-        <Image src="/images/block-bg-2.jpg" alt />
+        <Image src="/images/block-bg-2.jpg" alt="ocean" />
       </div>
       <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-615px]">
         <div className="pricing">

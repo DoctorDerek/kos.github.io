@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="page-footer w-full h-[380px]">
         <div className="grid w-full h-[380px]">
-          <Image src="/images/footer-bg.jpg" alt />
+          <Image src="/images/footer-bg.jpg" alt="ocean" />
         </div>
         <div className="back-to-top hidden-xs">
           <a href="#top">

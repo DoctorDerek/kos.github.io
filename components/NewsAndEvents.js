@@ -26,7 +26,7 @@ export default function NewsAndEvents() {
             >
               <div className="news-item-image">
                 <div className="grid w-full h-40">
-                  <Image src="/assets/images/news/logo.png" alt />
+                  <Image src="/assets/images/news/logo.png" alt="ocean" />
                 </div>
               </div>
               <div className="news-item-text">
@@ -59,7 +59,7 @@ export default function NewsAndEvents() {
             >
               <div className="news-item-image">
                 <div className="grid w-full h-40">
-                  <Image src="/assets/images/news/logo.png" alt />
+                  <Image src="/assets/images/news/logo.png" alt="ocean" />
                 </div>
               </div>
               <div className="news-item-text">
