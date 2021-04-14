@@ -25,7 +25,7 @@ const SlideshowSlide = ({
       </div>
       <div className="absolute grid w-full h-full grid-rows-3 opacity-80">
         <div className="row-span-1" />
-        <div className="flex flex-col justify-between row-span-1 text-center">
+        <div className="grid row-span-1 text-center">
           <div className="text text1">
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
               {text1}
