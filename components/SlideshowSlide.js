@@ -19,7 +19,7 @@ const SlideshowSlide = ({
     <div
       className={
         "grid grid-cols-1 transform-gpu keen-slider__slide" +
-        (hidden ? " hidden" : "")
+        (hidden ? " hidden invisible" : "")
       }
       style={{ minWidth: 0, maxWidth: 0 }}
     >
