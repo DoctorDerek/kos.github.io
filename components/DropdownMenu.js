@@ -134,7 +134,7 @@ export default function DropdownMenu() {
               <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
                 <Image
                   src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
-                  alt={isOpen ? "Open menu" : "Close menu"}
+                  alt="" /* alt="" appropriate for decorative icon */
                 />
               </div>
             </button>
