@@ -10,6 +10,7 @@ export default function Footer() {
         <div className="back-to-top hidden-xs">
           <a href="#top">
             <span className="flex-wrap icon icon-up-arrow" />
+            Go back to top
           </a>
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-360px]">
@@ -139,8 +140,10 @@ export default function Footer() {
                   <a
                     className="icon icon-social-facebook"
                     href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
-                    target="_blank"
-                  />
+                    target="_blank noreferrer"
+                  >
+                    Follow us on Facebook
+                  </a>
                 </li>
               </ul>
             </div>
