@@ -23,29 +23,26 @@ const SlideshowSlide = ({
       <div className="grid w-full h-full">
         <Image src={src} alt={alt} />
       </div>
-      <div className="absolute grid w-full h-full grid-rows-3 opacity-80">
-        <div className="row-span-1" />
-        <div className="flex flex-col justify-between row-span-1 text-center">
-          <div className="text text1">
+      <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
+        <div className="text text1">
+          <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
+            {text1}
+          </span>
+        </div>
+        <div className="text text2">
+          <strong>
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
-              {text1}
+              {text2}
             </span>
-          </div>
-          <div className="text text2">
-            <strong>
-              <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
-                {text2}
-              </span>
-            </strong>
-          </div>
-          <div className="text text3">
-            <button
-              href={href}
-              className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
-            >
-              {text3}
-            </button>
-          </div>
+          </strong>
+        </div>
+        <div className="text text3">
+          <button
+            href={href}
+            className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
+          >
+            {text3}
+          </button>
         </div>
       </div>
     </div>
