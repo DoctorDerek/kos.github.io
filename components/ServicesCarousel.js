@@ -3,7 +3,7 @@ import Image from "@/components/Image"
 
 export default function ServicesCarousel({ children }) {
   return (
-    <div className="block-class">
+    <div className="pt-20 block-class">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between services-carousel">
           <div
