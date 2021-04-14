@@ -22,8 +22,8 @@ export default function HighSpeedCable() {
         />
       </div>
       <div className="divider" />
-      <div className="row pricing-block-row">
-        <div className="col-sm-4">
+      <div className="flex flex-wrap pricing-block-row">
+        <div className="sm:w-1/3">
           <div className="pricing-block color1">
             <div className="number">1</div>
             <div className="pricing-block__top">
@@ -217,7 +217,7 @@ export default function HighSpeedCable() {
             {/* EOF POP UP BOX */}
           </div>
         </div>
-        <div className="col-sm-4">
+        <div className="sm:w-1/3">
           <div className="pricing-block color2">
             <div className="number">2</div>
             <div className="pricing-block__top">
@@ -410,7 +410,7 @@ export default function HighSpeedCable() {
             {/* EOF POP UP BOX */}
           </div>
         </div>
-        <div className="col-sm-4">
+        <div className="sm:w-1/3">
           <div className="pricing-block color1">
             <div className="number">3</div>
             <div className="pricing-block__top">
