@@ -128,6 +128,7 @@ export default function DropdownMenu() {
               ArrowIcon = <DownArrow />
             }
           }
+          /* TODO aria-current="page" and className="active"*/
           return (
             <li
               className="relative dropdown"
@@ -136,7 +137,7 @@ export default function DropdownMenu() {
             >
               <button
                 {...buttonProps}
-                aria-haspopup="true"
+                aria-controls={text + "Menu"}
                 aria-expanded={isOpen}
                 className="flex w-full"
               >
@@ -150,7 +151,7 @@ export default function DropdownMenu() {
                   "absolute z-50 bg-white dropdown-menu " +
                   (isOpen ? "visible" : "hidden")
                 }
-                role="menu"
+                id={text + "Menu"}
               >
                 <li className="dropdown-submenu">
                   {destinationOrSubmenu &&
@@ -181,13 +182,15 @@ export default function DropdownMenu() {
                 </li> */
 
   return (
-    <nav className="navbar" id="slide-nav" role="navigation">
+    <nav
+      className="navbar"
+      id="slide-nav"
+      role="navigation"
+      aria-label="Main Navigation"
+    >
       <div className="container">
         <div id="slidemenu">
-          <ul
-            className="justify-around py-10 nav md:flex navbar-nav"
-            role="menu"
-          >
+          <ul className="justify-around py-10 nav md:flex navbar-nav">
             {makeNavigationMenu(NAVIGATION_MENU_MAP)}
           </ul>
         </div>
