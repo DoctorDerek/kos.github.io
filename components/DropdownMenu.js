@@ -1,5 +1,6 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 import Link from "@/components/Link"
+import Image from "@/components/Image"
 
 const NAVIGATION_MENU_MAP = new Map([
   ["Home", "/"],
@@ -101,6 +102,22 @@ export default function DropdownMenu() {
         const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
           numberOfItems
         )
+        let arrowDirection
+        if (dropdownMenuItemProps) {
+          // we're inside a sub-menu
+          if (isOpen) {
+            arrowDirection = "left"
+          } else {
+            arrowDirection = "right"
+          }
+        } else {
+          // we're a top-level menu
+          if (isOpen) {
+            arrowDirection = "up"
+          } else {
+            arrowDirection = "down"
+          }
+        }
         return (
           <li
             className="relative dropdown"
@@ -114,7 +131,12 @@ export default function DropdownMenu() {
               className="w-full"
             >
               {text}
-              {isOpen ? "👆" : "👇"}
+              <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
+                <Image
+                  src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
+                  alt=""
+                />
+              </div>
             </button>
             <ul
               className={
