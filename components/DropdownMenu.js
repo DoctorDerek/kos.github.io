@@ -138,7 +138,7 @@ export default function DropdownMenu() {
                 className="flex w-full"
               >
                 {text}
-                <div className="grid w-4 h-4 text-black rounded-full">
+                <div className="grid self-center w-6 h-6 text-black rounded-full">
                   <Image
                     src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
                     alt="" /* alt="" appropriate for decorative icon */
