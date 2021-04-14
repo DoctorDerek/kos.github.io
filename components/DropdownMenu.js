@@ -135,10 +135,10 @@ export default function DropdownMenu() {
                 {...buttonProps}
                 aria-haspopup="true"
                 aria-expanded={isOpen}
-                className="w-full"
+                className="flex w-full"
               >
                 {text}
-                <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
+                <div className="grid w-4 h-4 text-black rounded-full">
                   <Image
                     src={`/assets/material-icons/keyboard_arrow_${arrowDirection}_black_48dp.svg`}
                     alt="" /* alt="" appropriate for decorative icon */
