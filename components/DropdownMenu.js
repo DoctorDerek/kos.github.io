@@ -1,6 +1,5 @@
 import useDropdownMenu from "react-accessible-dropdown-menu-hook"
 import Link from "@/components/Link"
-import Image from "@/components/Image"
 import DownArrow from "@/data/material-icons/keyboard_arrow_down_black_48dp.svg"
 import LeftArrow from "@/data/material-icons/keyboard_arrow_left_black_48dp.svg"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
