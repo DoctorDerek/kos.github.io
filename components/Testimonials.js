@@ -38,7 +38,7 @@ export default function Testimonials() {
   }, [pause, slider])
 
   return (
-    <div className="block-class">
+    <div className="">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full">
@@ -89,12 +89,10 @@ export default function Testimonials() {
                           not hesitate to recommend them to anyone as a high
                           speed internet provider.
                         </p>
-                        <div className="testimonials-username">
-                          Brenda,{" "}
-                          <em style={{ fontWeight: 100 }}>
-                            Chalk Well Drilling
-                          </em>
-                        </div>
+                      </div>
+                      <div className="testimonials-username">
+                        Brenda,{" "}
+                        <em style={{ fontWeight: 100 }}>Chalk Well Drilling</em>
                       </div>
                     </div>
                   </div>
