@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'pool';
+  src:  url('fonts/pool.eot?dx1h4q');
+  src:  url('fonts/pool.eot?dx1h4q#iefix') format('embedded-opentype'),
+    url('fonts/pool.ttf?dx1h4q') format('truetype'),
+    url('fonts/pool.woff?dx1h4q') format('woff'),
+    url('fonts/pool.svg?dx1h4q#pool') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pool' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e91d";
+}
+.icon-cart:before {
+  content: "\e915";
+}
+.icon-cart-1:before {
+  content: "\e916";
+}
+.icon-star:before {
+  content: "\e917";
+}
+.icon-close-cross:before {
+  content: "\e918";
+}
+.icon-clock-round:before {
+  content: "\e919";
+}
+.icon-cancel:before {
+  content: "\e91b";
+}
+.icon-menu:before {
+  content: "\e91c";
+}
+.icon-wrench:before {
+  content: "\e900";
+}
+.icon-test-tube:before {
+  content: "\e901";
+}
+.icon-sweep:before {
+  content: "\e902";
+}
+.icon-clock:before {
+  content: "\e903";
+}
+.icon-handshake:before {
+  content: "\e904";
+}
+.icon-medal:before {
+  content: "\e905";
+}
+.icon-quotes:before {
+  content: "\e906";
+}
+.icon-up-arrow:before {
+  content: "\e907";
+}
+.icon-social-facebook:before {
+  content: "\e908";
+}
+.icon-social-google-plus:before {
+  content: "\e909";
+}
+.icon-social-vimeo:before {
+  content: "\e90a";
+}
+.icon-location:before {
+  content: "\e90b";
+}
+.icon-call-telephone:before {
+  content: "\e90c";
+}
+.icon-social-twitter:before {
+  content: "\e90d";
+}
+.icon-left_arrow:before {
+  content: "\e90e";
+}
+.icon-right_arrow:before {
+  content: "\e90f";
+}
+.icon-swimming-pool:before {
+  content: "\e910";
+}
+.icon-waterpolo:before {
+  content: "\e911";
+}
+.icon-shovel:before {
+  content: "\e912";
+}
+.icon-right-arrow:before {
+  content: "\e913";
+}
+.icon-users:before {
+  content: "\e914";
+}
+.icon-comments:before {
+  content: "\e91a";
+}
+
