@@ -1,5 +1,5 @@
 import React from "react"
-export default function Packages() {
+export default function HostingPackagesAndPricing() {
   return (
     <div id="page-content">
       {/* Block */}
