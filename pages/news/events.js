@@ -170,7 +170,7 @@ export default function index() {
                     whiteSpace: "normal",
                     widows: 2,
                     wordSpacing: "0px",
-                    WebkitTextStrokeWidth: "0px",
+                    webkitTextStrokeWidth: "0px",
                   }}
                   name="packages"
                 />
