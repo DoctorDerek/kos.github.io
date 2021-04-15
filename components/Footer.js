@@ -160,7 +160,7 @@ export default function Footer() {
                     href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
                     target="_blank noreferrer"
                   >
-                    <div className="grid self-center w-8 h-8 p-1 mr-1 text-white border-2 border-white border-solid rounded-full fill-current">
+                    <div className="grid self-center w-12 h-12 p-2 text-white border-4 border-white border-solid rounded-full fill-current">
                       <FacebookIcon />
                     </div>
                   </a>
