@@ -80,7 +80,6 @@ export default function NewsAndEvents() {
                 <span className="news-item-more-link">
                   <a href="/news/events/#51">
                     <span className="flex-wrap icon icon-right-arrow" />
-                    Read more about this news
                   </a>
                 </span>
               </div>
@@ -116,7 +115,6 @@ export default function NewsAndEvents() {
                 <span className="news-item-more-link">
                   <a href="/news/events/#21">
                     <span className="flex-wrap icon icon-right-arrow" />
-                    Read more about this news
                   </a>
                 </span>
               </div>
