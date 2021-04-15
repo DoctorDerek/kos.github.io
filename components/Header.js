@@ -1,6 +1,7 @@
 import ImageFixed from "next/image"
 import Image from "@/components/Image"
 import DropdownMenu from "@/components/DropdownMenu"
+import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 
 const Column = ({ children }) => (
   <div className="flex items-center justify-center h-full col-span-1">
@@ -25,7 +26,7 @@ export default function Header() {
           <a href="/">
             <ImageFixed
               src="/assets/images/news/logo.png"
-              alt="ocean"
+              alt="Logo for Kingston Online Services - KOS is an Internet Service Provider serving Kingston and Belleville, Ontario"
               height="125"
               width="300"
             />
@@ -34,11 +35,12 @@ export default function Header() {
         <Column>
           <div className="text-xs font-normal text-right text-blue-800 uppercase">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
-              <div className="grid self-center w-8 h-8 p-[1px] text-black border-4 border-black border-solid rounded-full">
+              <div className="grid self-center w-8 h-8 p-1 border-2 border-black border-solid rounded-full">
                 <Image
                   src="/assets/material-icons/phone_black_48dp.svg"
                   alt=""
                 />
+                {/* alt="" for purely decorative icon */}
               </div>
               <div>
                 <span className="text-[20px]">
