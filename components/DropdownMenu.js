@@ -129,15 +129,17 @@ export default function DropdownMenu() {
             }
           }
           /* TODO aria-current="page" and className="active"*/
+          const uniqueKey = text + "Menu"
           return (
             <li
               className="relative dropdown"
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
+              key={uniqueKey}
             >
               <button
                 {...buttonProps}
-                aria-controls={text + "Menu"}
+                aria-controls={uniqueKey}
                 aria-expanded={isOpen}
                 className="flex w-full"
               >
@@ -151,7 +153,7 @@ export default function DropdownMenu() {
                   "absolute z-50 bg-white dropdown-menu " +
                   (isOpen ? "visible" : "hidden")
                 }
-                id={text + "Menu"}
+                id={uniqueKey}
               >
                 <li className="dropdown-submenu">
                   {destinationOrSubmenu &&
