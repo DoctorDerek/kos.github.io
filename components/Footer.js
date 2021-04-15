@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="logo">
                 <a href="/">
-                  <div className="grid w-[300px] h-[125px]">
+                  <div className="grid w-[300px] h-[125px] mx-auto">
                     <Image src="/images/logo-invert.png" alt="Logo" />
                   </div>
                 </a>
