@@ -99,12 +99,13 @@ const makeNavigationMenu = (
         }
         childProps.key = text + href
 
-        // router.query.id
-        /* TODO aria-current="page" and className="active"*/
-        console.log(router.query.id)
+        const isCurrentPageProps =
+          router.asPath === href
+            ? { "aria-current": "page", className: "active" }
+            : {}
 
         return (
-          <li {...childProps}>
+          <li {...childProps} {...isCurrentPageProps}>
             <Link href={href} className="block">
               {text}
             </Link>
