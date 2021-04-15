@@ -1,7 +1,7 @@
 export default function Availability() {
   return (
-    <div class="container">
-      <h1 class="decor color text-center">Availability Tool</h1>
+    <div className="container">
+      <h1 className="text-center decor color">Availability Tool</h1>
       <div align="center">
         <form
           action="http://www.kos.net/dslavail-check.php"
@@ -10,7 +10,7 @@ export default function Availability() {
         >
           <input type="hidden" name="minidslc" value="1" />
           <input type="hidden" name="docheck" value="1" />
-          <div class="price-cell">
+          <div className="price-cell">
             <label>
               <strong>
                 Enter your Postal Code to check which of our{" "}
@@ -26,24 +26,24 @@ export default function Availability() {
                 type="text"
                 placeholder="K7K 5W7"
                 name="postalcode"
-                maxlength="7"
+                maxLength="7"
                 size="7"
               />
               <input type="submit" value="Check" name="sub" />
             </div>
-          </form>
-        </div>
-
-        <iframe
-          frameborder="0"
-          height="250"
-          width="80%"
-          scrolling="no"
-          src="../../dslavail/dslavail.php"
-          title="Postal Code Search"
-        ></iframe>
+          </div>
+        </form>
       </div>
-      <div class="divider"></div>
+
+      <iframe
+        frameBorder="0"
+        height="250"
+        width="80%"
+        scrolling="no"
+        src="../../dslavail/dslavail.php"
+        title="Postal Code Search"
+      ></iframe>
+      <div className="divider"></div>
     </div>
   )
 }
