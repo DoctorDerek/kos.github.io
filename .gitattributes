@@ -1,3 +1,6 @@
+## Source: https://github.com/alexkaratarakis/gitattributes
+## Modified * text=auto to * text eol=lf to force LF endings.
+
 ## GITATTRIBUTES FOR WEB PROJECTS
 #
 # These settings are for any web project.
