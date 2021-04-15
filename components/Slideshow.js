@@ -41,7 +41,7 @@ const Slideshow = () => {
     <>
       <div
         ref={sliderRef}
-        className="text-white keen-slider h-60 sm:h-80 md:h-112 lg:h-112 xl:h-128"
+        className="text-white keen-slider h-80 sm:h-112 md:h-[32rem] lg:h-[36rem] xl:h-[40rem]"
       >
         <SlideshowSlide
           src="/images/slider/slide1.jpg"
