@@ -5,7 +5,7 @@ export default function LocalInternetServices() {
         <div className="divider-lg visible-xs"></div>
         <div className="col-md-8 col-lg-9">
           <h1 className="text-center decor color">
-            Napanee Residential Services
+            Gananoque Residential Services
           </h1>
           <p>
             Kingston Online Services offers Internet for the home (or home
