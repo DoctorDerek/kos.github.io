@@ -31,18 +31,18 @@ export default function Pricing() {
       if (!pause && slider) {
         slider.next()
       }
-    }, 2000)
+    }, 6000)
     return () => {
       clearInterval(timer.current)
     }
   }, [pause, slider])
 
   return (
-    <div className="container block-class bg-2">
+    <div className="block-class bg-2">
       <div className="grid w-full h-[615px]">
         <Image src="/images/block-bg-2.jpg" alt="ocean" />
       </div>
-      <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-615px]">
+      <div className="absolute transform-gpu right-[15%] translate-y-[-615px]">
         <div className="pricing">
           <div className="pricing-box">
             <div className="inside">
@@ -56,10 +56,10 @@ export default function Pricing() {
                       <div className="price-text">
                         <p>250GB, 2 Year Contract, No set up fees.</p>
                         <hr />
-                        <p>
+                        <p className="mt-2">
                           <span style={{ fontSize: "24pt" }}>
                             <strong>$59.95</strong>
-                          </span>
+                          </span>{" "}
                           a month
                         </p>
                       </div>
@@ -86,7 +86,7 @@ export default function Pricing() {
                         <p>
                           <strong>
                             <span style={{ fontSize: "24pt" }}>$9.95</span>
-                          </strong>
+                          </strong>{" "}
                           a month
                         </p>
                       </div>
@@ -113,7 +113,7 @@ export default function Pricing() {
                         <p>
                           <span style={{ fontSize: "24pt" }}>
                             <strong>$39.95</strong>
-                          </span>
+                          </span>{" "}
                           a month
                         </p>
                       </div>
