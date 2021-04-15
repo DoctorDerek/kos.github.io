@@ -85,8 +85,10 @@ const isRequired = () => {
 const makeNavigationMenu = (
   NavigationMenu = isRequired(),
   dropdownMenuItemProps = null
-) =>
-  [...NavigationMenu.entries()].map(
+) => {
+  const router = useRouter() // next/router
+
+  return [...NavigationMenu.entries()].map(
     ([text, destinationOrSubmenu], itemIndex) => {
       if (typeof destinationOrSubmenu === "string") {
         const href = destinationOrSubmenu
@@ -96,8 +98,13 @@ const makeNavigationMenu = (
           childProps = { ...dropdownMenuItemProps[itemIndex] }
         }
         childProps.key = text + href
+
+        // router.query.id
+        /* TODO aria-current="page" and className="active"*/
+        console.log(router.query.id)
+
         return (
-          <li childProps>
+          <li {...childProps}>
             <Link href={href} className="block">
               {text}
             </Link>
@@ -129,7 +136,6 @@ const makeNavigationMenu = (
             ArrowIcon = <DownArrow />
           }
         }
-        /* TODO aria-current="page" and className="active"*/
         const uniqueKey = text + "Menu"
         return (
           <li
@@ -167,11 +173,9 @@ const makeNavigationMenu = (
       throw new Error("Unknown destinationOrSubmenu prop in DropdownMenu")
     }
   )
+}
 
 export default function DropdownMenu() {
-  const router = useRouter()
-  // router.query.id
-
   return (
     <nav
       className="navbar"
