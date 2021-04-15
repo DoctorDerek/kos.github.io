@@ -18,7 +18,6 @@ export default function index() {
             </span>{" "}
             <br />
             <br />
-
             <div className="divider" />
             <div className="row pricing-block-row">
               <div className="col-sm-4">
