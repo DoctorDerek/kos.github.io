@@ -86,7 +86,9 @@ export default function Footer() {
           <div className="footer-bot">
             <div>
               <div id="plemx-root" />
-              <a href="http://www.theweathernetwork.com">The Weather Network</a>
+              <a href="https://www.theweathernetwork.com">
+                The Weather Network
+              </a>
             </div>
             <div className="copyright">
               Copyright © KOS - 2021 {" | "}
