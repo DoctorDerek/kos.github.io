@@ -4,64 +4,52 @@ import { PageSeo } from "@/components/SEO"
 
 export default function About() {
   return (
-    <>
-      <PageSeo
-        title={`About - ${siteMetadata.author}`}
-        description={`About me - ${siteMetadata.author}`}
-        url={`${siteMetadata.siteUrl}/about`}
-      />
-      <div className="divide-y">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About
-          </h1>
-        </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8 space-x-2">
-            <img
-              src={siteMetadata.image}
-              alt="avatar"
-              className="w-48 h-48 rounded-full"
-            />
-            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
-              {siteMetadata.author}
-            </h3>
-            <div className="text-gray-500 dark:text-gray-400">
-              Professor of Atmospheric Science
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              Stanford University
-            </div>
-            <div className="flex pt-6 space-x-3">
-              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
-              <SocialIcon kind="github" href={siteMetadata.github} />
-              <SocialIcon kind="facebook" href={siteMetadata.facebook} />
-              <SocialIcon kind="youtube" href={siteMetadata.youtube} />
-              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
-              <SocialIcon kind="twitter" href={siteMetadata.twitter} />
-            </div>
-          </div>
-          <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
-            <p>
-              Tails Azimuth is a professor of atmospheric sciences at the
-              Stanford AI Lab. His research interests includes complexity
-              modelling of tailwinds, headwinds and crosswinds.
-            </p>
-            <p>
-              He leads the clean energy group which develops 3D air
-              pollution-climate models, writes differential equation solvers,
-              and manufactures titanium plated air ballons. In his free time he
-              bakes raspberry pi.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-              elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin
-              eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet.
-              Duis dapibus diam vel metus tempus vulputate.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+    <div className="container">
+      <h1 className="text-center decor color">Our Company</h1>
+
+      <p
+        className="text-center font18"
+        style="margin-top: 0px; margin-bottom: 26px; font-size: 18px; line-height: 26px; text-align: center; color: #000000; font-family: 'Open Sans', sans-serif; background-color: #ffffff;"
+      >
+        Kingston Online Services is a pioneering provider of Internet solutions,
+        dedicated to providing quality Internet access and application hosting
+        to its customers. Kingston Online Services is equipped with the latest
+        in digital technology and uses multiple Internet connections to maintain
+        the highest level of services in the region.
+      </p>
+      <p
+        className="text-center font18"
+        style="margin-top: 0px; margin-bottom: 26px; font-size: 18px; line-height: 26px; text-align: center; color: #000000; font-family: 'Open Sans', sans-serif; background-color: #ffffff;"
+      >
+        Kingston Online Services (KOS) has provided Southeastern Ontario with
+        Internet access since its inception in 1993, in the Kingston Greater
+        Area. Since February of 1995, we’ve extended our services to the Quinte
+        and Quinte West regions, where we keep offices as well.
+      </p>
+      <p
+        className="text-center font18"
+        style="margin-top: 0px; margin-bottom: 26px; font-size: 18px; line-height: 26px; text-align: center; color: #000000; font-family: 'Open Sans', sans-serif; background-color: #ffffff;"
+      >
+        Our company is a privately held one, operated entirely by people living
+        in the communities it services. We are pleased to support the community
+        and its interests, as we have for decades. KOS' owners contribute to
+        activities within the area, including select sports, hobbies and amateur
+        racing. KOS has continued to grow into new technologies, and is now a
+        trusted provider of Wireless and Cable solutions to customers in most of
+        South Eastern Ontario.
+      </p>
+      <p
+        className="text-center font18"
+        style="margin-top: 0px; margin-bottom: 26px; font-size: 18px; line-height: 26px; text-align: center; color: #000000; font-family: 'Open Sans', sans-serif; background-color: #ffffff;"
+      >
+        We provide services from Brighton to Gananoque, including Prince Edward
+        County, Napanee, Belleville, Trenton and Picton as well as some of the
+        St. Lawrence Islands. KOS also provides DSL and CABLE service to most of
+        Ontario and Quebec, so we can often move with you. Thank you for taking
+        an interest in our company.
+      </p>
+
+      <div className="divider"></div>
+    </div>
   )
 }
