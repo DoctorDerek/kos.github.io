@@ -1,5 +1,6 @@
 import Image from "@/components/Image"
 import { useEffect } from "react"
+import FacebookIcon from "@/data/material-icons/facebook.svg"
 
 const useScript = (url) => {
   useEffect(() => {
@@ -27,7 +28,6 @@ export default function Footer() {
         <div className="back-to-top hidden-xs">
           <a href="#top">
             <span className="flex-wrap icon icon-up-arrow" />
-            Go back to top
           </a>
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-360px]">
@@ -157,11 +157,12 @@ export default function Footer() {
               <ul>
                 <li>
                   <a
-                    className="icon icon-social-facebook"
                     href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
                     target="_blank noreferrer"
                   >
-                    Follow us on Facebook
+                    <div className="grid self-center w-8 h-8 p-1 mr-1 text-white border-2 border-white border-solid rounded-full fill-current">
+                      <FacebookIcon />
+                    </div>
                   </a>
                 </li>
               </ul>
