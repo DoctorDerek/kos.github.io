@@ -463,7 +463,8 @@ button::-moz-focus-inner {
 .page-footer {
   @apply relative clear-both text-white;
   /*background: url(/images/footer-bg.jpg) repeat-x center bottom #0099e7;*/
-  padding: 48px 0 54px;
+  /*padding: 48px 0 54px;*/
+  padding: 0 0 54px;
 }
 
 .page-footer .container {
