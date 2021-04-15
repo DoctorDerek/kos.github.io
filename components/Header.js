@@ -39,14 +39,14 @@ export default function Header() {
                 <PhoneIcon />
               </div>
               <div>
-                <span className="text-[20px]">
+                <span className="text-xl">
                   <strong>
                     Kingston:{" "}
                     <span style={{ color: "#A80532" }}>613-549-8667</span>
                   </strong>
                 </span>
                 <br />
-                <span className="text-[20px]">
+                <span className="text-xl">
                   <strong>
                     Belleville:{" "}
                     <span style={{ color: "#A80532" }}>613-968-7137</span>
