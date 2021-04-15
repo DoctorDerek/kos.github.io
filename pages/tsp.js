@@ -80,9 +80,7 @@ export default function TechnicalSupportPolicy() {
           </p>
           <p className="text-left font18">
             Please see this page as well:{" "}
-            <a style="color: #005395; text-decoration: underline" href="/tac/">
-              Terms &amp; Conditions of Service
-            </a>
+            <a style={undefined}>Terms &amp; Conditions of Service</a>
           </p>
         </div>
       </div>

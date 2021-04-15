@@ -14,15 +14,13 @@ export default function Availability() {
             <label>
               <strong>
                 Enter your Postal Code to check which of our{" "}
-                <span style="color: #00467E; font-weight: bold">
-                  Internet packages
-                </span>{" "}
-                are available in your area:
+                <span style={undefined}>Internet packages</span> are available
+                in your area:
               </strong>
             </label>
-            <div style="padding-top: 15px; padding-bottom: 1px;">
+            <div style={undefined}>
               <input
-                style="width: 80px;"
+                style={undefined}
                 type="text"
                 placeholder="K7K 5W7"
                 name="postalcode"

@@ -19,18 +19,18 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">
             “<b>KOS</b>” means 1085459 Ontario Ltd. o/a Kingston Online Services
-            <span style="background: #ffffff">
+            <span style={undefined}>
               , its parents, subsidiaries and affiliates;
             </span>
           </p>
         </li>
         <li>
           <p className="text-left font18">
-            <span style="background: #ffffff">“</span>
+            <span style={undefined}>“</span>
             <b>
-              <span style="background: #ffffff">KOS Parties</span>
+              <span style={undefined}>KOS Parties</span>
             </b>
-            <span style="background: #ffffff">
+            <span style={undefined}>
               ” means KOS, its partners, licensors, dealers, representatives,
               suppliers and agents (and their respective employees, officers,
               directors, shareholders and representatives);
@@ -56,11 +56,11 @@ export default function TermsAndConditions() {
         </li>
         <li>
           <p className="text-left font18">
-            <span style="background: #ffffff">“</span>
+            <span style={undefined}>“</span>
             <b>
-              <span style="background: #ffffff">Equipment</span>
+              <span style={undefined}>Equipment</span>
             </b>
-            <span style="background: #ffffff">
+            <span style={undefined}>
               ” means any device, equipment or hardware used to access the
               Services or used in conjunction with the Services;
             </span>
@@ -74,27 +74,27 @@ export default function TermsAndConditions() {
         </li>
         <li>
           <p className="text-left font18">
-            <span style="background: #ffffff">“</span>
+            <span style={undefined}>“</span>
             <b>
-              <span style="background: #ffffff">I</span>
+              <span style={undefined}>I</span>
             </b>
-            <span style="background: #ffffff">”, “</span>
+            <span style={undefined}>”, “</span>
             <b>
-              <span style="background: #ffffff">me</span>
+              <span style={undefined}>me</span>
             </b>
-            <span style="background: #ffffff">”, “</span>
+            <span style={undefined}>”, “</span>
             <b>
-              <span style="background: #ffffff">you</span>
+              <span style={undefined}>you</span>
             </b>
-            <span style="background: #ffffff">”, “</span>
+            <span style={undefined}>”, “</span>
             <b>
-              <span style="background: #ffffff">your</span>
+              <span style={undefined}>your</span>
             </b>
-            <span style="background: #ffffff">” and “</span>
+            <span style={undefined}>” and “</span>
             <b>
-              <span style="background: #ffffff">yours</span>
+              <span style={undefined}>yours</span>
             </b>
-            <span style="background: #ffffff">
+            <span style={undefined}>
               ” refer to you but also to persons that you authorize to use the
               Service or act as your agent with regard to the Service;
             </span>
@@ -103,14 +103,14 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">
             “<b>Identifiers</b>” means{" "}
-            <span style="background: #ffffff">
+            <span style={undefined}>
               e-mail addresses, phone numbers, account numbers, personal
               identification numbers (“
             </span>
             <b>
-              <span style="background: #ffffff">PINs</span>
+              <span style={undefined}>PINs</span>
             </b>
-            <span style="background: #ffffff">
+            <span style={undefined}>
               ”), Internet Protocol addresses, personal web page addresses,
               access codes and any other identifier assigned to you by KOS;
             </span>
@@ -149,23 +149,23 @@ export default function TermsAndConditions() {
         </li>
         <li>
           <p className="text-left font18">
-            <span style="background: #ffffff">“</span>
+            <span style={undefined}>“</span>
             <b>
-              <span style="background: #ffffff">Us</span>
+              <span style={undefined}>Us</span>
             </b>
-            <span style="background: #ffffff">”, “</span>
+            <span style={undefined}>”, “</span>
             <b>
-              <span style="background: #ffffff">we</span>
+              <span style={undefined}>we</span>
             </b>
-            <span style="background: #ffffff">”, “</span>
+            <span style={undefined}>”, “</span>
             <b>
-              <span style="background: #ffffff">our</span>
+              <span style={undefined}>our</span>
             </b>
-            <span style="background: #ffffff">”, or “</span>
+            <span style={undefined}>”, or “</span>
             <b>
-              <span style="background: #ffffff">ourselves</span>
+              <span style={undefined}>ourselves</span>
             </b>
-            <span style="background: #ffffff">” means KOS;</span>
+            <span style={undefined}>” means KOS;</span>
           </p>
         </li>
         <li>
@@ -264,10 +264,7 @@ export default function TermsAndConditions() {
         affected Services in accordance with Section 33.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>ACCOUNT, BILLING AND PAYMENT</b>
       </p>
       <p className="text-left font18">
@@ -361,10 +358,7 @@ export default function TermsAndConditions() {
         pay the undisputed portion of the Fees in accordance with Section 8.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>YOUR RESPONSIBILITIES</b>
       </p>
       <p className="text-left font18">
@@ -445,10 +439,7 @@ export default function TermsAndConditions() {
         up-to-date.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>KOS SERVICES</b>
       </p>
       <p className="text-left font18">
@@ -457,8 +448,8 @@ export default function TermsAndConditions() {
 
       <p className="text-left font18">
         To the maximum extent permitted by law,{" "}
-        <span style="background: #ffffff">KOS Parties </span>do not
-        <span style="background: #ffffff">
+        <span style={undefined}>KOS Parties </span>do not
+        <span style={undefined}>
           {" "}
           guarantee or warrant the performance, availability, coverage,
           uninterrupted use, security, pricing or operation of the Services or
@@ -467,14 +458,14 @@ export default function TermsAndConditions() {
         </span>
       </p>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           You bear the entire risk as to the use, access, transmission,
           availability, reliability, timeliness, quality, security and
           performance of the Services.
         </span>
       </p>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           KOS Parties do not make any express or implied representations,
           warranties or conditions, including warranties of title or
           non-infringement, or implied warranties of merchantable quality or
@@ -484,7 +475,7 @@ export default function TermsAndConditions() {
         </span>
       </p>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           All representations, warranties and conditions of any kind, express or
           implied, are excluded to the maximum extent permitted by applicable
           law. To the maximum extent permitted by applicable law, no advice or
@@ -543,10 +534,7 @@ export default function TermsAndConditions() {
         applicable Cancellation Charges, as defined in Section 36.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>KOS EQUIPMENT AND SOFTWARE</b>
       </p>
       <p className="text-left font18">
@@ -652,10 +640,7 @@ export default function TermsAndConditions() {
         applicable Service Agreement.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>PROPRIETARY RIGHTS</b>
       </p>
       <p className="text-left font18">
@@ -667,7 +652,7 @@ export default function TermsAndConditions() {
 
       <p className="text-left font18">
         Yes.
-        <span style="background: #ffffff">
+        <span style={undefined}>
           You acknowledge that content including, but not limited to, text,
           software, music, sound, photographs, video, graphics or other material
           accessed through the Services or the Internet may be protected by
@@ -676,7 +661,7 @@ export default function TermsAndConditions() {
         </span>
       </p>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           You further acknowledge that, except where expressly stated otherwise,
           all Equipment, Software, content, documentation, processes, designs,
           technologies, materials and all other things comprising the Services
@@ -695,14 +680,14 @@ export default function TermsAndConditions() {
 
       <p className="text-left font18">
         Yes. KOS does not{" "}
-        <span style="background: #ffffff">
+        <span style={undefined}>
           claim ownership of information, materials, software or other content
           (collectively, the “
         </span>
         <b>
-          <span style="background: #ffffff">Content</span>
+          <span style={undefined}>Content</span>
         </b>
-        <span style="background: #ffffff">
+        <span style={undefined}>
           ”) that you post, upload, input, provide, submit or otherwise transmit
           to KOS or any third party, using the Services. However, you agree that
           by posting, uploading, inputting, providing, submitting or otherwise
@@ -723,16 +708,13 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           Except where otherwise specified by KOS, Identifiers remain the
           property of KOS at all times.
         </span>
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>PRIVACY AND CONFIDENTIALITY OF YOUR INFORMATION</b>
       </p>
       <p className="text-left font18">
@@ -770,11 +752,8 @@ export default function TermsAndConditions() {
         unsubscribe mechanism contained in such messages.
       </p>
 
-      <p style="margin-bottom: 0.28cm; line-height: 107%; page-br /eak-before: always"></p>
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p style={undefined}></p>
+      <p align="center" style={undefined}>
         <b>SERVICES, VoIP AND RELATED LIMITATION OF LIABILITY</b>
       </p>
 
@@ -907,10 +886,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p></p>
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>LIABILITY AND INDEMNIFICATION</b>
       </p>
       <p className="text-left font18">
@@ -922,15 +898,15 @@ export default function TermsAndConditions() {
         Agreement, to the maximum extent permitted by applicable law, KOS
         Parties’ liability for negligence, br /each of contract, tort, or other
         causes of action, including fundamental br /each, is limited to{" "}
-        <span style="background: #ffffff">
+        <span style={undefined}>
           a maximum amount equal to the greater of twenty ($
         </span>
         <b>
-          <span style="background: #ffffff">20</span>
+          <span style={undefined}>20</span>
         </b>
-        <span style="background: #ffffff">) or </span>an amount equal to the
-        Fees payable during any service outage
-        <span style="background: #ffffff">.</span>
+        <span style={undefined}>) or </span>an amount equal to the Fees payable
+        during any service outage
+        <span style={undefined}>.</span>
       </p>
       <p className="text-left font18">
         Other than the foregoing payment and to the maximum extent permitted by
@@ -1006,7 +982,7 @@ export default function TermsAndConditions() {
         </li>
       </ul>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           These limits are in addition to any other limits on KOS Parties’
           liability set out elsewhere in the Agreement.{" "}
         </span>
@@ -1014,8 +990,8 @@ export default function TermsAndConditions() {
 
       <p className="text-left font18">
         <strong>
-          <span style="display: inline-block; border: none; padding: 0cm">
-            <span style="background: #ffffff">
+          <span style={undefined}>
+            <span style={undefined}>
               32. Must I indemnify KOS Parties with regards to the Agreement?{" "}
             </span>
           </span>
@@ -1031,10 +1007,7 @@ export default function TermsAndConditions() {
         matters related to this Agreement.
       </p>
 
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>CANCELLING AND SUSPENDING KOS SERVICES</b>
       </p>
       <p className="text-left font18">
@@ -1171,7 +1144,7 @@ export default function TermsAndConditions() {
         <b>50%</b>) of the remaining monthly Fees for the cancelled Service that
         would have been payable to the end of the Fixed Term, plus applicable
         taxes
-        <font size="1" style="font-size: 8pt">
+        <font size="1" style={undefined}>
           {" "}
         </font>
         (collectively, the “<b>Cancellation Charges</b>”). You acknowledge that
@@ -1210,10 +1183,7 @@ export default function TermsAndConditions() {
           </p>
         </li>
       </ol>
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>ADDITIONAL TERMS</b>
       </p>
       <p className="text-left font18">
@@ -1237,7 +1207,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           If you have a dispute about Services, Software, about this Agreement,
           or about what we say outside this Agreement, then we want to resolve
           the dispute quickly and fairly, and will work with you in good faith
@@ -1247,7 +1217,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           If you are a consumer or small business with a monthly bill under
           $2500, you may escalate certain types of complaints externally with
           the Commissioner for Complaints for Telecom-Television Service
@@ -1261,7 +1231,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           With the exception of billing disputes, which are resolved exclusively
           through the process described in Section 10 of these Service Terms,
           any unresolved dispute may also be referred to voluntary single
@@ -1277,7 +1247,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           By entering into the Agreement, except where the Canadian
           Radio-television and Telecommunications Commission, the CCTS or an
           arbitrator has jurisdiction, you consent to the exclusive personal
@@ -1306,7 +1276,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           The laws of Ontario and federal laws of Canada applicable in that
           province govern this Agreement.
         </span>
@@ -1336,10 +1306,7 @@ export default function TermsAndConditions() {
         accrued prior to that event including but not limited to the obligation
         to pay any outstanding amounts owed for Services.
       </p>
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding-top: 0.07cm; padding-bottom: 0.04cm; padding-left: 0cm; padding-right: 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>HOW TO CONTACT KOS</b>
       </p>
       <p className="text-left font18">
@@ -1357,15 +1324,14 @@ export default function TermsAndConditions() {
       <ul>
         <li>
           <p className="text-left font18">
-            By Phone, locally:{" "}
-            <span style="background: #ffffff">613-549-8667</span>
+            By Phone, locally: <span style={undefined}>613-549-8667</span>
           </p>
         </li>
         <li>
           <p className="text-left font18">
             By email:
-            <span style="display: inline-block; border: none; padding: 0cm">
-              <span style="background: #ffffff">
+            <span style={undefined}>
+              <span style={undefined}>
                 <a href="mailto:accounts@kos.net">
                   <font color="#0000ff">accounts@kos.net</font>
                 </a>
@@ -1376,16 +1342,16 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">By Mail:</p>
           <p className="text-centre font18">
-            <span style="background: #ffffff">The LaSalle Mews</span>
+            <span style={undefined}>The LaSalle Mews</span>
             <br />
-            <span style="background: #ffffff">303 Bagot Street, 16A</span>
+            <span style={undefined}>303 Bagot Street, 16A</span>
             <br />
-            <span style="background: #ffffff">Kingston, ON K7K 5W7</span>
+            <span style={undefined}>Kingston, ON K7K 5W7</span>
           </p>
         </li>
       </ul>
       <p className="text-left font18">
-        <span style="background: #ffffff">
+        <span style={undefined}>
           For Customers in Belleville and surrounding areas, you may reach us:{" "}
         </span>
       </p>
@@ -1397,8 +1363,8 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">
             By email:
-            <span style="display: inline-block; border: none; padding: 0cm">
-              <span style="background: #ffffff">
+            <span style={undefined}>
+              <span style={undefined}>
                 <a href="mailto:accounts@kos.net">
                   <font color="#0000ff">accounts@kos.net</font>
                 </a>
@@ -1409,9 +1375,9 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">By mail:</p>
           <p className="text-left font18">
-            <span style="background: #ffffff">183 Front Street</span>
+            <span style={undefined}>183 Front Street</span>
             <br />
-            <span style="background: #ffffff">Belleville, ON K8N 2Y9</span>
+            <span style={undefined}>Belleville, ON K8N 2Y9</span>
           </p>
         </li>
       </ul>
@@ -1428,10 +1394,7 @@ export default function TermsAndConditions() {
         support via the contact information set out above in Section 45.
       </p>
       <p className="text-left font18"></p>
-      <p
-        align="center"
-        style="margin-bottom: 0.28cm; border-top: 1.50pt solid #00000a; border-bottom: 1.50pt solid #00000a; border-left: none; border-right: none; padding: 0.04cm 0cm; line-height: 107%"
-      >
+      <p align="center" style={undefined}>
         <b>MONTHLY DATA USAGE</b>
       </p>
       <p className="text-left font18">
@@ -1467,9 +1430,7 @@ export default function TermsAndConditions() {
         Here are some helpful estimates associated with common applications of
         Internet services:
       </p>
-      <p style="margin-bottom: 0.28cm; line-height: 107%">
-        (1 Megabyte “MB” = 1024 Kilobytes “KB”)
-      </p>
+      <p style={undefined}>(1 Megabyte “MB” = 1024 Kilobytes “KB”)</p>
       <center>
         <table width="416" cellPadding="7" cellSpacing="0">
           <colgroup>
@@ -1478,164 +1439,110 @@ export default function TermsAndConditions() {
           </colgroup>
           <tbody>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>&nbsp;</p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p align="center">
                   <b>Data use estimate</b>
                 </p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>Emails </b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>50-300 KB each</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>SD photos</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>100-500 KB each</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>HD photos</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>4 MB each</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>SD video streaming</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>1,000 MB per hour</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>HD video streaming</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>3,000 MB per hour</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>4k / UHD video streaming</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>10,000 MB + per hour</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>Streaming audio</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>100 MB per hour</p>
               </td>
             </tr>
             <tr>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>
                   <b>Online gaming</b>
                 </p>
               </td>
-              <td
-                width="193"
-                style="border: 1px solid #00000a; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.2cm; padding-right: 0.19cm"
-              >
+              <td width="193" style={undefined}>
                 <p>50-100 MB per hour</p>
               </td>
             </tr>
           </tbody>
         </table>
       </center>
-      <p style="margin-bottom: 0.28cm; font-style: normal; line-height: 107%">
+      <p style={undefined}>
         <br />
         <br />
       </p>
       <p className="text-left font18">
         <em>
-          <span style="font-style: normal">
-            <span style="background: #ffffff">These estimates are </span>
+          <span style={undefined}>
+            <span style={undefined}>These estimates are </span>
           </span>
         </em>
         <em>
-          <span style="background: #ffffff">
+          <span style={undefined}>
             intended as a guideline and actual use may vary.{" "}
           </span>
         </em>
