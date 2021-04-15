@@ -84,7 +84,7 @@ export default function Footer() {
             </div>{" "}
           </div>
           <div className="footer-bot">
-            <div>
+            <div className="text-base">
               <div id="plemx-root" />
               <a href="https://www.theweathernetwork.com">
                 The Weather Network
