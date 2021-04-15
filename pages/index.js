@@ -25,6 +25,7 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
+/*
 import { useEffect } from "react"
 
 const useScript = (url) => {
@@ -41,6 +42,7 @@ const useScript = (url) => {
     }
   }, [url])
 }
+*/
 
 //export default function Home({ posts }) {
 export default function Home() {
@@ -56,7 +58,7 @@ export default function Home() {
   useScript("js/plugins/jquery.validate.min.js")
   useScript("js/custom.js")
   useScript("js/accessibilitymenu.js")
-  useScript("js/theWeatherNetwork.js")*/
+  */
 
   return (
     <>
