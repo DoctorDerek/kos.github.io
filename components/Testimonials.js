@@ -8,7 +8,7 @@ export default function Testimonials() {
   const timer = React.useRef()
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
-    duration: 1000,
+    duration: 5000,
     dragStart: () => {
       setPause(true)
     },
@@ -31,14 +31,14 @@ export default function Testimonials() {
       if (!pause && slider) {
         slider.next()
       }
-    }, 2000)
+    }, 10000)
     return () => {
       clearInterval(timer.current)
     }
   }, [pause, slider])
 
   return (
-    <div className="block-class bottom-md-margin">
+    <div className="block-class">
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full">
@@ -97,47 +97,44 @@ export default function Testimonials() {
                         </div>
                       </div>
                     </div>
-                    </div>
+                  </div>
 
-                    <div className="keen-slider__slide number-slide3">
-                      <div className="testimonials-item">
-                        <div className="testimonials-text">
-                          <p>
-                            Limestone Property Management has been a customer of
-                            KOS since 2001.&nbsp; We&rsquo;re very pleased with
-                            their fast, friendly and courteous service.&nbsp;
-                            We&rsquo;re happy with the services that we have
-                            with them, and enjoy partnering with a local company
-                            that works hard to support the communities they work
-                            in.&nbsp; I would highly recommend that you make KOS
-                            your first call if you are looking for internet
-                            service options.
-                          </p>
-                        </div>
-                        <div className="testimonials-username">
-                          Jason Ruffolo,{" "}
-                          <em style={{ fontWeight: 100 }}>
-                            Limestone Property Management (President)
-                          </em>
-                        </div>
+                  <div className="keen-slider__slide number-slide3">
+                    <div className="testimonials-item">
+                      <div className="testimonials-text">
+                        <p>
+                          Limestone Property Management has been a customer of
+                          KOS since 2001.&nbsp; We&rsquo;re very pleased with
+                          their fast, friendly and courteous service.&nbsp;
+                          We&rsquo;re happy with the services that we have with
+                          them, and enjoy partnering with a local company that
+                          works hard to support the communities they work
+                          in.&nbsp; I would highly recommend that you make KOS
+                          your first call if you are looking for internet
+                          service options.
+                        </p>
+                      </div>
+                      <div className="testimonials-username">
+                        Jason Ruffolo,{" "}
+                        <em style={{ fontWeight: 100 }}>
+                          Limestone Property Management (President)
+                        </em>
                       </div>
                     </div>
-                    <div className="keen-slider__slide number-slide4">
-                      <div className="testimonials-item">
-                        <div className="testimonials-text">
-                          <p>
-                            We love K.O.S.! We wanted something local, reliable
-                            and affordable with no hidden surprises on our bill
-                            each month. Kingston Online Services provided all of
-                            that and more including fabulous customer service!
-                          </p>
-                        </div>
-                        <div className="testimonials-username">
-                          Kim and Jim Long,{" "}
-                          <em style={{ fontWeight: 100 }}>
-                            Must Love Chocolate
-                          </em>
-                        </div>
+                  </div>
+                  <div className="keen-slider__slide number-slide4">
+                    <div className="testimonials-item">
+                      <div className="testimonials-text">
+                        <p>
+                          We love K.O.S.! We wanted something local, reliable
+                          and affordable with no hidden surprises on our bill
+                          each month. Kingston Online Services provided all of
+                          that and more including fabulous customer service!
+                        </p>
+                      </div>
+                      <div className="testimonials-username">
+                        Kim and Jim Long,{" "}
+                        <em style={{ fontWeight: 100 }}>Must Love Chocolate</em>
                       </div>
                     </div>
                   </div>
@@ -147,6 +144,6 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-   
+    </div>
   )
 }
