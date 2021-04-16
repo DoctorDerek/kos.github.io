@@ -7,7 +7,7 @@ export default function ServicesCarousel({ children }) {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between services-carousel">
           <div
-            className="pl-4 pr-4 sm:w-1/2"
+            className="w-full pl-4 pr-4 sm:w-1/2"
             data-animation="fadeInLeft"
             data-animation-delay="0s"
           >
@@ -30,7 +30,7 @@ export default function ServicesCarousel({ children }) {
             </div>
           </div>
           <div
-            className="pl-4 pr-4 sm:w-1/2"
+            className="w-full pl-4 pr-4 sm:w-1/2"
             data-animation="fadeInUp"
             data-animation-delay="0s"
           >

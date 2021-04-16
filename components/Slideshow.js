@@ -18,6 +18,7 @@ const Slideshow = () => {
   })
 
   useEffect(() => {
+
     sliderRef.current.addEventListener("mouseover", () => {
       setPause(true)
     })

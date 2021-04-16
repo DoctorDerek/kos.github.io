@@ -18,7 +18,7 @@ export default function CategoryCarousel() {
           </div>
         </h2>
         <div className="flex flex-wrap category-carousel">
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/high-speed-cable/"
               className="category-item"
@@ -26,7 +26,7 @@ export default function CategoryCarousel() {
               data-animation-delay="0s"
             >
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/cable.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">
@@ -54,13 +54,13 @@ export default function CategoryCarousel() {
             </a>
           </div>
           <div
-            className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
+            className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeIn"
             data-animation-delay="0s"
           >
             <a href="/res/wireless-broadband/" className="category-item">
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/wireless.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">
@@ -87,13 +87,13 @@ export default function CategoryCarousel() {
             </a>
           </div>
           <div
-            className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
+            className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeInRight"
             data-animation-delay="0s"
           >
             <a href="/res/high-speed-dsl/" className="category-item">
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/dsl.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">
@@ -119,7 +119,7 @@ export default function CategoryCarousel() {
               </div>
             </a>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/voip/"
               className="category-item"
@@ -127,7 +127,7 @@ export default function CategoryCarousel() {
               data-animation-delay="0s"
             >
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/voip.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">
@@ -153,7 +153,7 @@ export default function CategoryCarousel() {
               </div>
             </a>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/res/mail/"
               className="category-item"
@@ -161,7 +161,7 @@ export default function CategoryCarousel() {
               data-animation-delay="0s"
             >
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/mail.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">
@@ -188,7 +188,7 @@ export default function CategoryCarousel() {
               </div>
             </a>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <a
               href="/hosting/packages/"
               className="category-item"
@@ -196,7 +196,7 @@ export default function CategoryCarousel() {
               data-animation-delay="0s"
             >
               <div className="category-image">
-                <div className="grid w-48 h-48">
+                <div className="grid w-full h-48 lg:w-48">
                   <Image src="/assets/images/hosting.jpg" alt="ocean" />
                 </div>
                 <h5 className="category-title">

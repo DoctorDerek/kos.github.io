@@ -24,12 +24,18 @@ const SlideshowSlide = ({
         <Image src={src} alt={alt} />
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
-        <div className="text text1">
-          <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
+        <div className="relative w-full transition-all duration-300 transform text text1">
+          <span
+
+            style={{
+              textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
+
+            }}
+          >
             {text1}
           </span>
         </div>
-        <div className="text text2">
+        <div className="transition-all duration-500 transform slide-bottom text text2 animate-bounce">
           <strong>
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
               {text2}

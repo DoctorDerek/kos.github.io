@@ -19,6 +19,7 @@ import FormBlock from "@/components/FormBlock"
 import NewsAndEvents from "@/components/NewsAndEvents"
 import Testimonials from "@/components/Testimonials"
 
+
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog")
 
