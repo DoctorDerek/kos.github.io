@@ -605,9 +605,34 @@ button::-moz-focus-inner {
     animation-name: fadeInDown;
 }
 
+
+/*
+START OF STYLES CUSTOM ANIMATION STYLES */
+
 .slide-top {
     -webkit-animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.slide-right {
+    -webkit-animation: slide-right 2.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    animation: slide-right 2.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
 @keyframes slide-top {
@@ -623,12 +648,19 @@ button::-moz-focus-inner {
     }
 }
 
-.fadeDown {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
+
+
+/* END OF STYLES CUSTOM ANIMATION STYLES */
 
 @media (max-width: 1199px) {
     .keen-slider .text1 {

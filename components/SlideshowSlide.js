@@ -25,28 +25,38 @@ const SlideshowSlide = ({
         <Image src={src} alt={alt} />
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
-        <div className={`animate  ${currentSlide ? "slide-top" : " "} `}>
+        <div className={`animate my-6  ${currentSlide ? "slide-top" : " "} `}>
           <span
             style={{
               textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
               fontSize: "80px",
               lineHeight: "2rem",
+              marginBottom: "2rem",
             }}
           >
             {text1}
           </span>
         </div>
-        <div className="transition-all duration-500 transform slide-bottom text text2 ">
+
+        <div
+          className={`animate my-6   ${currentSlide ? "slide-right" : " "} `}
+        >
           <strong>
-            <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
+            <span
+              style={{
+                textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
+                fontSize: "40px",
+                marginBottom: "2rem !important",
+              }}
+            >
               {text2}
             </span>
           </strong>
         </div>
-        <div className="text text3">
+        <div className={`animate   ${currentSlide ? "slide-bottom" : " "} `}>
           <button
             href={href}
-            className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
+            className="text-white !my-6 hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
           >
             {text3}
           </button>
