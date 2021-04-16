@@ -25,7 +25,11 @@ const SlideshowSlide = ({
         <Image src={src} alt={alt} />
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
-        <div className={`animate my-6  ${currentSlide ? "slide-top" : " "} `}>
+        <div
+          className={`animate text-1 my-6  ${
+            currentSlide ? "slide-top" : " "
+          } `}
+        >
           <span
             style={{
               textShadow: "2px 2px rgba(0, 0, 0, 0.5)",

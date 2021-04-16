@@ -581,28 +581,12 @@ button::-moz-focus-inner {
     opacity: 0.15;
 }
 
-.keen-slider .text {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    -ms-animation-fill-mode: backwards;
-    -o-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
-    -webkit-animation-iteration-count: none;
-    animation-iteration-count: none;
-}
-
 .keen-slider .text1 {
     font-family: Lato, sans-serif;
     font-weight: 400;
     font-size: 80px;
     margin-bottom: 0.6em;
     line-height: 1em;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
 }
 
 
