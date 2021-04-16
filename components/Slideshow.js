@@ -5,20 +5,25 @@ import SlideshowSlide from "./SlideshowSlide"
 
 const Slideshow = () => {
   const [pause, setPause] = useState(false)
+  const [currentSlide, setCurrentSlide] = React.useState(0)
   const timer = useRef()
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 3000, // animation duration in ms
     dragStart: () => {
       setPause(true)
+
     },
-    dragEnd: () => {
+    afterChange(s) {
+      setCurrentSlide(s.details().relativeSlide)
+    },
+    dragEnd: (s) => {
       setPause(false)
+      setCurrentSlide(s.details().relativeSlide)
     },
   })
 
   useEffect(() => {
-
     sliderRef.current.addEventListener("mouseover", () => {
       setPause(true)
     })
@@ -48,9 +53,11 @@ const Slideshow = () => {
           src="/images/slider/slide1.jpg"
           alt="ocean"
           text1="We get you connected and keep you connected"
+          className="!opacity-0"
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
+          currentSlide={currentSlide}
         />
         <SlideshowSlide
           src="/images/slider/slide2.jpg"
@@ -59,6 +66,7 @@ const Slideshow = () => {
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
+          currentSlide={currentSlide}
         />
         {/* <canvas id="sea" /> */}
       </div>
