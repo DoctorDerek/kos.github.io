@@ -12,6 +12,7 @@ const SlideshowSlide = ({
   text2 = isRequired(),
   href = isRequired(),
   text3 = isRequired(),
+  currentSlide = isRequired(),
 }) => {
   // Both transform-gpu and style={{ minWidth: 0, maxWidth: 0 }}
   // are required to eliminate Cumulative Layout Shift (CLS) here.
@@ -24,12 +25,18 @@ const SlideshowSlide = ({
         <Image src={src} alt={alt} />
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
-        <div className="text text1">
-          <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
+        <div className={`animate  ${currentSlide ? "slide-top" : " "} `}>
+          <span
+            style={{
+              textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
+              fontSize: "80px",
+              lineHeight: "2rem",
+            }}
+          >
             {text1}
           </span>
         </div>
-        <div className="transition-all duration-500 transform slide-bottom text text2 animate-bounce">
+        <div className="transition-all duration-500 transform slide-bottom text text2 ">
           <strong>
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
               {text2}

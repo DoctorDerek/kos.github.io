@@ -12,9 +12,8 @@ const Slideshow = () => {
     duration: 3000, // animation duration in ms
     dragStart: () => {
       setPause(true)
-
     },
-    afterChange(s) {
+    move(s) {
       setCurrentSlide(s.details().relativeSlide)
     },
     dragEnd: (s) => {
@@ -57,7 +56,7 @@ const Slideshow = () => {
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
-          currentSlide={currentSlide}
+          currentSlide={currentSlide == 0}
         />
         <SlideshowSlide
           src="/images/slider/slide2.jpg"
@@ -66,7 +65,7 @@ const Slideshow = () => {
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
-          currentSlide={currentSlide}
+          currentSlide={currentSlide == 1}
         />
         {/* <canvas id="sea" /> */}
       </div>
