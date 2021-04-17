@@ -27,7 +27,7 @@ const SlideshowSlide = ({
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
         <div
           className={`animate text-1 my-6  ${
-            currentSlide ? "slide-top" : " "
+            currentSlide ? "animate-slide-down" : " "
           } `}
         >
           <span
@@ -43,7 +43,7 @@ const SlideshowSlide = ({
         </div>
 
         <div
-          className={`animate my-6   ${currentSlide ? "slide-right" : " "} `}
+          className={` my-6   ${currentSlide ? "animate-fade-in-up" : " "} `}
         >
           <strong>
             <span
@@ -57,7 +57,9 @@ const SlideshowSlide = ({
             </span>
           </strong>
         </div>
-        <div className={`animate   ${currentSlide ? "slide-bottom" : " "} `}>
+        <div
+          className={`animate   ${currentSlide ? "animate-slide-up" : " "} `}
+        >
           <button
             href={href}
             className="text-white !my-6 hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"

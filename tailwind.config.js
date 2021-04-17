@@ -17,6 +17,54 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      keyframes: {
+        "fade-in-down": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-up": {
+          from: {
+            opacity: "0",
+            transform: "translateY(100%);",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-down": {
+          from: {
+            opacity: "0",
+            transform: "translateY(-100%);",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-in-down": "fade-in-down 0.5s ease-out",
+        "slide-up": "slide-up 2.6s ease-out",
+        "fade-in-up": "fade-in-up 2.5s ease-out",
+        "slide-down": "slide-down 2.3s ease-out",
+      },
       spacing: {
         "9/16": "56.25%",
         13: "3.25rem",
