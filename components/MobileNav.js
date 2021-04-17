@@ -3,7 +3,7 @@ import Link from "./Link"
 import headerNavLinks from "@/data/headerNavLinks"
 
 const MobileNav = () => {
-  const [navShow, setNavShow] = useState(true)
+  const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
     setNavShow((status) => {
