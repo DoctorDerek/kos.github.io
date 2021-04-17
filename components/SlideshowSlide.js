@@ -26,16 +26,13 @@ const SlideshowSlide = ({
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
         <div
-          className={`animate text-1 my-6  ${
+          className={`text-7xl font-semibold leading-normal my-6  ${
             currentSlide ? "animate-slide-down" : " "
           } `}
         >
           <span
             style={{
               textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
-              fontSize: "80px",
-              lineHeight: "2rem",
-              marginBottom: "2rem",
             }}
           >
             {text1}
@@ -43,14 +40,14 @@ const SlideshowSlide = ({
         </div>
 
         <div
-          className={` my-6   ${currentSlide ? "animate-fade-in-up" : " "} `}
+          className={` my-6 text-5xl mb-8 leading-snug ${
+            currentSlide ? "animate-fade-in-up" : " "
+          } `}
         >
           <strong>
             <span
               style={{
                 textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
-                fontSize: "40px",
-                marginBottom: "2rem !important",
               }}
             >
               {text2}
