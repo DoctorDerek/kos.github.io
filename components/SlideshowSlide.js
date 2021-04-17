@@ -26,7 +26,7 @@ const SlideshowSlide = ({
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
         <div
-          className={`text-7xl font-semibold leading-normal my-6  ${
+          className={`text-4xl lg:text-7xl font-semibold leading-normal my-6  ${
             currentSlide ? "animate-slide-down" : " "
           } `}
         >
@@ -40,7 +40,7 @@ const SlideshowSlide = ({
         </div>
 
         <div
-          className={` my-6 text-5xl mb-8 leading-snug ${
+          className={` my-6 text-3xl lg:text-5xl mb-8 leading-snug ${
             currentSlide ? "animate-fade-in-up" : " "
           } `}
         >
