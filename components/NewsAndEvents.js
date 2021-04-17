@@ -4,9 +4,9 @@ import ImageFixed from "next/image"
 
 export default function NewsAndEvents() {
   return (
-    <div className="block-class bottom-sm-margin">
+    <div className=" block-class bottom-sm-margin">
       <div className="container mx-auto">
-        <h2 className="text-center decor flex-growor">
+        <h2 className="flex-grow text-center decor">
           News and Events
           <div className="block mx-auto">
             <ImageFixed
@@ -18,7 +18,7 @@ export default function NewsAndEvents() {
           </div>
         </h2>
         <div className="flex flex-wrap news-item-row">
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <div
               className="news-item"
               data-animation="fadeInLeft"
@@ -51,7 +51,7 @@ export default function NewsAndEvents() {
               </div>
             </div>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <div
               className="news-item"
               data-animation="fadeInLeft"
@@ -85,7 +85,7 @@ export default function NewsAndEvents() {
               </div>
             </div>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
+          <div className="w-full pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <div
               className="news-item"
               data-animation="fadeInLeft"

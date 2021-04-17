@@ -4,7 +4,7 @@ import ImageFixed from "next/image"
 
 export default function FormBlock() {
   return (
-    <div className="block-class bg-1">
+    <div className="relative block-class bg-1">
       <div className="grid w-full h-[1000px]">
         <Image src="/images/block-bg.jpg" alt="ocean" />
       </div>
@@ -21,7 +21,7 @@ export default function FormBlock() {
           </div>
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap">
-          <div className="pl-4 pr-4 sm:w-1/2">
+          <div className="w-full pl-4 pr-4 sm:w-1/2">
             <div
               className="text-num"
               data-animation="fadeInLeft"
@@ -81,7 +81,7 @@ export default function FormBlock() {
               </div>
             </div>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2">
+          <div className="w-full pl-4 pr-4 sm:w-1/2">
             <p>
               You have choices when it comes to internet. Switching to KOS is
               quick and easy to do. Fill in the form below and get connected

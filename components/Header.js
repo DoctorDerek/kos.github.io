@@ -2,7 +2,7 @@ import ImageFixed from "next/image"
 import Image from "@/components/Image"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
-
+import MobileNav from "@/components/MobileNav"
 const Column = ({ children }) => (
   <div className="flex items-center justify-center h-full col-span-1">
     {children}
@@ -12,6 +12,7 @@ const Column = ({ children }) => (
 export default function Header() {
   return (
     <header className="container pt-2 mx-auto">
+      <MobileNav />
       <div className="grid grid-cols-1 lg:grid-cols-3">
         <Column>
           <button
@@ -60,13 +61,6 @@ export default function Header() {
           </div>
         </Column>
       </div>
-      <button
-        type="button"
-        className="flex flex-wrap pl-0 list-reset lg:hidden navbar-toggle"
-      >
-        <i className="icon icon-menu" />
-        <i className="icon icon-cancel" />
-      </button>
       <DropdownMenu />
       <div id="navbar-height-col" />
     </header>
