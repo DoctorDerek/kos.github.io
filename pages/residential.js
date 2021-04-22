@@ -11,21 +11,34 @@ export default function InternalTemplate() {
       <RightArrow />
     </div>
   )
+
+  const isRequired = () => {
+    throw new Error("Both href and children props are required in BUTTON")
+  }
+  const BUTTON = ({ href = isRequired(), children = isRequired() }) => (
+    <a
+      href={href}
+      className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+    >
+      {children}
+    </a>
+  )
   return (
     <>
       <PageSeo
         title={`${title} - ${siteMetadata.author}`}
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-xl px-4 mx-auto">
         <h1 className="text-center color decor">{title}</h1>
-        <div className="text-center">
+        <div className="pb-4 text-center">
           <ImageFixed
             src="/images/h-decor.png"
             height="4px"
             width="64px"
-            alt="ocean"
+            alt=""
           />
+          {/* alt="" acceptable for purely decorative elements */}
         </div>
         <p>
           Kingston Online Services offers Internet for the home (or home office)
@@ -36,11 +49,11 @@ export default function InternalTemplate() {
           Kingston Online Services also provides innovative solutions for rural
           connectivity where conventional Internet services are not available.
         </p>
-        <h5 className="color">
+        <h2 className="text-2xl tracking-tight color">
           Please <a href="/contact.php">contact our office</a> for more
           information, or select from one of our services below.
-        </h5>
-        <div className="grid sm:grid-cols-2">
+        </h2>
+        <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
           <ul>
             <li>
               <BULLET />
@@ -55,7 +68,7 @@ export default function InternalTemplate() {
               <a href="/res/high-speed-dsl/">High Speed DSL</a>
             </li>
           </ul>
-          <ul className="marker-list pad-left">
+          <ul>
             <li>
               <BULLET />
               <a href="/res/voip/">VoIP</a>
@@ -69,14 +82,9 @@ export default function InternalTemplate() {
               <a href="/res/dial-up/">Dial Up</a>
             </li>
           </ul>
-          <div className="col-span-2 py-6">
-            <a
-              href="/order/"
-              className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
-            >
-              Get Connected
-            </a>
-          </div>
+        </div>
+        <div className="py-6">
+          <BUTTON href="/order/">Get connected</BUTTON>
         </div>
       </div>
     </>
