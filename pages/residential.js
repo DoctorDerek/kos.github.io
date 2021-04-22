@@ -4,8 +4,11 @@ import siteMetadata from "@/data/siteMetadata"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 
 export default function InternalTemplate() {
-  const title = "Residential Services"
+  const title =
+    "Residential Internet Provider in Kingston & Belleville, Ontario"
+  // "Residential Services"
   const slug = "residential"
+
   const BULLET = () => (
     <div className="inline-block w-3 h-3 text-blue-800 border-current border-solid rounded-full fill-current border-[1px] mx-4">
       <RightArrow />
@@ -25,12 +28,9 @@ export default function InternalTemplate() {
   )
   return (
     <>
-      <PageSeo
-        title={`${title} - ${siteMetadata.author}`}
-        url={`${siteMetadata.siteUrl}/${slug}`}
-      />
+      <PageSeo title={`${title}`} url={`${siteMetadata.siteUrl}/${slug}`} />
       <div className="max-w-xl px-4 mx-auto md:px-0">
-        <h1 className="text-center color decor">{title}</h1>
+        <h1 className="text-left color decor">{title}</h1>
         <div className="pb-4 text-center">
           <ImageFixed
             src="/images/h-decor.png"
