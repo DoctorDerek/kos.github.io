@@ -69,7 +69,7 @@ export default function InternalTemplate() {
               <a href="/res/dial-up/">Dial Up</a>
             </li>
           </ul>
-          <div className="col-span-2 py-4 text-center">
+          <div className="col-span-2 py-6">
             <a
               href="/order/"
               className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
