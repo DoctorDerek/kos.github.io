@@ -642,38 +642,21 @@ p {
   @apply text-blue-800;
 }
 
+h1,
 h2 {
   @apply text-5xl font-semibold text-gray-700;
   line-height: 1em;
   padding: 0 0 20px;
-  margin: 0 0 60px;
   font-family: "Open Sans", sans-serif;
 }
 
 @media (max-width: 767px) {
+  h1,
   h2 {
     font-size: 40px;
     line-height: 1em;
     padding: 0 0 10px;
-    margin: 0 0 30px;
   }
-}
-
-h2.decor {
-  padding: 0 0 48px;
-  margin-bottom: 33px;
-  /* background: url(/images/h-decor.png) no-repeat center bottom; */
-}
-
-@media (max-width: 767px) {
-  h2.decor {
-    padding: 0 0 25px;
-    margin-bottom: 25px;
-  }
-}
-
-h2.decor.decor-white {
-  /* background-image: url(/images/h-decor-white.png); */
 }
 
 h3 {
