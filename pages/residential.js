@@ -29,7 +29,7 @@ export default function InternalTemplate() {
         title={`${title} - ${siteMetadata.author}`}
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
-      <div className="max-w-xl px-4 mx-auto">
+      <div className="max-w-xl px-4 mx-auto md:px-0">
         <h1 className="text-center color decor">{title}</h1>
         <div className="pb-4 text-center">
           <ImageFixed
