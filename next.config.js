@@ -7,12 +7,17 @@ module.exports = withBundleAnalyzer({
     return [
       {
         source: "/res",
-        destination: "/home-internet-in-kingston-ontario",
+        destination: "/home-internet-in-kingston-ontario/residential-services",
         permanent: true,
       },
       {
         source: "/residential",
-        destination: "/home-internet-in-kingston-ontario",
+        destination: "/home-internet-in-kingston-ontario/residential-services",
+        permanent: true,
+      },
+      {
+        source: "/home-internet-in-kingston-ontario",
+        destination: "/home-internet-in-kingston-ontario/residential-services",
         permanent: true,
       },
     ]
