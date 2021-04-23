@@ -21,8 +21,8 @@ export default function Footer() {
   useScript("js/theWeatherNetwork.js")
   return (
     <footer>
-      <div className="page-footer w-full h-[400px]">
-        <div className="grid w-full h-[400px]">
+      <div className="page-footer w-full h-[450px]">
+        <div className="grid w-full h-[450px]">
           <Image src="/images/footer-bg.jpg" alt="ocean" />
         </div>
         <div className="back-to-top hidden-xs">
@@ -30,7 +30,7 @@ export default function Footer() {
             <span className="flex-wrap icon icon-up-arrow" />
           </a>
         </div>
-        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-350px]">
+        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
           <div className="flex flex-wrap footer-row">
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="location">
