@@ -43,13 +43,8 @@ module.exports = withBundleAnalyzer({
     config.module.rules.push({
       test: /\.tsx?$/,
       exclude: /node_modules/,
-      use: [
-        "cache-loader",
-        {
-          loader: "esbuild-loader",
-          options: { loader: "tsx" },
-        },
-      ],
+      loader: "esbuild-loader",
+      options: { loader: "tsx", target: "esnext" },
     })
 
     config.plugins.push(
