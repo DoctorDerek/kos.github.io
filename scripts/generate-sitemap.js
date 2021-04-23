@@ -1,8 +1,9 @@
 const siteMetadata = require("../data/siteMetadata.json")
 const fs = require("fs")
 const globby = require("globby")
-const prettier = require("prettier")(async () => {
-  const prettierConfig = await prettier.resolveConfig("./.prettierrc.js")
+const prettier = require("prettier")
+;(async () => {
+  const prettierConfig = await prettier.resolveConfig("../prettier.config.js")
   const pages = await globby([
     "pages/*.js",
     "data/**/*.mdx",
