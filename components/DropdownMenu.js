@@ -15,6 +15,28 @@ const NAVIGATION_MENU_MAP = new Map([
       [
         "Residential",
         new Map([
+          [
+            "Residential Internet",
+            "/home-internet-in-kingston-ontario/residential-services",
+          ],
+          [
+            "High Speed Cable",
+            "/home-internet-in-kingston-ontario/high-speed-cable",
+          ],
+          [
+            "Wireless Broadband",
+            "/home-internet-in-kingston-ontario/wireless-broadband",
+          ],
+          [
+            "High Speed DSL",
+            "/home-internet-in-kingston-ontario/high-speed-dsl",
+          ],
+          ["VoIP", "/home-internet-in-kingston-ontario/voip"],
+          ["Mail", "/home-internet-in-kingston-ontario/mail"],
+          ["Dial Up", "/home-internet-in-kingston-ontario/dial-up"],
+        ]),
+        /*
+        new Map([
           ["Residential Internet", "/residential/"],
           ["High Speed Cable", "/res/high-speed-cable/"],
           ["Wireless Broadband", "/res/wireless-broadband/"],
@@ -23,6 +45,7 @@ const NAVIGATION_MENU_MAP = new Map([
           ["Mail", "/res/mail/"],
           ["Dial Up", "/res/dial-up/"],
         ]),
+        */
       ],
       [
         "Business",
@@ -79,18 +102,35 @@ const NAVIGATION_MENU_MAP = new Map([
 ])
 
 const isRequired = () => {
-  throw new Error("Missing argument in DropdownMenu")
+  throw new Error(
+    "Missing required argument navigationMenu or currentPath in DropdownMenu"
+  )
 }
 
 const makeNavigationMenu = (
-  NavigationMenu = isRequired(),
+  navigationMenu = isRequired(),
+  currentPath = isRequired(),
   dropdownMenuItemProps = null
 ) => {
-  const router = useRouter() // next/router
+  const containsCurrentPage = (menuToSearch) => {
+    if (typeof menuToSearch === "string") {
+      return currentPath === menuToSearch
+    }
+    return Array.from(menuToSearch).some(([text, href]) => {
+      if (typeof href === "string") {
+        // this is an actual link
+        console.log(currentPath, href)
+        return currentPath === href
+      }
+      // we need to search this submenu
+      return containsCurrentPage(href)
+    })
+  }
 
-  return [...NavigationMenu.entries()].map(
+  return [...navigationMenu.entries()].map(
     ([text, destinationOrSubmenu], itemIndex) => {
       if (typeof destinationOrSubmenu === "string") {
+        // we don't have a submenu, just a URL
         const href = destinationOrSubmenu
         let childProps = {}
         if (dropdownMenuItemProps && dropdownMenuItemProps[itemIndex]) {
@@ -99,10 +139,12 @@ const makeNavigationMenu = (
         }
         childProps.key = text + href
 
-        const isCurrentPageProps =
-          router.asPath === href
-            ? { "aria-current": "page", className: "active" }
-            : {}
+        const isCurrentPageProps = containsCurrentPage(href)
+          ? {
+              "aria-current": "page",
+              className: "text-blue-800",
+            }
+          : {}
 
         return (
           <li {...childProps} {...isCurrentPageProps}>
@@ -116,6 +158,7 @@ const makeNavigationMenu = (
         destinationOrSubmenu !== null &&
         typeof destinationOrSubmenu === "object"
       ) {
+        // we have a submenu to populate
         const submenu = destinationOrSubmenu
         const numberOfItems = submenu.length
         const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(
@@ -138,6 +181,7 @@ const makeNavigationMenu = (
           }
         }
         const uniqueKey = text + "Menu"
+
         return (
           <li
             className="relative dropdown"
@@ -149,9 +193,13 @@ const makeNavigationMenu = (
               {...buttonProps}
               aria-controls={uniqueKey}
               aria-expanded={isOpen}
-              className="flex w-full"
+              className={
+                "flex w-full" +
+                (containsCurrentPage(submenu) ? " text-blue-800" : "")
+              }
             >
               {text}
+              {String}
               <div className="grid self-center w-6 h-6 rounded-full fill-current">
                 {ArrowIcon}
               </div>
@@ -164,8 +212,7 @@ const makeNavigationMenu = (
               id={uniqueKey}
             >
               <li className="dropdown-submenu">
-                {destinationOrSubmenu &&
-                  makeNavigationMenu(destinationOrSubmenu, itemProps)}
+                {makeNavigationMenu(submenu, itemProps)}
               </li>
             </ul>
           </li>
@@ -177,6 +224,8 @@ const makeNavigationMenu = (
 }
 
 export default function DropdownMenu() {
+  const router = useRouter() // next/router
+
   return (
     <nav
       className="navbar"
@@ -187,7 +236,7 @@ export default function DropdownMenu() {
       <div className="container">
         <div id="slidemenu">
           <ul className="justify-around py-10 nav md:flex navbar-nav">
-            {makeNavigationMenu(NAVIGATION_MENU_MAP)}
+            {makeNavigationMenu(NAVIGATION_MENU_MAP, router.asPath)}
           </ul>
         </div>
       </div>
