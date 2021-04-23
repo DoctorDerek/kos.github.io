@@ -96,13 +96,11 @@ export default function HostingPackagesAndPricing() {
                 {/* SOF POP UP BOX */}
                 <div id="popup1" className="overlay">
                   <div className="popup">
-                    <a className="close" href="#">
-                      CLOSE ×
-                    </a>
+                    <button className="close">CLOSE ×</button>
                     <div className="content">
                       <div className="pricing-block color2">
                         <div className="pricing-block__bottom sm">
-                          <p align="left">
+                          <p>
                             <span
                               style={{
                                 color: "#00539D",
@@ -120,7 +118,6 @@ export default function HostingPackagesAndPricing() {
                               fontFamily: '"Open Sans", sans-serif',
                               fontSize: "15px",
                             }}
-                            align="left"
                           >
                             <h6
                               className="title2"
@@ -236,7 +233,6 @@ export default function HostingPackagesAndPricing() {
                               fontFamily: '"Open Sans", sans-serif',
                               fontSize: "15px",
                             }}
-                            align="left"
                           >
                             <h6
                               className="title2"
@@ -361,7 +357,6 @@ export default function HostingPackagesAndPricing() {
                               fontFamily: '"Open Sans", sans-serif',
                               fontSize: "15px",
                             }}
-                            align="left"
                           >
                             <h6
                               className="title2"
@@ -486,7 +481,6 @@ export default function HostingPackagesAndPricing() {
                               fontFamily: '"Open Sans", sans-serif',
                               fontSize: "15px",
                             }}
-                            align="left"
                           >
                             <h6
                               className="title2"
@@ -531,7 +525,6 @@ export default function HostingPackagesAndPricing() {
                               fontFamily: '"Open Sans", sans-serif',
                               fontSize: "15px",
                             }}
-                            align="left"
                           >
                             <h6
                               className="title2"
@@ -583,9 +576,7 @@ export default function HostingPackagesAndPricing() {
                           <p />
                         </div>
                         <div>
-                          <a className="bottomclose" href="#">
-                            CLOSE ×
-                          </a>
+                          <button className="bottomclose">CLOSE ×</button>
                         </div>
                       </div>
                     </div>
@@ -670,13 +661,11 @@ export default function HostingPackagesAndPricing() {
                 {/* SOF POP UP BOX */}
                 <div id="popup2" className="overlay">
                   <div className="popup">
-                    <a className="close" href="#">
-                      CLOSE ×
-                    </a>
+                    <button className="close">CLOSE ×</button>
                     <div className="content">
                       <div className="pricing-block color2">
                         <div className="pricing-block__bottom sm">
-                          <p align="left">
+                          <p>
                             <span
                               style={{
                                 color: "#00539D",
@@ -688,7 +677,7 @@ export default function HostingPackagesAndPricing() {
                             </span>
                             <br />
                           </p>
-                          <div align="left">
+                          <div>
                             <h6 style={{ textAlign: "left" }}>
                               Account Includes:
                             </h6>
@@ -742,9 +731,7 @@ export default function HostingPackagesAndPricing() {
                           <p />
                         </div>
                         <div>
-                          <a className="bottomclose" href="#">
-                            CLOSE ×
-                          </a>
+                          <button className="bottomclose">CLOSE ×</button>
                         </div>
                       </div>
                     </div>
@@ -829,13 +816,11 @@ export default function HostingPackagesAndPricing() {
                 {/* SOF POP UP BOX */}
                 <div id="popup3" className="overlay">
                   <div className="popup">
-                    <a className="close" href="#">
-                      CLOSE ×
-                    </a>
+                    <button className="close">CLOSE ×</button>
                     <div className="content">
                       <div className="pricing-block color2">
                         <div className="pricing-block__bottom sm">
-                          <p align="left">
+                          <p>
                             <span
                               style={{
                                 color: "#00539D",
@@ -847,7 +832,7 @@ export default function HostingPackagesAndPricing() {
                             </span>
                             <br />
                           </p>
-                          <div align="left">
+                          <div>
                             <h6>Account Includes:</h6>
                           </div>
                           <ul>
@@ -859,7 +844,7 @@ export default function HostingPackagesAndPricing() {
                             <li>20 MySQL Databases</li>
                             <li>20 Sub Domains</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Includes:</h6>
                           </div>
                           <ul>
@@ -873,7 +858,7 @@ export default function HostingPackagesAndPricing() {
                             <li>Password Protected Directories</li>
                             <li>Subdomains</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Email</h6>
                           </div>
                           <ul>
@@ -887,13 +872,13 @@ export default function HostingPackagesAndPricing() {
                             <li>Spam Filter</li>
                             <li>Dr. Web AntiVirus</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Supported Technologies</h6>
                           </div>
                           <ul>
                             <li>PHP 7x</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Database</h6>
                           </div>
                           <ul>
@@ -903,9 +888,7 @@ export default function HostingPackagesAndPricing() {
                           <p />
                         </div>
                         <div>
-                          <a className="bottomclose" href="#">
-                            CLOSE ×
-                          </a>
+                          <button className="bottomclose">CLOSE ×</button>
                         </div>
                       </div>
                     </div>
@@ -997,13 +980,11 @@ export default function HostingPackagesAndPricing() {
                 {/* SOF POP UP BOX */}
                 <div id="popup4" className="overlay">
                   <div className="popup">
-                    <a className="close" href="#">
-                      CLOSE ×
-                    </a>
+                    <button className="close">CLOSE ×</button>
                     <div className="content">
                       <div className="pricing-block color2">
                         <div className="pricing-block__bottom sm">
-                          <p align="left">
+                          <p>
                             <span
                               style={{
                                 color: "#00539D",
@@ -1015,7 +996,7 @@ export default function HostingPackagesAndPricing() {
                             </span>
                             <br />
                           </p>
-                          <div align="left">
+                          <div>
                             <h6>Account Includes:</h6>
                           </div>
                           <ul>
@@ -1027,7 +1008,7 @@ export default function HostingPackagesAndPricing() {
                             <li>30 MySQL Databases</li>
                             <li>30 Sub Domains</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Includes:</h6>
                           </div>
                           <ul>
@@ -1041,7 +1022,7 @@ export default function HostingPackagesAndPricing() {
                             <li>Password Protected Directories</li>
                             <li>Subdomains</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Email</h6>
                           </div>
                           <ul>
@@ -1055,13 +1036,13 @@ export default function HostingPackagesAndPricing() {
                             <li>Spam Filter</li>
                             <li>Dr. Web AntiVirus</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Supported Technologies</h6>
                           </div>
                           <ul>
                             <li>PHP 7x</li>
                           </ul>
-                          <div align="left">
+                          <div>
                             <h6>Database</h6>
                           </div>
                           <ul>
@@ -1071,9 +1052,7 @@ export default function HostingPackagesAndPricing() {
                           <p />
                         </div>
                         <div>
-                          <a className="bottomclose" href="#">
-                            CLOSE ×
-                          </a>
+                          <button className="bottomclose">CLOSE ×</button>
                         </div>
                       </div>
                     </div>
@@ -1093,16 +1072,15 @@ export default function HostingPackagesAndPricing() {
           fontSize: "15px",
           lineHeight: "22px",
         }}
-        align="center"
       >
-        <a style={{ color: "#000000" }} name={6} />
+        <button style={{ color: "#000000" }} name={6} />
         6) Only in regions where technology is available.
       </p>
       <p>
-        <a style={{ color: "#000000" }} name={6} />
+        <button style={{ color: "#000000" }} name={6} />
       </p>
       <div className="block" style={{ marginBottom: "90px" }}>
-        <a style={{ color: "#000000" }} name={6} />
+        <button style={{ color: "#000000" }} name={6} />
         <div
           className="container"
           style={{
@@ -1113,7 +1091,7 @@ export default function HostingPackagesAndPricing() {
             width: "1200px",
           }}
         >
-          <div align="center">
+          <div>
             <h1
               className="text-center decor color"
               style={{
@@ -1475,10 +1453,10 @@ export default function HostingPackagesAndPricing() {
                   </span>
                 </li>
               </ul>
-              <a style={{ color: "#000000" }} name={6} />* Ontario only
+              <button style={{ color: "#000000" }} name={6} />* Ontario only
               <br />
               <div className="price-action">
-                <a style={{ color: "#000000" }} name={6} />
+                <button style={{ color: "#000000" }} name={6} />
                 <a
                   className="btn"
                   style={{

@@ -264,7 +264,7 @@ export default function TermsAndConditions() {
         affected Services in accordance with Section 33.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>ACCOUNT, BILLING AND PAYMENT</b>
       </p>
       <p className="text-left font18">
@@ -358,7 +358,7 @@ export default function TermsAndConditions() {
         pay the undisputed portion of the Fees in accordance with Section 8.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>YOUR RESPONSIBILITIES</b>
       </p>
       <p className="text-left font18">
@@ -439,7 +439,7 @@ export default function TermsAndConditions() {
         up-to-date.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>KOS SERVICES</b>
       </p>
       <p className="text-left font18">
@@ -534,7 +534,7 @@ export default function TermsAndConditions() {
         applicable Cancellation Charges, as defined in Section 36.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>KOS EQUIPMENT AND SOFTWARE</b>
       </p>
       <p className="text-left font18">
@@ -613,7 +613,6 @@ export default function TermsAndConditions() {
       </p>
 
       <p className="text-left font18">
-        <a name="_GoBack"></a>
         Yes. The Equipment, Equipment specifications and the location of
         Equipment require changes, at our sole discretion, from time to time.
         Unless otherwise specified by us, you are solely responsible for
@@ -640,7 +639,7 @@ export default function TermsAndConditions() {
         applicable Service Agreement.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>PROPRIETARY RIGHTS</b>
       </p>
       <p className="text-left font18">
@@ -714,7 +713,7 @@ export default function TermsAndConditions() {
         </span>
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>PRIVACY AND CONFIDENTIALITY OF YOUR INFORMATION</b>
       </p>
       <p className="text-left font18">
@@ -753,7 +752,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p style={undefined}></p>
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>SERVICES, VoIP AND RELATED LIMITATION OF LIABILITY</b>
       </p>
 
@@ -886,7 +885,7 @@ export default function TermsAndConditions() {
       </p>
 
       <p></p>
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>LIABILITY AND INDEMNIFICATION</b>
       </p>
       <p className="text-left font18">
@@ -1007,7 +1006,7 @@ export default function TermsAndConditions() {
         matters related to this Agreement.
       </p>
 
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>CANCELLING AND SUSPENDING KOS SERVICES</b>
       </p>
       <p className="text-left font18">
@@ -1183,7 +1182,7 @@ export default function TermsAndConditions() {
           </p>
         </li>
       </ol>
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>ADDITIONAL TERMS</b>
       </p>
       <p className="text-left font18">
@@ -1306,7 +1305,7 @@ export default function TermsAndConditions() {
         accrued prior to that event including but not limited to the obligation
         to pay any outstanding amounts owed for Services.
       </p>
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>HOW TO CONTACT KOS</b>
       </p>
       <p className="text-left font18">
@@ -1394,7 +1393,7 @@ export default function TermsAndConditions() {
         support via the contact information set out above in Section 45.
       </p>
       <p className="text-left font18"></p>
-      <p align="center" style={undefined}>
+      <p style={undefined}>
         <b>MONTHLY DATA USAGE</b>
       </p>
       <p className="text-left font18">
@@ -1443,7 +1442,7 @@ export default function TermsAndConditions() {
                 <p>&nbsp;</p>
               </td>
               <td width="193" style={undefined}>
-                <p align="center">
+                <p>
                   <b>Data use estimate</b>
                 </p>
               </td>

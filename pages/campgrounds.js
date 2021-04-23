@@ -8,7 +8,7 @@ export default function Campgrounds() {
           KOS is now offering Internet service at the following Campgrounds:
         </span>
       </p>
-      <p style={undefined} align="center">
+      <p style={undefined}>
         <span style={undefined}>•</span>
         <span style={undefined}>Quinte’s Isle Campark</span>
         <br />

@@ -36,7 +36,6 @@ export default function index() {
               fontFamily: '"Open Sans", sans-serif',
               backgroundColor: "#ffffff",
             }}
-            align="center"
           >
             <span style={{ color: "#c70000", fontWeight: "bold" }}>•</span>
             &nbsp;

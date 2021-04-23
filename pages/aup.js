@@ -189,7 +189,6 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="8">
             <li>
               <p className="text-left font18">
-                <a name="_GoBack"></a>
                 reproducing, distributing, selling, reselling or otherwise
                 exploiting the Services or content we provide or which you
                 obtain through the Services for any commercial purposes without

@@ -5,9 +5,10 @@ import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.sv
 
 export default function InternalTemplate() {
   const title =
-    "Residential Internet Provider in Kingston & Belleville, Ontario"
+    "Home Internet Service Provider in Kingston & Belleville, Ontario"
   // "Residential Services"
-  const slug = "residential"
+  const slug = "residential-services"
+  // "residential"
 
   const BULLET = () => (
     <div className="inline-block w-3 h-3 text-blue-800 border-current border-solid rounded-full fill-current border-[1px] mx-4">
@@ -18,17 +19,27 @@ export default function InternalTemplate() {
   const isRequired = () => {
     throw new Error("Both href and children props are required in BUTTON")
   }
-  const BUTTON = ({ href = isRequired(), children = isRequired() }) => (
+  const BUTTON = ({
+    href = isRequired(),
+    text = isRequired(),
+  }: {
+    href: string
+    text: string
+  }) => (
     <a
       href={href}
       className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
     >
-      {children}
+      {text}
     </a>
   )
   return (
     <>
-      <PageSeo title={`${title}`} url={`${siteMetadata.siteUrl}/${slug}`} />
+      <PageSeo
+        title={`${title}`}
+        description=""
+        url={`${siteMetadata.siteUrl}/${slug}`}
+      />
       <div className="max-w-xl px-4 mx-auto md:px-0">
         <h1 className="text-left color decor">{title}</h1>
         <div className="pb-4 text-center">
@@ -84,7 +95,7 @@ export default function InternalTemplate() {
           </ul>
         </div>
         <div className="py-6">
-          <BUTTON href="/order/">Get connected</BUTTON>
+          <BUTTON href="/order/" text="Get connected" />
         </div>
       </div>
     </>

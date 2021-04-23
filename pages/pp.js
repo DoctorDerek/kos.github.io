@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
 
           <br />
 
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>INTRODUCTION</b>
           </p>
           <p align="justify" style={undefined}>
@@ -118,7 +118,7 @@ export default function PrivacyPolicy() {
             or facilitating communication with that individual in relation to
             their employment, business or profession.
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>DEFINITIONS</b>
           </p>
           <p align="justify" style={undefined}>
@@ -298,7 +298,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>1. ACCOUNTABILITY</b>
           </p>
           <p align="justify" style={undefined}>
@@ -364,7 +364,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>
               2. IDENTIFYING PURPOSES FOR COLLECTION OF PERSONAL INFORMATION
             </b>
@@ -446,7 +446,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>
               3. OBTAINING CONSENT FOR COLLECTION, USE OR DISCLOSURE OF PERSONAL
               INFORMATION
@@ -734,7 +734,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>4. LIMITING COLLECTION OF PERSONAL INFORMATION</b>
           </p>
           <p align="justify" style={undefined}>
@@ -762,7 +762,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>
               5. LIMITING USE, DISCLOSURE AND RETENTION OF PERSONAL INFORMATION
             </b>
@@ -895,7 +895,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>6. ACCURACY OF PERSONAL INFORMATION</b>
           </p>
           <p align="justify" style={undefined}>
@@ -918,7 +918,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>7. SECURITY SAFEGUARDS</b>
           </p>
           <p align="justify" style={undefined}>
@@ -972,7 +972,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>8. OPENNESS CONCERNING POLICIES AND PRACTICES</b>
           </p>
           <p align="justify" style={undefined}>
@@ -1028,7 +1028,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>9. CUSTOMER AND EMPLOYEE ACCESS TO PERSONAL INFORMATION</b>
           </p>
           <p align="justify" style={undefined}>
@@ -1112,7 +1112,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>10. br /EACH OF SECURITY SAFEGUARDS</b>
           </p>
           <p align="justify" style={undefined}>
@@ -1174,7 +1174,7 @@ export default function PrivacyPolicy() {
             <br />
             <br />
           </p>
-          <p align="center" style={undefined}>
+          <p style={undefined}>
             <b>11. CHALLENGING COMPLIANCE</b>
           </p>
           <p align="justify" style={undefined}>

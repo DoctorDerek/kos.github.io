@@ -108,7 +108,7 @@ export default function Footer() {
                 Personal Web Space TAC
               </a>
               <br />
-              <div align="center">
+              <div>
                 <span style={{ color: "#ffffff" }}>
                   <strong>Serving Eastern Ontario: </strong>
                 </span>

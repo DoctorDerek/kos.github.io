@@ -19,7 +19,7 @@ export default function index() {
             </span>{" "}
             <br />
             <br />
-            {/* <div align="center">
+            {/* <div>
               <iframe
                 frameBorder={0}
                 height={250}
@@ -118,13 +118,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup0" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -175,9 +173,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -273,13 +269,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup1" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -330,9 +324,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -428,13 +420,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup2" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -486,9 +476,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -520,7 +508,6 @@ export default function index() {
               fontFamily: '"Open Sans", sans-serif',
               backgroundColor: "#ffffff",
             }}
-            align="center"
           >
             6) Only in regions where technology is available.
           </p>
@@ -544,7 +531,7 @@ export default function index() {
                 width: "1200px",
               }}
             >
-              <div align="center">
+              <div>
                 <h1
                   className="text-center decor color"
                   style={{

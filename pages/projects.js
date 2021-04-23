@@ -1,7 +1,5 @@
-import Image from "next/image"
 import siteMetadata from "@/data/siteMetadata"
 import projectsData from "@/data/projectsData"
-import Link from "@/components/Link"
 import Card from "@/components/Card"
 import { PageSeo } from "@/components/SEO"
 

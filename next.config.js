@@ -3,11 +3,25 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 })
 
 module.exports = withBundleAnalyzer({
-  pageExtensions: ["js", "jsx", "md", "mdx"],
+  async redirects() {
+    return [
+      {
+        source: "/res",
+        destination: "/home-internet-in-kingston-ontario",
+        permanent: true,
+      },
+      {
+        source: "/residential",
+        destination: "/home-internet-in-kingston-ontario",
+        permanent: true,
+      },
+    ]
+  },
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   future: {
     webpack5: true,
   },
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { dev, isServer, webpack }) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,
       use: [
@@ -22,9 +36,22 @@ module.exports = withBundleAnalyzer({
     })
 
     config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      test: /\.tsx?$/,
+      exclude: /node_modules/,
+      use: [
+        "cache-loader",
+        {
+          loader: "esbuild-loader",
+          options: { loader: "tsx" },
+        },
+      ],
     })
+
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        React: "react",
+      })
+    ) // Support JSX Transform per https://dev.to/rsa/speed-up-next-js-build-with-typescript-and-tailwind-css-418d
 
     if (!dev && !isServer) {
       // Replace React with Preact only in client production build

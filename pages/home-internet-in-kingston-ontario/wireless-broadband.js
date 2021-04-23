@@ -23,7 +23,7 @@ export default function wirelessBroadBand() {
             </span>{" "}
             <br />
             <br />
-            <div align="center">
+            <div>
               {/*
 
         <form action="http://www.kos.net/dslavail-check.php" method="post" name="dslcheck"/>
@@ -129,13 +129,11 @@ export default function wirelessBroadBand() {
                   {/* SOF POP UP BOX */}
                   <div id="popup0" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -186,9 +184,7 @@ export default function wirelessBroadBand() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -284,13 +280,11 @@ export default function wirelessBroadBand() {
                   {/* SOF POP UP BOX */}
                   <div id="popup1" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -341,9 +335,7 @@ export default function wirelessBroadBand() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -439,13 +431,11 @@ export default function wirelessBroadBand() {
                   {/* SOF POP UP BOX */}
                   <div id="popup2" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -496,9 +486,7 @@ export default function wirelessBroadBand() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -601,13 +589,11 @@ export default function wirelessBroadBand() {
                   {/* SOF POP UP BOX */}
                   <div id="popup3" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -658,9 +644,7 @@ export default function wirelessBroadBand() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -683,7 +667,6 @@ export default function wirelessBroadBand() {
               fontSize: "15px",
               lineHeight: "22px",
             }}
-            align="center"
           >
             6) Only in regions where technology is available.
           </p>
@@ -705,7 +688,6 @@ export default function wirelessBroadBand() {
                   fontSize: "15px",
                   backgroundColor: "#ffffff",
                 }}
-                align="center"
               >
                 <h1
                   className="text-center decor color"

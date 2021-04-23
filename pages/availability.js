@@ -2,7 +2,7 @@ export default function Availability() {
   return (
     <div className="container">
       <h1 className="text-center decor color">Availability Tool</h1>
-      <div align="center">
+      <div>
         <form
           action="http://www.kos.net/dslavail-check.php"
           method="post"

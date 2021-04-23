@@ -113,13 +113,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup0" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -143,9 +141,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -243,13 +239,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup1" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -278,9 +272,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -375,13 +367,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup2" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -410,9 +400,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -514,13 +502,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup3" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -549,9 +535,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -648,13 +632,11 @@ export default function index() {
                   {/* SOF POP UP BOX */}
                   <div id="popup4" className="overlay">
                     <div className="popup">
-                      <a className="close" href="#">
-                        CLOSE ×
-                      </a>
+                      <button className="close">CLOSE ×</button>
                       <div className="content">
                         <div className="pricing-block color2">
                           <div className="pricing-block__bottom sm">
-                            <p align="left">
+                            <p>
                               <span
                                 style={{
                                   color: "#00539D",
@@ -685,9 +667,7 @@ export default function index() {
                             <p />
                           </div>
                           <div>
-                            <a className="bottomclose" href="#">
-                              CLOSE ×
-                            </a>
+                            <button className="bottomclose">CLOSE ×</button>
                           </div>
                         </div>
                       </div>
@@ -710,7 +690,6 @@ export default function index() {
               fontSize: "15px",
               backgroundColor: "#ffffff",
             }}
-            align="center"
           >
             <h1
               className="text-center decor color"

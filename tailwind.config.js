@@ -5,10 +5,10 @@ module.exports = {
   mode: "jit",
   purge: {
     content: [
-      "./pages/**/*.js",
-      "./components/**/*.js",
-      "./layouts/**/*.js",
-      "./lib/**/*.js",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./layouts/**/*.{js,ts,jsx,tsx}",
+      "./lib/**/*.{js,ts,jsx,tsx}",
     ],
     options: {
       safelist: ["type"], // [type='checkbox']
@@ -168,5 +168,9 @@ module.exports = {
   variants: {
     typography: ["dark"],
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-rtl"),
+  ],
 }
