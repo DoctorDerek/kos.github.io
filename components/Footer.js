@@ -18,7 +18,7 @@ const useScript = (url) => {
 }
 
 export default function Footer() {
-  useScript("js/theWeatherNetwork.js")
+  useScript("/js/theWeatherNetwork.js")
   return (
     <footer>
       <div className="page-footer w-full h-[450px]">
