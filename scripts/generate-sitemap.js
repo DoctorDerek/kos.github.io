@@ -1,4 +1,4 @@
-import { siteMetadata } from "../data/siteMetadata"
+const siteMetadata = require("../data/siteMetadata")
 const fs = require("fs")
 const globby = require("globby")
 const prettier = require("prettier")(async () => {
