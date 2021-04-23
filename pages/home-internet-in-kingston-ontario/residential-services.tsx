@@ -1,6 +1,6 @@
 import ImageFixed from "next/image"
 import { PageSeo } from "@/components/SEO"
-import siteMetadata from "@/data/siteMetadata"
+import siteMetadata from "@/data/siteMetadata.json"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 
 export default function InternalTemplate() {

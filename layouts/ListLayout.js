@@ -1,6 +1,6 @@
 import Link from "@/components/Link"
 import Tag from "@/components/Tag"
-import siteMetadata from "@/data/siteMetadata"
+import siteMetadata from "@/data/siteMetadata.json"
 import { useState } from "react"
 
 const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }

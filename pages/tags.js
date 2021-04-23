@@ -1,4 +1,4 @@
-import siteMetadata from "@/data/siteMetadata"
+import siteMetadata from "@/data/siteMetadata.json"
 import { kebabCase } from "@/lib/utils"
 import { getAllTags } from "@/lib/tags"
 import Tag from "@/components/Tag"
