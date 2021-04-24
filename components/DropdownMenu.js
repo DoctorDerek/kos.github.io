@@ -7,19 +7,13 @@ import LeftArrow from "@/data/material-icons/keyboard_arrow_left_black_48dp.svg"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import UpArrow from "@/data/material-icons/keyboard_arrow_up_black_48dp.svg"*/
 import FlyoutMenuFullWidth from "@/components/FlyoutMenuFullWidth"
-import FlyoutMenuSimple from "@/components/FlyoutMenuSimple"
 import {
   ChartBarIcon,
-  CheckCircleIcon,
   CursorClickIcon,
-  PhoneIcon,
-  PlayIcon,
   ShieldCheckIcon,
   ViewGridIcon,
 } from "@heroicons/react/outline"
-import { useState } from "react"
 import { Popover } from "@headlessui/react"
-import { usePopper } from "react-popper"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -114,7 +108,7 @@ const NAVIGATION_MENU_MAP = new Map([
   ],
 ])
 
-const solutions = [
+const services = [
   {
     name: "Analytics",
     description:
@@ -188,13 +182,15 @@ export default function DropdownMenu() {
   return (
     <>
       <Popover.Group as="nav">
-        <div className="block">
-          <div className="w-[600px] flex-shrink-0">
-            <FlyoutMenuFullWidth title="Solutions" menuItems={solutions} />
-          </div>
-          <FlyoutMenuFullWidth title="Solutions" menuItems={solutions} />
-          <FlyoutMenuSimple />
-          <FlyoutMenuSimple />
+        <div className="flex px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
+            //
+            return (
+              <>
+                <FlyoutMenuFullWidth title={title} menuItems={services} />
+              </>
+            )
+          })}
         </div>
       </Popover.Group>
     </>

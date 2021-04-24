@@ -11,7 +11,6 @@ import {
   ShieldCheckIcon,
   ViewGridIcon,
 } from "@heroicons/react/outline"
-import FlyoutMenuSimple from "@/components/FlyoutMenuSimple"
 
 const callsToAction = [
   { name: "Watch Demo", href: "#", icon: PlayIcon },
@@ -63,28 +62,22 @@ export default function FlyoutMenuFullWidth({ title, menuItems }) {
               className="absolute left-0 z-10 transform shadow-lg"
             >
               <div className="bg-white">
-                <div className="flex px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div className="grid px-4 py-6 mx-auto max-w-7xl gap-y-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
                   {menuItems.map((item) => (
-                    <span
+                    <a
                       key={item.name}
                       href={item.href}
                       className="flex flex-col justify-between p-3 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
                     >
                       <div className="flex md:h-full lg:flex-col">
                         <div className="flex-shrink-0">
-                          <div className="inline-flex items-center justify-center w-10 h-10 rounded-md sm:h-12 sm:w-12">
-                            <item.icon
-                              className="w-6 h-6 text-blue-800"
-                              aria-hidden="true"
-                            />
+                          <div className="inline-flex items-center justify-center w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12">
+                            <item.icon className="w-6 h-6" aria-hidden="true" />
                           </div>
                         </div>
                         <div className="ml-4 md:flex-1 md:flex md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                           <div>
                             <p className="text-base font-medium text-gray-900">
-                              <Popover.Group>
-                                <FlyoutMenuSimple />
-                              </Popover.Group>
                               {item.name}
                             </p>
                             <p className="mt-1 text-sm text-gray-500">
@@ -96,7 +89,7 @@ export default function FlyoutMenuFullWidth({ title, menuItems }) {
                           </p>
                         </div>
                       </div>
-                    </span>
+                    </a>
                   ))}
                 </div>
               </div>
