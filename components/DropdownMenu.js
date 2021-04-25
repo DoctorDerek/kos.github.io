@@ -17,6 +17,7 @@ import { Popover } from "@headlessui/react"
 import { useState } from "react"
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
+import FlyoutMenuSimple from "@/components/FlyoutMenuSimple"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -240,6 +241,9 @@ export default function DropdownMenu() {
       <OutsideAlerter>
         {/* OutsideAlerter is for the mobile menu --
         close with toggle or by clicking outside */}
+        <Popover.Group>
+          <FlyoutMenuSimple />
+        </Popover.Group>
         <Popover.Group as="nav" role="navigation">
           <button
             type="button"
@@ -274,9 +278,9 @@ export default function DropdownMenu() {
           </button>
           <div
             className={classNames(
-              navIsOpen ? "flex" : "hidden sm:flex",
+              navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
               "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
-              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              "group bg-white rounded-md items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
             {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
