@@ -6,7 +6,6 @@ import DownArrow from "@/data/material-icons/keyboard_arrow_down_black_48dp.svg"
 import LeftArrow from "@/data/material-icons/keyboard_arrow_left_black_48dp.svg"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import UpArrow from "@/data/material-icons/keyboard_arrow_up_black_48dp.svg"*/
-import FlyoutMenuFullWidth from "@/components/FlyoutMenuFullWidth"
 import {
   ChartBarIcon,
   CursorClickIcon,
@@ -18,6 +17,9 @@ import { useState } from "react"
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenuSimple from "@/components/FlyoutMenuSimple"
+import FlyoutMenuSimpleStacked from "@/components/FlyoutMenuSimpleStacked"
+import FlyoutMenuFullWidth from "@/components/FlyoutMenuFullWidth"
+import FlyoutMenuFullWidthOriginal from "@/components/FlyoutMenuFullWidthOriginal"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -244,6 +246,10 @@ export default function DropdownMenu() {
         <Popover.Group>
           <FlyoutMenuSimple />
         </Popover.Group>
+        <Popover.Group>
+          <FlyoutMenuSimpleStacked />
+        </Popover.Group>
+        <FlyoutMenuFullWidthOriginal />
         <Popover.Group as="nav" role="navigation">
           <button
             type="button"
@@ -279,7 +285,7 @@ export default function DropdownMenu() {
           <div
             className={classNames(
               navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
-              "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+              "sticky inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
               "group bg-white rounded-md items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
@@ -291,6 +297,7 @@ export default function DropdownMenu() {
               )
             })}
           </div>
+          <FlyoutMenuFullWidth title={"hi"} menuItems={services} />
         </Popover.Group>
       </OutsideAlerter>
     </>
