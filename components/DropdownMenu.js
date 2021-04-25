@@ -14,6 +14,47 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/outline"
 import { Popover } from "@headlessui/react"
+import { useState } from "react"
+import React, { useRef, useEffect } from "react"
+import PropTypes from "prop-types"
+
+/**
+ * Hook that alerts clicks outside of the passed ref
+ */
+function useOutsideAlerter(ref) {
+  useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        alert("You clicked outside of me!")
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [ref])
+}
+
+/**
+ * Component that alerts if you click outside of it
+ */
+function OutsideAlerter(props) {
+  const wrapperRef = useRef(null)
+  useOutsideAlerter(wrapperRef)
+
+  return <div ref={wrapperRef}>{props.children}</div>
+}
+
+OutsideAlerter.propTypes = {
+  children: PropTypes.element.isRequired,
+}
+
+// export default OutsideAlerter
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -178,13 +219,39 @@ export default function MyPopover() {
   )
 }*/
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ")
+}
+
 export default function DropdownMenu() {
+  const [navIsOpen, setNavIsOpen] = useState(false)
+
+  const onToggleNav = () => {
+    setNavIsOpen((status) => {
+      if (status) {
+        // close the nav, allow scrolling
+        document.body.style.overflow = "auto"
+      } else {
+        // open the nav, prevent scrolling
+        document.body.style.overflow = "hidden"
+      }
+      return !status
+    })
+  }
   return (
-    <>
-      <Popover.Group as="nav">
-        <div className="flex px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <OutsideAlerter>
+      <Popover.Group as="nav" className={classNames()} role="navigation">
+        <button onClick={() => onToggleNav()} className="sm:hidden">
+          Show menu
+        </button>
+        <div
+          className={classNames(
+            navIsOpen ? "flex" : "hidden sm:flex",
+            "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          )}
+        >
           {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
-            //
             return (
               <>
                 <FlyoutMenuFullWidth title={title} menuItems={services} />
@@ -193,7 +260,7 @@ export default function DropdownMenu() {
           })}
         </div>
       </Popover.Group>
-    </>
+    </OutsideAlerter>
   )
 }
 
