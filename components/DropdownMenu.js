@@ -237,76 +237,58 @@ export default function DropdownMenu() {
 
   return (
     <>
-      <div className={"sm:hidden"}>
-        {/* mobile menu -- close with toggle or by clicking outside */}
-
-        <OutsideAlerter>
-          <Popover.Group as="nav" role="navigation">
-            <button
-              type="button"
-              aria-label="Toggle Menu"
-              onClick={() => onToggleNav()}
-              className="flex mx-auto my-4 text-2xl"
-            >
-              <div className="w-8 h-8 rounded">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="text-gray-900 dark:text-gray-100"
-                >
-                  {/* menu icon when closed and X icon when open*/}
-                  {navIsOpen ? (
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  ) : (
-                    <path
-                      fillRule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                      clipRule="evenodd"
-                    />
-                  )}
-                </svg>
-              </div>
-              Menu
-            </button>
-            <div
-              className={classNames(
-                navIsOpen ? "flex" : "hidden",
-                "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
-                "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              )}
-            >
-              {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
-                return (
-                  <>
-                    <FlyoutMenuFullWidth title={title} menuItems={services} />
-                  </>
-                )
-              })}
+      <OutsideAlerter>
+        {/* OutsideAlerter is for the mobile menu --
+        close with toggle or by clicking outside */}
+        <Popover.Group as="nav" role="navigation">
+          <button
+            type="button"
+            aria-label="Toggle Menu"
+            onClick={() => onToggleNav()}
+            className="flex mx-auto my-4 text-2xl sm:hidden"
+          >
+            <div className="w-8 h-8 rounded">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="text-gray-900 dark:text-gray-100"
+              >
+                {/* menu icon when closed and X icon when open*/}
+                {navIsOpen ? (
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                ) : (
+                  <path
+                    fillRule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clipRule="evenodd"
+                  />
+                )}
+              </svg>
             </div>
-          </Popover.Group>
-        </OutsideAlerter>
-      </div>
-      {/* main nav menu */}
-      <Popover.Group as="nav" className={"hidden sm:flex"} role="navigation">
-        <div
-          className={classNames(
-            "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          )}
-        >
-          {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
-            return (
-              <>
-                <FlyoutMenuFullWidth title={title} menuItems={services} />
-              </>
-            )
-          })}
-        </div>
-      </Popover.Group>
+            Menu
+          </button>
+          <div
+            className={classNames(
+              navIsOpen ? "flex" : "hidden sm:flex",
+              "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            )}
+          >
+            {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
+              return (
+                <>
+                  <FlyoutMenuFullWidth title={title} menuItems={services} />
+                </>
+              )
+            })}
+          </div>
+        </Popover.Group>
+      </OutsideAlerter>
     </>
   )
 }
