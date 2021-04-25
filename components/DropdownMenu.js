@@ -18,44 +18,6 @@ import { useState } from "react"
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 
-/**
- * Hook that alerts clicks outside of the passed ref
- */
-function useOutsideAlerter(ref) {
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        alert("You clicked outside of me!")
-      }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [ref])
-}
-
-/**
- * Component that alerts if you click outside of it
- */
-function OutsideAlerter(props) {
-  const wrapperRef = useRef(null)
-  useOutsideAlerter(wrapperRef)
-
-  return <div ref={wrapperRef}>{props.children}</div>
-}
-
-OutsideAlerter.propTypes = {
-  children: PropTypes.element.isRequired,
-}
-
-// export default OutsideAlerter
-
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
   ["Services", [/home/, /business/, /camp/, /avail/, /pay/]],
@@ -225,30 +187,115 @@ function classNames(...classes) {
 
 export default function DropdownMenu() {
   const [navIsOpen, setNavIsOpen] = useState(false)
+  // <nav> is closed by default on mobile display
 
   const onToggleNav = () => {
-    setNavIsOpen((status) => {
-      if (status) {
-        // close the nav, allow scrolling
-        document.body.style.overflow = "auto"
-      } else {
-        // open the nav, prevent scrolling
-        document.body.style.overflow = "hidden"
-      }
-      return !status
-    })
+    setNavIsOpen((status) => !status)
   }
+
+  const closeNavIfOpen = () => {
+    setNavIsOpen((status) => false)
+  }
+
+  /**
+   * Hook that alerts clicks outside of the passed ref
+   */
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          closeNavIfOpen()
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside)
+      }
+    }, [ref])
+  }
+
+  /**
+   * Component that alerts if you click outside of it
+   */
+  function OutsideAlerter(props) {
+    const wrapperRef = useRef(null)
+    useOutsideAlerter(wrapperRef)
+
+    return <div ref={wrapperRef}>{props.children}</div>
+  }
+
+  OutsideAlerter.propTypes = {
+    children: PropTypes.element.isRequired,
+  }
+
+  // export default OutsideAlerter
+
   return (
-    <OutsideAlerter>
-      <Popover.Group as="nav" className={classNames()} role="navigation">
-        <button onClick={() => onToggleNav()} className="sm:hidden">
-          Show menu
-        </button>
+    <>
+      <div className={"sm:hidden"}>
+        {/* mobile menu -- close with toggle or by clicking outside */}
+
+        <OutsideAlerter>
+          <Popover.Group as="nav" role="navigation">
+            <button
+              type="button"
+              aria-label="Toggle Menu"
+              onClick={() => onToggleNav()}
+              className="flex mx-auto my-4 text-2xl"
+            >
+              <div className="w-8 h-8 rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="text-gray-900 dark:text-gray-100"
+                >
+                  {/* menu icon when closed and X icon when open*/}
+                  {navIsOpen ? (
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  ) : (
+                    <path
+                      fillRule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clipRule="evenodd"
+                    />
+                  )}
+                </svg>
+              </div>
+              Menu
+            </button>
+            <div
+              className={classNames(
+                navIsOpen ? "flex" : "hidden",
+                "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+                "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              )}
+            >
+              {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
+                return (
+                  <>
+                    <FlyoutMenuFullWidth title={title} menuItems={services} />
+                  </>
+                )
+              })}
+            </div>
+          </Popover.Group>
+        </OutsideAlerter>
+      </div>
+      {/* main nav menu */}
+      <Popover.Group as="nav" className={"hidden sm:flex"} role="navigation">
         <div
           className={classNames(
-            navIsOpen ? "flex" : "hidden sm:flex",
-            "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
-            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            "sticky z-100 inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           )}
         >
           {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
@@ -260,7 +307,7 @@ export default function DropdownMenu() {
           })}
         </div>
       </Popover.Group>
-    </OutsideAlerter>
+    </>
   )
 }
 

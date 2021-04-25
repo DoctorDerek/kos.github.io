@@ -60,15 +60,7 @@ export default function Header() {
           </div>
         </Column>
       </div>
-      <button
-        type="button"
-        className="flex flex-wrap pl-0 list-reset lg:hidden navbar-toggle"
-      >
-        <i className="icon icon-menu" />
-        <i className="icon icon-cancel" />
-      </button>
       <DropdownMenu />
-      <div id="navbar-height-col" />
     </header>
   )
 }
