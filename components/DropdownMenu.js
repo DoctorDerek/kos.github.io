@@ -249,7 +249,6 @@ export default function DropdownMenu() {
         <Popover.Group>
           <FlyoutMenuSimpleStacked />
         </Popover.Group>
-        <FlyoutMenuFullWidthOriginal />
         <Popover.Group as="nav" role="navigation">
           <button
             type="button"
