@@ -74,7 +74,7 @@ export default function FlyoutMenuSimpleStacked() {
               static
               className="absolute z-10 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0"
             >
-              <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                   {solutions.map((item) => (
                     <Popover.Group

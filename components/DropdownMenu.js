@@ -243,13 +243,11 @@ export default function DropdownMenu() {
       <OutsideAlerter>
         {/* OutsideAlerter is for the mobile menu --
         close with toggle or by clicking outside */}
-        <Popover.Group>
-          <FlyoutMenuSimple />
-        </Popover.Group>
-        <Popover.Group>
-          <FlyoutMenuSimpleStacked />
-        </Popover.Group>
-        <Popover.Group as="nav" role="navigation">
+        <Popover.Group
+          as="nav"
+          role="navigation"
+          className="flex flex-col items-center"
+        >
           <button
             type="button"
             aria-label="Toggle Menu"
@@ -281,10 +279,16 @@ export default function DropdownMenu() {
             </div>
             Menu
           </button>
+          <Popover.Group>
+            <FlyoutMenuSimple />
+          </Popover.Group>
+          <Popover.Group>
+            <FlyoutMenuSimpleStacked />
+          </Popover.Group>
           <div
             className={classNames(
               navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
-              "sticky inset-0 flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+              "flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
               "group bg-white rounded-md items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
