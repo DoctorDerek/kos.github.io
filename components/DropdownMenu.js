@@ -16,10 +16,7 @@ import { Popover } from "@headlessui/react"
 import { useState } from "react"
 import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
-import FlyoutMenuSimple from "@/components/FlyoutMenuSimple"
-import FlyoutMenuSimpleStacked from "@/components/FlyoutMenuSimpleStacked"
-import FlyoutMenuFullWidth from "@/components/FlyoutMenuFullWidth"
-import FlyoutMenuFullWidthOriginal from "@/components/FlyoutMenuFullWidthOriginal"
+import FlyoutMenuOuter from "@/components/FlyoutMenuOuter"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -306,7 +303,7 @@ export default function DropdownMenu() {
                 <>
                   {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
                   <Popover.Group>
-                    <FlyoutMenuSimpleStacked title={title} />
+                    <FlyoutMenuOuter title={title} />
                   </Popover.Group>
                 </>
               )
