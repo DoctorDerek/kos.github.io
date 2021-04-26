@@ -76,6 +76,7 @@
     "remark-stringify": "^9.0.1",
     "strip-ansi": "^7.0.0",
     "style-loader": "^2.0.0",
+    "stylelint-config-recommended": "^5.0.0",
     "tailwindcss": "^2.1.1",
     "tailwindcss-rtl": "^0.7.3",
     "test-library": "^1.0.0",
