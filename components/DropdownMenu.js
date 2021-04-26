@@ -297,9 +297,8 @@ export default function DropdownMenu() {
 
           <div
             className={classNames(
-              navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
-              "flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
-              "group bg-white rounded-md items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              navIsOpen ? "flex" : "hidden sm:flex",
+              "justify-between border-2 border-red-500 border-solid w-full flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
             {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
