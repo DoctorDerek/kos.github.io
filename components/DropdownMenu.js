@@ -200,6 +200,21 @@ export default function DropdownMenu() {
     setNavIsOpen((status) => false)
   }
 
+  /*
+  Scroll to menu if clicked? (Alternative to full screen)
+
+  const myRef = useRef(null)
+
+   const executeScroll = () => myRef.current.scrollIntoView()
+   // run this function from an event handler or an effect to execute scroll
+
+   return (
+      <>
+         <div ref={myRef}>Element to scroll to</div>
+         <button onClick={executeScroll}> Click to scroll </button>
+      </>
+      */
+
   /**
    * Hook that alerts clicks outside of the passed ref
    */
@@ -279,12 +294,35 @@ export default function DropdownMenu() {
             </div>
             Menu
           </button>
-          <Popover.Group>
-            <FlyoutMenuSimple />
-          </Popover.Group>
-          <Popover.Group>
-            <FlyoutMenuSimpleStacked />
-          </Popover.Group>
+
+          <div
+            className={classNames(
+              navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
+              "flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8",
+              "group bg-white rounded-md items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            )}
+          >
+            {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
+              return (
+                <>
+                  {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
+                  <Popover.Group>
+                    <FlyoutMenuSimple />
+                  </Popover.Group>
+                  <Popover.Group>
+                    <FlyoutMenuSimpleStacked />
+                  </Popover.Group>
+                </>
+              )
+            })}
+          </div>
+        </Popover.Group>
+      </OutsideAlerter>
+    </>
+  )
+}
+
+/*
           <div
             className={classNames(
               navIsOpen ? "inline-flex" : "hidden sm:inline-flex",
@@ -300,12 +338,7 @@ export default function DropdownMenu() {
               )
             })}
           </div>
-          <FlyoutMenuFullWidth title={"hi"} menuItems={services} />
-        </Popover.Group>
-      </OutsideAlerter>
-    </>
-  )
-}
+          <FlyoutMenuFullWidth title={"hi"} menuItems={services} />*/
 
 /*
 export default function DropdownMenu() {
