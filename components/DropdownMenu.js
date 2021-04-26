@@ -307,10 +307,7 @@ export default function DropdownMenu() {
                 <>
                   {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
                   <Popover.Group>
-                    <FlyoutMenuSimple />
-                  </Popover.Group>
-                  <Popover.Group>
-                    <FlyoutMenuSimpleStacked />
+                    <FlyoutMenuSimpleStacked title={title} />
                   </Popover.Group>
                 </>
               )

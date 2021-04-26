@@ -39,7 +39,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function FlyoutMenuSimpleStacked({ title, href }) {
+export default function FlyoutMenuSimpleStacked() {
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -50,7 +50,7 @@ export default function FlyoutMenuSimpleStacked({ title, href }) {
               "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
-            <span>{title}</span>
+            <span>Solutions</span>
             <ChevronDownIcon
               className={classNames(
                 open ? "text-gray-600" : "text-gray-400",
@@ -72,7 +72,7 @@ export default function FlyoutMenuSimpleStacked({ title, href }) {
           >
             <Popover.Panel
               static
-              className="absolute z-10 w-screen max-w-xs px-2 mt-3 transform sm:px-0"
+              className="absolute z-10 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0"
             >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
