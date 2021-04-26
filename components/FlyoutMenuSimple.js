@@ -71,24 +71,17 @@ export default function FlyoutMenuSimple() {
           >
             <Popover.Panel
               static
-              className="absolute z-10 px-2 mt-3 left-[500px] border-2 border-black border-solid"
+              className="absolute z-10 w-full max-w-xs px-2 mt-3 top-[-3rem] left-40"
             >
-              {/*className="absolute z-10 w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:translate-x-0 sm:left-0 sm:w-full sm:px-0"*/}
-              <p className="bg-red-500">Hi</p>
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
+                <div className="relative grid bg-white">
                   {solutions.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-gray-50"
+                      className="p-5 text-base font-medium text-gray-900 transition duration-150 ease-in-out rounded-md hover:bg-gray-50"
                     >
-                      <p className="text-base font-medium text-gray-900">
-                        {item.name}
-                      </p>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {item.description}
-                      </p>
+                      {item.name}
                     </a>
                   ))}
                 </div>
