@@ -47,14 +47,14 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
           <Popover.Button
             className={classNames(
               open ? "text-gray-900" : "text-gray-500",
-              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800"
             )}
           >
             <span className="uppercase">{title}</span>
             <ChevronDownIcon
               className={classNames(
                 open ? "text-gray-600 translate-y-2" : "text-gray-400",
-                "ml-2 h-5 w-5 transform transition-all group-hover:text-gray-500"
+                "ml-2 h-5 w-5 transform transition-all"
               )}
               aria-hidden="true"
             />
