@@ -74,7 +74,7 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
               static
               className="absolute left-[-1.75rem] top-4 z-10 w-64 px-2 mt-3 transform"
             >
-              <div className="relative grid bg-white border-gray-300 border-solid divide-y-2 rounded-md">
+              <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <Popover.Group
                     key={item.name}

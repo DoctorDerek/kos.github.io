@@ -70,7 +70,7 @@ export default function FlyoutMenuSimple() {
             leaveTo="opacity-0 translate-y-1"
           >
             <Popover.Panel static className="absolute top-0 z-10 w-64 left-40">
-              <div className="relative grid bg-white border-gray-300 border-solid divide-y-2 rounded-md">
+              <div className="relative grid space-y-[2px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <a
                     key={item.name}
