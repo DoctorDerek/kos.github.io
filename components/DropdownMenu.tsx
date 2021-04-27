@@ -15,7 +15,7 @@ import {
 import { Popover } from "@headlessui/react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import FlyoutMenuOuter from "@/components/FlyoutMenuOuter"
+import FlyoutMenu from "@/components/FlyoutMenuOuter"
 import Link from "@/components/Link"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
@@ -60,29 +60,6 @@ const exampleNavMenu: NAVIGATION_MENU = [
   { Services: [{ "Residential Services": "/" }] },
 ]
 */
-
-/**
- * Recursive navigation menu type
- *
- * @typeParam title - The title of the link to display in the nav menu.
- * @typeParam href_or_submenu - The actual href (absolute URL) for a link,
- *                              OR another NAVIGATION_MENU (a submenu).
- *
- * @remarks
- * This type expects an array of tuples, where each array has a "title"
- * for the navigation menu that either points to a link or submenu. The
- * link ("href") is a plain string. The submenu is this type, recursively.
- *
- * Reference:
- * https://www.typescriptlang.org/play#example/recursive-type-references
- *
- */
-type NAVIGATION_MENU_TYPE =
-  | [
-      title: string,
-      href_or_submenu: string | NAVIGATION_MENU_TYPE | NAVIGATION_MENU_TYPE[]
-    ]
-  | NAVIGATION_MENU_TYPE[]
 
 const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
   ["Home", "/"],
@@ -165,34 +142,6 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
       ["Quick Support / FAQs", "/support/faqs/"],
     ],
   ],
-]
-
-const services = [
-  {
-    name: "Analytics",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: ChartBarIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: CursorClickIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
-    icon: ViewGridIcon,
-  },
 ]
 
 /*
@@ -377,10 +326,7 @@ export default function DropdownMenu() {
                     )}
                     {submenu && (
                       <Popover.Group>
-                        <FlyoutMenuOuter
-                          title={title}
-                          hrefOrSubmenu={submenu}
-                        />
+                        <FlyoutMenu title={title} hrefOrSubmenu={submenu} />
                       </Popover.Group>
                     )}
                   </>
