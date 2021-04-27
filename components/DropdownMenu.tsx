@@ -312,7 +312,7 @@ export default function DropdownMenu() {
                 return (
                   <FlyoutMenu
                     title={title as string}
-                    hrefOrSubmenu={hrefOrSubmenu}
+                    hrefOrSubmenu={hrefOrSubmenu as NAVIGATION_MENU_TYPE}
                     layout="outer"
                     key="title"
                   />
