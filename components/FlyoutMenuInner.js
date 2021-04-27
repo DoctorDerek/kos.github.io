@@ -73,7 +73,7 @@ export default function FlyoutMenuSimple() {
               <div className="relative grid space-y-[2px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <a
-                    key={item.name}
+                    key={item.name + item.href}
                     href={item.href}
                     className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
                   >
