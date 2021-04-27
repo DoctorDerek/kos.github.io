@@ -97,7 +97,7 @@ export default function FlyoutMenuOuter({ title, href }) {
           >
             <Popover.Panel
               static
-              className="absolute left-[-1.75rem] top-4 z-10 w-64 px-2 mt-3 transform"
+              className="absolute left-[-1.75rem] z-10 w-64 px-2 mt-2"
               ref={dropdownRef}
             >
               <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
