@@ -40,7 +40,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function FlyoutMenuInnerStacked({ title, href }) {
+export default function FlyoutMenuOuter({ title, href }) {
   const [referenceElement, setReferenceElement] = useState()
   const [popperElement, setPopperElement] = useState()
   const { attributes } = usePopper(referenceElement, popperElement)

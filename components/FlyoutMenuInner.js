@@ -38,7 +38,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function FlyoutMenuSimple() {
+export default function FlyoutMenuInner() {
   const [referenceElement, setReferenceElement] = useState()
   const [popperElement, setPopperElement] = useState()
   const { attributes } = usePopper(referenceElement, popperElement)
