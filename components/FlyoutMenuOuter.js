@@ -54,6 +54,7 @@ export default function FlyoutMenuOuter({ title, href }) {
               open ? "text-gray-900" : "text-gray-500",
               "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800"
             )}
+            ref={setReferenceElement}
           >
             <span className="uppercase">{title}</span>
             <ChevronDownIcon
@@ -78,6 +79,8 @@ export default function FlyoutMenuOuter({ title, href }) {
             <Popover.Panel
               static
               className="absolute left-[-1.75rem] top-4 z-10 w-64 px-2 mt-3 transform"
+              ref={setPopperElement}
+              {...attributes.popper}
             >
               <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
                 {solutions.map((item) => (
