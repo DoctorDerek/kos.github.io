@@ -36,6 +36,10 @@ export default function FlyoutMenu({
     open && (timeout = setTimeout(() => toggleMenu(), timeoutDuration))
   }
 
+  const LINK_STYLES = classNames(
+    "p-5 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
+  )
+
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -46,7 +50,8 @@ export default function FlyoutMenu({
           <Popover.Button
             className={classNames(
               open ? "text-blue-800" : "text-gray-800",
-              "bg-white rounded-md inline-flex items-center p-5 text-base font-medium uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full"
+              "bg-white rounded-md inline-flex items-center",
+              LINK_STYLES
             )}
             ref={buttonRef}
           >
@@ -103,7 +108,7 @@ export default function FlyoutMenu({
                   <Link
                     key={title + hrefOrSubmenu}
                     href={hrefOrSubmenu}
-                    className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
+                    className={LINK_STYLES}
                   >
                     {title}
                   </Link>
@@ -126,7 +131,7 @@ export default function FlyoutMenu({
                             <Link
                               key={title + href}
                               href={href}
-                              className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
+                              className={LINK_STYLES}
                             >
                               {title}
                             </Link>
