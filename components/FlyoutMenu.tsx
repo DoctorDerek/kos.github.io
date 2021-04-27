@@ -22,35 +22,33 @@ export default function FlyoutMenu({
   const useHover = true
   const buttonRef = useRef<HTMLButtonElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
-  const openMenu = () => buttonRef?.current?.click()
-  const closeMenu = () =>
+  const toggleMenu = () => buttonRef?.current?.click()
+  /*let closeMenu = () =>
     dropdownRef?.current?.dispatchEvent(
       new KeyboardEvent("keydown", {
         key: "Escape",
         bubbles: true,
         cancelable: true,
       })
-    )
-  const onMouseEnter = (closed: boolean) => {
+    )*/
+  const onMouseHover = (open: boolean) => {
     clearTimeout(timeout)
-    closed && openMenu()
-  }
-  const onMouseLeave = (open: boolean) => {
-    open && (timeout = setTimeout(() => closeMenu(), timeoutDuration))
+    open && (timeout = setTimeout(() => toggleMenu(), timeoutDuration))
   }
 
   return (
     <Popover className="relative">
       {({ open }) => (
-        <>
+        <div
+          onMouseEnter={() => useHover && onMouseHover(!open)}
+          onMouseLeave={() => useHover && onMouseHover(open)}
+        >
           <Popover.Button
             className={classNames(
               open ? "text-blue-800" : "text-gray-800",
-              "bg-white rounded-md inline-flex items-center p-5 text-base font-medium uppercase transition duration-150 ease-in-out hover:text-blue-800"
+              "bg-white rounded-md inline-flex items-center p-5 text-base font-medium uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full"
             )}
             ref={buttonRef}
-            onMouseEnter={() => useHover && onMouseEnter(!open)}
-            onMouseLeave={() => useHover && onMouseLeave(open)}
           >
             <span className="uppercase">{title}</span>
             {layout === "outer" && (
@@ -148,7 +146,7 @@ export default function FlyoutMenu({
               </div>
             </Popover.Panel>
           </Transition>
-        </>
+        </div>
       )}
     </Popover>
   )
