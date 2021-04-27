@@ -3,6 +3,7 @@ import { useState, Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 import FlyoutMenuInner from "@/components/FlyoutMenuInner"
+import Link from "@/components/Link"
 
 const solutions = [
   {
@@ -101,15 +102,15 @@ export default function FlyoutMenuOuter({ title, hrefOrSubmenu }) {
               ref={dropdownRef}
             >
               <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
-                {solutions.map((item) => (
-                  <Popover.Group
-                    key={item.name}
-                    href={item.href}
-                    className="block transition duration-150 ease-in-out hover:bg-gray-50"
-                  >
-                    <FlyoutMenuInner />
-                  </Popover.Group>
-                ))}
+                {hrefOrSubmenu.map &&
+                  hrefOrSubmenu.map(([title, hrefOrSubmenu]) => (
+                    <Popover.Group
+                      key={title + hrefOrSubmenu}
+                      className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                    >
+                      <FlyoutMenuInner />
+                    </Popover.Group>
+                  ))}
               </div>
             </Popover.Panel>
           </Transition>

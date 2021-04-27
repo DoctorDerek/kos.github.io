@@ -16,6 +16,7 @@ import { Popover } from "@headlessui/react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenuOuter from "@/components/FlyoutMenuOuter"
+import Link from "@/components/Link"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -76,11 +77,11 @@ const exampleNavMenu: NAVIGATION_MENU = [
  * https://www.typescriptlang.org/play#example/recursive-type-references
  *
  */
-type NAVIGATION_MENU =
-  | [title: string, href_or_submenu: string | NAVIGATION_MENU]
-  | NAVIGATION_MENU[]
+type NAVIGATION_MENU_TYPE =
+  | [title: string, href_or_submenu: string | NAVIGATION_MENU_TYPE]
+  | NAVIGATION_MENU_TYPE[]
 
-const NAVIGATION_MENU: NAVIGATION_MENU = [
+const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
   ["Home", "/"],
   [
     "Services",
@@ -354,17 +355,28 @@ export default function DropdownMenu() {
               "justify-between w-full flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
-            {Array.from(NAVIGATION_MENU).map(
-              ([title, hrefOrSubmenu], index) => {
+            {NAVIGATION_MENU.map(
+              ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
                 return (
                   <>
+                    {typeof hrefOrSubmenu === "string" && (
+                      <Link
+                        key={title + hrefOrSubmenu}
+                        href={hrefOrSubmenu}
+                        className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                      >
+                        {title}
+                      </Link>
+                    )}
                     {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
-                    <Popover.Group>
-                      <FlyoutMenuOuter
-                        title={title}
-                        hrefOrSubmenu={hrefOrSubmenu}
-                      />
-                    </Popover.Group>
+                    {(hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map && (
+                      <Popover.Group>
+                        <FlyoutMenuOuter
+                          title={title}
+                          hrefOrSubmenu={hrefOrSubmenu}
+                        />
+                      </Popover.Group>
+                    )}
                   </>
                 )
               }
