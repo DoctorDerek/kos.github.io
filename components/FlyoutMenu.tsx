@@ -11,9 +11,11 @@ function classNames(...classes: string[]) {
 export default function FlyoutMenu({
   title,
   hrefOrSubmenu,
+  layout,
 }: {
   title: string
   hrefOrSubmenu: NAVIGATION_MENU_TYPE
+  layout: "outer" | "inner"
 }) {
   const timeoutDuration = 200
   let timeout: NodeJS.Timeout
@@ -44,7 +46,7 @@ export default function FlyoutMenu({
           <Popover.Button
             className={classNames(
               open ? "text-gray-900" : "text-gray-500",
-              "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800"
+              "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800 p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
             )}
             ref={buttonRef}
             onMouseEnter={() => useHover && onMouseEnter(!open)}
@@ -72,15 +74,27 @@ export default function FlyoutMenu({
           >
             <Popover.Panel
               static
-              className="absolute left-[-1.75rem] z-10 w-64 px-2 mt-2"
+              className={classNames(
+                (layout === "inner" &&
+                  "absolute top-0 z-10 w-64 left-40") as string,
+                (layout === "outer" &&
+                  "absolute left-[-1.75rem] z-10 w-64 px-2 mt-2") as string
+              )}
               ref={dropdownRef}
             >
-              <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
+              <div
+                className={classNames(
+                  (layout === "inner" &&
+                    "relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md") as string,
+                  (layout === "outer" &&
+                    "relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md") as string
+                )}
+              >
                 {typeof hrefOrSubmenu === "string" && (
                   <Link
                     key={title + hrefOrSubmenu}
                     href={hrefOrSubmenu}
-                    className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                    className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
                   >
                     {title}
                   </Link>
@@ -102,7 +116,7 @@ export default function FlyoutMenu({
                           <Link
                             key={title + href}
                             href={href}
-                            className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                            className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
                           >
                             {title}
                           </Link>
@@ -112,6 +126,7 @@ export default function FlyoutMenu({
                             <FlyoutMenu
                               title={title as string}
                               hrefOrSubmenu={submenu}
+                              layout="inner"
                             />
                           </Popover.Group>
                         )}

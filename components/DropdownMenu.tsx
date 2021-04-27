@@ -15,7 +15,7 @@ import {
 import { Popover } from "@headlessui/react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import FlyoutMenu from "@/components/FlyoutMenuOuter"
+import FlyoutMenu from "@/components/FlyoutMenu"
 import Link from "@/components/Link"
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
@@ -319,14 +319,18 @@ export default function DropdownMenu() {
                       <Link
                         key={title + href}
                         href={href}
-                        className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                        className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
                       >
                         {title}
                       </Link>
                     )}
                     {submenu && (
                       <Popover.Group>
-                        <FlyoutMenu title={title} hrefOrSubmenu={submenu} />
+                        <FlyoutMenu
+                          title={title as string}
+                          hrefOrSubmenu={submenu}
+                          layout="outer"
+                        />
                       </Popover.Group>
                     )}
                   </>
