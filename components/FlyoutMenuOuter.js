@@ -53,8 +53,8 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
             <span className="uppercase">{title}</span>
             <ChevronDownIcon
               className={classNames(
-                open ? "text-gray-600" : "text-gray-400",
-                "ml-2 h-5 w-5 group-hover:text-gray-500"
+                open ? "text-gray-600 translate-y-2" : "text-gray-400",
+                "ml-2 h-5 w-5 transform transition-all group-hover:text-gray-500"
               )}
               aria-hidden="true"
             />
