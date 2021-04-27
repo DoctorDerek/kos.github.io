@@ -50,7 +50,7 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
               "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
-            <span>{title}</span>
+            <span className="uppercase">{title}</span>
             <ChevronDownIcon
               className={classNames(
                 open ? "text-gray-600" : "text-gray-400",
@@ -72,20 +72,18 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
           >
             <Popover.Panel
               static
-              className="absolute z-10 w-screen max-w-xs px-2 mt-3 transform sm:px-0"
+              className="absolute left-[-1.75rem] top-4 z-10 w-64 px-2 mt-3 transform"
             >
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                  {solutions.map((item) => (
-                    <Popover.Group
-                      key={item.name}
-                      href={item.href}
-                      className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-gray-50"
-                    >
-                      <FlyoutMenuInner />
-                    </Popover.Group>
-                  ))}
-                </div>
+              <div className="relative grid bg-white border-gray-300 border-solid divide-y-2 rounded-md">
+                {solutions.map((item) => (
+                  <Popover.Group
+                    key={item.name}
+                    href={item.href}
+                    className="block p-5 transition duration-150 ease-in-out hover:bg-gray-50"
+                  >
+                    <FlyoutMenuInner />
+                  </Popover.Group>
+                ))}
               </div>
             </Popover.Panel>
           </Transition>
