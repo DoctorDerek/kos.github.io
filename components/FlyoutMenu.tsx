@@ -37,7 +37,7 @@ export default function FlyoutMenu({
   }
 
   const LINK_STYLES = classNames(
-    "p-5 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
+    "py-5 px-1 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
 
   return (
@@ -101,7 +101,7 @@ export default function FlyoutMenu({
                   (layout === "inner" &&
                     "relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-blue-800 divide-y-2 rounded-md") as string,
                   (layout === "outer" &&
-                    "relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md") as string
+                    "relative grid space-y-[2px] bg-white border-2 border-gray-300 border-solid divide-y-2 rounded-md") as string
                 )}
               >
                 {typeof hrefOrSubmenu === "string" && (
