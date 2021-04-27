@@ -13,8 +13,7 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/outline"
 import { Popover } from "@headlessui/react"
-import { useState } from "react"
-import React, { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenuOuter from "@/components/FlyoutMenuOuter"
 
@@ -28,14 +27,67 @@ const MENU_LOOKUP_ALIASES = new Map([
   ["My Account", [/support/]],
 ])
 
-const NAVIGATION_MENU_MAP = new Map([
+/*
+type NAVIGATION_MENU_TYPE =
+  | { title: string; hrefOrSubmenu: string | NAVIGATION_MENU_TYPE }
+  | NAVIGATION_MENU_TYPE[]
+
+const exampleNavMenu: NAVIGATION_MENU_TYPE = [
+  { title: "Home", hrefOrSubmenu: "/" },
+  {
+    title: "Home",
+    hrefOrSubmenu: [{ title: "Home", href: "/" }],
+  },
+]*/
+
+/**
+ * Recursive navigation menu type
+ *
+ * @remarks
+ * This type expects an array of objects, where each obje
+ * Reference:
+ * https://www.typescriptlang.org/play#example/recursive-type-references
+ *
+ * @typeParam title - The title of the link
+ */
+/*
+type NAVIGATION_MENU = { [title: string]: HREF_OR_SUBMENU } | NAVIGATION_MENU[]
+type HREF_OR_SUBMENU = string | NAVIGATION_MENU
+
+const exampleNavMenu: NAVIGATION_MENU = [
+  { Home: "/" },
+  { Services: [{ "Residential Services": "/" }] },
+]
+*/
+
+/**
+ * Recursive navigation menu type
+ *
+ * @typeParam title - The title of the link to display in the nav menu.
+ * @typeParam href_or_submenu - The actual href (absolute URL) for a link,
+ *                              OR another NAVIGATION_MENU (a submenu).
+ *
+ * @remarks
+ * This type expects an array of tuples, where each array has a "title"
+ * for the navigation menu that either points to a link or submenu. The
+ * link ("href") is a plain string. The submenu is this type, recursively.
+ *
+ * Reference:
+ * https://www.typescriptlang.org/play#example/recursive-type-references
+ *
+ */
+type NAVIGATION_MENU =
+  | [title: string, href_or_submenu: string | NAVIGATION_MENU]
+  | NAVIGATION_MENU[]
+
+const NAVIGATION_MENU: NAVIGATION_MENU = [
   ["Home", "/"],
   [
     "Services",
-    new Map([
+    [
       [
         "Residential Services",
-        new Map([
+        [
           [
             "Residential Internet",
             "/home-internet-in-kingston-ontario/residential-services",
@@ -55,11 +107,11 @@ const NAVIGATION_MENU_MAP = new Map([
           ["VoIP", "/home-internet-in-kingston-ontario/voip"],
           ["Mail", "/home-internet-in-kingston-ontario/mail"],
           ["Dial Up", "/home-internet-in-kingston-ontario/dial-up"],
-        ]),
+        ],
       ],
       [
         "Business",
-        new Map([
+        [
           ["Business Internet", "/business/"],
           ["High Speed Cable", "/bus/high-speed-cable/"],
           ["Wireless", "/bus/wireless/"],
@@ -68,33 +120,33 @@ const NAVIGATION_MENU_MAP = new Map([
           ["Mail", "/bus/mail/"],
           ["Co Locate Server", "/bus/colocate-server/"],
           ["Dial Up", "/bus/dial-up/"],
-        ]),
+        ],
       ],
       ["Campgrounds", "/campgrounds/"],
       ["Availability Tool", "/availability/"],
       ["Payment Options", "/payment/options/"],
-    ]),
+    ],
   ],
   [
     "Hosting",
-    new Map([
+    [
       ["Packages & Pricing", "/hosting/packages/"],
       ["Registering a Domain", "/domain/registration/"],
-    ]),
+    ],
   ],
   [
     "About Us",
-    new Map([
+    [
       ["Our Company", "/about/"],
       ["Registering a Domain", "/news/events/"],
       ["Coverage Area", "/coverage/"],
-    ]),
+    ],
   ],
   ["Order Now", "/order/"],
   ["Contact Us", "/contact.php"],
   [
     "My Account",
-    new Map([
+    [
       ["My Email", "https://webmail.kos.net/src/login.php"],
       ["My Internet Usage", "https://usage.kos.net/"],
       ["My VoIP Portal", "https://vvs.directnet.ca/?"],
@@ -107,9 +159,9 @@ const NAVIGATION_MENU_MAP = new Map([
         "https://support.kos.net/helpdesk/index.php?action=submit",
       ],
       ["Quick Support / FAQs", "/support/faqs/"],
-    ]),
+    ],
   ],
-])
+]
 
 const services = [
   {
@@ -181,7 +233,7 @@ export default function MyPopover() {
   )
 }*/
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
 
@@ -215,30 +267,34 @@ export default function DropdownMenu() {
   /**
    * Hook that alerts clicks outside of the passed ref
    */
-  function useOutsideAlerter(ref) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          closeNavIfOpen()
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside)
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside)
-      }
-    }, [ref])
-  }
 
   /**
    * Component that alerts if you click outside of it
    */
-  function OutsideAlerter(props) {
-    const wrapperRef = useRef(null)
+  function OutsideAlerter(props: any) {
+    const wrapperRef = useRef<HTMLInputElement>(null)
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!(wrapperRef.current! as any).contains(e.target)) {
+        closeNavIfOpen()
+      }
+    }
+
+    function useOutsideAlerter(ref: React.RefObject<HTMLInputElement>) {
+      useEffect(() => {
+        /**
+         * Close mobile navigation menu if clicked on outside of element
+         */
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside)
+        return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside)
+        }
+      }, [ref])
+    }
+
     useOutsideAlerter(wrapperRef)
 
     return <div ref={wrapperRef}>{props.children}</div>
@@ -298,16 +354,21 @@ export default function DropdownMenu() {
               "justify-between w-full flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
-            {Array.from(NAVIGATION_MENU_MAP).map(([title, href], index) => {
-              return (
-                <>
-                  {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
-                  <Popover.Group>
-                    <FlyoutMenuOuter title={title} />
-                  </Popover.Group>
-                </>
-              )
-            })}
+            {Array.from(NAVIGATION_MENU).map(
+              ([title, hrefOrSubmenu], index) => {
+                return (
+                  <>
+                    {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
+                    <Popover.Group>
+                      <FlyoutMenuOuter
+                        title={title}
+                        hrefOrSubmenu={hrefOrSubmenu}
+                      />
+                    </Popover.Group>
+                  </>
+                )
+              }
+            )}
           </div>
         </Popover.Group>
       </OutsideAlerter>

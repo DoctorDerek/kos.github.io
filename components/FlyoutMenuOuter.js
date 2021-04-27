@@ -39,7 +39,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function FlyoutMenuOuter({ title, href }) {
+export default function FlyoutMenuOuter({ title, hrefOrSubmenu }) {
   const timeoutDuration = 200
   let timeout
   const useHover = true
