@@ -109,40 +109,41 @@ export default function FlyoutMenu({
                   </Link>
                 )}
                 {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
-                {(hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map(
-                  ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
-                    const href =
-                      typeof hrefOrSubmenu === "string"
-                        ? hrefOrSubmenu
-                        : undefined
-                    const submenu =
-                      typeof hrefOrSubmenu === "object"
-                        ? hrefOrSubmenu
-                        : undefined
-                    return (
-                      <>
-                        {href && (
-                          <Link
-                            key={title + href}
-                            href={href}
-                            className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
-                          >
-                            {title}
-                          </Link>
-                        )}
-                        {submenu && (
-                          <Popover.Group>
-                            <FlyoutMenu
-                              title={title as string}
-                              hrefOrSubmenu={submenu}
-                              layout="inner"
-                            />
-                          </Popover.Group>
-                        )}
-                      </>
-                    )
-                  }
-                )}
+                {typeof hrefOrSubmenu === "object" &&
+                  (hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map(
+                    ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
+                      const href =
+                        typeof hrefOrSubmenu === "string"
+                          ? hrefOrSubmenu
+                          : undefined
+                      const submenu =
+                        typeof hrefOrSubmenu === "object"
+                          ? hrefOrSubmenu
+                          : undefined
+                      return (
+                        <>
+                          {href && (
+                            <Link
+                              key={title + href}
+                              href={href}
+                              className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
+                            >
+                              {title}
+                            </Link>
+                          )}
+                          {submenu && (
+                            <Popover.Group>
+                              <FlyoutMenu
+                                title={title as string}
+                                hrefOrSubmenu={submenu}
+                                layout="inner"
+                              />
+                            </Popover.Group>
+                          )}
+                        </>
+                      )
+                    }
+                  )}
               </div>
             </Popover.Panel>
           </Transition>
