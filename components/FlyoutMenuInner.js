@@ -69,13 +69,13 @@ export default function FlyoutMenuSimple() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel static className="absolute top-0 z-10 w-64 left-60">
+            <Popover.Panel static className="absolute top-0 z-10 w-64 left-40">
               <div className="relative grid bg-white border-gray-300 border-solid divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:bg-gray-50"
+                    className="p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
                   >
                     {item.name}
                   </a>
