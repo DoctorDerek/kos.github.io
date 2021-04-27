@@ -1,5 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react"
+import { useState, Fragment } from "react"
+import { usePopper } from "react-popper"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 import FlyoutMenuInner from "@/components/FlyoutMenuInner"
@@ -40,6 +41,10 @@ function classNames(...classes) {
 }
 
 export default function FlyoutMenuInnerStacked({ title, href }) {
+  const [referenceElement, setReferenceElement] = useState()
+  const [popperElement, setPopperElement] = useState()
+  const { attributes } = usePopper(referenceElement, popperElement)
+
   return (
     <Popover className="relative">
       {({ open }) => (

@@ -41,7 +41,7 @@ function classNames(...classes) {
 export default function FlyoutMenuSimple() {
   const [referenceElement, setReferenceElement] = useState()
   const [popperElement, setPopperElement] = useState()
-  const { styles, attributes } = usePopper(referenceElement, popperElement)
+  const { attributes } = usePopper(referenceElement, popperElement)
 
   return (
     <Popover className="relative">
