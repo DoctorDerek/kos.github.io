@@ -310,12 +310,13 @@ export default function DropdownMenu() {
             {NAVIGATION_MENU.map(
               ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
                 return (
-                  <FlyoutMenu
-                    title={title as string}
-                    hrefOrSubmenu={hrefOrSubmenu as NAVIGATION_MENU_TYPE}
-                    layout="outer"
-                    key="title"
-                  />
+                  <Popover.Group key={title as string}>
+                    <FlyoutMenu
+                      title={title as string}
+                      hrefOrSubmenu={hrefOrSubmenu as NAVIGATION_MENU_TYPE}
+                      layout="outer"
+                    />
+                  </Popover.Group>
                 )
               }
             )}
