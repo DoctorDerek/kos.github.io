@@ -78,7 +78,10 @@ const exampleNavMenu: NAVIGATION_MENU = [
  *
  */
 type NAVIGATION_MENU_TYPE =
-  | [title: string, href_or_submenu: string | NAVIGATION_MENU_TYPE]
+  | [
+      title: string,
+      href_or_submenu: string | NAVIGATION_MENU_TYPE | NAVIGATION_MENU_TYPE[]
+    ]
   | NAVIGATION_MENU_TYPE[]
 
 const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
@@ -357,23 +360,26 @@ export default function DropdownMenu() {
           >
             {NAVIGATION_MENU.map(
               ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
+                const href =
+                  typeof hrefOrSubmenu === "string" ? hrefOrSubmenu : undefined
+                const submenu =
+                  typeof hrefOrSubmenu === "object" ? hrefOrSubmenu : undefined
                 return (
                   <>
-                    {typeof hrefOrSubmenu === "string" && (
+                    {href && (
                       <Link
-                        key={title + hrefOrSubmenu}
-                        href={hrefOrSubmenu}
+                        key={title + href}
+                        href={href}
                         className="block transition duration-150 ease-in-out hover:bg-gray-50"
                       >
                         {title}
                       </Link>
                     )}
-                    {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
-                    {(hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map && (
+                    {submenu && (
                       <Popover.Group>
                         <FlyoutMenuOuter
                           title={title}
-                          hrefOrSubmenu={hrefOrSubmenu}
+                          hrefOrSubmenu={submenu}
                         />
                       </Popover.Group>
                     )}

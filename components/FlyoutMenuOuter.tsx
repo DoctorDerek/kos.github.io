@@ -63,6 +63,10 @@ export default function FlyoutMenuOuter({ title, hrefOrSubmenu }) {
     open && (timeout = setTimeout(() => closeMenu(), timeoutDuration))
   }
 
+  type NAVIGATION_MENU_TYPE =
+    | [title: string, href_or_submenu: string | NAVIGATION_MENU_TYPE]
+    | NAVIGATION_MENU_TYPE[]
+
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -102,15 +106,50 @@ export default function FlyoutMenuOuter({ title, hrefOrSubmenu }) {
               ref={dropdownRef}
             >
               <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
-                {hrefOrSubmenu.map &&
-                  hrefOrSubmenu.map(([title, hrefOrSubmenu]) => (
-                    <Popover.Group
-                      key={title + hrefOrSubmenu}
-                      className="block transition duration-150 ease-in-out hover:bg-gray-50"
-                    >
-                      <FlyoutMenuInner />
-                    </Popover.Group>
-                  ))}
+                {typeof hrefOrSubmenu === "string" && (
+                  <Link
+                    key={title + hrefOrSubmenu}
+                    href={hrefOrSubmenu}
+                    className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                  >
+                    {title}
+                  </Link>
+                )}
+                {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
+                {typeof hrefOrSubmenu === "object" &&
+                  hrefOrSubmenu.map(
+                    ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
+                      const href =
+                        typeof hrefOrSubmenu === "string"
+                          ? hrefOrSubmenu
+                          : undefined
+                      const submenu =
+                        typeof hrefOrSubmenu === "object"
+                          ? hrefOrSubmenu
+                          : undefined
+                      return (
+                        <>
+                          {href && (
+                            <Link
+                              key={title + href}
+                              href={href}
+                              className="block transition duration-150 ease-in-out hover:bg-gray-50"
+                            >
+                              {title}
+                            </Link>
+                          )}
+                          {submenu && (
+                            <Popover.Group>
+                              <FlyoutMenuInner
+                                title={title}
+                                hrefOrSubmenu={submenu}
+                              />
+                            </Popover.Group>
+                          )}
+                        </>
+                      )
+                    }
+                  )}
               </div>
             </Popover.Panel>
           </Transition>
