@@ -67,7 +67,7 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
     "Services",
     [
       [
-        "Residential Services",
+        "Residential",
         [
           [
             "Residential Internet",

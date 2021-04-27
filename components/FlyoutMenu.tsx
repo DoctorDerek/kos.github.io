@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
 
 function classNames(...classes: string[]) {
@@ -45,21 +45,32 @@ export default function FlyoutMenu({
         <>
           <Popover.Button
             className={classNames(
-              open ? "text-gray-900" : "text-gray-500",
-              "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800 p-5 text-base font-medium text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800"
+              open ? "text-blue-800" : "text-gray-800",
+              "bg-white rounded-md inline-flex items-center p-5 text-base font-medium uppercase transition duration-150 ease-in-out hover:text-blue-800"
             )}
             ref={buttonRef}
             onMouseEnter={() => useHover && onMouseEnter(!open)}
             onMouseLeave={() => useHover && onMouseLeave(open)}
           >
             <span className="uppercase">{title}</span>
-            <ChevronDownIcon
-              className={classNames(
-                open ? "text-gray-600 translate-y-1.5" : "text-gray-400",
-                "ml-2 h-5 w-5 transform transition-all"
-              )}
-              aria-hidden="true"
-            />
+            {layout === "outer" && (
+              <ChevronDownIcon
+                className={classNames(
+                  open ? "text-gray-600 translate-y-1.5" : "text-gray-400",
+                  "ml-2 h-5 w-5 transform transition-all"
+                )}
+                aria-hidden="true"
+              />
+            )}
+            {layout === "inner" && (
+              <ChevronRightIcon
+                className={classNames(
+                  open ? "text-gray-600 translate-x-4" : "text-gray-400",
+                  "ml-2 h-5 w-5 transform transition-all group-hover:text-gray-500"
+                )}
+                aria-hidden="true"
+              />
+            )}
           </Popover.Button>
 
           <Transition
@@ -76,7 +87,7 @@ export default function FlyoutMenu({
               static
               className={classNames(
                 (layout === "inner" &&
-                  "absolute top-0 z-10 w-64 left-40") as string,
+                  "absolute top-0 z-10 w-64 left-44") as string,
                 (layout === "outer" &&
                   "absolute left-[-1.75rem] z-10 w-64 px-2 mt-2") as string
               )}
@@ -85,7 +96,7 @@ export default function FlyoutMenu({
               <div
                 className={classNames(
                   (layout === "inner" &&
-                    "relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md") as string,
+                    "relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-blue-800 divide-y-2 rounded-md") as string,
                   (layout === "outer" &&
                     "relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md") as string
                 )}
