@@ -1,6 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { useState, Fragment } from "react"
-import { usePopper } from "react-popper"
+import { useState, Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 import FlyoutMenuInner from "@/components/FlyoutMenuInner"
@@ -41,9 +40,27 @@ function classNames(...classes) {
 }
 
 export default function FlyoutMenuOuter({ title, href }) {
-  const [referenceElement, setReferenceElement] = useState()
-  const [popperElement, setPopperElement] = useState()
-  const { attributes } = usePopper(referenceElement, popperElement)
+  const timeoutDuration = 200
+  let timeout
+  const useHover = true
+  const buttonRef = useRef(null)
+  const dropdownRef = useRef(null)
+  const openMenu = () => buttonRef?.current.click()
+  const closeMenu = () =>
+    dropdownRef?.current?.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Escape",
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+  const onMouseEnter = (closed) => {
+    clearTimeout(timeout)
+    closed && openMenu()
+  }
+  const onMouseLeave = (open) => {
+    open && (timeout = setTimeout(() => closeMenu(), timeoutDuration))
+  }
 
   return (
     <Popover className="relative">
@@ -54,7 +71,9 @@ export default function FlyoutMenuOuter({ title, href }) {
               open ? "text-gray-900" : "text-gray-500",
               "bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-800"
             )}
-            ref={setReferenceElement}
+            ref={buttonRef}
+            onMouseEnter={() => useHover && onMouseEnter(!open)}
+            onMouseLeave={() => useHover && onMouseLeave(open)}
           >
             <span className="uppercase">{title}</span>
             <ChevronDownIcon
@@ -79,8 +98,7 @@ export default function FlyoutMenuOuter({ title, href }) {
             <Popover.Panel
               static
               className="absolute left-[-1.75rem] top-4 z-10 w-64 px-2 mt-3 transform"
-              ref={setPopperElement}
-              {...attributes.popper}
+              ref={dropdownRef}
             >
               <div className="relative grid space-y-[2px] bg-white border-gray-300 border-solid divide-y-2 rounded-md">
                 {solutions.map((item) => (

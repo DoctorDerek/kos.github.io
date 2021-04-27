@@ -1,7 +1,6 @@
-import { useState, Fragment } from "react"
+import { useRef, Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronRightIcon } from "@heroicons/react/solid"
-import { usePopper } from "react-popper"
 
 const solutions = [
   {
@@ -39,9 +38,27 @@ function classNames(...classes) {
 }
 
 export default function FlyoutMenuInner() {
-  const [referenceElement, setReferenceElement] = useState()
-  const [popperElement, setPopperElement] = useState()
-  const { attributes } = usePopper(referenceElement, popperElement)
+  const timeoutDuration = 200
+  let timeout
+  const useHover = true
+  const buttonRef = useRef(null)
+  const dropdownRef = useRef(null)
+  const openMenu = () => buttonRef?.current.click()
+  const closeMenu = () =>
+    dropdownRef?.current?.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Escape",
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+  const onMouseEnter = (closed) => {
+    clearTimeout(timeout)
+    closed && openMenu()
+  }
+  const onMouseLeave = (open) => {
+    open && (timeout = setTimeout(() => closeMenu(), timeoutDuration))
+  }
 
   return (
     <Popover className="relative">
@@ -52,7 +69,9 @@ export default function FlyoutMenuInner() {
               open ? "text-gray-900" : "text-gray-500",
               "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full h-full p-5"
             )}
-            ref={setReferenceElement}
+            ref={buttonRef}
+            onMouseEnter={() => useHover && onMouseEnter(!open)}
+            onMouseLeave={() => useHover && onMouseLeave(open)}
           >
             <span className="uppercase">Solutions</span>
             <ChevronRightIcon
@@ -77,8 +96,7 @@ export default function FlyoutMenuInner() {
             <Popover.Panel
               static
               className="absolute top-0 z-10 w-64 left-40"
-              ref={setPopperElement}
-              {...attributes.popper}
+              ref={dropdownRef}
             >
               <div className="relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md">
                 {solutions.map((item) => (
