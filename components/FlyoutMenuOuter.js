@@ -79,7 +79,7 @@ export default function FlyoutMenuInnerStacked({ title, href }) {
                   <Popover.Group
                     key={item.name}
                     href={item.href}
-                    className="block p-5 transition duration-150 ease-in-out hover:bg-gray-50"
+                    className="block transition duration-150 ease-in-out hover:bg-gray-50"
                   >
                     <FlyoutMenuInner />
                   </Popover.Group>

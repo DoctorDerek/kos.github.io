@@ -46,7 +46,7 @@ export default function FlyoutMenuSimple() {
           <Popover.Button
             className={classNames(
               open ? "text-gray-900" : "text-gray-500",
-              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full h-full"
+              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full h-full p-5"
             )}
           >
             <span className="uppercase">Solutions</span>
@@ -69,10 +69,7 @@ export default function FlyoutMenuSimple() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel
-              static
-              className="absolute z-10 w-64 px-2 mt-3 top-[-2rem] left-40"
-            >
+            <Popover.Panel static className="absolute top-0 z-10 w-64 left-60">
               <div className="relative grid bg-white border-gray-300 border-solid divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <a
