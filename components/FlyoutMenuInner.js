@@ -80,7 +80,7 @@ export default function FlyoutMenuSimple() {
               ref={setPopperElement}
               {...attributes.popper}
             >
-              <div className="relative grid space-y-[2px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md">
+              <div className="relative grid space-y-[2.5px] top-[-4px] border-2 border-solid bg-white border-gray-300 divide-y-2 rounded-md">
                 {solutions.map((item) => (
                   <a
                     key={item.name + item.href}
