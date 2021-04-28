@@ -39,7 +39,7 @@ export default function FlyoutMenu({
 
   /* py-5 px-1 */
   const LINK_STYLES = classNames(
-    "p-5 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
+    "py-5 px-1 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
 
   /*

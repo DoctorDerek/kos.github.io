@@ -11,8 +11,8 @@ const Column = ({ children }) => (
 
 export default function Header() {
   return (
-    <header className="container pt-2 mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+    <header>
+      <div className="container grid grid-cols-1 pt-2 mx-auto lg:grid-cols-3">
         <Column>
           <button
             href="/order/"

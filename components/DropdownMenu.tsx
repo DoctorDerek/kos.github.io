@@ -304,7 +304,7 @@ export default function DropdownMenu() {
           <div
             className={classNames(
               navIsOpen ? "flex" : "hidden sm:flex",
-              "justify-between w-full flex-wrap px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              "justify-between sm:max-w-lg flex-wrap px-4 py-6 mx-auto lg:max-w-7xl w-full sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
             {NAVIGATION_MENU.map(
