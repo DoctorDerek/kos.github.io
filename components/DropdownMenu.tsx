@@ -109,7 +109,7 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
     "About Us",
     [
       ["Our Company", "/about/"],
-      ["Registering a Domain", "/news/events/"],
+      ["News & Events", "/news/events/"],
       ["Coverage Area", "/coverage/"],
     ],
   ],
