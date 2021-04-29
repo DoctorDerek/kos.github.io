@@ -114,7 +114,7 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
     ],
   ],
   ["Order Now", "/order/"],
-  ["Contact Us", "/contact.php"],
+  ["Contact Us", "/contact"],
   [
     "My Account",
     [

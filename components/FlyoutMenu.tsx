@@ -11,14 +11,46 @@ const MENU_LOOKUP_ALIASES = new Map([
   ["Residential", [/home/]],
   ["Business", [/business/]],
   ["Hosting", [/hosting/, /domain/]],
-  ["About", [/news/, /coverage/]],
+  ["About Us", [/about/, /news/, /coverage/]],
   ["My Account", [/support/]],
 ])
+
+const partOfCurrentPagePath = (
+  title: string,
+  hrefOrSubmenu: NAVIGATION_MENU_TYPE | string,
+  currentPath: string
+) => {
+  if (typeof hrefOrSubmenu === "string") {
+    let href = hrefOrSubmenu as string
+    console.log(title, href, currentPath)
+    // Remove trailing slashes if present so /order/ matches /order
+    currentPath =
+      currentPath.slice(-1) === "/" ? currentPath.slice(0, -1) : currentPath
+    href = href.slice(-1) === "/" ? href.slice(0, -1) : href
+    if (href === currentPath) return true
+    // This also tests for the homepage / (index.js) because ""===""
+  }
+
+  if (typeof hrefOrSubmenu === "object") {
+    console.log(title, currentPath)
+    // Test to see if the menu structure contains the current path
+    // e.g. /home-internet-in-kingston-ontario/residential-services
+    const arrayOfRegExp = MENU_LOOKUP_ALIASES.get(title)
+    if (arrayOfRegExp)
+      console.log(arrayOfRegExp.some((regExp) => regExp.test(currentPath)))
+    if (arrayOfRegExp)
+      return arrayOfRegExp.some((regExp) => regExp.test(currentPath))
+  }
+
+  return false // not a match
+}
 
 const useCurrentPath = () => {
   // fetch current page URL
   const router = useRouter() // next/router
   const currentPagePath = router.asPath
+
+  return currentPagePath
 }
 
 function classNames(...classes: string[]) {
@@ -31,7 +63,7 @@ export default function FlyoutMenu({
   layout,
 }: {
   title: string
-  hrefOrSubmenu: NAVIGATION_MENU_TYPE
+  hrefOrSubmenu: NAVIGATION_MENU_TYPE | string
   layout: "outer" | "inner"
 }) {
   const timeoutDuration = 200
@@ -57,6 +89,8 @@ export default function FlyoutMenu({
     "py-5 px-1 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
 
+  const currentPagePath = useCurrentPath()
+
   return (
     <>
       {typeof hrefOrSubmenu === "string" && (
@@ -65,7 +99,7 @@ export default function FlyoutMenu({
             key={title + hrefOrSubmenu}
             href={hrefOrSubmenu}
             className={classNames(
-              currentPagePath === hrefOrSubmenu
+              partOfCurrentPagePath(title, hrefOrSubmenu, currentPagePath)
                 ? "text-blue-800"
                 : "text-gray-800",
               "bg-white rounded-md inline-flex items-center",
@@ -85,7 +119,10 @@ export default function FlyoutMenu({
             >
               <Popover.Button
                 className={classNames(
-                  open ? "text-blue-800" : "text-gray-800",
+                  open ||
+                    partOfCurrentPagePath(title, hrefOrSubmenu, currentPagePath)
+                    ? "text-blue-800"
+                    : "text-gray-800",
                   "bg-white rounded-md inline-flex items-center",
                   LINK_STYLES
                 )}
@@ -140,16 +177,6 @@ export default function FlyoutMenu({
                         "relative grid space-y-[2px] bg-white border-2 border-gray-300 border-solid divide-y-2 rounded-md") as string
                     )}
                   >
-                    {typeof hrefOrSubmenu === "string" && (
-                      <Link
-                        key={title + hrefOrSubmenu}
-                        href={hrefOrSubmenu}
-                        className={LINK_STYLES}
-                      >
-                        {title}
-                      </Link>
-                    )}
-                    {/*<FlyoutMenuFullWidth title={title} menuItems={services} />*/}
                     {typeof hrefOrSubmenu === "object" &&
                       (hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map(
                         ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
@@ -167,7 +194,16 @@ export default function FlyoutMenu({
                                 <Link
                                   key={title + href}
                                   href={href}
-                                  className={LINK_STYLES}
+                                  className={classNames(
+                                    partOfCurrentPagePath(
+                                      title as string,
+                                      href,
+                                      currentPagePath
+                                    )
+                                      ? "text-blue-800"
+                                      : "text-gray-800",
+                                    LINK_STYLES
+                                  )}
                                 >
                                   {title}
                                 </Link>
