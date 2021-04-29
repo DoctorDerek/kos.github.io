@@ -5,6 +5,22 @@ import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
 import { useRouter } from "next/router"
 
+// lookup RegExp objects to match subpages from current URL href (router.asPath)
+const MENU_LOOKUP_ALIASES = new Map([
+  ["Services", [/home/, /business/, /camp/, /avail/, /pay/]],
+  ["Residential", [/home/]],
+  ["Business", [/business/]],
+  ["Hosting", [/hosting/, /domain/]],
+  ["About", [/news/, /coverage/]],
+  ["My Account", [/support/]],
+])
+
+const useCurrentPath = () => {
+  // fetch current page URL
+  const router = useRouter() // next/router
+  const currentPagePath = router.asPath
+}
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
@@ -40,21 +56,6 @@ export default function FlyoutMenu({
   const LINK_STYLES = classNames(
     "py-5 px-1 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
-
-  /*
-  const MENU_LOOKUP_ALIASES = new Map([
-  ["Services", [/home/, /business/, /camp/, /avail/, /pay/]],
-  ["Residential", [/home/]],
-  ["Business", [/business/]],
-  ["Hosting", [/hosting/, /domain/]],
-  ["About", [/news/, /coverage/]],
-  ["My Account", [/support/]],
-  ])
-  */
-
-  // fetch current page URL
-  const router = useRouter() // next/router
-  const currentPagePath = router.asPath
 
   return (
     <>
