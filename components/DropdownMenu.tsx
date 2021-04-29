@@ -18,16 +18,6 @@ import PropTypes from "prop-types"
 import FlyoutMenu from "@/components/FlyoutMenu"
 import Link from "@/components/Link"
 
-// lookup RegExp objects to match subpages from current URL href (router.asPath)
-const MENU_LOOKUP_ALIASES = new Map([
-  ["Services", [/home/, /business/, /camp/, /avail/, /pay/]],
-  ["Residential", [/home/]],
-  ["Business", [/business/]],
-  ["Hosting", [/hosting/, /domain/]],
-  ["About", [/news/, /coverage/]],
-  ["My Account", [/support/]],
-])
-
 /*
 type NAVIGATION_MENU_TYPE =
   | { title: string; hrefOrSubmenu: string | NAVIGATION_MENU_TYPE }

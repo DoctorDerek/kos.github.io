@@ -3,6 +3,16 @@ import Image from "@/components/Image"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 
+// lookup RegExp objects to match subpages from current URL href (router.asPath)
+const MENU_LOOKUP_ALIASES = new Map([
+  ["Services", [/home/, /business/, /camp/, /avail/, /pay/]],
+  ["Residential", [/home/]],
+  ["Business", [/business/]],
+  ["Hosting", [/hosting/, /domain/]],
+  ["About", [/news/, /coverage/]],
+  ["My Account", [/support/]],
+])
+
 const Column = ({ children }) => (
   <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 lg:flex-grow-0 sm:flex-grow">
     {children}
