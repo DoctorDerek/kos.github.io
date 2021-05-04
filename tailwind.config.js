@@ -165,8 +165,14 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    typography: ["dark"],
-  },
+  // variants unnecessary thanks to new tailwindcss-jit (just-in-time) engine
+  /*variants: {
+    typography: ["responsive", "dark"],
+    extend: {
+      padding: ["first", "last"],
+    },
+  },*/
+  /* Tailwind has a new engine called jit (just-in-time) compiler changes;
+     see: https://youtu.be/3O_3X7InOw8?t=333 (Adam Wathan video) */
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 }
