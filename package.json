@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "@mapbox/rehype-prism": "^0.5.0",
     "@mdx-js/loader": "^1.6.20",
     "@mdx-js/react": "^1.6.22",
