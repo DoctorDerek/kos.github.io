@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "@/components/Image"
+import Image from "@/components/CustomImage"
 
 const isRequired = () => {
   throw new Error("Missing required attribute in SlideshowSlide component")

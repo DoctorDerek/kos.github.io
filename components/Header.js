@@ -1,5 +1,5 @@
 import ImageFixed from "next/image"
-import Image from "@/components/Image"
+import Image from "@/components/CustomImage"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 

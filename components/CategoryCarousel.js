@@ -1,6 +1,6 @@
 import React from "react"
 import ImageFixed from "next/image"
-import Image from "@/components/Image"
+import Image from "@/components/CustomImage"
 
 export default function CategoryCarousel() {
   return (

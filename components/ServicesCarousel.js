@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "@/components/Image"
+import Image from "@/components/CustomImage"
 
 export default function ServicesCarousel({ children }) {
   return (
