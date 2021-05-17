@@ -1,16 +1,16 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
-export default function DialUp(): JSX.Element {
+export default function HighSpeedCable(): JSX.Element {
   const title = (
     <>
       Residential <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
       Packages in Kingston & Belleville, Ontario
     </>
   )
-  // "Residential Dial Up Services"
+  // "Residential High Speed Cable Packages"
   const slug = "high-speed-cable"
-  // "residential"
+  // "high-speed-cable"
   const bulletNavMenu = <BulletNavMenu />
 
   return (
