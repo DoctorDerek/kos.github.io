@@ -10,6 +10,7 @@ if (NAVIGATION_MENU[1][1][1][0] !== "Business") {
   throw new Error("BulletNavMenu was expecting `Business` in NAVIGATION_MENU")
 }
 const bulletsBusiness = NAVIGATION_MENU[1][1][1][1] as NAVIGATION_MENU_TYPE[]
+const bullets = { Business: bulletsBusiness, Residential: bulletsResidential }
 
 const BULLET = () => (
   <div className="inline-block w-3 h-3 text-blue-800 border-current border-solid rounded-full fill-current border-[1px] mx-4">
@@ -25,15 +26,15 @@ const formatBullets = (item: any) => {
     </li>
   )
 }
-export function BulletNavMenu(): JSX.Element {
+export function BulletNavMenu({
+  type = "Residential",
+}: {
+  type?: "Residential" | "Business"
+}): JSX.Element {
   return (
     <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
-      <ul key="Left Column">
-        {bulletsResidential.slice(0, 3).map(formatBullets)}
-      </ul>
-      <ul key="Right Column">
-        {bulletsResidential.slice(4, 7).map(formatBullets)}
-      </ul>
+      <ul key="Left Column">{bullets[type].slice(0, 3).map(formatBullets)}</ul>
+      <ul key="Right Column">{bullets[type].slice(4, 7).map(formatBullets)}</ul>
     </div>
   )
 }
