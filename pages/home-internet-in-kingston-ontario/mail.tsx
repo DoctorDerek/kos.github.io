@@ -1,15 +1,32 @@
-import React from "react"
-export default function mail() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function HighSpeedCable(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>Mail</span> Packages in
+      Kingston & Belleville, Ontario
+    </>
+  )
+  // "Residential Mail Packages"
+  const slug = "mail"
+  // "mail"
+  const bulletNavMenu = <BulletNavMenu />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <MailContent />
+    </InternalTemplate>
+  )
+}
+
+function MailContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
-        <div className>
+        <div>
           <div className="container">
-            <h1 className="text-center decor color">
-              Residential <span style={{ color: "#A80532" }}>Mail</span>{" "}
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               Advanced Mail (VIP) services provide an outsourced e-mail solution
               with scalability, security and performance required by businesses
