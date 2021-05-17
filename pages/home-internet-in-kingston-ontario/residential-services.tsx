@@ -5,16 +5,14 @@ import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.sv
 import Image from "@/components/CustomImage"
 
 function InternalTemplate({
+  title,
+  slug,
   children,
 }: {
+  title: string
+  slug: string
   children: JSX.Element[]
 }): JSX.Element {
-  const title =
-    "Home Internet Service Provider in Kingston & Belleville, Ontario"
-  // "Residential Services"
-  const slug = "residential-services"
-  // "residential"
-
   const BULLET = () => (
     <div className="inline-block w-3 h-3 text-blue-800 border-current border-solid rounded-full fill-current border-[1px] mx-4">
       <RightArrow />
@@ -103,8 +101,14 @@ function InternalTemplate({
 }
 
 export default function ResidentialServices(): JSX.Element {
+  const title =
+    "Home Internet Service Provider in Kingston & Belleville, Ontario"
+  // "Residential Services"
+  const slug = "residential-services"
+  // "residential"
+
   return (
-    <InternalTemplate>
+    <InternalTemplate title={title} slug={slug}>
       <p>
         Kingston Online Services offers Internet for the home (or home office)
         at speeds starting from dial-up connectivity to high speed services
