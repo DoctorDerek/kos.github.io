@@ -1,32 +1,16 @@
-import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import React from "react"
 
-export default function ColateServer(): JSX.Element {
-  const title = (
-    <>
-      <span style={{ color: "#A80532" }}>CO LOCATE SERVER</span> Packages for
-      Businesses in Kingston & Belleville, Ontario
-    </>
-  )
-  // "CO LOCATE SERVER Packages"
-  const slug = "cocolate-server"
-  // "bus/colocate-server"
-  const bulletNavMenu = <BulletNavMenu />
-
-  return (
-    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
-      <ColateServerContent />
-    </InternalTemplate>
-  )
-}
-
-function ColateServerContent() {
+export default function index() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
+            <h1 className="text-center decor color">
+              <span style={{ color: "#A80532" }}>CO LOCATE SERVER</span>{" "}
+              Packages
+            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               Rack space and a direct Ethernet connection to Kingston Online’s
               ATM backbone. Meant for IPPs and other businesses where
