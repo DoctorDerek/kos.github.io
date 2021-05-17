@@ -86,48 +86,6 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
   ],
 ]
 
-/*
-export default function Example() {
-  const [referenceElement, setReferenceElement] = useState(null)
-  const [popperElement, setPopperElement] = useState(null)
-  const [arrowElement, setArrowElement] = useState(null)
-  const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    modifiers: [{ name: "arrow", options: { element: arrowElement } }],
-  })
-
-  return (
-    <nav>
-      <button type="button" ref={setReferenceElement}>
-        Reference element
-      </button>
-
-      <div ref={setPopperElement} style={styles.popper} {...attributes.popper}>
-        Popper element
-        <div ref={setArrowElement} style={styles.arrow} />
-      </div>
-    </nav>
-  )
-}*/
-
-/*
-export default function MyPopover() {
-  let [referenceElement, setReferenceElement] = useState()
-  let [popperElement, setPopperElement] = useState()
-  let { styles, attributes } = usePopper(referenceElement, popperElement)
-
-  return (
-    <Popover>
-      <Popover.Button ref={setReferenceElement}>Solutions</Popover.Button>
-
-      <Popover.Panel
-        ref={setPopperElement}
-        style={styles.popper}
-        {...attributes.popper}
-      ></Popover.Panel>
-    </Popover>
-  )
-}*/
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
