@@ -1,4 +1,19 @@
-export default function E911Tips() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function E911Tips(): JSX.Element {
+  const title = "e911 Tips"
+  // "e911 Tips"
+  const slug = "e911/tips"
+  // "e911/tips"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <E911TipsContent />
+    </InternalTemplate>
+  )
+}
+
+function E911TipsContent() {
   return (
     <div className="container">
       <div className="row">
@@ -21,7 +36,6 @@ export default function E911Tips() {
         </div>
         <div className="divider-lg visible-xs"></div>
         <div className="col-md-8 col-lg-9">
-          <h1 className="text-center decor color">e911 Tips</h1>
           <p className="text-left font18">
             <strong>
               The following are some User Tips which should help you along the
