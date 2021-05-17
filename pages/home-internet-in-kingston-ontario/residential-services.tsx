@@ -7,7 +7,7 @@ export default function ResidentialServices(): JSX.Element {
   // "Residential Services"
   const slug = "home-internet-in-kingston-ontario/residential-services"
   // "residential"
-  const bulletNavMenu = <BulletNavMenu />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

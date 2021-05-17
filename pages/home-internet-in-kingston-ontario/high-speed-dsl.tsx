@@ -11,7 +11,7 @@ export default function HighSpeedDsl(): JSX.Element {
   // "Residential High Speed DSL Services"
   const slug = "home-internet-in-kingston-ontario/high-speed-dsl"
   // "res/high-speed-dsl"
-  const bulletNavMenu = <BulletNavMenu />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

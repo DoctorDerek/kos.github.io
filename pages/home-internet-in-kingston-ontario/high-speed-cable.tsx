@@ -11,7 +11,7 @@ export default function HighSpeedCable(): JSX.Element {
   // "Residential High Speed Cable Packages"
   const slug = "home-internet-in-kingston-ontario/high-speed-cable"
   // "res/high-speed-cable"
-  const bulletNavMenu = <BulletNavMenu />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

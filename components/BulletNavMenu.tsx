@@ -29,7 +29,7 @@ const formatBullets = (item: any) => {
 export function BulletNavMenu({
   type = "Residential",
 }: {
-  type?: "Residential" | "Business"
+  type: "Residential" | "Business"
 }): JSX.Element {
   return (
     <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
