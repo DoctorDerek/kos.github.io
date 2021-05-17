@@ -1,11 +1,24 @@
-import React from "react"
-export default function index() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function DomainRegistration(): JSX.Element {
+  const title = "Registering a Domain"
+  // "Registering a Domain"
+  const slug = "domain/registration"
+  // "domain/registration"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <DomainRegistrationContent />
+    </InternalTemplate>
+  )
+}
+
+function DomainRegistrationContent() {
   return (
     <div id="page-content">
       {/* Block */}
       <div className="block">
         <div className="container">
-          <h1 className="text-center decor color">Registering a Domain</h1>
           <p
             className="text-center font18"
             style={{
