@@ -1,4 +1,23 @@
-export default function SupportFAQs() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function SupportFAQs(): JSX.Element {
+  const title = (
+    <>
+      Support <span style={{ color: "#A80532" }}>FAQs</span>
+    </>
+  )
+  // "" [no page title previously]
+  const slug = "support/faqs"
+  // "support/faqs"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <SupportFAQsContent />
+    </InternalTemplate>
+  )
+}
+
+function SupportFAQsContent() {
   return (
     <div className="container">
       <h1 className="text-center decor color">Quick Support / FAQs</h1>
