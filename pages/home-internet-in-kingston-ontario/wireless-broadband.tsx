@@ -1,17 +1,32 @@
-import React from "react"
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
-export default function wirelessBroadBand() {
+export default function WirelessBroadband(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>Wireless Broadband</span>{" "}
+      Packages
+    </>
+  )
+  // "Residential Wireless Broadband Packages"
+  const slug = "wireless-broadband"
+  // "wireless-broadband"
+  const bulletNavMenu = <BulletNavMenu />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <WirelessBroadbandContent />
+    </InternalTemplate>
+  )
+}
+
+function WirelessBroadbandContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
-            <h1 className="text-center decor color">
-              Residential{" "}
-              <span style={{ color: "#A80532" }}>Wireless Broadband</span>{" "}
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               Kingston Online Services has aggressively built a wireless
               broadband network in Southeastern Ontario to accommodate the needs
