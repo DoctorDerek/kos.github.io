@@ -71,8 +71,7 @@ function EventsContent() {
               <div className="divider-xl" />
               <h1 className="text-center decor color">News &amp; Events</h1>
               <div className="divider" />
-              <a name={57} />
-              <h5 className="color">
+              <h5 className="color" id="57">
                 Fibre cut causing major outage **RESOLVED**
               </h5>
               <p>
@@ -80,8 +79,9 @@ function EventsContent() {
                 online and are fully functional.
               </p>
               <div className="divider-line-sm" />
-              <a name={51} />
-              <h5 className="color">COVID-19</h5>
+              <h5 className="color" id="51">
+                COVID-19
+              </h5>
               <p>
                 With the significant and growing concern across North America of
                 the COVID-19 (“coronavirus”) situation, we wish
@@ -107,8 +107,9 @@ function EventsContent() {
                 update if and when this situation changes.
               </p>
               <div className="divider-line-sm" />
-              <a name={21} />
-              <h5 className="color">Unlimited Packages Now Available</h5>
+              <h5 className="color" id="21">
+                Unlimited Packages Now Available
+              </h5>
               <p>
                 <span
                   style={{
@@ -122,8 +123,9 @@ function EventsContent() {
                 </span>
               </p>
               <div className="divider-line-sm" />
-              <a name={19} />
-              <h5 className="color">Protect Your Identity</h5>
+              <h5 className="color" id="19">
+                Protect Your Identity
+              </h5>
               <p>
                 Keep your identity safe!&nbsp;
                 <span
@@ -164,8 +166,9 @@ function EventsContent() {
                 If you are unsure, please contact our office.
               </p>
               <div className="divider-line-sm" />
-              <a name={20} />
-              <h5 className="color">25 Years in Business</h5>
+              <h5 className="color" id="20">
+                25 Years in Business
+              </h5>
               <p>
                 <a
                   style={{
@@ -187,10 +190,11 @@ function EventsContent() {
                     whiteSpace: "normal",
                     widows: 2,
                     wordSpacing: "0px",
-                    webkitTextStrokeWidth: "0px",
                   }}
-                  name="packages"
-                />
+                  id="packages"
+                >
+                  packages
+                </a>
               </p>
               <p>
                 <span
@@ -206,8 +210,9 @@ function EventsContent() {
                 </span>
               </p>
               <div className="divider-line-sm" />
-              <a name={55} />
-              <h5 className="color">Thanksgiving</h5>
+              <h5 className="color" id="55">
+                Thanksgiving
+              </h5>
               <p>
                 KOS will be limited to technical support only on Monday, October
                 12 for Thanksgiving. Technical support will be available from
@@ -224,8 +229,9 @@ function EventsContent() {
                 will resume Tuesday, October 13.
               </p>
               <div className="divider-line-sm" />
-              <a name={53} />
-              <h5 className="color">Canada Day</h5>
+              <h5 className="color" id="53">
+                Canada Day
+              </h5>
               <p>
                 KOS will be limited to technical support only on Wednesday, July
                 1 for the Canada Day holiday. Our technical support hours will
@@ -242,8 +248,9 @@ function EventsContent() {
                 will resume July 2, 2020
               </p>
               <div className="divider-line-sm" />
-              <a name={50} />
-              <h5 className="color">Family Day - Monday, February 17</h5>
+              <h5 className="color" id="50">
+                Family Day - Monday, February 17
+              </h5>
               <p>
                 Our offices will be closed on Monday, February 17, 2020 for
                 Family Day. Technical Support will be available from 10am - 4pm.
@@ -256,8 +263,9 @@ function EventsContent() {
                 will resume on Tuesday, February 18, 2020.
               </p>
               <div className="divider-line-sm" />
-              <a name={56} />
-              <h5 className="color">Holiday Hours</h5>
+              <h5 className="color" id="56">
+                Holiday Hours
+              </h5>
               <p>
                 We will have reduced office hours over the holidays. Technical
                 support will be available by phone or email on December 26, 2020
@@ -305,8 +313,9 @@ function EventsContent() {
                 Resume
               </p>
               <div className="divider-line-sm" />
-              <a name={49} />
-              <h5 className="color">Holiday Hours</h5>
+              <h5 className="color" id="49">
+                Holiday Hours
+              </h5>
               <p>
                 We will have reduced office hours over the holidays. Technical
                 support will be available by phone or email on December 26, 2019
