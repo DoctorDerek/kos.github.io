@@ -102,7 +102,7 @@ function InternalTemplate({
   )
 }
 
-export default function ResidentialServices() {
+export default function ResidentialServices(): JSX.Element {
   return (
     <InternalTemplate>
       <p>
