@@ -1,4 +1,19 @@
-export default function E911Travel() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function E911Travel(): JSX.Element {
+  const title = "e911 Travelling"
+  // "e911 Travelling"
+  const slug = "e911/travel"
+  // "e911/travel"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <E911TravelContent />
+    </InternalTemplate>
+  )
+}
+
+function E911TravelContent() {
   return (
     <div className="container">
       <div className="row">
@@ -21,7 +36,6 @@ export default function E911Travel() {
         </div>
         <div className="divider-lg visible-xs"></div>
         <div className="col-md-8 col-lg-9">
-          <h1 className="text-center decor color">e911 Travelling</h1>
           <p className="text-left font18">
             <strong>Travelling with 911</strong>
           </p>
