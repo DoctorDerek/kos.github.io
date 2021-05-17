@@ -1,16 +1,32 @@
-import React from "react"
-export default function index() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function BusinessHighSpeedCable(): JSX.Element {
+  const title = (
+    <>
+      Business <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
+      Packages in Kingston & Belleville, Ontario
+    </>
+  )
+  // "Business High Speed Cable Packages"
+  const slug = "bus/high-speed-cable"
+  // "bus/high-speed-cable"
+  const bulletNavMenu = <BulletNavMenu type="Business" />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <HighSpeedCableContent />
+    </InternalTemplate>
+  )
+}
+
+function HighSpeedCableContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
-            <h1 className="text-center decor color">
-              Business{" "}
-              <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               Get an instant connection with Internet over cable at a price that
               suits your needs.
