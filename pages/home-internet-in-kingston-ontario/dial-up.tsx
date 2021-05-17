@@ -1,8 +1,20 @@
-/* eslint-disable prettier/prettier */
-import React from "react"
-export default function dialUp() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function DialUp(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>Dial Up</span> Services in
+      Kingston & Belleville, Ontario
+    </>
+  )
+  // "Residential Dial Up Services"
+  const slug = "dial-up"
+  // "residential"
+  const bulletNavMenu = <BulletNavMenu />
+
   return (
-    <div id="page-content" className="__web-inspector-hide-shortcut__">
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       {/* Block */}
       <div className="block">
         <div className="container">
@@ -606,6 +618,6 @@ export default function dialUp() {
           </div>
         </div>
       </div>
-    </div>
+    </InternalTemplate>
   )
 }
