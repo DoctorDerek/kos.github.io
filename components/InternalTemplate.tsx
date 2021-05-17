@@ -6,12 +6,12 @@ import Image from "@/components/CustomImage"
 export function InternalTemplate({
   title,
   slug,
-  bulletNavMenu,
+  bulletNavMenu = null,
   children,
 }: {
   title: string | JSX.Element
   slug: string
-  bulletNavMenu: JSX.Element
+  bulletNavMenu?: JSX.Element | null
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
   const isRequired = () => {
