@@ -1,10 +1,28 @@
-export default function HighSpeedCable() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function DialUp(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
+      Packages in Kingston & Belleville, Ontario
+    </>
+  )
+  // "Residential Dial Up Services"
+  const slug = "high-speed-cable"
+  // "residential"
+  const bulletNavMenu = <BulletNavMenu />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <HighSpeedCableContent />
+    </InternalTemplate>
+  )
+}
+
+function HighSpeedCableContent() {
   return (
     <div className="container">
-      <h1 className="text-center decor color">
-        Residential <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
-        Packages
-      </h1>
       <span className="text-center" style={{ fontSize: 20 }}>
         Get an instant connection with Internet over cable at a price that suits
         your needs.
