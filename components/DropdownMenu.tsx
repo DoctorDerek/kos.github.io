@@ -1,35 +1,7 @@
-/*
-import { useRouter } from "next/router"
-import useDropdownMenu from "react-accessible-dropdown-menu-hook"
-import Link from "@/components/Link"
-import DownArrow from "@/data/material-icons/keyboard_arrow_down_black_48dp.svg"
-import LeftArrow from "@/data/material-icons/keyboard_arrow_left_black_48dp.svg"
-import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
-import UpArrow from "@/data/material-icons/keyboard_arrow_up_black_48dp.svg"*/
-import {
-  ChartBarIcon,
-  CursorClickIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
-} from "@heroicons/react/outline"
 import { Popover } from "@headlessui/react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenu from "@/components/FlyoutMenu"
-import Link from "@/components/Link"
-
-/*
-type NAVIGATION_MENU_TYPE =
-  | { title: string; hrefOrSubmenu: string | NAVIGATION_MENU_TYPE }
-  | NAVIGATION_MENU_TYPE[]
-
-const exampleNavMenu: NAVIGATION_MENU_TYPE = [
-  { title: "Home", hrefOrSubmenu: "/" },
-  {
-    title: "Home",
-    hrefOrSubmenu: [{ title: "Home", href: "/" }],
-  },
-]*/
 
 /**
  * Recursive navigation menu type
