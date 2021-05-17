@@ -16,6 +16,38 @@ export default function InternalTemplate() {
       <RightArrow />
     </div>
   )
+  const BulletNavMenu = () => (
+    <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
+      <ul>
+        <li>
+          <BULLET />
+          <a href="/res/high-speed-cable/">High Speed Cable</a>
+        </li>
+        <li>
+          <BULLET />
+          <a href="/res/wireless-broadband/">Wireless Broadband</a>
+        </li>
+        <li>
+          <BULLET />
+          <a href="/res/high-speed-dsl/">High Speed DSL</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <BULLET />
+          <a href="/res/voip/">VoIP</a>
+        </li>
+        <li>
+          <BULLET />
+          <a href="/res/mail/">Mail</a>
+        </li>
+        <li>
+          <BULLET />
+          <a href="/res/dial-up/">Dial Up</a>
+        </li>
+      </ul>
+    </div>
+  )
 
   const isRequired = () => {
     throw new Error("Both href and children props are required in BUTTON")
@@ -69,36 +101,7 @@ export default function InternalTemplate() {
           Please <a href="/contact.php">contact our office</a> for more
           information, or select from one of our services below.
         </h2>
-        <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
-          <ul>
-            <li>
-              <BULLET />
-              <a href="/res/high-speed-cable/">High Speed Cable</a>
-            </li>
-            <li>
-              <BULLET />
-              <a href="/res/wireless-broadband/">Wireless Broadband</a>
-            </li>
-            <li>
-              <BULLET />
-              <a href="/res/high-speed-dsl/">High Speed DSL</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <BULLET />
-              <a href="/res/voip/">VoIP</a>
-            </li>
-            <li>
-              <BULLET />
-              <a href="/res/mail/">Mail</a>
-            </li>
-            <li>
-              <BULLET />
-              <a href="/res/dial-up/">Dial Up</a>
-            </li>
-          </ul>
-        </div>
+        <BulletNavMenu />
         <div className="py-6">
           <BUTTON href="/order/" text="Get connected" />
         </div>
