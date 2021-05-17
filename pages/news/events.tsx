@@ -16,6 +16,7 @@ export default function Events(): JSX.Element {
     </InternalTemplate>
   )
 }
+
 function EventsContent() {
   return (
     <div id="page-content">
