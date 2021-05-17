@@ -3,17 +3,6 @@ import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenu from "@/components/FlyoutMenu"
 
-/**
- * Recursive navigation menu type
- *
- * @remarks
- * This type expects an array of objects, where each obje
- * Reference:
- * https://www.typescriptlang.org/play#example/recursive-type-references
- *
- * @typeParam title - The title of the link
- */
-
 const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
   ["Home", "/"],
   [
