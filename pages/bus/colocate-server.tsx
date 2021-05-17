@@ -9,7 +9,7 @@ export default function BusinessColocateServer(): JSX.Element {
     </>
   )
   // "CO LOCATE SERVER Packages"
-  const slug = "cocolate-server"
+  const slug = "bus/cocolate-server"
   // "bus/colocate-server"
   const bulletNavMenu = <BulletNavMenu type="Business" />
 
