@@ -4,7 +4,11 @@ import siteMetadata from "@/data/siteMetadata.json"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import Image from "@/components/CustomImage"
 
-function InternalTemplate({ children }: { children: any }) {
+function InternalTemplate({
+  children,
+}: {
+  children: JSX.Element[]
+}): JSX.Element {
   const title =
     "Home Internet Service Provider in Kingston & Belleville, Ontario"
   // "Residential Services"
