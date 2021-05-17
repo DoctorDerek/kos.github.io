@@ -9,10 +9,10 @@ export function InternalTemplate({
   bulletNavMenu,
   children,
 }: {
-  title: string
+  title: string | JSX.Element
   slug: string
   bulletNavMenu: JSX.Element
-  children: JSX.Element[]
+  children: JSX.Element[] | JSX.Element
 }): JSX.Element {
   const isRequired = () => {
     throw new Error("Both href and children props are required in BUTTON")
