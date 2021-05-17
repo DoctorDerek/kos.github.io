@@ -5,7 +5,7 @@ export default function PersonalWebSpaceTAC() {
         KOS Personal Web Space Terms &amp; Conditions
       </h1>
       <p>
-        <span style={undefined}>
+        <span>
           This document is an addendum to our other service agreement terms and
           conditions as well as our acceptable use policy for Internet
           connectivity with Kingston Online Services.

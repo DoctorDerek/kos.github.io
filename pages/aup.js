@@ -34,34 +34,34 @@ export default function AcceptableUsePolicy() {
             Website, as defined in the KOS Service Terms, to comply with the
             terms of this Acceptable Use Policy (“AUP”).
           </p>
-          <p align="justify" style={undefined}>
+          <p align="justify">
             Throughout the AUP, all capitalized terms have the meaning defined
             in the Service Terms. For additional clarity:
           </p>
           <ul>
             <li>
               <p className="text-left font18">
-                <span style={undefined}>“</span>
+                <span>“</span>
                 <b>
-                  <span style={undefined}>I</span>
+                  <span>I</span>
                 </b>
-                <span style={undefined}>”, “</span>
+                <span>”, “</span>
                 <b>
-                  <span style={undefined}>me</span>
+                  <span>me</span>
                 </b>
-                <span style={undefined}>”, “</span>
+                <span>”, “</span>
                 <b>
-                  <span style={undefined}>you</span>
+                  <span>you</span>
                 </b>
-                <span style={undefined}>”, “</span>
+                <span>”, “</span>
                 <b>
-                  <span style={undefined}>your</span>
+                  <span>your</span>
                 </b>
-                <span style={undefined}>” and “</span>
+                <span>” and “</span>
                 <b>
-                  <span style={undefined}>yours</span>
+                  <span>yours</span>
                 </b>
-                <span style={undefined}>
+                <span>
                   ” refer to you but also to persons that you authorize to use
                   the Service or act as your agent with regard to the Service;
                 </span>
@@ -69,28 +69,28 @@ export default function AcceptableUsePolicy() {
             </li>
             <li>
               <p className="text-left font18">
-                <span style={undefined}>“</span>
+                <span>“</span>
                 <b>
-                  <span style={undefined}>us</span>
+                  <span>us</span>
                 </b>
-                <span style={undefined}>”, “</span>
+                <span>”, “</span>
                 <b>
-                  <span style={undefined}>we</span>
+                  <span>we</span>
                 </b>
-                <span style={undefined}>”, “</span>
+                <span>”, “</span>
                 <b>
-                  <span style={undefined}>our</span>
+                  <span>our</span>
                 </b>
-                <span style={undefined}>” or “</span>
+                <span>” or “</span>
                 <b>
-                  <span style={undefined}>ourselves</span>
+                  <span>ourselves</span>
                 </b>
-                <span style={undefined}>” means KOS;</span>
+                <span>” means KOS;</span>
               </p>
             </li>
           </ul>
           <p className="text-left font18">
-            <span style={undefined}>
+            <span>
               If you do not agree to be bound by this AUP, as amended from time
               to time, you must immediately stop using the Services, Equipment
               and / or Website and notify KOS that you are cancelling the
@@ -121,7 +121,7 @@ export default function AcceptableUsePolicy() {
             <li>
               <p className="text-left font18">
                 any illegal or criminal purpose
-                <span style={undefined}>
+                <span>
                   including but not limited to acts relating to:
                   harassment/stalking, child pornography, obscenity, uttering
                   threats, communicating hatred, fraud, hacking or unauthorized
@@ -156,7 +156,7 @@ export default function AcceptableUsePolicy() {
             <li>
               <p className="text-left font18">
                 using harassing or{" "}
-                <span style={undefined}>
+                <span>
                   abusive language or actions, whether verbal, written or
                   otherwise, with: our employees, suppliers, agents,
                   representatives and any Internet users or groups;
@@ -168,7 +168,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="6">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   restricting or inhibiting any other user from using or
                   enjoying the Internet;
                 </span>
@@ -211,7 +211,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="10">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   transmitting content including, without limitation,
                   unsolicited messages (i.e. Spam) that, in our sole judgment,
                   causes interference with, or disruption of, KOS’ network or
@@ -225,7 +225,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="11">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   interfering or attempting to interfere with computer
                   networking or telecommunications systems and/or service to or
                   from any Internet user, host, server or network, including but
@@ -244,7 +244,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="12">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   Uses of KOS’ unlimited data services that, in KOS’ sole
                   opinion, are inconsistent with reasonable residential and
                   small business usage patterns, and any other excessive
@@ -259,7 +259,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="13">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   accessing or attempting to access any Internet host, computer,
                   software or data belonging to any other person without that
                   person’s authorization, or using any tools designed to
@@ -272,7 +272,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="14">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   transmitting, posting, publishing, disseminating, receiving,
                   retrieving, storing or otherwise reproducing, distributing or
                   providing access to any files, programs or information
@@ -288,7 +288,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="15">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   transmitting, posting, publishing, disseminating, receiving,
                   retrieving, storing or otherwise reproducing, distributing or
                   providing access to any files, programs or information that is
@@ -332,7 +332,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="19">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   using an Internet host's resources in a manner that is not
                   authorized by its administrators. This includes mail relaying,
                   transmitting chain letters, make-money-fast or pyramid style
@@ -345,7 +345,7 @@ export default function AcceptableUsePolicy() {
           <ol type="a" start="20">
             <li>
               <p className="text-left font18">
-                <span style={undefined}>
+                <span>
                   unless you have purchased Services that are specifically
                   designed and authorized to support such functionalities,
                   operating a server in connection with the Services including
@@ -363,15 +363,11 @@ export default function AcceptableUsePolicy() {
 
           <p className="text-left font18">
             <b>
-              <span style={undefined}>
-                How does KOS respond to violations of the AUP?
-              </span>
+              <span>How does KOS respond to violations of the AUP?</span>
             </b>
           </p>
           <p className="text-left font18">
-            <span style={undefined}>
-              In accordance with the Service Terms, KOS can{" "}
-            </span>
+            <span>In accordance with the Service Terms, KOS can </span>
             restrict, block, suspend, disconnect or terminate any Services,
             including 9-1-1 service, or the Agreement for cause if the AUP is
             violated. KOS may also take any other measures that are necessary to
@@ -387,11 +383,11 @@ export default function AcceptableUsePolicy() {
 
           <p className="text-left font18">
             <b>
-              <span style={undefined}>Will KOS change the AUP?</span>
+              <span>Will KOS change the AUP?</span>
             </b>
           </p>
           <p className="text-left font18">
-            <span style={undefined}>
+            <span>
               We may at any time and from time to time amend this AUP by posting
               notice of the amended AUP to the Website. The changes shall be
               effective as of the date that the Policies are posted to the
@@ -401,18 +397,18 @@ export default function AcceptableUsePolicy() {
 
           <p className="text-left font18">
             <b>
-              <span style={undefined}>What laws apply to the AUP?</span>
+              <span>What laws apply to the AUP?</span>
             </b>
           </p>
           <p className="text-left font18">
-            <span style={undefined}>
+            <span>
               The AUP is governed exclusively by and construed in accordance
               with the laws of the Province of Ontario and federal laws of
               Canada applicable therein.
             </span>
           </p>
 
-          <p style={undefined}>
+          <p>
             <br />
           </p>
           <p className="text-left font18">
@@ -424,8 +420,8 @@ export default function AcceptableUsePolicy() {
           <p className="text-left font18">
             For Customers in Kingston and surrounding areas, please direct any
             complaints relating to violations of this AUP to{" "}
-            <span style={undefined}>
-              <span style={undefined}>
+            <span>
+              <span>
                 <a href="mailto:accounts@kos.net">
                   <font color="#0000ff">accounts@kos.net</font>
                 </a>
@@ -433,7 +429,7 @@ export default function AcceptableUsePolicy() {
             </span>
             or contact us at{" "}
             <font color="#222222">
-              <span style={undefined}>613-549-8667.</span>
+              <span>613-549-8667.</span>
             </font>
           </p>
           <p className="text-left font18">
@@ -441,8 +437,8 @@ export default function AcceptableUsePolicy() {
               For Customers in Belleville and surrounding areas, please{" "}
             </font>{" "}
             direct any complaints relating to violations of this AUP to{" "}
-            <span style={undefined}>
-              <span style={undefined}>
+            <span>
+              <span>
                 <a href="mailto:accounts@kos.net">
                   <font color="#0000ff">accounts@kos.net</font>
                 </a>

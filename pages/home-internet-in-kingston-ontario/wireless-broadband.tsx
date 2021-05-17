@@ -45,9 +45,9 @@ function WirelessBroadbandContent() {
           <input type="hidden" name="minidslc" value="1">
           <input type="hidden" name="docheck" value="1">
           <div class="price-cell">
-          <label><strong>Enter your Postal Code to check if <span style={undefined}>WIRELESS BROADBAND</span> is available in your area:</strong></label>
-          <div style={undefined}>
-          <input style={undefined}/>
+          <label><strong>Enter your Postal Code to check if <span>WIRELESS BROADBAND</span> is available in your area:</strong></label>
+          <div>
+          <input/>
           <input type="submit" value="Check" name="sub">
           </div>
           </form>

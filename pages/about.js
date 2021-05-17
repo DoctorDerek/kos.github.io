@@ -3,20 +3,20 @@ export default function About() {
     <div className="container">
       <h1 className="text-center decor color">Our Company</h1>
 
-      <p className="text-center font18" style={undefined}>
+      <p className="text-center font18">
         Kingston Online Services is a pioneering provider of Internet solutions,
         dedicated to providing quality Internet access and application hosting
         to its customers. Kingston Online Services is equipped with the latest
         in digital technology and uses multiple Internet connections to maintain
         the highest level of services in the region.
       </p>
-      <p className="text-center font18" style={undefined}>
+      <p className="text-center font18">
         Kingston Online Services (KOS) has provided Southeastern Ontario with
         Internet access since its inception in 1993, in the Kingston Greater
         Area. Since February of 1995, we’ve extended our services to the Quinte
         and Quinte West regions, where we keep offices as well.
       </p>
-      <p className="text-center font18" style={undefined}>
+      <p className="text-center font18">
         Our company is a privately held one, operated entirely by people living
         in the communities it services. We are pleased to support the community
         and its interests, as we have for decades. KOS' owners contribute to
@@ -25,7 +25,7 @@ export default function About() {
         trusted provider of Wireless and Cable solutions to customers in most of
         South Eastern Ontario.
       </p>
-      <p className="text-center font18" style={undefined}>
+      <p className="text-center font18">
         We provide services from Brighton to Gananoque, including Prince Edward
         County, Napanee, Belleville, Trenton and Picton as well as some of the
         St. Lawrence Islands. KOS also provides DSL and CABLE service to most of

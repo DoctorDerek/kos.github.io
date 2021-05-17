@@ -20,18 +20,18 @@ export default function PaymentOptions(): JSX.Element {
 function PaymentOptionsContent() {
   return (
     <div className="container">
-      <p className="text-center font18" style={undefined}>
-        <span style={undefined}>Auto Monthly Credit Card</span>
+      <p className="text-center font18">
+        <span>Auto Monthly Credit Card</span>
         <br />
         We accept Visa and Mastercard.
       </p>
-      <p className="text-center font18" style={undefined}>
-        <span style={undefined}>Auto Monthly Bank Debit</span>
+      <p className="text-center font18">
+        <span>Auto Monthly Bank Debit</span>
         <br />
         Pay by monthly withdrawal from your chequing account.
       </p>
-      <p className="text-center font18" style={undefined}>
-        <span style={undefined}>Payment Dates</span>
+      <p className="text-center font18">
+        <span>Payment Dates</span>
         <br />
         Payments will be made monthly, on either the 1st, 5th, 15th, or 25th day
         of each month. Exact payment to be determined at sign up.
