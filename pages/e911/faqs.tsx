@@ -1,4 +1,19 @@
-export default function E911FAQs() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function E911FAQs(): JSX.Element {
+  const title = "e911 FAQs"
+  // "Registering a Domain"
+  const slug = "e911/faqs"
+  // "e911/faqs"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <E911FAQsContent />
+    </InternalTemplate>
+  )
+}
+
+function E911FAQsContent() {
   return (
     <div className="container">
       <div className="row">
@@ -21,7 +36,6 @@ export default function E911FAQs() {
         </div>
         <div className="divider-lg visible-xs"></div>
         <div className="col-md-8 col-lg-9">
-          <h1 className="text-center decor color">e911 FAQs</h1>
           <p>
             The following are some frequently asked questions to help you better
             understand the available VoIP 911 on the (Client) home phone service
