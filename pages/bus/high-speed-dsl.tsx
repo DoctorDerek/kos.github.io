@@ -1,15 +1,32 @@
-import React from "react"
-export default function index() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function BusinessHighSpeedDsl(): JSX.Element {
+  const title = (
+    <>
+      Business <span style={{ color: "#A80532" }}>High Speed DSL</span> Packages
+      in Kingston & Belleville, Ontario
+    </>
+  )
+  // "Business High Speed DSL Packages"
+  const slug = "bus/high-speed-dsl"
+  // "bus/high-speed-dsl"
+  const bulletNavMenu = <BulletNavMenu type="Business" />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <HighSpeedDslContent />
+    </InternalTemplate>
+  )
+}
+
+function HighSpeedDslContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
-            <h1 className="text-center decor color">
-              Business <span style={{ color: "#A80532" }}>High Speed DSL</span>{" "}
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               KOS Business DSL uses fast, reliable digital connections over your
               phone circuit, to let you talk on the phone and use the Internet
