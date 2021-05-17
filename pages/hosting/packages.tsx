@@ -1087,14 +1087,10 @@ function HostingPackagesAndPricingContent() {
           lineHeight: "22px",
         }}
       >
-        <button style={{ color: "#000000" }} name={6} />
         6) Only in regions where technology is available.
       </p>
-      <p>
-        <button style={{ color: "#000000" }} name={6} />
-      </p>
+
       <div className="block" style={{ marginBottom: "90px" }}>
-        <button style={{ color: "#000000" }} name={6} />
         <div
           className="container"
           style={{
@@ -1467,10 +1463,9 @@ function HostingPackagesAndPricingContent() {
                   </span>
                 </li>
               </ul>
-              <button style={{ color: "#000000" }} name={6} />* Ontario only
+              * Ontario only
               <br />
               <div className="price-action">
-                <button style={{ color: "#000000" }} name={6} />
                 <a
                   className="btn"
                   style={{
