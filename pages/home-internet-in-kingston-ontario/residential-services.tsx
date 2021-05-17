@@ -11,6 +11,14 @@ export default function ResidentialServices(): JSX.Element {
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <ResidentialServicesContent />
+    </InternalTemplate>
+  )
+}
+
+function ResidentialServicesContent() {
+  return (
+    <>
       <p>
         Kingston Online Services offers Internet for the home (or home office)
         at speeds starting from dial-up connectivity to high speed services
@@ -24,6 +32,6 @@ export default function ResidentialServices(): JSX.Element {
         Please <a href="/contact.php">contact our office</a> for more
         information, or select from one of our services below.
       </h2>
-    </InternalTemplate>
+    </>
   )
 }
