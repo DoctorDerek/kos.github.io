@@ -1,6 +1,22 @@
-import React from "react"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
-export default function index() {
+export default function Events(): JSX.Element {
+  const title = (
+    <>
+      <span style={{ color: "#A80532" }}>Hosting</span> Packages & Pricing
+    </>
+  )
+  // "Hosting Packages & Pricing"
+  const slug = "news/events"
+  // "news/events"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <EventsContent />
+    </InternalTemplate>
+  )
+}
+function EventsContent() {
   return (
     <div id="page-content">
       {/*Two Columns*/}
@@ -198,7 +214,7 @@ export default function index() {
                 <a
                   href="https://kos.net/contact.php"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <span style={{ color: "#0000ff" }}>
                     regular business hours
@@ -216,7 +232,7 @@ export default function index() {
                 <a
                   href="https://kos.net/contact.php"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <span style={{ color: "#0000ff" }}>
                     regular business hours
