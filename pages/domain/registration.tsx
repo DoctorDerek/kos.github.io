@@ -1,7 +1,11 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function DomainRegistration(): JSX.Element {
-  const title = "Registering a Domain"
+  const title = (
+    <>
+      Registering a <span style={{ color: "#A80532" }}>Domain</span>
+    </>
+  )
   // "Registering a Domain"
   const slug = "domain/registration"
   // "domain/registration"
