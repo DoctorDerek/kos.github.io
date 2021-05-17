@@ -4,7 +4,7 @@ import siteMetadata from "@/data/siteMetadata.json"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import Image from "@/components/CustomImage"
 
-export default function InternalTemplate() {
+function InternalTemplate({ children }: { children: any }) {
   const title =
     "Home Internet Service Provider in Kingston & Belleville, Ontario"
   // "Residential Services"
@@ -88,24 +88,32 @@ export default function InternalTemplate() {
           />
           {/* alt="" acceptable for purely decorative elements */}
         </div>
-        <p>
-          Kingston Online Services offers Internet for the home (or home office)
-          at speeds starting from dial-up connectivity to high speed services
-          intended for video and telephony.
-        </p>
-        <p>
-          Kingston Online Services also provides innovative solutions for rural
-          connectivity where conventional Internet services are not available.
-        </p>
-        <h2 className="text-2xl tracking-tight color">
-          Please <a href="/contact.php">contact our office</a> for more
-          information, or select from one of our services below.
-        </h2>
+        {children}
         <BulletNavMenu />
         <div className="py-6">
           <BUTTON href="/order/" text="Get connected" />
         </div>
       </div>
     </>
+  )
+}
+
+export default function ResidentialServices() {
+  return (
+    <InternalTemplate>
+      <p>
+        Kingston Online Services offers Internet for the home (or home office)
+        at speeds starting from dial-up connectivity to high speed services
+        intended for video and telephony.
+      </p>
+      <p>
+        Kingston Online Services also provides innovative solutions for rural
+        connectivity where conventional Internet services are not available.
+      </p>
+      <h2 className="text-2xl tracking-tight color">
+        Please <a href="/contact.php">contact our office</a> for more
+        information, or select from one of our services below.
+      </h2>
+    </InternalTemplate>
   )
 }
