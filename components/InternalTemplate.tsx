@@ -1,56 +1,19 @@
 import ImageFixed from "next/image"
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
-import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import Image from "@/components/CustomImage"
 
 export function InternalTemplate({
   title,
   slug,
+  bulletNavMenu,
   children,
 }: {
   title: string
   slug: string
+  bulletNavMenu: JSX.Element
   children: JSX.Element[]
 }): JSX.Element {
-  const BULLET = () => (
-    <div className="inline-block w-3 h-3 text-blue-800 border-current border-solid rounded-full fill-current border-[1px] mx-4">
-      <RightArrow />
-    </div>
-  )
-  const BulletNavMenu = () => (
-    <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
-      <ul>
-        <li>
-          <BULLET />
-          <a href="/res/high-speed-cable/">High Speed Cable</a>
-        </li>
-        <li>
-          <BULLET />
-          <a href="/res/wireless-broadband/">Wireless Broadband</a>
-        </li>
-        <li>
-          <BULLET />
-          <a href="/res/high-speed-dsl/">High Speed DSL</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <BULLET />
-          <a href="/res/voip/">VoIP</a>
-        </li>
-        <li>
-          <BULLET />
-          <a href="/res/mail/">Mail</a>
-        </li>
-        <li>
-          <BULLET />
-          <a href="/res/dial-up/">Dial Up</a>
-        </li>
-      </ul>
-    </div>
-  )
-
   const isRequired = () => {
     throw new Error("Both href and children props are required in BUTTON")
   }
@@ -91,7 +54,7 @@ export function InternalTemplate({
           {/* alt="" acceptable for purely decorative elements */}
         </div>
         {children}
-        <BulletNavMenu />
+        {bulletNavMenu}
         <div className="py-6">
           <BUTTON href="/order/" text="Get connected" />
         </div>

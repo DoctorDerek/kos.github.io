@@ -1,4 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function ResidentialServices(): JSX.Element {
   const title =
@@ -6,9 +7,10 @@ export default function ResidentialServices(): JSX.Element {
   // "Residential Services"
   const slug = "residential-services"
   // "residential"
+  const bulletNavMenu = <BulletNavMenu />
 
   return (
-    <InternalTemplate title={title} slug={slug}>
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       <p>
         Kingston Online Services offers Internet for the home (or home office)
         at speeds starting from dial-up connectivity to high speed services
