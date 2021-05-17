@@ -9,8 +9,8 @@ export default function HighSpeedDsl(): JSX.Element {
     </>
   )
   // "Residential High Speed DSL Services"
-  const slug = "high-speed-dsl"
-  // "high-speed-dsl"
+  const slug = "home-internet-in-kingston-ontario/high-speed-dsl"
+  // "res/high-speed-dsl"
   const bulletNavMenu = <BulletNavMenu />
 
   return (

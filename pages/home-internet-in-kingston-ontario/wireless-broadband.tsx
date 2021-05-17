@@ -9,8 +9,8 @@ export default function WirelessBroadband(): JSX.Element {
     </>
   )
   // "Residential Wireless Broadband Packages"
-  const slug = "wireless-broadband"
-  // "wireless-broadband"
+  const slug = "home-internet-in-kingston-ontario/wireless-broadband"
+  // "res/wireless-broadband"
   const bulletNavMenu = <BulletNavMenu />
 
   return (

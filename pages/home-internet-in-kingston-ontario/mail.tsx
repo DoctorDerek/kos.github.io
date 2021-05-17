@@ -9,8 +9,8 @@ export default function HighSpeedCable(): JSX.Element {
     </>
   )
   // "Residential Mail Packages"
-  const slug = "mail"
-  // "mail"
+  const slug = "home-internet-in-kingston-ontario/mail"
+  // "res/mail"
   const bulletNavMenu = <BulletNavMenu />
 
   return (

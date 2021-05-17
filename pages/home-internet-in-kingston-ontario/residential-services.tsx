@@ -5,7 +5,7 @@ export default function ResidentialServices(): JSX.Element {
   const title =
     "Home Internet Service Provider in Kingston & Belleville, Ontario"
   // "Residential Services"
-  const slug = "residential-services"
+  const slug = "home-internet-in-kingston-ontario/residential-services"
   // "residential"
   const bulletNavMenu = <BulletNavMenu />
 

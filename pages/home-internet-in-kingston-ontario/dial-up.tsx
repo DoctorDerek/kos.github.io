@@ -9,8 +9,8 @@ export default function DialUp(): JSX.Element {
     </>
   )
   // "Residential Dial Up Services"
-  const slug = "dial-up"
-  // "residential"
+  const slug = "home-internet-in-kingston-ontario/dial-up"
+  // "res/dial-up"
   const bulletNavMenu = <BulletNavMenu />
 
   return (

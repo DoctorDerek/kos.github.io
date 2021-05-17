@@ -9,8 +9,8 @@ export default function HighSpeedCable(): JSX.Element {
     </>
   )
   // "Resident VoIP Packages"
-  const slug = "voip"
-  // "voip"
+  const slug = "home-internet-in-kingston-ontario/voip"
+  // "res/voip"
   const bulletNavMenu = <BulletNavMenu />
 
   return (
