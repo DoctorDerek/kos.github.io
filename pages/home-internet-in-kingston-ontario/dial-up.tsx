@@ -18,10 +18,6 @@ export default function DialUp(): JSX.Element {
       {/* Block */}
       <div className="block">
         <div className="container">
-          <h1 className="text-center decor color">
-            Residential <span style={{ color: "#A80532" }}>Dial Up</span>{" "}
-            Packages
-          </h1>
           <span className="text-center" style={{ fontSize: "20px" }}>
             Can’t get high speed in your area? Don’t use the internet very much
             but would like an email address? KOS-dial up service will do the
