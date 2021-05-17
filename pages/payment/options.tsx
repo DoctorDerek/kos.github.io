@@ -1,10 +1,25 @@
-import React from "react"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
-export default function PaymentOptions() {
+export default function PaymentOptions(): JSX.Element {
+  const title = (
+    <>
+      <span style={{ color: "#A80532" }}>Payment</span> Options
+    </>
+  )
+  // "Payment Options"
+  const slug = "payment/options"
+  // "payment/options"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <PaymentOptionsContent />
+    </InternalTemplate>
+  )
+}
+
+function PaymentOptionsContent() {
   return (
     <div className="container">
-      <h1 className="text-center decor color">Payment Options</h1>
-
       <p className="text-center font18" style={undefined}>
         <span style={undefined}>Auto Monthly Credit Card</span>
         <br />
