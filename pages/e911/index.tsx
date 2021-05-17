@@ -1,4 +1,19 @@
-export default function E911() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function E911(): JSX.Element {
+  const title = "e911"
+  // "e911"
+  const slug = "e911"
+  // "e911"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <E911Content />
+    </InternalTemplate>
+  )
+}
+
+function E911Content() {
   return (
     <div className="container">
       <div className="row">
@@ -21,7 +36,6 @@ export default function E911() {
         </div>
         <div className="divider-lg visible-xs"></div>
         <div className="col-md-8 col-lg-9">
-          <h1 className="text-center decor color">e911</h1>
           <p className="text-left font18">
             It is important that you keep your current address up to date, that
             way 911 emergency services will know exactly, where you are calling
