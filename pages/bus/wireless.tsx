@@ -1,16 +1,32 @@
-import React from "react"
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
-export default function index() {
+export default function BusinessWireless(): JSX.Element {
+  const title = (
+    <>
+      Business <span style={{ color: "#A80532" }}>Wireless</span>
+      Packages in Kingston & Belleville, Ontario
+    </>
+  )
+  // "Business Wireless Packages"
+  const slug = "bus/wireless"
+  // "bus/wireless"
+  const bulletNavMenu = <BulletNavMenu type="Business" />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <WirelessContent />
+    </InternalTemplate>
+  )
+}
+
+function WirelessContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
-            <h1 className="text-center decor color">
-              Business <span style={{ color: "#A80532" }}>Wireless </span>
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               Kingston Online Services has aggressively built a wireless
               broadband network in Southeastern Ontario to accommodate the needs
