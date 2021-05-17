@@ -1,7 +1,7 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
-export default function ColateServer(): JSX.Element {
+export default function BusinessColocateServer(): JSX.Element {
   const title = (
     <>
       <span style={{ color: "#A80532" }}>CO LOCATE SERVER</span> Packages for
@@ -15,12 +15,12 @@ export default function ColateServer(): JSX.Element {
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
-      <ColateServerContent />
+      <ColocateServerContent />
     </InternalTemplate>
   )
 }
 
-function ColateServerContent() {
+function ColocateServerContent() {
   return (
     <>
       <div id="page-content">
