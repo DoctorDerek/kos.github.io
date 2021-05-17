@@ -1,9 +1,30 @@
-import React from "react"
-export default function highSpeedDsl() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function HighSpeedDsl(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>High Speed DSL</span>{" "}
+      Packages in Kingston, ON
+    </>
+  )
+  // "Residential High Speed DSL Services"
+  const slug = "high-speed-dsl"
+  // "high-speed-dsl"
+  const bulletNavMenu = <BulletNavMenu />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <HighSpeedDslContent />
+    </InternalTemplate>
+  )
+}
+
+function HighSpeedDslContent() {
   return (
     <div id="page-content">
       {/* Block */}
-      <div className>
+      <div>
         <div className="container">
           <h1 className="text-center decor color">
             Residential <span style={{ color: "#A80532" }}>High Speed DSL</span>{" "}
