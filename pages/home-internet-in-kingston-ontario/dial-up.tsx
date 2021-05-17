@@ -15,7 +15,14 @@ export default function DialUp(): JSX.Element {
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
-      {/* Block */}
+      <DialUpContent />
+    </InternalTemplate>
+  )
+}
+
+function DialUpContent() {
+  return (
+    <>
       <div className="block">
         <div className="container">
           <span className="text-center" style={{ fontSize: "20px" }}>
@@ -614,6 +621,6 @@ export default function DialUp(): JSX.Element {
           </div>
         </div>
       </div>
-    </InternalTemplate>
+    </>
   )
 }
