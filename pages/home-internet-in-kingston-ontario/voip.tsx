@@ -1,15 +1,32 @@
-import React from "react"
-export default function voip() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
+
+export default function HighSpeedCable(): JSX.Element {
+  const title = (
+    <>
+      Residential <span style={{ color: "#A80532" }}>VoIP</span> Packages in
+      Kingston & Belleville, Ontario
+    </>
+  )
+  // "Resident VoIP Packages"
+  const slug = "voip"
+  // "voip"
+  const bulletNavMenu = <BulletNavMenu />
+
+  return (
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+      <VoipContent />
+    </InternalTemplate>
+  )
+}
+
+function VoipContent() {
   return (
     <>
       <div id="page-content">
         {/* Block */}
         <div className="block">
           <div className="container">
-            <h1 className="text-center decor color">
-              Residential <span style={{ color: "#A80532" }}>VoIP</span>{" "}
-              Packages
-            </h1>
             <span className="text-center" style={{ fontSize: "20px" }}>
               KOS VoIP brings you inexpensive, convenient premium phone service
               over your High Speed Internet connection!
