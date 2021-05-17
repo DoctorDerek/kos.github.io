@@ -1,14 +1,28 @@
-import React from "react"
-export default function HostingPackagesAndPricing() {
+import { InternalTemplate } from "@/components/InternalTemplate"
+
+export default function HostingPackagesAndPricing(): JSX.Element {
+  const title = (
+    <>
+      <span style={{ color: "#A80532" }}>Hosting</span> Packages & Pricing
+    </>
+  )
+  // "Hosting Packages & Pricing"
+  const slug = "hosting/packages"
+  // "hosting/packages"
+
+  return (
+    <InternalTemplate title={title} slug={slug}>
+      <HostingPackagesAndPricingContent />
+    </InternalTemplate>
+  )
+}
+
+function HostingPackagesAndPricingContent() {
   return (
     <div id="page-content">
       {/* Block */}
       <div className="block">
         <div className="container">
-          <h1 className="text-center decor color">
-            <span style={{ color: "#A80532" }}>Hosting</span> Packages &amp;
-            Pricing
-          </h1>
           <span className="text-center" style={{ fontSize: "20px" }}>
             Kingston Online Services offers a variety of options for getting
             information on your company or past-time out onto the Internet in
