@@ -13,15 +13,6 @@ import FlyoutMenu from "@/components/FlyoutMenu"
  *
  * @typeParam title - The title of the link
  */
-/*
-type NAVIGATION_MENU = { [title: string]: HREF_OR_SUBMENU } | NAVIGATION_MENU[]
-type HREF_OR_SUBMENU = string | NAVIGATION_MENU
-
-const exampleNavMenu: NAVIGATION_MENU = [
-  { Home: "/" },
-  { Services: [{ "Residential Services": "/" }] },
-]
-*/
 
 const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
   ["Home", "/"],
