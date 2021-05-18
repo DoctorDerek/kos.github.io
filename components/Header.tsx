@@ -1,9 +1,8 @@
 import ImageFixed from "next/image"
-import Image from "@/components/CustomImage"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 
-const Column = ({ children }) => (
+const Column = ({ children }: { children: any }) => (
   <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 lg:flex-grow-0 sm:flex-grow">
     {children}
   </div>
@@ -25,12 +24,12 @@ export default function Header() {
         </Column>
 
         <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 w-36">
-          <button
+          <a
             href="/order/"
-            className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
+            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange active:focus:bg-[#005395] bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
           >
             Order now
-          </button>
+          </a>
         </div>
 
         <Column>
