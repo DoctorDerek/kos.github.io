@@ -8,7 +8,7 @@ const root = process.cwd()
 export async function getAllTags(type: string) {
   const files = fs.readdirSync(path.join(root, "data", type))
 
-  let tagCount = new Map()
+  let tagCount = {}
   // Iterate through each post, putting all found tags into `tags`
   files.forEach((file) => {
     const source = fs.readFileSync(path.join(root, "data", type, file), "utf8")
@@ -17,9 +17,12 @@ export async function getAllTags(type: string) {
       data.tags.forEach((tag: string) => {
         const formattedTag = kebabCase(tag) as string
         if (formattedTag in tagCount) {
-          tagCount.set(formattedTag, tagCount.get(formattedTag) + 1)
+          //@ts-expect-error
+          tagCount[formattedTag] += 1
         } else {
-          tagCount.set(formattedTag, 1)
+          //@ts-expect-error
+          tagCount[formattedTag] = 1
+          /* Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'. */
         }
       })
     }
