@@ -36,7 +36,7 @@ const generateRss = (posts: FrontMatter[], page = "index.xml") => `
       <atom:link href="${
         siteMetadata.siteUrl
       }/${page}" rel="self" type="application/rss+xml"/>
-      ${posts.map(generateRssItem).join("")}
+      ${posts.map && posts.map(generateRssItem).join("")}
     </channel>
   </rss>
 `
