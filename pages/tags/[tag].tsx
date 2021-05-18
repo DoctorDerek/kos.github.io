@@ -11,7 +11,7 @@ import generateRss from "@/lib/generate-rss"
 const root = process.cwd()
 
 export async function getStaticPaths() {
-  const tags = await getAllTags("blog")
+  const tags = (await getAllTags("blog")) as string[]
 
   return {
     paths: Object.keys(tags).map((tag) => ({
