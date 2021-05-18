@@ -38,13 +38,8 @@ type NAVIGATION_MENU_TYPE =
  * @typeParam tags - The tags as a string array
  *
  * @remarks
- * This type expects an array of tuples, where each array has a "title"
- * for the navigation menu that either points to a link or submenu. The
- * link ("href") is a plain string. The submenu is this type, recursively.
- *
- * Reference:
- * https://www.typescriptlang.org/play#example/recursive-type-references
- *
+ * This type is used for the blog posts in the site with their associated
+ * mdx Markdown content.
  */
 type FrontMatter = {
   slug: string
