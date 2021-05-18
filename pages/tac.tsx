@@ -1423,7 +1423,7 @@ export default function TermsAndConditions() {
         Internet services:
       </p>
       <p>(1 Megabyte “MB” = 1024 Kilobytes “KB”)</p>
-      <center>
+      <div className="flex items-center justify-center">
         <table width="416" cellPadding="7" cellSpacing="0">
           <colgroup>
             <col width="193" />
@@ -1522,7 +1522,7 @@ export default function TermsAndConditions() {
             </tr>
           </tbody>
         </table>
-      </center>
+      </div>
       <p>
         <br />
         <br />
