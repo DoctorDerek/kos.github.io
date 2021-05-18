@@ -1,4 +1,9 @@
-const projectsData = [
+const projectsData: {
+  title: string
+  description: string
+  imgSrc: string
+  href: string
+}[] = [
   {
     title: "A Search Engine",
     description: `What is you could look up any information in the world? Webpages, images, videos
