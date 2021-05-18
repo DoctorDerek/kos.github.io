@@ -59,7 +59,6 @@ export default function index() {
                 className="contact-form"
                 name="contactform"
                 method="post"
-                noValidate="novalidate"
               >
                 <div id="success">
                   <p>Your message was sent successfully!</p>
@@ -74,35 +73,38 @@ export default function index() {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="input-wrapper">
-                        <label>
+                        <label htmlFor="name">
                           Name <span className="required">*</span>
                         </label>
                         <input
                           type="text"
                           className="input-custom input-full"
                           name="name"
+                          id="name"
                           placeholder="Your name"
                         />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="input-wrapper">
-                        <label>Phone</label>
+                        <label htmlFor="phone">Phone</label>
                         <input
                           type="text"
                           className="input-custom input-full"
                           name="phone"
+                          id="phone"
                           placeholder="(555) 555-5555"
                         />
                       </div>
                     </div>
                   </div>
                   <div className="input-wrapper">
-                    <label>Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                       type="text"
                       className="input-custom input-full"
                       name="email"
+                      id="email"
                       placeholder="xxxx@xxxx.xxx"
                     />
                   </div>
@@ -110,7 +112,7 @@ export default function index() {
                 <div>
                   <b>How did you hear about us:</b>
                   <select className="input-custom input-full" name="how">
-                    <option value>Please select one...</option>
+                    <option value="">Please select one...</option>
                     <option value="Current KOS user">Current KOS user</option>
                     <option value="Family or Friend">Family or Friend</option>
                     <option value="Radio Ad">Radio Ad</option>
@@ -122,10 +124,11 @@ export default function index() {
                   </select>
                 </div>
                 <div>
-                  <label>Message</label>
+                  <label htmlFor="message">Message</label>
                   <textarea
                     className="textarea-custom input-full"
                     name="message"
+                    id="message"
                     defaultValue={""}
                   />
                 </div>
