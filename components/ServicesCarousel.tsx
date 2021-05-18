@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "@/components/CustomImage"
 
-export default function ServicesCarousel({ children }) {
+export default function ServicesCarousel({ children }: { children: any }) {
   return (
     <div className="pt-20 block-class">
       <div className="container mx-auto">
