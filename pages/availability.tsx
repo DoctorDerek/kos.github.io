@@ -22,8 +22,8 @@ export default function Availability() {
                 type="text"
                 placeholder="K7K 5W7"
                 name="postalcode"
-                maxLength="7"
-                size="7"
+                maxLength={7}
+                size={7}
               />
               <input type="submit" value="Check" name="sub" />
             </div>
