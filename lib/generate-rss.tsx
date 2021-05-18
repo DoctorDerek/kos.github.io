@@ -31,12 +31,12 @@ const generateRss = (posts: FrontMatter[], page = "index.xml") => `
 })</managingEditor>
       <webMaster>${siteMetadata.email} (${siteMetadata.author})</webMaster>
       <lastBuildDate>${new Date(
-        posts[0] && posts[0].date ? posts[0].date : new Date()
+        posts && posts[0] && posts[0].date ? posts[0].date : new Date()
       ).toUTCString()}</lastBuildDate>
       <atom:link href="${
         siteMetadata.siteUrl
       }/${page}" rel="self" type="application/rss+xml"/>
-      ${posts.map && posts.map(generateRssItem).join("")}
+      ${posts && posts.map && posts.map(generateRssItem).join("")}
     </channel>
   </rss>
 `
