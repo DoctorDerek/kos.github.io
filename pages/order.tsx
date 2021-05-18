@@ -23,11 +23,10 @@ export default function index() {
                     className="order-request-form-js"
                     id="orderRequestFormSimple"
                     method="post"
-                    noValidate="novalidate"
                   >
                     <input
                       type="hidden"
-                      name="formtype"
+                      id="formtype"
                       defaultValue="orderform"
                     />
                     <div className="successform">
@@ -42,44 +41,44 @@ export default function index() {
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="name"
+                      id="name"
                       placeholder="Name:"
                     />
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="address"
+                      id="address"
                       placeholder="Address:"
                     />
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="city"
+                      id="city"
                       placeholder="City:"
                     />
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="postal"
+                      id="postal"
                       placeholder="Postal Code:"
                     />
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="phone"
+                      id="phone"
                       placeholder="Phone:"
                     />
                     <input
                       className="input-custom input-full"
                       type="text"
-                      name="email"
+                      id="email"
                       placeholder="Email:"
                     />
                     <div className="margin10">
                       <label>
                         <input
                           type="radio"
-                          name="customer_type"
+                          id="customer_type"
                           defaultValue="Residential Customer"
                           style={{
                             border: "2px dotted #00f",
@@ -94,6 +93,7 @@ export default function index() {
                       <label>
                         <input
                           type="radio"
+                          id="customer_type"
                           name="customer_type"
                           defaultValue="Business Customer"
                           style={{
@@ -107,10 +107,11 @@ export default function index() {
                         &nbsp;{" "}
                       </label>
                     </div>
-                    <div name="residential_options" className="margin10">
+                    <div id="residential_options" className="margin10">
                       <label>
                         <input
                           type="checkbox"
+                          id="customer_option_dsl"
                           name="customer_option_dsl"
                           defaultValue="DSL Information Selected"
                           style={{
@@ -123,6 +124,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
+                          id="customer_option_cab"
                           name="customer_option_cab"
                           defaultValue="Cable Information Selected"
                           style={{
@@ -135,6 +137,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
+                          id="customer_option_wir"
                           name="customer_option_wir"
                           defaultValue="Wireless Information Selected"
                           style={{
@@ -147,7 +150,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
-                          name="customer_option_voi"
+                          id="customer_option_voi"
                           defaultValue="VoIP Information Selected"
                           style={{
                             border: "2px dotted #00f",
@@ -159,6 +162,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
+                          id="customer_option_dia"
                           name="customer_option_dia"
                           defaultValue="Dial Up Information Selected"
                           style={{
@@ -171,7 +175,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
-                          name="customer_option_hos"
+                          id="customer_option_hos"
                           defaultValue="Hosting Information Selected"
                           style={{
                             border: "2px dotted #00f",
@@ -182,13 +186,14 @@ export default function index() {
                       </label>
                     </div>
                     <div
-                      name="business_options"
+                      id="business_options"
                       style={{ display: "none" }}
                       className="margin10"
                     >
                       <label>
                         <input
                           type="checkbox"
+                          id="bus_customer_option_dsl"
                           name="bus_customer_option_dsl"
                           defaultValue="DSL Information Selected"
                           style={{
@@ -201,7 +206,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
-                          name="bus_customer_option_cab"
+                          id="bus_customer_option_cab"
                           defaultValue="Cable Information Selected"
                           style={{
                             border: "2px dotted #00f",
@@ -213,7 +218,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
-                          name="bus_customer_option_wir"
+                          id="bus_customer_option_wir"
                           defaultValue="Wireless Information Selected"
                           style={{
                             border: "2px dotted #00f",
@@ -225,7 +230,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
-                          name="bus_customer_option_voi"
+                          id="bus_customer_option_voi"
                           defaultValue="VoIP Information Selected"
                           style={{
                             border: "2px dotted #00f",
@@ -237,6 +242,7 @@ export default function index() {
                       <label>
                         <input
                           type="checkbox"
+                          id="bus_customer_option_hos"
                           name="bus_customer_option_hos"
                           defaultValue="Hosting Information Selected"
                           style={{
@@ -247,13 +253,14 @@ export default function index() {
                         HOSTING &nbsp;{" "}
                       </label>
                     </div>
-                    <div name="option_bus_dsl" style={{ display: "none" }}>
+                    <div id="option_bus_dsl" style={{ display: "none" }}>
                       <b>High Speed DSL Plans for Business</b>
                       <select
                         className="input-custom input-full"
+                        id="bus_customer_option_dsl_select"
                         name="bus_customer_option_dsl_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="LITE 6 - $59.95">
                           LITE 6 - $59.95, 60 GB OF DATA TRANSFER PER MONTH
                         </option>
@@ -287,13 +294,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_bus_cab" style={{ display: "none" }}>
+                    <div id="option_bus_cab" style={{ display: "none" }}>
                       <b>High Speed Cable Plans for Business</b>
                       <select
                         className="input-custom input-full"
+                        id="bus_customer_option_cable_select"
                         name="bus_customer_option_cable_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="CABLE 15 - $39.95">
                           CABLE 15 - $39.95, 200 GB OF DATA TRANSFER PER MONTH
                         </option>
@@ -313,13 +321,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_bus_wir" style={{ display: "none" }}>
+                    <div id="option_bus_wir" style={{ display: "none" }}>
                       <b>Wireless Internet Plans for Business</b>
                       <select
                         className="input-custom input-full"
+                        id="bus_customer_option_wireless_select"
                         name="bus_customer_option_wireless_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="BIZ 4 - $71.95">
                           BIZ 4 - $71.95, 100 GB OF DATA TRANSFER PER MONTH
                         </option>
@@ -336,13 +345,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_bus_voi" style={{ display: "none" }}>
+                    <div id="option_bus_voip" style={{ display: "none" }}>
                       <b>VoIP Plans for Business</b>
                       <select
                         className="input-custom input-full"
+                        id="bus_customer_option_voip_select"
                         name="bus_customer_option_voip_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="CANADA WIDE - $14.95">
                           CANADA WIDE - $14.95, REQUIRED HARDWARE INCLUDED
                         </option>
@@ -359,13 +369,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_bus_hos" style={{ display: "none" }}>
+                    <div id="option_bus_hos" style={{ display: "none" }}>
                       <b>Hosting Package Plans for Business</b>
                       <select
                         className="input-custom input-full"
+                        id="bus_customer_option_hosting"
                         name="bus_customer_option_hosting"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="Package 1 - $20.00">
                           Package 1 - $20.00, 20 GB
                         </option>
@@ -387,13 +398,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_dsl" style={{ display: "none" }}>
+                    <div id="option_dsl" style={{ display: "none" }}>
                       <b>High Speed DSL Plans for Residential</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_dsl_select"
                         name="customer_option_dsl_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="LITE 6 - $26.95">
                           LITE 6 - $26.95, 25 GB DATA TRANSFER PER MONTH
                         </option>
@@ -420,13 +432,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_cab" style={{ display: "none" }}>
+                    <div id="option_cab" style={{ display: "none" }}>
                       <b>High Speed Cable Plans for Residential</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_cable_select"
                         name="customer_option_cable_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="CABLE 15 - $39.95">
                           CABLE 15 - $39.95, 200 GB OF DATA TRANSFER PER MONTH
                         </option>
@@ -447,13 +460,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_wir" style={{ display: "none" }}>
+                    <div id="option_wir" style={{ display: "none" }}>
                       <b>Wireless Internet Plans for Residential</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_wireless_select"
                         name="customer_option_wireless_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="LITE 4 - $46.95">
                           LITE 4 - $46.95, 50 GB TRANSFER PER MONTH
                         </option>
@@ -475,13 +489,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_voi" style={{ display: "none" }}>
+                    <div id="option_voi" style={{ display: "none" }}>
                       <b>VoIP Plans for Residential</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_voip_select"
                         name="customer_option_voip_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="CANADA WIDE - $14.95">
                           CANADA WIDE - $14.95, REQUIRED HARDWARE INCLUDED
                         </option>
@@ -501,13 +516,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_dia" style={{ display: "none" }}>
+                    <div id="option_dia" style={{ display: "none" }}>
                       <b>Dial Up Plans for Residential</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_dialup_select"
                         name="customer_option_dialup_select"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="EXTRA-LITE<br>DIAL UP - $90.00">
                           EXTRA-LITEDIAL UP - $90.00, V.90 MODEM ACCESS UP TO 56
                           KBPS
@@ -533,13 +549,14 @@ export default function index() {
                       */}
                       </select>
                     </div>
-                    <div name="option_hos" style={{ display: "none" }}>
+                    <div id="option_hos" style={{ display: "none" }}>
                       <b>Hosting Packages</b>
                       <select
                         className="input-custom input-full"
+                        id="customer_option_hosting"
                         name="customer_option_hosting"
                       >
-                        <option value>Please select one...</option>
+                        <option value="">Please select one...</option>
                         <option value="Package 1 - $20.00">
                           Package 1 - $20.00, 20 GB
                         </option>
@@ -563,8 +580,8 @@ export default function index() {
                     </div>
                     <div>
                       <b>How did you hear about us:</b>
-                      <select className="input-custom input-full" name="how">
-                        <option value>Please select one...</option>
+                      <select className="input-custom input-full" id="how">
+                        <option value="">Please select one...</option>
                         <option value="Current KOS user">
                           Current KOS user
                         </option>
@@ -579,9 +596,10 @@ export default function index() {
                         <option value="Other">Other</option>
                       </select>
                     </div>
+                    <label htmlFor="comments">Comments</label>
                     <textarea
                       className="input-custom input-full"
-                      type="text"
+                      id="comments"
                       name="comments"
                       placeholder="Comments:"
                       defaultValue={""}
