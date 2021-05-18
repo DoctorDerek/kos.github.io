@@ -322,7 +322,7 @@ export default function PrivacyPolicy() {
             2.1 KOS shall identify orally, electronically or in writing, the
             purposes for which Personal Information is collected at or before
             the time the information is collected.
-            <font size="2"></font>Unless required by law, KOS shall not use or
+            <span size="2"></span>Unless required by law, KOS shall not use or
             disclose for any new purpose Personal Information that has been
             collected without first identifying and documenting the new purpose
             and obtaining the consent of the Customer or Employee.
