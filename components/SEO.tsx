@@ -1,5 +1,6 @@
 import { NextSeo, ArticleJsonLd } from "next-seo"
 import siteMetadata from "@/data/siteMetadata.json"
+import { OpenGraphImages } from "next-seo/lib/types"
 
 export const SEO = {
   title: siteMetadata.title,
@@ -32,7 +33,15 @@ export const SEO = {
   ],
 }
 
-export const PageSeo = ({ title, description, url }) => {
+export const PageSeo = ({
+  title,
+  description,
+  url,
+}: {
+  title: string
+  description: string
+  url: string
+}) => {
   return (
     <NextSeo
       title={`${title} – ${siteMetadata.title}`}
@@ -55,6 +64,14 @@ export const BlogSeo = ({
   url,
   tags,
   images = [],
+}: {
+  title: string
+  summary: string
+  date: Date | string
+  lastmod: Date | string
+  url: string
+  tags: string[]
+  images: OpenGraphImages[]
 }) => {
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
@@ -65,12 +82,13 @@ export const BlogSeo = ({
       ? [images]
       : images
 
-  const featuredImages = imagesArr.map((img) => {
+  const featuredImages = imagesArr
+  /*imagesArr.map((img) => {
     return {
       url: `${siteMetadata.siteUrl}${img}`,
       alt: title,
     }
-  })
+  })*/
 
   return (
     <>
@@ -89,12 +107,12 @@ export const BlogSeo = ({
           url,
           title,
           description: summary,
-          images: featuredImages,
+          images: featuredImages as OpenGraphImages[],
         }}
         additionalMetaTags={[
           {
             name: "twitter:image",
-            content: featuredImages[0].url,
+            content: featuredImages[0] as string, // featuredImages[0].url,
           },
         ]}
       />
@@ -103,10 +121,11 @@ export const BlogSeo = ({
         dateModified={modifiedAt}
         datePublished={publishedAt}
         description={summary}
-        images={featuredImages}
+        images={featuredImages as string[]}
         publisherName={siteMetadata.author}
         title={title}
         url={url}
+        publisherLogo={""}
       />
     </>
   )
