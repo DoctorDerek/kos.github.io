@@ -2,7 +2,7 @@ import ImageFixed from "next/image"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 
-const Column = ({ children }: { children: any }) => (
+const Column = ({ children }: { children?: any }) => (
   <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 lg:flex-grow-0 sm:flex-grow">
     {children}
   </div>

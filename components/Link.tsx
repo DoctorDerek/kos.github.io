@@ -9,7 +9,7 @@ const CustomLink = ({
   ...rest
 }: {
   href: string
-  children: any
+  children?: any
   className?: string
   onClick?: () => void
 }) => {
