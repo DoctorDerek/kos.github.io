@@ -102,7 +102,7 @@ export async function getFileBySlug(type: any, slug: any) {
   }
 }
 
-export async function getAllFilesFrontMatter(type: any) {
+export async function getAllFilesFrontMatter(type: any): Promise<FrontMatter> {
   const files = fs.readdirSync(path.join(root, "data", type))
 
   const allFrontMatter = []
@@ -114,4 +114,8 @@ export async function getAllFilesFrontMatter(type: any) {
       allFrontMatter.push({ ...data, slug: formatSlug(file) })
     }
   })
+
+  //@ts-expect-error
+  return getAllFilesFrontMatter
+  // Type '(type: any) => Promise<FrontMatter>' is missing the following properties from type 'FrontMatter': slug, date, title, summary, and 5 more.
 }
