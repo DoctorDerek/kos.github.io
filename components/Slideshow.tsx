@@ -5,7 +5,7 @@ import SlideshowSlide from "./SlideshowSlide"
 
 const Slideshow = () => {
   const [pause, setPause] = useState(false)
-  const timer = useRef()
+  const timer = useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 3000, // animation duration in ms
@@ -18,12 +18,14 @@ const Slideshow = () => {
   })
 
   useEffect(() => {
-    sliderRef.current.addEventListener("mouseover", () => {
-      setPause(true)
-    })
-    sliderRef.current.addEventListener("mouseout", () => {
-      setPause(false)
-    })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseover", () => {
+        setPause(true)
+      })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseout", () => {
+        setPause(false)
+      })
   }, [sliderRef])
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const Slideshow = () => {
   return (
     <>
       <div
-        ref={sliderRef}
+        ref={sliderRef as React.RefObject<HTMLDivElement>}
         className="text-white keen-slider h-80 sm:h-112 md:h-[32rem] lg:h-[36rem] xl:h-[40rem]"
       >
         <SlideshowSlide
