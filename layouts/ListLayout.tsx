@@ -13,13 +13,7 @@ export default function ListLayout({
   posts,
   title,
 }: {
-  posts: {
-    slug: string
-    date: string | Date
-    title: string
-    summary: string
-    tags: string[]
-  }[]
+  posts: FrontMatter[]
   title: string
 }) {
   const [searchValue, setSearchValue] = useState("")

@@ -4,29 +4,40 @@ import SectionContainer from "@/components/SectionContainer"
 import { BlogSeo } from "@/components/SEO"
 import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata.json"
+import React from "react"
 
-const editUrl = (fileName) =>
+const editUrl = (fileName: string) =>
   `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
+const discussUrl = (slug: string) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`
 
-const postDateTemplate = {
+const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 }
 
-export default function PostLayout({ children, frontMatter, next, prev }) {
+export default function PostLayout({
+  children,
+  frontMatter,
+  next,
+  prev,
+}: {
+  children?: JSX.Element | JSX.Element[]
+  frontMatter: FrontMatter
+  next?: FrontMatter
+  prev?: FrontMatter
+}) {
   const { slug, fileName, date, title, tags } = frontMatter
 
   return (
     <SectionContainer>
       <BlogSeo
-        url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`}
         {...frontMatter}
+        url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`}
       />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
@@ -36,7 +47,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
+                    <time dateTime={date as string}>
                       {new Date(date).toLocaleDateString(
                         siteMetadata.locale,
                         postDateTemplate
@@ -91,9 +102,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 {children}
               </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {"Discuss on Twitter"}
-                </Link>
+                <Link href={discussUrl(slug)}>{"Discuss on Twitter"}</Link>
                 {` • `}
                 <Link href={editUrl(fileName)}>{"View on GitHub"}</Link>
               </div>

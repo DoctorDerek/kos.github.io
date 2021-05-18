@@ -10,7 +10,7 @@ const CustomLink = ({
 }: {
   href: string
   children: any
-  className: string
+  className?: string
   onClick?: () => void
 }) => {
   const isInternalLink = href && href.startsWith("/")

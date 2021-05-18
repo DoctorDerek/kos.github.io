@@ -27,3 +27,34 @@ type NAVIGATION_MENU_TYPE =
       href_or_submenu: string | NAVIGATION_MENU_TYPE | NAVIGATION_MENU_TYPE[]
     ]
   | NAVIGATION_MENU_TYPE[]
+
+/**
+ * Frontmatter type used as posts array in ListLayout.tsx & PostLayout.tsx
+ *
+ * @typeParam slug - The URL slug
+ * @typeParam date - The publication date
+ * @typeParam title - The post title
+ * @typeParam summary - The post summary
+ * @typeParam tags - The tags as a string array
+ *
+ * @remarks
+ * This type expects an array of tuples, where each array has a "title"
+ * for the navigation menu that either points to a link or submenu. The
+ * link ("href") is a plain string. The submenu is this type, recursively.
+ *
+ * Reference:
+ * https://www.typescriptlang.org/play#example/recursive-type-references
+ *
+ */
+type FrontMatter = {
+  slug: string
+  date: string | Date
+  title: string
+  summary: string
+  tags: string[]
+  fileName: string
+  lastmod: string | Date
+  url: string
+  tags: string[]
+  images: OpenGraphImages[]
+}
