@@ -1138,7 +1138,7 @@ export default function TermsAndConditions() {
         <b>50%</b>) of the remaining monthly Fees for the cancelled Service that
         would have been payable to the end of the Fixed Term, plus applicable
         taxes
-        <span size="1"> </span>
+        <span> </span>
         (collectively, the “<b>Cancellation Charges</b>”). You acknowledge that
         the Cancellation Charges are a reasonable estimate of KOS’s liquidated
         damages, represent consideration for the Services, and are not a
