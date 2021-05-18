@@ -5,11 +5,13 @@ const CustomLink = ({
   href,
   children,
   className,
+  onClick,
   ...rest
 }: {
   href: string
   children: any
   className: string
+  onClick?: () => void
 }) => {
   const isInternalLink = href && href.startsWith("/")
   const isAnchorLink = href && href.startsWith("#")
