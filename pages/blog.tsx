@@ -4,7 +4,7 @@ import ListLayout from "@/layouts/ListLayout"
 import { PageSeo } from "@/components/SEO"
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter("blog")
+  const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
 
   return { props: { posts } }
 }
