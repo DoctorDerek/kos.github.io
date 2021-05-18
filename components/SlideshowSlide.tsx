@@ -12,6 +12,13 @@ const SlideshowSlide = ({
   text2 = isRequired(),
   href = isRequired(),
   text3 = isRequired(),
+}: {
+  src: string | never
+  alt: string | never
+  text1: string | never
+  text2: string | never
+  href: string | never
+  text3: string | never
 }) => {
   // Both transform-gpu and style={{ minWidth: 0, maxWidth: 0 }}
   // are required to eliminate Cumulative Layout Shift (CLS) here.
@@ -37,12 +44,13 @@ const SlideshowSlide = ({
           </strong>
         </div>
         <div className="text text3">
-          <button
+          <a
             href={href}
-            className="text-white hover:active:focus:outline-none hover:active:focus:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:active:bg-[#005395] bg-[#b0243d] shadow-xl"
+            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:a
+            ctive:bg-[#005395] bg-[#b0243d] shadow-xl"
           >
             {text3}
-          </button>
+          </a>
         </div>
       </div>
     </div>
