@@ -27,3 +27,30 @@ type NAVIGATION_MENU_TYPE =
       href_or_submenu: string | NAVIGATION_MENU_TYPE | NAVIGATION_MENU_TYPE[]
     ]
   | NAVIGATION_MENU_TYPE[]
+
+/**
+ * Frontmatter type used as posts array in ListLayout.tsx & PostLayout.tsx
+ *
+ * @typeParam slug - The URL slug
+ * @typeParam date - The publication date
+ * @typeParam title - The post title
+ * @typeParam summary - The post summary
+ * @typeParam tags - The tags as a string array
+ *
+ * @remarks
+ * This type is used for the blog posts in the site with their associated
+ * mdx Markdown content.
+ */
+type FrontMatter = {
+  slug: string
+  date: string | Date
+  title: string
+  summary: string
+  tags: string[]
+  fileName: string
+  lastmod: string | Date
+  url: string
+  tags: string[]
+  images: OpenGraphImages[]
+  draft: boolean
+}

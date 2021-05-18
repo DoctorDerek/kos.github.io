@@ -4,6 +4,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
 import { useRouter } from "next/router"
+const DEBUG = false
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
 const MENU_LOOKUP_ALIASES = new Map([
@@ -22,7 +23,7 @@ const partOfCurrentPagePath = (
 ) => {
   if (typeof hrefOrSubmenu === "string") {
     let href = hrefOrSubmenu as string
-    console.log(title, href, currentPath)
+    DEBUG && console.log(title, href, currentPath)
     // Remove trailing slashes if present so /order/ matches /order
     currentPath =
       currentPath.slice(-1) === "/" ? currentPath.slice(0, -1) : currentPath
@@ -32,12 +33,13 @@ const partOfCurrentPagePath = (
   }
 
   if (typeof hrefOrSubmenu === "object") {
-    console.log(title, currentPath)
+    DEBUG && console.log(title, currentPath)
     // Test to see if the menu structure contains the current path
     // e.g. /home-internet-in-kingston-ontario/residential-services
     const arrayOfRegExp = MENU_LOOKUP_ALIASES.get(title)
     if (arrayOfRegExp)
-      console.log(arrayOfRegExp.some((regExp) => regExp.test(currentPath)))
+      DEBUG &&
+        console.log(arrayOfRegExp.some((regExp) => regExp.test(currentPath)))
     if (arrayOfRegExp)
       return arrayOfRegExp.some((regExp) => regExp.test(currentPath))
   }
