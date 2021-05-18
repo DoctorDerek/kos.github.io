@@ -52,4 +52,5 @@ type FrontMatter = {
   url: string
   tags: string[]
   images: OpenGraphImages[]
+  draft: boolean
 }
