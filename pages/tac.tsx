@@ -38,18 +38,18 @@ export default function TermsAndConditions() {
         <li>
           <p className="text-left font18">
             “
-            <font color="#222222">
+            <span color="#222222">
               <span lang="en-GB">
                 <b>E9-1-1</b>
               </span>
-            </font>
-            <font color="#222222">
+            </span>
+            <span color="#222222">
               <span lang="en-GB">
                 ” means enhanced 9-1-1 service which may provide emergency
                 services personnel with your location information and phone
                 number;{" "}
               </span>
-            </font>
+            </span>
           </p>
         </li>
         <li>
@@ -125,7 +125,7 @@ export default function TermsAndConditions() {
             for specific Services. Service Agreements are available on the
             Website at the following URL:{" "}
             <a href="https://www.kos.net/policies/sa">
-              <font color="#0000ff">https://www.kos.net/policies/sa</font>
+              <span color="#0000ff">https://www.kos.net/policies/sa</span>
             </a>
             ;
           </p>
@@ -190,7 +190,7 @@ export default function TermsAndConditions() {
         The “<b>Agreement</b>” includes the Service Terms, Service Agreements
         made available on the Website at the following URL:{" "}
         <a href="https://www.kos.net/policies/">
-          <font color="#0000ff">https://www.kos.net/policies/</font>
+          <span color="#0000ff">https://www.kos.net/policies/</span>
         </a>{" "}
         or Services to which you subscribe, any KOS document describing
         features, products or services and any other document incorporated by
@@ -796,7 +796,7 @@ export default function TermsAndConditions() {
         recorded location information. Your customer portal can be accessed
         using the following url:{" "}
         <a href="https://voip.kos.net/">
-          <font color="#0000ff">https://voip.kos.net/</font>
+          <span color="#0000ff">https://voip.kos.net/</span>
         </a>
       </p>
       <p className="text-left font18">
@@ -873,9 +873,9 @@ export default function TermsAndConditions() {
         damages, losses and expenses, (including reasonable legal fees and
         expenses) which you or anyone accessing or attempting to access 9-1-1
         calling from your KOS VoIP Service
-        <font color="#222222">
+        <span color="#222222">
           <span lang="en-GB"></span>
-        </font>
+        </span>
         may suffer or incur, arising directly or indirectly out of or relating
         to your or that person’s failure to obtain access to 9-1-1 emergency
         services.
@@ -1138,7 +1138,7 @@ export default function TermsAndConditions() {
         <b>50%</b>) of the remaining monthly Fees for the cancelled Service that
         would have been payable to the end of the Fixed Term, plus applicable
         taxes
-        <font size="1"> </font>
+        <span size="1"> </span>
         (collectively, the “<b>Cancellation Charges</b>”). You acknowledge that
         the Cancellation Charges are a reasonable estimate of KOS’s liquidated
         damages, represent consideration for the Services, and are not a
@@ -1325,7 +1325,7 @@ export default function TermsAndConditions() {
             <span>
               <span>
                 <a href="mailto:accounts@kos.net">
-                  <font color="#0000ff">accounts@kos.net</font>
+                  <span color="#0000ff">accounts@kos.net</span>
                 </a>
               </span>
             </span>
@@ -1358,7 +1358,7 @@ export default function TermsAndConditions() {
             <span>
               <span>
                 <a href="mailto:accounts@kos.net">
-                  <font color="#0000ff">accounts@kos.net</font>
+                  <span color="#0000ff">accounts@kos.net</span>
                 </a>
               </span>
             </span>
