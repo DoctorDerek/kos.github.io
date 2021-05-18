@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: any }) {
   const allPosts = await getAllFilesFrontMatter("blog")
   const postIndex = allPosts.findIndex((post) => post.slug === params.slug)
   const prev = allPosts[postIndex + 1] || null
@@ -38,7 +38,15 @@ export async function getStaticProps({ params }) {
   return { props: { post, prev, next } }
 }
 
-export default function Blog({ post, prev, next }) {
+export default function Blog({
+  post,
+  prev,
+  next,
+}: {
+  post: any
+  prev: any
+  next: any
+}) {
   const { mdxSource, frontMatter } = post
   const content = hydrate(mdxSource, {
     components: MDXComponents,
