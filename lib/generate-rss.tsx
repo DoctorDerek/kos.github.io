@@ -1,6 +1,8 @@
 import siteMetadata from "@/data/siteMetadata.json"
 
-const generateRssItem = (post: FrontMatter) => `
+const generateRssItem = (post: FrontMatter) =>
+  post
+    ? `
   <item>
     <guid>${siteMetadata.siteUrl}/blog/${post.slug}</guid>
     <title>${post.title}</title>
@@ -8,9 +10,10 @@ const generateRssItem = (post: FrontMatter) => `
     <description>${post.summary}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     <author>${siteMetadata.email} (${siteMetadata.author})</author>
-    ${post.tags.map((t) => `<category>${t}</category>`).join("")}
+    ${post.tags.map((t: string) => `<category>${t}</category>`).join("")}
   </item>
 `
+    : ``
 
 const generateRss = (posts: FrontMatter[], page = "index.xml") => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
