@@ -26,7 +26,7 @@ export default function PostLayout({
   next,
   prev,
 }: {
-  children?: JSX.Element | JSX.Element[]
+  children?: JSX.Element | JSX.Element[] | React.ReactNode
   frontMatter: FrontMatter
   next?: FrontMatter
   prev?: FrontMatter
