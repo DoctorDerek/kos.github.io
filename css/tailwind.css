@@ -156,7 +156,7 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
 /*! CSS Used from: /css/plugins/slick.css */
 
 .slick-slider {
-  @apply box-border relative block select-none;
+  @apply box-border relative block p-0 m-0 list-none select-none;
   -moz-box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1170,7 +1170,7 @@ h2 + .category-carousel {
   content: "\e906";
   left: 22px;
   top: -25px;
-  font-family: "pool";
+  font-family: "pool", serif;
 }
 
 @media (max-width: 767px) {
@@ -1288,7 +1288,7 @@ h2 + .category-carousel {
 .slick-prev:before,
 .slick-next:before {
   @apply text-4xl leading-8 text-white cursor-pointer;
-  font-family: "pool";
+  font-family: "pool", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1307,10 +1307,6 @@ h2 + .category-carousel {
 
 .slick-next:before {
   content: "\e90f";
-}
-
-.slick-slider {
-  @apply p-0 m-0 list-none;
 }
 
 @media (max-width: 767px) {
@@ -1362,7 +1358,7 @@ h2 + .category-carousel {
 [class^="icon-"],
 [class*=" icon-"] {
   @apply not-italic font-normal leading-none normal-case;
-  font-family: "pool" !important;
+  font-family: "pool", serif !important;
   speak: none;
   font-variant: normal;
   -webkit-font-smoothing: antialiased;
