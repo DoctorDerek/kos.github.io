@@ -41,47 +41,49 @@ function HighSpeedCableContent() {
       </div>
       <div className="divider" />
       <div className="flex flex-wrap">
-        <div className="sm:w-1/3">
+        <div className="w-1/3">
           <div className="relative flex flex-col h-full shadow-2xl">
-            <div className="absolute z-10 block text-3xl font-bold text-white left-8 top-2">
+            <div className="absolute z-20 text-6xl font-bold text-white left-2 top-2">
               1
             </div>
-            <div className="bg-[#e8eff2] h-48">
-              <div className="p-40 pb-16 text-center bg-white absolute top-4 left-1/2 ml-[-148px] w-72 h-72 rounded-full border-solid border-8 border-[#e8eff2]">
-                <span style={{ fontSize: 36, fontWeight: "bold" }}>
-                  CABLE 15
-                </span>
-                <br />
-                <span style={{ fontSize: 36, fontWeight: "bold" }}>$39</span>
-                <sup>.95</sup>
-                <br />
-                per month{" "}
-                <sup>
-                  <a
-                    href="#1"
-                    style={{
-                      color: "#ffffff",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    1
-                  </a>{" "}
-                  <a
-                    href="#2"
-                    style={{
-                      color: "#ffffff",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    2
-                  </a>{" "}
-                  <span
-                    style={{
-                      color: "#ffffff",
-                      textDecoration: "underline",
-                    }}
-                  />{" "}
-                </sup>
+            <div className="flex flex-col items-center justify-center h-48 bg-gray-200">
+              <div className="absolute flex flex-col justify-center bg-blue-700 border-gray-200 border-solid rounded-full shadow-xl top-4 w-92 h-92 border-20">
+                <div className="z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white bg-blue-700 border-blue-800 border-solid rounded-full top-4 w-84 h-84 border-20">
+                  <span className="text-5xl font-bold">CABLE 15</span>
+                  <span className="mt-6">
+                    <span className="text-5xl font-bold">$39</span>
+                    <sup className="text-xl">.95</sup>
+                  </span>
+                  <span className="mt-0 text-xl">
+                    per month
+                    <sup>
+                      <a
+                        href="#1"
+                        style={{
+                          color: "#ffffff",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        1
+                      </a>{" "}
+                      <a
+                        href="#2"
+                        style={{
+                          color: "#ffffff",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        2
+                      </a>{" "}
+                      <span
+                        style={{
+                          color: "#ffffff",
+                          textDecoration: "underline",
+                        }}
+                      />{" "}
+                    </sup>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
