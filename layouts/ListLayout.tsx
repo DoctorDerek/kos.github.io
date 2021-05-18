@@ -3,9 +3,25 @@ import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata.json"
 import { useState } from "react"
 
-const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
+const postDateTemplate: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}
 
-export default function ListLayout({ posts, title }) {
+export default function ListLayout({
+  posts,
+  title,
+}: {
+  posts: {
+    slug: string
+    date: string | Date
+    title: string
+    summary: string
+    tags: string[]
+  }[]
+  title: string
+}) {
   const [searchValue, setSearchValue] = useState("")
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent =
@@ -54,7 +70,7 @@ export default function ListLayout({ posts, title }) {
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>
+                      <time dateTime={date as string}>
                         {new Date(date).toLocaleDateString(
                           siteMetadata.locale,
                           postDateTemplate
@@ -73,7 +89,7 @@ export default function ListLayout({ posts, title }) {
                         </Link>
                       </h3>
                       <div className="flex flex-wrap">
-                        {tags.map((tag) => (
+                        {tags.map((tag: string) => (
                           <Tag key={tag} text={tag} />
                         ))}
                       </div>
