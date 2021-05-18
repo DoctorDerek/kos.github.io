@@ -6,8 +6,6 @@ import siteMetadata from "@/data/siteMetadata.json"
 const MAX_DISPLAY = 5
 const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
 */
-import { getAllFilesFrontMatter } from "@/lib/mdx"
-
 import Slideshow from "@/components/Slideshow"
 import ServicesCarousel from "@/components/ServicesCarousel"
 import CategoryCarousel from "@/components/CategoryCarousel"
@@ -17,10 +15,12 @@ import FormBlock from "@/components/FormBlock"
 import NewsAndEvents from "@/components/NewsAndEvents"
 import Testimonials from "@/components/Testimonials"
 
-export async function getStaticProps() {
-  const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
+import { getAllFilesFrontMatter } from "@/lib/mdx"
 
-  return { props: { posts } }
+export async function getStaticProps() {
+  /*const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
+
+  return { props: { posts } }*/
 }
 
 //export default function Home({ posts }) {
