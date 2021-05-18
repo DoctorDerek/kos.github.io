@@ -1,4 +1,7 @@
-import fs from "fs"
+export default function Blog() {
+  return <>WIP</>
+}
+/*import fs from "fs"
 import hydrate from "next-mdx-remote/hydrate"
 import {
   getFiles,
@@ -73,3 +76,4 @@ export default function Blog({
     </>
   )
 }
+*/
