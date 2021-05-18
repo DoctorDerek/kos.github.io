@@ -2,7 +2,7 @@ import Image from "@/components/CustomImage"
 import { useEffect } from "react"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
 
-const useScript = (url) => {
+const useScript = (url: string) => {
   useEffect(() => {
     const script = document.createElement("script")
 
