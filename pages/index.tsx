@@ -18,7 +18,7 @@ import NewsAndEvents from "@/components/NewsAndEvents"
 import Testimonials from "@/components/Testimonials"
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter("blog")
+  const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
 
   return { props: { posts } }
 }
