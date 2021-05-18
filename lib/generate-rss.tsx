@@ -1,19 +1,23 @@
+//@ts-nocheck
 import siteMetadata from "@/data/siteMetadata.json"
 
-const generateRssItem = (post: FrontMatter) =>
-  post
-    ? `
+const generateRssItem = (post: FrontMatter) => (
   <item>
-    <guid>${siteMetadata.siteUrl}/blog/${post.slug}</guid>
+    <guid>
+      ${siteMetadata.siteUrl}/blog/${post.slug}
+    </guid>
     <title>${post.title}</title>
-    <link>${siteMetadata.siteUrl}/blog/${post.slug}</link>
+    <link>
+      ${siteMetadata.siteUrl}/blog/${post.slug}
+    </link>
     <description>${post.summary}</description>
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-    <author>${siteMetadata.email} (${siteMetadata.author})</author>
+    <author>
+      ${siteMetadata.email} (${siteMetadata.author})
+    </author>
     ${post.tags.map((t: string) => `<category>${t}</category>`).join("")}
   </item>
-`
-    : ``
+)
 
 const generateRss = (posts: FrontMatter[], page = "index.xml") => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
