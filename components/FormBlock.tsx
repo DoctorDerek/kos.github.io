@@ -165,7 +165,7 @@ export default function FormBlock() {
                   &nbsp;
                 </label>
               </div>
-              <div name="residential_options" className="margin10">
+              <div id="residential_options" className="margin10">
                 <label>
                   <input
                     type="checkbox"
@@ -242,7 +242,7 @@ export default function FormBlock() {
               <div>
                 <b>How did you hear about us:</b>
                 <select className="input-custom input-full" name="how">
-                  <option value>Please select one...</option>
+                  <option value="">Please select one...</option>
                   <option value="Current KOS user">Current KOS user</option>
                   <option value="Family or Friend">Family or Friend</option>
                   <option value="Radio Ad">Radio Ad</option>
@@ -255,7 +255,7 @@ export default function FormBlock() {
               </div>
               <textarea
                 className="input-custom input-full"
-                type="text"
+                id="message"
                 name="message"
                 placeholder="Message:"
                 defaultValue={""}
