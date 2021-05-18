@@ -5,7 +5,7 @@ import "keen-slider/keen-slider.min.css"
 
 export default function Testimonials() {
   const [pause, setPause] = React.useState(false)
-  const timer = React.useRef()
+  const timer: React.MutableRefObject<NodeJS.Timeout> = React.useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 5000,
@@ -18,12 +18,14 @@ export default function Testimonials() {
   })
 
   React.useEffect(() => {
-    sliderRef.current.addEventListener("mouseover", () => {
-      setPause(true)
-    })
-    sliderRef.current.addEventListener("mouseout", () => {
-      setPause(false)
-    })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseover", () => {
+        setPause(true)
+      })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseout", () => {
+        setPause(false)
+      })
   }, [sliderRef])
 
   React.useEffect(() => {
@@ -55,7 +57,10 @@ export default function Testimonials() {
                 </div>
               </h3>
               <div className="testimonials-carousel">
-                <div ref={sliderRef} className="keen-slider">
+                <div
+                  ref={sliderRef as React.RefObject<HTMLDivElement>}
+                  className="keen-slider"
+                >
                   <div className="keen-slider__slide number-slide1">
                     <div className="testimonials-item">
                       <div className="testimonials-text">
