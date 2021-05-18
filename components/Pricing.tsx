@@ -5,7 +5,7 @@ import "keen-slider/keen-slider.min.css"
 
 export default function Pricing() {
   const [pause, setPause] = React.useState(false)
-  const timer = React.useRef()
+  const timer = React.useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 1000,
@@ -18,12 +18,14 @@ export default function Pricing() {
   })
 
   React.useEffect(() => {
-    sliderRef.current.addEventListener("mouseover", () => {
-      setPause(true)
-    })
-    sliderRef.current.addEventListener("mouseout", () => {
-      setPause(false)
-    })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseover", () => {
+        setPause(true)
+      })
+    sliderRef.current &&
+      sliderRef.current.addEventListener("mouseout", () => {
+        setPause(false)
+      })
   }, [sliderRef])
 
   React.useEffect(() => {
@@ -49,7 +51,10 @@ export default function Pricing() {
               <h3>Special Offer</h3>
 
               <div className="price-carousel">
-                <div ref={sliderRef} className="keen-slider">
+                <div
+                  ref={sliderRef as React.RefObject<HTMLDivElement>}
+                  className="keen-slider"
+                >
                   <div className="keen-slider__slide number-slide1">
                     <div className="price-item">
                       <h6 className="price-title">KOS Wireless Special</h6>
@@ -64,12 +69,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <button
+                        <a
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -91,12 +96,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <button
+                        <a
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -118,12 +123,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <button
+                        <a
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
