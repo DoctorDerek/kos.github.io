@@ -48,8 +48,8 @@ export function InternalTemplate({
       </div>
       <div
         className={classNames(
-          fullWidth ? "" : "max-w-xl",
-          "px-4 py-8 mx-auto md:px-0 xl:py-16 lg:py-14 md:py-12 sm:py-10"
+          fullWidth ? "max-w-5xl md:px-6 lg:px-12" : "max-w-xl md:px-0",
+          "px-4 py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
         )}
       >
         <h1 className="text-left color decor">{title}</h1>
