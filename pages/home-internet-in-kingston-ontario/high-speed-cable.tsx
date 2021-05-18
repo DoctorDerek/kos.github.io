@@ -28,17 +28,15 @@ export default function HighSpeedCable(): JSX.Element {
 function HighSpeedCableContent() {
   return (
     <div>
-      <span className="text-center" style={{ fontSize: 20 }}>
+      <span className="text-xl text-center">
         Get an instant connection with Internet over cable at a price that suits
         your needs.
-      </span>{" "}
-      <br />
-      <br />
+      </span>
       <div>
         <iframe
           frameBorder={0}
           height={250}
-          width="80%"
+          width="100%"
           scrolling="no"
           src="https://kos.net/dslavail/dslavail.php"
           title="Postal Code Search"
