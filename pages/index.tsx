@@ -15,13 +15,12 @@ import FormBlock from "@/components/FormBlock"
 import NewsAndEvents from "@/components/NewsAndEvents"
 import Testimonials from "@/components/Testimonials"
 
+/*
 //import { getAllFilesFrontMatter } from "@/lib/mdx"
 export async function getStaticProps() {
-  /*const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
-
-  return { props: { posts } }*/
-  return { props: [] }
-}
+  //const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
+  return { props: { posts: [] } }
+}}*/
 
 //export default function Home({ posts }) {
 export default function Home() {

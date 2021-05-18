@@ -1,3 +1,8 @@
+export default function Tags() {
+  return <>WIP</>
+}
+
+/*
 import siteMetadata from "@/data/siteMetadata.json"
 import { kebabCase } from "@/lib/utils"
 import { getAllTags } from "@/lib/tags"
@@ -8,10 +13,10 @@ import { PageSeo } from "@/components/SEO"
 export async function getStaticProps() {
   const tags = (await getAllTags("blog")) as string[]
 
-  return { props: { tags } }
+  return { props: { tags: tags } }
 }
 
-export default function Tags({ tags }: { tags: any }) {
+export default function Tags({ tags }: { tags: string[] }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
     <>
@@ -46,3 +51,4 @@ export default function Tags({ tags }: { tags: any }) {
     </>
   )
 }
+*/

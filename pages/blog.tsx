@@ -1,16 +1,16 @@
 import siteMetadata from "@/data/siteMetadata.json"
-import ListLayout from "@/layouts/ListLayout"
+//import ListLayout from "@/layouts/ListLayout"
 import { PageSeo } from "@/components/SEO"
 
+/*
 //import { getAllFilesFrontMatter } from "@/lib/mdx"
 export async function getStaticProps() {
-  /*const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
+  //const posts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
 
-  return { props: { posts } }*/
-  return { props: [] }
+  return { props: { posts: [] } }
 }
-
-export default function Blog({ posts }: { posts: FrontMatter[] }) {
+*/
+export default function Blog() {
   return (
     <>
       <PageSeo
@@ -18,7 +18,7 @@ export default function Blog({ posts }: { posts: FrontMatter[] }) {
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/blog`}
       />
-      <ListLayout posts={posts} title="All Posts" />
+      {/*<ListLayout posts={posts} title="All Posts" />*/}
     </>
   )
 }
