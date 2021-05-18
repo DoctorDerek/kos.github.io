@@ -27,22 +27,19 @@ export default function HighSpeedCable(): JSX.Element {
 
 function HighSpeedCableContent() {
   return (
-    <div>
-      <span className="text-xl text-center">
+    <div className="flex flex-col space-y-6">
+      <span className="text-xl text-left">
         Get an instant connection with Internet over cable at a price that suits
         your needs.
       </span>
-      <div>
+      <div className="">
         <iframe
-          frameBorder={0}
-          height={250}
-          width="100%"
+          className="w-full h-16 max-w-xl mx-auto border border-black border-solid shadow"
           scrolling="no"
           src="https://kos.net/dslavail/dslavail.php"
           title="Postal Code Search"
         />
       </div>
-      <div className="divider" />
       <div className="flex flex-wrap">
         <div className="w-1/3">
           <div className="relative flex flex-col h-full shadow-2xl">
