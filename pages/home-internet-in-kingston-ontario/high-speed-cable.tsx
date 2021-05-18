@@ -14,12 +14,7 @@ export default function HighSpeedCable(): JSX.Element {
   const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
-    <InternalTemplate
-      title={title}
-      slug={slug}
-      bulletNavMenu={bulletNavMenu}
-      fullWidth={true}
-    >
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       <HighSpeedCableContent />
     </InternalTemplate>
   )
@@ -27,7 +22,7 @@ export default function HighSpeedCable(): JSX.Element {
 
 function HighSpeedCableContent() {
   return (
-    <div>
+    <div className="container">
       <span className="text-center" style={{ fontSize: 20 }}>
         Get an instant connection with Internet over cable at a price that suits
         your needs.
