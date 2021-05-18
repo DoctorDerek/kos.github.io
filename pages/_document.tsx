@@ -14,7 +14,9 @@ class MyDocument extends Document {
         <Head>
           <script
             type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.googleAnalytics }}
+            dangerouslySetInnerHTML={{
+              __html: process.env.googleAnalytics as string,
+            }}
           ></script>
 
           <meta charSet="utf-8" />
@@ -40,7 +42,9 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
             media="print"
-            onLoad="this.media='all'"
+            onLoad={
+              ("this.media='all'" as unknown) as React.ReactEventHandler<HTMLLinkElement>
+            }
           />
           <noscript>
             <link
@@ -57,7 +61,9 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
             media="print"
-            onLoad="this.media='all'"
+            onLoad={
+              ("this.media='all'" as unknown) as React.ReactEventHandler<HTMLLinkElement>
+            }
           />
           <noscript>
             <link
