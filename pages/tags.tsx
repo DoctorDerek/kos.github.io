@@ -6,7 +6,7 @@ import Link from "@/components/Link"
 import { PageSeo } from "@/components/SEO"
 
 export async function getStaticProps() {
-  const tags = await getAllTags("blog")
+  const tags = (await getAllTags("blog")) as string[]
 
   return { props: { tags } }
 }
