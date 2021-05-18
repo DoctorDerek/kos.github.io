@@ -35,7 +35,7 @@ function HighSpeedCableContent() {
           height={250}
           width="80%"
           scrolling="no"
-          src="../../dslavail/dslavail.php"
+          src="https://kos.net/dslavail/dslavail.php"
           title="Postal Code Search"
         />
       </div>
