@@ -2,15 +2,15 @@ const visit = require("unist-util-visit")
 const sizeOf = require("image-size")
 const fs = require("fs")
 
-module.exports = (options) => (tree) => {
+const imgToJSX = (options: any) => (tree: any) => {
   visit(
     tree,
     // only visit p tags that contain an img element
-    (node) =>
+    (node: any) =>
       node.type === "paragraph" &&
-      node.children.some((n) => n.type === "image"),
-    (node) => {
-      const imageNode = node.children.find((n) => n.type === "image")
+      node.children.some((n: any) => n.type === "image"),
+    (node: any) => {
+      const imageNode = node.children.find((n: any) => n.type === "image")
 
       // only local files
       if (fs.existsSync(`${process.cwd()}/public${imageNode.url}`)) {
@@ -19,7 +19,7 @@ module.exports = (options) => (tree) => {
         // Convert original node to next/image
         imageNode.type = "jsx"
         imageNode.value = `<Image
-          alt={\`${imageNode.alt}\`} 
+          alt={\`${imageNode.alt}\`}
           src={\`${imageNode.url}\`}
           width={${dimensions.width}}
           height={${dimensions.height}}
@@ -32,3 +32,5 @@ module.exports = (options) => (tree) => {
     }
   )
 }
+
+export default imgToJSX
