@@ -24,21 +24,21 @@ const tokenClassNames = {
   comment: "text-gray-400 italic",
 }
 
-export async function getFiles(type) {
+export async function getFiles(type: any) {
   return fs.readdirSync(path.join(root, "data", type))
 }
 
-export function formatSlug(slug) {
+export function formatSlug(slug: any) {
   return slug.replace(/\.(mdx|md)/, "")
 }
 
-export function dateSortDesc(a, b) {
+export function dateSortDesc(a: any, b: any) {
   if (a > b) return -1
   if (a < b) return 1
   return 0
 }
 
-export async function getFileBySlug(type, slug) {
+export async function getFileBySlug(type: any, slug: any) {
   const mdxPath = path.join(root, "data", type, `${slug}.mdx`)
   const mdPath = path.join(root, "data", type, `${slug}.md`)
   const source = fs.existsSync(mdxPath)
@@ -56,15 +56,31 @@ export async function getFileBySlug(type, slug) {
         require("remark-math"),
         imgToJsx,
       ],
-      inlineNotes: true,
+      // inlineNotes: true,
       rehypePlugins: [
         require("rehype-katex"),
         require("@mapbox/rehype-prism"),
         () => {
           return (tree) => {
-            visit(tree, "element", (node, index, parent) => {
-              let [token, type] = node.properties.className || []
-              if (token === "token") {
+            /*tag: string; "attr-name": string; "attr-value": string; deleted: string; inserted: string; punctuation: string; keyword: string; string: string; function: string; boolean: string; comment*/
+            visit(tree, "element", (node: any, index, parent) => {
+              let [token, type]: [
+                string,
+                (
+                  | "tag"
+                  | "attr-name"
+                  | "attr-value"
+                  | "deleted"
+                  | "inserted"
+                  | "punctuation"
+                  | "keyword"
+                  | "string"
+                  | "function"
+                  | "boolean"
+                  | "comment"
+                )
+              ] = node.properties.className || []
+              if (token === "token" && typeof type === "string") {
                 node.properties.className = [tokenClassNames[type]]
               }
             })
@@ -86,7 +102,7 @@ export async function getFileBySlug(type, slug) {
   }
 }
 
-export async function getAllFilesFrontMatter(type) {
+export async function getAllFilesFrontMatter(type: any) {
   const files = fs.readdirSync(path.join(root, "data", type))
 
   const allFrontMatter = []
@@ -98,6 +114,4 @@ export async function getAllFilesFrontMatter(type) {
       allFrontMatter.push({ ...data, slug: formatSlug(file) })
     }
   })
-
-  return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
 }
