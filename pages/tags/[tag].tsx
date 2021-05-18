@@ -23,7 +23,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: any }) {
   const allPosts = await getAllFilesFrontMatter("blog")
   const filteredPosts = allPosts.filter(
     (post) =>
@@ -40,7 +40,13 @@ export async function getStaticProps({ params }) {
   return { props: { posts: filteredPosts, tag: params.tag } }
 }
 
-export default function Tag({ posts, tag }) {
+export default function Tag({
+  posts,
+  tag,
+}: {
+  posts: FrontMatter[]
+  tag: string
+}) {
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(" ").join("-").slice(1)
   return (
