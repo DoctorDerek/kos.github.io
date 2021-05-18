@@ -9,7 +9,7 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
-export default function Blog({ posts }) {
+export default function Blog({ posts }: { posts: any }) {
   return (
     <>
       <PageSeo
