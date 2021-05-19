@@ -74,7 +74,7 @@ function HighSpeedCableContent() {
               1
             </div>
             <div className="flex flex-col items-center justify-center h-48 bg-gray-200">
-              <div className="absolute flex flex-col justify-center bg-blue-700 border-gray-200 border-solid rounded-full shadow-xl top-4 w-92 h-92 border-20">
+              <div className="absolute flex flex-col justify-center bg-blue-700 border-gray-200 border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20">
                 <div className="z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white bg-blue-700 border-blue-800 border-solid rounded-full top-4 w-84 h-84 border-20">
                   <span className="text-5xl font-bold">CABLE 15</span>
                   <span className="mt-6">
@@ -95,81 +95,81 @@ function HighSpeedCableContent() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="pricing-block__bottom">
-            <span style={{ fontSize: 26, color: "#005395" }}>
-              UP TO 15.0 MBPS DOWNLOAD SPEED
-            </span>
-            <br />
-            <br />
-            <span style={{ fontSize: 26, color: "#005395" }}>
-              200 GB OF DATA TRANSFER PER MONTH
-            </span>
-            <br />
-            <br />
-            <h6 className="title2">CABLE 15</h6>
-            <p style={{}}>
-              Surf, shop, stream music and video, stay connected with family and
-              friends.
-            </p>
-            <p>
-              <span
-                style={{ color: "#28BCEB", fontSize: 12, fontWeight: "bold" }}
-              >
-                »
+            <div className="mx-2 mt-56 text-center">
+              <span className="text-[#005395] text-2xl">
+                UP TO 15.0 MBPS DOWNLOAD SPEED
               </span>
-              &nbsp;
-              <a
-                style={{
-                  color: "#28BCEB",
-                  textDecoration: "underline",
-                  fontWeight: "bold",
-                }}
-                href="#popup0"
-              >
-                click here for full details
-              </a>
-            </p>
-            <div className="price-cell">
-              <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
-                MAKE IT UNLIMITED
-              </span>{" "}
               <br />
-              <p>
-                <span style={{ color: "#28BCEB", fontWeight: "bold" }}>
-                  Add Unlimited Data for only <br />
-                  <span
-                    style={{
-                      color: "#28BCEB",
-                      fontWeight: "bold",
-                      fontSize: 26,
-                    }}
-                  >
-                    $10.00
-                  </span>{" "}
-                  per month{" "}
-                  <sup>
-                    <a
-                      style={{
-                        color: "#000000",
-                        textDecoration: "underline",
-                      }}
-                      href="#2"
-                    >
-                      2
-                    </a>
-                  </sup>
-                </span>
+              <br />
+              <span className="text-[#005395] text-2xl">
+                200 GB OF DATA TRANSFER PER MONTH
+              </span>
+              <br />
+              <br />
+              <h6 className="title2">CABLE 15</h6>
+              <p style={{}}>
+                Surf, shop, stream music and video, stay connected with family
+                and friends.
               </p>
-            </div>
-            <br />
-            <div className="text-center">
-              <a
-                href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
-                className="btn"
-              >
-                Order Now
-              </a>
+              <p>
+                <span
+                  style={{ color: "#28BCEB", fontSize: 12, fontWeight: "bold" }}
+                >
+                  »
+                </span>
+                &nbsp;
+                <a
+                  style={{
+                    color: "#28BCEB",
+                    textDecoration: "underline",
+                    fontWeight: "bold",
+                  }}
+                  href="#popup0"
+                >
+                  click here for full details
+                </a>
+              </p>
+              <div className="price-cell">
+                <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
+                  MAKE IT UNLIMITED
+                </span>{" "}
+                <br />
+                <p>
+                  <span style={{ color: "#28BCEB", fontWeight: "bold" }}>
+                    Add Unlimited Data for only <br />
+                    <span
+                      style={{
+                        color: "#28BCEB",
+                        fontWeight: "bold",
+                        fontSize: 26,
+                      }}
+                    >
+                      $10.00
+                    </span>{" "}
+                    per month{" "}
+                    <sup>
+                      <a
+                        style={{
+                          color: "#000000",
+                          textDecoration: "underline",
+                        }}
+                        href="#2"
+                      >
+                        2
+                      </a>
+                    </sup>
+                  </span>
+                </p>
+              </div>
+              <br />
+              <div className="text-center">
+                <a
+                  href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
+                  className="btn"
+                >
+                  Order Now
+                </a>
+              </div>
             </div>
           </div>
         </div>
