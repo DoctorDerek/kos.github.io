@@ -31,40 +31,42 @@ function HighSpeedCableContent() {
         Get an instant connection with Internet over cable at a price that suits
         your needs.
       </span>
-      <div className="">
-        <form
-          action="https://kos.net/dslavail/dslavail-check.php"
-          method="post"
-          name="dslcheck"
-          className="flex"
-        >
-          <input type="hidden" name="minidslc" value="1" />
-          <input type="hidden" name="docheck" value="1" />
-          <div className="flex flex-col px-2 pt-1 pb-2 mx-auto space-y-1 text-center border border-black border-solid shadow">
-            <label htmlFor="postalcode" className="text-lg">
-              Enter your Postal Code to check for services available in your
-              area:
-            </label>
-            <div className="space-x-2">
-              <input
-                className="px-1 py-0 text-center"
-                type="text"
-                placeholder="K7K 5W7"
-                name="postalcode"
-                maxLength={7}
-                size={7}
-                id="postalcode"
-              />
-              <input
-                type="submit"
-                value="Check"
-                name="sub"
-                id="sub"
-                className="px-1 text-white border border-black border-solid shadow-sm from-blue-600 bg-gradient-to-b to-blue-800"
-              />
+      <div className="border border-gray-300 border-solid hover:shadow-md">
+        <div className="border-t-4 border-transparent border-solid hover:border-[#005395] py-2 md:py-4 flex flex-col space-y-2 px-2">
+          <form
+            action="https://kos.net/dslavail/dslavail-check.php"
+            method="post"
+            name="dslcheck"
+            className="flex"
+          >
+            <input type="hidden" name="minidslc" value="1" />
+            <input type="hidden" name="docheck" value="1" />
+            <div className="flex flex-col px-2 pt-1 pb-2 mx-auto space-y-1 text-center border border-black border-solid shadow">
+              <label htmlFor="postalcode" className="text-lg">
+                Enter your Postal Code to check for services available in your
+                area:
+              </label>
+              <div className="space-x-2">
+                <input
+                  className="px-1 py-0 text-center"
+                  type="text"
+                  placeholder="K7K 5W7"
+                  name="postalcode"
+                  maxLength={7}
+                  size={7}
+                  id="postalcode"
+                />
+                <input
+                  type="submit"
+                  value="Check"
+                  name="sub"
+                  id="sub"
+                  className="px-1 text-white border border-black border-solid shadow-sm from-blue-600 bg-gradient-to-b to-blue-800"
+                />
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
       <div className="flex flex-wrap">
         <div className="w-1/3">
@@ -94,66 +96,40 @@ function HighSpeedCableContent() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col mx-2 mt-56 space-y-2 text-center">
-              <span className="text-[#005395] text-2xl leading-7">
+            <div className="flex flex-col mx-2 mt-56 space-y-6 text-center">
+              <span className="text-[#005395] text-2xl leading-6">
                 UP TO 15.0 MBPS DOWNLOAD SPEED
               </span>
-              <span className="text-[#005395] text-2xl leading-7">
+              <span className="text-[#005395] text-2xl leading-6">
                 200 GB OF DATA TRANSFER PER MONTH
               </span>
-              <h6 className="text-gray-700">CABLE 15</h6>
-              <p style={{}}>
+              <h6 className="text-base text-gray-700">CABLE 15</h6>
+              <p>
                 Surf, shop, stream music and video, stay connected with family
                 and friends.
               </p>
-              <p>
-                <span
-                  style={{ color: "#28BCEB", fontSize: 12, fontWeight: "bold" }}
-                >
-                  »
-                </span>
-                &nbsp;
-                <a
-                  style={{
-                    color: "#28BCEB",
-                    textDecoration: "underline",
-                    fontWeight: "bold",
-                  }}
-                  href="#popup0"
-                >
-                  click here for full details
-                </a>
-              </p>
-              <div className="price-cell">
-                <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
-                  MAKE IT UNLIMITED
-                </span>{" "}
-                <p>
-                  <span style={{ color: "#28BCEB", fontWeight: "bold" }}>
+              <a
+                className="text-[#28BCEB] text-sm font-bold text-underline"
+                href="#popup0"
+              >
+                » click here for full details
+              </a>
+              <div className="border border-gray-300 border-solid hover:shadow-md">
+                <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2">
+                  <span className="text-[#901D3D] font-extrabold">
+                    MAKE IT UNLIMITED
+                  </span>
+                  <span className="text-[#28BCEB] font-bold text-sm leading-3">
                     Add Unlimited Data for only
-                    <span
-                      style={{
-                        color: "#28BCEB",
-                        fontWeight: "bold",
-                        fontSize: 26,
-                      }}
-                    >
-                      $10.00
-                    </span>{" "}
-                    per month{" "}
+                    <br />
+                    <span className="text-3xl">$10.00</span> per month{" "}
                     <sup>
-                      <a
-                        style={{
-                          color: "#000000",
-                          textDecoration: "underline",
-                        }}
-                        href="#2"
-                      >
+                      <a href="#2" className="text-black underline">
                         2
                       </a>
                     </sup>
                   </span>
-                </p>
+                </div>
               </div>
               <div className="text-center">
                 <a
