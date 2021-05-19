@@ -1,5 +1,4 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function HighSpeedCable(): JSX.Element {
   const title = (
