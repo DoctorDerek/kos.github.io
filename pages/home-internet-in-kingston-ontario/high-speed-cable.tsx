@@ -82,32 +82,14 @@ function HighSpeedCableContent() {
                     <sup className="text-xl">.95</sup>
                   </span>
                   <span className="mt-0 text-xl">
-                    per month
+                    per month{" "}
                     <sup>
-                      <a
-                        href="#1"
-                        style={{
-                          color: "#ffffff",
-                          textDecoration: "underline",
-                        }}
-                      >
+                      <a href="#1" className="text-white underline">
                         1
                       </a>{" "}
-                      <a
-                        href="#2"
-                        style={{
-                          color: "#ffffff",
-                          textDecoration: "underline",
-                        }}
-                      >
+                      <a href="#2" className="text-white underline">
                         2
-                      </a>{" "}
-                      <span
-                        style={{
-                          color: "#ffffff",
-                          textDecoration: "underline",
-                        }}
-                      />{" "}
+                      </a>
                     </sup>
                   </span>
                 </div>
