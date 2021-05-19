@@ -59,6 +59,13 @@ export function InternalTemplate({
       )}
     </>
   )
+  const DIVIDER = () => (
+    <div className="pb-4 text-center">
+      <ImageFixed src="/images/h-decor.png" height="4px" width="64px" alt="" />
+      {/* alt="" acceptable for purely decorative elements */}
+    </div>
+  )
+
   return (
     <>
       <PageSeo
@@ -82,15 +89,7 @@ export function InternalTemplate({
           )}
         >
           <h1 className="text-left color decor">{title}</h1>
-          <div className="pb-4 text-center">
-            <ImageFixed
-              src="/images/h-decor.png"
-              height="4px"
-              width="64px"
-              alt=""
-            />
-            {/* alt="" acceptable for purely decorative elements */}
-          </div>
+          <DIVIDER />
           {children}
         </div>
         {pricingSection && (
