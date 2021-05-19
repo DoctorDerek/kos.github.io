@@ -9,18 +9,18 @@ const classNames = (...classes: string[]): string => classes.join(" ")
 export function InternalTemplate({
   title,
   slug,
-  bulletNavMenu = null,
   fullWidth = false,
-  showOrderNowButton = false,
   pricingSection = null,
+  bulletNavMenu = null,
+  showOrderNowButton = false,
   children,
 }: {
   title: string | JSX.Element
   slug: string
-  bulletNavMenu?: JSX.Element | null
   fullWidth?: boolean
-  showOrderNowButton?: boolean
   pricingSection?: JSX.Element | null
+  bulletNavMenu?: JSX.Element | null
+  showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
   const isRequired = () => {
