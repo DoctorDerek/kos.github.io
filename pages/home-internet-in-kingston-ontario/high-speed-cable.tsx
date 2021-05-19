@@ -2,7 +2,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 
 const classNames = (...classes: string[]) => classes.join(" ")
 
-export default function HighSpeedCable(): JSX.Element {
+export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
     <>
       Residential <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
@@ -20,14 +20,14 @@ export default function HighSpeedCable(): JSX.Element {
       slug={slug}
       bulletNavMenu={bulletNavMenu}
       fullWidth={true}
-      pricingSection={<HighSpeedCablePricing />}
+      pricingSection={<ResidentialHighSpeedCablePricing />}
     >
-      <HighSpeedCableContent />
+      <ResidentialHighSpeedCableContent />
     </InternalTemplate>
   )
 }
 
-function HighSpeedCableContent() {
+function ResidentialHighSpeedCableContent() {
   return (
     <div className="flex flex-col space-y-6">
       <span className="text-xl text-left">
@@ -81,7 +81,7 @@ type PricingPackage = {
   data: string
   description: string
 }
-function HighSpeedCablePricing() {
+function ResidentialHighSpeedCablePricing() {
   const pricingPackages: PricingPackage[] = [
     {
       name: "CABLE 15",
