@@ -1,4 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 const classNames = (...classes: string[]) => classes.join(" ")
 
@@ -12,7 +13,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
   // "Residential High Speed Cable Packages"
   const slug = "home-internet-in-kingston-ontario/high-speed-cable"
   // "res/high-speed-cable"
-  const bulletNavMenu = null
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate

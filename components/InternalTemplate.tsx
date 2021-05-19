@@ -41,6 +41,24 @@ export function InternalTemplate({
       {text}
     </a>
   )
+  const BulletNavMenu = () => (
+    <>
+      {bulletNavMenu && (
+        <>
+          <div className="pb-4 text-2xl font-semibold tracking-tight color">
+            Please <Link href="/contact">contact our office</Link> for more
+            information, or select from one of our services below.
+          </div>
+          {bulletNavMenu}
+        </>
+      )}
+      {showOrderNowButton && (
+        <div className="py-6">
+          <BUTTON href="/order/" text="Get connected" />
+        </div>
+      )}
+    </>
+  )
   return (
     <>
       <PageSeo
@@ -74,22 +92,15 @@ export function InternalTemplate({
             {/* alt="" acceptable for purely decorative elements */}
           </div>
           {children}
-          {bulletNavMenu && (
-            <>
-              <div className="pb-4 text-2xl font-semibold tracking-tight color">
-                Please <Link href="/contact">contact our office</Link> for more
-                information, or select from one of our services below.
-              </div>
-              {bulletNavMenu}
-            </>
-          )}
-          {showOrderNowButton && (
-            <div className="py-6">
-              <BUTTON href="/order/" text="Get connected" />
-            </div>
-          )}
         </div>
-        {pricingSection && <div className="pt-6">{pricingSection}</div>}
+        {pricingSection && (
+          <>
+            <div className="py-6">{pricingSection}</div>
+          </>
+        )}
+        <div className="max-w-xl mx-auto">
+          <BulletNavMenu />
+        </div>
       </div>
     </>
   )
