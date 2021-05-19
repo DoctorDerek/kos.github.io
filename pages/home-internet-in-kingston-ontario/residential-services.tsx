@@ -10,7 +10,12 @@ export default function ResidentialServices(): JSX.Element {
   const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
-    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+    <InternalTemplate
+      title={title}
+      slug={slug}
+      bulletNavMenu={bulletNavMenu}
+      showOrderNowButton={true}
+    >
       <ResidentialServicesContent />
     </InternalTemplate>
   )

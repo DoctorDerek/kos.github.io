@@ -10,12 +10,14 @@ export function InternalTemplate({
   slug,
   bulletNavMenu = null,
   fullWidth = false,
+  showOrderNowButton = false,
   children,
 }: {
   title: string | JSX.Element
   slug: string
   bulletNavMenu?: JSX.Element | null
   fullWidth?: boolean
+  showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
   const isRequired = () => {
@@ -64,9 +66,11 @@ export function InternalTemplate({
         </div>
         {children}
         {bulletNavMenu}
-        <div className="py-6">
-          <BUTTON href="/order/" text="Get connected" />
-        </div>
+        {showOrderNowButton && (
+          <div className="py-6">
+            <BUTTON href="/order/" text="Get connected" />
+          </div>
+        )}
       </div>
     </>
   )
