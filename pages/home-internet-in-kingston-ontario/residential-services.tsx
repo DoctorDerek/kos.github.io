@@ -37,10 +37,6 @@ function ResidentialServicesContent() {
         Kingston Online Services also provides innovative solutions for rural
         connectivity where conventional Internet services are not available.
       </p>
-      <h2 className="text-2xl tracking-tight color">
-        Please <a href="/contact.php">contact our office</a> for more
-        information, or select from one of our services below.
-      </h2>
     </>
   )
 }

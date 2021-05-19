@@ -3,6 +3,7 @@ import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
 import innerText from "react-innertext"
+import Link from "@/components/Link"
 
 const classNames = (...classes: string[]): string => classes.join(" ")
 
@@ -73,7 +74,15 @@ export function InternalTemplate({
             {/* alt="" acceptable for purely decorative elements */}
           </div>
           {children}
-          {bulletNavMenu}
+          {bulletNavMenu && (
+            <>
+              <div className="text-2xl tracking-tight color">
+                Please <Link href="/contact">contact our office</Link> for more
+                information, or select from one of our services below.
+              </div>
+              {bulletNavMenu}
+            </>
+          )}
           {showOrderNowButton && (
             <div className="py-6">
               <BUTTON href="/order/" text="Get connected" />
