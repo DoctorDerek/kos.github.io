@@ -2,8 +2,12 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function ResidentialServices(): JSX.Element {
-  const title =
-    "Home Internet Service Provider in Kingston & Belleville, Ontario"
+  const title = (
+    <>
+      <span className="text-red-brand">Home Internet Service</span> Provider in
+      Kingston & Belleville, Ontario
+    </>
+  )
   // "Residential Services"
   const slug = "home-internet-in-kingston-ontario/residential-services"
   // "residential"
