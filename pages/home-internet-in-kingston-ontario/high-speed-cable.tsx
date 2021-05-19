@@ -74,20 +74,67 @@ function HighSpeedCableContent() {
     </div>
   )
 }
+type PricingPackage = {
+  name: string
+  price: string
+  download: string
+  data: string
+  description: string
+}
 function HighSpeedCablePricing() {
+  const pricingPackages: PricingPackage[] = [
+    {
+      name: "CABLE 15",
+      price: "39",
+      download: "15.0 MBPS",
+      data: "200 GB",
+      description:
+        "Surf, shop, stream music and video, stay connected with family and friends.",
+    },
+    {
+      name: "CABLE 40",
+      price: "54",
+      download: "40.0 MBPS",
+      data: "300 GB",
+      description:
+        "For active families and multiple users. All the features with more speed and data.",
+    },
+    {
+      name: "CABLE 60",
+      price: "74",
+      download: "60.0 MBPS",
+      data: "300 GB",
+      description:
+        "For power users. Perfect for people who demand the most speed available.",
+    },
+  ]
   return (
     <div className="flex flex-wrap justify-center">
-      <Pricing />
-      <Pricing color="teal" />
-      <Pricing />
-      <div className="w-full h-0">{/*flex break*/}</div>
-      <Pricing />
-      <Pricing color="teal" />
-      <Pricing />
+      {pricingPackages.map((pricingPackage, index) => (
+        <>
+          <Pricing
+            color={index % 2 === 1 ? "teal" : "navy"}
+            pricingPackage={pricingPackage}
+            key={pricingPackage.name}
+            number={index + 1}
+          />
+          {index % 3 === 0 && index > 0 && (
+            <div className="w-full h-0">{/*flex break*/}</div>
+          )}
+        </>
+      ))}
     </div>
   )
 }
-function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
+function Pricing({
+  color = "navy",
+  pricingPackage,
+  number,
+}: {
+  color?: "navy" | "teal"
+  pricingPackage: PricingPackage
+  number: number
+}) {
   return (
     <div
       className={classNames(
@@ -97,7 +144,9 @@ function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
         "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white"
       )}
     >
-      <div className="absolute z-20 text-6xl font-bold left-3 top-2">1</div>
+      <div className="absolute z-20 text-6xl font-bold left-3 top-2">
+        {number}
+      </div>
       <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
         <div
           className={classNames(
@@ -113,9 +162,11 @@ function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
               "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white border-solid rounded-full top-4 w-84 h-84 border-20"
             )}
           >
-            <span className="text-5xl font-bold">CABLE 15</span>
+            <span className="text-5xl font-bold">{pricingPackage.name}</span>
             <span className="mt-6">
-              <span className="text-5xl font-bold">$39</span>
+              <span className="text-5xl font-bold">
+                ${pricingPackage.price}
+              </span>
               <sup className="text-xl">.95</sup>
             </span>
             <span className="mt-0 text-xl">
@@ -134,19 +185,16 @@ function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
       </div>
       <div className="flex flex-col mx-2 mt-56 space-y-6 text-center">
         <span className="text-[#005395] text-2xl leading-6">
-          UP TO 15.0 MBPS
+          UP TO {pricingPackage.download}
           <br />
           DOWNLOAD SPEED
         </span>
         <span className="text-[#005395] text-2xl leading-6">
-          200 GB OF DATA <br />
+          {pricingPackage.data} OF DATA <br />
           TRANSFER PER MONTH
         </span>
-        <h6 className="text-base text-gray-700">CABLE 15</h6>
-        <p className="text-black">
-          Surf, shop, stream music and video, stay connected with family and
-          friends.
-        </p>
+        <h6 className="text-base text-gray-700">{pricingPackage.name}</h6>
+        <p className="px-6 text-black">{pricingPackage.description}</p>
         <a
           className="text-[#28BCEB] text-sm font-bold text-underline"
           href="#popup0"
