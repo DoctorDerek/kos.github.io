@@ -2,6 +2,7 @@ import ImageFixed from "next/image"
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
+import innerText from "react-innertext"
 
 const classNames = (...classes: string[]): string => classes.join(" ")
 
@@ -42,7 +43,7 @@ export function InternalTemplate({
   return (
     <>
       <PageSeo
-        title={`${title}`}
+        title={innerText(title)}
         description=""
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
