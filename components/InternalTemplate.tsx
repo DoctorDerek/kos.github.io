@@ -11,6 +11,7 @@ export function InternalTemplate({
   bulletNavMenu = null,
   fullWidth = false,
   showOrderNowButton = false,
+  pricingSection = null,
   children,
 }: {
   title: string | JSX.Element
@@ -18,6 +19,7 @@ export function InternalTemplate({
   bulletNavMenu?: JSX.Element | null
   fullWidth?: boolean
   showOrderNowButton?: boolean
+  pricingSection?: JSX.Element | null
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
   const isRequired = () => {
@@ -50,27 +52,34 @@ export function InternalTemplate({
       </div>
       <div
         className={classNames(
-          fullWidth ? "max-w-5xl md:px-6 lg:px-12" : "max-w-xl md:px-0",
-          "px-4 py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
+          "py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
         )}
       >
-        <h1 className="text-left color decor">{title}</h1>
-        <div className="pb-4 text-center">
-          <ImageFixed
-            src="/images/h-decor.png"
-            height="4px"
-            width="64px"
-            alt=""
-          />
-          {/* alt="" acceptable for purely decorative elements */}
-        </div>
-        {children}
-        {bulletNavMenu}
-        {showOrderNowButton && (
-          <div className="py-6">
-            <BUTTON href="/order/" text="Get connected" />
+        <div
+          className={classNames(
+            fullWidth ? "max-w-5xl md:px-6 lg:px-12" : "max-w-xl md:px-0",
+            "px-4 mx-auto"
+          )}
+        >
+          <h1 className="text-left color decor">{title}</h1>
+          <div className="pb-4 text-center">
+            <ImageFixed
+              src="/images/h-decor.png"
+              height="4px"
+              width="64px"
+              alt=""
+            />
+            {/* alt="" acceptable for purely decorative elements */}
           </div>
-        )}
+          {children}
+          {bulletNavMenu}
+          {showOrderNowButton && (
+            <div className="py-6">
+              <BUTTON href="/order/" text="Get connected" />
+            </div>
+          )}
+        </div>
+        {pricingSection && <div className="pt-6">{pricingSection}</div>}
       </div>
     </>
   )
