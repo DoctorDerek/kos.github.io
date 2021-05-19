@@ -109,21 +109,96 @@ function HighSpeedCablePricing() {
     },
   ]
   return (
-    <div className="flex flex-wrap justify-center">
-      {pricingPackages.map((pricingPackage, index) => (
-        <>
-          <Pricing
-            color={index % 2 === 1 ? "teal" : "navy"}
-            pricingPackage={pricingPackage}
-            key={pricingPackage.name}
-            number={index + 1}
-          />
-          {index % 3 === 0 && index > 0 && (
-            <div className="w-full h-0">{/*flex break*/}</div>
-          )}
-        </>
-      ))}
-    </div>
+    <>
+      <div className="flex flex-wrap justify-center">
+        {pricingPackages.map((pricingPackage, index) => (
+          <>
+            <Pricing
+              color={index % 2 === 1 ? "teal" : "navy"}
+              pricingPackage={pricingPackage}
+              key={pricingPackage.name}
+              number={index + 1}
+            />
+            {index % 3 === 0 && index > 0 && (
+              <div className="w-full h-0">{/*flex break*/}</div>
+            )}
+          </>
+        ))}
+      </div>
+      <div className="mx-auto">
+        <div className="pt-12 text-center">
+          <div id="1">1) Requires Modem rental or purchase.</div>
+          <div id="2">
+            2) For residential purposes only, must not exceed a reasonable
+            amount of usage
+          </div>
+          <div id="3">
+            3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for
+            service at their current location.)
+          </div>
+        </div>
+        <div className="text-[#005395] font-bold text-3xl py-12 text-center">
+          Additional Details & Options
+        </div>
+        <div className="flex flex-wrap justify-center">
+          <div className="text-left w-96">
+            <HoverBox className="bg-gray-100">
+              <div className="font-bold text-[#005395] text-center">
+                OPTIONS
+              </div>
+              <ul className="ml-8 mr-2 list-disc">
+                <li>Additional E-Mail boxes</li>
+                <li>$4.95 per month, each Optional</li>
+                <li>VIP E-mail boxes, $6.95 per month, each</li>
+                <li>Additional 1000MB (1GB) transfer available for $1.00</li>
+                <li>Opt-out for automatic spam protection</li>
+              </ul>
+            </HoverBox>
+          </div>
+          <div className="text-left w-96">
+            <HoverBox>
+              <div className="font-bold text-[#005395] text-center">
+                MODEM OPTIONS
+              </div>
+              <p className="px-2">Automatic payment methods are required.</p>
+              <ul className="ml-8 mr-2 list-disc">
+                <li>Monthly Modem rental,</li>
+                <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
+                <li>Call for payment plan options</li>
+              </ul>
+              <p className="font-bold text-[#005395] text-center">
+                BRING YOUR OWN MODEM
+              </p>
+              <p className="px-2">
+                You are able to use your own Cable Modem if it is in our{" "}
+                <a href="/modem/list" className="text-[#005395] underline">
+                  supported modem list
+                </a>
+                .
+              </p>
+            </HoverBox>
+          </div>
+          <div className="h-auto text-left w-96">
+            <HoverBox className="bg-gray-100">
+              <div className="font-bold text-[#005395] text-center">
+                REQUIREMENTS
+              </div>
+              <p className="px-2">
+                To access the Internet with KOS CABLE, you will need:
+              </p>
+              <ul className="ml-8 mr-2 list-disc">
+                <li>Supported Cable Modem Required (Rental Available)</li>{" "}
+                <li>
+                  Modern 32-bit or 64-bit Operating System (Windows 7 minimum)
+                </li>
+                <li>Minimum of 2.0Ghz processor required</li>
+                <li>56K modem suggested for dial-up</li>
+              </ul>
+            </HoverBox>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
 function Pricing({
@@ -228,9 +303,20 @@ function Pricing({
     </div>
   )
 }
-function HoverBox({ children }: { children: JSX.Element | JSX.Element[] }) {
+function HoverBox({
+  className = "",
+  children,
+}: {
+  className?: string
+  children: JSX.Element | JSX.Element[]
+}) {
   return (
-    <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
+    <div
+      className={classNames(
+        className,
+        "transition duration-500 border border-gray-300 border-solid hover:shadow-md"
+      )}
+    >
       <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2 duration-500 transition">
         {children}
       </div>
