@@ -1,3 +1,5 @@
+import { useRouter } from "next/router"
+
 export const kebabCase = (str: string) => {
   const result =
     str &&
@@ -6,4 +8,12 @@ export const kebabCase = (str: string) => {
     )
 
   return result && result.map((x: string) => x.toLowerCase()).join("-")
+}
+
+export const useCurrentPath = () => {
+  // fetch current page URL
+  const router = useRouter() // next/router
+  const currentPagePath = router.asPath
+
+  return currentPagePath
 }

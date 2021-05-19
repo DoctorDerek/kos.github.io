@@ -1,9 +1,8 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
-import { useRouter } from "next/router"
+import { useCurrentPath } from "@/lib/utils"
 const DEBUG = false
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
@@ -45,14 +44,6 @@ const partOfCurrentPagePath = (
   }
 
   return false // not a match
-}
-
-const useCurrentPath = () => {
-  // fetch current page URL
-  const router = useRouter() // next/router
-  const currentPagePath = router.asPath
-
-  return currentPagePath
 }
 
 function classNames(...classes: string[]) {
