@@ -4,8 +4,8 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function BusinessVoip(): JSX.Element {
   const title = (
     <>
-      Business <span style={{ color: "#A80532" }}>VoIP</span> Packages in
-      Kingston & Belleville, Ontario
+      Business <span className="text-red-brand">VoIP</span> Packages in Kingston
+      & Belleville, Ontario
     </>
   )
   // "Business VoIP Packages"

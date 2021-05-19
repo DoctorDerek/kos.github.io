@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function BusinessColocateServer(): JSX.Element {
   const title = (
     <>
-      <span style={{ color: "#A80532" }}>CO LOCATE SERVER</span> Packages for
+      <span className="text-red-brand">CO LOCATE SERVER</span> Packages for
       Businesses in Kingston & Belleville, Ontario
     </>
   )

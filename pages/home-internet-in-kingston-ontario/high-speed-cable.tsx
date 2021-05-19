@@ -5,7 +5,7 @@ const classNames = (...classes: string[]) => classes.join(" ")
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
     <>
-      Residential <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
+      Residential <span className="text-red-brand">High Speed Cable</span>{" "}
       Packages in Kingston & Belleville, Ontario
     </>
   )
@@ -35,7 +35,7 @@ function ResidentialHighSpeedCableContent() {
         your needs.
       </span>
       <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
-        <div className="transition duration-500 border-t-4 border-transparent border-solid hover:border-[#005395] py-2 md:py-4 flex flex-col space-y-2 px-2">
+        <div className="flex flex-col px-2 py-2 space-y-2 transition duration-500 border-t-4 border-transparent border-solid hover:border-blue-brand md:py-4">
           <form
             action="https://kos.net/dslavail/dslavail-check.php"
             method="post"
@@ -137,13 +137,13 @@ function ResidentialHighSpeedCablePricing() {
             service at their current location.)
           </div>
         </div>
-        <div className="text-[#005395] font-bold text-3xl py-12 text-center">
+        <div className="py-12 text-3xl font-bold text-center text-blue-brand">
           Additional Details & Options
         </div>
         <div className="flex flex-wrap justify-center">
           <div className="text-left w-96">
             <HoverBox className="bg-gray-100">
-              <div className="font-bold text-[#005395] text-center">
+              <div className="font-bold text-center text-blue-brand">
                 OPTIONS
               </div>
               <ul className="ml-8 mr-2 list-disc">
@@ -157,7 +157,7 @@ function ResidentialHighSpeedCablePricing() {
           </div>
           <div className="text-left w-96">
             <HoverBox>
-              <div className="font-bold text-[#005395] text-center">
+              <div className="font-bold text-center text-blue-brand">
                 MODEM OPTIONS
               </div>
               <p className="px-2">Automatic payment methods are required.</p>
@@ -166,12 +166,12 @@ function ResidentialHighSpeedCablePricing() {
                 <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
                 <li>Call for payment plan options</li>
               </ul>
-              <p className="font-bold text-[#005395] text-center">
+              <p className="font-bold text-center text-blue-brand">
                 BRING YOUR OWN MODEM
               </p>
               <p className="px-2">
                 You are able to use your own Cable Modem if it is in our{" "}
-                <a href="/modem/list" className="text-[#005395] underline">
+                <a href="/modem/list" className="underline text-blue-brand">
                   supported modem list
                 </a>
                 .
@@ -180,7 +180,7 @@ function ResidentialHighSpeedCablePricing() {
           </div>
           <div className="h-auto text-left w-96">
             <HoverBox className="bg-gray-100">
-              <div className="font-bold text-[#005395] text-center">
+              <div className="font-bold text-center text-blue-brand">
                 REQUIREMENTS
               </div>
               <p className="px-2">
@@ -214,8 +214,8 @@ function Pricing({
     <div
       className={classNames(
         color === "teal"
-          ? "hover:text-[#28bceb] hover:border-[#28bceb]"
-          : "hover:text-[#005395] hover:border-[#005395] ",
+          ? "hover:text-teal-brand hover:border-teal-brand"
+          : "hover:text-blue-brand hover:border-blue-brand ",
         "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white"
       )}
     >
@@ -225,15 +225,15 @@ function Pricing({
       <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
         <div
           className={classNames(
-            color === "teal" ? "bg-[#28bceb]" : "bg-[#005395]",
+            color === "teal" ? "bg-teal-brand" : "bg-blue-brand",
             "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
           )}
         >
           <div
             className={classNames(
               color === "teal"
-                ? "bg-[#28bceb] border-[#1db3e3]"
-                : "bg-[#005395] border-[#00467e]",
+                ? "bg-teal-brand border-teal-dark"
+                : "bg-blue-brand border-blue-dark",
               "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white border-solid rounded-full top-4 w-84 h-84 border-20"
             )}
           >
@@ -259,19 +259,19 @@ function Pricing({
         </div>
       </div>
       <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
-        <span className="text-[#005395] text-2xl leading-6">
+        <span className="text-2xl leading-6 text-blue-brand">
           UP TO {pricingPackage.download}
           <br />
           DOWNLOAD SPEED
         </span>
-        <span className="text-[#005395] text-2xl leading-6">
+        <span className="text-2xl leading-6 text-blue-brand">
           {pricingPackage.data} OF DATA <br />
           TRANSFER PER MONTH
         </span>
         <h6 className="text-base text-gray-700">{pricingPackage.name}</h6>
         <p className="text-black">{pricingPackage.description}</p>
         <a
-          className="text-[#28BCEB] text-sm font-bold text-underline"
+          className="text-sm font-bold text-teal-brand text-underline"
           href="#popup0"
         >
           » click here for full details
@@ -280,7 +280,7 @@ function Pricing({
           <span className="text-[#901D3D] font-extrabold">
             MAKE IT UNLIMITED
           </span>
-          <span className="text-[#28BCEB] font-bold text-sm leading-3">
+          <span className="text-sm font-bold leading-3 text-teal-brand">
             Add Unlimited Data for only
             <br />
             <span className="text-3xl">$10.00</span> per month{" "}
@@ -317,7 +317,7 @@ function HoverBox({
         "transition duration-500 border border-gray-300 border-solid hover:shadow-md"
       )}
     >
-      <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2 duration-500 transition">
+      <div className="flex flex-col py-4 space-y-2 transition duration-500 border-t-4 border-transparent border-solid hover:shadow-sm hover:border-blue-brand">
         {children}
       </div>
     </div>

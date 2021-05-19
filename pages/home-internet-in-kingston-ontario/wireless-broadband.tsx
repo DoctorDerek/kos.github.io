@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function WirelessBroadband(): JSX.Element {
   const title = (
     <>
-      Residential <span style={{ color: "#A80532" }}>Wireless Broadband</span>{" "}
+      Residential <span className="text-red-brand">Wireless Broadband</span>{" "}
       Packages
     </>
   )

@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function HighSpeedCable(): JSX.Element {
   const title = (
     <>
-      Residential <span style={{ color: "#A80532" }}>Mail</span> Packages in
+      Residential <span className="text-red-brand">Mail</span> Packages in
       Kingston & Belleville, Ontario
     </>
   )

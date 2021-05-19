@@ -4,8 +4,8 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function BusinessHighSpeedCable(): JSX.Element {
   const title = (
     <>
-      Business <span style={{ color: "#A80532" }}>High Speed Cable</span>{" "}
-      Packages in Kingston & Belleville, Ontario
+      Business <span className="text-red-brand">High Speed Cable</span> Packages
+      in Kingston & Belleville, Ontario
     </>
   )
   // "Business High Speed Cable Packages"

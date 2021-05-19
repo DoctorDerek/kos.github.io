@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function BusinessHighSpeedDsl(): JSX.Element {
   const title = (
     <>
-      Business <span style={{ color: "#A80532" }}>High Speed DSL</span> Packages
+      Business <span className="text-red-brand">High Speed DSL</span> Packages
       in Kingston & Belleville, Ontario
     </>
   )

@@ -47,7 +47,7 @@ export function InternalTemplate({
         description=""
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
-      <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-[#005395] border-solid border-t-[6px]">
+      <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
         <Image src="/images/footer-bg.jpg" alt="" />
         {/* alt="" acceptable for purely decorative elements */}
       </div>

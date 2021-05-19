@@ -3,7 +3,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 export default function Events(): JSX.Element {
   const title = (
     <>
-      <span style={{ color: "#A80532" }}>News</span> & Events
+      <span className="text-red-brand">News</span> & Events
     </>
   )
   // ???

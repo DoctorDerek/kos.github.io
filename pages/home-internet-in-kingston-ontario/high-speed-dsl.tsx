@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function HighSpeedDsl(): JSX.Element {
   const title = (
     <>
-      Residential <span style={{ color: "#A80532" }}>High Speed DSL</span>{" "}
+      Residential <span className="text-red-brand">High Speed DSL</span>{" "}
       Packages in Kingston, ON
     </>
   )
@@ -27,7 +27,7 @@ function HighSpeedDslContent() {
       <div>
         <div className="container">
           <h1 className="text-center decor color">
-            Residential <span style={{ color: "#A80532" }}>High Speed DSL</span>{" "}
+            Residential <span className="text-red-brand">High Speed DSL</span>{" "}
             Packages
           </h1>
           <span className="text-center" style={{ fontSize: "20px" }}>

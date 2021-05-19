@@ -3,7 +3,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 export default function PaymentOptions(): JSX.Element {
   const title = (
     <>
-      <span style={{ color: "#A80532" }}>Payment</span> Options
+      <span className="text-red-brand">Payment</span> Options
     </>
   )
   // "Payment Options"

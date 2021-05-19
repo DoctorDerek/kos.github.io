@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function BusinessMail(): JSX.Element {
   const title = (
     <>
-      Business <span style={{ color: "#A80532" }}>VIP Mail</span> Packages in
+      Business <span className="text-red-brand">VIP Mail</span> Packages in
       Kingston & Belleville, Ontario
     </>
   )

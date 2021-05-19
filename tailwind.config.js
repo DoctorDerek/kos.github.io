@@ -98,7 +98,23 @@ module.exports = {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        blue: colors.lightBlue,
+        blue: {
+          ...colors.lightBlue,
+          // blue colors for PricingPackage & branding throughout
+          brand: "#005395", // KOS - main color
+          dark: "#00467e",
+        },
+        teal: {
+          ...colors.lightBlue,
+          // teal colors for PricingPackage
+          brand: "#28bceb", // KOS - rarely used
+          dark: "#1db3e3",
+        },
+        red: {
+          ...colors.red,
+          // red color for highlighting titles & branding throughout
+          brand: "#A80532", // KOS - secondary color
+        },
         code: {
           green: "#b5f4a5",
           yellow: "#ffe484",

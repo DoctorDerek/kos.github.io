@@ -3,7 +3,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 export default function HostingPackagesAndPricing(): JSX.Element {
   const title = (
     <>
-      <span style={{ color: "#A80532" }}>Hosting</span> Packages & Pricing
+      <span className="text-red-brand">Hosting</span> Packages & Pricing
     </>
   )
   // "Hosting Packages & Pricing"

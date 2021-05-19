@@ -3,7 +3,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 export default function SupportFAQs(): JSX.Element {
   const title = (
     <>
-      Support <span style={{ color: "#A80532" }}>FAQs</span>
+      Support <span className="text-red-brand">FAQs</span>
     </>
   )
   // "" [no page title previously]

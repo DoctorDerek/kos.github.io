@@ -4,7 +4,7 @@ import { BulletNavMenu } from "@/components/BulletNavMenu"
 export default function DialUp(): JSX.Element {
   const title = (
     <>
-      Residential <span style={{ color: "#A80532" }}>Dial Up</span> Services in
+      Residential <span className="text-red-brand">Dial Up</span> Services in
       Kingston & Belleville, Ontario
     </>
   )
