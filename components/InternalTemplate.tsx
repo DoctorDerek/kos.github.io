@@ -89,7 +89,6 @@ export function InternalTemplate({
           )}
         >
           <h1 className="text-left color decor">{title}</h1>
-          <DIVIDER />
           {children}
         </div>
         {pricingSection && (
@@ -98,6 +97,7 @@ export function InternalTemplate({
           </>
         )}
         <div className="max-w-xl mx-auto">
+          <DIVIDER />
           <BulletNavMenu />
         </div>
       </div>
