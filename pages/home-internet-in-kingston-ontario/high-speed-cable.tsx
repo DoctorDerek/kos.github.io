@@ -183,7 +183,7 @@ function Pricing({
           </div>
         </div>
       </div>
-      <div className="flex flex-col mx-2 mt-56 space-y-6 text-center">
+      <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
         <span className="text-[#005395] text-2xl leading-6">
           UP TO {pricingPackage.download}
           <br />
@@ -194,31 +194,29 @@ function Pricing({
           TRANSFER PER MONTH
         </span>
         <h6 className="text-base text-gray-700">{pricingPackage.name}</h6>
-        <p className="px-6 text-black">{pricingPackage.description}</p>
+        <p className="text-black">{pricingPackage.description}</p>
         <a
           className="text-[#28BCEB] text-sm font-bold text-underline"
           href="#popup0"
         >
           » click here for full details
         </a>
-        <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
-          <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2 duration-500 transition">
-            <span className="text-[#901D3D] font-extrabold">
-              MAKE IT UNLIMITED
-            </span>
-            <span className="text-[#28BCEB] font-bold text-sm leading-3">
-              Add Unlimited Data for only
-              <br />
-              <span className="text-3xl">$10.00</span> per month{" "}
-              <sup>
-                <a href="#2" className="text-black underline">
-                  2
-                </a>
-              </sup>
-            </span>
-          </div>
-        </div>
-        <div className="pt-2 pb-8 text-center">
+        <HoverBox>
+          <span className="text-[#901D3D] font-extrabold">
+            MAKE IT UNLIMITED
+          </span>
+          <span className="text-[#28BCEB] font-bold text-sm leading-3">
+            Add Unlimited Data for only
+            <br />
+            <span className="text-3xl">$10.00</span> per month{" "}
+            <sup>
+              <a href="#2" className="text-black underline">
+                2
+              </a>
+            </sup>
+          </span>
+        </HoverBox>
+        <div className="pt-4 pb-10 text-center">
           <a
             href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
             className="transition duration-500 btn"
@@ -226,6 +224,15 @@ function Pricing({
             Order Now
           </a>
         </div>
+      </div>
+    </div>
+  )
+}
+function HoverBox({ children }: { children: JSX.Element | JSX.Element[] }) {
+  return (
+    <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
+      <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2 duration-500 transition">
+        {children}
       </div>
     </div>
   )
