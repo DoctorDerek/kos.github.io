@@ -1,5 +1,7 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
 
+const classNames = (...classes: string[]) => classes.join(" ")
+
 export default function HighSpeedCable(): JSX.Element {
   const title = (
     <>
@@ -18,6 +20,7 @@ export default function HighSpeedCable(): JSX.Element {
       slug={slug}
       bulletNavMenu={bulletNavMenu}
       fullWidth={true}
+      pricingSection={<HighSpeedCablePricing />}
     >
       <HighSpeedCableContent />
     </InternalTemplate>
@@ -31,8 +34,8 @@ function HighSpeedCableContent() {
         Get an instant connection with Internet over cable at a price that suits
         your needs.
       </span>
-      <div className="border border-gray-300 border-solid hover:shadow-md">
-        <div className="border-t-4 border-transparent border-solid hover:border-[#005395] py-2 md:py-4 flex flex-col space-y-2 px-2">
+      <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
+        <div className="transition duration-500 border-t-4 border-transparent border-solid hover:border-[#005395] py-2 md:py-4 flex flex-col space-y-2 px-2">
           <form
             action="https://kos.net/dslavail/dslavail-check.php"
             method="post"
@@ -68,79 +71,107 @@ function HighSpeedCableContent() {
           </form>
         </div>
       </div>
-      <div className="flex flex-wrap">
-        <div className="w-1/3">
-          <div className="relative flex flex-col h-full shadow-2xl">
-            <div className="absolute z-20 text-6xl font-bold text-white left-3 top-2">
-              1
-            </div>
-            <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
-              <div className="absolute flex flex-col justify-center bg-[#005395] border-[#e8eff2] border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20">
-                <div className="z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white bg-[#005395] border-[#00467e] border-solid rounded-full top-4 w-84 h-84 border-20">
-                  <span className="text-5xl font-bold">CABLE 15</span>
-                  <span className="mt-6">
-                    <span className="text-5xl font-bold">$39</span>
-                    <sup className="text-xl">.95</sup>
-                  </span>
-                  <span className="mt-0 text-xl">
-                    per month{" "}
-                    <sup>
-                      <a href="#1" className="text-white underline">
-                        1
-                      </a>{" "}
-                      <a href="#2" className="text-white underline">
-                        2
-                      </a>
-                    </sup>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col mx-2 mt-56 space-y-6 text-center">
-              <span className="text-[#005395] text-2xl leading-6">
-                UP TO 15.0 MBPS DOWNLOAD SPEED
-              </span>
-              <span className="text-[#005395] text-2xl leading-6">
-                200 GB OF DATA TRANSFER PER MONTH
-              </span>
-              <h6 className="text-base text-gray-700">CABLE 15</h6>
-              <p>
-                Surf, shop, stream music and video, stay connected with family
-                and friends.
-              </p>
-              <a
-                className="text-[#28BCEB] text-sm font-bold text-underline"
-                href="#popup0"
-              >
-                » click here for full details
-              </a>
-              <div className="border border-gray-300 border-solid hover:shadow-md">
-                <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2">
-                  <span className="text-[#901D3D] font-extrabold">
-                    MAKE IT UNLIMITED
-                  </span>
-                  <span className="text-[#28BCEB] font-bold text-sm leading-3">
-                    Add Unlimited Data for only
-                    <br />
-                    <span className="text-3xl">$10.00</span> per month{" "}
-                    <sup>
-                      <a href="#2" className="text-black underline">
-                        2
-                      </a>
-                    </sup>
-                  </span>
-                </div>
-              </div>
-              <div className="text-center">
-                <a
-                  href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
-                  className="btn"
-                >
-                  Order Now
+    </div>
+  )
+}
+function HighSpeedCablePricing() {
+  return (
+    <div className="flex flex-wrap justify-center">
+      <Pricing />
+      <Pricing color="teal" />
+      <Pricing />
+      <div className="w-full h-0">{/*flex break*/}</div>
+      <Pricing />
+      <Pricing color="teal" />
+      <Pricing />
+    </div>
+  )
+}
+function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
+  return (
+    <div className="relative flex flex-col h-full m-3 shadow-2xl w-96">
+      <div className="absolute z-20 text-6xl font-bold text-white left-3 top-2">
+        1
+      </div>
+      <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
+        <div
+          className={classNames(
+            color === "teal" ? "bg-[#28bceb]" : "bg-[#005395]",
+            "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
+          )}
+        >
+          <div
+            className={classNames(
+              color === "teal"
+                ? "bg-[#28bceb] border-[#1db3e3]"
+                : "bg-[#005395] border-[#00467e]",
+              "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white border-solid rounded-full top-4 w-84 h-84 border-20"
+            )}
+          >
+            <span className="text-5xl font-bold">CABLE 15</span>
+            <span className="mt-6">
+              <span className="text-5xl font-bold">$39</span>
+              <sup className="text-xl">.95</sup>
+            </span>
+            <span className="mt-0 text-xl">
+              per month{" "}
+              <sup>
+                <a href="#1" className="text-white underline">
+                  1
+                </a>{" "}
+                <a href="#2" className="text-white underline">
+                  2
                 </a>
-              </div>
-            </div>
+              </sup>
+            </span>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col mx-2 mt-56 space-y-6 text-center">
+        <span className="text-[#005395] text-2xl leading-6">
+          UP TO 15.0 MBPS
+          <br />
+          DOWNLOAD SPEED
+        </span>
+        <span className="text-[#005395] text-2xl leading-6">
+          200 GB OF DATA <br />
+          TRANSFER PER MONTH
+        </span>
+        <h6 className="text-base text-gray-700">CABLE 15</h6>
+        <p>
+          Surf, shop, stream music and video, stay connected with family and
+          friends.
+        </p>
+        <a
+          className="text-[#28BCEB] text-sm font-bold text-underline"
+          href="#popup0"
+        >
+          » click here for full details
+        </a>
+        <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
+          <div className="border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] py-4 flex flex-col space-y-2 duration-500 transition">
+            <span className="text-[#901D3D] font-extrabold">
+              MAKE IT UNLIMITED
+            </span>
+            <span className="text-[#28BCEB] font-bold text-sm leading-3">
+              Add Unlimited Data for only
+              <br />
+              <span className="text-3xl">$10.00</span> per month{" "}
+              <sup>
+                <a href="#2" className="text-black underline">
+                  2
+                </a>
+              </sup>
+            </span>
+          </div>
+        </div>
+        <div className="pt-2 pb-8 text-center">
+          <a
+            href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
+            className="transition duration-500 btn"
+          >
+            Order Now
+          </a>
         </div>
       </div>
     </div>
