@@ -89,10 +89,13 @@ function HighSpeedCablePricing() {
 }
 function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
   return (
-    <div className="relative flex flex-col h-full m-3 shadow-2xl w-96">
-      <div className="absolute z-20 text-6xl font-bold text-white left-3 top-2">
-        1
-      </div>
+    <div
+      className={classNames(
+        color === "teal" ? "hover:text-[#28bceb]" : "hover:text-[#005395]",
+        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] text-white"
+      )}
+    >
+      <div className="absolute z-20 text-6xl font-bold left-3 top-2">1</div>
       <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
         <div
           className={classNames(
