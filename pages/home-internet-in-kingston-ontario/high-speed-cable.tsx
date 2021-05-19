@@ -70,7 +70,7 @@ function HighSpeedCableContent() {
       <div className="flex flex-wrap">
         <div className="w-1/3">
           <div className="relative flex flex-col h-full shadow-2xl">
-            <div className="absolute z-20 text-6xl font-bold text-white left-2 top-2">
+            <div className="absolute z-20 text-6xl font-bold text-white left-3 top-2">
               1
             </div>
             <div className="flex flex-col items-center justify-center h-48 bg-gray-200">
