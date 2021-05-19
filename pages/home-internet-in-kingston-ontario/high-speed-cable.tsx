@@ -91,8 +91,10 @@ function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
   return (
     <div
       className={classNames(
-        color === "teal" ? "hover:text-[#28bceb]" : "hover:text-[#005395]",
-        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid hover:shadow-sm hover:border-[#005395] text-white"
+        color === "teal"
+          ? "hover:text-[#28bceb] hover:border-[#28bceb]"
+          : "hover:text-[#005395] hover:border-[#005395] ",
+        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white"
       )}
     >
       <div className="absolute z-20 text-6xl font-bold left-3 top-2">1</div>
@@ -141,7 +143,7 @@ function Pricing({ color = "navy" }: { color?: "navy" | "teal" }) {
           TRANSFER PER MONTH
         </span>
         <h6 className="text-base text-gray-700">CABLE 15</h6>
-        <p>
+        <p className="text-black">
           Surf, shop, stream music and video, stay connected with family and
           friends.
         </p>
