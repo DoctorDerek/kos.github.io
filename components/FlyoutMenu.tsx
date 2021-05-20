@@ -70,7 +70,6 @@ export default function FlyoutMenu({
   layout: "outer" | "inner"
   parent: string
 }) {
-  console.log(parent)
   const timeoutDuration = 200
   let timeout: NodeJS.Timeout
   const useHover = true
