@@ -54,10 +54,12 @@ export default function FlyoutMenu({
   title,
   hrefOrSubmenu,
   layout,
+  parent,
 }: {
   title: string
   hrefOrSubmenu: NAVIGATION_MENU_TYPE | string
   layout: "outer" | "inner"
+  parent: string
 }) {
   const timeoutDuration = 200
   let timeout: NodeJS.Timeout
@@ -87,9 +89,9 @@ export default function FlyoutMenu({
   return (
     <>
       {typeof hrefOrSubmenu === "string" && (
-        <Popover className="relative">
+        <Popover className="relative" key={"Popover" + parent + title}>
           <Link
-            key={title + hrefOrSubmenu}
+            key={parent + title + hrefOrSubmenu}
             href={hrefOrSubmenu}
             className={classNames(
               partOfCurrentPagePath(title, hrefOrSubmenu, currentPagePath)
@@ -104,11 +106,12 @@ export default function FlyoutMenu({
         </Popover>
       )}
       {typeof hrefOrSubmenu === "object" && (
-        <Popover className="relative">
+        <Popover className="relative" key={"Popover" + parent + title}>
           {({ open }) => (
             <div
               onMouseEnter={() => useHover && onMouseHover(!open)}
               onMouseLeave={() => useHover && onMouseHover(open)}
+              key={"Popover<div>" + parent + title}
             >
               <Popover.Button
                 className={classNames(
@@ -120,6 +123,7 @@ export default function FlyoutMenu({
                   LINK_STYLES
                 )}
                 ref={buttonRef}
+                key={"PopoverButton" + parent + title}
               >
                 <span className="uppercase">{title}</span>
                 {layout === "outer" && (
@@ -151,6 +155,7 @@ export default function FlyoutMenu({
                 leave="transition ease-in duration-150"
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
+                key={"Transition" + parent + title}
               >
                 <Popover.Panel
                   static
@@ -161,6 +166,7 @@ export default function FlyoutMenu({
                       "absolute left-[-1.75rem] z-10 w-64 px-2 mt-2") as string
                   )}
                   ref={dropdownRef}
+                  key={"PopoverPanel" + parent + title}
                 >
                   <div
                     className={classNames(
@@ -169,6 +175,7 @@ export default function FlyoutMenu({
                       (layout === "outer" &&
                         "relative grid space-y-[2px] bg-white border-2 border-gray-300 border-solid divide-y-2 rounded-md") as string
                     )}
+                    key={"PopoverPanel<div>" + parent + title}
                   >
                     {typeof hrefOrSubmenu === "object" &&
                       (hrefOrSubmenu as NAVIGATION_MENU_TYPE[]).map(
@@ -182,10 +189,10 @@ export default function FlyoutMenu({
                               ? hrefOrSubmenu
                               : undefined
                           return (
-                            <>
+                            <Fragment key={"PopoverPanel<>" + parent + title}>
                               {href && (
                                 <Link
-                                  key={title + href}
+                                  key={"Link" + title + href + parent}
                                   href={href}
                                   className={classNames(
                                     partOfCurrentPagePath(
@@ -202,15 +209,15 @@ export default function FlyoutMenu({
                                 </Link>
                               )}
                               {submenu && (
-                                <Popover.Group>
-                                  <FlyoutMenu
-                                    title={title as string}
-                                    hrefOrSubmenu={submenu}
-                                    layout="inner"
-                                  />
-                                </Popover.Group>
+                                <FlyoutMenu
+                                  title={title as string}
+                                  hrefOrSubmenu={submenu}
+                                  layout="inner"
+                                  key={"FlyoutMenu" + title}
+                                  parent={parent + (title as string)}
+                                />
                               )}
-                            </>
+                            </Fragment>
                           )
                         }
                       )}
