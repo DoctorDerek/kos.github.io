@@ -199,7 +199,7 @@ export default function FlyoutMenu({
                               : undefined
                           return (
                             <React.Fragment
-                              key={"PopoverPanel<div><div>" + parent + title}
+                              key={"PopoverPanel<>" + parent + title}
                             >
                               {href && (
                                 <Link
