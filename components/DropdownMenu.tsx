@@ -1,4 +1,3 @@
-import { Popover } from "@headlessui/react"
 import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import FlyoutMenu from "@/components/FlyoutMenu"
@@ -82,11 +81,8 @@ export default function DropdownMenu() {
       <OutsideAlerter>
         {/* OutsideAlerter is for the mobile menu --
         close with toggle or by clicking outside */}
-        <Popover.Group
-          as="nav"
-          role="navigation"
-          className="flex flex-col items-center"
-        >
+        {/*as="nav"*/}
+        <nav role="navigation" className="flex flex-col items-center">
           <button
             type="button"
             aria-label="Toggle Menu"
@@ -128,18 +124,18 @@ export default function DropdownMenu() {
             {NAVIGATION_MENU.map(
               ([title, hrefOrSubmenu]: NAVIGATION_MENU_TYPE) => {
                 return (
-                  <Popover.Group key={title as string}>
-                    <FlyoutMenu
-                      title={title as string}
-                      hrefOrSubmenu={hrefOrSubmenu as NAVIGATION_MENU_TYPE}
-                      layout="outer"
-                    />
-                  </Popover.Group>
+                  <FlyoutMenu
+                    title={title as string}
+                    hrefOrSubmenu={hrefOrSubmenu as NAVIGATION_MENU_TYPE}
+                    layout="outer"
+                    key={"FlyoutMenu" + title}
+                    parent={"@/"}
+                  />
                 )
               }
             )}
           </div>
-        </Popover.Group>
+        </nav>
       </OutsideAlerter>
     </>
   )
