@@ -1,5 +1,7 @@
+import { useState } from "react"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
+import PricingModal from "@/components/PricingModal"
 
 const classNames = (...classes: string[]) => classes.join(" ")
 
@@ -139,6 +141,7 @@ function Pricing({
   pricingPackage: PricingPackage
   number: number
 }) {
+  const [openModal, setOpenModal] = useState(false)
   return (
     <div
       className={classNames(
@@ -199,12 +202,13 @@ function Pricing({
         </span>
         <h6 className="text-base text-gray-700">{pricingPackage.name}</h6>
         <p className="text-black">{pricingPackage.description}</p>
-        <a
+        <button
           className="text-sm font-bold text-teal-brand text-underline"
-          href="#popup0"
+          onClick={() => setOpenModal((state) => !state)}
         >
           » click here for full details
-        </a>
+        </button>
+        <PricingModal openModal={openModal} setOpenModal={setOpenModal} />
         <HoverBox>
           <span className="text-[#901D3D] font-extrabold">
             MAKE IT UNLIMITED
