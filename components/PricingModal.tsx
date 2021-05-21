@@ -60,6 +60,7 @@ export default function PricingModal({
                 </button>
               </div>
               <div className="sm:flex sm:items-start">
+                <div className="text-left"></div>
                 <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
                   <ExclamationIcon
                     className="h-6 w-6 text-red-600"
@@ -69,16 +70,43 @@ export default function PricingModal({
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg leading-6 font-medium text-gray-900"
+                    className="text leading-6 font-bold text-blue-brand font-bold text-3xl"
                   >
-                    Deactivate account
+                    CABLE 15
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Are you sure you want to deactivate your account? All of
-                      your data will be permanently removed from our servers
-                      forever. This action cannot be undone.
-                    </p>
+                  <div className="mt-2 text-sm">
+                    <span className="text-xl text-gray-800">
+                      Account Includes:
+                    </span>
+                    <span className=""></span>
+                    <ul className="text-left">
+                      <li>
+                        Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
+                      </li>
+                      <li>200 GB of data transfer per month</li>
+                      <li>Free spam and virus protection</li>
+                      <li>
+                        Two e-mail addresses with web e-mail, IMAP4, or POP3
+                        access
+                      </li>
+                      <li>5 hours of dial-up access provided</li>
+                      <li>100 MB of Personal Web Space available for use</li>
+                      <li>Access to value-added services</li>
+                      <li>Technical support with office repair</li>
+                      <li>Access to web-based e-mail</li>
+                    </ul>
+                    <ol>
+                      <li>Requires Modem rental or purchase.</li>
+                      <li>
+                        For residential purposes only, must not exceed a
+                        reasonable amount of usage
+                      </li>
+                      <li>
+                        $50 Setup Fee (waived for existing Cable Internet
+                        Subscribers for service at their existing
+                        location)&nbsp;
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </div>
