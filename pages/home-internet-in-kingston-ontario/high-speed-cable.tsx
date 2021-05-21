@@ -149,7 +149,7 @@ function Pricing({
         color === "teal"
           ? "hover:text-teal-brand hover:border-teal-brand"
           : "hover:text-blue-brand hover:border-blue-brand ",
-        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white"
+        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
       )}
     >
       <div className="absolute z-20 text-6xl font-bold left-3 top-2">
