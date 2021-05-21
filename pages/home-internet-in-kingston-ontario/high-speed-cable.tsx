@@ -2,6 +2,7 @@ import { useState } from "react"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 import PricingModal from "@/components/PricingModal"
+import OrderNowButton from "@/components/OrderNowButton"
 
 const classNames = (...classes: string[]) => classes.join(" ")
 
@@ -224,14 +225,7 @@ function Pricing({
             </sup>
           </span>
         </HoverBox>
-        <div className="pt-4 pb-10 text-center">
-          <a
-            href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
-            className="transition duration-500 btn"
-          >
-            Order Now
-          </a>
-        </div>
+        <OrderNowButton color="blue" />
       </div>
     </div>
   )
