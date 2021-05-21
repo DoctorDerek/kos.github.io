@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, Dispatch, SetStateAction } from "react"
+import { Fragment, Dispatch, SetStateAction, useState } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
 import { BULLET } from "@/components/UTILS"
@@ -28,33 +28,46 @@ export default function PricingModal({
 }: {
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
-  packageTitle: string
-  pricingBullets: string[]
-  pricingDetails: string[]
+  packageTitle?: string
+  pricingBullets?: string[]
+  pricingDetails?: string[]
 }) {
   const PackageTitle = (
     <Dialog.Title
       as="div"
-      className="font-bold text-blue-brand font-bold text-3xl sm:flex items-center uppercase"
+      className="font-bold text-blue-brand font-bold text-3xl flex items-center justify-start space-x-4 uppercase"
     >
-      <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
+      <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
         <BadgeCheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
       </div>
-      <div className="sm:mt-0 sm:ml-4">{packageTitle}</div>
+      <div className="sm:ml-4">{packageTitle}</div>
     </Dialog.Title>
   )
   const PricingBullets = (
-    <ul className="text-lg">
+    <ul className="sm:text-base md:text-lg lg:text-xl text-sm mt-4">
+      <div className="font-semibold text-gray-800">Account Includes:</div>
       {pricingBullets.map((bullet: string) => (
-        <li key={bullet}>
-          <BULLET />
-          {bullet}
-        </li>
+        <Fragment key={bullet}>
+          <PricingBullet bullet={bullet} />
+        </Fragment>
       ))}
     </ul>
   )
+  function PricingBullet({ bullet }: { bullet: string }) {
+    const [hover, setHover] = useState(false)
+    return (
+      <li
+        className="flex items-center"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <BULLET hover={hover} responsive={true} />
+        {bullet}
+      </li>
+    )
+  }
   const PricingDetails = (
-    <ol className="list-decimal ml-12 mt-4 text-base">
+    <ol className="list-decimal ml-6 sm:ml-8 lg:ml-10 xl:ml-12 mt-4 sm:text-sm md:text-base lg:text-lg text-xs">
       {pricingDetails.map((detail: string) => (
         <li key={detail}>{detail}</li>
       ))}
@@ -70,7 +83,7 @@ export default function PricingModal({
         open={openModal}
         onClose={() => setOpenModal(false)}
       >
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -100,7 +113,7 @@ export default function PricingModal({
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:mt-8 sm:align-middle sm:max-w-5xl sm:w-auto sm:p-6">
-              <div className="hidden sm:block absolute top-0 right-0 pt-6 pr-6">
+              <div className="absolute top-0 right-0 pt-6 pr-6">
                 <button
                   type="button"
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -110,23 +123,20 @@ export default function PricingModal({
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-              <div className="text-center sm:text-left">
+              <div>
                 {PackageTitle}
-                <div className="font-semibold text-lg text-gray-800 mt-4">
-                  Account Includes:
-                </div>
                 {PricingBullets}
                 {PricingDetails}
               </div>
-              <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse justify-between">
-                <OrderNowButton color="blue" />
+              <div className="mt-5 sm:mt-4 flex justify-between space-x-2 items-center pl-1 lg:pl-2">
                 <button
                   type="button"
-                  className="h-8 w-full flex items-center justify-center rounded-md border border-gray-300 px-4 shadow-sm bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-2 sm:w-auto sm:text-sm"
+                  className="h-8 flex items-center justify-center rounded-md border border-gray-300 px-4 shadow-sm bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   onClick={() => setOpenModal(false)}
                 >
                   <span>Close</span>
                 </button>
+                <OrderNowButton color="blue" />
               </div>
             </div>
           </Transition.Child>

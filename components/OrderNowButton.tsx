@@ -4,7 +4,7 @@ export default function OrderNowButton({
   color: "red" | "blue"
 }) {
   return (
-    <div className="py-4 text-center">
+    <div className="py-4 text-center flex-shrink-0">
       <a
         href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
         className="transition duration-500 btn"
