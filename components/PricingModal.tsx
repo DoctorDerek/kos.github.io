@@ -49,7 +49,7 @@ export default function PricingModal({
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-auto sm:p-6">
               <div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
                 <button
                   type="button"
@@ -73,10 +73,10 @@ export default function PricingModal({
                   </div>
                   <div className="sm:mt-0 sm:ml-4">CABLE 15</div>
                 </Dialog.Title>
-                <div className="font-semibold text-lg text-gray-800 mt-8">
+                <div className="font-semibold text-xl text-gray-800 mt-8">
                   Account Includes:
                 </div>
-                <ul className="text-base">
+                <ul className="text-lg">
                   <li>
                     <BULLET />
                     Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
@@ -113,7 +113,7 @@ export default function PricingModal({
                     Access to web-based e-mail
                   </li>
                 </ul>
-                <ol className="list-decimal ml-12 mt-4 text-sm">
+                <ol className="list-decimal ml-12 mt-4 text-base">
                   <li>Requires Modem rental or purchase.</li>
                   <li>
                     For residential purposes only, must not exceed a reasonable
