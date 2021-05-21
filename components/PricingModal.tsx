@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, Dispatch, SetStateAction } from "react"
 import { Dialog, Transition } from "@headlessui/react"
-import { ExclamationIcon, XIcon } from "@heroicons/react/outline"
+import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
 import { BULLET } from "@/components/UTILS"
 
 export default function PricingModal({
@@ -60,82 +60,78 @@ export default function PricingModal({
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-              <div className="sm:flex sm:items-start">
-                <div className="text-left"></div>
-                <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                  <ExclamationIcon
-                    className="h-6 w-6 text-red-600"
-                    aria-hidden="true"
-                  />
-                </div>
-                <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <Dialog.Title
-                    as="h3"
-                    className="text leading-6 font-bold text-blue-brand font-bold text-3xl"
-                  >
-                    CABLE 15
-                  </Dialog.Title>
-                  <div className="mt-2 text-sm">
-                    <span className="text-xl text-gray-800">
-                      Account Includes:
-                    </span>
-                    <span className=""></span>
-                    <ul className="text-left">
-                      <li>
-                        <BULLET />
-                        Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
-                      </li>
-                      <li>
-                        <BULLET />
-                        200 GB of data transfer per month
-                      </li>
-                      <li>
-                        <BULLET />
-                        Free spam and virus protection
-                      </li>
-                      <li>
-                        <BULLET />
-                        Two e-mail addresses with web e-mail, IMAP4, or POP3
-                        access
-                      </li>
-                      <li>
-                        <BULLET />5 hours of dial-up access provided
-                      </li>
-                      <li>
-                        <BULLET />
-                        100 MB of Personal Web Space available for use
-                      </li>
-                      <li>
-                        <BULLET />
-                        Access to value-added services
-                      </li>
-                      <li>
-                        <BULLET />
-                        Technical support with office repair
-                      </li>
-                      <li>
-                        <BULLET />
-                        Access to web-based e-mail
-                      </li>
-                    </ul>
-                    <ol>
-                      <li>
-                        <BULLET />
-                        Requires Modem rental or purchase.
-                      </li>
-                      <li>
-                        <BULLET />
-                        For residential purposes only, must not exceed a
-                        reasonable amount of usage
-                      </li>
-                      <li>
-                        <BULLET />
-                        $50 Setup Fee (waived for existing Cable Internet
-                        Subscribers for service at their existing
-                        location)&nbsp;
-                      </li>
-                    </ol>
+              <div className="mt-3 text-center sm:text-left">
+                <Dialog.Title
+                  as="h3"
+                  className="text leading-6 font-bold text-blue-brand font-bold text-3xl flex items-center sm:flex"
+                >
+                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
+                    <BadgeCheckIcon
+                      className="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
                   </div>
+                  <span className="sm:mt-0 sm:ml-4">CABLE 15</span>
+                </Dialog.Title>
+                <div className="mt-2 text-sm">
+                  <span className="text-xl text-gray-800">
+                    Account Includes:
+                  </span>
+                  <span className=""></span>
+                  <ul className="text-left">
+                    <li>
+                      <BULLET />
+                      Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
+                    </li>
+                    <li>
+                      <BULLET />
+                      200 GB of data transfer per month
+                    </li>
+                    <li>
+                      <BULLET />
+                      Free spam and virus protection
+                    </li>
+                    <li>
+                      <BULLET />
+                      Two e-mail addresses with web e-mail, IMAP4, or POP3
+                      access
+                    </li>
+                    <li>
+                      <BULLET />5 hours of dial-up access provided
+                    </li>
+                    <li>
+                      <BULLET />
+                      100 MB of Personal Web Space available for use
+                    </li>
+                    <li>
+                      <BULLET />
+                      Access to value-added services
+                    </li>
+                    <li>
+                      <BULLET />
+                      Technical support with office repair
+                    </li>
+                    <li>
+                      <BULLET />
+                      Access to web-based e-mail
+                    </li>
+                  </ul>
+                  <ol>
+                    <li>
+                      <BULLET />
+                      Requires Modem rental or purchase.
+                    </li>
+                    <li>
+                      <BULLET />
+                      For residential purposes only, must not exceed a
+                      reasonable amount of usage
+                    </li>
+                    <li>
+                      <BULLET />
+                      $50 Setup Fee (waived for existing Cable Internet
+                      Subscribers for service at their existing location)&nbsp;
+                    </li>
+                  </ol>
                 </div>
               </div>
               <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
