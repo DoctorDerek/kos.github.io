@@ -51,7 +51,7 @@ export default function PricingModal({
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:mt-8 sm:align-middle sm:max-w-5xl sm:w-auto sm:p-6">
-              <div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+              <div className="hidden sm:block absolute top-0 right-0 pt-6 pr-6">
                 <button
                   type="button"
                   className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -61,7 +61,7 @@ export default function PricingModal({
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-              <div className="mt-3 text-center sm:text-left">
+              <div className="text-center sm:text-left">
                 <Dialog.Title
                   as="div"
                   className="font-bold text-blue-brand font-bold text-3xl sm:flex items-center"
@@ -74,7 +74,7 @@ export default function PricingModal({
                   </div>
                   <div className="sm:mt-0 sm:ml-4">CABLE 15</div>
                 </Dialog.Title>
-                <div className="font-semibold text-xl text-gray-800 mt-8">
+                <div className="font-semibold text-lg text-gray-800 mt-4">
                   Account Includes:
                 </div>
                 <ul className="text-lg">
