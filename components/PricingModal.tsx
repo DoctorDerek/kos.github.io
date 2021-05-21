@@ -62,8 +62,8 @@ export default function PricingModal({
               </div>
               <div className="mt-3 text-center sm:text-left">
                 <Dialog.Title
-                  as="h3"
-                  className="text leading-6 font-bold text-blue-brand font-bold text-3xl flex items-center sm:flex"
+                  as="div"
+                  className="font-bold text-blue-brand font-bold text-3xl sm:flex items-center"
                 >
                   <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
                     <BadgeCheckIcon
@@ -71,83 +71,74 @@ export default function PricingModal({
                       aria-hidden="true"
                     />
                   </div>
-                  <span className="sm:mt-0 sm:ml-4">CABLE 15</span>
+                  <div className="sm:mt-0 sm:ml-4">CABLE 15</div>
                 </Dialog.Title>
-                <div className="mt-2 text-sm">
-                  <span className="text-xl text-gray-800">
-                    Account Includes:
-                  </span>
-                  <span className=""></span>
-                  <ul className="text-left">
-                    <li>
-                      <BULLET />
-                      Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
-                    </li>
-                    <li>
-                      <BULLET />
-                      200 GB of data transfer per month
-                    </li>
-                    <li>
-                      <BULLET />
-                      Free spam and virus protection
-                    </li>
-                    <li>
-                      <BULLET />
-                      Two e-mail addresses with web e-mail, IMAP4, or POP3
-                      access
-                    </li>
-                    <li>
-                      <BULLET />5 hours of dial-up access provided
-                    </li>
-                    <li>
-                      <BULLET />
-                      100 MB of Personal Web Space available for use
-                    </li>
-                    <li>
-                      <BULLET />
-                      Access to value-added services
-                    </li>
-                    <li>
-                      <BULLET />
-                      Technical support with office repair
-                    </li>
-                    <li>
-                      <BULLET />
-                      Access to web-based e-mail
-                    </li>
-                  </ul>
-                  <ol>
-                    <li>
-                      <BULLET />
-                      Requires Modem rental or purchase.
-                    </li>
-                    <li>
-                      <BULLET />
-                      For residential purposes only, must not exceed a
-                      reasonable amount of usage
-                    </li>
-                    <li>
-                      <BULLET />
-                      $50 Setup Fee (waived for existing Cable Internet
-                      Subscribers for service at their existing location)&nbsp;
-                    </li>
-                  </ol>
+                <div className="font-semibold text-lg text-gray-800 mt-8">
+                  Account Includes:
                 </div>
+                <ul className="text-base">
+                  <li>
+                    <BULLET />
+                    Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
+                  </li>
+                  <li>
+                    <BULLET />
+                    200 GB of data transfer per month
+                  </li>
+                  <li>
+                    <BULLET />
+                    Free spam and virus protection
+                  </li>
+                  <li>
+                    <BULLET />
+                    Two e-mail addresses with web e-mail, IMAP4, or POP3 access
+                  </li>
+                  <li>
+                    <BULLET />5 hours of dial-up access provided
+                  </li>
+                  <li>
+                    <BULLET />
+                    100 MB of Personal Web Space available for use
+                  </li>
+                  <li>
+                    <BULLET />
+                    Access to value-added services
+                  </li>
+                  <li>
+                    <BULLET />
+                    Technical support with office repair
+                  </li>
+                  <li>
+                    <BULLET />
+                    Access to web-based e-mail
+                  </li>
+                </ul>
+                <ol className="list-decimal ml-12 mt-4 text-sm">
+                  <li>Requires Modem rental or purchase.</li>
+                  <li>
+                    For residential purposes only, must not exceed a reasonable
+                    amount of usage
+                  </li>
+                  <li>
+                    $50 Setup Fee (waived for existing Cable Internet
+                    Subscribers for service at their existing location)&nbsp;
+                  </li>
+                </ol>
               </div>
-              <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+              <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse justify-between">
                 <button
                   type="button"
                   className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={() => setOpenModal(false)}
                 >
-                  Deactivate
+                  Order now
                 </button>
                 <button
                   type="button"
                   className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
                   onClick={() => setOpenModal(false)}
                 >
-                  Cancel
+                  Close
                 </button>
               </div>
             </div>
