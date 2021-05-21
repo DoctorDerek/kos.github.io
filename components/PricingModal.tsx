@@ -8,10 +8,59 @@ import OrderNowButton from "@/components/OrderNowButton"
 export default function PricingModal({
   openModal,
   setOpenModal,
+  packageTitle = "Cable 15",
+  pricingBullets = [
+    "Up to 15.0 Mbps download speed, 2.0 Mbps upload speed",
+    "200 GB of data transfer per month",
+    "Free spam and virus protection",
+    "Two e-mail addresses with web e-mail, IMAP4, or POP3 access",
+    "5 hours of dial-up access provided",
+    "100 MB of Personal Web Space available for use",
+    "Access to value-added services",
+    "Technical support with office repair",
+    "Access to web-based e-mail",
+  ],
+  pricingDetails = [
+    "Requires Modem rental or purchase.",
+    "For residential purposes only, must not exceed a reasonable amount of usage",
+    "$50 Setup Fee (waived for existing Cable Internet Subscribers for service at their existing location)",
+  ],
 }: {
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
+  packageTitle: string
+  pricingBullets: string[]
+  pricingDetails: string[]
 }) {
+  const PackageTitle = (
+    <Dialog.Title
+      as="div"
+      className="font-bold text-blue-brand font-bold text-3xl sm:flex items-center uppercase"
+    >
+      <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
+        <BadgeCheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
+      </div>
+      <div className="sm:mt-0 sm:ml-4">{packageTitle}</div>
+    </Dialog.Title>
+  )
+  const PricingBullets = (
+    <ul className="text-lg">
+      {pricingBullets.map((bullet: string) => (
+        <li key={bullet}>
+          <BULLET />
+          {bullet}
+        </li>
+      ))}
+    </ul>
+  )
+  const PricingDetails = (
+    <ol className="list-decimal ml-12 mt-4 text-base">
+      {pricingDetails.map((detail: string) => (
+        <li key={detail}>{detail}</li>
+      ))}
+    </ol>
+  )
+
   return (
     <Transition.Root show={openModal} as={Fragment}>
       <Dialog
@@ -62,69 +111,12 @@ export default function PricingModal({
                 </button>
               </div>
               <div className="text-center sm:text-left">
-                <Dialog.Title
-                  as="div"
-                  className="font-bold text-blue-brand font-bold text-3xl sm:flex items-center"
-                >
-                  <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
-                    <BadgeCheckIcon
-                      className="h-6 w-6 text-white"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div className="sm:mt-0 sm:ml-4">CABLE 15</div>
-                </Dialog.Title>
+                {PackageTitle}
                 <div className="font-semibold text-lg text-gray-800 mt-4">
                   Account Includes:
                 </div>
-                <ul className="text-lg">
-                  <li>
-                    <BULLET />
-                    Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
-                  </li>
-                  <li>
-                    <BULLET />
-                    200 GB of data transfer per month
-                  </li>
-                  <li>
-                    <BULLET />
-                    Free spam and virus protection
-                  </li>
-                  <li>
-                    <BULLET />
-                    Two e-mail addresses with web e-mail, IMAP4, or POP3 access
-                  </li>
-                  <li>
-                    <BULLET />5 hours of dial-up access provided
-                  </li>
-                  <li>
-                    <BULLET />
-                    100 MB of Personal Web Space available for use
-                  </li>
-                  <li>
-                    <BULLET />
-                    Access to value-added services
-                  </li>
-                  <li>
-                    <BULLET />
-                    Technical support with office repair
-                  </li>
-                  <li>
-                    <BULLET />
-                    Access to web-based e-mail
-                  </li>
-                </ul>
-                <ol className="list-decimal ml-12 mt-4 text-base">
-                  <li>Requires Modem rental or purchase.</li>
-                  <li>
-                    For residential purposes only, must not exceed a reasonable
-                    amount of usage
-                  </li>
-                  <li>
-                    $50 Setup Fee (waived for existing Cable Internet
-                    Subscribers for service at their existing location)&nbsp;
-                  </li>
-                </ol>
+                {PricingBullets}
+                {PricingDetails}
               </div>
               <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse justify-between">
                 <OrderNowButton color="blue" />
