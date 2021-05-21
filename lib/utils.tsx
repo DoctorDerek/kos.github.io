@@ -17,3 +17,5 @@ export const useCurrentPath = () => {
 
   return currentPagePath
 }
+
+export const classNames = (...classes: string[]) => classes.join(" ")
