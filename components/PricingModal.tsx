@@ -2,6 +2,7 @@
 import { Fragment, Dispatch, SetStateAction } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { ExclamationIcon, XIcon } from "@heroicons/react/outline"
+import { BULLET } from "@/components/UTILS"
 
 export default function PricingModal({
   openModal,
@@ -81,27 +82,54 @@ export default function PricingModal({
                     <span className=""></span>
                     <ul className="text-left">
                       <li>
+                        <BULLET />
                         Up to 15.0 Mbps download speed, 2.0 Mbps upload speed
                       </li>
-                      <li>200 GB of data transfer per month</li>
-                      <li>Free spam and virus protection</li>
                       <li>
+                        <BULLET />
+                        200 GB of data transfer per month
+                      </li>
+                      <li>
+                        <BULLET />
+                        Free spam and virus protection
+                      </li>
+                      <li>
+                        <BULLET />
                         Two e-mail addresses with web e-mail, IMAP4, or POP3
                         access
                       </li>
-                      <li>5 hours of dial-up access provided</li>
-                      <li>100 MB of Personal Web Space available for use</li>
-                      <li>Access to value-added services</li>
-                      <li>Technical support with office repair</li>
-                      <li>Access to web-based e-mail</li>
+                      <li>
+                        <BULLET />5 hours of dial-up access provided
+                      </li>
+                      <li>
+                        <BULLET />
+                        100 MB of Personal Web Space available for use
+                      </li>
+                      <li>
+                        <BULLET />
+                        Access to value-added services
+                      </li>
+                      <li>
+                        <BULLET />
+                        Technical support with office repair
+                      </li>
+                      <li>
+                        <BULLET />
+                        Access to web-based e-mail
+                      </li>
                     </ul>
                     <ol>
-                      <li>Requires Modem rental or purchase.</li>
                       <li>
+                        <BULLET />
+                        Requires Modem rental or purchase.
+                      </li>
+                      <li>
+                        <BULLET />
                         For residential purposes only, must not exceed a
                         reasonable amount of usage
                       </li>
                       <li>
+                        <BULLET />
                         $50 Setup Fee (waived for existing Cable Internet
                         Subscribers for service at their existing
                         location)&nbsp;
