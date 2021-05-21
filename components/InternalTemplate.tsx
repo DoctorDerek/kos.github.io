@@ -13,6 +13,7 @@ export function InternalTemplate({
   fullWidth = false,
   pricingSection = null,
   bulletNavMenu = null,
+  detailsSection = null,
   showOrderNowButton = false,
   children,
 }: {
@@ -21,6 +22,7 @@ export function InternalTemplate({
   fullWidth?: boolean
   pricingSection?: JSX.Element | null
   bulletNavMenu?: JSX.Element | null
+  detailsSection?: JSX.Element | null
   showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
@@ -94,7 +96,8 @@ export function InternalTemplate({
         </div>
         {pricingSection && (
           <>
-            <div className="py-6">{pricingSection}</div>
+            <div className="pt-6">{pricingSection}</div>
+            <div className="py-6">{detailsSection}</div>
           </>
         )}
         <div className="max-w-xl mx-auto">

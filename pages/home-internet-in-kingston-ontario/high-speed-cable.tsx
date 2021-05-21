@@ -22,6 +22,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       bulletNavMenu={bulletNavMenu}
       fullWidth={true}
       pricingSection={<ResidentialHighSpeedCablePricing />}
+      detailsSection={<ResidentialHighSpeedCableDetails />}
     >
       <ResidentialHighSpeedCableContent />
     </InternalTemplate>
@@ -126,79 +127,6 @@ function ResidentialHighSpeedCablePricing() {
           </>
         ))}
       </div>
-      <div className="mx-auto">
-        <div className="pt-12 text-center">
-          <div id="1">1) Requires Modem rental or purchase.</div>
-          <div id="2">
-            2) For residential purposes only, must not exceed a reasonable
-            amount of usage
-          </div>
-          <div id="3">
-            3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for
-            service at their current location.)
-          </div>
-        </div>
-        <div className="py-12 text-3xl font-bold text-center text-blue-brand">
-          Additional Details & Options
-        </div>
-        <div className="flex flex-wrap justify-center">
-          <div className="text-left w-96">
-            <HoverBox className="bg-gray-100">
-              <div className="font-bold text-center text-blue-brand">
-                OPTIONS
-              </div>
-              <ul className="ml-8 mr-2 list-disc">
-                <li>Additional E-Mail boxes</li>
-                <li>$4.95 per month, each Optional</li>
-                <li>VIP E-mail boxes, $6.95 per month, each</li>
-                <li>Additional 1000MB (1GB) transfer available for $1.00</li>
-                <li>Opt-out for automatic spam protection</li>
-              </ul>
-            </HoverBox>
-          </div>
-          <div className="text-left w-96">
-            <HoverBox>
-              <div className="font-bold text-center text-blue-brand">
-                MODEM OPTIONS
-              </div>
-              <p className="px-2">Automatic payment methods are required.</p>
-              <ul className="ml-8 mr-2 list-disc">
-                <li>Monthly Modem rental,</li>
-                <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
-                <li>Call for payment plan options</li>
-              </ul>
-              <p className="font-bold text-center text-blue-brand">
-                BRING YOUR OWN MODEM
-              </p>
-              <p className="px-2">
-                You are able to use your own Cable Modem if it is in our{" "}
-                <a href="/modem/list" className="underline text-blue-brand">
-                  supported modem list
-                </a>
-                .
-              </p>
-            </HoverBox>
-          </div>
-          <div className="h-auto text-left w-96">
-            <HoverBox className="bg-gray-100">
-              <div className="font-bold text-center text-blue-brand">
-                REQUIREMENTS
-              </div>
-              <p className="px-2">
-                To access the Internet with KOS CABLE, you will need:
-              </p>
-              <ul className="ml-8 mr-2 list-disc">
-                <li>Supported Cable Modem Required (Rental Available)</li>{" "}
-                <li>
-                  Modern 32-bit or 64-bit Operating System (Windows 7 minimum)
-                </li>
-                <li>Minimum of 2.0Ghz processor required</li>
-                <li>56K modem suggested for dial-up</li>
-              </ul>
-            </HoverBox>
-          </div>
-        </div>
-      </div>
     </>
   )
 }
@@ -302,6 +230,81 @@ function Pricing({
         </div>
       </div>
     </div>
+  )
+}
+function ResidentialHighSpeedCableDetails() {
+  return (
+    <>
+      <div className="pt-12 text-center">
+        <div id="1">1) Requires Modem rental or purchase.</div>
+        <div id="2">
+          2) For residential purposes only, must not exceed a reasonable amount
+          of usage
+        </div>
+        <div id="3">
+          3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for
+          service at their current location.)
+        </div>
+      </div>
+      <div className="py-12 text-3xl font-bold text-center text-blue-brand">
+        Additional Details & Options
+      </div>
+      <div className="flex flex-wrap justify-center">
+        <div className="text-left w-96">
+          <HoverBox className="bg-gray-100">
+            <div className="font-bold text-center text-blue-brand">OPTIONS</div>
+            <ul className="ml-8 mr-2 list-disc">
+              <li>Additional E-Mail boxes</li>
+              <li>$4.95 per month, each Optional</li>
+              <li>VIP E-mail boxes, $6.95 per month, each</li>
+              <li>Additional 1000MB (1GB) transfer available for $1.00</li>
+              <li>Opt-out for automatic spam protection</li>
+            </ul>
+          </HoverBox>
+        </div>
+        <div className="text-left w-96">
+          <HoverBox>
+            <div className="font-bold text-center text-blue-brand">
+              MODEM OPTIONS
+            </div>
+            <p className="px-2">Automatic payment methods are required.</p>
+            <ul className="ml-8 mr-2 list-disc">
+              <li>Monthly Modem rental,</li>
+              <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
+              <li>Call for payment plan options</li>
+            </ul>
+            <p className="font-bold text-center text-blue-brand">
+              BRING YOUR OWN MODEM
+            </p>
+            <p className="px-2">
+              You are able to use your own Cable Modem if it is in our{" "}
+              <a href="/modem/list" className="underline text-blue-brand">
+                supported modem list
+              </a>
+              .
+            </p>
+          </HoverBox>
+        </div>
+        <div className="h-auto text-left w-96">
+          <HoverBox className="bg-gray-100">
+            <div className="font-bold text-center text-blue-brand">
+              REQUIREMENTS
+            </div>
+            <p className="px-2">
+              To access the Internet with KOS CABLE, you will need:
+            </p>
+            <ul className="ml-8 mr-2 list-disc">
+              <li>Supported Cable Modem Required (Rental Available)</li>{" "}
+              <li>
+                Modern 32-bit or 64-bit Operating System (Windows 7 minimum)
+              </li>
+              <li>Minimum of 2.0Ghz processor required</li>
+              <li>56K modem suggested for dial-up</li>
+            </ul>
+          </HoverBox>
+        </div>
+      </div>
+    </>
   )
 }
 function HoverBox({
