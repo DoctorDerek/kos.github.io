@@ -1,4 +1,4 @@
-import { HoverBox } from "@/components/HoverBox"
+import HoverBox from "@/components/HoverBox"
 import PricingPackageFootnotes from "@/components/PricingPackageFootnotes"
 
 export default function PricingPackagePromotionHoverBox() {

@@ -1,6 +1,6 @@
 import { classNames } from "@/lib/utils"
 
-export function HoverBox({
+export default function HoverBox({
   className = "",
   children,
 }: {

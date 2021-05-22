@@ -1,7 +1,7 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
-import { HoverBox } from "@/components/HoverBox"
+import HoverBox from "@/components/HoverBox"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
