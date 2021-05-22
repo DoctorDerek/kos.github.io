@@ -22,7 +22,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       bulletNavMenu={bulletNavMenu}
       fullWidth={true}
       pricingSection={<ResidentialHighSpeedCablePricing />}
-      detailsSection={<ResidentialHighSpeedCableDetails />}
+      footnotesSection={<ResidentialHighSpeedCableFootnotes />}
     >
       <ResidentialHighSpeedCableContent />
     </InternalTemplate>
@@ -129,58 +129,85 @@ function ResidentialHighSpeedCablePricing() {
     </>
   )
 }
-function ResidentialHighSpeedCableDetails({
-  pricingPackageDetails = [
-    { id: 1, description: "Requires Modem rental or purchase." },
+function ResidentialHighSpeedCableFootnotes({
+  pricingPackageFootnotes = [
+    { id: "1", description: "Requires Modem rental or purchase." },
     {
-      id: 2,
+      id: "2",
       description:
         "For residential purposes only, must not exceed a reasonable amount of usage",
     },
     {
-      id: 3,
+      id: "3",
       description:
         "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
     },
   ],
 }: {
-  pricingPackageDetails?: PricingPackageDetails[]
+  pricingPackageFootnotes?: PricingPackageFootnote[]
 }): JSX.Element {
-  function PricingPackageDetails(): JSX.Element {
+  function PricingPackageFootnotes(): JSX.Element {
     return (
       <ol>
-        {pricingPackageDetails.map((pricingPackageDetail) => {
-          const id = String(pricingPackageDetail.id)
-          const description = `${id}) ${pricingPackageDetail.description}`
-          return (
-            <li id={id} key={description}>
-              {description}
-            </li>
-          )
-        })}
+        {pricingPackageFootnotes.map(
+          (pricingPackageFootnote: PricingPackageFootnote) => {
+            const { id, description } = pricingPackageFootnote
+            return (
+              <li id={id} key={id + description}>
+                ${id}) ${description}
+              </li>
+            )
+          }
+        )}
       </ol>
+    )
+  }
+  /*
+   */
+  type PricingPackageDetailsSection = {
+    detailsSectionHeading: string
+    detailsSectionList: string[]
+  }
+  const ResidentialHighSpeedCableDetailsSection = {
+    detailsSectionHeading: "Options",
+    detailsSectionList: [
+      "Additional E-Mail boxes",
+      "$4.95 per month, each Optional",
+      "VIP E-mail boxes, $6.95 per month, each",
+      "Additional 1000MB (1GB) transfer available for $1.00",
+      "Opt-out for automatic spam protection",
+    ],
+  }
+  function PricingPackageDetailsHoverBox({
+    detailsSectionHeading,
+    detailsSectionList,
+  }: PricingPackageDetailsSection) {
+    return (
+      <HoverBox className="bg-gray-100">
+        <div className="font-bold text-center uppercase text-blue-brand">
+          {detailsSectionHeading}
+        </div>
+        <ul className="ml-8 mr-2 list-disc">
+          {detailsSectionList.map((detailsSectionListItem) => (
+            <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
+          ))}
+        </ul>
+      </HoverBox>
     )
   }
   return (
     <>
       <div className="pt-12 text-center">
-        <PricingPackageDetails />
+        <PricingPackageFootnotes />
       </div>
       <div className="py-12 text-3xl font-bold text-center text-blue-brand">
         Additional Details & Options
       </div>
       <div className="flex flex-wrap justify-center">
         <div className="text-left w-96">
-          <HoverBox className="bg-gray-100">
-            <div className="font-bold text-center text-blue-brand">OPTIONS</div>
-            <ul className="ml-8 mr-2 list-disc">
-              <li>Additional E-Mail boxes</li>
-              <li>$4.95 per month, each Optional</li>
-              <li>VIP E-mail boxes, $6.95 per month, each</li>
-              <li>Additional 1000MB (1GB) transfer available for $1.00</li>
-              <li>Opt-out for automatic spam protection</li>
-            </ul>
-          </HoverBox>
+          <PricingPackageDetailsHoverBox
+            {...ResidentialHighSpeedCableDetailsSection}
+          />
         </div>
         <div className="text-left w-96">
           <HoverBox>

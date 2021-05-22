@@ -1,6 +1,7 @@
 import { classNames } from "@/lib/utils"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import { CheckIcon } from "@heroicons/react/solid"
+import Link from "@/components/Link"
 
 export const BULLET = ({
   hover = false,
@@ -31,3 +32,12 @@ export const BULLET = ({
     </div>
   )
 }
+
+export const BUTTON = ({ href, text }: { href: string; text: string }) => (
+  <Link
+    href={href}
+    className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+  >
+    {text}
+  </Link>
+)

@@ -90,7 +90,22 @@ type PricingPackage = {
  * @remarks
  * This type contains the footnotes for the sale prices listed on the website.
  */
-type PricingPackageDetails = {
-  id: number
+type PricingPackageFootnote = {
+  id: string
   description: string
+}
+
+/**
+ * These are the details for the <HoverBox /> sections that appear on the sales
+ * pages and are displayed at the bottom of a <PricingPackageColumn />
+ *
+ * @typeParam id - The number of the footnote, e.g. 1
+ * @typeParam description - The full text of the footnote
+ *
+ * @remarks
+ * This type contains the footnotes for the sale prices listed on the website.
+ */
+type PricingPackageDetailsSection = {
+  detailsSectionHeading: string
+  detailsSectionList: string[]
 }

@@ -4,8 +4,8 @@ import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
 import innerText from "react-innertext"
 import Link from "@/components/Link"
-
-const classNames = (...classes: string[]): string => classes.join(" ")
+import { BUTTON } from "@/components/UTILS"
+import { classNames } from "@/lib/utils"
 
 export function InternalTemplate({
   title,
@@ -13,7 +13,7 @@ export function InternalTemplate({
   fullWidth = false,
   pricingSection = null,
   bulletNavMenu = null,
-  detailsSection = null,
+  footnotesSection = null,
   showOrderNowButton = false,
   children,
 }: {
@@ -22,27 +22,10 @@ export function InternalTemplate({
   fullWidth?: boolean
   pricingSection?: JSX.Element | null
   bulletNavMenu?: JSX.Element | null
-  detailsSection?: JSX.Element | null
+  footnotesSection?: JSX.Element | null
   showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
-  const isRequired = () => {
-    throw new Error("Both href and children props are required in BUTTON")
-  }
-  const BUTTON = ({
-    href = isRequired(),
-    text = isRequired(),
-  }: {
-    href: string
-    text: string
-  }) => (
-    <a
-      href={href}
-      className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
-    >
-      {text}
-    </a>
-  )
   const BulletNavMenu = () => (
     <>
       {bulletNavMenu && (
@@ -97,7 +80,7 @@ export function InternalTemplate({
         {pricingSection && (
           <>
             <div className="pt-6">{pricingSection}</div>
-            <div className="py-6">{detailsSection}</div>
+            <div className="py-6">{footnotesSection}</div>
           </>
         )}
         <div className="max-w-xl mx-auto">
