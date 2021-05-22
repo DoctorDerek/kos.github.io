@@ -75,3 +75,18 @@ type PricingPackage = {
   dataTransfer: string
   description: string
 }
+
+/**
+ * These are the footnotes that are clickable links (1, 2, 3, etc.) on the sales
+ * pages and displayed at the bottom of a <PricingPackageColumn />
+ *
+ * @typeParam id - The number of the footnote, e.g. 1
+ * @typeParam description - The full text of the footnote
+ *
+ * @remarks
+ * This type contains the footnotes for the sale prices listed on the website.
+ */
+type PricingPackageDetails = {
+  id: number
+  description: string
+}

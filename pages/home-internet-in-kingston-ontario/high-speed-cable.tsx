@@ -123,10 +123,6 @@ function ResidentialHighSpeedCablePricing() {
     </>
   )
 }
-type PricingPackageDetails = {
-  id: number
-  description: string
-}
 function ResidentialHighSpeedCableDetails({
   pricingPackageDetails = [
     { id: 1, description: "1) Requires Modem rental or purchase." },
@@ -144,7 +140,7 @@ function ResidentialHighSpeedCableDetails({
 }: {
   pricingPackageDetails?: PricingPackageDetails[]
 }): JSX.Element {
-  function PricingPackageDetails() {
+  function PricingPackageDetails(): JSX.Element {
     return (
       <>
         {pricingPackageDetails.map((pricingPackageDetail) => {
