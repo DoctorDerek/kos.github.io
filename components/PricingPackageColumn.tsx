@@ -15,7 +15,7 @@ export function PricingPackageColumn({
   number: number
 }): JSX.Element {
   const {
-    name,
+    packageName,
     pricePerMonthDollars,
     pricePerMonthCents,
     downloadSpeed,
@@ -27,7 +27,7 @@ export function PricingPackageColumn({
   const [openModal, setOpenModal] = useState(false)
 
   function PricingPackageNameH2() {
-    return <h2 className="text-5xl font-bold text-white">{name}</h2>
+    return <h2 className="text-5xl font-bold text-white">{packageName}</h2>
   }
 
   function PricingPackagePrice() {
@@ -66,7 +66,7 @@ export function PricingPackageColumn({
     )
   }
   function PricingPackageNameH3() {
-    return <h3 className="text-base text-gray-700">{name}</h3>
+    return <h3 className="text-base text-gray-700">{packageName}</h3>
   }
   function PricingPackageDescription() {
     return <p className="text-black">{description}</p>

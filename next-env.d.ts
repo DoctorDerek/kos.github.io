@@ -59,7 +59,7 @@ type FrontMatter = {
  * Available packages & prices for display the sales pages using
  * <PricingPackageColumn />
  *
- * @typeParam name - The name of the package being advertised
+ * @typeParam packageName - The name of the package being advertised
  * @typeParam pricePerMonthDollars - The price/mo. in Canadian dollars
  * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. $.95
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
@@ -71,7 +71,7 @@ type FrontMatter = {
  * This type contains the prices listed for sale to consumers on the site.
  */
 type PricingPackage = {
-  name: string
+  packageName: string
   pricePerMonthDollars: string
   pricePerMonthCents: string
   downloadSpeed: string

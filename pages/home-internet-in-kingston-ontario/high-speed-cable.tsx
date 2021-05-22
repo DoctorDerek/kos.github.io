@@ -79,7 +79,7 @@ function ResidentialHighSpeedCableContent() {
 function ResidentialHighSpeedCablePricing() {
   const pricingPackages: PricingPackage[] = [
     {
-      name: "CABLE 15",
+      packageName: "CABLE 15",
       pricePerMonthDollars: "39",
       pricePerMonthCents: "95",
       downloadSpeed: "15.0 MBPS",
@@ -89,7 +89,7 @@ function ResidentialHighSpeedCablePricing() {
       priceFootnotes: "1 2",
     },
     {
-      name: "CABLE 40",
+      packageName: "CABLE 40",
       pricePerMonthDollars: "54",
       pricePerMonthCents: "95",
       downloadSpeed: "40.0 MBPS",
@@ -99,7 +99,7 @@ function ResidentialHighSpeedCablePricing() {
       priceFootnotes: "1 2",
     },
     {
-      name: "CABLE 60",
+      packageName: "CABLE 60",
       pricePerMonthDollars: "74",
       pricePerMonthCents: "95",
       downloadSpeed: "60.0 MBPS",
@@ -117,7 +117,7 @@ function ResidentialHighSpeedCablePricing() {
             <PricingPackageColumn
               color={index % 2 === 1 ? "teal" : "navy"}
               pricingPackage={pricingPackage}
-              key={pricingPackage.name}
+              key={pricingPackage.packageName}
               number={index + 1}
             />
             {index % 3 === 0 && index > 0 && (
