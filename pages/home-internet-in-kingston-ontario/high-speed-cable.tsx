@@ -123,19 +123,46 @@ function ResidentialHighSpeedCablePricing() {
     </>
   )
 }
-function ResidentialHighSpeedCableDetails() {
+type PricingPackageDetails = {
+  id: number
+  description: string
+}
+function ResidentialHighSpeedCableDetails({
+  pricingPackageDetails = [
+    { id: 1, description: "1) Requires Modem rental or purchase." },
+    {
+      id: 2,
+      description:
+        "2) For residential purposes only, must not exceed a reasonable amount of usage",
+    },
+    {
+      id: 3,
+      description:
+        "3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
+    },
+  ],
+}: {
+  pricingPackageDetails?: PricingPackageDetails[]
+}): JSX.Element {
+  function PricingPackageDetails() {
+    return (
+      <>
+        {pricingPackageDetails.map((pricingPackageDetail) => {
+          const id = String(pricingPackageDetail.id)
+          const description = `${id}) ${pricingPackageDetail.description}`
+          return (
+            <li id={id} key={description}>
+              {description}
+            </li>
+          )
+        })}
+      </>
+    )
+  }
   return (
     <>
       <div className="pt-12 text-center">
-        <div id="1">1) Requires Modem rental or purchase.</div>
-        <div id="2">
-          2) For residential purposes only, must not exceed a reasonable amount
-          of usage
-        </div>
-        <div id="3">
-          3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for
-          service at their current location.)
-        </div>
+        <PricingPackageDetails />
       </div>
       <div className="py-12 text-3xl font-bold text-center text-blue-brand">
         Additional Details & Options
