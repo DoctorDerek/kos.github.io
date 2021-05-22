@@ -118,10 +118,10 @@ function ResidentialHighSpeedCablePricing() {
               color={index % 2 === 1 ? "teal" : "navy"}
               pricingPackage={pricingPackage}
               key={pricingPackage.packageName}
-              number={index + 1}
+              columnNumber={index + 1}
             />
             {index % 3 === 0 && index > 0 && (
-              <div className="w-full h-0">{/*flex break*/}</div>
+              <div className="w-full h-0">{/*flex break every 3 items*/}</div>
             )}
           </>
         ))}

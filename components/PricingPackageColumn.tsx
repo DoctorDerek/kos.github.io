@@ -8,11 +8,11 @@ import { classNames } from "@/lib/utils"
 export function PricingPackageColumn({
   color = "navy",
   pricingPackage,
-  number,
+  columnNumber,
 }: {
   color?: "navy" | "teal"
   pricingPackage: PricingPackage
-  number: number
+  columnNumber: number
 }): JSX.Element {
   const {
     packageName,
@@ -98,7 +98,7 @@ export function PricingPackageColumn({
       )}
     >
       <div className="absolute z-20 text-6xl font-bold left-3 top-2">
-        {number}
+        {columnNumber}
       </div>
       <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
         <div
