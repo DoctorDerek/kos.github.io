@@ -92,7 +92,7 @@ export function PricingPackageColumn({
       </>
     )
   }
-  function PricingPackageUnlimitedHoverBox() {
+  function PricingPackagePromotionHoverBox() {
     return (
       <HoverBox>
         <span className="text-[#901D3D] font-extrabold">MAKE IT UNLIMITED</span>
@@ -149,7 +149,7 @@ export function PricingPackageColumn({
         <PricingPackageNameH3 />
         <PricingPackageDescription />
         <PricingPackageModalWithButton />
-        <PricingPackageUnlimitedHoverBox />
+        <PricingPackagePromotionHoverBox />
         <OrderNowButton color="blue" />
       </div>
     </div>
