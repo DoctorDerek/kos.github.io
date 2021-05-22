@@ -148,7 +148,7 @@ function ResidentialHighSpeedCableDetails({
 }): JSX.Element {
   function PricingPackageDetails(): JSX.Element {
     return (
-      <>
+      <ol>
         {pricingPackageDetails.map((pricingPackageDetail) => {
           const id = String(pricingPackageDetail.id)
           const description = `${id}) ${pricingPackageDetail.description}`
@@ -158,14 +158,14 @@ function ResidentialHighSpeedCableDetails({
             </li>
           )
         })}
-      </>
+      </ol>
     )
   }
   return (
     <>
-      <ol className="pt-12 text-center">
+      <div className="pt-12 text-center">
         <PricingPackageDetails />
-      </ol>
+      </div>
       <div className="py-12 text-3xl font-bold text-center text-blue-brand">
         Additional Details & Options
       </div>
