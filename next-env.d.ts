@@ -54,3 +54,24 @@ type FrontMatter = {
   images: OpenGraphImages[]
   draft: boolean
 }
+
+/**
+ * Available packages & prices for display the sales pages using
+ * <PricingPackageColumn />
+ *
+ * @typeParam name - The name of the package being advertised
+ * @typeParam price - The price/mo. in Canadian dollars ($.95 will be added)
+ * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
+ * @typeParam dataTransfer - The amount of data transfer
+ * @typeParam tags - The tags as a string array
+ *
+ * @remarks
+ * This type contains the prices listed for sale to consumers on the site.
+ */
+type PricingPackage = {
+  name: string
+  price: string
+  downloadSpeed: string
+  dataTransfer: string
+  description: string
+}
