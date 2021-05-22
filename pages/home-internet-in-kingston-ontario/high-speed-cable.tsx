@@ -2,8 +2,7 @@ import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import { HoverBox } from "@/components/HoverBox"
-
-export const classNames = (...classes: string[]) => classes.join(" ")
+import { classNames } from "@/lib/utils"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
