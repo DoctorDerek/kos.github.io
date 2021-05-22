@@ -80,27 +80,33 @@ function ResidentialHighSpeedCablePricing() {
   const pricingPackages: PricingPackage[] = [
     {
       name: "CABLE 15",
-      price: "39",
+      pricePerMonthDollars: "39",
+      pricePerMonthCents: "95",
       downloadSpeed: "15.0 MBPS",
       dataTransfer: "200 GB",
       description:
         "Surf, shop, stream music and video, stay connected with family and friends.",
+      priceFootnotes: "1 2",
     },
     {
       name: "CABLE 40",
-      price: "54",
+      pricePerMonthDollars: "54",
+      pricePerMonthCents: "95",
       downloadSpeed: "40.0 MBPS",
       dataTransfer: "300 GB",
       description:
         "For active families and multiple users. All the features with more speed and data.",
+      priceFootnotes: "1 2",
     },
     {
       name: "CABLE 60",
-      price: "74",
+      pricePerMonthDollars: "74",
+      pricePerMonthCents: "95",
       downloadSpeed: "60.0 MBPS",
       dataTransfer: "300 GB",
       description:
         "For power users. Perfect for people who demand the most speed available.",
+      priceFootnotes: "1 2",
     },
   ]
   return (

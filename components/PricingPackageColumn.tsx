@@ -13,50 +13,81 @@ export function PricingPackageColumn({
   pricingPackage: PricingPackage
   number: number
 }): JSX.Element {
+  const {
+    name,
+    pricePerMonthDollars,
+    pricePerMonthCents,
+    downloadSpeed,
+    dataTransfer,
+    description,
+    priceFootnotes,
+  }: PricingPackage = pricingPackage
+
   const [openModal, setOpenModal] = useState(false)
+
   function PricingPackageNameH2() {
-    return (
-      <h2 className="text-5xl font-bold text-white">{pricingPackage.name}</h2>
-    )
+    return <h2 className="text-5xl font-bold text-white">{name}</h2>
   }
 
   function PricingPackagePrice() {
     return (
-      <span className="mt-6 text-white">
-        <span className="text-5xl font-bold">${pricingPackage.price}</span>
-        <sup className="text-xl">.95</sup>
-      </span>
+      <>
+        <span className="mt-6 text-white">
+          <span className="text-5xl font-bold">${pricePerMonthDollars}</span>
+          <sup className="text-xl">.${pricePerMonthCents}</sup>
+        </span>
+
+        <span className="mt-0 text-xl text-white">per month</span>
+      </>
     )
   }
-  function PricingPackagePriceFootnotes({
-    footnotes = [1, 2],
+  function PricingPackagePriceFootnotes() {
+    return <PricingPackageFootnotes color="white" footnotes={priceFootnotes} />
+  }
+  /**
+   * @param footnotes
+   * a string of unique footnotes that will be split on white space e.g. "1 2" will be split to [1,2]
+   */
+  function PricingPackageFootnotes({
+    footnotes,
+    color,
   }: {
-    footnotes?: number[]
+    footnotes: string
+    color: "white" | "black"
   }) {
+    // split footnotes string on whitespace so that "1 2" becomes [1,2]
+    const footnotesArray = footnotes.split(/\W/)
+    if (Array.from(new Set(footnotesArray)).length !== footnotesArray.length)
+      throw new Error(
+        `Duplicate footnotes string "${footnotes}" found in <PricingPackageFootnotes /> e.g. "2 2" instead of "2" or "1 2"`
+      )
     return (
-      <span className="mt-0 text-xl text-white">
-        per month{" "}
-        <sup>
-          <ol className="inline">
-            {footnotes.map((footnote, index) => (
-              <li key={footnote} className="inline">
-                <a href={`#${footnote}`} className="text-white underline">
-                  {footnote}
-                </a>
-                {index === footnotes.length - 1 ? "" : " "}
-                {/* join footnotes with " " between items, except last item */}
-              </li>
-            ))}
-          </ol>
-        </sup>
-      </span>
+      <sup>
+        <ol className="inline">
+          {footnotesArray.map((footnote, index) => (
+            <li key={footnote} className="inline">
+              <a
+                href={`#${footnote}`}
+                className={classNames(
+                  color === "white" ? "text-white" : "text-black",
+                  "underline"
+                )}
+              >
+                {footnote}
+              </a>
+              {index === footnotes.length - 1 ? "" : " "}
+              {/* join footnotes with " " between items, except last item */}
+            </li>
+          ))}
+        </ol>
+      </sup>
     )
   }
 
   function PricingPackageDownloadSpeed() {
     return (
       <span className="text-2xl leading-6 text-blue-brand">
-        UP TO {pricingPackage.downloadSpeed}
+        UP TO {downloadSpeed}
         <br />
         DOWNLOAD SPEED
       </span>
@@ -65,16 +96,16 @@ export function PricingPackageColumn({
   function PricingPackageDataTransfer() {
     return (
       <span className="text-2xl leading-6 text-blue-brand">
-        {pricingPackage.dataTransfer} OF DATA <br />
+        {dataTransfer} OF DATA <br />
         TRANSFER PER MONTH
       </span>
     )
   }
   function PricingPackageNameH3() {
-    return <h3 className="text-base text-gray-700">{pricingPackage.name}</h3>
+    return <h3 className="text-base text-gray-700">{name}</h3>
   }
   function PricingPackageDescription() {
-    return <p className="text-black">{pricingPackage.description}</p>
+    return <p className="text-black">{description}</p>
   }
   function PricingPackageModalWithButton() {
     return (
@@ -98,28 +129,32 @@ export function PricingPackageColumn({
       promotionSubheading: string
       promotionPricePerMonth: string
       promotionPricePerMonthCents: string
-      promotionFootnotes: string[]
+      promotionFootnotes: string
     } = {
       promotionHeading: "Make It Unlimited",
       promotionSubheading: "Add Unlimited Data for only",
       promotionPricePerMonth: "10",
       promotionPricePerMonthCents: "00",
-      promotionFootnotes: "2".split(" "),
+      promotionFootnotes: "2",
     }
     const {
-      promotionHeading: heading,
-      promotionSubheading: subheading,
+      promotionHeading,
+      promotionSubheading,
       promotionPricePerMonth,
       promotionPricePerMonthCents,
       promotionFootnotes,
     } = pricingPackagePromotion
     function PricingPackagePromotionHeading() {
-      return <span className="text-[#901D3D] font-extrabold">{heading}</span>
+      return (
+        <span className="text-[#901D3D] font-extrabold">
+          {promotionHeading}
+        </span>
+      )
     }
     function PricingPackagePromotionSubheading() {
       return (
         <>
-          {subheading}
+          {promotionSubheading}
           <br />
         </>
       )
@@ -128,7 +163,7 @@ export function PricingPackageColumn({
       return (
         <>
           <span className="text-3xl">
-            ${promotionPricePerMonth}.${promotionPricePerMonthCents}
+            ${promotionPricePerMonth}.{promotionPricePerMonthCents}
           </span>{" "}
           per month{" "}
         </>
@@ -136,11 +171,7 @@ export function PricingPackageColumn({
     }
     function PricingPackagePromotionFootnotes() {
       return (
-        <sup>
-          <a href="#2" className="text-black underline">
-            2
-          </a>
-        </sup>
+        <PricingPackageFootnotes color="black" footnotes={promotionFootnotes} />
       )
     }
     return (
@@ -184,7 +215,6 @@ export function PricingPackageColumn({
           >
             <PricingPackageNameH2 />
             <PricingPackagePrice />
-            <PricingPackagePriceFootnotes />
           </div>
         </div>
       </div>

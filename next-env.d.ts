@@ -60,20 +60,24 @@ type FrontMatter = {
  * <PricingPackageColumn />
  *
  * @typeParam name - The name of the package being advertised
- * @typeParam price - The price/mo. in Canadian dollars ($.95 will be added)
+ * @typeParam pricePerMonthDollars - The price/mo. in Canadian dollars
+ * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. $.95
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
  * @typeParam dataTransfer - The amount of data transfer
- * @typeParam tags - The tags as a string array
+ * @typeParam description - The paragraph <p> description of the package
+ * @typeParam priceFootnotes - The footnotes as a string with spaces e.g. "1 2"
  *
  * @remarks
  * This type contains the prices listed for sale to consumers on the site.
  */
 type PricingPackage = {
   name: string
-  price: string
+  pricePerMonthDollars: string
+  pricePerMonthCents: string
   downloadSpeed: string
   dataTransfer: string
   description: string
+  priceFootnotes: string
 }
 
 /**
