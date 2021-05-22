@@ -125,16 +125,16 @@ function ResidentialHighSpeedCablePricing() {
 }
 function ResidentialHighSpeedCableDetails({
   pricingPackageDetails = [
-    { id: 1, description: "1) Requires Modem rental or purchase." },
+    { id: 1, description: "Requires Modem rental or purchase." },
     {
       id: 2,
       description:
-        "2) For residential purposes only, must not exceed a reasonable amount of usage",
+        "For residential purposes only, must not exceed a reasonable amount of usage",
     },
     {
       id: 3,
       description:
-        "3) $50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
+        "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
     },
   ],
 }: {
@@ -157,9 +157,9 @@ function ResidentialHighSpeedCableDetails({
   }
   return (
     <>
-      <div className="pt-12 text-center">
+      <ol className="pt-12 text-center">
         <PricingPackageDetails />
-      </div>
+      </ol>
       <div className="py-12 text-3xl font-bold text-center text-blue-brand">
         Additional Details & Options
       </div>
