@@ -1,7 +1,8 @@
 import { useState } from "react"
 import PricingPackageModal from "@/components/PricingPackageModal"
 import OrderNowButton from "@/components/OrderNowButton"
-import { HoverBox } from "@/components/HoverBox"
+import PricingPackagePromotionHoverBox from "@/components/PricingPackagePromotionHoverBox"
+import PricingPackageFootnotes from "@/components/PricingPackageFootnotes"
 import { classNames } from "@/lib/utils"
 
 export function PricingPackageColumn({
@@ -46,45 +47,6 @@ export function PricingPackageColumn({
   function PricingPackagePriceFootnotes() {
     return <PricingPackageFootnotes color="white" footnotes={priceFootnotes} />
   }
-  /**
-   * @param footnotes
-   * a string of unique footnotes that will be split on white space e.g. "1 2" will be split to [1,2]
-   */
-  function PricingPackageFootnotes({
-    footnotes,
-    color,
-  }: {
-    footnotes: string
-    color: "white" | "black"
-  }) {
-    // split footnotes string on whitespace so that "1 2" becomes [1,2]
-    const footnotesArray = footnotes.split(/\W/)
-    if (Array.from(new Set(footnotesArray)).length !== footnotesArray.length)
-      throw new Error(
-        `Duplicate footnotes string "${footnotes}" found in <PricingPackageFootnotes /> e.g. "2 2" instead of "2" or "1 2"`
-      )
-    return (
-      <sup>
-        <ol className="inline">
-          {footnotesArray.map((footnote, index) => (
-            <li key={footnote} className="inline">
-              <a
-                href={`#${footnote}`}
-                className={classNames(
-                  color === "white" ? "text-white" : "text-black",
-                  "underline"
-                )}
-              >
-                {footnote}
-              </a>
-              {index === footnotes.length - 1 ? "" : " "}
-              {/* join footnotes with " " between items, except last item */}
-            </li>
-          ))}
-        </ol>
-      </sup>
-    )
-  }
 
   function PricingPackageDownloadSpeed() {
     return (
@@ -123,68 +85,6 @@ export function PricingPackageColumn({
           setOpenModal={setOpenModal}
         />
       </>
-    )
-  }
-  function PricingPackagePromotionHoverBox() {
-    const pricingPackagePromotion: {
-      promotionHeading: string
-      promotionSubheading: string
-      promotionPricePerMonth: string
-      promotionPricePerMonthCents: string
-      promotionFootnotes: string
-    } = {
-      promotionHeading: "Make It Unlimited",
-      promotionSubheading: "Add Unlimited Data for only",
-      promotionPricePerMonth: "10",
-      promotionPricePerMonthCents: "00",
-      promotionFootnotes: "2",
-    }
-    const {
-      promotionHeading,
-      promotionSubheading,
-      promotionPricePerMonth,
-      promotionPricePerMonthCents,
-      promotionFootnotes,
-    } = pricingPackagePromotion
-    function PricingPackagePromotionHeading() {
-      return (
-        <span className="text-[#901D3D] font-extrabold">
-          {promotionHeading}
-        </span>
-      )
-    }
-    function PricingPackagePromotionSubheading() {
-      return (
-        <>
-          {promotionSubheading}
-          <br />
-        </>
-      )
-    }
-    function PricingPackagePromotionPrice() {
-      return (
-        <>
-          <span className="text-3xl">
-            ${promotionPricePerMonth}.{promotionPricePerMonthCents}
-          </span>{" "}
-          per month{" "}
-        </>
-      )
-    }
-    function PricingPackagePromotionFootnotes() {
-      return (
-        <PricingPackageFootnotes color="black" footnotes={promotionFootnotes} />
-      )
-    }
-    return (
-      <HoverBox>
-        <PricingPackagePromotionHeading />
-        <span className="text-sm font-bold leading-3 text-teal-brand">
-          <PricingPackagePromotionSubheading />
-          <PricingPackagePromotionPrice />
-          <PricingPackagePromotionFootnotes />
-        </span>
-      </HoverBox>
     )
   }
 
