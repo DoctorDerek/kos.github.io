@@ -14,13 +14,15 @@ export function PricingPackageColumn({
   number: number
 }): JSX.Element {
   const [openModal, setOpenModal] = useState(false)
-  function PricingPackageName() {
-    return <span className="text-5xl font-bold">{pricingPackage.name}</span>
+  function PricingPackageNameH2() {
+    return (
+      <h2 className="text-5xl font-bold text-white">{pricingPackage.name}</h2>
+    )
   }
 
   function PricingPackagePrice() {
     return (
-      <span className="mt-6">
+      <span className="mt-6 text-white">
         <span className="text-5xl font-bold">${pricingPackage.price}</span>
         <sup className="text-xl">.95</sup>
       </span>
@@ -32,7 +34,7 @@ export function PricingPackageColumn({
     footnotes?: number[]
   }) {
     return (
-      <span className="mt-0 text-xl">
+      <span className="mt-0 text-xl text-white">
         per month{" "}
         <sup>
           <ol className="inline">
@@ -48,6 +50,63 @@ export function PricingPackageColumn({
           </ol>
         </sup>
       </span>
+    )
+  }
+
+  function PricingPackageDownloadSpeed() {
+    return (
+      <span className="text-2xl leading-6 text-blue-brand">
+        UP TO {pricingPackage.downloadSpeed}
+        <br />
+        DOWNLOAD SPEED
+      </span>
+    )
+  }
+  function PricingPackageDataTransfer() {
+    return (
+      <span className="text-2xl leading-6 text-blue-brand">
+        {pricingPackage.dataTransfer} OF DATA <br />
+        TRANSFER PER MONTH
+      </span>
+    )
+  }
+  function PricingPackageNameH3() {
+    return <h3 className="text-base text-gray-700">{pricingPackage.name}</h3>
+  }
+  function PricingPackageDescription() {
+    return <p className="text-black">{pricingPackage.description}</p>
+  }
+  function PricingPackageModalWithButton() {
+    return (
+      <>
+        <button
+          className="text-sm font-bold text-teal-brand text-underline"
+          onClick={() => setOpenModal((state) => !state)}
+        >
+          » click here for full details
+        </button>
+        <PricingPackageModal
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
+      </>
+    )
+  }
+  function PricingPackageUnlimitedHoverBox() {
+    return (
+      <HoverBox>
+        <span className="text-[#901D3D] font-extrabold">MAKE IT UNLIMITED</span>
+        <span className="text-sm font-bold leading-3 text-teal-brand">
+          Add Unlimited Data for only
+          <br />
+          <span className="text-3xl">$10.00</span> per month{" "}
+          <sup>
+            <a href="#2" className="text-black underline">
+              2
+            </a>
+          </sup>
+        </span>
+      </HoverBox>
     )
   }
 
@@ -75,52 +134,22 @@ export function PricingPackageColumn({
               color === "teal"
                 ? "bg-teal-brand border-teal-dark"
                 : "bg-blue-brand border-blue-dark",
-              "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white border-solid rounded-full top-4 w-84 h-84 border-20"
+              "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
             )}
           >
-            <PricingPackageName />
+            <PricingPackageNameH2 />
             <PricingPackagePrice />
             <PricingPackagePriceFootnotes />
           </div>
         </div>
       </div>
       <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
-        <span className="text-2xl leading-6 text-blue-brand">
-          UP TO {pricingPackage.downloadSpeed}
-          <br />
-          DOWNLOAD SPEED
-        </span>
-        <span className="text-2xl leading-6 text-blue-brand">
-          {pricingPackage.dataTransfer} OF DATA <br />
-          TRANSFER PER MONTH
-        </span>
-        <h6 className="text-base text-gray-700">{pricingPackage.name}</h6>
-        <p className="text-black">{pricingPackage.description}</p>
-        <button
-          className="text-sm font-bold text-teal-brand text-underline"
-          onClick={() => setOpenModal((state) => !state)}
-        >
-          » click here for full details
-        </button>
-        <PricingPackageModal
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-        />
-        <HoverBox>
-          <span className="text-[#901D3D] font-extrabold">
-            MAKE IT UNLIMITED
-          </span>
-          <span className="text-sm font-bold leading-3 text-teal-brand">
-            Add Unlimited Data for only
-            <br />
-            <span className="text-3xl">$10.00</span> per month{" "}
-            <sup>
-              <a href="#2" className="text-black underline">
-                2
-              </a>
-            </sup>
-          </span>
-        </HoverBox>
+        <PricingPackageDownloadSpeed />
+        <PricingPackageDataTransfer />
+        <PricingPackageNameH3 />
+        <PricingPackageDescription />
+        <PricingPackageModalWithButton />
+        <PricingPackageUnlimitedHoverBox />
         <OrderNowButton color="blue" />
       </div>
     </div>
