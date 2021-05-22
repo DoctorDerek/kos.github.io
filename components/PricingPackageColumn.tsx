@@ -93,18 +93,63 @@ export function PricingPackageColumn({
     )
   }
   function PricingPackagePromotionHoverBox() {
+    const pricingPackagePromotion: {
+      promotionHeading: string
+      promotionSubheading: string
+      promotionPricePerMonth: string
+      promotionPricePerMonthCents: string
+      promotionFootnotes: string[]
+    } = {
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10",
+      promotionPricePerMonthCents: "00",
+      promotionFootnotes: "2".split(" "),
+    }
+    const {
+      promotionHeading: heading,
+      promotionSubheading: subheading,
+      promotionPricePerMonth,
+      promotionPricePerMonthCents,
+      promotionFootnotes,
+    } = pricingPackagePromotion
+    function PricingPackagePromotionHeading() {
+      return <span className="text-[#901D3D] font-extrabold">{heading}</span>
+    }
+    function PricingPackagePromotionSubheading() {
+      return (
+        <>
+          {subheading}
+          <br />
+        </>
+      )
+    }
+    function PricingPackagePromotionPrice() {
+      return (
+        <>
+          <span className="text-3xl">
+            ${promotionPricePerMonth}.${promotionPricePerMonthCents}
+          </span>{" "}
+          per month{" "}
+        </>
+      )
+    }
+    function PricingPackagePromotionFootnotes() {
+      return (
+        <sup>
+          <a href="#2" className="text-black underline">
+            2
+          </a>
+        </sup>
+      )
+    }
     return (
       <HoverBox>
-        <span className="text-[#901D3D] font-extrabold">MAKE IT UNLIMITED</span>
+        <PricingPackagePromotionHeading />
         <span className="text-sm font-bold leading-3 text-teal-brand">
-          Add Unlimited Data for only
-          <br />
-          <span className="text-3xl">$10.00</span> per month{" "}
-          <sup>
-            <a href="#2" className="text-black underline">
-              2
-            </a>
-          </sup>
+          <PricingPackagePromotionSubheading />
+          <PricingPackagePromotionPrice />
+          <PricingPackagePromotionFootnotes />
         </span>
       </HoverBox>
     )
