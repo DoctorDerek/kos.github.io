@@ -37,7 +37,9 @@ export function PricingPackageColumn({
           <sup className="text-xl">.${pricePerMonthCents}</sup>
         </span>
 
-        <span className="mt-0 text-xl text-white">per month</span>
+        <span className="mt-0 text-xl text-white">
+          per month <PricingPackagePriceFootnotes />
+        </span>
       </>
     )
   }
