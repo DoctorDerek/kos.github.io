@@ -168,20 +168,27 @@ function ResidentialHighSpeedCableFootnotes({
     detailsSectionHeading: string
     detailsSectionList: string[]
   }
-  const ResidentialHighSpeedCableDetailsSection = {
-    detailsSectionHeading: "Options",
-    detailsSectionList: [
-      "Additional E-Mail boxes",
-      "$4.95 per month, each Optional",
-      "VIP E-mail boxes, $6.95 per month, each",
-      "Additional 1000MB (1GB) transfer available for $1.00",
-      "Opt-out for automatic spam protection",
-    ],
-  }
+  const ResidentialHighSpeedCableDetailsSections: PricingPackageDetailsSection[] = [
+    {
+      detailsSectionHeading: "Options",
+      detailsSectionList: [
+        "Additional E-Mail boxes",
+        "$4.95 per month, each Optional",
+        "VIP E-mail boxes, $6.95 per month, each",
+        "Additional 1000MB (1GB) transfer available for $1.00",
+        "Opt-out for automatic spam protection",
+      ],
+    },
+  ]
   function PricingPackageDetailsHoverBox({
-    detailsSectionHeading,
-    detailsSectionList,
-  }: PricingPackageDetailsSection) {
+    pricingPackageDetailsSection,
+  }: {
+    pricingPackageDetailsSection: PricingPackageDetailsSection
+  }) {
+    const {
+      detailsSectionHeading,
+      detailsSectionList,
+    } = pricingPackageDetailsSection
     return (
       <HoverBox className="bg-gray-100">
         <div className="font-bold text-center uppercase text-blue-brand">
@@ -206,7 +213,9 @@ function ResidentialHighSpeedCableFootnotes({
       <div className="flex flex-wrap justify-center">
         <div className="text-left w-96">
           <PricingPackageDetailsHoverBox
-            {...ResidentialHighSpeedCableDetailsSection}
+            pricingPackageDetailsSection={
+              ResidentialHighSpeedCableDetailsSections[0]
+            }
           />
         </div>
         <div className="text-left w-96">
