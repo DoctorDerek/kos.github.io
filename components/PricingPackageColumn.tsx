@@ -14,6 +14,43 @@ export function PricingPackageColumn({
   number: number
 }): JSX.Element {
   const [openModal, setOpenModal] = useState(false)
+  function PricingPackageName() {
+    return <span className="text-5xl font-bold">{pricingPackage.name}</span>
+  }
+
+  function PricingPackagePrice() {
+    return (
+      <span className="mt-6">
+        <span className="text-5xl font-bold">${pricingPackage.price}</span>
+        <sup className="text-xl">.95</sup>
+      </span>
+    )
+  }
+  function PricingPackagePriceFootnotes({
+    footnotes = [1, 2],
+  }: {
+    footnotes?: number[]
+  }) {
+    return (
+      <span className="mt-0 text-xl">
+        per month{" "}
+        <sup>
+          <ol className="inline">
+            {footnotes.map((footnote, index) => (
+              <li key={footnote} className="inline">
+                <a href={`#${footnote}`} className="text-white underline">
+                  {footnote}
+                </a>
+                {index === footnotes.length - 1 ? "" : " "}
+                {/* join footnotes with " " between items, except last item */}
+              </li>
+            ))}
+          </ol>
+        </sup>
+      </span>
+    )
+  }
+
   return (
     <div
       className={classNames(
@@ -41,24 +78,9 @@ export function PricingPackageColumn({
               "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center text-white border-solid rounded-full top-4 w-84 h-84 border-20"
             )}
           >
-            <span className="text-5xl font-bold">{pricingPackage.name}</span>
-            <span className="mt-6">
-              <span className="text-5xl font-bold">
-                ${pricingPackage.price}
-              </span>
-              <sup className="text-xl">.95</sup>
-            </span>
-            <span className="mt-0 text-xl">
-              per month{" "}
-              <sup>
-                <a href="#1" className="text-white underline">
-                  1
-                </a>{" "}
-                <a href="#2" className="text-white underline">
-                  2
-                </a>
-              </sup>
-            </span>
+            <PricingPackageName />
+            <PricingPackagePrice />
+            <PricingPackagePriceFootnotes />
           </div>
         </div>
       </div>
