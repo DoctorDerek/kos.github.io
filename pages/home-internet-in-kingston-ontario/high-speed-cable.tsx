@@ -269,7 +269,9 @@ function ResidentialHighSpeedCableFootnotes({
       </>
     )
   }
-  const ResidentialHighSpeedCableDetails: PricingPackageDetails[] = [
+  const ResidentialHighSpeedCableDetails: Array<
+    PricingPackageDetails | PricingPackageDetails[]
+  > = [
     {
       detailsSectionHeading: "Options",
       detailsSectionDescription: "",
@@ -281,28 +283,30 @@ function ResidentialHighSpeedCableFootnotes({
         "Opt-out for automatic spam protection",
       ],
     },
-    {
-      detailsSectionHeading: "Modem Options",
-      detailsSectionDescription: "Automatic payment options are required.",
-      detailsSectionList: [
-        "Monthly Modem rental",
-        "$5.00 Buy Modem $79.95 (Hitron CDA-RES)",
-        "Call for payment plan options",
-      ],
-    },
-    {
-      detailsSectionHeading: "BRING YOUR OWN MODEM",
-      detailsSectionDescription: (
-        <>
-          You are able to use your own Cable Modem if it is in our{" "}
-          <Link href="/modem/list" className="underline text-blue-brand">
-            supported modem list
-          </Link>
-          .
-        </>
-      ),
-      detailsSectionList: [],
-    },
+    [
+      {
+        detailsSectionHeading: "Modem Options",
+        detailsSectionDescription: "Automatic payment options are required.",
+        detailsSectionList: [
+          "Monthly Modem rental",
+          "$5.00 Buy Modem $79.95 (Hitron CDA-RES)",
+          "Call for payment plan options",
+        ],
+      },
+      {
+        detailsSectionHeading: "BRING YOUR OWN MODEM",
+        detailsSectionDescription: (
+          <>
+            You are able to use your own Cable Modem if it is in our{" "}
+            <Link href="/modem/list" className="underline text-blue-brand">
+              supported modem list
+            </Link>
+            .
+          </>
+        ),
+        detailsSectionList: [],
+      },
+    ],
     {
       detailsSectionHeading: "Requirements",
       detailsSectionDescription: "",
@@ -330,15 +334,12 @@ function ResidentialHighSpeedCableFootnotes({
           backgroundColor="gray"
         />
         <PricingPackageDetailsSection
-          pricingPackageDetails={[
-            ResidentialHighSpeedCableDetails[1],
-            ResidentialHighSpeedCableDetails[2],
-          ]}
+          pricingPackageDetails={ResidentialHighSpeedCableDetails[1]}
           wrapWithHoverBox={true}
           backgroundColor="transparent"
         />
         <PricingPackageDetailsSection
-          pricingPackageDetails={ResidentialHighSpeedCableDetails[3]}
+          pricingPackageDetails={ResidentialHighSpeedCableDetails[2]}
           wrapWithHoverBox={true}
           backgroundColor="gray"
         />
