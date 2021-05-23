@@ -1,9 +1,10 @@
 import { Fragment } from "react"
+import { classNames } from "@/lib/utils"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import HoverBox from "@/components/HoverBox"
-import { classNames } from "@/lib/utils"
+import Link from "@/components/Link"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
@@ -234,11 +235,13 @@ function ResidentialHighSpeedCableFootnotes({
           {detailsSectionDescription && (
             <p className="px-2">{detailsSectionDescription}</p>
           )}
-          <ul className="ml-8 mr-2 list-disc">
-            {detailsSectionList.map((detailsSectionListItem) => (
-              <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
-            ))}
-          </ul>
+          {detailsSectionList.length > 0 && (
+            <ul className="ml-8 mr-2 list-disc">
+              {detailsSectionList.map((detailsSectionListItem) => (
+                <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
+              ))}
+            </ul>
+          )}
         </>
       )
     }
@@ -278,6 +281,39 @@ function ResidentialHighSpeedCableFootnotes({
         "Opt-out for automatic spam protection",
       ],
     },
+    {
+      detailsSectionHeading: "Modem Options",
+      detailsSectionDescription: "Automatic payment options are required.",
+      detailsSectionList: [
+        "Monthly Modem rental",
+        "$5.00 Buy Modem $79.95 (Hitron CDA-RES)",
+        "Call for payment plan options",
+      ],
+    },
+    {
+      detailsSectionHeading: "BRING YOUR OWN MODEM",
+      detailsSectionDescription: (
+        <>
+          You are able to use your own Cable Modem if it is in our{" "}
+          <Link href="/modem/list" className="underline text-blue-brand">
+            supported modem list
+          </Link>
+          .
+        </>
+      ),
+      detailsSectionList: [],
+    },
+    {
+      detailsSectionHeading: "Requirements",
+      detailsSectionDescription: "",
+      detailsSectionList: [
+        "To access the Internet with KOS CABLE, you will need:",
+        "Supported Cable Modem Required (Rental Available)",
+        "Modern 32-bit or 64-bit Operating System (Windows 7 minimum)",
+        "Minimum of 2.0Ghz processor required",
+        "56K modem suggested for dial-up",
+      ],
+    },
   ]
   return (
     <>
@@ -291,48 +327,21 @@ function ResidentialHighSpeedCableFootnotes({
         <PricingPackageDetailsSection
           pricingPackageDetails={ResidentialHighSpeedCableDetails[0]}
           wrapWithHoverBox={true}
+          backgroundColor="gray"
         />
-        <div className="text-left w-96">
-          <HoverBox>
-            <div className="font-bold text-center text-blue-brand">
-              MODEM OPTIONS
-            </div>
-            <p className="px-2">Automatic payment methods are required.</p>
-            <ul className="ml-8 mr-2 list-disc">
-              <li>Monthly Modem rental,</li>
-              <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
-              <li>Call for payment plan options</li>
-            </ul>
-            <div className="font-bold text-center text-blue-brand">
-              BRING YOUR OWN MODEM
-            </div>
-            <p className="px-2">
-              You are able to use your own Cable Modem if it is in our{" "}
-              <a href="/modem/list" className="underline text-blue-brand">
-                supported modem list
-              </a>
-              .
-            </p>
-          </HoverBox>
-        </div>
-        <div className="h-auto text-left w-96">
-          <HoverBox className="bg-gray-100">
-            <div className="font-bold text-center text-blue-brand">
-              REQUIREMENTS
-            </div>
-            <p className="px-2">
-              To access the Internet with KOS CABLE, you will need:
-            </p>
-            <ul className="ml-8 mr-2 list-disc">
-              <li>Supported Cable Modem Required (Rental Available)</li>{" "}
-              <li>
-                Modern 32-bit or 64-bit Operating System (Windows 7 minimum)
-              </li>
-              <li>Minimum of 2.0Ghz processor required</li>
-              <li>56K modem suggested for dial-up</li>
-            </ul>
-          </HoverBox>
-        </div>
+        <PricingPackageDetailsSection
+          pricingPackageDetails={[
+            ResidentialHighSpeedCableDetails[1],
+            ResidentialHighSpeedCableDetails[2],
+          ]}
+          wrapWithHoverBox={true}
+          backgroundColor="transparent"
+        />
+        <PricingPackageDetailsSection
+          pricingPackageDetails={ResidentialHighSpeedCableDetails[3]}
+          wrapWithHoverBox={true}
+          backgroundColor="gray"
+        />
       </div>
     </>
   )
