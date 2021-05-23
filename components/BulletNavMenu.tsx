@@ -3,6 +3,7 @@ import { useCurrentPath, classNames } from "@/lib/utils"
 import { HomeIcon, BriefcaseIcon } from "@heroicons/react/outline"
 import { BULLET } from "@/components/UTILS"
 import NAVIGATION_MENU from "@/data/NAVIGATION_MENU"
+import Link from "@/components/Link"
 
 if (NAVIGATION_MENU[1][1][0][0] !== "Residential") {
   throw new Error(
@@ -16,7 +17,7 @@ if (NAVIGATION_MENU[1][1][1][0] !== "Business") {
 const bulletsBusiness = NAVIGATION_MENU[1][1][1][1] as NAVIGATION_MENU_TYPE[]
 const bullets = { Business: bulletsBusiness, Residential: bulletsResidential }
 
-const FormatBullet = ({ item }: { item: NAVIGATION_MENU_TYPE }) => {
+function BulletNavBullet({ item }: { item: NAVIGATION_MENU_TYPE }) {
   const [title, href] = item as NAVIGATION_MENU_TYPE
   const isCurrentPage = href === useCurrentPath()
   const [hover, setHover] = useState(false)
@@ -39,14 +40,14 @@ const FormatBullet = ({ item }: { item: NAVIGATION_MENU_TYPE }) => {
       onMouseLeave={() => setHover(false)}
     >
       <BULLET hover={hover || isCurrentPage} customIcon={customIcon} />
-      <a
+      <Link
         href={href as string}
         className={classNames(
           hover || isCurrentPage ? "underline" : "no-underline"
         )}
       >
         {title}
-      </a>
+      </Link>
     </li>
   )
 }
@@ -59,12 +60,12 @@ export function BulletNavMenu({
     <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
       <ul key="Left Column">
         {bullets[type].slice(0, 3).map((item) => (
-          <FormatBullet item={item} key={Math.random()} />
+          <BulletNavBullet item={item} key={Math.random()} />
         ))}
       </ul>
       <ul key="Right Column">
         {bullets[type].slice(4, 7).map((item) => (
-          <FormatBullet item={item} key={Math.random()} />
+          <BulletNavBullet item={item} key={Math.random()} />
         ))}
       </ul>
     </div>

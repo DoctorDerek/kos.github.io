@@ -1,7 +1,7 @@
-import { Fragment, Dispatch, SetStateAction, useState } from "react"
+import { Fragment, Dispatch, SetStateAction } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
-import { BULLET } from "@/components/UTILS"
+import HoverBullet from "@/components/HoverBullet"
 import OrderNowButton from "@/components/OrderNowButton"
 
 export default function PricingPackageModal({
@@ -31,47 +31,50 @@ export default function PricingPackageModal({
   pricingBullets?: string[]
   pricingDetails?: string[]
 }) {
-  const PackageTitle = (
-    <Dialog.Title
-      as="div"
-      className="flex items-center justify-start space-x-4 text-3xl font-bold uppercase text-blue-brand"
-    >
-      <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
-        <BadgeCheckIcon className="w-6 h-6 text-white" aria-hidden="true" />
-      </div>
-      <div className="sm:ml-4">{packageTitle}</div>
-    </Dialog.Title>
-  )
-  const PricingBullets = (
-    <ul className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
-      <div className="font-semibold text-gray-800">Account Includes:</div>
-      {pricingBullets.map((bullet: string) => (
-        <Fragment key={bullet}>
-          <PricingBullet bullet={bullet} />
-        </Fragment>
-      ))}
-    </ul>
-  )
-  function PricingBullet({ bullet }: { bullet: string }) {
-    const [hover, setHover] = useState(false)
+  function PackageTitle() {
     return (
-      <li
-        className="flex items-center"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+      <Dialog.Title
+        as="div"
+        className="flex items-center justify-start space-x-4 text-3xl font-bold uppercase text-blue-brand"
       >
-        <BULLET hover={hover} responsive={true} />
-        {bullet}
-      </li>
+        <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
+          <BadgeCheckIcon className="w-6 h-6 text-white" aria-hidden="true" />
+        </div>
+        <div className="sm:ml-4">{packageTitle}</div>
+      </Dialog.Title>
     )
   }
-  const PricingDetails = (
-    <ol className="mt-4 ml-6 text-xs list-decimal sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
-      {pricingDetails.map((detail: string) => (
-        <li key={detail}>{detail}</li>
-      ))}
-    </ol>
-  )
+  function PricingBullets() {
+    return (
+      <ul className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
+        <div className="font-semibold text-gray-800">Account Includes:</div>
+        {pricingBullets.map((bullet: string) => (
+          <Fragment key={bullet}>
+            <HoverBullet bullet={bullet} />
+          </Fragment>
+        ))}
+      </ul>
+    )
+  }
+  function PricingDetails() {
+    return (
+      <ol className="mt-4 ml-6 text-xs list-decimal sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
+        {pricingDetails.map((detail: string) => (
+          <li key={detail}>{detail}</li>
+        ))}
+      </ol>
+    )
+  }
+
+  function PricingPackageModalContents() {
+    return (
+      <div>
+        <PackageTitle />
+        <PricingBullets />
+        <PricingDetails />
+      </div>
+    )
+  }
 
   return (
     <Transition.Root show={openModal} as={Fragment}>
@@ -122,11 +125,7 @@ export default function PricingPackageModal({
                   <XIcon className="w-6 h-6" aria-hidden="true" />
                 </button>
               </div>
-              <div>
-                {PackageTitle}
-                {PricingBullets}
-                {PricingDetails}
-              </div>
+              <PricingPackageModalContents />
               <div className="flex items-center justify-between pl-1 mt-5 space-x-2 sm:mt-4 lg:pl-2">
                 <button
                   type="button"
