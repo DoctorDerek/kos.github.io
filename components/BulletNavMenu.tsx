@@ -1,10 +1,9 @@
-import { useState } from "react"
-import { useCurrentPath, classNames } from "@/lib/utils"
+import { useCurrentPath } from "@/lib/utils"
 import { HomeIcon, BriefcaseIcon } from "@heroicons/react/outline"
-import { BULLET } from "@/components/UTILS"
+import HoverBullet from "@/components/HoverBullet"
 import NAVIGATION_MENU from "@/data/NAVIGATION_MENU"
-import Link from "@/components/Link"
 
+// confirm that NAVIGATION_MENU data is as expected
 if (NAVIGATION_MENU[1][1][0][0] !== "Residential") {
   throw new Error(
     "BulletNavMenu was expecting `Residential` in NAVIGATION_MENU"
@@ -19,8 +18,8 @@ const bullets = { Business: bulletsBusiness, Residential: bulletsResidential }
 
 function BulletNavBullet({ item }: { item: NAVIGATION_MENU_TYPE }) {
   const [title, href] = item as NAVIGATION_MENU_TYPE
-  const isCurrentPage = href === useCurrentPath()
-  const [hover, setHover] = useState(false)
+  const isCurrentPage = true
+  console.log(href, useCurrentPath(), isCurrentPage)
   const CUSTOM_ICONS = {
     residential: <HomeIcon aria-hidden="true" />,
     business: <BriefcaseIcon aria-hidden="true" />,
@@ -34,21 +33,13 @@ function BulletNavBullet({ item }: { item: NAVIGATION_MENU_TYPE }) {
     : null
 
   return (
-    <li
-      key={(title as string) + "BulletNavMenu"}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <BULLET hover={hover || isCurrentPage} customIcon={customIcon} />
-      <Link
-        href={href as string}
-        className={classNames(
-          hover || isCurrentPage ? "underline" : "no-underline"
-        )}
-      >
-        {title}
-      </Link>
-    </li>
+    <HoverBullet
+      isCurrentPage={useCurrentPath().includes(href as string)}
+      text={title as string}
+      href={href as string}
+      customIcon={customIcon}
+      responsive={false}
+    />
   )
 }
 export function BulletNavMenu({

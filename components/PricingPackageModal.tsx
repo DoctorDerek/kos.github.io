@@ -48,9 +48,9 @@ export default function PricingPackageModal({
     return (
       <ul className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
         <div className="font-semibold text-gray-800">Account Includes:</div>
-        {pricingBullets.map((bullet: string) => (
-          <Fragment key={bullet}>
-            <HoverBullet bullet={bullet} />
+        {pricingBullets.map((text: string) => (
+          <Fragment key={text}>
+            <HoverBullet text={text} />
           </Fragment>
         ))}
       </ul>

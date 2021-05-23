@@ -5,29 +5,41 @@ import Link from "@/components/Link"
 
 export const BULLET = ({
   hover = false,
+  isCurrentPage = false,
   customIcon = null,
   responsive = false,
 }: {
   hover?: boolean
+  isCurrentPage?: boolean
   customIcon?: JSX.Element | null
   responsive?: boolean
 }) => {
+  function CustomIcon() {
+    return <>{customIcon}</>
+  }
+  // highlight for hover or current page bullets
+  const isHighlightedBullet = hover || isCurrentPage
   return (
     <div
       className={classNames(
         "inline-block w-3 h-3 border-solid rounded-full fill-current border mx-2 transition duration-300 flex-shrink-0",
         responsive ? "md:w-4 md:h-4 xl:w-5 xl:h-5" : "",
-        hover
+        isHighlightedBullet
           ? "bg-blue-800 text-white border-blue-800"
           : "bg-transparent text-blue-800 border-blue-800"
       )}
     >
-      {customIcon ? (
-        customIcon
-      ) : hover ? (
-        <CheckIcon aria-label="Current page" />
-      ) : (
-        <RightArrow aria-hidden="true" />
+      {customIcon && <CustomIcon />}
+      {!customIcon && (
+        <>
+          {isHighlightedBullet && (
+            <CheckIcon
+              aria-label={isCurrentPage ? "Current page" : ""}
+              aria-hidden={!isCurrentPage ? "true" : "false"}
+            />
+          )}
+          {!isHighlightedBullet && <RightArrow aria-hidden="true" />}
+        </>
       )}
     </div>
   )
