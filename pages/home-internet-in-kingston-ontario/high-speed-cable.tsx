@@ -164,19 +164,6 @@ function ResidentialHighSpeedCableFootnotes({
       </ol>
     )
   }
-  const ResidentialHighSpeedCableDetails: PricingPackageDetails[] = [
-    {
-      detailsSectionHeading: "Options",
-      detailsSectionDescription: "",
-      detailsSectionList: [
-        "Additional E-Mail boxes",
-        "$4.95 per month, each Optional",
-        "VIP E-mail boxes, $6.95 per month, each",
-        "Additional 1000MB (1GB) transfer available for $1.00",
-        "Opt-out for automatic spam protection",
-      ],
-    },
-  ]
   /**
    * This component takes one or more PricingPackageDetails types and combines them into a single <PricingPackageDetailsSection /> either wrapped with a <HoverBox> or displayed as a separate section.
    *
@@ -279,6 +266,19 @@ function ResidentialHighSpeedCableFootnotes({
       </>
     )
   }
+  const ResidentialHighSpeedCableDetails: PricingPackageDetails[] = [
+    {
+      detailsSectionHeading: "Options",
+      detailsSectionDescription: "",
+      detailsSectionList: [
+        "Additional E-Mail boxes",
+        "$4.95 per month, each Optional",
+        "VIP E-mail boxes, $6.95 per month, each",
+        "Additional 1000MB (1GB) transfer available for $1.00",
+        "Opt-out for automatic spam protection",
+      ],
+    },
+  ]
   return (
     <>
       <div className="pt-12 text-center">
