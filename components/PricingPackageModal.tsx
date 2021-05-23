@@ -50,7 +50,7 @@ export default function PricingPackageModal({
         <div className="mt-4 text-sm font-semibold text-gray-800 sm:text-base md:text-lg lg:text-xl">
           Account Includes:
         </div>
-        <HoverBulletList hoverBullets={pricingBullets} />
+        <HoverBulletList hoverBulletAsStrings={pricingBullets} />
       </>
     )
   }

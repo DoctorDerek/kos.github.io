@@ -22,11 +22,11 @@ export default function HoverBulletNavMenu({
   return (
     <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
       <HoverBulletList
-        hoverBulletNavMenuItems={bullets[type].slice(0, 3)}
+        hoverBulletAsNavMenuItems={bullets[type].slice(0, 3)}
         key={Math.random()}
       />
       <HoverBulletList
-        hoverBulletNavMenuItems={bullets[type].slice(4, 7)}
+        hoverBulletAsNavMenuItems={bullets[type].slice(4, 7)}
         key={Math.random()}
       />
     </div>

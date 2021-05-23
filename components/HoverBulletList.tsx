@@ -3,17 +3,17 @@ import HoverBullet from "@/components/HoverBullet"
 import HoverBulletNavItem from "@/components/HoverBulletNavItem"
 import { classNames } from "@/lib/utils"
 export default function HoverBulletList({
-  hoverBulletStrings = null,
-  hoverBulletNavMenuItems = null,
-  responsive = false,
+  hoverBulletAsStrings = null,
+  hoverBulletAsNavMenuItems = null,
+  responsive = true,
 }: {
-  hoverBulletStrings?: string[] | null
-  hoverBulletNavMenuItems?: NAVIGATION_MENU_TYPE[] | null
+  hoverBulletAsStrings?: string[] | null
+  hoverBulletAsNavMenuItems?: NAVIGATION_MENU_TYPE[] | null
   responsive?: boolean
 }) {
   if (
-    !(hoverBulletStrings || hoverBulletNavMenuItems) ||
-    (hoverBulletStrings && hoverBulletNavMenuItems)
+    !(hoverBulletAsStrings || hoverBulletAsNavMenuItems) ||
+    (hoverBulletAsStrings && hoverBulletAsNavMenuItems)
   )
     throw new Error(
       "<HoverBulletList> needs one of either hoverBulletStrings or hoverBulletNavMenuItems props, but not both"
@@ -25,18 +25,18 @@ export default function HoverBulletList({
         responsive ? "text-sm sm:text-base md:text-lg lg:text-xl" : ""
       )}
     >
-      {hoverBulletStrings &&
-        hoverBulletStrings.map((text: string) => (
+      {hoverBulletAsStrings &&
+        hoverBulletAsStrings.map((text: string) => (
           <Fragment key={text}>
             <HoverBullet text={text} responsive={responsive} />
           </Fragment>
         ))}
-      {hoverBulletNavMenuItems &&
-        hoverBulletNavMenuItems.map((item: NAVIGATION_MENU_TYPE) => {
+      {hoverBulletAsNavMenuItems &&
+        hoverBulletAsNavMenuItems.map((item: NAVIGATION_MENU_TYPE) => {
           const [title, href] = item as string[]
           return (
             <Fragment key={title + href}>
-              <HoverBulletNavItem item={item} responsive={responsive} />
+              <HoverBulletNavItem item={item} responsive={false} />
             </Fragment>
           )
         })}
