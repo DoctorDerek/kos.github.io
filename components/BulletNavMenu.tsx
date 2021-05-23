@@ -32,8 +32,6 @@ const FormatBullet = ({ item }: { item: NAVIGATION_MENU_TYPE }) => {
     ? CUSTOM_ICONS["business"]
     : null
 
-  console.log("title", customIcon)
-
   return (
     <li
       key={(title as string) + "BulletNavMenu"}
