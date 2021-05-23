@@ -1,5 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
 
 export default function BusinessMail(): JSX.Element {
   const title = (
@@ -11,7 +11,7 @@ export default function BusinessMail(): JSX.Element {
   // "Business VIP Mail Packages"
   const slug = "bus/mail"
   // "bus/mail"
-  const bulletNavMenu = <BulletNavMenu type="Business" />
+  const bulletNavMenu = <HoverBulletNavMenu type="Business" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

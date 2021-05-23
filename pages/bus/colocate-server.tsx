@@ -1,5 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
 
 export default function BusinessColocateServer(): JSX.Element {
   const title = (
@@ -11,7 +11,7 @@ export default function BusinessColocateServer(): JSX.Element {
   // "CO LOCATE SERVER Packages"
   const slug = "bus/cocolate-server"
   // "bus/colocate-server"
-  const bulletNavMenu = <BulletNavMenu type="Business" />
+  const bulletNavMenu = <HoverBulletNavMenu type="Business" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

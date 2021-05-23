@@ -1,5 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
 
 export default function HighSpeedCable(): JSX.Element {
   const title = (
@@ -11,7 +11,7 @@ export default function HighSpeedCable(): JSX.Element {
   // "Residential Mail Packages"
   const slug = "home-internet-in-kingston-ontario/mail"
   // "res/mail"
-  const bulletNavMenu = <BulletNavMenu type="Residential" />
+  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

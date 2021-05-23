@@ -16,7 +16,7 @@ if (NAVIGATION_MENU[1][1][1][0] !== "Business") {
 const bulletsBusiness = NAVIGATION_MENU[1][1][1][1] as NAVIGATION_MENU_TYPE[]
 const bullets = { Business: bulletsBusiness, Residential: bulletsResidential }
 
-function BulletNavBullet({ item }: { item: NAVIGATION_MENU_TYPE }) {
+function HoverBulletNavItem({ item }: { item: NAVIGATION_MENU_TYPE }) {
   const [title, href] = item as NAVIGATION_MENU_TYPE
   const isCurrentPage = true
   console.log(href, useCurrentPath(), isCurrentPage)
@@ -42,7 +42,7 @@ function BulletNavBullet({ item }: { item: NAVIGATION_MENU_TYPE }) {
     />
   )
 }
-export function BulletNavMenu({
+export function HoverBulletNavMenu({
   type = "Residential",
 }: {
   type: "Residential" | "Business"
@@ -51,12 +51,12 @@ export function BulletNavMenu({
     <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
       <ul key="Left Column">
         {bullets[type].slice(0, 3).map((item) => (
-          <BulletNavBullet item={item} key={Math.random()} />
+          <HoverBulletNavItem item={item} key={Math.random()} />
         ))}
       </ul>
       <ul key="Right Column">
         {bullets[type].slice(4, 7).map((item) => (
-          <BulletNavBullet item={item} key={Math.random()} />
+          <HoverBulletNavItem item={item} key={Math.random()} />
         ))}
       </ul>
     </div>

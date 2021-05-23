@@ -1,5 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
 
 export default function WirelessBroadband(): JSX.Element {
   const title = (
@@ -11,7 +11,7 @@ export default function WirelessBroadband(): JSX.Element {
   // "Residential Wireless Broadband Packages"
   const slug = "home-internet-in-kingston-ontario/wireless-broadband"
   // "res/wireless-broadband"
-  const bulletNavMenu = <BulletNavMenu type="Residential" />
+  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>

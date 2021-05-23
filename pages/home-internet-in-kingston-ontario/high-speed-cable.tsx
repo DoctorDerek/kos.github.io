@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { classNames } from "@/lib/utils"
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { BulletNavMenu } from "@/components/BulletNavMenu"
+import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import HoverBox from "@/components/HoverBox"
 import Link from "@/components/Link"
@@ -16,7 +16,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
   // "Residential High Speed Cable Packages"
   const slug = "home-internet-in-kingston-ontario/high-speed-cable"
   // "res/high-speed-cable"
-  const bulletNavMenu = <BulletNavMenu type="Residential" />
+  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
 
   return (
     <InternalTemplate
