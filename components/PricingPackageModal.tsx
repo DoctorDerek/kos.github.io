@@ -1,7 +1,7 @@
 import { Fragment, Dispatch, SetStateAction } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
-import HoverBullet from "@/components/HoverBullet"
+import HoverBulletList from "@/components/HoverBulletList"
 import OrderNowButton from "@/components/OrderNowButton"
 
 export default function PricingPackageModal({
@@ -46,14 +46,12 @@ export default function PricingPackageModal({
   }
   function PricingBullets() {
     return (
-      <ul className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
-        <div className="font-semibold text-gray-800">Account Includes:</div>
-        {pricingBullets.map((text: string) => (
-          <Fragment key={text}>
-            <HoverBullet text={text} />
-          </Fragment>
-        ))}
-      </ul>
+      <>
+        <div className="mt-4 text-sm font-semibold text-gray-800 sm:text-base md:text-lg lg:text-xl">
+          Account Includes:
+        </div>
+        <HoverBulletList hoverBullets={pricingBullets} />
+      </>
     )
   }
   function PricingDetails() {
