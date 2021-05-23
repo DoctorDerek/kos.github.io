@@ -176,7 +176,7 @@ function ResidentialHighSpeedCableFootnotes({
     wrapWithHoverBox = true,
     backgroundColor = "transparent",
   }: {
-    pricingPackageDetails: PricingPackageDetails | PricingPackageDetails[]
+    pricingPackageDetails: PricingPackageDetails | PricingPackageDetailsItem
     wrapWithHoverBox: boolean
     backgroundColor?: "transparent" | "gray"
   }) {
@@ -192,19 +192,23 @@ function ResidentialHighSpeedCableFootnotes({
     function PricingPackageDetailsSectionMerged({
       pricingPackageDetailsArray,
     }: {
-      pricingPackageDetailsArray: PricingPackageDetails[]
+      pricingPackageDetailsArray: PricingPackageDetailsItem[]
     }) {
       return (
         <>
           {pricingPackageDetailsArray.map(
-            (pricingPackageDetailsSectionToCombine: PricingPackageDetails) => (
+            (
+              pricingPackageDetailsSectionToCombine: PricingPackageDetailsItem
+            ) => (
               <Fragment
                 key={
                   pricingPackageDetailsSectionToCombine.detailsSectionHeading
                 }
               >
                 <PricingPackageDetailsSectionIndividual
-                  pricingPackageDetails={pricingPackageDetailsSectionToCombine}
+                  pricingPackageDetailsItem={
+                    pricingPackageDetailsSectionToCombine
+                  }
                 />
               </Fragment>
             )
@@ -213,15 +217,15 @@ function ResidentialHighSpeedCableFootnotes({
       )
     }
     function PricingPackageDetailsSectionIndividual({
-      pricingPackageDetails,
+      pricingPackageDetailsItem,
     }: {
-      pricingPackageDetails: PricingPackageDetails
+      pricingPackageDetailsItem: PricingPackageDetailsItem
     }) {
       const {
         detailsSectionHeading,
         detailsSectionDescription,
         detailsSectionList,
-      } = pricingPackageDetails
+      } = pricingPackageDetailsItem
       return (
         <>
           <div
@@ -255,23 +259,25 @@ function ResidentialHighSpeedCableFootnotes({
               )}
             >
               <PricingPackageDetailsSectionMerged
-                pricingPackageDetailsArray={pricingPackageDetails}
+                pricingPackageDetailsArray={
+                  pricingPackageDetails as PricingPackageDetailsItem[]
+                }
               />
             </HoverBox>
           </div>
         ) : (
           <div>
             <PricingPackageDetailsSectionMerged
-              pricingPackageDetailsArray={pricingPackageDetails}
+              pricingPackageDetailsArray={
+                pricingPackageDetails as PricingPackageDetailsItem[]
+              }
             />
           </div>
         )}
       </>
     )
   }
-  const ResidentialHighSpeedCableDetails: Array<
-    PricingPackageDetails | PricingPackageDetails[]
-  > = [
+  const ResidentialHighSpeedCableDetails: PricingPackageDetails = [
     {
       detailsSectionHeading: "Options",
       detailsSectionDescription: "",

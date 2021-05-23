@@ -99,13 +99,26 @@ type PricingPackageFootnote = {
  * These are the details for the <HoverBox /> sections that appear on the sales
  * pages and are displayed at the bottom of a <PricingPackageColumn />
  *
- * @typeParam id - The number of the footnote, e.g. 1
- * @typeParam description - The full text of the footnote
+ * @remarks
+ * This type allows 1 layer of nested items, such that multiple PricingPackageDetailsItem types can be displayed as one block or <HoverBox>
+ */
+type PricingPackageDetails = Array<
+  PricingPackageDetailsItem | PricingPackageDetailsItem[]
+>
+
+/**
+ * These are the individual detail items for the <HoverBox /> sections that
+ * appear on the sales pages and are displayed at the bottom of a
+ * <PricingPackageColumn />
+ *
+ * @typeParam detailsSectionHeading - The <PricingPackageDetailsSection> heading
+ * @typeParam detailsSectionDescription - Optional <p> paragraph description
+ * @typeParam detailsSectionList - Optional <ul> list items for section bullets
  *
  * @remarks
  * This type contains the additional details listed for packages on the website.
  */
-type PricingPackageDetails = {
+type PricingPackageDetailsItem = {
   detailsSectionHeading: string
   detailsSectionDescription: string | JSX.Element
   detailsSectionList: string[]
