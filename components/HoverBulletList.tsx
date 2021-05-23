@@ -36,7 +36,7 @@ export default function HoverBulletList({
           const [title, href] = item as string[]
           return (
             <Fragment key={title + href}>
-              <HoverBulletNavItem item={item} responsive={false} />
+              <HoverBulletNavItem item={item} responsive={responsive} />
             </Fragment>
           )
         })}
