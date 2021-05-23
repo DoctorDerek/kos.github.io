@@ -75,10 +75,13 @@ export function PricingPackageColumn({
     return (
       <>
         <button
-          className="text-sm font-bold text-teal-brand text-underline"
+          className="text-sm font-bold text-teal-brand"
           onClick={() => setOpenModal((state) => !state)}
         >
-          » click here for full details
+          »{" "}
+          <span className="border-b-2 border-current border-solid">
+            click here for full details
+          </span>
         </button>
         <PricingPackageModal
           openModal={openModal}
