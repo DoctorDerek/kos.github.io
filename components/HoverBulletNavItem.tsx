@@ -9,8 +9,8 @@ export default function HoverBulletNavItem({
   responsive?: boolean
 }) {
   const [title, href] = item as NAVIGATION_MENU_TYPE
-  const isCurrentPage = true
-  console.log(href, useCurrentPath(), isCurrentPage)
+  // isCurrentPage uses .includes() to account for # anchors in the URL
+  const isCurrentPage = useCurrentPath().includes(href as string)
   const CUSTOM_ICONS = {
     residential: <HomeIcon aria-hidden="true" />,
     business: <BriefcaseIcon aria-hidden="true" />,
@@ -25,7 +25,7 @@ export default function HoverBulletNavItem({
 
   return (
     <HoverBullet
-      isCurrentPage={useCurrentPath().includes(href as string)}
+      isCurrentPage={isCurrentPage}
       text={title as string}
       href={href as string}
       customIcon={customIcon}
