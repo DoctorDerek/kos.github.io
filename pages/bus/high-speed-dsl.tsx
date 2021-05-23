@@ -1,5 +1,5 @@
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
+import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 
 export default function BusinessHighSpeedDsl(): JSX.Element {
   const title = (

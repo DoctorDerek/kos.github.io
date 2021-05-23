@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { classNames } from "@/lib/utils"
 import { InternalTemplate } from "@/components/InternalTemplate"
-import { HoverBulletNavMenu } from "@/components/HoverBulletNavMenu"
+import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import HoverBox from "@/components/HoverBox"
 import Link from "@/components/Link"
