@@ -103,9 +103,10 @@ type PricingPackageFootnote = {
  * @typeParam description - The full text of the footnote
  *
  * @remarks
- * This type contains the footnotes for the sale prices listed on the website.
+ * This type contains the additional details listed for packages on the website.
  */
-type PricingPackageDetailsSection = {
+type PricingPackageDetails = {
   detailsSectionHeading: string
+  detailsSectionDescription: string | JSX.Element
   detailsSectionList: string[]
 }

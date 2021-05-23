@@ -1,7 +1,9 @@
+import { Fragment } from "react"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import HoverBox from "@/components/HoverBox"
+import { classNames } from "@/lib/utils"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (
@@ -162,15 +164,10 @@ function ResidentialHighSpeedCableFootnotes({
       </ol>
     )
   }
-  /*
-   */
-  type PricingPackageDetailsSection = {
-    detailsSectionHeading: string
-    detailsSectionList: string[]
-  }
-  const ResidentialHighSpeedCableDetailsSections: PricingPackageDetailsSection[] = [
+  const ResidentialHighSpeedCableDetails: PricingPackageDetails[] = [
     {
       detailsSectionHeading: "Options",
+      detailsSectionDescription: "",
       detailsSectionList: [
         "Additional E-Mail boxes",
         "$4.95 per month, each Optional",
@@ -180,26 +177,106 @@ function ResidentialHighSpeedCableFootnotes({
       ],
     },
   ]
-  function PricingPackageDetailsHoverBox({
-    pricingPackageDetailsSection,
+  /**
+   * This component takes one or more PricingPackageDetails types and combines them into a single <PricingPackageDetailsSection /> either wrapped with a <HoverBox> or displayed as a separate section.
+   *
+   * @param wrapWithHoverBox
+   * If true, the merged PricingPackageDetails types will be displayed as a flex <HoverBox>; if false then the result will be a separate block <div>.
+   */
+  function PricingPackageDetailsSection({
+    pricingPackageDetails,
+    wrapWithHoverBox = true,
+    backgroundColor = "transparent",
   }: {
-    pricingPackageDetailsSection: PricingPackageDetailsSection
+    pricingPackageDetails: PricingPackageDetails | PricingPackageDetails[]
+    wrapWithHoverBox: boolean
+    backgroundColor?: "transparent" | "gray"
   }) {
-    const {
-      detailsSectionHeading,
-      detailsSectionList,
-    } = pricingPackageDetailsSection
+    if (!Array.isArray(pricingPackageDetails)) {
+      return (
+        <PricingPackageDetailsSection
+          pricingPackageDetails={[pricingPackageDetails]}
+          wrapWithHoverBox={wrapWithHoverBox}
+          backgroundColor={backgroundColor}
+        />
+      )
+    }
+    function PricingPackageDetailsSectionMerged({
+      pricingPackageDetailsArray,
+    }: {
+      pricingPackageDetailsArray: PricingPackageDetails[]
+    }) {
+      return (
+        <>
+          {pricingPackageDetailsArray.map(
+            (pricingPackageDetailsSectionToCombine: PricingPackageDetails) => (
+              <Fragment
+                key={
+                  pricingPackageDetailsSectionToCombine.detailsSectionHeading
+                }
+              >
+                <PricingPackageDetailsSectionIndividual
+                  pricingPackageDetails={pricingPackageDetailsSectionToCombine}
+                />
+              </Fragment>
+            )
+          )}
+        </>
+      )
+    }
+    function PricingPackageDetailsSectionIndividual({
+      pricingPackageDetails,
+    }: {
+      pricingPackageDetails: PricingPackageDetails
+    }) {
+      const {
+        detailsSectionHeading,
+        detailsSectionDescription,
+        detailsSectionList,
+      } = pricingPackageDetails
+      return (
+        <>
+          <div
+            className={classNames(
+              wrapWithHoverBox ? "uppercase" : "",
+              "font-bold text-center text-blue-brand"
+            )}
+          >
+            {detailsSectionHeading}
+          </div>
+          {detailsSectionDescription && (
+            <p className="px-2">{detailsSectionDescription}</p>
+          )}
+          <ul className="ml-8 mr-2 list-disc">
+            {detailsSectionList.map((detailsSectionListItem) => (
+              <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
+            ))}
+          </ul>
+        </>
+      )
+    }
     return (
-      <HoverBox className="bg-gray-100">
-        <div className="font-bold text-center uppercase text-blue-brand">
-          {detailsSectionHeading}
-        </div>
-        <ul className="ml-8 mr-2 list-disc">
-          {detailsSectionList.map((detailsSectionListItem) => (
-            <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
-          ))}
-        </ul>
-      </HoverBox>
+      <>
+        {wrapWithHoverBox ? (
+          <div className="text-left w-96">
+            <HoverBox
+              className={classNames(
+                backgroundColor === "gray" ? "bg-gray-100" : "bg-transparent"
+              )}
+            >
+              <PricingPackageDetailsSectionMerged
+                pricingPackageDetailsArray={pricingPackageDetails}
+              />
+            </HoverBox>
+          </div>
+        ) : (
+          <div>
+            <PricingPackageDetailsSectionMerged
+              pricingPackageDetailsArray={pricingPackageDetails}
+            />
+          </div>
+        )}
+      </>
     )
   }
   return (
@@ -211,13 +288,10 @@ function ResidentialHighSpeedCableFootnotes({
         Additional Details & Options
       </div>
       <div className="flex flex-wrap justify-center">
-        <div className="text-left w-96">
-          <PricingPackageDetailsHoverBox
-            pricingPackageDetailsSection={
-              ResidentialHighSpeedCableDetailsSections[0]
-            }
-          />
-        </div>
+        <PricingPackageDetailsSection
+          pricingPackageDetails={ResidentialHighSpeedCableDetails[0]}
+          wrapWithHoverBox={true}
+        />
         <div className="text-left w-96">
           <HoverBox>
             <div className="font-bold text-center text-blue-brand">
@@ -229,9 +303,9 @@ function ResidentialHighSpeedCableFootnotes({
               <li>$5.00 Buy Modem $79.95 (Hitron CDA-RES)</li>
               <li>Call for payment plan options</li>
             </ul>
-            <p className="font-bold text-center text-blue-brand">
+            <div className="font-bold text-center text-blue-brand">
               BRING YOUR OWN MODEM
-            </p>
+            </div>
             <p className="px-2">
               You are able to use your own Cable Modem if it is in our{" "}
               <a href="/modem/list" className="underline text-blue-brand">
