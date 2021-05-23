@@ -24,10 +24,12 @@ export default function HoverBulletNavMenu({
       <HoverBulletList
         hoverBulletAsNavMenuItems={bullets[type].slice(0, 3)}
         key={Math.random()}
+        responsive={true}
       />
       <HoverBulletList
         hoverBulletAsNavMenuItems={bullets[type].slice(4, 7)}
         key={Math.random()}
+        responsive={true}
       />
     </div>
   )
