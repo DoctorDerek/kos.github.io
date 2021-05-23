@@ -1,5 +1,5 @@
 import { classNames } from "@/lib/utils"
-
+import Link from "@/components/Link"
 /**
  * @param footnotes
  * a string of unique footnotes that will be split on white space e.g. "1 2" will be split to [1,2]
@@ -22,7 +22,7 @@ export default function PricingPackageFootnotes({
       <ol className="inline">
         {footnotesArray.map((footnote, index) => (
           <li key={footnote} className="inline">
-            <a
+            <Link
               href={`#${footnote}`}
               className={classNames(
                 color === "white" ? "text-white" : "text-black",
@@ -30,7 +30,7 @@ export default function PricingPackageFootnotes({
               )}
             >
               {footnote}
-            </a>
+            </Link>
             {index === footnotes.length - 1 ? "" : " "}
             {/* join footnotes with " " between items, except last item */}
           </li>
