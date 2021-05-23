@@ -156,7 +156,7 @@ function ResidentialHighSpeedCableFootnotes({
             const { id, description } = pricingPackageFootnote
             return (
               <li id={id} key={id + description}>
-                ${id}) ${description}
+                {id}) {description}
               </li>
             )
           }
