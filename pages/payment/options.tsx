@@ -1,4 +1,4 @@
-import { InternalTemplate } from "@/components/InternalTemplate"
+import { InternalTemplate } from "@/layouts/InternalTemplate"
 
 export default function PaymentOptions(): JSX.Element {
   const title = (

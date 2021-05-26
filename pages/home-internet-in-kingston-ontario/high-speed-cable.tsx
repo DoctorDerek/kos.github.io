@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import { classNames } from "@/lib/utils"
-import { InternalTemplate } from "@/components/InternalTemplate"
+import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import { PricingPackageColumn } from "@/components/PricingPackageColumn"
 import HoverBox from "@/components/HoverBox"

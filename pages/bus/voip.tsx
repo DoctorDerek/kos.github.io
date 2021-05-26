@@ -1,4 +1,4 @@
-import { InternalTemplate } from "@/components/InternalTemplate"
+import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 
 export default function BusinessVoip(): JSX.Element {
