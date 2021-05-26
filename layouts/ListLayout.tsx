@@ -13,7 +13,7 @@ export default function ListLayout({
   posts,
   title,
 }: {
-  posts: FrontMatter[]
+  posts: BlogPostFrontMatter[]
   title: string
 }) {
   const [searchValue, setSearchValue] = useState("")

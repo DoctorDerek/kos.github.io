@@ -30,7 +30,7 @@ export async function getStaticProps({ params }: { params: any }) {
   const allPosts = await getAllFilesFrontMatter(PATH)
   const postIndex =
     allPosts.findIndex &&
-    allPosts.findIndex((post: FrontMatter) => post.slug === params.slug)
+    allPosts.findIndex((post: BlogPostFrontMatter) => post.slug === params.slug)
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = await getFileBySlug(PATH, params.slug)

@@ -104,7 +104,7 @@ export async function getFileBySlug(type: any, slug: any) {
 
 export async function getAllFilesFrontMatter(
   type: any
-): Promise<FrontMatter[]> {
+): Promise<BlogPostFrontMatter[]> {
   const files = fs.readdirSync(path.join(root, "data", type))
 
   const allFrontMatter = []

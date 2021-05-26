@@ -24,7 +24,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const allPosts = (await getAllFilesFrontMatter("blog")) as FrontMatter[]
+  const allPosts = (await getAllFilesFrontMatter(
+    "blog"
+  )) as BlogPostFrontMatter[]
   const filteredPosts =
     allPosts.filter &&
     allPosts.filter(
@@ -46,7 +48,7 @@ export default function Tag({
   posts,
   tag,
 }: {
-  posts: FrontMatter[]
+  posts: BlogPostFrontMatter[]
   tag: string
 }) {
   // Capitalize first letter and convert space to dash

@@ -17,9 +17,9 @@ export default function PostLayout({
   prev,
 }: {
   children?: JSX.Element | JSX.Element[] | React.ReactNode
-  frontMatter: FrontMatter
-  next?: FrontMatter
-  prev?: FrontMatter
+  frontMatter: BlogPostFrontMatter
+  next?: BlogPostFrontMatter
+  prev?: BlogPostFrontMatter
 }) {
   const { slug, title } = frontMatter
 

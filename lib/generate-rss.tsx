@@ -1,7 +1,7 @@
 //@ts-nocheck
 import siteMetadata from "@/data/siteMetadata.json"
 
-const generateRssItem = (post: FrontMatter) => (
+const generateRssItem = (post: BlogPostFrontMatter) => (
   <item>
     <guid>
       ${siteMetadata.siteUrl}/blog/${post.slug}
@@ -19,7 +19,7 @@ const generateRssItem = (post: FrontMatter) => (
   </item>
 )
 
-const generateRss = (posts: FrontMatter[], page = "index.xml") => `
+const generateRss = (posts: BlogPostFrontMatter[], page = "index.xml") => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>${siteMetadata.title}</title>
