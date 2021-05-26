@@ -5,12 +5,11 @@ import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingSection, {
   pricingPackages,
-  pricingSectionFootnotes,
   PricingSectionFootnotes,
   HeadingH2AndPostalCodeCheck,
 } from "@/components/PricingSection"
 
-export default function PostLayout({
+export default function PageLayout({
   children,
   frontMatter,
   next,
@@ -21,7 +20,7 @@ export default function PostLayout({
   next?: PageFrontMatter
   prev?: PageFrontMatter
 }) {
-  const { slug, title, heading } = frontMatter
+  const { slug, title, heading, pricingSectionFootnotes } = frontMatter
 
   return (
     <>

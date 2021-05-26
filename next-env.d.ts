@@ -75,6 +75,7 @@ type PageFrontMatter = {
   // slug is detected automatically from the filename of the Markdown file
   title: string
   heading: string
+  pricingSectionFootnotes: pricingSectionFootnote[]
 }
 
 /**

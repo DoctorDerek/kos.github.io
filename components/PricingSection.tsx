@@ -37,19 +37,6 @@ export const pricingPackages = [
     priceFootnotes: "1 2",
   },
 ]
-export const pricingSectionFootnotes = [
-  { id: "1", description: "Requires Modem rental or purchase." },
-  {
-    id: "2",
-    description:
-      "For residential purposes only, must not exceed a reasonable amount of usage",
-  },
-  {
-    id: "3",
-    description:
-      "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
-  },
-]
 
 export function HeadingH2AndPostalCodeCheck({ heading }: { heading: string }) {
   return (
