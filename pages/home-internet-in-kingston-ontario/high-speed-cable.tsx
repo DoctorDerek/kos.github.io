@@ -17,7 +17,6 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
   // "Residential High Speed Cable Packages"
   const slug = "home-internet-in-kingston-ontario/high-speed-cable"
   // "res/high-speed-cable"
-  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
   const pricingPackages = [
     {
       packageName: "CABLE 15",
@@ -68,7 +67,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
     <InternalTemplate
       title={title}
       slug={slug}
-      bulletNavMenu={bulletNavMenu}
+      hoverBulletNavMenu={<HoverBulletNavMenu type="Residential" />}
       fullWidth={true}
       pricingSection={<PricingSection pricingPackages={pricingPackages} />}
       footnotesSection={
