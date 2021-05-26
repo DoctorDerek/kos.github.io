@@ -1,4 +1,3 @@
-import SectionContainer from "@/components/SectionContainer"
 import { BlogSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import React from "react"
