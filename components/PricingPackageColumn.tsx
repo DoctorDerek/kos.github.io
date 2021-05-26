@@ -39,15 +39,12 @@ export default function PricingPackageColumn({
         </span>
 
         <span className="mt-0 text-xl text-white">
-          per month <PricingPackagePriceFootnotes />
+          per month{" "}
+          <PricingPackageFootnotes color="white" footnotes={priceFootnotes} />
         </span>
       </>
     )
   }
-  function PricingPackagePriceFootnotes() {
-    return <PricingPackageFootnotes color="white" footnotes={priceFootnotes} />
-  }
-
   function PricingPackageDownloadSpeed() {
     return (
       <span className="text-2xl leading-6 text-blue-brand">
