@@ -27,17 +27,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const allPosts = await getAllPagesFrontMatter(PATH)
+  const allPages = await getAllPagesFrontMatter(PATH)
   const postIndex =
-    allPosts.findIndex &&
-    allPosts.findIndex((page: PageFrontMatter) => page.slug === params.slug)
-  const prev = allPosts[postIndex + 1] || null
-  const next = allPosts[postIndex - 1] || null
+    allPages.findIndex &&
+    allPages.findIndex((page: PageFrontMatter) => page.slug === params.slug)
+  const prev = allPages[postIndex + 1] || null
+  const next = allPages[postIndex - 1] || null
   const post = await getFileBySlug(PATH, params.slug)
-
-  // rss
-  const rss = generateRss(allPosts)
-  fs.writeFileSync("./public/index.xml", rss)
 
   return { props: { post, prev, next } }
 }
