@@ -50,6 +50,19 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       priceFootnotes: "1 2",
     },
   ]
+  const pricingPackageFootnotes = [
+    { id: "1", description: "Requires Modem rental or purchase." },
+    {
+      id: "2",
+      description:
+        "For residential purposes only, must not exceed a reasonable amount of usage",
+    },
+    {
+      id: "3",
+      description:
+        "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
+    },
+  ]
 
   return (
     <InternalTemplate
@@ -60,7 +73,11 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       pricingSection={
         <ResidentialHighSpeedCablePricing pricingPackages={pricingPackages} />
       }
-      footnotesSection={<ResidentialHighSpeedCableFootnotes />}
+      footnotesSection={
+        <ResidentialHighSpeedCableFootnotes
+          pricingPackageFootnotes={pricingPackageFootnotes}
+        />
+      }
     >
       <ResidentialHighSpeedCableContent />
     </InternalTemplate>
@@ -105,21 +122,9 @@ function ResidentialHighSpeedCablePricing({
   )
 }
 function ResidentialHighSpeedCableFootnotes({
-  pricingPackageFootnotes = [
-    { id: "1", description: "Requires Modem rental or purchase." },
-    {
-      id: "2",
-      description:
-        "For residential purposes only, must not exceed a reasonable amount of usage",
-    },
-    {
-      id: "3",
-      description:
-        "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
-    },
-  ],
+  pricingPackageFootnotes,
 }: {
-  pricingPackageFootnotes?: PricingPackageFootnote[]
+  pricingPackageFootnotes: PricingPackageFootnote[]
 }): JSX.Element {
   function PricingPackageFootnotes(): JSX.Element {
     return (
