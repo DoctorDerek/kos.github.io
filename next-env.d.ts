@@ -66,6 +66,8 @@ type BlogPostFrontMatter = {
  * @typeParam slug - The URL slug
  * @typeParam title - The page title
  * @typeParam heading - The page heading
+ * @typeParam fullWidth - Whether to be wide like the pricing pages (true)
+ *                        or narrow like the informational pages (false)
  * @typeParam pricingPackages - The page title
  * @typeParam pricingSectionFootnotes - The page heading
  *
@@ -77,6 +79,7 @@ type PageFrontMatter = {
   // slug is detected automatically from the filename of the Markdown file
   title: string
   heading: string
+  fullWidth: boolean
   pricingPackages: pricingPackage[]
   pricingSectionFootnotes: pricingSectionFootnote[]
 }
