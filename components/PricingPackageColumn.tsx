@@ -5,7 +5,7 @@ import PricingPackagePromotionHoverBox from "@/components/PricingPackagePromotio
 import PricingPackageFootnotes from "@/components/PricingPackageFootnotes"
 import { classNames } from "@/lib/utils"
 
-export function PricingPackageColumn({
+export default function PricingPackageColumn({
   color = "navy",
   pricingPackage,
   columnNumber,
