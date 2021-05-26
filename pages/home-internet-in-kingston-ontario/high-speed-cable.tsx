@@ -79,18 +79,15 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
         />
       }
     >
-      <ResidentialHighSpeedCableContent />
+      <HeadingH2AndPostalCodeCheck heading="Get an instant connection with Internet over cable at a price that suits your needs." />
     </InternalTemplate>
   )
 }
 
-function ResidentialHighSpeedCableContent() {
+function HeadingH2AndPostalCodeCheck({ heading }: { heading: string }) {
   return (
     <div className="flex flex-col space-y-6">
-      <span className="text-xl text-left">
-        Get an instant connection with Internet over cable at a price that suits
-        your needs.
-      </span>
+      <h2 className="text-xl text-left">{heading}</h2>
       <PostalCodeCheckForm />
     </div>
   )
