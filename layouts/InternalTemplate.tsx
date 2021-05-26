@@ -1,10 +1,9 @@
-import ImageFixed from "next/image"
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
 import innerText from "react-innertext"
 import Link from "@/components/Link"
-import { BUTTON } from "@/components/UTILS"
+import { BUTTON, DIVIDER } from "@/components/UTILS"
 import { classNames } from "@/lib/utils"
 
 export function InternalTemplate({
@@ -27,7 +26,8 @@ export function InternalTemplate({
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
   const BulletNavMenu = () => (
-    <>
+    <div className="max-w-xl mx-auto">
+      <DIVIDER />
       {bulletNavMenu && (
         <>
           <div className="pb-4 text-2xl font-semibold tracking-tight color">
@@ -41,15 +41,31 @@ export function InternalTemplate({
         <div className="py-6">
           <BUTTON href="/order/" text="Get connected" />
         </div>
-      )}
-    </>
-  )
-  const DIVIDER = () => (
-    <div className="pb-4 text-center">
-      <ImageFixed src="/images/h-decor.png" height="4px" width="64px" alt="" />
-      {/* alt="" acceptable for purely decorative elements */}
+      )}{" "}
     </div>
   )
+  function TitleH1AndChildren() {
+    return (
+      <div
+        className={classNames(
+          fullWidth ? "max-w-5xl md:px-6 lg:px-12" : "max-w-xl md:px-0",
+          "px-4 mx-auto"
+        )}
+      >
+        <h1 className="text-left color decor">{title}</h1>
+        <DIVIDER />
+        {children}
+      </div>
+    )
+  }
+  function PricingSection() {
+    return (
+      <>
+        <div className="pt-6">{pricingSection}</div>
+        <div className="py-6">{footnotesSection}</div>
+      </>
+    )
+  }
 
   return (
     <>
@@ -67,26 +83,9 @@ export function InternalTemplate({
           "py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
         )}
       >
-        <div
-          className={classNames(
-            fullWidth ? "max-w-5xl md:px-6 lg:px-12" : "max-w-xl md:px-0",
-            "px-4 mx-auto"
-          )}
-        >
-          <h1 className="text-left color decor">{title}</h1>
-          <DIVIDER />
-          {children}
-        </div>
-        {pricingSection && (
-          <>
-            <div className="pt-6">{pricingSection}</div>
-            <div className="py-6">{footnotesSection}</div>
-          </>
-        )}
-        <div className="max-w-xl mx-auto">
-          <DIVIDER />
-          <BulletNavMenu />
-        </div>
+        <TitleH1AndChildren />
+        {pricingSection && <PricingSection />}
+        <BulletNavMenu />
       </div>
     </>
   )
