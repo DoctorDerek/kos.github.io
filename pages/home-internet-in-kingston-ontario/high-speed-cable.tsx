@@ -45,8 +45,8 @@ function ResidentialHighSpeedCableContent() {
   )
 }
 
-function ResidentialHighSpeedCablePricing() {
-  const pricingPackages: PricingPackage[] = [
+function ResidentialHighSpeedCablePricing({
+  pricingPackages = [
     {
       packageName: "CABLE 15",
       pricePerMonthDollars: "39",
@@ -77,7 +77,10 @@ function ResidentialHighSpeedCablePricing() {
         "For power users. Perfect for people who demand the most speed available.",
       priceFootnotes: "1 2",
     },
-  ]
+  ],
+}: {
+  pricingPackages?: PricingPackage[]
+}) {
   return (
     <>
       <div className="flex flex-wrap justify-center">
