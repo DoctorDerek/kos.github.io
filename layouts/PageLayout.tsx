@@ -21,13 +21,13 @@ export default function PostLayout({
   next?: PageFrontMatter
   prev?: PageFrontMatter
 }) {
-  const { slug, title, heading, description } = frontMatter
+  const { slug, title, heading } = frontMatter
 
   return (
     <>
       <PageSeo
         title={title}
-        description={description}
+        description=""
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
       <InternalTemplate
