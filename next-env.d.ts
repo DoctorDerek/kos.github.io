@@ -66,6 +66,8 @@ type BlogPostFrontMatter = {
  * @typeParam slug - The URL slug
  * @typeParam title - The page title
  * @typeParam heading - The page heading
+ * @typeParam pricingPackages - The page title
+ * @typeParam pricingSectionFootnotes - The page heading
  *
  * @remarks
  * This type is used for the pricing pages of the site.
@@ -75,6 +77,7 @@ type PageFrontMatter = {
   // slug is detected automatically from the filename of the Markdown file
   title: string
   heading: string
+  pricingPackages: pricingPackage[]
   pricingSectionFootnotes: pricingSectionFootnote[]
 }
 

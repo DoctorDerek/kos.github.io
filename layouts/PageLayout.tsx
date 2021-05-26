@@ -4,9 +4,7 @@ import React from "react"
 import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingSection, {
-  pricingPackages,
   PricingSectionFootnotes,
-  HeadingH2AndPostalCodeCheck,
 } from "@/components/PricingSection"
 
 export default function PageLayout({
@@ -20,7 +18,13 @@ export default function PageLayout({
   next?: PageFrontMatter
   prev?: PageFrontMatter
 }) {
-  const { slug, title, heading, pricingSectionFootnotes } = frontMatter
+  const {
+    slug,
+    title,
+    heading,
+    pricingPackages,
+    pricingSectionFootnotes,
+  } = frontMatter
 
   return (
     <>
@@ -32,6 +36,7 @@ export default function PageLayout({
       <InternalTemplate
         title={title}
         slug={slug}
+        heading={heading}
         hoverBulletNavMenu={<HoverBulletNavMenu type="Residential" />}
         fullWidth={true}
         pricingSection={<PricingSection pricingPackages={pricingPackages} />}
@@ -41,9 +46,8 @@ export default function PageLayout({
           />
         }
       >
-        <HeadingH2AndPostalCodeCheck heading={heading} />
+        {children}
       </InternalTemplate>
-      {children}
     </>
   )
 }

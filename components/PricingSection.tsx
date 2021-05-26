@@ -1,51 +1,8 @@
 import PricingPackageColumn from "@/components/PricingPackageColumn"
-import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import { Fragment } from "react"
 import { classNames } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
 import Link from "@/components/Link"
-
-export const pricingPackages = [
-  {
-    packageName: "CABLE 15",
-    pricePerMonthDollars: "39",
-    pricePerMonthCents: "95",
-    downloadSpeed: "15.0 MBPS",
-    dataTransfer: "200 GB",
-    description:
-      "Surf, shop, stream music and video, stay connected with family and friends.",
-    priceFootnotes: "1 2",
-  },
-  {
-    packageName: "CABLE 40",
-    pricePerMonthDollars: "54",
-    pricePerMonthCents: "95",
-    downloadSpeed: "40.0 MBPS",
-    dataTransfer: "300 GB",
-    description:
-      "For active families and multiple users. All the features with more speed and data.",
-    priceFootnotes: "1 2",
-  },
-  {
-    packageName: "CABLE 60",
-    pricePerMonthDollars: "74",
-    pricePerMonthCents: "95",
-    downloadSpeed: "60.0 MBPS",
-    dataTransfer: "300 GB",
-    description:
-      "For power users. Perfect for people who demand the most speed available.",
-    priceFootnotes: "1 2",
-  },
-]
-
-export function HeadingH2AndPostalCodeCheck({ heading }: { heading: string }) {
-  return (
-    <div className="flex flex-col space-y-6">
-      <h2 className="text-xl text-left">{heading}</h2>
-      <PostalCodeCheckForm />
-    </div>
-  )
-}
 
 export default function PricingSection({
   pricingPackages,
