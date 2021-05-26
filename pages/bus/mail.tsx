@@ -14,7 +14,11 @@ export default function BusinessMail(): JSX.Element {
   const bulletNavMenu = <HoverBulletNavMenu type="Business" />
 
   return (
-    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+    <InternalTemplate
+      title={title}
+      slug={slug}
+      hoverBulletNavMenu={bulletNavMenu}
+    >
       <MailContent />
     </InternalTemplate>
   )

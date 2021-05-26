@@ -14,7 +14,11 @@ export default function BusinessHighSpeedCable(): JSX.Element {
   const bulletNavMenu = <HoverBulletNavMenu type="Business" />
 
   return (
-    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+    <InternalTemplate
+      title={title}
+      slug={slug}
+      hoverBulletNavMenu={bulletNavMenu}
+    >
       <HighSpeedCableContent />
     </InternalTemplate>
   )

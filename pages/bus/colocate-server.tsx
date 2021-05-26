@@ -14,7 +14,11 @@ export default function BusinessColocateServer(): JSX.Element {
   const bulletNavMenu = <HoverBulletNavMenu type="Business" />
 
   return (
-    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
+    <InternalTemplate
+      title={title}
+      slug={slug}
+      hoverBulletNavMenu={bulletNavMenu}
+    >
       <ColocateServerContent />
     </InternalTemplate>
   )

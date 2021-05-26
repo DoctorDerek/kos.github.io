@@ -11,7 +11,7 @@ export function InternalTemplate({
   slug,
   fullWidth = false,
   pricingSection = null,
-  bulletNavMenu = null,
+  hoverBulletNavMenu = null,
   footnotesSection = null,
   showOrderNowButton = false,
   children,
@@ -20,21 +20,21 @@ export function InternalTemplate({
   slug: string
   fullWidth?: boolean
   pricingSection?: JSX.Element | null
-  bulletNavMenu?: JSX.Element | null
+  hoverBulletNavMenu?: JSX.Element | null
   footnotesSection?: JSX.Element | null
   showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
-  const BulletNavMenu = () => (
+  const HoverBulletNavMenu = () => (
     <div className="max-w-xl mx-auto">
       <DIVIDER />
-      {bulletNavMenu && (
+      {hoverBulletNavMenu && (
         <>
           <div className="pb-4 text-2xl font-semibold tracking-tight color">
             Please <Link href="/contact">contact our office</Link> for more
             information, or select from one of our services below.
           </div>
-          {bulletNavMenu}
+          {hoverBulletNavMenu}
         </>
       )}
       {showOrderNowButton && (
@@ -85,7 +85,7 @@ export function InternalTemplate({
       >
         <TitleH1AndChildren />
         {pricingSection && <PricingSection />}
-        <BulletNavMenu />
+        <HoverBulletNavMenu />
       </div>
     </>
   )

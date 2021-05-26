@@ -17,7 +17,7 @@ export default function ResidentialServices(): JSX.Element {
     <InternalTemplate
       title={title}
       slug={slug}
-      bulletNavMenu={bulletNavMenu}
+      hoverBulletNavMenu={bulletNavMenu}
       showOrderNowButton={true}
     >
       <ResidentialServicesContent />
