@@ -3,7 +3,7 @@ import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.sv
 import { CheckIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
 
-export const BULLET = ({
+export function BULLET({
   hover = false,
   isCurrentPage = false,
   customIcon = null,
@@ -13,7 +13,7 @@ export const BULLET = ({
   isCurrentPage?: boolean
   customIcon?: JSX.Element | null
   responsive?: boolean
-}) => {
+}) {
   function CustomIcon() {
     return <>{customIcon}</>
   }
@@ -45,11 +45,13 @@ export const BULLET = ({
   )
 }
 
-export const BUTTON = ({ href, text }: { href: string; text: string }) => (
-  <Link
-    href={href}
-    className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
-  >
-    {text}
-  </Link>
-)
+export function BUTTON({ href, text }: { href: string; text: string }) {
+  return (
+    <Link
+      href={href}
+      className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
+    >
+      {text}
+    </Link>
+  )
+}
