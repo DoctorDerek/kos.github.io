@@ -2,6 +2,7 @@ import { classNames } from "@/lib/utils"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import { CheckIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
+import ImageFixed from "next/image"
 
 export function BULLET({
   hover = false,
@@ -53,5 +54,14 @@ export function BUTTON({ href, text }: { href: string; text: string }) {
     >
       {text}
     </Link>
+  )
+}
+
+export function DIVIDER() {
+  return (
+    <div className="pb-4 text-center">
+      <ImageFixed src="/images/h-decor.png" height="4px" width="64px" alt="" />
+      {/* alt="" acceptable for purely decorative elements */}
+    </div>
   )
 }
