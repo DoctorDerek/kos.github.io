@@ -36,6 +36,11 @@ type NAVIGATION_MENU_TYPE =
  * @typeParam title - The post title
  * @typeParam summary - The post summary
  * @typeParam tags - The tags as a string array
+ * @typeParam fileName - The filename of the Markdown file
+ * @typeParam lastmod - The date the post was last modified
+ * @typeParam url - The URL for the post
+ * @typeParam images - The images as an OpenGraphImages[]
+ * @typeParam draft - Is the post a draft? (true or false)
  *
  * @remarks
  * This type is used for the blog posts in the site with their associated
@@ -50,7 +55,6 @@ type FrontMatter = {
   fileName: string
   lastmod: string | Date
   url: string
-  tags: string[]
   images: OpenGraphImages[]
   draft: boolean
 }
