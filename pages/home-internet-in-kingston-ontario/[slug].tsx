@@ -1,4 +1,3 @@
-import fs from "fs"
 import hydrate from "next-mdx-remote/hydrate"
 import {
   getFiles,
@@ -9,7 +8,6 @@ import {
 import PageLayout from "@/layouts/PageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
-import generateRss from "@/lib/generate-rss"
 
 const PATH = "home-internet-in-kingston-ontario"
 
