@@ -50,7 +50,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       priceFootnotes: "1 2",
     },
   ]
-  const pricingPackageFootnotes = [
+  const pricingSectionFootnotes = [
     { id: "1", description: "Requires Modem rental or purchase." },
     {
       id: "2",
@@ -70,12 +70,10 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       slug={slug}
       bulletNavMenu={bulletNavMenu}
       fullWidth={true}
-      pricingSection={
-        <ResidentialHighSpeedCablePricing pricingPackages={pricingPackages} />
-      }
+      pricingSection={<PricingSection pricingPackages={pricingPackages} />}
       footnotesSection={
-        <ResidentialHighSpeedCableFootnotes
-          pricingPackageFootnotes={pricingPackageFootnotes}
+        <PricingSectionFootnotes
+          pricingSectionFootnotes={pricingSectionFootnotes}
         />
       }
     >
@@ -93,7 +91,7 @@ function HeadingH2AndPostalCodeCheck({ heading }: { heading: string }) {
   )
 }
 
-function ResidentialHighSpeedCablePricing({
+function PricingSection({
   pricingPackages,
 }: {
   pricingPackages: PricingPackage[]
@@ -118,17 +116,17 @@ function ResidentialHighSpeedCablePricing({
     </>
   )
 }
-function ResidentialHighSpeedCableFootnotes({
-  pricingPackageFootnotes,
+function PricingSectionFootnotes({
+  pricingSectionFootnotes,
 }: {
-  pricingPackageFootnotes: PricingPackageFootnote[]
+  pricingSectionFootnotes: PricingSectionFootnote[]
 }): JSX.Element {
   function PricingPackageFootnotes(): JSX.Element {
     return (
       <ol>
-        {pricingPackageFootnotes.map(
-          (pricingPackageFootnote: PricingPackageFootnote) => {
-            const { id, description } = pricingPackageFootnote
+        {pricingSectionFootnotes.map(
+          (pricingSectionFootnote: PricingSectionFootnote) => {
+            const { id, description } = pricingSectionFootnote
             return (
               <li id={id} key={id + description}>
                 {id}) {description}

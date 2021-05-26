@@ -90,7 +90,7 @@ type PricingPackage = {
  * @remarks
  * This type contains the footnotes for the sale prices listed on the website.
  */
-type PricingPackageFootnote = {
+type PricingSectionFootnote = {
   id: string
   description: string
 }
