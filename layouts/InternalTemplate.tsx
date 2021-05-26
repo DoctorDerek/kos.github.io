@@ -25,6 +25,22 @@ export function InternalTemplate({
   showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
+  const highlightRegExp = /(.+)\*(.+)\*(.+)/
+  // Highlight the part of the title marked with * asterisks (Markdown bold)
+  // if any. For example a Markdown file might read `title: "Residential
+  // *High Speed Cable* Packages in Kingston & Belleville, Ontario"`
+  title =
+    typeof title === "string" && title.includes("*") ? (
+      <>
+        {title.replace(highlightRegExp, "$1")}
+        <span className="text-red-brand">
+          {title.replace(highlightRegExp, "$2")}
+        </span>
+        {title.replace(highlightRegExp, "$3")}
+      </>
+    ) : (
+      title
+    )
   const HoverBulletNavMenu = () => (
     <div className="max-w-xl mx-auto">
       <DIVIDER />
