@@ -35,7 +35,7 @@ export default function PostLayout({
         hoverBulletNavMenu={<HoverBulletNavMenu type="Residential" />}
         fullWidth={true}
         pricingSection={<PricingSection pricingPackages={pricingPackages} />}
-        footnotesSection={
+        pricingFootnotesSection={
           <PricingSectionFootnotes
             pricingSectionFootnotes={pricingSectionFootnotes}
           />

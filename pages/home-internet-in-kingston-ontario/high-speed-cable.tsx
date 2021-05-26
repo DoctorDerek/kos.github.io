@@ -25,7 +25,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       hoverBulletNavMenu={<HoverBulletNavMenu type="Residential" />}
       fullWidth={true}
       pricingSection={<PricingSection pricingPackages={pricingPackages} />}
-      footnotesSection={
+      pricingFootnotesSection={
         <PricingSectionFootnotes
           pricingSectionFootnotes={pricingSectionFootnotes}
         />

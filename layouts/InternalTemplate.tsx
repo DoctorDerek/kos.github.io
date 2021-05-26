@@ -12,7 +12,7 @@ export function InternalTemplate({
   fullWidth = false,
   pricingSection = null,
   hoverBulletNavMenu = null,
-  footnotesSection = null,
+  pricingFootnotesSection = null,
   showOrderNowButton = false,
   children,
 }: {
@@ -21,7 +21,7 @@ export function InternalTemplate({
   fullWidth?: boolean
   pricingSection?: JSX.Element | null
   hoverBulletNavMenu?: JSX.Element | null
-  footnotesSection?: JSX.Element | null
+  pricingFootnotesSection?: JSX.Element | null
   showOrderNowButton?: boolean
   children: JSX.Element | JSX.Element[]
 }): JSX.Element {
@@ -78,7 +78,7 @@ export function InternalTemplate({
     return (
       <>
         <div className="pt-6">{pricingSection}</div>
-        <div className="py-6">{footnotesSection}</div>
+        <div className="py-6">{pricingFootnotesSection}</div>
       </>
     )
   }
