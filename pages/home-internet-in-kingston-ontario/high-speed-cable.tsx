@@ -18,35 +18,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
   const slug = "home-internet-in-kingston-ontario/high-speed-cable"
   // "res/high-speed-cable"
   const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
-
-  return (
-    <InternalTemplate
-      title={title}
-      slug={slug}
-      bulletNavMenu={bulletNavMenu}
-      fullWidth={true}
-      pricingSection={<ResidentialHighSpeedCablePricing />}
-      footnotesSection={<ResidentialHighSpeedCableFootnotes />}
-    >
-      <ResidentialHighSpeedCableContent />
-    </InternalTemplate>
-  )
-}
-
-function ResidentialHighSpeedCableContent() {
-  return (
-    <div className="flex flex-col space-y-6">
-      <span className="text-xl text-left">
-        Get an instant connection with Internet over cable at a price that suits
-        your needs.
-      </span>
-      <PostalCodeCheckForm />
-    </div>
-  )
-}
-
-function ResidentialHighSpeedCablePricing({
-  pricingPackages = [
+  const pricingPackages = [
     {
       packageName: "CABLE 15",
       pricePerMonthDollars: "39",
@@ -77,9 +49,40 @@ function ResidentialHighSpeedCablePricing({
         "For power users. Perfect for people who demand the most speed available.",
       priceFootnotes: "1 2",
     },
-  ],
+  ]
+
+  return (
+    <InternalTemplate
+      title={title}
+      slug={slug}
+      bulletNavMenu={bulletNavMenu}
+      fullWidth={true}
+      pricingSection={
+        <ResidentialHighSpeedCablePricing pricingPackages={pricingPackages} />
+      }
+      footnotesSection={<ResidentialHighSpeedCableFootnotes />}
+    >
+      <ResidentialHighSpeedCableContent />
+    </InternalTemplate>
+  )
+}
+
+function ResidentialHighSpeedCableContent() {
+  return (
+    <div className="flex flex-col space-y-6">
+      <span className="text-xl text-left">
+        Get an instant connection with Internet over cable at a price that suits
+        your needs.
+      </span>
+      <PostalCodeCheckForm />
+    </div>
+  )
+}
+
+function ResidentialHighSpeedCablePricing({
+  pricingPackages,
 }: {
-  pricingPackages?: PricingPackage[]
+  pricingPackages: PricingPackage[]
 }) {
   return (
     <>
