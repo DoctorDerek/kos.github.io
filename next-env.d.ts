@@ -48,6 +48,7 @@ type NAVIGATION_MENU_TYPE =
  */
 type BlogPostFrontMatter = {
   slug: string
+  // slug is detected automatically from the filename of the Markdown file
   date: string | Date
   title: string
   summary: string
@@ -60,34 +61,20 @@ type BlogPostFrontMatter = {
 }
 
 /**
- * Frontmatter type used as posts array in ListLayout.tsx & PostLayout.tsx
+ * Frontmatter type used as pages array in PageLayout.tsx
  *
  * @typeParam slug - The URL slug
- * @typeParam date - The publication date
- * @typeParam title - The post title
- * @typeParam summary - The post summary
- * @typeParam tags - The tags as a string array
- * @typeParam fileName - The filename of the Markdown file
- * @typeParam lastmod - The date the post was last modified
- * @typeParam url - The URL for the post
- * @typeParam images - The images as an OpenGraphImages[]
- * @typeParam draft - Is the post a draft? (true or false)
+ * @typeParam title - The page title
+ * @typeParam heading - The page heading
  *
  * @remarks
- * This type is used for the blog posts in the site with their associated
- * mdx Markdown content.
+ * This type is used for the pricing pages of the site.
  */
 type PageFrontMatter = {
   slug: string
-  date: string | Date
+  // slug is detected automatically from the filename of the Markdown file
   title: string
-  summary: string
-  tags: string[]
-  fileName: string
-  lastmod: string | Date
-  url: string
-  images: OpenGraphImages[]
-  draft: boolean
+  heading: string
 }
 
 /**

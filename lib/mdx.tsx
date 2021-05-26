@@ -121,3 +121,23 @@ export async function getAllFilesFrontMatter(
   return getAllFilesFrontMatter
   // Type '(type: any) => Promise<FrontMatter>' is missing the following properties from type 'FrontMatter': slug, date, title, summary, and 5 more.
 }
+
+export async function getAllPagesFrontMatter(
+  type: any
+): Promise<PageFrontMatter[]> {
+  const files = fs.readdirSync(path.join(root, "data", type))
+
+  const allFrontMatter = []
+
+  files.forEach((file) => {
+    const source = fs.readFileSync(path.join(root, "data", type, file), "utf8")
+    const { data } = matter(source)
+    if (data.draft !== true) {
+      allFrontMatter.push({ ...data, slug: formatSlug(file) })
+    }
+  })
+
+  //@ts-expect-error
+  return getAllPagesFrontMatter
+  // Type '(type: any) => Promise<FrontMatter>' is missing the following properties from type 'FrontMatter': slug, date, title, summary, and 5 more.
+}

@@ -3,10 +3,10 @@ import hydrate from "next-mdx-remote/hydrate"
 import {
   getFiles,
   getFileBySlug,
-  getAllFilesFrontMatter,
+  getAllPagesFrontMatter,
   formatSlug,
 } from "@/lib/mdx"
-import PostLayout from "@/layouts/PostLayout"
+import PageLayout from "@/layouts/PageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 import generateRss from "@/lib/generate-rss"
@@ -27,10 +27,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const allPosts = await getAllFilesFrontMatter(PATH)
+  const allPosts = await getAllPagesFrontMatter(PATH)
   const postIndex =
     allPosts.findIndex &&
-    allPosts.findIndex((post: BlogPostFrontMatter) => post.slug === params.slug)
+    allPosts.findIndex((page: PageFrontMatter) => page.slug === params.slug)
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = await getFileBySlug(PATH, params.slug)
@@ -59,9 +59,9 @@ export default function Blog({
   return (
     <>
       {frontMatter.draft !== true ? (
-        <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
+        <PageLayout frontMatter={frontMatter} prev={prev} next={next}>
           {content}
-        </PostLayout>
+        </PageLayout>
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
