@@ -36,7 +36,7 @@ pricingPackages: [
     priceFootnotes: "1 2",
   },
 ]
-pricingSectionFootnotes: [{
+pricingPackageSectionFootnotes: [{
   id: "1",
   description: "Requires Modem rental or purchase."
 },

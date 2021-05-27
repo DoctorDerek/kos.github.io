@@ -1,11 +1,11 @@
 export default function PricingPackagesSectionFootnotes({
-  pricingSectionFootnotes,
+  pricingPackageSectionFootnotes,
 }: {
-  pricingSectionFootnotes: PricingSectionFootnote[]
+  pricingPackageSectionFootnotes: PricingSectionFootnote[]
 }): JSX.Element {
   return (
     <ol>
-      {pricingSectionFootnotes.map(
+      {pricingPackageSectionFootnotes.map(
         (pricingSectionFootnote: PricingSectionFootnote) => {
           const { id, description } = pricingSectionFootnote
           return (

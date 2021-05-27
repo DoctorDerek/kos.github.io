@@ -78,7 +78,7 @@ export default function PageLayout({
     hoverBulletNavMenu,
     showOrderNowButton,
     pricingPackages,
-    pricingSectionFootnotes,
+    pricingPackageSectionFootnotes,
   } = frontMatter
 
   function PageLayoutJSX() {
@@ -104,11 +104,13 @@ export default function PageLayout({
               <PricingPackagesSection pricingPackages={pricingPackages} />
             </div>
           )}
-          {pricingSectionFootnotes && (
+          {pricingPackageSectionFootnotes && (
             <div className="py-6">
               <div className="pt-12 text-center">
                 <PricingPackagesSectionFootnotes
-                  pricingSectionFootnotes={pricingSectionFootnotes}
+                  pricingPackageSectionFootnotes={
+                    pricingPackageSectionFootnotes
+                  }
                 />
               </div>
               <div className="py-12 text-3xl font-bold text-center text-blue-brand">
