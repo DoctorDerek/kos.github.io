@@ -79,25 +79,20 @@ export default function PageLayout({
           "px-4 mx-auto"
         )}
       >
-        <TitleH1WithOptionalHighlighting />
-        <HeadingH2AndPostalCodeCheck />
-        <div className="prose">{children}</div>
+        <h1 className="text-left color decor">
+          <TitleJSXWithOptionalHighlighting />
+        </h1>
+        <DIVIDER />
+        <div className="flex flex-col space-y-6">
+          <HeadingH2 />
+          <div className="prose">{children}</div>
+          <PostalCodeCheckForm />
+        </div>
       </div>
     )
   }
 
-  function TitleH1WithOptionalHighlighting() {
-    return (
-      <>
-        <h1 className="text-left color decor">
-          <TitleJSX />
-        </h1>
-        <DIVIDER />
-      </>
-    )
-  }
-
-  function TitleJSX() {
+  function TitleJSXWithOptionalHighlighting() {
     // Highlight the part of the title marked with * asterisks (Markdown bold)
     // if any. For example a Markdown file might read `title: "Residential
     // *High Speed Cable* Packages in Kingston & Belleville, Ontario"`
@@ -115,11 +110,10 @@ export default function PageLayout({
     } else return <>{title}</>
   }
 
-  function HeadingH2AndPostalCodeCheck() {
+  function HeadingH2() {
     return (
       <div className="flex flex-col space-y-6">
         <h2 className="text-xl text-left">{heading}</h2>
-        <PostalCodeCheckForm />
       </div>
     )
   }
