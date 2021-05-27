@@ -5,21 +5,23 @@ import HoverBox from "@/components/HoverBox"
 export default function PricingPackagesSectionDetails({
   pricingPackagesSectionDetails,
 }: {
-  pricingPackagesSectionDetails: PricingPackageDetail[]
+  pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
 }) {
   return (
     <div className="flex flex-wrap justify-center">
-      {pricingPackagesSectionDetails.map((pricingPackageDetail, index) => (
-        <Fragment key={pricingPackageDetail.detailsSectionHeading1}>
-          <PricingPackagesSectionDetailsSectionIndividual
-            pricingPackageDetail={pricingPackageDetail}
-            backgroundColor={index % 2 === 1 ? "transparent" : "gray"}
-          />
-          {index % 3 === 0 && index > 0 && (
-            <div className="w-full h-0">{/*flex break every 3 items*/}</div>
-          )}
-        </Fragment>
-      ))}
+      {pricingPackagesSectionDetails.map(
+        (pricingPackagesSectionDetail, index) => (
+          <Fragment key={pricingPackagesSectionDetail.detailsSectionHeading1}>
+            <PricingPackagesSectionDetailsSectionIndividual
+              pricingPackagesSectionDetail={pricingPackagesSectionDetail}
+              backgroundColor={index % 2 === 1 ? "transparent" : "gray"}
+            />
+            {index % 3 === 0 && index > 0 && (
+              <div className="w-full h-0">{/*flex break every 3 items*/}</div>
+            )}
+          </Fragment>
+        )
+      )}
     </div>
   )
 }
@@ -28,15 +30,15 @@ export default function PricingPackagesSectionDetails({
  * This component takes displays the PricingPackagesSectionDetails types either
  * wrapped with a <HoverBox> or displayed as a separate full-width section.
  *
- * @param wrapWithHoverBox (a field on the PricingPackageDetail type)
+ * @param wrapWithHoverBox (a field on the PricingPackagesSectionDetail type)
  * If true, the merged PricingPackagesSectionDetails types will be displayed as a flex
  * <HoverBox>; if false then the result will be a separate block <div>.
  */
 function PricingPackagesSectionDetailsSectionIndividual({
-  pricingPackageDetail,
+  pricingPackagesSectionDetail,
   backgroundColor,
 }: {
-  pricingPackageDetail: PricingPackageDetail
+  pricingPackagesSectionDetail: PricingPackagesSectionDetail
   backgroundColor: "gray" | "transparent"
 }) {
   const {
@@ -47,7 +49,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
     detailsSectionDescription2,
     detailsSectionList2,
     wrapWithHoverBox,
-  } = pricingPackageDetail
+  } = pricingPackagesSectionDetail
 
   function PricingPackagesSectionDetailsSectionIndividualOuterJSX() {
     return (

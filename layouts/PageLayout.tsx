@@ -11,54 +11,6 @@ import PricingPackagesSection from "@/components/PricingPackagesSection"
 import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
 import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
 
-const ResidentialHighSpeedCableDetails: PricingPackageDetail[] = [
-  {
-    detailsSectionHeading1: "Options",
-    detailsSectionDescription1: "",
-    detailsSectionList1: [
-      "Additional E-Mail boxes",
-      "$4.95 per month, each Optional",
-      "VIP E-mail boxes, $6.95 per month, each",
-      "Additional 1000MB (1GB) transfer available for $1.00",
-      "Opt-out for automatic spam protection",
-    ],
-    wrapWithHoverBox: true,
-  },
-  {
-    detailsSectionHeading1: "Modem Options",
-    detailsSectionDescription1: "Automatic payment options are required.",
-    detailsSectionList1: [
-      "Monthly Modem rental",
-      "$5.00 Buy Modem $79.95 (Hitron CDA-RES)",
-      "Call for payment plan options",
-    ],
-    detailsSectionHeading2: "BRING YOUR OWN MODEM",
-    detailsSectionDescription2: (
-      <>
-        You are able to use your own Cable Modem if it is in our{" "}
-        <Link href="/modem/list" className="underline text-blue-brand">
-          supported modem list
-        </Link>
-        .
-      </>
-    ),
-    detailsSectionList2: [],
-    wrapWithHoverBox: true,
-  },
-  {
-    detailsSectionHeading1: "Requirements",
-    detailsSectionDescription1: "",
-    detailsSectionList1: [
-      "To access the Internet with KOS CABLE, you will need:",
-      "Supported Cable Modem Required (Rental Available)",
-      "Modern 32-bit or 64-bit Operating System (Windows 7 minimum)",
-      "Minimum of 2.0Ghz processor required",
-      "56K modem suggested for dial-up",
-    ],
-    wrapWithHoverBox: true,
-  },
-]
-
 export default function PageLayout({
   children,
   frontMatter,
@@ -79,6 +31,7 @@ export default function PageLayout({
     showOrderNowButton,
     pricingPackages,
     pricingPackagesSectionFootnotes,
+    pricingPackagesSectionDetails,
   } = frontMatter
 
   function PageLayoutJSX() {
@@ -117,7 +70,7 @@ export default function PageLayout({
                 Additional Details & Options
               </div>
               <PricingPackagesSectionDetailsSection
-                pricingPackagesSectionDetails={ResidentialHighSpeedCableDetails}
+                pricingPackagesSectionDetails={pricingPackagesSectionDetails}
               />
             </div>
           )}

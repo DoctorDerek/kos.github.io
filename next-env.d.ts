@@ -85,8 +85,9 @@ type PageFrontMatter = {
   fullWidth?: boolean
   hoverBulletNavMenu?: "Residential" | "Business"
   showOrderNowButton?: boolean
-  pricingPackages: pricingPackage[]
-  pricingPackagesSectionFootnotes: pricingPackagesSectionFootnote[]
+  pricingPackages: PricingPackage[]
+  pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
+  pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
 }
 
 /**
@@ -146,7 +147,7 @@ type PricingPackagesSectionFootnote = {
  * @remarks
  * This type contains the additional details listed for packages on the website.
  */
-type PricingPackageDetail = {
+type PricingPackagesSectionDetail = {
   detailsSectionHeading1?: string
   detailsSectionDescription1?: string | JSX.Element
   detailsSectionList1?: string[]
