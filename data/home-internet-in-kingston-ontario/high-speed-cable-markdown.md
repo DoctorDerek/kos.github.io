@@ -22,7 +22,7 @@ pricingPackages: [
     downloadSpeed: "40.0 MBPS",
     dataTransfer: "300 GB",
     packageDescription:
-      "For active families and multiple users. All the features with more speed and data.",
+      "For active families and multiple users. All the features with more speed and data",
     priceFootnotes: "1 2",
   },
   {
