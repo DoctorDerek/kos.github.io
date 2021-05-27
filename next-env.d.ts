@@ -71,7 +71,7 @@ type BlogPostFrontMatter = {
  * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
  * @typeParam showOrderNowButton - Whether to show "Order Now" at the bottom
  * @typeParam pricingPackages - The page title
- * @typeParam pricingSectionFootnotes - The page heading
+ * @typeParam pricingPackagesSectionFootnotes - The page heading
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
@@ -86,7 +86,7 @@ type PageFrontMatter = {
   hoverBulletNavMenu?: "Residential" | "Business"
   showOrderNowButton?: boolean
   pricingPackages: pricingPackage[]
-  pricingSectionFootnotes: pricingSectionFootnote[]
+  pricingPackagesSectionFootnotes: pricingPackagesSectionFootnote[]
 }
 
 /**
@@ -98,7 +98,7 @@ type PageFrontMatter = {
  * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. $.95
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
  * @typeParam dataTransfer - The amount of data transfer
- * @typeParam description - The paragraph <p> description of the package
+ * @typeParam packageDescription - The description paragraph for the package
  * @typeParam priceFootnotes - The footnotes as a string with spaces e.g. "1 2"
  *
  * @remarks
@@ -110,7 +110,7 @@ type PricingPackage = {
   pricePerMonthCents: string
   downloadSpeed: string
   dataTransfer: string
-  description: string
+  packageDescription: string
   priceFootnotes: string
 }
 
@@ -124,7 +124,7 @@ type PricingPackage = {
  * @remarks
  * This type contains the footnotes for the sale prices listed on the website.
  */
-type PricingSectionFootnote = {
+type PricingPackagesSectionFootnote = {
   id: string
   description: string
 }

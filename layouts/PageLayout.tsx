@@ -9,7 +9,7 @@ import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
 import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
-import PricingPackageDetailsSection from "@/components/PricingPackageDetailsSection"
+import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
 
 const ResidentialHighSpeedCableDetails: PricingPackageDetail[] = [
   {
@@ -78,7 +78,7 @@ export default function PageLayout({
     hoverBulletNavMenu,
     showOrderNowButton,
     pricingPackages,
-    pricingSectionFootnotes,
+    pricingPackagesSectionFootnotes,
   } = frontMatter
 
   function PageLayoutJSX() {
@@ -104,18 +104,20 @@ export default function PageLayout({
               <PricingPackagesSection pricingPackages={pricingPackages} />
             </div>
           )}
-          {pricingSectionFootnotes && (
+          {pricingPackagesSectionFootnotes && (
             <div className="py-6">
               <div className="pt-12 text-center">
                 <PricingPackagesSectionFootnotes
-                  pricingSectionFootnotes={pricingSectionFootnotes}
+                  pricingPackagesSectionFootnotes={
+                    pricingPackagesSectionFootnotes
+                  }
                 />
               </div>
               <div className="py-12 text-3xl font-bold text-center text-blue-brand">
                 Additional Details & Options
               </div>
-              <PricingPackageDetailsSection
-                pricingPackageDetails={ResidentialHighSpeedCableDetails}
+              <PricingPackagesSectionDetailsSection
+                pricingPackagesSectionDetails={ResidentialHighSpeedCableDetails}
               />
             </div>
           )}

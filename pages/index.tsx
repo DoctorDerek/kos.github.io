@@ -9,7 +9,7 @@ const postDateTemplate = { year: "numeric", month: "long", day: "numeric" }
 import Slideshow from "@/components/Slideshow"
 import ServicesCarousel from "@/components/ServicesCarousel"
 import CategoryCarousel from "@/components/CategoryCarousel"
-import Pricing from "@/components/Pricing"
+import Pricing from "@/components/HomepagePricing"
 import TextIconCarousel from "@/components/TextIconCarousel"
 import FormBlock from "@/components/FormBlock"
 import NewsAndEvents from "@/components/NewsAndEvents"

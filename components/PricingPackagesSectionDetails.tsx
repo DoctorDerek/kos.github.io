@@ -2,16 +2,16 @@ import { Fragment } from "react"
 import { classNames } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
 
-export default function PricingPackageDetailsSection({
-  pricingPackageDetails,
+export default function PricingPackagesSectionDetails({
+  pricingPackagesSectionDetails,
 }: {
-  pricingPackageDetails: PricingPackageDetail[]
+  pricingPackagesSectionDetails: PricingPackageDetail[]
 }) {
   return (
     <div className="flex flex-wrap justify-center">
-      {pricingPackageDetails.map((pricingPackageDetail, index) => (
+      {pricingPackagesSectionDetails.map((pricingPackageDetail, index) => (
         <Fragment key={pricingPackageDetail.detailsSectionHeading1}>
-          <PricingPackageDetailsSectionIndividual
+          <PricingPackagesSectionDetailsSectionIndividual
             pricingPackageDetail={pricingPackageDetail}
             backgroundColor={index % 2 === 1 ? "transparent" : "gray"}
           />
@@ -25,14 +25,14 @@ export default function PricingPackageDetailsSection({
 }
 
 /**
- * This component takes displays the PricingPackageDetails types either
+ * This component takes displays the PricingPackagesSectionDetails types either
  * wrapped with a <HoverBox> or displayed as a separate full-width section.
  *
  * @param wrapWithHoverBox (a field on the PricingPackageDetail type)
- * If true, the merged PricingPackageDetails types will be displayed as a flex
+ * If true, the merged PricingPackagesSectionDetails types will be displayed as a flex
  * <HoverBox>; if false then the result will be a separate block <div>.
  */
-function PricingPackageDetailsSectionIndividual({
+function PricingPackagesSectionDetailsSectionIndividual({
   pricingPackageDetail,
   backgroundColor,
 }: {
@@ -49,7 +49,7 @@ function PricingPackageDetailsSectionIndividual({
     wrapWithHoverBox,
   } = pricingPackageDetail
 
-  function PricingPackageDetailsSectionIndividualOuterJSX() {
+  function PricingPackagesSectionDetailsSectionIndividualOuterJSX() {
     return (
       <>
         {wrapWithHoverBox ? (
@@ -59,16 +59,16 @@ function PricingPackageDetailsSectionIndividual({
                 backgroundColor === "gray" ? "bg-gray-100" : "bg-transparent"
               )}
             >
-              <PricingPackageDetailsSectionIndividualInnerJSX />
+              <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
             </HoverBox>
           </div>
         ) : (
-          <PricingPackageDetailsSectionIndividualInnerJSX />
+          <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
         )}
       </>
     )
   }
-  function PricingPackageDetailsSectionIndividualInnerJSX() {
+  function PricingPackagesSectionDetailsSectionIndividualInnerJSX() {
     return (
       <>
         <DetailsSectionHeading detailsSectionHeading={detailsSectionHeading1} />
@@ -126,5 +126,5 @@ function PricingPackageDetailsSectionIndividual({
     )
   }
 
-  return <PricingPackageDetailsSectionIndividualOuterJSX />
+  return <PricingPackagesSectionDetailsSectionIndividualOuterJSX />
 }

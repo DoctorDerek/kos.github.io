@@ -1,10 +1,10 @@
 import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingSection, {
-  PricingSectionFootnotes,
+  PricingPackagesSectionFootnotes,
   HeadingH2AndPostalCodeCheck,
   pricingPackages,
-  pricingSectionFootnotes,
+  pricingPackagesSectionFootnotes,
 } from "@/components/PricingPackagesSection"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
@@ -26,8 +26,8 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       fullWidth={true}
       pricingSection={<PricingSection pricingPackages={pricingPackages} />}
       pricingFootnotesSection={
-        <PricingSectionFootnotes
-          pricingSectionFootnotes={pricingSectionFootnotes}
+        <PricingPackagesSectionFootnotes
+          pricingPackagesSectionFootnotes={pricingPackagesSectionFootnotes}
         />
       }
     >

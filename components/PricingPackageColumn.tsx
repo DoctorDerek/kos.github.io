@@ -20,7 +20,7 @@ export default function PricingPackageColumn({
     pricePerMonthCents,
     downloadSpeed,
     dataTransfer,
-    description,
+    packageDescription,
     priceFootnotes,
   }: PricingPackage = pricingPackage
 
@@ -116,7 +116,7 @@ export default function PricingPackageColumn({
     return <h3 className="text-base text-gray-700">{packageName}</h3>
   }
   function PricingPackageDescription() {
-    return <p className="text-black">{description}</p>
+    return <p className="text-black">{packageDescription}</p>
   }
   function PricingPackageModalWithButton() {
     return (
