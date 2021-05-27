@@ -15,7 +15,7 @@ const bulletsBusiness = NAVIGATION_MENU[1][1][1][1] as NAVIGATION_MENU_TYPE[]
 const bullets = { Business: bulletsBusiness, Residential: bulletsResidential }
 
 export default function HoverBulletNavMenu({
-  type = "Residential",
+  type,
 }: {
   type: "Residential" | "Business"
 }): JSX.Element {
