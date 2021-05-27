@@ -1,8 +1,8 @@
 import HoverBox from "@/components/HoverBox"
-import PricingPackageFootnotes from "@/components/PricingPackageFootnotes"
+import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
-export default function PricingPackagePromotionHoverBox() {
-  const pricingPackagePromotion: {
+export default function PricingPackageColumnPromotionHoverBox() {
+  const pricingPackageColumnPromotion: {
     promotionHeading: string
     promotionSubheading: string
     promotionPricePerMonth: string
@@ -21,13 +21,13 @@ export default function PricingPackagePromotionHoverBox() {
     promotionPricePerMonth,
     promotionPricePerMonthCents,
     promotionFootnotes,
-  } = pricingPackagePromotion
-  function PricingPackagePromotionHeading() {
+  } = pricingPackageColumnPromotion
+  function PricingPackageColumnPromotionHeading() {
     return (
       <span className="text-[#901D3D] font-extrabold">{promotionHeading}</span>
     )
   }
-  function PricingPackagePromotionSubheading() {
+  function PricingPackageColumnPromotionSubheading() {
     return (
       <>
         {promotionSubheading}
@@ -35,7 +35,7 @@ export default function PricingPackagePromotionHoverBox() {
       </>
     )
   }
-  function PricingPackagePromotionPrice() {
+  function PricingPackageColumnPromotionPrice() {
     return (
       <>
         <span className="text-3xl">
@@ -45,18 +45,16 @@ export default function PricingPackagePromotionHoverBox() {
       </>
     )
   }
-  function PricingPackagePromotionFootnotes() {
-    return (
-      <PricingPackageFootnotes color="black" footnotes={promotionFootnotes} />
-    )
-  }
   return (
     <HoverBox>
-      <PricingPackagePromotionHeading />
+      <PricingPackageColumnPromotionHeading />
       <span className="text-sm font-bold leading-3 text-teal-brand">
-        <PricingPackagePromotionSubheading />
-        <PricingPackagePromotionPrice />
-        <PricingPackagePromotionFootnotes />
+        <PricingPackageColumnPromotionSubheading />
+        <PricingPackageColumnPromotionPrice />
+        <PricingPackageColumnFootnotesAsLinks
+          color="black"
+          footnotes={promotionFootnotes}
+        />
       </span>
     </HoverBox>
   )

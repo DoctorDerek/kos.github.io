@@ -1,9 +1,9 @@
 import { useState } from "react"
 import PricingPackageModal from "@/components/PricingPackageModal"
 import OrderNowButton from "@/components/OrderNowButton"
-import PricingPackagePromotionHoverBox from "@/components/PricingPackagePromotionHoverBox"
-import PricingPackageFootnotes from "@/components/PricingPackageFootnotes"
+import PricingPackagePromotionHoverBox from "@/components/PricingPackageColumnPromotionHoverBox"
 import { classNames } from "@/lib/utils"
+import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
 export default function PricingPackageColumn({
   color = "navy",
@@ -26,6 +26,52 @@ export default function PricingPackageColumn({
 
   const [openModal, setOpenModal] = useState(false)
 
+  function PricingPackageColumnJSX() {
+    return (
+      <div
+        className={classNames(
+          color === "teal"
+            ? "hover:text-teal-brand hover:border-teal-brand"
+            : "hover:text-blue-brand hover:border-blue-brand ",
+          "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
+        )}
+      >
+        <div className="absolute z-20 text-6xl font-bold left-3 top-2">
+          {columnNumber}
+        </div>
+        <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
+          <div
+            className={classNames(
+              color === "teal" ? "bg-teal-brand" : "bg-blue-brand",
+              "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
+            )}
+          >
+            <div
+              className={classNames(
+                color === "teal"
+                  ? "bg-teal-brand border-teal-dark"
+                  : "bg-blue-brand border-blue-dark",
+                "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
+              )}
+            >
+              <PricingPackageNameH2 />
+              <PricingPackagePrice />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
+          <PricingPackageDownloadSpeed />
+          <PricingPackageDataTransfer />
+          <PricingPackageNameH3 />
+          <PricingPackageDescription />
+          <PricingPackageModalWithButton />
+          <PricingPackagePromotionHoverBox />
+          <OrderNowButton color="blue" />
+        </div>
+      </div>
+    )
+  }
+
   function PricingPackageNameH2() {
     return <h2 className="text-5xl font-bold text-white">{packageName}</h2>
   }
@@ -40,11 +86,15 @@ export default function PricingPackageColumn({
 
         <span className="mt-0 text-xl text-white">
           per month{" "}
-          <PricingPackageFootnotes color="white" footnotes={priceFootnotes} />
+          <PricingPackageColumnFootnotesAsLinks
+            color="white"
+            footnotes={priceFootnotes}
+          />
         </span>
       </>
     )
   }
+
   function PricingPackageDownloadSpeed() {
     return (
       <span className="text-2xl leading-6 text-blue-brand">
@@ -88,47 +138,5 @@ export default function PricingPackageColumn({
     )
   }
 
-  return (
-    <div
-      className={classNames(
-        color === "teal"
-          ? "hover:text-teal-brand hover:border-teal-brand"
-          : "hover:text-blue-brand hover:border-blue-brand ",
-        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
-      )}
-    >
-      <div className="absolute z-20 text-6xl font-bold left-3 top-2">
-        {columnNumber}
-      </div>
-      <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
-        <div
-          className={classNames(
-            color === "teal" ? "bg-teal-brand" : "bg-blue-brand",
-            "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
-          )}
-        >
-          <div
-            className={classNames(
-              color === "teal"
-                ? "bg-teal-brand border-teal-dark"
-                : "bg-blue-brand border-blue-dark",
-              "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
-            )}
-          >
-            <PricingPackageNameH2 />
-            <PricingPackagePrice />
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
-        <PricingPackageDownloadSpeed />
-        <PricingPackageDataTransfer />
-        <PricingPackageNameH3 />
-        <PricingPackageDescription />
-        <PricingPackageModalWithButton />
-        <PricingPackagePromotionHoverBox />
-        <OrderNowButton color="blue" />
-      </div>
-    </div>
-  )
+  return <PricingPackageColumnJSX />
 }

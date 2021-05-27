@@ -1,10 +1,11 @@
-import { classNames } from "@/lib/utils"
 import Link from "@/components/Link"
+import { classNames } from "@/lib/utils"
+
 /**
  * @param footnotes
  * a string of unique footnotes that will be split on white space e.g. "1 2" will be split to [1,2]
  */
-export default function PricingPackageFootnotes({
+export default function PricingPackageColumnFootnotesAsLinks({
   footnotes,
   color,
 }: {

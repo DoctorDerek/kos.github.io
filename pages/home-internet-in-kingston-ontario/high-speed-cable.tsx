@@ -5,7 +5,7 @@ import PricingSection, {
   HeadingH2AndPostalCodeCheck,
   pricingPackages,
   pricingSectionFootnotes,
-} from "@/components/PricingSection"
+} from "@/components/PricingPackagesSection"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
   const title = (

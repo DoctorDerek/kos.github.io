@@ -6,6 +6,9 @@ import Link from "@/components/Link"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
 import { classNames } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
+import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
+import PricingPackagesSection from "@/components/PricingPackagesSection"
+import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
 /*
 import { InternalTemplate } from "@/layouts/InternalTemplate"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
@@ -60,16 +63,14 @@ export default function PageLayout({
 }): JSX.Element {
   const {
     slug,
-    heading,
     title,
+    heading,
     fullWidth,
-    //pricingPackages,
-    //pricingSectionFootnotes,
+    hoverBulletNavMenu,
+    showOrderNowButton,
+    pricingPackages,
+    pricingSectionFootnotes,
   } = frontMatter
-  const pricingSection = <p>Pricing Section WIP</p>
-  const pricingFootnotesSection = <p>Pricing Footnotes Section</p>
-  const showOrderNowButton = "true -- WIP"
-  const hoverBulletNavMenu = <p>BulletNavMenu WIP</p>
 
   function PageLayoutJSX() {
     return (
@@ -89,8 +90,19 @@ export default function PageLayout({
           )}
         >
           <TitleHeadingAndChildren />
-          {pricingSection && <PricingSection />}
-          <HoverBulletNavMenu />
+          {pricingPackages && (
+            <div className="pt-6">
+              <PricingPackagesSection pricingPackages={pricingPackages} />
+            </div>
+          )}
+          {pricingSectionFootnotes && (
+            <div className="py-6">
+              <PricingPackagesSectionFootnotes
+                pricingSectionFootnotes={pricingSectionFootnotes}
+              />
+            </div>
+          )}
+          <HoverBulletNavMenuAndOrderNowButton />
         </div>
       </>
     )
@@ -143,16 +155,7 @@ export default function PageLayout({
     )
   }
 
-  function PricingSection() {
-    return (
-      <>
-        <div className="pt-6">{pricingSection}</div>
-        <div className="py-6">{pricingFootnotesSection}</div>
-      </>
-    )
-  }
-
-  function HoverBulletNavMenu() {
+  function HoverBulletNavMenuAndOrderNowButton() {
     return (
       <div className="max-w-xl mx-auto">
         <DIVIDER />
@@ -162,7 +165,7 @@ export default function PageLayout({
               Please <Link href="/contact">contact our office</Link> for more
               information, or select from one of our services below.
             </div>
-            {hoverBulletNavMenu}
+            <HoverBulletNavMenu type={hoverBulletNavMenu} />
           </>
         )}
         {showOrderNowButton && (
