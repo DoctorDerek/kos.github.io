@@ -71,7 +71,7 @@ type BlogPostFrontMatter = {
  * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
  * @typeParam showOrderNowButton - Whether to show "Order Now" at the bottom
  * @typeParam pricingPackages - The page title
- * @typeParam pricingPackageSectionFootnotes - The page heading
+ * @typeParam pricingSectionFootnotes - The page heading
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
@@ -86,7 +86,7 @@ type PageFrontMatter = {
   hoverBulletNavMenu?: "Residential" | "Business"
   showOrderNowButton?: boolean
   pricingPackages: pricingPackage[]
-  pricingPackageSectionFootnotes: pricingSectionFootnote[]
+  pricingSectionFootnotes: pricingSectionFootnote[]
 }
 
 /**
@@ -124,7 +124,7 @@ type PricingPackage = {
  * @remarks
  * This type contains the footnotes for the sale prices listed on the website.
  */
-type PricingPackageFootnote = {
+type PricingSectionFootnote = {
   id: string
   description: string
 }

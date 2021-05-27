@@ -4,7 +4,7 @@ import PricingSection, {
   PricingSectionFootnotes,
   HeadingH2AndPostalCodeCheck,
   pricingPackages,
-  pricingPackageSectionFootnotes,
+  pricingSectionFootnotes,
 } from "@/components/PricingPackagesSection"
 
 export default function ResidentialHighSpeedCable(): JSX.Element {
@@ -27,7 +27,7 @@ export default function ResidentialHighSpeedCable(): JSX.Element {
       pricingSection={<PricingSection pricingPackages={pricingPackages} />}
       pricingFootnotesSection={
         <PricingSectionFootnotes
-          pricingPackageSectionFootnotes={pricingPackageSectionFootnotes}
+          pricingSectionFootnotes={pricingSectionFootnotes}
         />
       }
     >
