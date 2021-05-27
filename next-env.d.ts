@@ -133,27 +133,25 @@ type PricingSectionFootnote = {
  * These are the details for the <HoverBox /> sections that appear on the sales
  * pages and are displayed at the bottom of a <PricingPackageColumn />
  *
- * @remarks
- * This type allows 1 layer of nested items, such that multiple PricingPackageDetailsItem types can be displayed as one block or <HoverBox>
- */
-type PricingPackageDetails = Array<
-  PricingPackageDetailsItem | PricingPackageDetailsItem[]
->
-
-/**
- * These are the individual detail items for the <HoverBox /> sections that
- * appear on the sales pages and are displayed at the bottom of a
- * <PricingPackageColumn />
+ * All the parameters are optional and will only be shown if present and not "".
  *
- * @typeParam detailsSectionHeading - The <PricingPackageDetailsSection> heading
- * @typeParam detailsSectionDescription - Optional <p> paragraph description
- * @typeParam detailsSectionList - Optional <ul> list items for section bullets
+ * @typeParam detailsSectionHeading1 - The 1st heading at the top
+ * @typeParam detailsSectionDescription1 - The description under the heading
+ * @typeParam detailsSectionList1 - The details section bullets for the top part
+ * @typeParam detailsSectionHeading2 - A 2nd heading in the middle
+ * @typeParam detailsSectionDescription2 - The description under the 2nd heading
+ * @typeParam detailsSectionList2 - The details section bullets for the part 2
+ * @typerParam wrapWithHoverBox - Wrap with a <HoverBox> or display full-width
  *
  * @remarks
  * This type contains the additional details listed for packages on the website.
  */
-type PricingPackageDetailsItem = {
-  detailsSectionHeading: string
-  detailsSectionDescription: string | JSX.Element
-  detailsSectionList: string[]
+type PricingPackageDetail = {
+  detailsSectionHeading1?: string
+  detailsSectionDescription1?: string | JSX.Element
+  detailsSectionList1?: string[]
+  detailsSectionHeading2?: string
+  detailsSectionDescription2?: string | JSX.Element
+  detailsSectionList2?: string[]
+  wrapWithHoverBox: boolean
 }
