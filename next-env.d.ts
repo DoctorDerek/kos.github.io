@@ -66,20 +66,25 @@ type BlogPostFrontMatter = {
  * @typeParam slug - The URL slug
  * @typeParam title - The page title
  * @typeParam heading - The page heading
- * @typeParam fullWidth - Whether to be wide like the pricing pages (true)
+ * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                        or narrow like the informational pages (false)
+ * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
+ * @typeParam showOrderNowButton - Whether to show "Order Now" at the bottom
  * @typeParam pricingPackages - The page title
  * @typeParam pricingSectionFootnotes - The page heading
  *
  * @remarks
- * This type is used for the pricing pages of the site.
+ * This type is used for the Markdown for pricing pages of the site like
+ * /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
  */
 type PageFrontMatter = {
   slug: string
   // slug is detected automatically from the filename of the Markdown file
   title: string
   heading: string
-  fullWidth: boolean
+  fullWidth?: boolean
+  hoverBulletNavMenu?: "Residential" | "Business"
+  showOrderNowButton?: boolean
   pricingPackages: pricingPackage[]
   pricingSectionFootnotes: pricingSectionFootnote[]
 }
