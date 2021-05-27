@@ -1,7 +1,6 @@
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
-import innerText from "react-innertext"
 import Link from "@/components/Link"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
 import { classNames } from "@/lib/utils"
@@ -111,7 +110,7 @@ export function InternalTemplate({
   return (
     <>
       <PageSeo
-        title={innerText(title)}
+        title={title as string}
         description=""
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
