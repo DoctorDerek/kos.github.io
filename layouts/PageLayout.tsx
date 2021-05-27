@@ -71,6 +71,31 @@ export default function PageLayout({
   const showOrderNowButton = "true -- WIP"
   const hoverBulletNavMenu = <p>BulletNavMenu WIP</p>
 
+  function PageLayoutJSX() {
+    return (
+      <>
+        <PageSeo
+          title={title.replaceAll("*", "")}
+          description=""
+          url={`${siteMetadata.siteUrl}/${slug}`}
+        />
+        <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
+          <Image src="/images/footer-bg.jpg" alt="" />
+          {/* alt="" acceptable for purely decorative elements */}
+        </div>
+        <div
+          className={classNames(
+            "py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
+          )}
+        >
+          <TitleHeadingAndChildren />
+          {pricingSection && <PricingSection />}
+          <HoverBulletNavMenu />
+        </div>
+      </>
+    )
+  }
+
   function TitleHeadingAndChildren() {
     return (
       <div
@@ -149,26 +174,5 @@ export default function PageLayout({
     )
   }
 
-  return (
-    <>
-      <PageSeo
-        title={title.replaceAll("*", "")}
-        description=""
-        url={`${siteMetadata.siteUrl}/${slug}`}
-      />
-      <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
-        <Image src="/images/footer-bg.jpg" alt="" />
-        {/* alt="" acceptable for purely decorative elements */}
-      </div>
-      <div
-        className={classNames(
-          "py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10"
-        )}
-      >
-        <TitleHeadingAndChildren />
-        {pricingSection && <PricingSection />}
-        <HoverBulletNavMenu />
-      </div>
-    </>
-  )
+  return <PageLayoutJSX />
 }
