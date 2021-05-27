@@ -122,7 +122,7 @@ export default function PageLayout({
         <DIVIDER />
         <div className="flex flex-col space-y-6">
           <HeadingH2 />
-          {children}
+          <div className="prose">{children}</div>
           <PostalCodeCheckForm />
         </div>
       </div>
