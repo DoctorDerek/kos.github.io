@@ -2,6 +2,8 @@
 
 ⚠ WIP Site - Will Launch June 2021
 
+---
+
 🟢 98/100 Lighthouse Performance
 
 ⚛ Next.js (React)
@@ -13,6 +15,8 @@
 🌳 Forestry CMS
 
 🎣 Husky (Git Hooks) for Prettier + ESLint
+
+---
 
 🚢 Deployed at Vercel
 
