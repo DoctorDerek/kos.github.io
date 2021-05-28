@@ -1,11 +1,23 @@
-[`kos-github-io.vercel.app`](kos-github-io.vercel.app) by @DoctorDerek
+# [`kos-github-io.vercel.app`](kos-github-io.vercel.app) by @DoctorDerek
 
-⚠ WIP site launching June 2021
+⚠ WIP Site - Will Launch June 2021
 
-⚛ Next.js / React
+🟢 98/100 Lighthouse Performance
 
-🖼 Tailwind CSS
+⚛ Next.js (React)
 
 🧠 TypeScript
 
-🟢 98/100 Lighthouse Performance
+🖼 Tailwind CSS
+
+🌳 Forestry CMS
+
+🚢 Deployed at Vercel
+
+👨‍🎨 Redesigned for Accessibility by @DoctorDerek
+
+📱 Responsive Mobile Design
+
+📝 Easy-to-Update Blog
+
+😎 Based on (KOS.net)[https://KOS.net]
