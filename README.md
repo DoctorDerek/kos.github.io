@@ -26,4 +26,4 @@
 
 📝 Easy-to-Update Blog
 
-😎 Based on (KOS.net)[https://KOS.net]
+😎 Based on [KOS.net](https://KOS.net)
