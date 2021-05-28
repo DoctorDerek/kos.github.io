@@ -12,6 +12,8 @@
 
 🌳 Forestry CMS
 
+🎣 Husky (Git Hooks) for Prettier + ESLint
+
 🚢 Deployed at Vercel
 
 👨‍🎨 Redesigned for Accessibility by @DoctorDerek
