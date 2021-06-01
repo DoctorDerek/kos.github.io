@@ -1,5 +1,4 @@
 import Link from "@/components/Link"
-import React from "react"
 import ImageFixed from "next/image"
 import Image from "@/components/CustomImage"
 

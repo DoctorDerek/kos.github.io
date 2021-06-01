@@ -1,4 +1,3 @@
-import React from "react"
 import ImageFixed from "next/image"
 
 export default function TextIconCarousel() {

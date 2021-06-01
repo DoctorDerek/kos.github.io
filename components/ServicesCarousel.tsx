@@ -1,5 +1,4 @@
 import Link from "@/components/Link"
-import React from "react"
 import Image from "@/components/CustomImage"
 
 export default function ServicesCarousel({ children }: { children?: any }) {

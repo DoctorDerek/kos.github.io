@@ -11,7 +11,6 @@ import Head from "next/head"
 import { SEO } from "@/components/SEO"
 import LayoutWrapper from "@/components/LayoutWrapper"
 import MDXComponents from "@/components/MDXComponents"
-import React from "react"
 
 export default function App({
   Component,

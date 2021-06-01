@@ -1,11 +1,11 @@
-import React from "react"
 import ImageFixed from "next/image"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 export default function Testimonials() {
   const [pause, setPause] = React.useState(false)
-  const timer: React.MutableRefObject<NodeJS.Timeout> = React.useRef() as React.MutableRefObject<NodeJS.Timeout>
+  const timer: React.MutableRefObject<NodeJS.Timeout> =
+    React.useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 5000,

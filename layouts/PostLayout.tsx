@@ -4,7 +4,6 @@ import SectionContainer from "@/components/SectionContainer"
 import { BlogSeo } from "@/components/SEO"
 import Tag from "@/components/Tag"
 import siteMetadata from "@/data/siteMetadata.json"
-import React from "react"
 
 const editUrl = (fileName: string) =>
   `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
