@@ -66,30 +66,13 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <Link
-                              href="#1"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#1" className="text-white underline">
                               1
                             </Link>{" "}
-                            <Link
-                              href="#2"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#2" className="text-white underline">
                               2
                             </Link>{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
+                            <span className="text-white underline" />{" "}
                           </sup>
                         </div>
                       </div>
@@ -125,7 +108,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup0"
                     >
                       click here for full details
@@ -230,30 +213,13 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <Link
-                              href="#1"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#1" className="text-white underline">
                               1
                             </Link>{" "}
-                            <Link
-                              href="#2"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#2" className="text-white underline">
                               2
                             </Link>{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
+                            <span className="text-white underline" />{" "}
                           </sup>
                         </div>
                       </div>
@@ -289,7 +255,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup1"
                     >
                       click here for full details
@@ -314,13 +280,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <Link
-                            style={{
-                              color: "#000000",
-                              textDecoration: "underline",
-                            }}
-                            href="#2"
-                          >
+                          <Link className="text-black underline" href="#2">
                             2
                           </Link>
                         </sup>
@@ -425,42 +385,15 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <Link
-                              href="#2"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#2" className="text-white underline">
                               2
                             </Link>{" "}
-                            <Link
-                              href="#3"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#3" className="text-white underline">
                               3
                             </Link>{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
+                            <span className="text-white underline" />{" "}
+                            <span className="text-white underline" />{" "}
+                            <span className="text-white underline" />{" "}
                           </sup>
                         </div>
                       </div>
@@ -497,7 +430,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup2"
                     >
                       click here for full details
@@ -522,13 +455,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <Link
-                            style={{
-                              color: "#000000",
-                              textDecoration: "underline",
-                            }}
-                            href="#2"
-                          >
+                          <Link className="text-black underline" href="#2">
                             2
                           </Link>
                         </sup>
@@ -641,42 +568,15 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <Link
-                              href="#2"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#2" className="text-white underline">
                               2
                             </Link>{" "}
-                            <Link
-                              href="#3"
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            >
+                            <Link href="#3" className="text-white underline">
                               3
                             </Link>{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
-                            <span
-                              style={{
-                                color: "#ffffff",
-                                textDecoration: "underline",
-                              }}
-                            />{" "}
+                            <span className="text-white underline" />{" "}
+                            <span className="text-white underline" />{" "}
+                            <span className="text-white underline" />{" "}
                           </sup>
                         </div>
                       </div>
@@ -713,7 +613,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup3"
                     >
                       click here for full details
@@ -738,13 +638,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <Link
-                            style={{
-                              color: "#000000",
-                              textDecoration: "underline",
-                            }}
-                            href="#2"
-                          >
+                          <Link className="text-black underline" href="#2">
                             2
                           </Link>
                         </sup>
