@@ -63,30 +63,13 @@ function HighSpeedCableContent() {
                       <br />
                       per month{" "}
                       <sup>
-                        <Link
-                          href="#1"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#1" className="text-white underline">
                           1
                         </Link>{" "}
-                        <Link
-                          href="#2"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#2" className="text-white underline">
                           2
                         </Link>{" "}
-                        <span
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        />{" "}
+                        <span className="text-white underline" />{" "}
                       </sup>
                     </div>
                   </div>
@@ -251,30 +234,13 @@ function HighSpeedCableContent() {
                       <sup>.95</sup> <br />
                       per month{" "}
                       <sup>
-                        <Link
-                          href="#1"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#1" className="text-white underline">
                           1
                         </Link>{" "}
-                        <Link
-                          href="#2"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#2" className="text-white underline">
                           2
                         </Link>{" "}
-                        <span
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        />{" "}
+                        <span className="text-white underline" />{" "}
                       </sup>
                     </div>
                   </div>
@@ -440,30 +406,13 @@ function HighSpeedCableContent() {
                       <br />
                       per month{" "}
                       <sup>
-                        <Link
-                          href="#1"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#1" className="text-white underline">
                           1
                         </Link>{" "}
-                        <Link
-                          href="#2"
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        >
+                        <Link href="#2" className="text-white underline">
                           2
                         </Link>{" "}
-                        <span
-                          style={{
-                            color: "#ffffff",
-                            textDecoration: "underline",
-                          }}
-                        />{" "}
+                        <span className="text-white underline" />{" "}
                       </sup>
                     </div>
                   </div>
