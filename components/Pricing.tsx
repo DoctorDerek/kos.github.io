@@ -57,7 +57,7 @@ export default function Pricing() {
                 >
                   <div className="keen-slider__slide number-slide1">
                     <div className="price-item">
-                      <h6 className="price-title">KOS Wireless Special</h6>
+                      <h5 className="price-title">KOS Wireless Special</h5>
                       <div className="price-text">
                         <p>250GB, 2 Year Contract, No set up fees.</p>
                         <hr />
