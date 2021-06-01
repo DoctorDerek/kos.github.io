@@ -1,4 +1,5 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function E911Travel(): JSX.Element {
   const title = "e911 Travelling"
@@ -21,16 +22,16 @@ function E911TravelContent() {
           <h4>e911</h4>
           <ul className="service-list">
             <li className="active">
-              <a href="/e911/">e911 General</a>
+              <Link href="/e911/">e911 General</Link>
             </li>
             <li>
-              <a href="/e911/faqs/">e911 FAQs</a>
+              <Link href="/e911/faqs/">e911 FAQs</Link>
             </li>
             <li>
-              <a href="/e911/tips/">e911 Tips</a>
+              <Link href="/e911/tips/">e911 Tips</Link>
             </li>
             <li>
-              <a href="/e911/travel/">e911 Travelling</a>
+              <Link href="/e911/travel/">e911 Travelling</Link>
             </li>
           </ul>
         </div>

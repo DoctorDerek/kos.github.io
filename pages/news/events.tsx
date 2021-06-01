@@ -1,9 +1,10 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function Events(): JSX.Element {
   const title = (
     <>
-      <span className="text-red-brand">News</span> & Events
+      <span style={{ color: "#A80532" }}>News</span> & Events
     </>
   )
   // ???
@@ -28,34 +29,36 @@ function EventsContent() {
               <h4>News &amp; Events</h4>
               <ul className="service-list">
                 <li>
-                  <a href="#57">Fibre cut causing major outage **RESOLVED**</a>
+                  <Link href="#57">
+                    Fibre cut causing major outage **RESOLVED**
+                  </Link>
                 </li>
                 <li>
-                  <a href="#51">COVID-19</a>
+                  <Link href="#51">COVID-19</Link>
                 </li>
                 <li>
-                  <a href="#21">Unlimited Packages Now Available</a>
+                  <Link href="#21">Unlimited Packages Now Available</Link>
                 </li>
                 <li>
-                  <a href="#19">Protect Your Identity</a>
+                  <Link href="#19">Protect Your Identity</Link>
                 </li>
                 <li>
-                  <a href="#20">25 Years in Business</a>
+                  <Link href="#20">25 Years in Business</Link>
                 </li>
                 <li>
-                  <a href="#55">Thanksgiving</a>
+                  <Link href="#55">Thanksgiving</Link>
                 </li>
                 <li>
-                  <a href="#53">Canada Day</a>
+                  <Link href="#53">Canada Day</Link>
                 </li>
                 <li>
-                  <a href="#50">Family Day - Monday, February 17</a>
+                  <Link href="#50">Family Day - Monday, February 17</Link>
                 </li>
                 <li>
-                  <a href="#56">Holiday Hours</a>
+                  <Link href="#56">Holiday Hours</Link>
                 </li>
                 <li>
-                  <a href="#49">Holiday Hours</a>
+                  <Link href="#49">Holiday Hours</Link>
                 </li>{" "}
               </ul>
             </div>
@@ -169,9 +172,8 @@ function EventsContent() {
               <h5 className="color" id="20">
                 25 Years in Business
               </h5>
-              <p>
-                <a
-                  style={{
+              <p id="packages">
+                {/* style={{
                     boxSizing: "border-box",
                     backgroundColor: "#ffffff",
                     color: "#000000",
@@ -190,11 +192,8 @@ function EventsContent() {
                     whiteSpace: "normal",
                     widows: 2,
                     wordSpacing: "0px",
-                  }}
-                  id="packages"
-                >
-                  packages
-                </a>
+                  }}*/}
+                packages
               </p>
               <p>
                 <span
@@ -217,15 +216,11 @@ function EventsContent() {
                 KOS will be limited to technical support only on Monday, October
                 12 for Thanksgiving. Technical support will be available from
                 10:00am - 4:00pm. Our{" "}
-                <a
-                  href="https://kos.net/contact.php"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span style={{ color: "#0000ff" }}>
+                <Link href="https://kos.net/contact.php">
+                  <span className="text-blue-brand">
                     regular business hours
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 will resume Tuesday, October 13.
               </p>
               <div className="divider-line-sm" />
@@ -236,15 +231,11 @@ function EventsContent() {
                 KOS will be limited to technical support only on Wednesday, July
                 1 for the Canada Day holiday. Our technical support hours will
                 be 10am - 4pm. Our{" "}
-                <a
-                  href="https://kos.net/contact.php"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span style={{ color: "#0000ff" }}>
+                <Link href="https://kos.net/contact.php">
+                  <span className="text-blue-brand">
                     regular business hours
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 will resume July 2, 2020
               </p>
               <div className="divider-line-sm" />
@@ -255,11 +246,11 @@ function EventsContent() {
                 Our offices will be closed on Monday, February 17, 2020 for
                 Family Day. Technical Support will be available from 10am - 4pm.
                 Our{" "}
-                <a href="../contact.php">
-                  <span style={{ color: "#0000ff" }}>
+                <Link href="/contact">
+                  <span className="text-blue-brand">
                     regular business hours
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 will resume on Tuesday, February 18, 2020.
               </p>
               <div className="divider-line-sm" />
@@ -282,19 +273,19 @@ function EventsContent() {
                 <br />
                 <br />
                 December 27{" "}
-                <span style={{ color: "#0000ff" }}>
-                  <a style={{ color: "#0000ff" }} href="../contact.php">
+                <span className="text-blue-brand">
+                  <Link className="text-blue-brand" href="/contact">
                     Regular Business Hours
-                  </a>
+                  </Link>
                 </span>
               </p>
               <p>December 28 10am - 2pm Accounts / 10am - 4pm Tech Support</p>
               <p>
                 December 29 and 30{" "}
-                <span style={{ color: "#0000ff" }}>
-                  <a style={{ color: "#0000ff" }} href="../contact.php">
+                <span className="text-blue-brand">
+                  <Link className="text-blue-brand" href="/contact">
                     Regular Business Hours
-                  </a>
+                  </Link>
                 </span>
               </p>
               <p>
@@ -305,11 +296,11 @@ function EventsContent() {
                 <br />
                 <br />
                 January 2 -{" "}
-                <a href="../contact.php">
-                  <span style={{ color: "#0000ff" }}>
+                <Link href="/contact">
+                  <span className="text-blue-brand">
                     Regular Business Hours
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 Resume
               </p>
               <div className="divider-line-sm" />
@@ -332,10 +323,10 @@ function EventsContent() {
                 <br />
                 <br />
                 December 27{" "}
-                <span style={{ color: "#0000ff" }}>
-                  <a style={{ color: "#0000ff" }} href="../contact.php">
+                <span className="text-blue-brand">
+                  <Link className="text-blue-brand" href="/contact">
                     Regular Business Hours
-                  </a>
+                  </Link>
                 </span>{" "}
                 Resume Until December 31st
                 <br />
@@ -347,19 +338,19 @@ function EventsContent() {
                 <br />
                 <br />
                 January 2 -{" "}
-                <a href="../contact.php">
-                  <span style={{ color: "#0000ff" }}>
+                <Link href="/contact">
+                  <span className="text-blue-brand">
                     Regular Business Hours
                   </span>
-                </a>{" "}
+                </Link>{" "}
                 Resume
               </p>
               <div className="divider-line-sm" />
               <div className="form-popup-wrap form-popup-wrap-full">
                 <div className="text-center">
-                  <a href="/order/" className="btn btn-orange">
+                  <Link href="/order/" className="btn btn-orange">
                     <span>Get Connected</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

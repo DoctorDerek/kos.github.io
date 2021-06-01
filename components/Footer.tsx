@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import Image from "@/components/CustomImage"
 import { useEffect } from "react"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
@@ -26,9 +27,9 @@ export default function Footer() {
           <Image src="/images/footer-bg.jpg" alt="ocean" />
         </div>
         <div className="back-to-top hidden-xs">
-          <a href="#top">
+          <Link href="#top">
             <span className="flex-wrap icon icon-up-arrow" />
-          </a>
+          </Link>
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
           <div className="flex flex-wrap footer-row">
@@ -55,11 +56,11 @@ export default function Footer() {
             </div>
             <div className="pl-4 pr-4 sm:w-1/3">
               <div className="logo">
-                <a href="/">
+                <Link href="/">
                   <div className="grid w-[300px] h-[125px] mx-auto">
                     <Image src="/images/logo-invert.png" alt="Logo" />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="pl-4 pr-4 sm:w-1/3">
@@ -86,84 +87,81 @@ export default function Footer() {
           <div className="footer-bot">
             <div className="text-base">
               <div id="plemx-root" />
-              <a href="https://www.theweathernetwork.com">
+              <Link href="https://www.theweathernetwork.com">
                 The Weather Network
-              </a>
+              </Link>
             </div>
             <div className="copyright">
               Copyright © KOS - 2021 {" | "}
-              <a style={{ color: "#ffffff" }} href="/policies/">
+              <Link className="text-white" href="/policies/">
                 KOS Policies
-              </a>
+              </Link>
               {" | "}
-              <a style={{ color: "#ffffff" }} href="/tac/">
+              <Link className="text-white" href="/tac/">
                 Terms and Conditions
-              </a>
+              </Link>
               {" | "}
-              <a style={{ color: "#ffffff" }} href="/e911">
+              <Link className="text-white" href="/e911">
                 e911
-              </a>
+              </Link>
               {" | "}
-              <a style={{ color: "#ffffff" }} href="/wst/">
+              <Link className="text-white" href="/wst/">
                 Personal Web Space TAC
-              </a>
+              </Link>
               <br />
               <div>
-                <span style={{ color: "#ffffff" }}>
+                <span className="text-white">
                   <strong>Serving Eastern Ontario: </strong>
                 </span>
-                <a
-                  style={{ color: "#fff" }}
+                <Link
+                  className="text-white"
                   href="/kingston-internet-services/"
                 >
                   Kingston
-                </a>
+                </Link>
                 {" | "}
-                <a
-                  style={{ color: "#fff" }}
+                <Link
+                  className="text-white"
                   href="/gananoque-internet-services/"
                 >
                   Gananoque
-                </a>
+                </Link>
                 {" | "}
-                <a style={{ color: "#fff" }} href="/picton-internet-services/">
+                <Link className="text-white" href="/picton-internet-services/">
                   Picton
-                </a>
+                </Link>
                 {" | "}
-                <a
-                  style={{ color: "#fff" }}
+                <Link
+                  className="text-white"
                   href="/brighton-internet-services/"
                 >
                   Brighton
-                </a>
+                </Link>
                 {" | "}
-                <a style={{ color: "#fff" }} href="/trenton-internet-services/">
+                <Link className="text-white" href="/trenton-internet-services/">
                   Trenton
-                </a>
+                </Link>
                 {" | "}
-                <a
-                  style={{ color: "#fff" }}
+                <Link
+                  className="text-white"
                   href="/belleville-internet-services/"
                 >
                   Belleville{" "}
-                </a>
+                </Link>
                 {" | "}
-                <a style={{ color: "#fff" }} href="/napanee-internet-services/">
+                <Link className="text-white" href="/napanee-internet-services/">
                   Napanee
-                </a>
+                </Link>
               </div>
             </div>
             <div className="social-links">
               <ul>
                 <li>
-                  <a
-                    href="https://www.facebook.com/Kingston-Online-Services-120301901358202/"
-                    target="_blank noreferrer"
-                  >
+                  <Link href="https://www.facebook.com/Kingston-Online-Services-120301901358202/">
                     <div className="grid self-center w-12 h-12 p-2 text-white border-4 border-white border-solid rounded-full fill-current">
                       <FacebookIcon />
                     </div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

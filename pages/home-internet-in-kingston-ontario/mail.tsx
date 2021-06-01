@@ -1,24 +1,21 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
-import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function HighSpeedCable(): JSX.Element {
   const title = (
     <>
-      Residential <span className="text-red-brand">Mail</span> Packages in
+      Residential <span style={{ color: "#A80532" }}>Mail</span> Packages in
       Kingston & Belleville, Ontario
     </>
   )
   // "Residential Mail Packages"
   const slug = "home-internet-in-kingston-ontario/mail"
   // "res/mail"
-  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
-    <InternalTemplate
-      title={title}
-      slug={slug}
-      hoverBulletNavMenu={bulletNavMenu}
-    >
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       <MailContent />
     </InternalTemplate>
   )
@@ -100,7 +97,7 @@ function MailContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -109,15 +106,15 @@ function MailContent() {
                         href="#popup0"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=mail&plan=INDIVIDUAL MAILBOXES - $4.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -230,7 +227,7 @@ function MailContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -239,15 +236,15 @@ function MailContent() {
                         href="#popup1"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=mail&plan=STANDARD BUSINESS DOMAIN - $19.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}

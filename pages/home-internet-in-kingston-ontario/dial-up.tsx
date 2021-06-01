@@ -1,24 +1,21 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
-import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function DialUp(): JSX.Element {
   const title = (
     <>
-      Residential <span className="text-red-brand">Dial Up</span> Services in
+      Residential <span style={{ color: "#A80532" }}>Dial Up</span> Services in
       Kingston & Belleville, Ontario
     </>
   )
   // "Residential Dial Up Services"
   const slug = "home-internet-in-kingston-ontario/dial-up"
   // "res/dial-up"
-  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
-    <InternalTemplate
-      title={title}
-      slug={slug}
-      hoverBulletNavMenu={bulletNavMenu}
-    >
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       <DialUpContent />
     </InternalTemplate>
   )
@@ -130,7 +127,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -139,15 +136,15 @@ function DialUpContent() {
                       href="#popup0"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=EXTRA-LITE<br>DIAL UP - $90.00"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -268,7 +265,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -277,15 +274,15 @@ function DialUpContent() {
                       href="#popup1"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=LITE<br>DIAL UP - $14.95159.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -403,7 +400,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -412,15 +409,15 @@ function DialUpContent() {
                       href="#popup2"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=SURFER<br>DIAL UP - $19.95199.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -552,7 +549,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -561,15 +558,15 @@ function DialUpContent() {
                       href="#popup3"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=UNLIMITED<br>DIAL UP - $24.95264.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}

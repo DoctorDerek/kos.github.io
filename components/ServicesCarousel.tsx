@@ -1,4 +1,4 @@
-import React from "react"
+import Link from "@/components/Link"
 import Image from "@/components/CustomImage"
 
 export default function ServicesCarousel({ children }: { children?: any }) {
@@ -12,18 +12,18 @@ export default function ServicesCarousel({ children }: { children?: any }) {
             data-animation-delay="0s"
           >
             <div className="service-item">
-              <a href="/residential/" className="icon-circle">
+              <Link href="/residential/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/home/icon-home.png" alt="ocean" />
                 </div>
-              </a>
+              </Link>
               <div className="service-title">
                 <h4>
-                  <a href="/residential/">
+                  <Link href="/residential/">
                     RESIDENTIAL <br />
                     SERVICES
-                  </a>
+                  </Link>
                 </h4>
               </div>
               <div className="service-text">Stay connected with family</div>
@@ -35,7 +35,7 @@ export default function ServicesCarousel({ children }: { children?: any }) {
             data-animation-delay="0s"
           >
             <div className="service-item">
-              <a href="/business/" className="icon-circle">
+              <Link href="/business/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
                   <Image
@@ -43,13 +43,13 @@ export default function ServicesCarousel({ children }: { children?: any }) {
                     alt="ocean"
                   />
                 </div>
-              </a>
+              </Link>
               <div className="service-title">
                 <h4>
-                  <a href="/business/">
+                  <Link href="/business/">
                     BUSINESS <br />
                     SERVICES
-                  </a>
+                  </Link>
                 </h4>
               </div>
               <div className="service-text">Keep your business connected</div>
@@ -71,18 +71,18 @@ export default function ServicesCarousel({ children }: { children?: any }) {
             data-animation-delay="0s"
           >
             <div className="service-item">
-              <a href="/residential/" className="icon-circle">
+              <Link href="/residential/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/home/icon-home.png" alt="ocean" />
                 </div>
-              </a>
+              </Link>
               <div className="service-title">
                 <h4>
-                  <a href="/residential/">
+                  <Link href="/residential/">
                     RESIDENTIAL <br />
                     SERVICES
-                  </a>
+                  </Link>
                 </h4>
               </div>
               <div className="service-text">Stay connected with family</div>
@@ -94,18 +94,18 @@ export default function ServicesCarousel({ children }: { children?: any }) {
             data-animation-delay="0s"
           >
             <div className="service-item">
-              <a href="/business/" className="icon-circle">
+              <Link href="/business/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/home/icon-business.png" alt="ocean" />
                 </div>
-              </a>
+              </Link>
               <div className="service-title">
                 <h4>
-                  <a href="/business/">
+                  <Link href="/business/">
                     BUSINESS <br />
                     SERVICES
-                  </a>
+                  </Link>
                 </h4>
               </div>
               <div className="service-text">Keep your business connected</div>

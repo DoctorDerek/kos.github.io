@@ -1,9 +1,10 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function HostingPackagesAndPricing(): JSX.Element {
   const title = (
     <>
-      <span className="text-red-brand">Hosting</span> Packages & Pricing
+      <span style={{ color: "#A80532" }}>Hosting</span> Packages & Pricing
     </>
   )
   // "Hosting Packages & Pricing"
@@ -90,7 +91,7 @@ function HostingPackagesAndPricingContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -99,12 +100,12 @@ function HostingPackagesAndPricingContent() {
                       href="#popup1"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a href="/order/" className="btn">
+                    <Link href="/order/" className="btn">
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -655,7 +656,7 @@ function HostingPackagesAndPricingContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -664,12 +665,12 @@ function HostingPackagesAndPricingContent() {
                       href="#popup2"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a href="/order/" className="btn">
+                    <Link href="/order/" className="btn">
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -810,7 +811,7 @@ function HostingPackagesAndPricingContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -819,12 +820,12 @@ function HostingPackagesAndPricingContent() {
                       href="#popup3"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a href="/order/" className="btn">
+                    <Link href="/order/" className="btn">
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -974,7 +975,7 @@ function HostingPackagesAndPricingContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -983,12 +984,12 @@ function HostingPackagesAndPricingContent() {
                       href="#popup4"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a href="/order/" className="btn">
+                    <Link href="/order/" className="btn">
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -1466,7 +1467,7 @@ function HostingPackagesAndPricingContent() {
               * Ontario only
               <br />
               <div className="price-action">
-                <a
+                <Link
                   className="btn"
                   style={{
                     backgroundColor: "#005395",
@@ -1494,7 +1495,7 @@ function HostingPackagesAndPricingContent() {
                   href="../order/"
                 >
                   ORDER NOW
-                </a>
+                </Link>
               </div>
               <p>&nbsp;</p>
             </div>

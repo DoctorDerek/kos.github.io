@@ -1,24 +1,21 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
-import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
+import { BulletNavMenu } from "@/components/BulletNavMenu"
 
 export default function HighSpeedCable(): JSX.Element {
   const title = (
     <>
-      Residential <span className="text-red-brand">VoIP</span> Packages in
+      Residential <span style={{ color: "#A80532" }}>VoIP</span> Packages in
       Kingston & Belleville, Ontario
     </>
   )
   // "Resident VoIP Packages"
   const slug = "home-internet-in-kingston-ontario/voip"
   // "res/voip"
-  const bulletNavMenu = <HoverBulletNavMenu type="Residential" />
+  const bulletNavMenu = <BulletNavMenu type="Residential" />
 
   return (
-    <InternalTemplate
-      title={title}
-      slug={slug}
-      hoverBulletNavMenu={bulletNavMenu}
-    >
+    <InternalTemplate title={title} slug={slug} bulletNavMenu={bulletNavMenu}>
       <VoipContent />
     </InternalTemplate>
   )
@@ -64,7 +61,7 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#7"
                                 style={{
                                   color: "#ffffff",
@@ -72,8 +69,8 @@ function VoipContent() {
                                 }}
                               >
                                 7
-                              </a>{" "}
-                              <a
+                              </Link>{" "}
+                              <Link
                                 href="#8"
                                 style={{
                                   color: "#ffffff",
@@ -81,7 +78,7 @@ function VoipContent() {
                                 }}
                               >
                                 8
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -115,7 +112,7 @@ function VoipContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -124,15 +121,15 @@ function VoipContent() {
                         href="#popup0"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=voip&plan=CANADA WIDE - $14.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -228,7 +225,7 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#7"
                                 style={{
                                   color: "#ffffff",
@@ -236,8 +233,8 @@ function VoipContent() {
                                 }}
                               >
                                 7
-                              </a>{" "}
-                              <a
+                              </Link>{" "}
+                              <Link
                                 href="#8"
                                 style={{
                                   color: "#ffffff",
@@ -245,7 +242,7 @@ function VoipContent() {
                                 }}
                               >
                                 8
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -283,7 +280,7 @@ function VoipContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -292,15 +289,15 @@ function VoipContent() {
                         href="#popup1"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=voip&plan=NORTH AMERICA - $19.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -396,7 +393,7 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#7"
                                 style={{
                                   color: "#ffffff",
@@ -404,8 +401,8 @@ function VoipContent() {
                                 }}
                               >
                                 7
-                              </a>{" "}
-                              <a
+                              </Link>{" "}
+                              <Link
                                 href="#8"
                                 style={{
                                   color: "#ffffff",
@@ -413,7 +410,7 @@ function VoipContent() {
                                 }}
                               >
                                 8
-                              </a>{" "}
+                              </Link>{" "}
                               <span
                                 style={{
                                   color: "#ffffff",
@@ -457,7 +454,7 @@ function VoipContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -466,15 +463,15 @@ function VoipContent() {
                         href="#popup2"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=voip&plan=GLOBAL - $29.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}

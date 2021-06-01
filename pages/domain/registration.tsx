@@ -1,9 +1,10 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function DomainRegistration(): JSX.Element {
   const title = (
     <>
-      Registering a <span className="text-red-brand">Domain</span>
+      Registering a <span style={{ color: "#A80532" }}>Domain</span>
     </>
   )
   // "Registering a Domain"
@@ -80,12 +81,12 @@ function DomainRegistrationContent() {
             }}
           >
             Please&nbsp;
-            <a
+            <Link
               style={{ color: "#005395" }}
               href="https://www.kos.net/contact.php"
             >
               contact us
-            </a>
+            </Link>
             &nbsp;for your domain registrations.
           </p>
           <p>&nbsp;</p>

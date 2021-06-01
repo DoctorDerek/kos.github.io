@@ -1,4 +1,4 @@
-import React from "react"
+import Link from "@/components/Link"
 import Image from "@/components/CustomImage"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
@@ -57,7 +57,7 @@ export default function Pricing() {
                 >
                   <div className="keen-slider__slide number-slide1">
                     <div className="price-item">
-                      <h6 className="price-title">KOS Wireless Special</h6>
+                      <h5 className="price-title">KOS Wireless Special</h5>
                       <div className="price-text">
                         <p>250GB, 2 Year Contract, No set up fees.</p>
                         <hr />
@@ -69,12 +69,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -96,12 +96,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -123,12 +123,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

@@ -1,9 +1,10 @@
-import { InternalTemplate } from "@/layouts/InternalTemplate"
+import Link from "@/components/Link"
+import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function SupportFAQs(): JSX.Element {
   const title = (
     <>
-      Support <span className="text-red-brand">FAQs</span>
+      Support <span style={{ color: "#A80532" }}>FAQs</span>
     </>
   )
   // "" [no page title previously]
@@ -26,12 +27,12 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <a role="button" data-toggle="collapse" href="#faq1">
+                <Link className="button" data-toggle="collapse" href="#faq1">
                   Protect Your Identity
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
                   <span className="number">1</span>
-                </a>
+                </Link>
               </h4>
             </div>
             <div id="faq1" className="panel-collapse collapse in">
@@ -50,17 +51,12 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <a
-                  role="button"
-                  data-toggle="collapse"
-                  href="#faq2"
-                  className="collapsed"
-                >
+                <Link data-toggle="collapse" href="#faq2" className="collapsed">
                   How do I check my data usage?
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
                   <span className="number">2</span>
-                </a>
+                </Link>
               </h4>
             </div>
             <div id="faq2" className="panel-collapse collapse ">
@@ -68,13 +64,12 @@ function SupportFAQsContent() {
                 <p>
                   To check your monthly bandwidth usage, you can do so by going
                   to{" "}
-                  <a
-                    title="KOS Data Usage"
+                  <Link
                     href="https://usage.kos.net/"
                     aria-label="KOS Data Usage"
                   >
-                    usage.kos.net
-                  </a>
+                    https://usage.kos.net (KOS Data Usage)
+                  </Link>
                   .
                 </p>
               </div>
@@ -85,17 +80,12 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <a
-                  role="button"
-                  data-toggle="collapse"
-                  href="#faq3"
-                  className="collapsed"
-                >
+                <Link data-toggle="collapse" href="#faq3" className="collapsed">
                   Dial-Up Connection Phone Numbers
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
                   <span className="number">3</span>
-                </a>
+                </Link>
               </h4>
             </div>
             <div id="faq3" className="panel-collapse collapse ">
@@ -126,17 +116,12 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <a
-                  role="button"
-                  data-toggle="collapse"
-                  href="#faq4"
-                  className="collapsed"
-                >
+                <Link data-toggle="collapse" href="#faq4" className="collapsed">
                   What is a GB?
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
                   <span className="number">4</span>
-                </a>
+                </Link>
               </h4>
             </div>
             <div id="faq4" className="panel-collapse collapse ">

@@ -1,11 +1,9 @@
 import fs from "fs"
 import matter from "gray-matter"
-import visit from "unist-util-visit"
+import { visit } from "unist-util-visit"
 import path from "path"
 import readingTime from "reading-time"
-import renderToString from "next-mdx-remote/render-to-string"
-
-import MDXComponents from "@/components/MDXComponents"
+import { serialize } from "next-mdx-remote/serialize"
 import imgToJsx from "./img-to-jsx"
 
 const root = process.cwd()
@@ -46,8 +44,7 @@ export async function getFileBySlug(type: any, slug: any) {
     : fs.readFileSync(mdPath, "utf8")
 
   const { data, content } = matter(source)
-  const mdxSource = await renderToString(content, {
-    components: MDXComponents,
+  const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [
         require("remark-slug"),
@@ -63,7 +60,7 @@ export async function getFileBySlug(type: any, slug: any) {
         () => {
           return (tree) => {
             /*tag: string; "attr-name": string; "attr-value": string; deleted: string; inserted: string; punctuation: string; keyword: string; string: string; function: string; boolean: string; comment*/
-            visit(tree, "element", (node: any, index, parent) => {
+            visit(tree, "element", (node: any) => {
               let [token, type]: [
                 string,
                 (
@@ -117,7 +114,7 @@ export async function getAllFilesFrontMatter(
     }
   })
 
-  //@ts-expect-error
+  // @ts-expect-error
   return getAllFilesFrontMatter
   // Type '(type: any) => Promise<FrontMatter>' is missing the following properties from type 'FrontMatter': slug, date, title, summary, and 5 more.
 }

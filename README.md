@@ -2,6 +2,8 @@
 
 ⚠ WIP Site - Will Launch June 2021
 
+---
+
 🟢 98/100 Lighthouse Performance
 
 ⚛ Next.js (React)
@@ -14,6 +16,8 @@
 
 🎣 Husky (Git Hooks) for Prettier + ESLint
 
+---
+
 🚢 Deployed at Vercel
 
 👨‍🎨 Redesigned for Accessibility by @DoctorDerek
@@ -22,4 +26,4 @@
 
 📝 Easy-to-Update Blog
 
-😎 Based on (KOS.net)[https://KOS.net]
+😎 Based on [KOS.net](https://KOS.net)
