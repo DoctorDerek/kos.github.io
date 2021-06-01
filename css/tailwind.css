@@ -156,7 +156,7 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
 /*! CSS Used from: /css/plugins/slick.css */
 
 .slick-slider {
-  @apply p-0 m-0 list-none, box-border relative block select-none;
+  @apply box-border relative block p-0 m-0 list-none select-none;
   -moz-box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
