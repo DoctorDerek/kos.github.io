@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import ImageFixed from "next/image"
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
@@ -24,12 +25,12 @@ export function InternalTemplate({
     href: string
     text: string
   }) => (
-    <a
+    <Link
       href={href}
       className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
     >
       {text}
-    </a>
+    </Link>
   )
   return (
     <>

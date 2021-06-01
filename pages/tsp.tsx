@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function TechnicalSupportPolicy() {
   return (
     <div className="container">
@@ -6,16 +7,16 @@ export default function TechnicalSupportPolicy() {
           <h4>Policies</h4>
           <ul className="service-list">
             <li>
-              <a href="/aup/">Acceptable Use Policy</a>
+              <Link href="/aup/">Acceptable Use Policy</Link>
             </li>
             <li>
-              <a href="/pp/">Privacy Policy</a>
+              <Link href="/pp/">Privacy Policy</Link>
             </li>
             <li className="active">
-              <a href="/tsp/">Technical Support Policy</a>
+              <Link href="/tsp/">Technical Support Policy</Link>
             </li>
             <li>
-              <a href="/wpp/">Website Privacy Policy</a>
+              <Link href="/wpp/">Website Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -80,7 +81,7 @@ export default function TechnicalSupportPolicy() {
           </p>
           <p className="text-left font18">
             Please see this page as well:{" "}
-            <a>Terms &amp; Conditions of Service</a>
+            <Link href="/tac">Terms &amp; Conditions of Service</Link>
           </p>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react"
+import Link from "@/components/Link"
 import ImageFixed from "next/image"
 import Image from "@/components/CustomImage"
 
@@ -19,7 +19,7 @@ export default function CategoryCarousel() {
         </h2>
         <div className="flex flex-wrap category-carousel">
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
-            <a
+            <Link
               href="/res/high-speed-cable/"
               className="category-item"
               data-animation="fadeInLeft"
@@ -51,14 +51,14 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
           <div
             className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeIn"
             data-animation-delay="0s"
           >
-            <a href="/res/wireless-broadband/" className="category-item">
+            <Link href="/res/wireless-broadband/" className="category-item">
               <div className="category-image">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/wireless.jpg" alt="ocean" />
@@ -84,14 +84,14 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
           <div
             className="pl-4 pr-4 sm:w-1/2 md:w-1/3"
             data-animation="fadeInRight"
             data-animation-delay="0s"
           >
-            <a href="/res/high-speed-dsl/" className="category-item">
+            <Link href="/res/high-speed-dsl/" className="category-item">
               <div className="category-image">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/dsl.jpg" alt="ocean" />
@@ -117,10 +117,10 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
-            <a
+            <Link
               href="/res/voip/"
               className="category-item"
               data-animation="fadeInLeft"
@@ -151,10 +151,10 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
-            <a
+            <Link
               href="/res/mail/"
               className="category-item"
               data-animation="fadeIn"
@@ -186,10 +186,10 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
-            <a
+            <Link
               href="/hosting/packages/"
               className="category-item"
               data-animation="fadeInRight"
@@ -221,7 +221,7 @@ export default function CategoryCarousel() {
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

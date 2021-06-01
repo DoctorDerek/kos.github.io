@@ -1,4 +1,4 @@
-import React from "react"
+import Link from "@/components/Link"
 import Image from "@/components/CustomImage"
 import ImageFixed from "next/image"
 
@@ -36,17 +36,17 @@ export default function NewsAndEvents() {
                 <p>
                   Today's outage was resolved at 6:15pm. All towers are back
                   online and are fully functional.
-                  <a
+                  <Link
                     href="/news/events/#57"
-                    style={{ color: "#005395", textDecoration: "underline" }}
+                    className="underline text-blue-brand"
                   >
                     more...
-                  </a>
+                  </Link>
                 </p>
                 <span className="news-item-more-link">
-                  <a href="/news/events/#57">
+                  <Link href="/news/events/#57">
                     <span className="flex-wrap icon icon-right-arrow" />
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -70,17 +70,17 @@ export default function NewsAndEvents() {
                   you on an update on how KOS is handling this situation as it
                   relates to our customers and employees.We will remain fully
                   operational.
-                  <a
+                  <Link
                     href="/news/events/#51"
-                    style={{ color: "#005395", textDecoration: "underline" }}
+                    className="underline text-blue-brand"
                   >
                     more...
-                  </a>
+                  </Link>
                 </p>
                 <span className="news-item-more-link">
-                  <a href="/news/events/#51">
+                  <Link href="/news/events/#51">
                     <span className="flex-wrap icon icon-right-arrow" />
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -105,17 +105,17 @@ export default function NewsAndEvents() {
                 </h5>
                 <p>
                   Enjoy unlimited data on our Cable and DSL services.
-                  <a
+                  <Link
                     href="/news/events/#21"
-                    style={{ color: "#005395", textDecoration: "underline" }}
+                    className="underline text-blue-brand"
                   >
                     more...
-                  </a>
+                  </Link>
                 </p>
                 <span className="news-item-more-link">
-                  <a href="/news/events/#21">
+                  <Link href="/news/events/#21">
                     <span className="flex-wrap icon icon-right-arrow" />
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>

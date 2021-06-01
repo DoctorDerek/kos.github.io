@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function LocalInternetServices() {
   return (
     <div className="container">
@@ -16,42 +17,44 @@ export default function LocalInternetServices() {
           </p>
           <div className="divider-sm"></div>
           <h5 className="color">
-            Please <a href="/contact.php">contact our office</a> for more
+            Please <Link href="/contact.php">contact our office</Link> for more
             information, or select from one of our services below.
           </h5>
           <div className="row">
             <div className="col-sm-6">
               <ul className="marker-list pad-left">
                 <li>
-                  <a href="/res/high-speed-cable/">High Speed Cable</a>
+                  <Link href="/res/high-speed-cable/">High Speed Cable</Link>
                 </li>
                 <li>
-                  <a href="/res/wireless-broadband/">Wireless Broadband</a>
+                  <Link href="/res/wireless-broadband/">
+                    Wireless Broadband
+                  </Link>
                 </li>
                 <li>
-                  <a href="/res/high-speed-dsl/">High Speed DSL</a>
+                  <Link href="/res/high-speed-dsl/">High Speed DSL</Link>
                 </li>
               </ul>
             </div>
             <div className="col-sm-6">
               <ul className="marker-list pad-left">
                 <li>
-                  <a href="/res/voip/">VoIP</a>
+                  <Link href="/res/voip/">VoIP</Link>
                 </li>
                 <li>
-                  <a href="/res/mail/">Mail</a>
+                  <Link href="/res/mail/">Mail</Link>
                 </li>
                 <li>
-                  <a href="/res/dial-up/">Dial Up</a>
+                  <Link href="/res/dial-up/">Dial Up</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="divider"></div>
           <div>
-            <a href="/order/" className="btn btn-orange">
+            <Link href="/order/" className="btn btn-orange">
               Get Connected
-            </a>
+            </Link>
           </div>
         </div>
       </div>

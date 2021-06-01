@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import NAVIGATION_MENU from "@/data/NAVIGATION_MENU"
 if (NAVIGATION_MENU[1][1][0][0] !== "Residential") {
@@ -22,7 +23,7 @@ const formatBullets = (item: any) => {
   return (
     <li key={(title as string) + "BulletNavMenu"}>
       <BULLET />
-      <a href={href as string}>{title}</a>
+      <Link href={href as string}>{title}</Link>
     </li>
   )
 }

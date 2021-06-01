@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -106,24 +107,20 @@ function ColocateServerContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                      <Link
+                        className="font-bold underline text-teal-brand"
                         href="#popup0"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=bus&type=&plan=2TB - $149.00250.00"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -232,24 +229,20 @@ function ColocateServerContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                      <Link
+                        className="font-bold underline text-teal-brand"
                         href="#popup1"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=bus&type=&plan=4TB - $199.00250.00"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -360,24 +353,20 @@ function ColocateServerContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                      <Link
+                        className="font-bold underline text-teal-brand"
                         href="#popup2"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=bus&type=&plan=10 TB - $299.00250.00"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -495,24 +484,20 @@ function ColocateServerContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                      <Link
+                        className="font-bold underline text-teal-brand"
                         href="#popup3"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=bus&type=&plan=10TB PLUS - $.00250.00"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -625,24 +610,20 @@ function ColocateServerContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                      <Link
+                        className="font-bold underline text-teal-brand"
                         href="#popup4"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=bus&type=&plan=1U<br>DB SYSTEM - $79.00200.00"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}

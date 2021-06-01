@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -126,7 +127,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -135,15 +136,15 @@ function DialUpContent() {
                       href="#popup0"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=EXTRA-LITE<br>DIAL UP - $90.00"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -264,7 +265,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -273,15 +274,15 @@ function DialUpContent() {
                       href="#popup1"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=LITE<br>DIAL UP - $14.95159.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -399,7 +400,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -408,15 +409,15 @@ function DialUpContent() {
                       href="#popup2"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=SURFER<br>DIAL UP - $19.95199.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -548,7 +549,7 @@ function DialUpContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -557,15 +558,15 @@ function DialUpContent() {
                       href="#popup3"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dialup&plan=UNLIMITED<br>DIAL UP - $24.95264.50"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}

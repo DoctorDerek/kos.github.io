@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment, useRef } from "react"
+import { Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
@@ -198,9 +198,7 @@ export default function FlyoutMenu({
                               ? hrefOrSubmenu
                               : undefined
                           return (
-                            <React.Fragment
-                              key={"PopoverPanel<>" + parent + title}
-                            >
+                            <Fragment key={"PopoverPanel<>" + parent + title}>
                               {href && (
                                 <Link
                                   key={"Link" + title + href + parent}
@@ -228,7 +226,7 @@ export default function FlyoutMenu({
                                   parent={parent + (title as string)}
                                 />
                               )}
-                            </React.Fragment>
+                            </Fragment>
                           )
                         }
                       )}

@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function Campgrounds() {
   return (
     <div className="container">
@@ -74,7 +75,7 @@ export default function Campgrounds() {
       <p className="text-center font18">
         Credit Card required * Connection limited to one device ** Connection
         limited to two devices – Please&nbsp;
-        <a>call to activate</a>
+        <Link href="/contact">call to activate</Link>
         &nbsp;second device
       </p>
       <p className="text-center font18">&nbsp;</p>
@@ -94,7 +95,9 @@ export default function Campgrounds() {
                 options are available.
               </li>
               <li>
-                <a href="https://www.kos.net/contact.php">Contact us today</a>
+                <Link href="https://www.kos.net/contact.php">
+                  Contact us today
+                </Link>
                 &nbsp;and ask about our free installation
               </li>
             </ul>

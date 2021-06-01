@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -62,7 +63,7 @@ function HighSpeedCableContent() {
                       <br />
                       per month{" "}
                       <sup>
-                        <a
+                        <Link
                           href="#1"
                           style={{
                             color: "#ffffff",
@@ -70,8 +71,8 @@ function HighSpeedCableContent() {
                           }}
                         >
                           1
-                        </a>{" "}
-                        <a
+                        </Link>{" "}
+                        <Link
                           href="#2"
                           style={{
                             color: "#ffffff",
@@ -79,7 +80,7 @@ function HighSpeedCableContent() {
                           }}
                         >
                           2
-                        </a>{" "}
+                        </Link>{" "}
                         <span
                           style={{
                             color: "#ffffff",
@@ -115,7 +116,7 @@ function HighSpeedCableContent() {
                   »
                 </span>
                 &nbsp;
-                <a
+                <Link
                   style={{
                     color: "#28BCEB",
                     textDecoration: "underline",
@@ -124,7 +125,7 @@ function HighSpeedCableContent() {
                   href="#popup0"
                 >
                   click here for full details
-                </a>
+                </Link>
               </p>
               <div className="price-cell">
                 <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -145,7 +146,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <a
+                      <Link
                         style={{
                           color: "#000000",
                           textDecoration: "underline",
@@ -153,19 +154,19 @@ function HighSpeedCableContent() {
                         href="#2"
                       >
                         2
-                      </a>
+                      </Link>
                     </sup>
                   </span>
                 </p>
               </div>
               <br />
               <div className="text-center">
-                <a
+                <Link
                   href="/order/?env=res&type=cable&plan=CABLE 15 - $39.95"
                   className="btn"
                 >
                   Order Now
-                </a>
+                </Link>
               </div>
             </div>
             {/* SOF POP UP BOX */}
@@ -250,7 +251,7 @@ function HighSpeedCableContent() {
                       <sup>.95</sup> <br />
                       per month{" "}
                       <sup>
-                        <a
+                        <Link
                           href="#1"
                           style={{
                             color: "#ffffff",
@@ -258,8 +259,8 @@ function HighSpeedCableContent() {
                           }}
                         >
                           1
-                        </a>{" "}
-                        <a
+                        </Link>{" "}
+                        <Link
                           href="#2"
                           style={{
                             color: "#ffffff",
@@ -267,7 +268,7 @@ function HighSpeedCableContent() {
                           }}
                         >
                           2
-                        </a>{" "}
+                        </Link>{" "}
                         <span
                           style={{
                             color: "#ffffff",
@@ -303,7 +304,7 @@ function HighSpeedCableContent() {
                   »
                 </span>
                 &nbsp;
-                <a
+                <Link
                   style={{
                     color: "#28BCEB",
                     textDecoration: "underline",
@@ -312,7 +313,7 @@ function HighSpeedCableContent() {
                   href="#popup1"
                 >
                   click here for full details
-                </a>
+                </Link>
               </p>
               <div className="price-cell">
                 <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -333,7 +334,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <a
+                      <Link
                         style={{
                           color: "#000000",
                           textDecoration: "underline",
@@ -341,19 +342,19 @@ function HighSpeedCableContent() {
                         href="#2"
                       >
                         2
-                      </a>
+                      </Link>
                     </sup>
                   </span>
                 </p>
               </div>
               <br />
               <div className="text-center">
-                <a
+                <Link
                   href="/order/?env=res&type=cable&plan=CABLE 40 - $54.95"
                   className="btn"
                 >
                   Order Now
-                </a>
+                </Link>
               </div>
             </div>
             {/* SOF POP UP BOX */}
@@ -439,7 +440,7 @@ function HighSpeedCableContent() {
                       <br />
                       per month{" "}
                       <sup>
-                        <a
+                        <Link
                           href="#1"
                           style={{
                             color: "#ffffff",
@@ -447,8 +448,8 @@ function HighSpeedCableContent() {
                           }}
                         >
                           1
-                        </a>{" "}
-                        <a
+                        </Link>{" "}
+                        <Link
                           href="#2"
                           style={{
                             color: "#ffffff",
@@ -456,7 +457,7 @@ function HighSpeedCableContent() {
                           }}
                         >
                           2
-                        </a>{" "}
+                        </Link>{" "}
                         <span
                           style={{
                             color: "#ffffff",
@@ -492,7 +493,7 @@ function HighSpeedCableContent() {
                   »
                 </span>
                 &nbsp;
-                <a
+                <Link
                   style={{
                     color: "#28BCEB",
                     textDecoration: "underline",
@@ -501,7 +502,7 @@ function HighSpeedCableContent() {
                   href="#popup2"
                 >
                   click here for full details
-                </a>
+                </Link>
               </p>
               <div className="price-cell">
                 <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -522,7 +523,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <a
+                      <Link
                         style={{
                           color: "#000000",
                           textDecoration: "underline",
@@ -530,19 +531,19 @@ function HighSpeedCableContent() {
                         href="#2"
                       >
                         2
-                      </a>
+                      </Link>
                     </sup>
                   </span>
                 </p>
               </div>
               <br />
               <div className="text-center">
-                <a
+                <Link
                   href="/order/?env=res&type=cable&plan=CABLE 60 - $74.95"
                   className="btn"
                 >
                   Order Now
-                </a>
+                </Link>
               </div>
             </div>
             {/* SOF POP UP BOX */}
