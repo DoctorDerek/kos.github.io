@@ -691,7 +691,7 @@ function HighSpeedCableContent() {
                   >
                     You are able to use your own Cable Modem if it is in
                     our&nbsp;
-                    <Link href="../../modem/list/">
+                    <Link href="/modem/list/">
                       <span style={{ color: "#3366ff" }}>supported</span>{" "}
                       <span style={{ color: "#3366ff" }}>modem list</span>
                     </Link>

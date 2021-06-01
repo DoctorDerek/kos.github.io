@@ -92,7 +92,7 @@ function HostingPackagesAndPricingContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup1"
                     >
                       click here for full details
@@ -653,7 +653,7 @@ function HostingPackagesAndPricingContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup2"
                     >
                       click here for full details
@@ -804,7 +804,7 @@ function HostingPackagesAndPricingContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup3"
                     >
                       click here for full details
@@ -964,7 +964,7 @@ function HostingPackagesAndPricingContent() {
                     </span>
                     &nbsp;
                     <Link
-                      className="text-teal-brand font-bold underline"
+                      className="font-bold underline text-teal-brand"
                       href="#popup4"
                     >
                       click here for full details
@@ -1451,33 +1451,7 @@ function HostingPackagesAndPricingContent() {
               * Ontario only
               <br />
               <div className="price-action">
-                <Link
-                  className="btn"
-                  style={{
-                    backgroundColor: "#005395",
-                    color: "#ffffff",
-                    textDecorationLine: "none",
-                    display: "inline-block",
-                    padding: "15px 22px",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    lineHeight: "19px",
-                    textAlign: "center",
-                    whiteSpace: "nowrap",
-                    verticalAlign: "top",
-                    touchAction: "manipulation",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    backgroundImage: "none",
-                    borderRadius: "10px",
-                    fontFamily: "Lato, sans-serif",
-                    height: "51px",
-                    textTransform: "uppercase",
-                    transition: "all 300ms ease",
-                    border: "1px solid #005395",
-                  }}
-                  href="../order/"
-                >
+                <Link className="btn" href="/order/">
                   ORDER NOW
                 </Link>
               </div>
