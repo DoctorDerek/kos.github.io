@@ -1,11 +1,12 @@
+import { useState, useRef, useEffect } from "react"
 import ImageFixed from "next/image"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 
 export default function Testimonials() {
-  const [pause, setPause] = React.useState(false)
+  const [pause, setPause] = useState(false)
   const timer: React.MutableRefObject<NodeJS.Timeout> =
-    React.useRef() as React.MutableRefObject<NodeJS.Timeout>
+    useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 5000,
@@ -17,7 +18,7 @@ export default function Testimonials() {
     },
   })
 
-  React.useEffect(() => {
+  useEffect(() => {
     sliderRef.current &&
       sliderRef.current.addEventListener("mouseover", () => {
         setPause(true)
@@ -28,7 +29,7 @@ export default function Testimonials() {
       })
   }, [sliderRef])
 
-  React.useEffect(() => {
+  useEffect(() => {
     timer.current = setInterval(() => {
       if (!pause && slider) {
         slider.next()
