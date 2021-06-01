@@ -4,7 +4,7 @@
 
 ---
 
-🟢 98/100 Lighthouse Performance
+🟢 Target: >90/100 Lighthouse Performance
 
 ⚛ Next.js (React)
 
