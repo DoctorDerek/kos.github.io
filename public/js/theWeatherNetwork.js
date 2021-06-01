@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 if (typeof _plm === "undefined") {
   var _plm = []
 }
