@@ -1170,7 +1170,7 @@ h2 + .category-carousel {
   content: "\e906";
   left: 22px;
   top: -25px;
-  font-family: "pool";
+  font-family: "pool", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -1288,7 +1288,7 @@ h2 + .category-carousel {
 .slick-prev:before,
 .slick-next:before {
   @apply text-4xl leading-8 text-white cursor-pointer;
-  font-family: "pool";
+  font-family: "pool", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1362,7 +1362,7 @@ h2 + .category-carousel {
 [class^="icon-"],
 [class*=" icon-"] {
   @apply not-italic font-normal leading-none normal-case;
-  font-family: "pool" !important;
+  font-family: "pool", sans-serif !important;
   speak: none;
   font-variant: normal;
   -webkit-font-smoothing: antialiased;
