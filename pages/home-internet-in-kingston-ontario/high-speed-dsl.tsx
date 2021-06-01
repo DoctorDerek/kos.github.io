@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -65,7 +66,7 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <a
+                            <Link
                               href="#1"
                               style={{
                                 color: "#ffffff",
@@ -73,8 +74,8 @@ function HighSpeedDslContent() {
                               }}
                             >
                               1
-                            </a>{" "}
-                            <a
+                            </Link>{" "}
+                            <Link
                               href="#2"
                               style={{
                                 color: "#ffffff",
@@ -82,7 +83,7 @@ function HighSpeedDslContent() {
                               }}
                             >
                               2
-                            </a>{" "}
+                            </Link>{" "}
                             <span
                               style={{
                                 color: "#ffffff",
@@ -123,7 +124,7 @@ function HighSpeedDslContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -132,15 +133,15 @@ function HighSpeedDslContent() {
                       href="#popup0"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dsl&plan=LITE 6 - $26.95"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -233,7 +234,7 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <a
+                            <Link
                               href="#1"
                               style={{
                                 color: "#ffffff",
@@ -241,8 +242,8 @@ function HighSpeedDslContent() {
                               }}
                             >
                               1
-                            </a>{" "}
-                            <a
+                            </Link>{" "}
+                            <Link
                               href="#2"
                               style={{
                                 color: "#ffffff",
@@ -250,7 +251,7 @@ function HighSpeedDslContent() {
                               }}
                             >
                               2
-                            </a>{" "}
+                            </Link>{" "}
                             <span
                               style={{
                                 color: "#ffffff",
@@ -291,7 +292,7 @@ function HighSpeedDslContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -300,7 +301,7 @@ function HighSpeedDslContent() {
                       href="#popup1"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="price-cell">
                     <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -321,7 +322,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <a
+                          <Link
                             style={{
                               color: "#000000",
                               textDecoration: "underline",
@@ -329,19 +330,19 @@ function HighSpeedDslContent() {
                             href="#2"
                           >
                             2
-                          </a>
+                          </Link>
                         </sup>
                       </span>
                     </p>
                   </div>
                   <br />
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dsl&plan=MEGA 6 - $39.95"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -432,7 +433,7 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <a
+                            <Link
                               href="#2"
                               style={{
                                 color: "#ffffff",
@@ -440,8 +441,8 @@ function HighSpeedDslContent() {
                               }}
                             >
                               2
-                            </a>{" "}
-                            <a
+                            </Link>{" "}
+                            <Link
                               href="#3"
                               style={{
                                 color: "#ffffff",
@@ -449,7 +450,7 @@ function HighSpeedDslContent() {
                               }}
                             >
                               3
-                            </a>{" "}
+                            </Link>{" "}
                             <span
                               style={{
                                 color: "#ffffff",
@@ -503,7 +504,7 @@ function HighSpeedDslContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -512,7 +513,7 @@ function HighSpeedDslContent() {
                       href="#popup2"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="price-cell">
                     <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -533,7 +534,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <a
+                          <Link
                             style={{
                               color: "#000000",
                               textDecoration: "underline",
@@ -541,19 +542,19 @@ function HighSpeedDslContent() {
                             href="#2"
                           >
                             2
-                          </a>
+                          </Link>
                         </sup>
                       </span>
                     </p>
                   </div>
                   <br />
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dsl&plan=ULTRA 10 - $49.95"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}
@@ -652,7 +653,7 @@ function HighSpeedDslContent() {
                           <br />
                           per month{" "}
                           <sup>
-                            <a
+                            <Link
                               href="#2"
                               style={{
                                 color: "#ffffff",
@@ -660,8 +661,8 @@ function HighSpeedDslContent() {
                               }}
                             >
                               2
-                            </a>{" "}
-                            <a
+                            </Link>{" "}
+                            <Link
                               href="#3"
                               style={{
                                 color: "#ffffff",
@@ -669,7 +670,7 @@ function HighSpeedDslContent() {
                               }}
                             >
                               3
-                            </a>{" "}
+                            </Link>{" "}
                             <span
                               style={{
                                 color: "#ffffff",
@@ -723,7 +724,7 @@ function HighSpeedDslContent() {
                       »
                     </span>
                     &nbsp;
-                    <a
+                    <Link
                       style={{
                         color: "#28BCEB",
                         textDecoration: "underline",
@@ -732,7 +733,7 @@ function HighSpeedDslContent() {
                       href="#popup3"
                     >
                       click here for full details
-                    </a>
+                    </Link>
                   </p>
                   <div className="price-cell">
                     <span style={{ color: "#901D3D", fontWeight: "bolder" }}>
@@ -753,7 +754,7 @@ function HighSpeedDslContent() {
                         </span>{" "}
                         per month{" "}
                         <sup>
-                          <a
+                          <Link
                             style={{
                               color: "#000000",
                               textDecoration: "underline",
@@ -761,19 +762,19 @@ function HighSpeedDslContent() {
                             href="#2"
                           >
                             2
-                          </a>
+                          </Link>
                         </sup>
                       </span>
                     </p>
                   </div>
                   <br />
                   <div className="text-center">
-                    <a
+                    <Link
                       href="/order/?env=res&type=dsl&plan=ULTRA 15 - $54.95"
                       className="btn"
                     >
                       Order Now
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* SOF POP UP BOX */}

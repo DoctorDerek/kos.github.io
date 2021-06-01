@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function TermsAndConditions() {
   return (
     <div className="container">
@@ -124,9 +125,9 @@ export default function TermsAndConditions() {
             “<b>Service Agreement</b>” means an agreement setting out the terms
             for specific Services. Service Agreements are available on the
             Website at the following URL:{" "}
-            <a href="https://www.kos.net/policies/sa">
+            <Link href="https://www.kos.net/policies/sa">
               <span color="#0000ff">https://www.kos.net/policies/sa</span>
-            </a>
+            </Link>
             ;
           </p>
         </li>
@@ -189,9 +190,9 @@ export default function TermsAndConditions() {
       <p className="text-left font18">
         The “<b>Agreement</b>” includes the Service Terms, Service Agreements
         made available on the Website at the following URL:{" "}
-        <a href="https://www.kos.net/policies/">
+        <Link href="https://www.kos.net/policies/">
           <span color="#0000ff">https://www.kos.net/policies/</span>
-        </a>{" "}
+        </Link>{" "}
         or Services to which you subscribe, any KOS document describing
         features, products or services and any other document incorporated by
         reference together with these Service Terms. In the event of an
@@ -795,9 +796,9 @@ export default function TermsAndConditions() {
         information by logging-in to your customer portal and changing your
         recorded location information. Your customer portal can be accessed
         using the following url:{" "}
-        <a href="https://voip.kos.net/">
+        <Link href="https://voip.kos.net/">
           <span color="#0000ff">https://voip.kos.net/</span>
-        </a>
+        </Link>
       </p>
       <p className="text-left font18">
         You acknowledge and understand that the KOS VoIP service or access to
@@ -1324,9 +1325,9 @@ export default function TermsAndConditions() {
             By email:
             <span>
               <span>
-                <a href="mailto:accounts@kos.net">
+                <Link href="mailto:accounts@kos.net">
                   <span color="#0000ff">accounts@kos.net</span>
-                </a>
+                </Link>
               </span>
             </span>
           </p>
@@ -1357,9 +1358,9 @@ export default function TermsAndConditions() {
             By email:
             <span>
               <span>
-                <a href="mailto:accounts@kos.net">
+                <Link href="mailto:accounts@kos.net">
                   <span color="#0000ff">accounts@kos.net</span>
-                </a>
+                </Link>
               </span>
             </span>
           </p>

@@ -12,7 +12,7 @@ export default function index() {
                 <div className="col-sm-12">
                   {/* SOF FORM */}
                   <h4>
-                    <span style={{ color: "#FFFFFF" }}>ORDER FORM</span>
+                    <span className="text-white">ORDER FORM</span>
                   </h4>
                   <p>
                     Place your order and a KOS sales specialist will contact you

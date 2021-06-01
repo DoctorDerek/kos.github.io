@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function ResolutionServices() {
   return (
     <div className="container">
@@ -31,13 +32,13 @@ export default function ResolutionServices() {
                 contact our friendly and knowledgeable local customer service
                 team. Our hours of operation and contact information can be
                 found{" "}
-                <a href="https://www.kos.net/contact.php">
+                <Link href="https://www.kos.net/contact.php">
                   <span color="#0000ff">here</span>
-                </a>{" "}
+                </Link>{" "}
                 You may also email your concern to
-                <a href="mailto:resolution@kos.net">
+                <Link href="mailto:resolution@kos.net">
                   <span color="#0000ff">resolution@kos.net</span>
-                </a>{" "}
+                </Link>{" "}
                 where it will be reviewed promptly.
               </p>
 
@@ -46,15 +47,15 @@ export default function ResolutionServices() {
                 technical nature and you require technical support, the hours of
                 operation and contact information for our technical support team
                 can be found{" "}
-                <a href="https://www.kos.net/contact.php">
+                <Link href="https://www.kos.net/contact.php">
                   <span color="#0000ff">here</span>
-                </a>
+                </Link>
                 . Alternatively, you may send an e-mail to the technical support
                 team. Current KOS customers can quickly and easily open a
                 support ticket{" "}
-                <a href="https://support.kos.net/helpdesk/index.php?action=submit">
+                <Link href="https://support.kos.net/helpdesk/index.php?action=submit">
                   here
-                </a>{" "}
+                </Link>{" "}
                 for our team to review. Please include as much relevant detail
                 in your e-mail as you can to help our team assess your concern.
               </p>
@@ -72,13 +73,13 @@ export default function ResolutionServices() {
                 <b>Concerns about your bill?</b> If you have questions or
                 concerns about your bill, you can contact our billing team by
                 phone
-                <a href="https://www.kos.net/contact.php">
+                <Link href="https://www.kos.net/contact.php">
                   <span color="#0000ff">https://www.kos.net/contact.php</span>
-                </a>{" "}
+                </Link>{" "}
                 or by sending us an e-mail to
-                <a href="mailto:resolution@kos.net">
+                <Link href="mailto:resolution@kos.net">
                   <span color="#0000ff">resolution@kos.net</span>
-                </a>
+                </Link>
                 . Please be as specific as you can so that our service team can
                 begin to review your account and account details right away.
                 We've built our service agreements to be helpful and
@@ -243,7 +244,7 @@ export default function ResolutionServices() {
                       </span>
                     </em>
                     <em>
-                      <a href="http://www.ccts-cprst.ca">
+                      <Link href="http://www.ccts-cprst.ca">
                         <span color="#0000ff">
                           <span>
                             <span>
@@ -251,7 +252,7 @@ export default function ResolutionServices() {
                             </span>
                           </span>
                         </span>
-                      </a>
+                      </Link>
                     </em>
                     <em>
                       <span>

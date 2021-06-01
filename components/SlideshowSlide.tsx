@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import React from "react"
 import Image from "@/components/CustomImage"
 
@@ -44,13 +45,13 @@ const SlideshowSlide = ({
           </strong>
         </div>
         <div className="text text3">
-          <a
+          <Link
             href={href}
             className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:a
             ctive:bg-[#005395] bg-[#b0243d] shadow-xl"
           >
             {text3}
-          </a>
+          </Link>
         </div>
       </div>
     </div>

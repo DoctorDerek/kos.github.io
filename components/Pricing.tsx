@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import React from "react"
 import Image from "@/components/CustomImage"
 import { useKeenSlider } from "keen-slider/react"
@@ -69,12 +70,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -96,12 +97,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -123,12 +124,12 @@ export default function Pricing() {
                         </p>
                       </div>
                       <div className="price-action">
-                        <a
+                        <Link
                           href="/order/"
                           className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
                         >
                           Order now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

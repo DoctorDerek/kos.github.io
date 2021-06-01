@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function BusinessServices() {
   return (
     <div className="container">
@@ -29,34 +30,38 @@ export default function BusinessServices() {
                       <div className="col-sm-6">
                         <ul className="marker-list pad-left">
                           <li>
-                            <a href="https://www.kos.net/bus/high-speed-cable/">
+                            <Link href="https://www.kos.net/bus/high-speed-cable/">
                               High Speed Cable
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.kos.net/bus/wireless-broadband/">
+                            <Link href="https://www.kos.net/bus/wireless-broadband/">
                               Wireless Broadband
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.kos.net/bus/high-speed-dsl/">
+                            <Link href="https://www.kos.net/bus/high-speed-dsl/">
                               High Speed DSL
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="col-sm-6">
                         <ul className="marker-list pad-left">
                           <li>
-                            <a href="https://www.kos.net/bus/voip/">VoIP</a>
+                            <Link href="https://www.kos.net/bus/voip/">
+                              VoIP
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.kos.net/bus/dial-up/">
+                            <Link href="https://www.kos.net/bus/dial-up/">
                               Dial Up
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="https://www.kos.net/bus/mail/">Mail</a>
+                            <Link href="https://www.kos.net/bus/mail/">
+                              Mail
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -68,9 +73,9 @@ export default function BusinessServices() {
           </div>
 
           <div>
-            <a href="/order/" className="btn btn-orange">
+            <Link href="/order/" className="btn btn-orange">
               Get Connected
-            </a>
+            </Link>
           </div>
         </div>
       </div>

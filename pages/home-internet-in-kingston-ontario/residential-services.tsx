@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -29,7 +30,7 @@ function ResidentialServicesContent() {
         connectivity where conventional Internet services are not available.
       </p>
       <h2 className="text-2xl tracking-tight color">
-        Please <a href="/contact.php">contact our office</a> for more
+        Please <Link href="/contact.php">contact our office</Link> for more
         information, or select from one of our services below.
       </h2>
     </>

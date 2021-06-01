@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 import { BulletNavMenu } from "@/components/BulletNavMenu"
 
@@ -31,9 +32,9 @@ function WirelessBroadbandContent() {
               Kingston Online Services has aggressively built a wireless
               broadband network in Southeastern Ontario to accommodate the needs
               of our rural customers.{" "}
-              <a href="/coverage/" style={{ textDecoration: "underline" }}>
+              <Link href="/coverage/" style={{ textDecoration: "underline" }}>
                 Click here for our coverage area
-              </a>
+              </Link>
               .
             </span>{" "}
             <br />
@@ -82,7 +83,7 @@ function WirelessBroadbandContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#6"
                                 style={{
                                   color: "#ffffff",
@@ -90,7 +91,7 @@ function WirelessBroadbandContent() {
                                 }}
                               >
                                 6
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -121,7 +122,7 @@ function WirelessBroadbandContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -130,15 +131,15 @@ function WirelessBroadbandContent() {
                         href="#popup0"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=broadband&plan=LITE 4 - $46.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -233,7 +234,7 @@ function WirelessBroadbandContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#6"
                                 style={{
                                   color: "#ffffff",
@@ -241,7 +242,7 @@ function WirelessBroadbandContent() {
                                 }}
                               >
                                 6
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -272,7 +273,7 @@ function WirelessBroadbandContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -281,15 +282,15 @@ function WirelessBroadbandContent() {
                         href="#popup1"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=broadband&plan=REGULAR 6 - $56.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -384,7 +385,7 @@ function WirelessBroadbandContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#6"
                                 style={{
                                   color: "#ffffff",
@@ -392,7 +393,7 @@ function WirelessBroadbandContent() {
                                 }}
                               >
                                 6
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -423,7 +424,7 @@ function WirelessBroadbandContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -432,15 +433,15 @@ function WirelessBroadbandContent() {
                         href="#popup2"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=broadband&plan=MEGA 6 - $59.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}
@@ -542,7 +543,7 @@ function WirelessBroadbandContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <a
+                              <Link
                                 href="#6"
                                 style={{
                                   color: "#ffffff",
@@ -550,7 +551,7 @@ function WirelessBroadbandContent() {
                                 }}
                               >
                                 6
-                              </a>{" "}
+                              </Link>{" "}
                             </sup>
                           </div>
                         </div>
@@ -581,7 +582,7 @@ function WirelessBroadbandContent() {
                         »
                       </span>
                       &nbsp;
-                      <a
+                      <Link
                         style={{
                           color: "#28BCEB",
                           textDecoration: "underline",
@@ -590,15 +591,15 @@ function WirelessBroadbandContent() {
                         href="#popup3"
                       >
                         click here for full details
-                      </a>
+                      </Link>
                     </p>
                     <div className="text-center">
-                      <a
+                      <Link
                         href="/order/?env=res&type=broadband&plan=ULTRA 10 - $69.95"
                         className="btn"
                       >
                         Order Now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   {/* SOF POP UP BOX */}

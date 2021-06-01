@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function AcceptableUsePolicy() {
   return (
     <div className="container">
@@ -6,13 +7,13 @@ export default function AcceptableUsePolicy() {
           <h4>Policies</h4>
           <ul className="service-list">
             <li className="active">
-              <a href="/aup/">Acceptable Use Policy</a>
+              <Link href="/aup/">Acceptable Use Policy</Link>
             </li>
             <li>
-              <a href="/tsp/">Technical Support Policy</a>
+              <Link href="/tsp/">Technical Support Policy</Link>
             </li>
             <li>
-              <a href="/wpp/">Website Privacy Policy</a>
+              <Link href="/wpp/">Website Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -422,9 +423,9 @@ export default function AcceptableUsePolicy() {
             complaints relating to violations of this AUP to{" "}
             <span>
               <span>
-                <a href="mailto:accounts@kos.net">
+                <Link href="mailto:accounts@kos.net">
                   <span color="#0000ff">accounts@kos.net</span>
-                </a>
+                </Link>
               </span>
             </span>
             or contact us at{" "}
@@ -439,9 +440,9 @@ export default function AcceptableUsePolicy() {
             direct any complaints relating to violations of this AUP to{" "}
             <span>
               <span>
-                <a href="mailto:accounts@kos.net">
+                <Link href="mailto:accounts@kos.net">
                   <span color="#0000ff">accounts@kos.net</span>
-                </a>
+                </Link>
               </span>
             </span>
             or contact us at 613-968-7137.

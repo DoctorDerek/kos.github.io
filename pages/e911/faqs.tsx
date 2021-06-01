@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function E911FAQs(): JSX.Element {
@@ -21,16 +22,16 @@ function E911FAQsContent() {
           <h4>e911</h4>
           <ul className="service-list">
             <li>
-              <a href="/e911/">e911 General</a>
+              <Link href="/e911/">e911 General</Link>
             </li>
             <li className="active">
-              <a href="/e911/faqs/">e911 FAQs</a>
+              <Link href="/e911/faqs/">e911 FAQs</Link>
             </li>
             <li>
-              <a href="/e911/tips/">e911 Tips</a>
+              <Link href="/e911/tips/">e911 Tips</Link>
             </li>
             <li>
-              <a href="/e911/travel/">e911 Travelling</a>
+              <Link href="/e911/travel/">e911 Travelling</Link>
             </li>
           </ul>
         </div>
@@ -47,12 +48,12 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a role="button" data-toggle="collapse" href="#faq1">
+                    <Link role="button" data-toggle="collapse" href="#faq1">
                       Do I get access to 911 services?
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">1</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq1" className="panel-collapse collapse in">
@@ -75,7 +76,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq2"
@@ -86,7 +87,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">2</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq2" className="panel-collapse collapse">
@@ -108,7 +109,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq3"
@@ -118,7 +119,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">3</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq3" className="panel-collapse collapse">
@@ -141,7 +142,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq4"
@@ -151,7 +152,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">4</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq4" className="panel-collapse collapse">
@@ -169,7 +170,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq5"
@@ -179,7 +180,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">5</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq5" className="panel-collapse collapse">
@@ -202,7 +203,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq7"
@@ -212,7 +213,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">7</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq7" className="panel-collapse collapse">
@@ -232,7 +233,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <a
+                    <Link
                       role="button"
                       data-toggle="collapse"
                       href="#faq8"
@@ -242,7 +243,7 @@ function E911FAQsContent() {
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
                       <span className="number">8</span>
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div id="faq8" className="panel-collapse collapse">

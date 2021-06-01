@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import { InternalTemplate } from "@/components/InternalTemplate"
 
 export default function DomainRegistration(): JSX.Element {
@@ -80,12 +81,12 @@ function DomainRegistrationContent() {
             }}
           >
             Please&nbsp;
-            <a
+            <Link
               style={{ color: "#005395" }}
               href="https://www.kos.net/contact.php"
             >
               contact us
-            </a>
+            </Link>
             &nbsp;for your domain registrations.
           </p>
           <p>&nbsp;</p>

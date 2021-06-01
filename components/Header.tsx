@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 import ImageFixed from "next/image"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
@@ -13,23 +14,23 @@ export default function Header() {
     <header>
       <div className="flex flex-col items-center justify-between w-full mx-auto space-y-6 lg:p-6 md:space-y-0 md:flex-row">
         <Column>
-          <a href="/" className="md:max-w-[250px] lg:max-w-full">
+          <Link href="/" className="md:max-w-[250px] lg:max-w-full">
             <ImageFixed
               src="/assets/images/news/logo.png"
               alt="Logo for Kingston Online Services - KOS is an Internet Service Provider serving Kingston and Belleville, Ontario"
               height="125"
               width="300"
             />
-          </a>
+          </Link>
         </Column>
 
         <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 w-36">
-          <a
+          <Link
             href="/order/"
             className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange active:focus:bg-[#005395] bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
           >
             Order now
-          </a>
+          </Link>
         </div>
 
         <Column>

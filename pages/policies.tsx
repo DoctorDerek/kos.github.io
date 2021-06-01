@@ -1,3 +1,4 @@
+import Link from "@/components/Link"
 export default function Policies() {
   return (
     <div className="container">
@@ -6,19 +7,19 @@ export default function Policies() {
           <h4>Policies</h4>
           <ul className="service-list">
             <li>
-              <a href="/aup/">Acceptable Use Policy</a>
+              <Link href="/aup/">Acceptable Use Policy</Link>
             </li>
             <li>
-              <a href="/pp/">Privacy Policy</a>
+              <Link href="/pp/">Privacy Policy</Link>
             </li>
             <li>
-              <a href="/tsp/">Technical Support Policy</a>
+              <Link href="/tsp/">Technical Support Policy</Link>
             </li>
             <li>
-              <a href="/wpp/">Website Privacy Policy</a>
+              <Link href="/wpp/">Website Privacy Policy</Link>
             </li>
             <li>
-              <a href="/resolution/">Resolution Services</a>
+              <Link href="/resolution/">Resolution Services</Link>
             </li>
           </ul>
         </div>
