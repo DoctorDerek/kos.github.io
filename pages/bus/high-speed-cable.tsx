@@ -665,9 +665,7 @@ function HighSpeedCableContent() {
                     <li>Monthly Modem rental, $5.00</li>
                     <li>Buy Modem $79.95 (Hitron CDA-RES)</li>
                     <li>
-                      <Link href="../contact.php">
-                        Call for payment plan options
-                      </Link>
+                      <Link href="/contact">Call for payment plan options</Link>
                     </li>
                   </ul>
                   <h6

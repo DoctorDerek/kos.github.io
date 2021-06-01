@@ -30,7 +30,7 @@ function ResidentialServicesContent() {
         connectivity where conventional Internet services are not available.
       </p>
       <h2 className="text-2xl tracking-tight color">
-        Please <Link href="/contact.php">contact our office</Link> for more
+        Please <Link href="//contact">contact our office</Link> for more
         information, or select from one of our services below.
       </h2>
     </>

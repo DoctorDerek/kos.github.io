@@ -95,9 +95,7 @@ export default function Campgrounds() {
                 options are available.
               </li>
               <li>
-                <Link href="https://www.kos.net/contact.php">
-                  Contact us today
-                </Link>
+                <Link href="/contact">Contact us today</Link>
                 &nbsp;and ask about our free installation
               </li>
             </ul>
