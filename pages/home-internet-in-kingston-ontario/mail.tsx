@@ -98,11 +98,7 @@ function MailContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-brand-teal underline font-bold"
                         href="#popup0"
                       >
                         click here for full details
@@ -228,11 +224,7 @@ function MailContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-brand-teal underline font-bold"
                         href="#popup1"
                       >
                         click here for full details

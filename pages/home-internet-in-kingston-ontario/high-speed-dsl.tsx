@@ -125,11 +125,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      style={{
-                        color: "#28BCEB",
-                        textDecoration: "underline",
-                        fontWeight: "bold",
-                      }}
+                      className="text-teal-brand font-bold underline"
                       href="#popup0"
                     >
                       click here for full details
@@ -293,11 +289,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      style={{
-                        color: "#28BCEB",
-                        textDecoration: "underline",
-                        fontWeight: "bold",
-                      }}
+                      className="text-teal-brand font-bold underline"
                       href="#popup1"
                     >
                       click here for full details
@@ -505,11 +497,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      style={{
-                        color: "#28BCEB",
-                        textDecoration: "underline",
-                        fontWeight: "bold",
-                      }}
+                      className="text-teal-brand font-bold underline"
                       href="#popup2"
                     >
                       click here for full details
@@ -725,11 +713,7 @@ function HighSpeedDslContent() {
                     </span>
                     &nbsp;
                     <Link
-                      style={{
-                        color: "#28BCEB",
-                        textDecoration: "underline",
-                        fontWeight: "bold",
-                      }}
+                      className="text-teal-brand font-bold underline"
                       href="#popup3"
                     >
                       click here for full details

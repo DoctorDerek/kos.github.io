@@ -96,11 +96,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup0"
                       >
                         click here for full details
@@ -222,11 +218,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup1"
                       >
                         click here for full details
@@ -348,11 +340,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup2"
                       >
                         click here for full details
@@ -453,36 +441,14 @@ function HighSpeedDslContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#4"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#4" className="text-white underline">
                                 4
                               </Link>{" "}
-                              <Link
-                                href="#5"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#5" className="text-white underline">
                                 5
                               </Link>{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
+                              <span className="text-white underline" />{" "}
+                              <span className="text-white underline" />{" "}
                             </sup>
                           </div>
                         </div>
@@ -517,11 +483,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup3"
                       >
                         click here for full details
@@ -613,36 +575,14 @@ function HighSpeedDslContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#4"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#4" className="text-white underline">
                                 4
                               </Link>{" "}
-                              <Link
-                                href="#5"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#5" className="text-white underline">
                                 5
                               </Link>{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
+                              <span className="text-white underline" />{" "}
+                              <span className="text-white underline" />{" "}
                             </sup>
                           </div>
                         </div>
@@ -677,11 +617,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup4"
                       >
                         click here for full details
@@ -774,39 +710,16 @@ function HighSpeedDslContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#4"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#4" className="text-white underline">
                                 4
                               </Link>{" "}
-                              <Link
-                                href="#6"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#6" className="text-white underline">
                                 6
                               </Link>{" "}
-                              <Link
-                                href="#1"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#1" className="text-white underline">
                                 1
                               </Link>{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
+                              <span className="text-white underline" />{" "}
                             </sup>
                           </div>
                         </div>
@@ -841,11 +754,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="underline text-brand-teal font-bond"
                         href="#popup5"
                       >
                         click here for full details
@@ -1199,30 +1108,6 @@ function HighSpeedDslContent() {
                   <div className="price-action">
                     <Link
                       className="btn btn-orange"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(#b0243d 0%, #740018 100%)",
-                        backgroundRepeat: "initial",
-                        color: "#ffffff",
-                        textDecorationLine: "none",
-                        display: "inline-block",
-                        padding: "15px 22px",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        lineHeight: "19px",
-                        textAlign: "center",
-                        whiteSpace: "nowrap",
-                        verticalAlign: "top",
-                        touchAction: "manipulation",
-                        cursor: "pointer",
-                        userSelect: "none",
-                        borderRadius: "10px",
-                        fontFamily: "Lato, sans-serif",
-                        height: "51px",
-                        textTransform: "uppercase",
-                        transition: "all 300ms ease",
-                        boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 1px",
-                      }}
                       href="https://www.kos.net/order/"
                     >
                       ORDER NOW

@@ -27,7 +27,7 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <Link className="button" data-toggle="collapse" href="#faq1">
+                <Link className="button" href="#faq1">
                   Protect Your Identity
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
@@ -51,7 +51,7 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <Link data-toggle="collapse" href="#faq2" className="collapsed">
+                <Link href="#faq2" className="collapsed">
                   How do I check my data usage?
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
@@ -80,7 +80,7 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <Link data-toggle="collapse" href="#faq3" className="collapsed">
+                <Link href="#faq3" className="collapsed">
                   Dial-Up Connection Phone Numbers
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>
@@ -116,7 +116,7 @@ function SupportFAQsContent() {
           <div className="panel">
             <div className="panel-heading">
               <h4 className="panel-title">
-                <Link data-toggle="collapse" href="#faq4" className="collapsed">
+                <Link href="#faq4" className="collapsed">
                   What is a GB?
                   <span className="caret-toggle closed">–</span>
                   <span className="caret-toggle opened">+</span>

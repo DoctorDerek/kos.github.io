@@ -61,22 +61,10 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#7"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#7" className="text-white underline">
                                 7
                               </Link>{" "}
-                              <Link
-                                href="#8"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#8" className="text-white underline">
                                 8
                               </Link>{" "}
                             </sup>
@@ -113,11 +101,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-brand-teal underline font-bold"
                         href="#popup0"
                       >
                         click here for full details
@@ -225,22 +209,10 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#7"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#7" className="text-white underline">
                                 7
                               </Link>{" "}
-                              <Link
-                                href="#8"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#8" className="text-white underline">
                                 8
                               </Link>{" "}
                             </sup>
@@ -281,11 +253,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-brand-teal underline font-bold"
                         href="#popup1"
                       >
                         click here for full details
@@ -393,30 +361,13 @@ function VoipContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#7"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#7" className="text-white underline">
                                 7
                               </Link>{" "}
-                              <Link
-                                href="#8"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#8" className="text-white underline">
                                 8
                               </Link>{" "}
-                              <span
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              />{" "}
+                              <span className="text-white underline" />{" "}
                             </sup>
                           </div>
                         </div>
@@ -455,11 +406,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-brand-teal underline font-bold"
                         href="#popup2"
                       >
                         click here for full details
