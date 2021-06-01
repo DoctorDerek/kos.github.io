@@ -32,7 +32,7 @@ function WirelessBroadbandContent() {
               Kingston Online Services has aggressively built a wireless
               broadband network in Southeastern Ontario to accommodate the needs
               of our rural customers.{" "}
-              <Link href="/coverage/" style={{ textDecoration: "underline" }}>
+              <Link href="/coverage/" className="underline">
                 Click here for our coverage area
               </Link>
               .
@@ -117,7 +117,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-teal-brand underline font-bold"
+                        className="font-bold underline text-teal-brand"
                         href="#popup0"
                       >
                         click here for full details
@@ -258,7 +258,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-teal-brand underline font-bold"
+                        className="font-bold underline text-teal-brand"
                         href="#popup1"
                       >
                         click here for full details
@@ -399,7 +399,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-teal-brand underline font-bold"
+                        className="font-bold underline text-teal-brand"
                         href="#popup2"
                       >
                         click here for full details
@@ -547,7 +547,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-teal-brand underline font-bold"
+                        className="font-bold underline text-teal-brand"
                         href="#popup3"
                       >
                         click here for full details
