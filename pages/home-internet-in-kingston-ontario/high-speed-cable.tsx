@@ -100,11 +100,7 @@ function HighSpeedCableContent() {
                 </span>
                 &nbsp;
                 <Link
-                  style={{
-                    color: "#28BCEB",
-                    textDecoration: "underline",
-                    fontWeight: "bold",
-                  }}
+                  className="font-bold underline text-teal-brand"
                   href="#popup0"
                 >
                   click here for full details
@@ -129,13 +125,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <Link
-                        style={{
-                          color: "#000000",
-                          textDecoration: "underline",
-                        }}
-                        href="#2"
-                      >
+                      <Link className="text-black underline" href="#2">
                         2
                       </Link>
                     </sup>
@@ -271,11 +261,7 @@ function HighSpeedCableContent() {
                 </span>
                 &nbsp;
                 <Link
-                  style={{
-                    color: "#28BCEB",
-                    textDecoration: "underline",
-                    fontWeight: "bold",
-                  }}
+                  className="font-bold underline text-teal-brand"
                   href="#popup1"
                 >
                   click here for full details
@@ -300,13 +286,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <Link
-                        style={{
-                          color: "#000000",
-                          textDecoration: "underline",
-                        }}
-                        href="#2"
-                      >
+                      <Link className="text-black underline" href="#2">
                         2
                       </Link>
                     </sup>
@@ -443,11 +423,7 @@ function HighSpeedCableContent() {
                 </span>
                 &nbsp;
                 <Link
-                  style={{
-                    color: "#28BCEB",
-                    textDecoration: "underline",
-                    fontWeight: "bold",
-                  }}
+                  className="font-bold underline text-teal-brand"
                   href="#popup2"
                 >
                   click here for full details
@@ -472,13 +448,7 @@ function HighSpeedCableContent() {
                     </span>{" "}
                     per month{" "}
                     <sup>
-                      <Link
-                        style={{
-                          color: "#000000",
-                          textDecoration: "underline",
-                        }}
-                        href="#2"
-                      >
+                      <Link className="text-black underline" href="#2">
                         2
                       </Link>
                     </sup>

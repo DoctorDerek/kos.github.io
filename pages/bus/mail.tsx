@@ -101,7 +101,7 @@ function MailContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="font-bold underline text-brand-teal"
+                        className="font-bold underline text-teal-brand"
                         href="#popup0"
                       >
                         click here for full details
@@ -227,7 +227,7 @@ function MailContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="font-bold underline text-brand-teal"
+                        className="font-bold underline text-teal-brand"
                         href="#popup1"
                       >
                         click here for full details

@@ -96,7 +96,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup0"
                       >
                         click here for full details
@@ -218,7 +218,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup1"
                       >
                         click here for full details
@@ -340,7 +340,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup2"
                       >
                         click here for full details
@@ -483,7 +483,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup3"
                       >
                         click here for full details
@@ -617,7 +617,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup4"
                       >
                         click here for full details
@@ -754,7 +754,7 @@ function HighSpeedDslContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="underline text-brand-teal font-bond"
+                        className="underline text-teal-brand font-bond"
                         href="#popup5"
                       >
                         click here for full details

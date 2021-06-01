@@ -117,7 +117,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup0"
                       >
                         click here for full details
@@ -258,7 +258,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup1"
                       >
                         click here for full details
@@ -399,7 +399,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup2"
                       >
                         click here for full details
@@ -547,7 +547,7 @@ function WirelessBroadbandContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup3"
                       >
                         click here for full details

@@ -101,7 +101,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup0"
                       >
                         click here for full details
@@ -253,7 +253,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup1"
                       >
                         click here for full details
@@ -406,7 +406,7 @@ function VoipContent() {
                       </span>
                       &nbsp;
                       <Link
-                        className="text-brand-teal underline font-bold"
+                        className="text-teal-brand underline font-bold"
                         href="#popup2"
                       >
                         click here for full details
