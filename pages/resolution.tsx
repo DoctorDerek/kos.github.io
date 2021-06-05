@@ -32,7 +32,7 @@ export default function ResolutionServices() {
                 contact our friendly and knowledgeable local customer service
                 team. Our hours of operation and contact information can be
                 found{" "}
-                <Link href="https://www.kos.net/contact.php">
+                <Link href="/contact">
                   <span color="#0000ff">here</span>
                 </Link>{" "}
                 You may also email your concern to
@@ -47,7 +47,7 @@ export default function ResolutionServices() {
                 technical nature and you require technical support, the hours of
                 operation and contact information for our technical support team
                 can be found{" "}
-                <Link href="https://www.kos.net/contact.php">
+                <Link href="/contact">
                   <span color="#0000ff">here</span>
                 </Link>
                 . Alternatively, you may send an e-mail to the technical support
@@ -73,8 +73,8 @@ export default function ResolutionServices() {
                 <b>Concerns about your bill?</b> If you have questions or
                 concerns about your bill, you can contact our billing team by
                 phone
-                <Link href="https://www.kos.net/contact.php">
-                  <span color="#0000ff">https://www.kos.net/contact.php</span>
+                <Link href="/contact">
+                  <span color="#0000ff">/contact</span>
                 </Link>{" "}
                 or by sending us an e-mail to
                 <Link href="mailto:resolution@kos.net">

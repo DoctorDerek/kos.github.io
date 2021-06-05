@@ -17,7 +17,7 @@ export default function LocalInternetServices() {
           </p>
           <div className="divider-sm"></div>
           <h5 className="color">
-            Please <Link href="/contact.php">contact our office</Link> for more
+            Please <Link href="//contact">contact our office</Link> for more
             information, or select from one of our services below.
           </h5>
           <div className="row">

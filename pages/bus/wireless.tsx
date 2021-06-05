@@ -73,13 +73,7 @@ function WirelessContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#6"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#6" className="text-white underline">
                                 6
                               </Link>{" "}
                             </sup>
@@ -113,11 +107,7 @@ function WirelessContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-teal-brand underline font-bold"
                         href="#popup0"
                       >
                         click here for full details
@@ -224,13 +214,7 @@ function WirelessContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#6"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#6" className="text-white underline">
                                 6
                               </Link>{" "}
                             </sup>
@@ -264,11 +248,7 @@ function WirelessContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-teal-brand underline font-bold"
                         href="#popup1"
                       >
                         click here for full details
@@ -375,13 +355,7 @@ function WirelessContent() {
                             <br />
                             per month{" "}
                             <sup>
-                              <Link
-                                href="#6"
-                                style={{
-                                  color: "#ffffff",
-                                  textDecoration: "underline",
-                                }}
-                              >
+                              <Link href="#6" className="text-white underline">
                                 6
                               </Link>{" "}
                             </sup>
@@ -415,11 +389,7 @@ function WirelessContent() {
                       </span>
                       &nbsp;
                       <Link
-                        style={{
-                          color: "#28BCEB",
-                          textDecoration: "underline",
-                          fontWeight: "bold",
-                        }}
+                        className="text-teal-brand underline font-bold"
                         href="#popup2"
                       >
                         click here for full details

@@ -48,7 +48,7 @@ function E911FAQsContent() {
               <div className="panel">
                 <div className="panel-heading">
                   <h4 className="panel-title">
-                    <Link role="button" data-toggle="collapse" href="#faq1">
+                    <Link href="#faq1">
                       Do I get access to 911 services?
                       <span className="caret-toggle closed">–</span>
                       <span className="caret-toggle opened">+</span>
@@ -77,7 +77,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq2"
                       className="collapsed"
@@ -110,7 +109,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq3"
                       className="collapsed"
@@ -143,7 +141,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq4"
                       className="collapsed"
@@ -171,7 +168,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq5"
                       className="collapsed"
@@ -204,7 +200,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq7"
                       className="collapsed"
@@ -234,7 +229,6 @@ function E911FAQsContent() {
                 <div className="panel-heading">
                   <h4 className="panel-title">
                     <Link
-                      role="button"
                       data-toggle="collapse"
                       href="#faq8"
                       className="collapsed"

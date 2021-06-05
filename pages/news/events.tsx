@@ -216,7 +216,7 @@ function EventsContent() {
                 KOS will be limited to technical support only on Monday, October
                 12 for Thanksgiving. Technical support will be available from
                 10:00am - 4:00pm. Our{" "}
-                <Link href="https://kos.net/contact.php">
+                <Link href="https://kos.net//contact">
                   <span className="text-blue-brand">
                     regular business hours
                   </span>
@@ -231,7 +231,7 @@ function EventsContent() {
                 KOS will be limited to technical support only on Wednesday, July
                 1 for the Canada Day holiday. Our technical support hours will
                 be 10am - 4pm. Our{" "}
-                <Link href="https://kos.net/contact.php">
+                <Link href="https://kos.net//contact">
                   <span className="text-blue-brand">
                     regular business hours
                   </span>

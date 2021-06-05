@@ -81,10 +81,7 @@ function DomainRegistrationContent() {
             }}
           >
             Please&nbsp;
-            <Link
-              style={{ color: "#005395" }}
-              href="https://www.kos.net/contact.php"
-            >
+            <Link className="text-blue-brand" href="/contact">
               contact us
             </Link>
             &nbsp;for your domain registrations.
