@@ -68,8 +68,8 @@ export async function getFileBySlug(type: string, slug: string) {
         require("@mapbox/rehype-prism"),
         () => {
           return (tree) => {
-            // @ts-expect-error
             visit(tree, "element", (node, index, parent) => {
+              // @ts-expect-error
               let [token, type] = node.properties.className || []
               if (token === "token") {
                 // @ts-expect-error
