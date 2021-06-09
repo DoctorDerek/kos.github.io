@@ -12,6 +12,21 @@ export default function PricingPackageColumnPromotionHoverBox({
   promotionPricePerMonth: string
   promotionFootnotes: string
 }) {
+  function PricingPackageColumnPromotionHoverBoxJSX() {
+    return (
+      <HoverBox>
+        <PricingPackageColumnPromotionHeading />
+        <span className="text-sm font-bold leading-3 text-teal-brand">
+          <PricingPackageColumnPromotionSubheading />
+          <PricingPackageColumnPromotionPrice />
+          <PricingPackageColumnFootnotesAsLinks
+            color="black"
+            footnotes={promotionFootnotes}
+          />
+        </span>
+      </HoverBox>
+    )
+  }
   function PricingPackageColumnPromotionHeading() {
     return (
       <span className="font-extrabold uppercase text-red-brand">
@@ -34,17 +49,5 @@ export default function PricingPackageColumnPromotionHoverBox({
       </>
     )
   }
-  return (
-    <HoverBox>
-      <PricingPackageColumnPromotionHeading />
-      <span className="text-sm font-bold leading-3 text-teal-brand">
-        <PricingPackageColumnPromotionSubheading />
-        <PricingPackageColumnPromotionPrice />
-        <PricingPackageColumnFootnotesAsLinks
-          color="black"
-          footnotes={promotionFootnotes}
-        />
-      </span>
-    </HoverBox>
-  )
+  return <PricingPackageColumnPromotionHoverBoxJSX />
 }
