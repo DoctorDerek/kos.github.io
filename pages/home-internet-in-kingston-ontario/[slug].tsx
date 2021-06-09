@@ -2,7 +2,7 @@ import { MDXRemote } from "next-mdx-remote"
 import {
   getFiles,
   getFileBySlug,
-  getAllPagesFrontMatter,
+  getAllFilesFrontMatter,
   formatSlug,
 } from "@/lib/mdx"
 import PageLayout from "@/layouts/PageLayout"
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const posts = await getFiles(PATH)
 
   return {
-    paths: posts.map((p) => ({
+    paths: posts.map((p: string) => ({
       params: {
         slug: formatSlug(p),
       },
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const allPages = await getAllPagesFrontMatter(PATH)
+  const allPages = await getAllFilesFrontMatter(PATH)
   const postIndex =
     allPages.findIndex &&
     allPages.findIndex((page: PageFrontMatter) => page.slug === params.slug)
