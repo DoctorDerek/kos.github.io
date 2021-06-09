@@ -1,4 +1,4 @@
-import hydrate from "next-mdx-remote/hydrate"
+import { MDXRemote } from "next-mdx-remote"
 import {
   getFiles,
   getFileBySlug,
@@ -46,9 +46,9 @@ export default function Blog({
   next: any
 }) {
   const { mdxSource, frontMatter } = post
-  const content = hydrate(mdxSource, {
-    components: MDXComponents,
-  })
+  const content = (
+    <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
+  )
 
   return (
     <>
