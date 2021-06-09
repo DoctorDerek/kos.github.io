@@ -14,6 +14,10 @@ pricingPackages:
       downloadSpeed: "15.0 MBPS",
       dataTransfer: "200 GB",
       packageDescription: "Surf, shop, stream music and video, stay connected with family and friends.",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10.00",
+      promotionFootnotes: "2",
     },
     {
       packageName: "CABLE 40",
@@ -23,6 +27,10 @@ pricingPackages:
       downloadSpeed: "40.0 MBPS",
       dataTransfer: "300 GB",
       packageDescription: "For active families and multiple users. All the features with more speed and data",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10.00",
+      promotionFootnotes: "2",
     },
     {
       packageName: "CABLE 60",
@@ -32,6 +40,10 @@ pricingPackages:
       downloadSpeed: "60.0 MBPS",
       dataTransfer: "300 GB",
       packageDescription: "For power users. Perfect for people who demand the most speed available.",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10.00",
+      promotionFootnotes: "2",
     },
   ]
 pricingPackagesSectionFootnotes:

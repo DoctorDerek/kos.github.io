@@ -22,6 +22,10 @@ export default function PricingPackageColumn({
     downloadSpeed,
     dataTransfer,
     packageDescription,
+    promotionHeading,
+    promotionSubheading,
+    promotionPricePerMonth,
+    promotionFootnotes,
   }: PricingPackage = pricingPackage
 
   const [openModal, setOpenModal] = useState(false)
@@ -65,7 +69,16 @@ export default function PricingPackageColumn({
           <PricingPackageNameH3 />
           <PricingPackageDescription />
           <PricingPackageModalWithButton />
-          <PricingPackagePromotionHoverBox />
+          {promotionHeading && (
+            <PricingPackagePromotionHoverBox
+              {...{
+                promotionHeading,
+                promotionSubheading,
+                promotionPricePerMonth,
+                promotionFootnotes,
+              }}
+            />
+          )}
           <OrderNowButton color="blue" />
         </div>
       </div>

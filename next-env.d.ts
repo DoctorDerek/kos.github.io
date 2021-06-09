@@ -96,14 +96,20 @@ type PageFrontMatter = {
  *
  * @typeParam packageName - The name of the package being advertised
  * @typeParam pricePerMonthDollars - The price/mo. in Canadian dollars
- * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. $.95
- * @typeParam pricePerMonthFootnotes - The footnotes as a string with spaces e.g. "1 2"
+ * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. .95
+ * @typeParam pricePerMonthFootnotes - The price footnotes w/spaces e.g. "1 2"
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
  * @typeParam dataTransfer - The amount of data transfer
  * @typeParam packageDescription - The description paragraph for the package
+ * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
+ * @typeParam promotionSubheading: The second line of the promotion ("Add...")
+ * @typeParam promotionPricePerMonth: The price/mo. of the promotion ("10.00")
+ * @typeParam promotionFootnotes: The promotion footnotes w/spaces e.g. "2 3"
  *
  * @remarks
- * This type contains the prices listed for sale to consumers on the site.
+ * This type contains the prices listed for sale to consumers on the site. If a
+ * package shouldn't have a promotion (like an unlimited data package), none
+ * will be displayed if promotionHeading is an empty string "".
  */
 type PricingPackage = {
   packageName: string
@@ -113,6 +119,10 @@ type PricingPackage = {
   downloadSpeed: string
   dataTransfer: string
   packageDescription: string
+  promotionHeading: string
+  promotionSubheading: string
+  promotionPricePerMonth: string
+  promotionFootnotes: string
 }
 
 /**

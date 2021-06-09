@@ -14,6 +14,10 @@ pricingPackages:
       downloadSpeed: "6.0 MBPS",
       dataTransfer: "25 GB",
       packageDescription: "An account for regular surfing needs with e-mail, browsing and general Internet usage. Better than most “lite” plans because this service operates at full DSL speed!",
+      promotionHeading: "",
+      promotionSubheading: "",
+      promotionPricePerMonth: "",
+      promotionFootnotes: "",
     },
     {
       packageName: "MEGA 6",
@@ -23,6 +27,10 @@ pricingPackages:
       downloadSpeed: "6.0 MBPS",
       dataTransfer: "200 GB",
       packageDescription: "An account for extended surfing needs with e-mail, browsing and general Internet usage. An excellent plan for occasional large downloads and supporting multiple users in a home.",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10.00",
+      promotionFootnotes: "2",
     },
     {
       packageName: "ULTRA 10",
@@ -32,6 +40,10 @@ pricingPackages:
       downloadSpeed: "10.0 MBPS",
       dataTransfer: "200 GB",
       packageDescription: "An extremely fast Internet account for extended surfing needs with e-mail, browsing and general Internet usage. An excellent plan for large downloads, video and supporting multiple users in a home.",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "10.00",
+      promotionFootnotes: "2",
     },
     {
       packageName: "ULTRA 15",
@@ -41,6 +53,10 @@ pricingPackages:
       downloadSpeed: "15.0 MBPS",
       dataTransfer: "200 GB",
       packageDescription: "An extremely fast Internet account for extended surfing needs with e-mail, browsing and general Internet usage. An excellent plan for large downloads, video and supporting multiple users in a home.",
+      promotionHeading: "Make It Unlimited",
+      promotionSubheading: "Add Unlimited Data for only",
+      promotionPricePerMonth: "15.00",
+      promotionFootnotes: "2",
     },
   ]
 pricingPackagesSectionFootnotes:
