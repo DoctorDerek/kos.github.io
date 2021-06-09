@@ -97,10 +97,10 @@ type PageFrontMatter = {
  * @typeParam packageName - The name of the package being advertised
  * @typeParam pricePerMonthDollars - The price/mo. in Canadian dollars
  * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. $.95
+ * @typeParam pricePerMonthFootnotes - The footnotes as a string with spaces e.g. "1 2"
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
  * @typeParam dataTransfer - The amount of data transfer
  * @typeParam packageDescription - The description paragraph for the package
- * @typeParam pricePerMonthFootnotes - The footnotes as a string with spaces e.g. "1 2"
  *
  * @remarks
  * This type contains the prices listed for sale to consumers on the site.
@@ -109,10 +109,10 @@ type PricingPackage = {
   packageName: string
   pricePerMonthDollars: string
   pricePerMonthCents: string
+  pricePerMonthFootnotes: string
   downloadSpeed: string
   dataTransfer: string
   packageDescription: string
-  pricePerMonthFootnotes: string
 }
 
 /**
