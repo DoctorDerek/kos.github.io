@@ -18,10 +18,10 @@ export default function PricingPackageColumn({
     packageName,
     pricePerMonthDollars,
     pricePerMonthCents,
+    pricePerMonthFootnotes,
     downloadSpeed,
     dataTransfer,
     packageDescription,
-    pricePerMonthFootnotes,
   }: PricingPackage = pricingPackage
 
   const [openModal, setOpenModal] = useState(false)
