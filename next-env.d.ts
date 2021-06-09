@@ -100,7 +100,7 @@ type PageFrontMatter = {
  * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
  * @typeParam dataTransfer - The amount of data transfer
  * @typeParam packageDescription - The description paragraph for the package
- * @typeParam priceFootnotes - The footnotes as a string with spaces e.g. "1 2"
+ * @typeParam pricePerMonthFootnotes - The footnotes as a string with spaces e.g. "1 2"
  *
  * @remarks
  * This type contains the prices listed for sale to consumers on the site.
@@ -112,7 +112,7 @@ type PricingPackage = {
   downloadSpeed: string
   dataTransfer: string
   packageDescription: string
-  priceFootnotes: string
+  pricePerMonthFootnotes: string
 }
 
 /**

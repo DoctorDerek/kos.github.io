@@ -21,7 +21,7 @@ export default function PricingPackageColumn({
     downloadSpeed,
     dataTransfer,
     packageDescription,
-    priceFootnotes,
+    pricePerMonthFootnotes,
   }: PricingPackage = pricingPackage
 
   const [openModal, setOpenModal] = useState(false)
@@ -88,7 +88,7 @@ export default function PricingPackageColumn({
           per month{" "}
           <PricingPackageColumnFootnotesAsLinks
             color="white"
-            footnotes={priceFootnotes}
+            footnotes={pricePerMonthFootnotes}
           />
         </span>
       </>
