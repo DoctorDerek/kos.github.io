@@ -1,6 +1,6 @@
-const visit = require("unist-util-visit")
-const sizeOf = require("image-size")
-const fs = require("fs")
+import { visit } from "unist-util-visit"
+import sizeOf from "image-size"
+import fs from "fs"
 
 const imgToJSX = (options: any) => (tree: any) => {
   visit(
