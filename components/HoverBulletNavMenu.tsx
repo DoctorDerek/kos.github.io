@@ -19,18 +19,29 @@ export default function HoverBulletNavMenu({
 }: {
   type: "Residential" | "Business"
 }): JSX.Element {
+  const headingForNavMenu = bullets[type].slice(0, 1)
+  const [title, href] = headingForNavMenu[0] as string[]
+  const headingNavMenuItem = [
+    [title + " Services in Kingston & Belleville, ON", href],
+  ] as NAVIGATION_MENU_TYPE[]
   return (
-    <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
-      <HoverBulletList
-        hoverBulletAsNavMenuItems={bullets[type].slice(0, 3)}
-        key={Math.random()}
-        responsive={true}
-      />
-      <HoverBulletList
-        hoverBulletAsNavMenuItems={bullets[type].slice(4, 7)}
-        key={Math.random()}
-        responsive={true}
-      />
-    </div>
+    <>
+      <h4 className="font-bold">
+        <HoverBulletList
+          hoverBulletAsNavMenuItems={headingNavMenuItem}
+          responsive={true}
+        />
+      </h4>
+      <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
+        <HoverBulletList
+          hoverBulletAsNavMenuItems={bullets[type].slice(1, 4)}
+          responsive={true}
+        />
+        <HoverBulletList
+          hoverBulletAsNavMenuItems={bullets[type].slice(4, 7)}
+          responsive={true}
+        />
+      </div>
+    </>
   )
 }
