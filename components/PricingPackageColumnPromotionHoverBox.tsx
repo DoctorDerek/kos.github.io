@@ -14,7 +14,9 @@ export default function PricingPackageColumnPromotionHoverBox({
 }) {
   function PricingPackageColumnPromotionHeading() {
     return (
-      <span className="text-[#901D3D] font-extrabold">{promotionHeading}</span>
+      <span className="font-extrabold uppercase text-red-brand">
+        {promotionHeading}
+      </span>
     )
   }
   function PricingPackageColumnPromotionSubheading() {
