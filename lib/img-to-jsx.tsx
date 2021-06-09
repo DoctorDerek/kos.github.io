@@ -1,17 +1,17 @@
-import { visit } from "unist-util-visit"
+/*
+import visit from "unist-util-visit"
 import sizeOf from "image-size"
 import fs from "fs"
-
-export default function imgToJSX(tree: any) {
+*/
+export default function imgToJSX(tree: Node) {
+  /*
   visit(
     tree,
     // only visit p tags that contain an img element
     (node) =>
       node.type === "paragraph" &&
-      // @ts-expect-error
       node.children.some((n) => n.type === "image"),
     (node) => {
-      // @ts-expect-error
       const imageNode = node.children.find((n) => n.type === "image")
 
       // only local files
@@ -32,5 +32,5 @@ export default function imgToJSX(tree: any) {
         node.children = [imageNode]
       }
     }
-  )
+  )*/
 }
