@@ -40,7 +40,7 @@ export default function PricingPackageColumn({
           "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
         )}
       >
-        <div className="absolute z-20 text-6xl font-bold left-3 top-2">
+        <div className="absolute z-10 text-6xl font-bold left-3 top-2">
           {columnNumber}
         </div>
         <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
