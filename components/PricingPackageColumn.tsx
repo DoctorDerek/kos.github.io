@@ -14,22 +14,38 @@ export default function PricingPackageColumn({
   pricingPackage: PricingPackage
   columnNumber: number
 }): JSX.Element {
+  const [openModal, setOpenModal] = useState(false) // track modal open/close
+
   const {
     packageName,
-    pricePerMonthDollars,
-    pricePerMonthCents,
-    pricePerMonthFootnotes,
-    downloadSpeed,
-    dataTransfer,
+    pricePerMonth,
     packageDescription,
     packageHeadings,
     promotionHeading,
     promotionSubheading,
     promotionPricePerMonth,
     promotionFootnotes,
-  }: PricingPackage = pricingPackage
+  }: PricingPackage = pricingPackage // extract pricingPackage details
 
-  const [openModal, setOpenModal] = useState(false)
+  const extractDollarsCentsAndFootnotes = (price: string) => {
+    const priceMatchArray = /\$(\d+).(\d+)\^?([\d,]+)?/.exec(price)
+    if (priceMatchArray) {
+      return Array.from(priceMatchArray)
+    }
+    return [undefined, undefined, undefined, undefined] // will throw error
+  }
+  const pricePerMonthArray = extractDollarsCentsAndFootnotes(pricePerMonth)
+  const [
+    verifyPricePerMonth,
+    pricePerMonthDollars,
+    pricePerMonthCents,
+    pricePerMonthFootnotes,
+  ] = pricePerMonthArray
+  if (verifyPricePerMonth !== pricePerMonth) {
+    throw new Error(
+      'pricePerMonth does not match the specified format in PricingPackageColumn; the correct format is "$39.95^1,2" where the footnotes are optional'
+    )
+  }
 
   function PricingPackageColumnJSX() {
     return (
@@ -60,7 +76,7 @@ export default function PricingPackageColumn({
               )}
             >
               <PricingPackageNameH2 />
-              <PricingPackagePrice />
+              {pricePerMonth && <PricingPackagePrice />}
             </div>
           </div>
         </div>
@@ -75,8 +91,6 @@ export default function PricingPackageColumn({
                   {packageHeading}
                 </span>
               ))}
-            <PricingPackageDownloadSpeed />
-            <PricingPackageDataTransfer />
           </>
           <PricingPackageNameH3 />
           <PricingPackageDescription />
@@ -111,32 +125,17 @@ export default function PricingPackageColumn({
 
         <span className="mt-0 text-xl text-white">
           per month{" "}
-          <PricingPackageColumnFootnotesAsLinks
-            color="white"
-            footnotes={pricePerMonthFootnotes}
-          />
+          {pricePerMonthFootnotes && (
+            <PricingPackageColumnFootnotesAsLinks
+              color="white"
+              footnotes={pricePerMonthFootnotes}
+            />
+          )}
         </span>
       </>
     )
   }
 
-  function PricingPackageDownloadSpeed() {
-    return (
-      <span className="text-2xl leading-6 text-blue-brand">
-        UP TO {downloadSpeed}
-        <br />
-        DOWNLOAD SPEED
-      </span>
-    )
-  }
-  function PricingPackageDataTransfer() {
-    return (
-      <span className="text-2xl leading-6 text-blue-brand">
-        {dataTransfer} OF DATA <br />
-        TRANSFER PER MONTH
-      </span>
-    )
-  }
   function PricingPackageNameH3() {
     return <h3 className="text-base text-gray-700">{packageName}</h3>
   }
