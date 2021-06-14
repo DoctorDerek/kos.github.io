@@ -22,6 +22,7 @@ export default function PricingPackageColumn({
     downloadSpeed,
     dataTransfer,
     packageDescription,
+    packageHeadings,
     promotionHeading,
     promotionSubheading,
     promotionPricePerMonth,
@@ -64,8 +65,19 @@ export default function PricingPackageColumn({
           </div>
         </div>
         <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
-          <PricingPackageDownloadSpeed />
-          <PricingPackageDataTransfer />
+          <>
+            {packageHeadings &&
+              packageHeadings.map((packageHeading: string) => (
+                <span
+                  className="text-2xl leading-6 text-blue-brand"
+                  key={packageHeading}
+                >
+                  {packageHeading}
+                </span>
+              ))}
+            <PricingPackageDownloadSpeed />
+            <PricingPackageDataTransfer />
+          </>
           <PricingPackageNameH3 />
           <PricingPackageDescription />
           <PricingPackageModalWithButton />

@@ -98,8 +98,7 @@ type PageFrontMatter = {
  * @typeParam pricePerMonthDollars - The price/mo. in Canadian dollars
  * @typeParam pricePerMonthCents - The # of cents in the monthly price e.g. .95
  * @typeParam pricePerMonthFootnotes - The price footnotes w/spaces e.g. "1 2"
- * @typeParam downloadSpeed - The download speed (e.g. "10.0 MBPS")
- * @typeParam dataTransfer - The amount of data transfer
+ * @typeParam packageHeadings - An array of headings (["UP TO 10.0 ...","DATA"])
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
  * @typeParam promotionSubheading: The second line of the promotion ("Add...")
@@ -118,6 +117,7 @@ type PricingPackage = {
   pricePerMonthFootnotes: string
   downloadSpeed: string
   dataTransfer: string
+  packageHeadings: string[]
   packageDescription: string
   promotionHeading: string
   promotionSubheading: string
