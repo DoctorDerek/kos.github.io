@@ -94,7 +94,7 @@ export default function PricingPackageColumn({
       <>
         <span className="mt-6 text-white">
           <span className="text-5xl font-bold">${pricePerMonthDollars}</span>
-          <sup className="text-xl">.${pricePerMonthCents}</sup>
+          <sup className="text-xl">.{pricePerMonthCents}</sup>
         </span>
 
         <span className="mt-0 text-xl text-white">
