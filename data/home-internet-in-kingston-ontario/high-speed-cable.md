@@ -20,6 +20,8 @@ pricingPackages:
     {
       packageName: "CABLE 40",
       pricePerMonth: "$54.95^1,2",
+      packageHeadings:
+        ["UP TO 40.0 MBPS DOWNLOAD SPEED", "300 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "For active families and multiple users. All the features with more speed and data",
       promotionHeading: "Make It Unlimited",
       promotionSubheading: "Add Unlimited Data for only",
