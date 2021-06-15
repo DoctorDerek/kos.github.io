@@ -153,10 +153,10 @@ type PricingPackagesSectionFootnote = {
  */
 type PricingPackagesSectionDetail = {
   detailsSectionHeading1?: string
-  detailsSectionDescription1?: string | JSX.Element
+  detailsSectionDescription1?: string
   detailsSectionList1?: string[]
   detailsSectionHeading2?: string
-  detailsSectionDescription2?: string | JSX.Element
+  detailsSectionDescription2?: string
   detailsSectionList2?: string[]
   wrapWithHoverBox: boolean
 }

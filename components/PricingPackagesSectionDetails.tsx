@@ -107,7 +107,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
   function DetailsSectionDescription({
     detailsSectionDescription,
   }: {
-    detailsSectionDescription?: string | JSX.Element
+    detailsSectionDescription?: string
   }) {
     if (!detailsSectionDescription) return null
     return <p className="px-2">{detailsSectionDescription}</p>
