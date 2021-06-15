@@ -103,7 +103,7 @@ export default function PricingPackageModal({
     return (
       <Dialog.Title
         as="div"
-        className="flex items-center justify-start space-x-4 text-3xl font-bold uppercase text-blue-brand"
+        className="flex items-center justify-start space-x-4 text-3xl font-bold text-blue-brand"
       >
         <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
           <BadgeCheckIcon className="w-6 h-6 text-white" aria-hidden="true" />
