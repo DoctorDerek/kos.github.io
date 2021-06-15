@@ -54,7 +54,8 @@ export function InternalTemplate({
           />
           {/* alt="" acceptable for purely decorative elements */}
         </div>
-        {children}
+        {/*children*/
+        /*Children from Markdown file are only used in News & Events section*/}
         {bulletNavMenu}
         <div className="py-6">
           <BUTTON href="/order/" text="Get connected" />
