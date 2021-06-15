@@ -64,9 +64,9 @@ export default function PricingPackageColumn({
               )}
             >
               <PricingPackageNameH2 />
-              {packagePrices.map((priceString) => (
-                <Fragment key={priceString}>
-                  <PricingPackagePrice priceString={priceString} />
+              {packagePrices.map((packagePrice) => (
+                <Fragment key={packagePrice}>
+                  <PricingPackagePrice packagePrice={packagePrice} />
                 </Fragment>
               ))}
             </div>
@@ -106,9 +106,9 @@ export default function PricingPackageColumn({
     return <span className="text-5xl font-bold text-white">{packageName}</span>
   }
 
-  function PricingPackagePrice({ priceString }: { priceString: string }) {
+  function PricingPackagePrice({ packagePrice }: { packagePrice: string }) {
     const [, dollars, cents, footnotes, duration] =
-      extractDollarsCentsAndFootnotesFromPrice(priceString)
+      extractDollarsCentsAndFootnotesFromPrice(packagePrice)
     return (
       <div>
         {dollars && (
