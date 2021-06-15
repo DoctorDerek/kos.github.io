@@ -13,7 +13,7 @@ export default function PricingPackageColumn({
   color?: "navy" | "teal"
   pricingPackage: PricingPackage
   columnNumber: number
-}): JSX.Element {
+}) {
   const [openModal, setOpenModal] = useState(false) // track modal open/close
 
   const {
@@ -76,7 +76,15 @@ export default function PricingPackageColumn({
               )}
             >
               <PricingPackageNameH2 />
-              {pricePerMonth && <PricingPackagePrice />}
+              {pricePerMonthDollars &&
+                pricePerMonthCents &&
+                pricePerMonthFootnotes && (
+                  <PricingPackagePrice
+                    dollars={pricePerMonthDollars}
+                    cents={pricePerMonthCents}
+                    footnotes={pricePerMonthFootnotes}
+                  />
+                )}
             </div>
           </div>
         </div>
@@ -115,12 +123,20 @@ export default function PricingPackageColumn({
     return <h2 className="text-5xl font-bold text-white">{packageName}</h2>
   }
 
-  function PricingPackagePrice() {
+  function PricingPackagePrice({
+    dollars,
+    cents,
+    footnotes,
+  }: {
+    dollars: string
+    cents: string
+    footnotes: string
+  }) {
     return (
       <>
         <span className="mt-6 text-white">
-          <span className="text-5xl font-bold">${pricePerMonthDollars}</span>
-          <sup className="text-xl">.{pricePerMonthCents}</sup>
+          <span className="text-5xl font-bold">${dollars}</span>
+          <sup className="text-xl">.{cents}</sup>
         </span>
 
         <span className="mt-0 text-xl text-white">
@@ -128,7 +144,7 @@ export default function PricingPackageColumn({
           {pricePerMonthFootnotes && (
             <PricingPackageColumnFootnotesAsLinks
               color="white"
-              footnotes={pricePerMonthFootnotes}
+              footnotes={footnotes}
             />
           )}
         </span>
@@ -161,6 +177,5 @@ export default function PricingPackageColumn({
       </>
     )
   }
-
   return <PricingPackageColumnJSX />
 }
