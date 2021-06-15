@@ -95,7 +95,8 @@ type PageFrontMatter = {
  * <PricingPackageColumn />
  *
  * @typeParam packageName - The name of the package being advertised
- * @typeParam pricePerMonth - If present, price/month^footnotes ("$39.95^1,2")
+ * @typeParam pricePerMonth - If present, price/mo^any,footnotes ("$39.95^1,2")
+ * @typeParam pricePerMonth - If present, price/yr^any,footnotes ("$39.95^1,2")
  * @typeParam packageHeadings - An array of headings (["UP TO 10.0 ...","DATA"])
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
@@ -111,6 +112,7 @@ type PageFrontMatter = {
 type PricingPackage = {
   packageName: string
   pricePerMonth: string
+  pricePerYear: string
   packageHeadings: string[]
   packageDescription: string
   promotionHeading: string

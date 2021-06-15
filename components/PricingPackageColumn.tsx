@@ -19,6 +19,7 @@ export default function PricingPackageColumn({
   const {
     packageName,
     pricePerMonth,
+    pricePerYear,
     packageDescription,
     packageHeadings,
     promotionHeading,
@@ -41,9 +42,24 @@ export default function PricingPackageColumn({
     pricePerMonthCents,
     pricePerMonthFootnotes,
   ] = pricePerMonthArray
+  const pricePerYearArray = extractDollarsCentsAndFootnotes(pricePerYear)
+  const [
+    verifyPricePerYear,
+    pricePerYearDollars,
+    pricePerYearCents,
+    pricePerYearFootnotes,
+  ] = pricePerYearArray
+  const errorString =
+    ' does not match the specified format in <PricingPackageColumn />; the correct format is "$39.95^1,2" where the footnotes are optional'
   if (verifyPricePerMonth !== pricePerMonth) {
+    throw new Error("pricePerMonth" + errorString)
+  }
+  if (verifyPricePerYear !== pricePerYear) {
+    throw new Error("pricePerYear" + errorString)
+  }
+  if (!pricePerMonth && !pricePerYear) {
     throw new Error(
-      'pricePerMonth does not match the specified format in PricingPackageColumn; the correct format is "$39.95^1,2" where the footnotes are optional'
+      "Either pricePerMonth or pricePerYear needs to be specified for every package in <PricingPackageColumn />"
     )
   }
 
@@ -72,6 +88,7 @@ export default function PricingPackageColumn({
                 color === "teal"
                   ? "bg-teal-brand border-teal-dark"
                   : "bg-blue-brand border-blue-dark",
+                pricePerMonth && pricePerYear ? "space-y-1 pt-6" : "space-y-6",
                 "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
               )}
             >
@@ -83,6 +100,17 @@ export default function PricingPackageColumn({
                     dollars={pricePerMonthDollars}
                     cents={pricePerMonthCents}
                     footnotes={pricePerMonthFootnotes}
+                    duration="month"
+                  />
+                )}
+              {pricePerYearDollars &&
+                pricePerYearCents &&
+                pricePerYearFootnotes && (
+                  <PricingPackagePrice
+                    dollars={pricePerYearDollars}
+                    cents={pricePerYearCents}
+                    footnotes={pricePerYearFootnotes}
+                    duration="year"
                   />
                 )}
             </div>
@@ -120,35 +148,34 @@ export default function PricingPackageColumn({
   }
 
   function PricingPackageNameH2() {
-    return <h2 className="text-5xl font-bold text-white">{packageName}</h2>
+    return <span className="text-5xl font-bold text-white">{packageName}</span>
   }
 
   function PricingPackagePrice({
     dollars,
     cents,
     footnotes,
+    duration,
   }: {
     dollars: string
     cents: string
     footnotes: string
+    duration: "month" | "year"
   }) {
     return (
-      <>
-        <span className="mt-6 text-white">
+      <div>
+        <div className="text-white">
           <span className="text-5xl font-bold">${dollars}</span>
           <sup className="text-xl">.{cents}</sup>
-        </span>
-
-        <span className="mt-0 text-xl text-white">
-          per month{" "}
-          {pricePerMonthFootnotes && (
-            <PricingPackageColumnFootnotesAsLinks
-              color="white"
-              footnotes={footnotes}
-            />
-          )}
-        </span>
-      </>
+        </div>
+        <div className="text-xl text-white">
+          per {duration}{" "}
+          <PricingPackageColumnFootnotesAsLinks
+            color="white"
+            footnotes={footnotes}
+          />
+        </div>
+      </div>
     )
   }
 
