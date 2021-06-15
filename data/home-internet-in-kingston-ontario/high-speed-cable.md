@@ -12,7 +12,7 @@ pricingPackages:
       packageHeadings:
         ["UP TO 15.0 MBPS DOWNLOAD SPEED", "200 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "Surf, shop, stream music and video, stay connected with family and friends.",
-      promotionHeading: "Make It Unlimited",
+      promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
       promotionPricePerMonth: "10.00",
       promotionFootnotes: "2",
@@ -23,7 +23,7 @@ pricingPackages:
       packageHeadings:
         ["UP TO 40.0 MBPS DOWNLOAD SPEED", "300 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "For active families and multiple users. All the features with more speed and data",
-      promotionHeading: "Make It Unlimited",
+      promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
       promotionPricePerMonth: "10.00",
       promotionFootnotes: "2",
@@ -34,7 +34,7 @@ pricingPackages:
       packageHeadings:
         ["UP TO 60.0 MBPS DOWNLOAD SPEED", "300 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "For power users. Perfect for people who demand the most speed available.",
-      promotionHeading: "Make It Unlimited",
+      promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
       promotionPricePerMonth: "10.00",
       promotionFootnotes: "2",
