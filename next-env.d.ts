@@ -102,13 +102,12 @@ type PageFrontMatter = {
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
  * @typeParam promotionSubheading: The second line of the promotion ("Add...")
- * @typeParam promotionPricePerMonth: The price/mo. of the promotion ("10.00")
- * @typeParam promotionFootnotes: The promotion footnotes w/spaces e.g. "2 3"
+ * @typeParam promotionPrice: The price of the promotion ("$10.00^2 per month")
  *
  * @remarks
- * This type contains the prices listed for sale to consumers on the site. If a
- * package shouldn't have a promotion (like an unlimited data package), none
- * will be displayed if promotionHeading is an empty string "".
+ * A PricingPackage contains the prices listed for sale to consumers on the
+ * site, with optional promotion like an unlimited data project. If a package
+ * doesn't have a promotion, leave promotionHeading blank (the empty string "").
  */
 type PricingPackage = {
   packageName: string

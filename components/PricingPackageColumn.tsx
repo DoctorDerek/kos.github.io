@@ -2,7 +2,10 @@ import { useState, Fragment } from "react"
 import PricingPackageModal from "@/components/PricingPackageModal"
 import OrderNowButton from "@/components/OrderNowButton"
 import PricingPackagePromotionHoverBox from "@/components/PricingPackageColumnPromotionHoverBox"
-import { classNames } from "@/lib/utils"
+import {
+  classNames,
+  extractDollarsCentsAndFootnotesFromPrice,
+} from "@/lib/utils"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
 export default function PricingPackageColumn({
@@ -23,26 +26,12 @@ export default function PricingPackageColumn({
     packageHeadings,
     promotionHeading,
     promotionSubheading,
-    promotionPricePerMonth,
-    promotionFootnotes,
+    promotionPrice,
   }: PricingPackage = pricingPackage // extract pricingPackage details
   if (!packageName && !packagePrices) {
     throw new Error(
       "Both packageName and packagePrices are required in <PricingPackageColumn />"
     )
-  }
-
-  const extractDollarsCentsAndFootnotes = (price: string) => {
-    const priceMatchArray = /\$(\d+)\.?(\d+)?\^?([\d,]+)?(.+)?/.exec(price)
-    if (priceMatchArray) {
-      // [, dollars, cents, footnotes, duration]
-      return Array.from(priceMatchArray)
-    }
-    return [price, undefined, undefined, undefined, price] // "No setup fee"
-    /*
-    throw new Error(
-      `${price} does not match the specified format in <PricingPackageColumn />. The correct format is "$dollars.cents^footnotes duration" e.g. "$39.95^1,2 per month" where the comma-separated "footnotes" are optional and everything after the price is used as the "duration" appearing on the second line`
-    )*/
   }
 
   function PricingPackageColumnJSX() {
@@ -103,8 +92,7 @@ export default function PricingPackageColumn({
               {...{
                 promotionHeading,
                 promotionSubheading,
-                promotionPricePerMonth,
-                promotionFootnotes,
+                promotionPrice,
               }}
             />
           )}
@@ -120,7 +108,7 @@ export default function PricingPackageColumn({
 
   function PricingPackagePrice({ priceString }: { priceString: string }) {
     const [, dollars, cents, footnotes, duration] =
-      extractDollarsCentsAndFootnotes(priceString)
+      extractDollarsCentsAndFootnotesFromPrice(priceString)
     return (
       <div>
         {dollars && (

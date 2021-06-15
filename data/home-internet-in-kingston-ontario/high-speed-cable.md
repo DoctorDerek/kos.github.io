@@ -14,8 +14,7 @@ pricingPackages:
       packageDescription: "Surf, shop, stream music and video, stay connected with family and friends.",
       promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
-      promotionPricePerMonth: "10.00",
-      promotionFootnotes: "2",
+      promotionPrice: "$10.00^2 per month",
     },
     {
       packageName: "CABLE 40",
@@ -25,8 +24,7 @@ pricingPackages:
       packageDescription: "For active families and multiple users. All the features with more speed and data",
       promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
-      promotionPricePerMonth: "10.00",
-      promotionFootnotes: "2",
+      promotionPrice: "$10.00^2 per month",
     },
     {
       packageName: "CABLE 60",
@@ -36,8 +34,7 @@ pricingPackages:
       packageDescription: "For power users. Perfect for people who demand the most speed available.",
       promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
-      promotionPricePerMonth: "10.00",
-      promotionFootnotes: "2",
+      promotionPrice: "$10.00^2 per month",
     },
   ]
 pricingPackagesSectionFootnotes:

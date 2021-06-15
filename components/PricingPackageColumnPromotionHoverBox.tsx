@@ -1,17 +1,24 @@
 import HoverBox from "@/components/HoverBox"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
+import { extractDollarsCentsAndFootnotesFromPrice } from "@/lib/utils"
 
 export default function PricingPackageColumnPromotionHoverBox({
   promotionHeading,
   promotionSubheading,
-  promotionPricePerMonth,
-  promotionFootnotes,
+  promotionPrice,
 }: {
   promotionHeading: string
   promotionSubheading: string
-  promotionPricePerMonth: string
-  promotionFootnotes: string
+  promotionPrice: string
 }) {
+  const [
+    ,
+    promotionDollars,
+    promotionCents,
+    promotionFootnotes,
+    promotionDuration,
+  ] = extractDollarsCentsAndFootnotesFromPrice(promotionPrice)
+
   function PricingPackageColumnPromotionHoverBoxJSX() {
     return (
       <HoverBox>
@@ -19,10 +26,12 @@ export default function PricingPackageColumnPromotionHoverBox({
         <span className="text-sm font-bold leading-3 text-teal-brand">
           <PricingPackageColumnPromotionSubheading />
           <PricingPackageColumnPromotionPrice />
-          <PricingPackageColumnFootnotesAsLinks
-            color="black"
-            footnotes={promotionFootnotes}
-          />
+          {promotionFootnotes && (
+            <PricingPackageColumnFootnotesAsLinks
+              color="black"
+              footnotes={promotionFootnotes}
+            />
+          )}
         </span>
       </HoverBox>
     )
@@ -43,7 +52,13 @@ export default function PricingPackageColumnPromotionHoverBox({
   function PricingPackageColumnPromotionPrice() {
     return (
       <>
-        <span className="text-3xl">${promotionPricePerMonth}</span> per month{" "}
+        {promotionDollars && (
+          <span className="text-3xl">
+            ${promotionDollars}
+            {promotionCents && <>.{promotionCents}</>}
+          </span>
+        )}
+        {promotionDuration}{" "}
       </>
     )
   }
