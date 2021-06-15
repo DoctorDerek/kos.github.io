@@ -7,10 +7,10 @@ export default function PricingPackagesSectionFootnotes({
     <ol>
       {pricingPackagesSectionFootnotes.map(
         (pricingPackagesSectionFootnote: PricingPackagesSectionFootnote) => {
-          const { id, description } = pricingPackagesSectionFootnote
+          const { footnoteLabel, description } = pricingPackagesSectionFootnote
           return (
-            <li id={id} key={id + description}>
-              {id}) {description}
+            <li id={footnoteLabel} key={footnoteLabel + description}>
+              {footnoteLabel}) {description}
             </li>
           )
         }

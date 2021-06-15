@@ -39,13 +39,13 @@ pricingPackages:
   ]
 pricingPackagesSectionFootnotes:
   [
-    { id: "1", description: "Requires Modem rental or purchase." },
+    { footnoteLabel: "1", description: "Requires Modem rental or purchase." },
     {
-      id: "2",
+      footnoteLabel: "2",
       description: "For residential purposes only, must not exceed a reasonable amount of usage",
     },
     {
-      id: "3",
+      footnoteLabel: "3",
       description: "$50 Setup Fee (Waived for existing Cable Internet Subscribers for service at their current location.)",
     },
   ]
