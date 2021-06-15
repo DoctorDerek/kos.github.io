@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Link from "@/components/Link"
 
 export const kebabCase = (str: string) => {
   const result =
@@ -31,4 +32,27 @@ export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
     throw new Error(
       `${price} does not match the specified format in <PricingPackageColumn />. The correct format is "$dollars.cents^footnotes duration" e.g. "$39.95^1,2 per month" where the comma-separated "footnotes" are optional and everything after the price is used as the "duration" appearing on the second line`
     )*/
+}
+/**
+ * Add a Next.js <Link> to replace a single <a> or <Link> found in the
+ * given string, if any. Full Markdown support is not wanted here.
+ */
+export const addLinkToTextIfPresent = (stringToTest: string) => {
+  //  // if any. For example a Markdown file might read `title: "Residential
+  // **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
+  const linkRegExp =
+    /(.*)<[aL]i?n?k?.+href=['"](.+)['"].*>(.+)<\/[aL]i?n?k?>(.*)/
+  const matchResults = linkRegExp.exec(stringToTest)
+  if (matchResults) {
+    const [, before, href, linkText, after] = matchResults
+    return (
+      <>
+        {before}
+        <Link href={href} className="underline text-blue-brand">
+          {linkText}
+        </Link>
+        {after}
+      </>
+    )
+  } else return <>{stringToTest}</>
 }

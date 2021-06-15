@@ -74,7 +74,7 @@ pricingPackagesSectionDetails:
           "Call for payment plan options",
         ],
       detailsSectionHeading2: "BRING YOUR OWN MODEM",
-      detailsSectionDescription2: 'You are able to use your own Cable Modem if it is in our <Link href="/modem/list" className="underline text-blue-brand"> supported modem list </Link>',
+      detailsSectionDescription2: 'You are able to use your own Cable Modem if it is in our <Link href="/modem/list">supported modem list</Link>.',
       detailsSectionList2: [],
       wrapWithHoverBox: true,
     },

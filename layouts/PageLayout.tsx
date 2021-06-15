@@ -101,10 +101,12 @@ export default function PageLayout({
     )
   }
 
+  /**
+   * Highlight the part of the title marked with * asterisks (Markdown bold)
+   * if any. For example a Markdown file might read `title: "Residential
+   * **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
+   */
   function TitleJSXWithOptionalHighlighting() {
-    // Highlight the part of the title marked with * asterisks (Markdown bold)
-    // if any. For example a Markdown file might read `title: "Residential
-    // **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
     if (title.includes("**")) {
       const highlightRegExp = /(.+)\*\*(.+)\*\*(.+)/
       return (

@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { classNames } from "@/lib/utils"
+import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
 
 export default function PricingPackagesSectionDetails({
@@ -104,13 +104,18 @@ function PricingPackagesSectionDetailsSectionIndividual({
       </div>
     )
   }
+
   function DetailsSectionDescription({
     detailsSectionDescription,
   }: {
     detailsSectionDescription?: string
   }) {
     if (!detailsSectionDescription) return null
-    return <p className="px-2">{detailsSectionDescription}</p>
+    return (
+      <p className="px-2">
+        {addLinkToTextIfPresent(detailsSectionDescription)}
+      </p>
+    )
   }
 
   function DetailsSectionList({
