@@ -8,7 +8,7 @@ pricingPackages:
   [
     {
       packageName: "CABLE 15",
-      pricePerMonth: "$39.95^1,2",
+      packagePrices: ["$39.95^1,2 per month"],
       packageHeadings:
         ["UP TO 15.0 MBPS DOWNLOAD SPEED", "200 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "Surf, shop, stream music and video, stay connected with family and friends.",
@@ -19,7 +19,7 @@ pricingPackages:
     },
     {
       packageName: "CABLE 40",
-      pricePerMonth: "$54.95^1,2",
+      packagePrices: ["$54.95^1,2 per month"],
       packageHeadings:
         ["UP TO 40.0 MBPS DOWNLOAD SPEED", "300 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "For active families and multiple users. All the features with more speed and data",
@@ -30,7 +30,7 @@ pricingPackages:
     },
     {
       packageName: "CABLE 60",
-      pricePerMonth: "$74.95^1,2",
+      packagePrices: ["$74.95^1,2 per month"],
       packageHeadings:
         ["UP TO 60.0 MBPS DOWNLOAD SPEED", "300 GB OF DATA TRANSFER PER MONTH"],
       packageDescription: "For power users. Perfect for people who demand the most speed available.",

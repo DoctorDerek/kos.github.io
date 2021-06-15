@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, Fragment } from "react"
 import PricingPackageModal from "@/components/PricingPackageModal"
 import OrderNowButton from "@/components/OrderNowButton"
 import PricingPackagePromotionHoverBox from "@/components/PricingPackageColumnPromotionHoverBox"
@@ -18,8 +18,7 @@ export default function PricingPackageColumn({
 
   const {
     packageName,
-    pricePerMonth,
-    pricePerYear,
+    packagePrices,
     packageDescription,
     packageHeadings,
     promotionHeading,
@@ -27,40 +26,23 @@ export default function PricingPackageColumn({
     promotionPricePerMonth,
     promotionFootnotes,
   }: PricingPackage = pricingPackage // extract pricingPackage details
+  if (!packageName && !packagePrices) {
+    throw new Error(
+      "Both packageName and packagePrices are required in <PricingPackageColumn />"
+    )
+  }
 
   const extractDollarsCentsAndFootnotes = (price: string) => {
-    const priceMatchArray = /\$(\d+).(\d+)\^?([\d,]+)?/.exec(price)
+    const priceMatchArray = /\$(\d+)\.?(\d+)?\^?([\d,]+)?(.+)?/.exec(price)
     if (priceMatchArray) {
+      // [, dollars, cents, footnotes, duration]
       return Array.from(priceMatchArray)
     }
-    return [undefined, undefined, undefined, undefined] // will throw error
-  }
-  const pricePerMonthArray = extractDollarsCentsAndFootnotes(pricePerMonth)
-  const [
-    verifyPricePerMonth,
-    pricePerMonthDollars,
-    pricePerMonthCents,
-    pricePerMonthFootnotes,
-  ] = pricePerMonthArray
-  const pricePerYearArray = extractDollarsCentsAndFootnotes(pricePerYear)
-  const [
-    verifyPricePerYear,
-    pricePerYearDollars,
-    pricePerYearCents,
-    pricePerYearFootnotes,
-  ] = pricePerYearArray
-  const errorString =
-    ' does not match the specified format in <PricingPackageColumn />; the correct format is "$39.95^1,2" where the footnotes are optional'
-  if (verifyPricePerMonth !== pricePerMonth) {
-    throw new Error("pricePerMonth" + errorString)
-  }
-  if (verifyPricePerYear !== pricePerYear) {
-    throw new Error("pricePerYear" + errorString)
-  }
-  if (!pricePerMonth && !pricePerYear) {
+    return [price, undefined, undefined, undefined, price] // "No setup fee"
+    /*
     throw new Error(
-      "Either pricePerMonth or pricePerYear needs to be specified for every package in <PricingPackageColumn />"
-    )
+      `${price} does not match the specified format in <PricingPackageColumn />. The correct format is "$dollars.cents^footnotes duration" e.g. "$39.95^1,2 per month" where the comma-separated "footnotes" are optional and everything after the price is used as the "duration" appearing on the second line`
+    )*/
   }
 
   function PricingPackageColumnJSX() {
@@ -88,31 +70,16 @@ export default function PricingPackageColumn({
                 color === "teal"
                   ? "bg-teal-brand border-teal-dark"
                   : "bg-blue-brand border-blue-dark",
-                pricePerMonth && pricePerYear ? "space-y-1 pt-6" : "space-y-6",
+                packagePrices.length >= 2 ? "space-y-1 pt-6" : "space-y-6",
                 "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
               )}
             >
               <PricingPackageNameH2 />
-              {pricePerMonthDollars &&
-                pricePerMonthCents &&
-                pricePerMonthFootnotes && (
-                  <PricingPackagePrice
-                    dollars={pricePerMonthDollars}
-                    cents={pricePerMonthCents}
-                    footnotes={pricePerMonthFootnotes}
-                    duration="month"
-                  />
-                )}
-              {pricePerYearDollars &&
-                pricePerYearCents &&
-                pricePerYearFootnotes && (
-                  <PricingPackagePrice
-                    dollars={pricePerYearDollars}
-                    cents={pricePerYearCents}
-                    footnotes={pricePerYearFootnotes}
-                    duration="year"
-                  />
-                )}
+              {packagePrices.map((priceString) => (
+                <Fragment key={priceString}>
+                  <PricingPackagePrice priceString={priceString} />
+                </Fragment>
+              ))}
             </div>
           </div>
         </div>
@@ -151,29 +118,28 @@ export default function PricingPackageColumn({
     return <span className="text-5xl font-bold text-white">{packageName}</span>
   }
 
-  function PricingPackagePrice({
-    dollars,
-    cents,
-    footnotes,
-    duration,
-  }: {
-    dollars: string
-    cents: string
-    footnotes: string
-    duration: "month" | "year"
-  }) {
+  function PricingPackagePrice({ priceString }: { priceString: string }) {
+    const [, dollars, cents, footnotes, duration] =
+      extractDollarsCentsAndFootnotes(priceString)
     return (
       <div>
-        <div className="text-white">
-          <span className="text-5xl font-bold">${dollars}</span>
-          <sup className="text-xl">.{cents}</sup>
-        </div>
+        {dollars && (
+          <div className="text-white">
+            <span className="text-5xl font-bold">${dollars}</span>
+            {cents && <sup className="text-xl">.{cents}</sup>}
+          </div>
+        )}
         <div className="text-xl text-white">
-          per {duration}{" "}
-          <PricingPackageColumnFootnotesAsLinks
-            color="white"
-            footnotes={footnotes}
-          />
+          {duration}
+          {footnotes && (
+            <>
+              {" "}
+              <PricingPackageColumnFootnotesAsLinks
+                color="white"
+                footnotes={footnotes}
+              />
+            </>
+          )}
         </div>
       </div>
     )
