@@ -116,8 +116,7 @@ type PricingPackage = {
   packageDescription: string
   promotionHeading: string
   promotionSubheading: string
-  promotionPricePerMonth: string
-  promotionFootnotes: string
+  promotionPrice: string
 }
 
 /**
