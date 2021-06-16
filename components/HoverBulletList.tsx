@@ -28,7 +28,14 @@ export default function HoverBulletList({
       {hoverBulletAsStrings &&
         hoverBulletAsStrings.map((text: string) => (
           <Fragment key={text}>
-            <HoverBullet text={text} responsive={responsive} />
+            {/#.+/.exec(text) ? (
+              <div className="mt-4 text-sm font-semibold text-gray-800 sm:text-base md:text-lg lg:text-xl">
+                {/*strings starting with # are headings, not bullets*/}
+                {text.slice(1) /*remove #*/}
+              </div>
+            ) : (
+              <HoverBullet text={text} responsive={responsive} />
+            )}
           </Fragment>
         ))}
       {hoverBulletAsNavMenuItems &&

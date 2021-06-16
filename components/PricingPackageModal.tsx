@@ -9,6 +9,7 @@ export default function PricingPackageModal({
   setOpenModal,
   packageTitle = "Cable 15",
   pricingBullets = [
+    "#Account Includes:",
     "Up to 15.0 Mbps download speed, 2.0 Mbps upload speed",
     "200 GB of data transfer per month",
     "Free spam and virus protection",
@@ -19,17 +20,17 @@ export default function PricingPackageModal({
     "Technical support with office repair",
     "Access to web-based e-mail",
   ],
-  pricingDetails = [
-    "Requires Modem rental or purchase.",
-    "For residential purposes only, must not exceed a reasonable amount of usage",
-    "$50 Setup Fee (waived for existing Cable Internet Subscribers for service at their existing location)",
+  pricingFootnotes = [
+    "1. Requires Modem rental or purchase.",
+    "2. For residential purposes only, must not exceed a reasonable amount of usage",
+    "3. $50 Setup Fee (waived for existing Cable Internet Subscribers for service at their existing location)",
   ],
 }: {
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
   packageTitle?: string
   pricingBullets?: string[]
-  pricingDetails?: string[]
+  pricingFootnotes?: string[]
 }) {
   function PricingPackageModalJSX() {
     return (
@@ -115,20 +116,17 @@ export default function PricingPackageModal({
   function PricingBullets() {
     return (
       <>
-        <div className="mt-4 text-sm font-semibold text-gray-800 sm:text-base md:text-lg lg:text-xl">
-          Account Includes:
-        </div>
         <HoverBulletList hoverBulletAsStrings={pricingBullets} />
       </>
     )
   }
-  function PricingDetails() {
+  function PricingFootnotes() {
     return (
-      <ol className="mt-4 ml-6 text-xs list-decimal sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
-        {pricingDetails.map((detail: string) => (
-          <li key={detail}>{detail}</li>
+      <div className="mt-4 ml-6 text-xs sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
+        {pricingFootnotes.map((footnote: string) => (
+          <div key={footnote}>{footnote}</div>
         ))}
-      </ol>
+      </div>
     )
   }
 
@@ -137,7 +135,7 @@ export default function PricingPackageModal({
       <div>
         <PackageTitle />
         <PricingBullets />
-        <PricingDetails />
+        <PricingFootnotes />
       </div>
     )
   }
