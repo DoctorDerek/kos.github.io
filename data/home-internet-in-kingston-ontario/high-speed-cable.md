@@ -118,6 +118,9 @@ pricingPackagesSectionDetails:
           "Additional 1000MB (1GB) transfer available for $1.00",
           "Opt-out for automatic spam protection",
         ],
+      detailsSectionHeading2: "",
+      detailsSectionDescription2: "",
+      detailsSectionList2: "",
       wrapWithHoverBox: true,
     },
     {
@@ -131,6 +134,7 @@ pricingPackagesSectionDetails:
         ],
       detailsSectionHeading2: "BRING YOUR OWN MODEM",
       detailsSectionDescription2: 'You are able to use your own Cable Modem if it is in our <Link href="/modem/list">supported modem list</Link>.',
+      detailsSectionList2: "",
       wrapWithHoverBox: true,
     },
     {
@@ -144,6 +148,9 @@ pricingPackagesSectionDetails:
           "Minimum of 2.0Ghz processor required",
           "56K modem suggested for dial-up",
         ],
+      detailsSectionHeading2: "",
+      detailsSectionDescription2: "",
+      detailsSectionList2: "",
       wrapWithHoverBox: true,
     },
   ]
