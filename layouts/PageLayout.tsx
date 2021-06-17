@@ -4,7 +4,7 @@ import React from "react"
 import Image from "@/components/CustomImage"
 import Link from "@/components/Link"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
-import { classNames } from "@/lib/utils"
+import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
@@ -124,7 +124,10 @@ export default function PageLayout({
   function HeadingH2() {
     return (
       <div className="flex flex-col space-y-6">
-        <h2 className="text-xl text-left">{heading}</h2>
+        <h2 className="text-xl text-left">
+          {/*Up to one <a> or <Link> is supported in {heading}*/}
+          {addLinkToTextIfPresent(heading)}
+        </h2>
       </div>
     )
   }
