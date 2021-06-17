@@ -40,6 +40,26 @@ export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
 }
 
 /**
+ * Wrap the given footnote or comma-separated footnotes in a <sup> superscript * tag, if footnotes are present in the format "Up to 4 Mbps performance^6"
+ * where ^6 or ^1,2 are footnotes. Full Markdown support is not wanted here.
+ * @returns JSX Element
+ */
+export const formatFootnotesAsSuperscriptIfPresent = (stringToTest: string) => {
+  const footnotesMatchArray = /(.*)\^([\d,]+)?(.*)?/.exec(stringToTest)
+  if (footnotesMatchArray) {
+    const [, before, footnotesWithCommas, after] = footnotesMatchArray
+    const footnotesWithSpaces = footnotesWithCommas.replaceAll(",", " ")
+    return (
+      <>
+        {before}
+        <sup>{footnotesWithSpaces}</sup>
+        {after}
+      </>
+    )
+  } else return <>{stringToTest}</>
+}
+
+/**
  * Add a Next.js <Link> to replace a single <a> or <Link> found in the
  * given string, if any. Full Markdown support is not wanted here.
  * @returns JSX Element

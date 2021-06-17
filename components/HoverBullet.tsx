@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { BULLET } from "@/components/UTILS"
-import { classNames } from "@/lib/utils"
+import { classNames, formatFootnotesAsSuperscriptIfPresent } from "@/lib/utils"
 import Link from "@/components/Link"
 export default function HoverBullet({
   text = "isRequired",
@@ -38,7 +38,9 @@ export default function HoverBullet({
           {text}
         </Link>
       ) : (
-        text
+        // wrap any footnotes found in {text} in a <sup> superscript tag
+        // these footnotes are used in modalBullets <PricingPackageModal/>
+        formatFootnotesAsSuperscriptIfPresent(text)
       )}
     </li>
   )
