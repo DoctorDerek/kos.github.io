@@ -21,6 +21,15 @@ export const useCurrentPath = () => {
 
 export const classNames = (...classes: string[]) => classes.join(" ")
 
+/**
+ * Extract the dollars, cents, comma-separated footnotes (if any), and duration
+ * from the given price string. If the format is not met, then the entire price * will be returned as the duration, which enables uses such as "No Setup Fee".
+ *
+ * The correct format is given as "$dollars.cents^footnotes duration"
+ * e.g. "$39.95^1,2 per month"
+ * where the comma-separated "footnotes" are optional and everything after
+ * the price is used as the "duration" appearing on the second line.
+ */
 export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
   const priceMatchArray = /\$(\d+)\.?(\d+)?\^?([\d,]+)?(.+)?/.exec(price)
   if (priceMatchArray) {
@@ -28,11 +37,8 @@ export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
     return Array.from(priceMatchArray)
   }
   return [price, undefined, undefined, undefined, price] // "No setup fee"
-  /*
-    throw new Error(
-      `${price} does not match the specified format in <PricingPackageColumn />. The correct format is "$dollars.cents^footnotes duration" e.g. "$39.95^1,2 per month" where the comma-separated "footnotes" are optional and everything after the price is used as the "duration" appearing on the second line`
-    )*/
 }
+
 /**
  * Add a Next.js <Link> to replace a single <a> or <Link> found in the
  * given string, if any. Full Markdown support is not wanted here.
