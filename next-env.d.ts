@@ -146,11 +146,11 @@ type PricingPackagesSectionFootnote = {
  * All the parameters are optional and will only be shown if present and not "".
  *
  * @typeParam detailsSectionHeading1 - The 1st heading at the top
- * @typeParam detailsSectionDescription1 - The description under the heading
+ * @typeParam detailsSectionDescription1 - The description paragraph(s) at top
  * @typeParam detailsSectionList1 - The details section bullets for the top part
  * @typeParam detailsSectionHeading2 - A 2nd heading in the middle
- * @typeParam detailsSectionDescription2 - The description under the 2nd heading
- * @typeParam detailsSectionList2 - The details section bullets for the part 2
+ * @typeParam detailsSectionDescription2 - The description paragraph(s) below
+ * @typeParam detailsSectionList2 - The details section bullets at the bottom
  * @typerParam wrapWithHoverBox - Wrap with a <HoverBox> or display full-width
  *
  * @remarks
@@ -158,10 +158,10 @@ type PricingPackagesSectionFootnote = {
  */
 type PricingPackagesSectionDetail = {
   detailsSectionHeading1?: string
-  detailsSectionDescription1?: string
+  detailsSectionDescription1?: string | string[]
   detailsSectionList1?: string[]
   detailsSectionHeading2?: string
-  detailsSectionDescription2?: string
+  detailsSectionDescription2?: string | string[]
   detailsSectionList2?: string[]
   wrapWithHoverBox: boolean
 }

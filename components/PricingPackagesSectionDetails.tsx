@@ -103,13 +103,24 @@ function PricingPackagesSectionDetailsSectionIndividual({
   function DetailsSectionDescription({
     detailsSectionDescription,
   }: {
-    detailsSectionDescription?: string
+    detailsSectionDescription?: string | string[]
   }) {
     if (!detailsSectionDescription) return null
+    if (!Array.isArray(detailsSectionDescription)) {
+      detailsSectionDescription = [detailsSectionDescription]
+      // support an arbitrary number of paragraphs in each description section
+    }
     return (
-      <p className="px-2">
-        {addLinkToTextIfPresent(detailsSectionDescription)}
-      </p>
+      <>
+        {detailsSectionDescription.map((detailsSectionDescriptionParagraph) => (
+          <p
+            className="px-2"
+            key={detailsSectionDescriptionParagraph.slice(0, 10)}
+          >
+            {addLinkToTextIfPresent(detailsSectionDescriptionParagraph)}
+          </p>
+        ))}
+      </>
     )
   }
 
