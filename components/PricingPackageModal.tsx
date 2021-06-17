@@ -8,7 +8,7 @@ export default function PricingPackageModal({
   openModal,
   setOpenModal,
   packageTitle = "Cable 15",
-  pricingBullets = [
+  modalBullets = [
     "#Account Includes:",
     "Up to 15.0 Mbps download speed, 2.0 Mbps upload speed",
     "200 GB of data transfer per month",
@@ -20,7 +20,7 @@ export default function PricingPackageModal({
     "Technical support with office repair",
     "Access to web-based e-mail",
   ],
-  pricingFootnotes = [
+  modalFootnotes = [
     "1. Requires Modem rental or purchase.",
     "2. For residential purposes only, must not exceed a reasonable amount of usage",
     "3. $50 Setup Fee (waived for existing Cable Internet Subscribers for service at their existing location)",
@@ -29,8 +29,8 @@ export default function PricingPackageModal({
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
   packageTitle?: string
-  pricingBullets?: string[]
-  pricingFootnotes?: string[]
+  modalBullets?: string[]
+  modalFootnotes?: string[]
 }) {
   function PricingPackageModalJSX() {
     return (
@@ -113,17 +113,17 @@ export default function PricingPackageModal({
       </Dialog.Title>
     )
   }
-  function PricingBullets() {
+  function ModalBullets() {
     return (
       <>
-        <HoverBulletList hoverBulletAsStrings={pricingBullets} />
+        <HoverBulletList hoverBulletAsStrings={modalBullets} />
       </>
     )
   }
-  function PricingFootnotes() {
+  function ModalFootnotes() {
     return (
       <div className="mt-4 ml-6 text-xs sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
-        {pricingFootnotes.map((footnote: string) => (
+        {modalFootnotes.map((footnote: string) => (
           <div key={footnote}>{footnote}</div>
         ))}
       </div>
@@ -134,8 +134,8 @@ export default function PricingPackageModal({
     return (
       <div>
         <PackageTitle />
-        <PricingBullets />
-        <PricingFootnotes />
+        {modalBullets && <ModalBullets />}
+        {modalFootnotes && <ModalFootnotes />}
       </div>
     )
   }

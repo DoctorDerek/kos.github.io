@@ -27,10 +27,17 @@ export default function PricingPackageColumn({
     promotionHeading,
     promotionSubheading,
     promotionPrice,
+    modalBullets,
+    modalFootnotes,
   }: PricingPackage = pricingPackage // extract pricingPackage details
   if (!packageName && !packagePrices) {
     throw new Error(
       "Both packageName and packagePrices are required in <PricingPackageColumn />"
+    )
+  }
+  if (!modalBullets && !modalFootnotes) {
+    throw new Error(
+      'At least one of modalBullets and/or modalFootnotes is required in the "click here for more details" pop-up modal in <PricingPackageColumn />'
     )
   }
 
@@ -154,9 +161,12 @@ export default function PricingPackageColumn({
         <PricingPackageModal
           openModal={openModal}
           setOpenModal={setOpenModal}
+          modalBullets={modalBullets}
+          modalFootnotes={modalFootnotes}
         />
       </>
     )
   }
+
   return <PricingPackageColumnJSX />
 }

@@ -15,6 +15,25 @@ pricingPackages:
       promotionHeading: "MAKE IT UNLIMITED",
       promotionSubheading: "Add Unlimited Data for only",
       promotionPrice: "$10.00^2 per month",
+      modalBullets:
+        [
+          "#Account Includes:",
+          "Up to 15.0 Mbps download speed, 2.0 Mbps upload speed",
+          "200 GB of data transfer per month",
+          "Free spam and virus protection",
+          "Two e-mail addresses with web e-mail, IMAP4, or POP3 access",
+          "5 hours of dial-up access provided",
+          "100 MB of Personal Web Space available for use",
+          "Access to value-added services",
+          "Technical support with office repair",
+          "Access to web-based e-mail",
+        ],
+      modalFootnotes:
+        [
+          "1. Requires Modem rental or purchase.",
+          "2. For residential purposes only, must not exceed a reasonable amount of usage",
+          "3. $50 Setup Fee (waived for existing Cable Internet Subscribers for service at their existing location)",
+        ],
     },
     {
       packageName: "CABLE 40",

@@ -103,6 +103,9 @@ type PageFrontMatter = {
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
  * @typeParam promotionSubheading: The second line of the promotion ("Add...")
  * @typeParam promotionPrice: The price of the promotion ("$10.00^2 per month")
+ * @typeParam modalBullets - An array of bullets for the "details" pop-up modal;
+ * headings start with # (["#Account Includes:","Up to 15.0 Mbps...","#Email"])
+ * @typeParam modalFootnotes - An array of modal footnotes (["1. ...","* ..."])
  *
  * @remarks
  * A PricingPackage contains the prices listed for sale to consumers on the
@@ -117,6 +120,8 @@ type PricingPackage = {
   promotionHeading: string
   promotionSubheading: string
   promotionPrice: string
+  modalBullets: string[]
+  modalFootnotes: string[]
 }
 
 /**
