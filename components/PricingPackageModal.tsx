@@ -7,13 +7,13 @@ import OrderNowButton from "@/components/OrderNowButton"
 export default function PricingPackageModal({
   openModal,
   setOpenModal,
-  packageTitle,
+  packageName,
   modalBullets,
   modalFootnotes,
 }: {
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
-  packageTitle: string
+  packageName: string
   modalBullets?: string[]
   modalFootnotes?: string[]
 }) {
@@ -94,7 +94,7 @@ export default function PricingPackageModal({
         <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full sm:mx-0 sm:h-10 sm:w-10 bg-blue-brand">
           <BadgeCheckIcon className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
-        <div className="sm:ml-4">{packageTitle}</div>
+        <div className="sm:ml-4">{packageName}</div>
       </Dialog.Title>
     )
   }

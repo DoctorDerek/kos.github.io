@@ -161,7 +161,7 @@ export default function PricingPackageColumn({
         <PricingPackageModal
           openModal={openModal}
           setOpenModal={setOpenModal}
-          packageTitle={packageTitle}
+          packageName={packageName}
           modalBullets={modalBullets}
           modalFootnotes={modalFootnotes}
         />
