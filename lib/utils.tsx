@@ -42,10 +42,9 @@ export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
 /**
  * Add a Next.js <Link> to replace a single <a> or <Link> found in the
  * given string, if any. Full Markdown support is not wanted here.
+ * @returns JSX Element
  */
 export const addLinkToTextIfPresent = (stringToTest: string) => {
-  //  // if any. For example a Markdown file might read `title: "Residential
-  // **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
   const linkRegExp =
     /(.*)<[aL]i?n?k?.+href=['"](.+)['"].*>(.+)<\/[aL]i?n?k?>(.*)/
   const matchResults = linkRegExp.exec(stringToTest)
