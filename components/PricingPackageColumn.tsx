@@ -30,12 +30,12 @@ export default function PricingPackageColumn({
     modalBullets,
     modalFootnotes,
   }: PricingPackage = pricingPackage // extract pricingPackage details
-  if (!packageName && !packagePrices) {
+  if (!(packageName && packagePrices)) {
     throw new Error(
       "Both packageName and packagePrices are required in <PricingPackageColumn />"
     )
   }
-  if (!modalBullets && !modalFootnotes) {
+  if (!(modalBullets || modalFootnotes)) {
     throw new Error(
       'At least one of modalBullets and/or modalFootnotes is required in the "click here for more details" pop-up modal in <PricingPackageColumn />'
     )
