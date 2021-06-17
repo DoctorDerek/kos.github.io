@@ -109,7 +109,7 @@ pricingPackagesSectionFootnotes:
 pricingPackagesSectionDetails:
   [
     {
-      detailsSectionHeading1: "Options",
+      detailsSectionHeading1: "OPTIONS",
       detailsSectionDescription1: "",
       detailsSectionList1:
         [
@@ -121,7 +121,7 @@ pricingPackagesSectionDetails:
       wrapWithHoverBox: true,
     },
     {
-      detailsSectionHeading1: "Modem Options",
+      detailsSectionHeading1: "MODEM OPTIONS",
       detailsSectionDescription1: "Automatic payment options are required.",
       detailsSectionList1:
         [
@@ -134,7 +134,7 @@ pricingPackagesSectionDetails:
       wrapWithHoverBox: true,
     },
     {
-      detailsSectionHeading1: "Requirements",
+      detailsSectionHeading1: "REQUIREMENTS",
       detailsSectionDescription1: "",
       detailsSectionList1:
         [

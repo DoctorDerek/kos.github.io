@@ -94,12 +94,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
   }) {
     if (!detailsSectionHeading) return null
     return (
-      <div
-        className={classNames(
-          wrapWithHoverBox ? "uppercase" : "",
-          "font-bold text-center text-blue-brand"
-        )}
-      >
+      <div className="font-bold text-center text-blue-brand">
         {detailsSectionHeading}
       </div>
     )
