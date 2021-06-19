@@ -27,6 +27,7 @@ export default function PageLayout({
     title,
     heading,
     fullWidth,
+    showAvailabilityTool,
     hoverBulletNavMenu,
     showGetConnectedButton,
     pricingPackages,
@@ -95,7 +96,7 @@ export default function PageLayout({
         <div className="flex flex-col space-y-6">
           <HeadingH2 />
           <div className="prose">{children}</div>
-          <PostalCodeCheckForm />
+          {showAvailabilityTool && <PostalCodeCheckForm />}
         </div>
       </div>
     )

@@ -68,6 +68,7 @@ type BlogPostFrontMatter = {
  * @typeParam heading - The page heading
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                        or narrow like the informational pages (false)
+ * @typeParam showAvailabilityTool? - Whether to show the post code search tool
  * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
  * @typeParam showGetConnectedButton - Whether to show "Order Now" at the bottom
  * @typeParam pricingPackages - The page title
@@ -83,6 +84,7 @@ type PageFrontMatter = {
   title: string
   heading: string
   fullWidth?: boolean
+  showAvailabilityTool?: boolean
   hoverBulletNavMenu?: "Residential" | "Business"
   showGetConnectedButton?: boolean
   pricingPackages: PricingPackage[]
