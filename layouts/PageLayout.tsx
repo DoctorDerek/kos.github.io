@@ -28,7 +28,7 @@ export default function PageLayout({
     heading,
     fullWidth,
     hoverBulletNavMenu,
-    showOrderNowButton,
+    showGetConnectedButton,
     pricingPackages,
     pricingPackagesSectionFootnotes,
     pricingPackagesSectionDetails,
@@ -145,7 +145,7 @@ export default function PageLayout({
             <HoverBulletNavMenu type={hoverBulletNavMenu} />
           </>
         )}
-        {showOrderNowButton && (
+        {showGetConnectedButton && (
           <div className="py-6">
             <BUTTON href="/order/" text="Get connected" />
           </div>
