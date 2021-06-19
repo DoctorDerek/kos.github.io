@@ -108,7 +108,7 @@ export default function PageLayout({
    */
   function TitleJSXWithOptionalHighlighting() {
     if (title.includes("**")) {
-      const highlightRegExp = /(.+)\*\*(.+)\*\*(.+)/
+      const highlightRegExp = /(.*)\*\*(.+)\*\*(.*)/
       return (
         <>
           {title.replace(highlightRegExp, "$1")}
