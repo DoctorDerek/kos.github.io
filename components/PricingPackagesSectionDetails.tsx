@@ -58,25 +58,16 @@ function PricingPackagesSectionDetailsSectionIndividual({
 
   function PricingPackagesSectionDetailsSectionIndividualOuterJSX() {
     return (
-      <div
+      <HoverBox
         className={classNames(
-          wrapWithHoverBox ? "text-center w-96" : "text-left max-w-3xl"
+          wrapWithHoverBox ? "text-center w-96" : "text-left max-w-3xl",
+          wrapWithHoverBox && backgroundColor === "gray"
+            ? "bg-gray-100"
+            : "bg-transparent"
         )}
       >
-        {wrapWithHoverBox ? (
-          <HoverBox
-            className={classNames(
-              backgroundColor === "gray" ? "bg-gray-100" : "bg-transparent"
-            )}
-          >
-            <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
-          </HoverBox>
-        ) : (
-          <HoverBox>
-            <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
-          </HoverBox>
-        )}
-      </div>
+        <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
+      </HoverBox>
     )
   }
   function PricingPackagesSectionDetailsSectionIndividualInnerJSX() {
