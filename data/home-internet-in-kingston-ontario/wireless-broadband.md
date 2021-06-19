@@ -163,7 +163,7 @@ pricingPackagesSectionDetails:
       detailsSectionHeading2: "",
       detailsSectionDescription2: "",
       detailsSectionList2: "",
-      wrapWithHoverBox: true,
+      useSmallHoverBox: true,
     },
     {
       detailsSectionHeading1: "REQUIREMENTS",
@@ -179,7 +179,7 @@ pricingPackagesSectionDetails:
       detailsSectionHeading2: "",
       detailsSectionDescription2: "",
       detailsSectionList2: "",
-      wrapWithHoverBox: true,
+      useSmallHoverBox: true,
     },
     {
       detailsSectionHeading1: "How it works",
@@ -202,7 +202,7 @@ pricingPackagesSectionDetails:
           "Once configuration and installation is complete, the customer will be able to receive signal from one of KOS’ towers and access the Internet as if they were using it over a high speed line of some other sort. Latency should be under 50ms in most cases, which is suitable for online gaming, voice over IP and other applications that require low latency.",
         ],
       detailsSectionList2: "",
-      wrapWithHoverBox: false,
+      useSmallHoverBox: false,
     },
   ]
 ---

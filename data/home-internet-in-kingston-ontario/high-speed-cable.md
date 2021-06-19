@@ -121,7 +121,7 @@ pricingPackagesSectionDetails:
       detailsSectionHeading2: "",
       detailsSectionDescription2: "",
       detailsSectionList2: "",
-      wrapWithHoverBox: true,
+      useSmallHoverBox: true,
     },
     {
       detailsSectionHeading1: "MODEM OPTIONS",
@@ -135,7 +135,7 @@ pricingPackagesSectionDetails:
       detailsSectionHeading2: "BRING YOUR OWN MODEM",
       detailsSectionDescription2: 'You are able to use your own Cable Modem if it is in our <Link href="/modem/list">supported modem list</Link>.',
       detailsSectionList2: "",
-      wrapWithHoverBox: true,
+      useSmallHoverBox: true,
     },
     {
       detailsSectionHeading1: "REQUIREMENTS",
@@ -151,7 +151,7 @@ pricingPackagesSectionDetails:
       detailsSectionHeading2: "",
       detailsSectionDescription2: "",
       detailsSectionList2: "",
-      wrapWithHoverBox: true,
+      useSmallHoverBox: true,
     },
   ]
 ---

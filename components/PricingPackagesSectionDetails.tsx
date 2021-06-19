@@ -14,9 +14,9 @@ export default function PricingPackagesSectionDetails({
           <Fragment key={pricingPackagesSectionDetail.detailsSectionHeading1}>
             {
               /*the <HoverBox> items are flex items; others are full-width*/
-              !pricingPackagesSectionDetail.wrapWithHoverBox && (
+              !pricingPackagesSectionDetail.useSmallHoverBox && (
                 <div className="w-full h-0">
-                  {/*flex break before full-width (wrapWithHoverBox===false)*/}
+                  {/*flex break before full-width (useSmallHoverBox===false)*/}
                 </div>
               )
             }
@@ -35,7 +35,7 @@ export default function PricingPackagesSectionDetails({
  * This component takes displays the PricingPackagesSectionDetails types either
  * wrapped with a <HoverBox> or displayed as a separate full-width section.
  *
- * @param wrapWithHoverBox (a field on the PricingPackagesSectionDetail type)
+ * @param useSmallHoverBox (a field on the PricingPackagesSectionDetail type)
  * If true, the merged PricingPackagesSectionDetails types will be displayed as a flex
  * <HoverBox>; if false then the result will be a separate block <div>.
  */
@@ -53,15 +53,15 @@ function PricingPackagesSectionDetailsSectionIndividual({
     detailsSectionHeading2,
     detailsSectionDescription2,
     detailsSectionList2,
-    wrapWithHoverBox,
+    useSmallHoverBox,
   } = pricingPackagesSectionDetail
 
   function PricingPackagesSectionDetailsSectionIndividualOuterJSX() {
     return (
       <HoverBox
         className={classNames(
-          wrapWithHoverBox ? "text-center w-96" : "text-left max-w-3xl",
-          wrapWithHoverBox && backgroundColor === "gray"
+          useSmallHoverBox ? "text-center w-96" : "text-left max-w-3xl",
+          useSmallHoverBox && backgroundColor === "gray"
             ? "bg-gray-100"
             : "bg-transparent"
         )}
