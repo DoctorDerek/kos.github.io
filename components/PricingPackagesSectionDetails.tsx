@@ -12,13 +12,18 @@ export default function PricingPackagesSectionDetails({
       {pricingPackagesSectionDetails.map(
         (pricingPackagesSectionDetail, index) => (
           <Fragment key={pricingPackagesSectionDetail.detailsSectionHeading1}>
+            {
+              /*the <HoverBox> items are flex items; others are full-width*/
+              !pricingPackagesSectionDetail.wrapWithHoverBox && (
+                <div className="w-full h-0">
+                  {/*flex break before full-width (wrapWithHoverBox===false)*/}
+                </div>
+              )
+            }
             <PricingPackagesSectionDetailsSectionIndividual
               pricingPackagesSectionDetail={pricingPackagesSectionDetail}
               backgroundColor={index % 2 === 1 ? "transparent" : "gray"}
             />
-            {index % 3 === 0 && index > 0 && (
-              <div className="w-full h-0">{/*flex break every 3 items*/}</div>
-            )}
           </Fragment>
         )
       )}
@@ -53,21 +58,25 @@ function PricingPackagesSectionDetailsSectionIndividual({
 
   function PricingPackagesSectionDetailsSectionIndividualOuterJSX() {
     return (
-      <>
-        {wrapWithHoverBox ? (
-          <div className="text-left w-96">
-            <HoverBox
-              className={classNames(
-                backgroundColor === "gray" ? "bg-gray-100" : "bg-transparent"
-              )}
-            >
-              <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
-            </HoverBox>
-          </div>
-        ) : (
-          <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
+      <div
+        className={classNames(
+          wrapWithHoverBox ? "text-center w-96" : "text-left max-w-3xl"
         )}
-      </>
+      >
+        {wrapWithHoverBox ? (
+          <HoverBox
+            className={classNames(
+              backgroundColor === "gray" ? "bg-gray-100" : "bg-transparent"
+            )}
+          >
+            <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
+          </HoverBox>
+        ) : (
+          <HoverBox>
+            <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
+          </HoverBox>
+        )}
+      </div>
     )
   }
   function PricingPackagesSectionDetailsSectionIndividualInnerJSX() {
@@ -94,7 +103,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
   }) {
     if (!detailsSectionHeading) return null
     return (
-      <div className="font-bold text-center text-blue-brand">
+      <div className="ml-2 font-bold text-blue-brand">
         {detailsSectionHeading}
       </div>
     )
@@ -131,7 +140,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
   }) {
     if (!detailsSectionList) return null
     return (
-      <ul className="ml-8 mr-2 list-disc">
+      <ul className="mb-4 ml-8 mr-2 list-disc">
         {detailsSectionList.map((detailsSectionListItem) => (
           <li key={detailsSectionListItem}>{detailsSectionListItem}</li>
         ))}
