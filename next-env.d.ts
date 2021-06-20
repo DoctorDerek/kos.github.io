@@ -80,7 +80,6 @@ type BlogPostFrontMatter = {
  */
 type PageFrontMatter = {
   slug: string
-  // slug is detected
   title: string
   heading: string | string[]
   fullWidth?: boolean
