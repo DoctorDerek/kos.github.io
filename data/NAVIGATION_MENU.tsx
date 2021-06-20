@@ -7,7 +7,7 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
         "Residential",
         [
           [
-            "Residential Internet",
+            "Home Internet",
             "/home-internet-in-kingston-ontario/residential-services",
           ],
           [
