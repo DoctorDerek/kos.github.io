@@ -63,9 +63,9 @@ type BlogPostFrontMatter = {
 /**
  * Frontmatter type used as pages array in PageLayout.tsx
  *
- * @typeParam slug - The URL slug
- * @typeParam title - The page title
- * @typeParam heading - The page heading
+ * @typeParam slug - The URL slug - based on the filename of the Markdown file
+ * @typeParam title - The page title as a string ("**Home Internet** in ON")
+ * @typeParam heading - The page heading(s) as a string or array (["One","Two"])
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                        or narrow like the informational pages (false)
  * @typeParam showAvailabilityTool? - Whether to show the post code search tool
@@ -80,9 +80,9 @@ type BlogPostFrontMatter = {
  */
 type PageFrontMatter = {
   slug: string
-  // slug is detected automatically from the filename of the Markdown file
+  // slug is detected
   title: string
-  heading: string
+  heading: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   hoverBulletNavMenu?: "Residential" | "Business"
