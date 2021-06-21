@@ -17,11 +17,12 @@ export default function HoverBulletNavItem({
   }
   const titleIncludes = (keyword: string) =>
     new RegExp(keyword, "i").exec(title as string)
-  const customIcon = titleIncludes("residential")
-    ? CUSTOM_ICONS["residential"]
-    : titleIncludes("business")
-    ? CUSTOM_ICONS["business"]
-    : null
+  const customIcon =
+    titleIncludes("residential") || titleIncludes("home")
+      ? CUSTOM_ICONS["residential"]
+      : titleIncludes("business")
+      ? CUSTOM_ICONS["business"]
+      : null
 
   return (
     <HoverBullet
