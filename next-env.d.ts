@@ -74,6 +74,8 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackages - An array of the PricingPackage objects / columns
  * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
+ * in the format of "$dollars.cents^footnotes duration" ... for example: ("ADD
+ * HOME PHONE SERVICE TO ANY HIGH SPEED INTERNET PACKAGE FOR $9.95^6 / month")
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
