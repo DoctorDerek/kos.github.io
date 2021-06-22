@@ -82,6 +82,7 @@ export default function PricingPackageColumn({
         <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
           <>
             {packageHeadings &&
+              packageHeadings.length > 0 &&
               packageHeadings.map((packageHeading: string) => (
                 <span
                   className="text-2xl leading-6 text-blue-brand"
