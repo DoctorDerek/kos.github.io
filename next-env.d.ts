@@ -75,7 +75,6 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
  *
- *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
  * /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
@@ -91,6 +90,7 @@ type PageFrontMatter = {
   pricingPackages: PricingPackage[]
   pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
   pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
+  pricingPackagesSectionDetailsPromotion?: string
 }
 
 /**

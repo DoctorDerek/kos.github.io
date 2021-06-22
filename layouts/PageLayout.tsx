@@ -4,12 +4,18 @@ import React from "react"
 import Image from "@/components/CustomImage"
 import Link from "@/components/Link"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
-import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
+import {
+  classNames,
+  addLinkToTextIfPresent,
+  extractDollarsCentsAndFootnotesFromPrice,
+} from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
 import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
 import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
+import HoverBox from "@/components/HoverBox"
+import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
 export default function PageLayout({
   children,
@@ -33,6 +39,7 @@ export default function PageLayout({
     pricingPackages,
     pricingPackagesSectionFootnotes,
     pricingPackagesSectionDetails,
+    pricingPackagesSectionDetailsPromotion,
   } = frontMatter
   const headings = Array.isArray(heading) ? heading : [heading]
   // support heading type, which is string | string[]
@@ -72,6 +79,7 @@ export default function PageLayout({
               <div className="py-12 text-3xl font-bold text-center text-blue-brand">
                 Additional Details & Options
               </div>
+              <PricingPackagesSectionDetailsPromotion />
               <PricingPackagesSectionDetailsSection
                 pricingPackagesSectionDetails={pricingPackagesSectionDetails}
               />
@@ -157,6 +165,46 @@ export default function PageLayout({
         )}
       </div>
     )
+  }
+
+  function PricingPackagesSectionDetailsPromotion() {
+    if (pricingPackagesSectionDetailsPromotion) {
+      const [, dollars, cents, footnotes, duration] =
+        extractDollarsCentsAndFootnotesFromPrice(
+          pricingPackagesSectionDetailsPromotion
+        )
+      return (
+        <>
+          <div className="max-w-6xl mx-auto mb-12">
+            <HoverBox>
+              <div className="max-w-3xl px-4 mx-auto text-3xl font-bold text-center text-red-brand">
+                ADD HOME PHONE SERVICE TO ANY HIGH SPEED INTERNET PACKAGE FOR
+                <span className="text-black">
+                  {" "}
+                  {dollars && (
+                    <>
+                      <span className="font-bold">${dollars}</span>
+                      {cents && <sup className="text-lg">.{cents}</sup>}
+                    </>
+                  )}
+                  {duration}
+                  {footnotes && (
+                    <>
+                      {" "}
+                      <PricingPackageColumnFootnotesAsLinks
+                        color="black"
+                        footnotes={footnotes}
+                      />
+                    </>
+                  )}
+                </span>
+              </div>
+            </HoverBox>
+          </div>
+        </>
+      )
+    }
+    return null
   }
 
   return <PageLayoutJSX />
