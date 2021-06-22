@@ -24,6 +24,14 @@ export default function PricingPackagesSectionDetails({
               pricingPackagesSectionDetail={pricingPackagesSectionDetail}
               backgroundColor={index % 2 === 1 ? "transparent" : "gray"}
             />
+            {
+              /*the <HoverBox> items are flex items; others are full-width*/
+              !pricingPackagesSectionDetail.useSmallHoverBox && (
+                <div className="w-full h-0">
+                  {/*flex break after full-width (useSmallHoverBox===false)*/}
+                </div>
+              )
+            }
           </Fragment>
         )
       )}
