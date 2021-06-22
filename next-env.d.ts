@@ -156,7 +156,7 @@ type PricingPackagesSectionFootnote = {
  * @typeParam detailsSectionHeading2 - A 2nd heading in the middle
  * @typeParam detailsSectionDescription2 - The description paragraph(s) below
  * @typeParam detailsSectionList2 - The details section bullets at the bottom
- * @typerParam useSmallHoverBox - Use small <HoverBox> or display full-width
+ * @typeParam useSmallHoverBox - Use small <HoverBox> or display full-width
  *
  * @remarks
  * This type contains the additional details listed for packages on the website.
