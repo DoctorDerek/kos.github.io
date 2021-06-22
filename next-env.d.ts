@@ -119,14 +119,14 @@ type PageFrontMatter = {
  */
 type PricingPackage = {
   packageName: string
-  packagePrices: string[]
-  packageHeadings: string[]
+  packagePrices: string | string[]
+  packageHeadings: string | string[]
   packageDescription: string
   promotionHeading: string
   promotionSubheading: string
   promotionPrice: string
-  modalBullets: string[]
-  modalFootnotes: string[]
+  modalBullets: string | string[]
+  modalFootnotes: string | string[]
 }
 
 /**

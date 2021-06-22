@@ -19,11 +19,11 @@ export default function PricingPackageColumn({
 }) {
   const [openModal, setOpenModal] = useState(false) // track modal open/close
 
-  const {
+  let {
     packageName,
     packagePrices,
-    packageDescription,
     packageHeadings,
+    packageDescription,
     promotionHeading,
     promotionSubheading,
     promotionPrice,
@@ -39,6 +39,20 @@ export default function PricingPackageColumn({
     throw new Error(
       'At least one of modalBullets and/or modalFootnotes is required in the "click here for more details" pop-up modal in <PricingPackageColumn />'
     )
+  }
+
+  // support string | string[] for convenience
+  if (!Array.isArray(packagePrices)) {
+    packagePrices = [packagePrices]
+  }
+  if (!Array.isArray(packageHeadings)) {
+    packageHeadings = [packageHeadings]
+  }
+  if (!Array.isArray(modalBullets)) {
+    modalBullets = [modalBullets]
+  }
+  if (!Array.isArray(modalFootnotes)) {
+    modalFootnotes = [modalFootnotes]
   }
 
   function PricingPackageColumnJSX() {
@@ -71,7 +85,7 @@ export default function PricingPackageColumn({
               )}
             >
               <PricingPackageNameH2 />
-              {packagePrices.map((packagePrice) => (
+              {(packagePrices as string[]).map((packagePrice) => (
                 <Fragment key={packagePrice}>
                   <PricingPackagePrice packagePrice={packagePrice} />
                 </Fragment>
@@ -81,16 +95,14 @@ export default function PricingPackageColumn({
         </div>
         <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
           <>
-            {packageHeadings &&
-              packageHeadings.length > 0 &&
-              packageHeadings.map((packageHeading: string) => (
-                <span
-                  className="text-2xl leading-6 text-blue-brand"
-                  key={packageHeading}
-                >
-                  {packageHeading}
-                </span>
-              ))}
+            {(packageHeadings as string[]).map((packageHeading: string) => (
+              <span
+                className="text-2xl leading-6 text-blue-brand"
+                key={packageHeading}
+              >
+                {packageHeading}
+              </span>
+            ))}
           </>
           <PricingPackageNameH3 />
           <PricingPackageDescription />

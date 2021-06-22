@@ -14,9 +14,15 @@ export default function PricingPackageModal({
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
   packageName: string
-  modalBullets?: string[]
-  modalFootnotes?: string[]
+  modalBullets: string | string[]
+  modalFootnotes: string | string[]
 }) {
+  if (!Array.isArray(modalBullets)) {
+    modalBullets = [modalBullets]
+  }
+  if (!Array.isArray(modalFootnotes)) {
+    modalFootnotes = [modalFootnotes]
+  }
   function PricingPackageModalJSX() {
     return (
       <Transition.Root show={openModal} as={Fragment}>
@@ -102,7 +108,7 @@ export default function PricingPackageModal({
     return (
       <>
         {modalBullets && (
-          <HoverBulletList hoverBulletAsStrings={modalBullets} />
+          <HoverBulletList hoverBulletAsStrings={modalBullets as string[]} />
         )}
       </>
     )
@@ -111,7 +117,7 @@ export default function PricingPackageModal({
     return (
       <div className="mt-4 ml-6 text-xs sm:ml-8 lg:ml-10 xl:ml-12 sm:text-sm md:text-base lg:text-lg">
         {modalFootnotes &&
-          modalFootnotes.map((footnote: string) => (
+          (modalFootnotes as string[]).map((footnote: string) => (
             <div key={footnote}>{footnote}</div>
           ))}
       </div>
