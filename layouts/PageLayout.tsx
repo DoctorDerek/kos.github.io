@@ -189,13 +189,13 @@ export default function PageLayout({
                   )}
                   {duration}
                   {footnotes && (
-                    <>
+                    <sup className="text-lg">
                       {" "}
                       <PricingPackageColumnFootnotesAsLinks
                         color="black"
                         footnotes={footnotes}
                       />
-                    </>
+                    </sup>
                   )}
                 </span>
               </div>
