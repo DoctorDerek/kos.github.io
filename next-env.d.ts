@@ -156,6 +156,7 @@ type PricingPackagesSectionFootnote = {
  * @typeParam detailsSectionHeading2 - A 2nd heading in the middle
  * @typeParam detailsSectionDescription2 - The description paragraph(s) below
  * @typeParam detailsSectionList2 - The details section bullets at the bottom
+ * @typeParam showOrderNowButton - Show a red "Order Now" button at the bottom
  * @typeParam useSmallHoverBox - Use small <HoverBox> or display full-width
  *
  * @remarks
@@ -168,5 +169,6 @@ type PricingPackagesSectionDetail = {
   detailsSectionHeading2?: string
   detailsSectionDescription2?: string | string[]
   detailsSectionList2?: string[]
+  showOrderNowButton?: boolean
   useSmallHoverBox: boolean
 }

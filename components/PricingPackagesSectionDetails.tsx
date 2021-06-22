@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
+import OrderNowButton from "@/components/OrderNowButton"
 
 export default function PricingPackagesSectionDetails({
   pricingPackagesSectionDetails,
@@ -61,6 +62,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
     detailsSectionHeading2,
     detailsSectionDescription2,
     detailsSectionList2,
+    showOrderNowButton,
     useSmallHoverBox,
   } = pricingPackagesSectionDetail
 
@@ -75,6 +77,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
         )}
       >
         <PricingPackagesSectionDetailsSectionIndividualInnerJSX />
+        {showOrderNowButton ? <OrderNowButton /> : <></>}
       </HoverBox>
     )
   }
