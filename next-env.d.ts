@@ -71,8 +71,10 @@ type BlogPostFrontMatter = {
  * @typeParam showAvailabilityTool? - Whether to show the post code search tool
  * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
  * @typeParam showGetConnectedButton - Whether to show "Order Now" at the bottom
- * @typeParam pricingPackages - The page title
- * @typeParam pricingPackagesSectionFootnotes - The page heading
+ * @typeParam pricingPackages - An array of the PricingPackage objects / columns
+ * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
+ * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
+ *
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
