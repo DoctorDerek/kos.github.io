@@ -42,27 +42,30 @@ export const extractDollarsCentsAndFootnotesFromPrice = (price: string) => {
 /**
  * Wrap the given footnote or comma-separated footnotes in a <sup> superscript * tag, if footnotes are present in the format "Up to 4 Mbps performance^6"
  * where ^6 or ^1,2 are footnotes. Full Markdown support is not wanted here.
- * @returns JSX Element
+ * @returns JSX Element with the footnotes separated by spaces in a <sup> tag
  */
 export const formatFootnotesAsSuperscriptIfPresent = (stringToTest: string) => {
   const footnotesMatchArray = /(.*)\^([\d,]+)?(.*)?/.exec(stringToTest)
   if (footnotesMatchArray) {
     const [, before, footnotesWithCommas, after] = footnotesMatchArray
-    const footnotesWithSpaces = footnotesWithCommas.replaceAll(",", " ")
-    return (
-      <>
-        {before}
-        <sup>{footnotesWithSpaces}</sup>
-        {after}
-      </>
-    )
-  } else return <>{stringToTest}</>
+    if (footnotesWithCommas) {
+      const footnotesWithSpaces = footnotesWithCommas.replaceAll(",", " ")
+      return (
+        <>
+          {before}
+          <sup>{footnotesWithSpaces}</sup>
+          {after}
+        </>
+      )
+    }
+  }
+  return <>{stringToTest}</>
 }
 
 /**
  * Add a Next.js <Link> to replace a single <a> or <Link> found in the
  * given string, if any. Full Markdown support is not wanted here.
- * @returns JSX Element
+ * @returns JSX Element including the correct <Link href=""> element
  */
 export const addLinkToTextIfPresent = (stringToTest: string) => {
   const linkRegExp =
@@ -70,14 +73,17 @@ export const addLinkToTextIfPresent = (stringToTest: string) => {
   const matchResults = linkRegExp.exec(stringToTest)
   if (matchResults) {
     const [, before, href, linkText, after] = matchResults
-    return (
-      <>
-        {before}
-        <Link href={href} className="underline text-blue-brand">
-          {linkText}
-        </Link>
-        {after}
-      </>
-    )
-  } else return <>{stringToTest}</>
+    if (href && linkText) {
+      return (
+        <>
+          {before}
+          <Link href={href} className="underline text-blue-brand">
+            {linkText}
+          </Link>
+          {after}
+        </>
+      )
+    }
+  }
+  return <>{stringToTest}</>
 }
