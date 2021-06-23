@@ -76,13 +76,21 @@ export default function PageLayout({
                   }
                 />
               </div>
-              <div className="py-12 text-3xl font-bold text-center text-blue-brand">
-                Additional Details & Options
-              </div>
-              <PricingPackagesSectionDetailsPromotion />
-              <PricingPackagesSectionDetailsSection
-                pricingPackagesSectionDetails={pricingPackagesSectionDetails}
-              />
+              {pricingPackagesSectionDetails &&
+                Array.isArray(pricingPackagesSectionDetails) &&
+                pricingPackagesSectionDetails.length > 0 && (
+                  <>
+                    <div className="py-12 text-3xl font-bold text-center text-blue-brand">
+                      Additional Details & Options
+                    </div>
+                    <PricingPackagesSectionDetailsPromotion />
+                    <PricingPackagesSectionDetailsSection
+                      pricingPackagesSectionDetails={
+                        pricingPackagesSectionDetails
+                      }
+                    />
+                  </>
+                )}
             </div>
           )}
           <HoverBulletNavMenuAndOrderNowButton />
