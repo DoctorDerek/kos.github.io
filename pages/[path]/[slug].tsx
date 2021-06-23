@@ -4,23 +4,34 @@ import PricingPageLayout from "@/layouts/PricingPageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 
-const PATH = "home-internet-in-kingston-ontario"
+const PATHS = [
+  "home-internet-in-kingston-ontario",
+  "business-internet-in-kingston-ontario",
+]
 
 export async function getStaticPaths() {
-  const posts = await getFiles(PATH)
+  let posts: string[] = []
+  let paths: any[] = []
+  PATHS.forEach(async (path: string) => {
+    posts = await getFiles(path)
+    posts.forEach((postSlug: string) => {
+      paths.push({
+        params: {
+          path: path,
+          slug: formatSlug(postSlug),
+        },
+      })
+    })
+  })
 
   return {
-    paths: posts.map((p: string) => ({
-      params: {
-        slug: formatSlug(p),
-      },
-    })),
+    paths: paths,
     fallback: false,
   }
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const post = await getFileBySlug(PATH, params.slug)
+  const post = await getFileBySlug(params.path, params.slug)
 
   return { props: { post } }
 }
