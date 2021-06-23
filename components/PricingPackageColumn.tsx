@@ -5,6 +5,7 @@ import PricingPackagePromotionHoverBox from "@/components/PricingPackageColumnPr
 import {
   classNames,
   extractDollarsCentsAndFootnotesFromPrice,
+  formatFootnotesAsSuperscriptIfPresent,
 } from "@/lib/utils"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
@@ -105,7 +106,11 @@ export default function PricingPackageColumn({
                 className="text-2xl leading-6 text-blue-brand"
                 key={packageHeading}
               >
-                {packageHeading}
+                {
+                  // wrap any footnotes in the format ^1,2 that are found in
+                  // { packageHeading } inside a <sup> superscript tag
+                  formatFootnotesAsSuperscriptIfPresent(packageHeading)
+                }
               </span>
             ))}
           </>
