@@ -17,7 +17,7 @@ import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSe
 import HoverBox from "@/components/HoverBox"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
-export default function PageLayout({
+export default function PricingPageLayout({
   children,
   frontMatter,
   next,

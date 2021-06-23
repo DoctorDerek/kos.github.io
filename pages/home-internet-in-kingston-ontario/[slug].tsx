@@ -5,7 +5,7 @@ import {
   getAllFilesFrontMatter,
   formatSlug,
 } from "@/lib/mdx"
-import PageLayout from "@/layouts/PageLayout"
+import PricingPageLayout from "@/layouts/PricingPageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 
@@ -53,9 +53,9 @@ export default function Blog({
   return (
     <>
       {frontMatter.draft !== true ? (
-        <PageLayout frontMatter={frontMatter} prev={prev} next={next}>
+        <PricingPageLayout frontMatter={frontMatter} prev={prev} next={next}>
           {content}
-        </PageLayout>
+        </PricingPageLayout>
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
