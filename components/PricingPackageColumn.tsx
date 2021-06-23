@@ -40,6 +40,11 @@ export default function PricingPackageColumn({
       'At least one of modalBullets and/or modalFootnotes is required in the "click here for more details" pop-up modal in <PricingPackageColumn />'
     )
   }
+  if (packageHeadings === undefined) {
+    throw new Error(
+      'packageHeadings is required in <PricingPackageColumn>. For no headings, please use the empty string "" using packageHeadings: "" in the Markdown file.'
+    )
+  }
 
   // support string | string[] for convenience
   if (!Array.isArray(packagePrices)) {
