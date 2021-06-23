@@ -2,6 +2,7 @@ import { Fragment } from "react"
 import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
 import OrderNowButton from "@/components/OrderNowButton"
+import HoverBulletList from "@/components/HoverBulletList"
 
 export default function PricingPackagesSectionDetails({
   pricingPackagesSectionDetails,
@@ -59,9 +60,11 @@ function PricingPackagesSectionDetailsSectionIndividual({
     detailsSectionHeading1,
     detailsSectionDescription1,
     detailsSectionList1,
+    detailsSectionListIndent1,
     detailsSectionHeading2,
     detailsSectionDescription2,
     detailsSectionList2,
+    detailsSectionListIndent2,
     showOrderNowButton,
     useSmallHoverBox,
   } = pricingPackagesSectionDetail
@@ -89,11 +92,19 @@ function PricingPackagesSectionDetailsSectionIndividual({
           detailsSectionDescription={detailsSectionDescription1}
         />
         <DetailsSectionList detailsSectionList={detailsSectionList1} />
+        <DetailsSectionList
+          detailsSectionList={detailsSectionListIndent1}
+          indent={true}
+        />
         <DetailsSectionHeading detailsSectionHeading={detailsSectionHeading2} />
         <DetailsSectionDescription
           detailsSectionDescription={detailsSectionDescription2}
         />
         <DetailsSectionList detailsSectionList={detailsSectionList2} />
+        <DetailsSectionList
+          detailsSectionList={detailsSectionListIndent2}
+          indent={true}
+        />
       </>
     )
   }
@@ -137,11 +148,20 @@ function PricingPackagesSectionDetailsSectionIndividual({
 
   function DetailsSectionList({
     detailsSectionList,
+    indent = false,
   }: {
     detailsSectionList?: string[]
+    indent?: boolean
   }) {
     if (!detailsSectionList) return null
-    return (
+    return indent ? (
+      <div className="mb-4 ml-8 mr-2">
+        <HoverBulletList
+          hoverBulletAsStrings={detailsSectionList}
+          responsive={false}
+        />
+      </div>
+    ) : (
       <ul className="mb-4 ml-8 mr-2 list-disc">
         {detailsSectionList.map((detailsSectionListItem) => (
           <li key={detailsSectionListItem}>{detailsSectionListItem}</li>

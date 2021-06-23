@@ -153,9 +153,11 @@ type PricingPackagesSectionFootnote = {
  * @typeParam detailsSectionHeading1 - The 1st heading at the top
  * @typeParam detailsSectionDescription1 - The description paragraph(s) at top
  * @typeParam detailsSectionList1 - The details section bullets for the top part
+ * @typeParam detailsSectionListIndent1 - An indented bulleted list for the top
  * @typeParam detailsSectionHeading2 - A 2nd heading in the middle
  * @typeParam detailsSectionDescription2 - The description paragraph(s) below
  * @typeParam detailsSectionList2 - The details section bullets at the bottom
+ * @typeParam detailsSectionListIndent2 - An indented bulleted list at bottom
  * @typeParam showOrderNowButton - Show a red "Order Now" button at the bottom
  * @typeParam useSmallHoverBox - Use small <HoverBox> or display full-width
  *
@@ -166,9 +168,11 @@ type PricingPackagesSectionDetail = {
   detailsSectionHeading1?: string
   detailsSectionDescription1?: string | string[]
   detailsSectionList1?: string[]
+  detailsSectionListIndent1?: string[]
   detailsSectionHeading2?: string
   detailsSectionDescription2?: string | string[]
   detailsSectionList2?: string[]
+  detailsSectionListIndent2?: string[]
   showOrderNowButton?: boolean
   useSmallHoverBox: boolean
 }

@@ -21,7 +21,7 @@ export default function HoverBulletList({
   return (
     <ul
       className={classNames(
-        "mt-4",
+        "mt-0",
         responsive ? "text-sm sm:text-base md:text-lg lg:text-xl" : ""
       )}
     >
