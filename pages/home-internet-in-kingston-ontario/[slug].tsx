@@ -1,10 +1,5 @@
 import { MDXRemote } from "next-mdx-remote"
-import {
-  getFiles,
-  getFileBySlug,
-  getAllFilesFrontMatter,
-  formatSlug,
-} from "@/lib/mdx"
+import { getFiles, getFileBySlug, formatSlug } from "@/lib/mdx"
 import PricingPageLayout from "@/layouts/PricingPageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
@@ -25,26 +20,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const allPages = await getAllFilesFrontMatter(PATH)
-  const postIndex =
-    allPages.findIndex &&
-    allPages.findIndex((page: PageFrontMatter) => page.slug === params.slug)
-  const prev = allPages[postIndex + 1] || null
-  const next = allPages[postIndex - 1] || null
   const post = await getFileBySlug(PATH, params.slug)
 
-  return { props: { post, prev, next } }
+  return { props: { post } }
 }
 
-export default function Blog({
-  post,
-  prev,
-  next,
-}: {
-  post: any
-  prev: any
-  next: any
-}) {
+export default function Blog({ post }: { post: any }) {
   const { mdxSource, frontMatter } = post
   const content = (
     <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
@@ -53,7 +34,7 @@ export default function Blog({
   return (
     <>
       {frontMatter.draft !== true ? (
-        <PricingPageLayout frontMatter={frontMatter} prev={prev} next={next}>
+        <PricingPageLayout frontMatter={frontMatter}>
           {content}
         </PricingPageLayout>
       ) : (

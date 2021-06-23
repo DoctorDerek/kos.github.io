@@ -20,13 +20,9 @@ import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageCol
 export default function PricingPageLayout({
   children,
   frontMatter,
-  next,
-  prev,
 }: {
   children?: JSX.Element | JSX.Element[] | React.ReactNode
   frontMatter: PageFrontMatter
-  next?: PageFrontMatter
-  prev?: PageFrontMatter
 }): JSX.Element {
   const {
     slug,
