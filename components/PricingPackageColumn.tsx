@@ -151,7 +151,7 @@ export default function PricingPackageColumn({
   }
 
   function PricingPackageNameH3() {
-    return <h3 className="text-base text-gray-700">{packageName}</h3>
+    return <h3 className="text-2xl text-gray-700">{packageName}</h3>
   }
   function PricingPackageHeadings() {
     return (
@@ -172,7 +172,7 @@ export default function PricingPackageColumn({
     )
   }
   function PricingPackageDescription() {
-    return <p className="text-black">{packageDescription}</p>
+    return <p className="text-lg text-black">{packageDescription}</p>
   }
   function PricingPackageModalWithButton() {
     return (
@@ -182,7 +182,7 @@ export default function PricingPackageColumn({
           onClick={() => setOpenModal((state) => !state)}
         >
           »{" "}
-          <span className="border-b-2 border-current border-solid">
+          <span className="text-lg border-b-2 border-current border-solid">
             click here for full details
           </span>
         </button>
