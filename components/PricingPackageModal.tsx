@@ -25,7 +25,7 @@ export default function PricingPackageModal({
         <Dialog
           as="div"
           static
-          className="fixed inset-0 z-20 overflow-y-auto"
+          className="fixed inset-0 z-30 overflow-y-auto"
           open={openModal}
           onClose={() => setOpenModal(false)}
         >
