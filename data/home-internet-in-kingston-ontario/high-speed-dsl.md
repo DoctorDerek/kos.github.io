@@ -141,8 +141,7 @@ pricingPackagesSectionFootnotes:
       description: "Only in regions where technology is available",
     },
   ]
-pricingPackagesSectionDetailsPromotion: "ADD HOME PHONE SERVICE TO ANY HIGH SPEED
-INTERNET PACKAGE FOR $9.95 / month"
+pricingPackagesSectionDetailsPromotion: "ADD HOME PHONE SERVICE TO ANY HIGH SPEED INTERNET PACKAGE FOR $9.95 / month"
 pricingPackagesSectionDetails:
   [
     {
