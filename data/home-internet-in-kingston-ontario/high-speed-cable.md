@@ -140,10 +140,9 @@ pricingPackagesSectionDetails:
     },
     {
       detailsSectionHeading1: "REQUIREMENTS",
-      detailsSectionDescription1: "",
+      detailsSectionDescription1: "To access the Internet with KOS CABLE, you will need:",
       detailsSectionList1:
         [
-          "To access the Internet with KOS CABLE, you will need:",
           "Supported Cable Modem Required (Rental Available)",
           "Modern 32-bit or 64-bit Operating System (Windows 7 minimum)",
           "Minimum of 2.0Ghz processor required",
