@@ -25,6 +25,13 @@ export default function HoverBulletNavMenu({
   const headingNavMenuItem = [
     [title + " Services in Kingston & Belleville, ON", href],
   ] as NAVIGATION_MENU_TYPE[]
+
+  // calculate where to split the menu items array with .slice()
+  const midPointIndex =
+    bullets[type].length % 2 === 0
+      ? bullets[type].length / 2 + 1
+      : bullets[type].length / 2 / 2
+  const lastItemIndex = bullets[type].length
   return (
     <>
       <h4 className="font-bold">
@@ -34,12 +41,17 @@ export default function HoverBulletNavMenu({
         />
       </h4>
       <div className="flex flex-col pt-4 md:space-x-16 md:flex-row md:pt-0">
+        {/* left-hand menu */}
         <HoverBulletList
-          hoverBulletAsNavMenuItems={bullets[type].slice(1, 4)}
+          hoverBulletAsNavMenuItems={bullets[type].slice(1, midPointIndex)}
           responsive={true}
         />
+        {/* right-hand menu */}
         <HoverBulletList
-          hoverBulletAsNavMenuItems={bullets[type].slice(4, 7)}
+          hoverBulletAsNavMenuItems={bullets[type].slice(
+            midPointIndex,
+            lastItemIndex
+          )}
           responsive={true}
         />
       </div>
