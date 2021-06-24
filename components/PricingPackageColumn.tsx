@@ -172,7 +172,7 @@ export default function PricingPackageColumn({
     )
   }
   function PricingPackageDescription() {
-    return <p className="text-lg text-black">{packageDescription}</p>
+    return <p className="text-xl text-black">{packageDescription}</p>
   }
   function PricingPackageModalWithButton() {
     return (
