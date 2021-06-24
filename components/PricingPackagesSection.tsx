@@ -16,8 +16,11 @@ export default function PricingPackagesSection({
               pricingPackage={pricingPackage}
               columnNumber={index + 1}
             />
-            {index % 3 === 0 && index > 0 && (
-              <div className="w-full h-0">{/*flex break every 3 items*/}</div>
+            {(index + 1) % 3 === 0 && pricingPackages.length > 4 && (
+              <div className="w-full h-0">
+                {/*flex break every 3 items if there are more than 4 items*/
+                /*this improves the layout of 5- and 6-item pricing pages*/}
+              </div>
             )}
           </Fragment>
         ))}
