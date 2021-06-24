@@ -47,18 +47,18 @@ export default function PricingPackageColumn({
     )
   }
 
-  // support string | string[] for convenience
+  // support string | string[] for convenience by wrapping strings with an array
   if (!Array.isArray(packagePrices)) {
-    packagePrices = [packagePrices]
+    packagePrices = packagePrices === undefined ? [] : [packagePrices]
   }
   if (!Array.isArray(packageHeadings)) {
-    packageHeadings = [packageHeadings]
+    packageHeadings = packageHeadings === undefined ? [] : [packageHeadings]
   }
   if (!Array.isArray(modalBullets)) {
-    modalBullets = [modalBullets]
+    modalBullets = modalBullets === undefined ? [] : [modalBullets]
   }
   if (!Array.isArray(modalFootnotes)) {
-    modalFootnotes = [modalFootnotes]
+    modalFootnotes = modalFootnotes === undefined ? [] : [modalFootnotes]
   }
 
   function PricingPackageColumnJSX() {
@@ -190,8 +190,8 @@ export default function PricingPackageColumn({
           openModal={openModal}
           setOpenModal={setOpenModal}
           packageName={packageName}
-          modalBullets={modalBullets}
-          modalFootnotes={modalFootnotes}
+          modalBullets={modalBullets as string[]}
+          modalFootnotes={modalFootnotes as string[]}
         />
       </>
     )

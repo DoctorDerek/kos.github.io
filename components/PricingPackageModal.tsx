@@ -14,15 +14,11 @@ export default function PricingPackageModal({
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
   packageName: string
-  modalBullets: string | string[]
-  modalFootnotes: string | string[]
+  modalBullets: string[]
+  modalFootnotes: string[]
+  // for modalBullets and modalFootnotes, any string type has been
+  // converted to string[] already in <PricingPackageColumn>
 }) {
-  if (!Array.isArray(modalBullets)) {
-    modalBullets = [modalBullets]
-  }
-  if (!Array.isArray(modalFootnotes)) {
-    modalFootnotes = [modalFootnotes]
-  }
   function PricingPackageModalJSX() {
     return (
       <Transition.Root show={openModal} as={Fragment}>

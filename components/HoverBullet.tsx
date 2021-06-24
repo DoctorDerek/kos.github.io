@@ -3,7 +3,7 @@ import { BULLET } from "@/components/UTILS"
 import { classNames, formatFootnotesAsSuperscriptIfPresent } from "@/lib/utils"
 import Link from "@/components/Link"
 export default function HoverBullet({
-  text = "isRequired",
+  text,
   href = "",
   isCurrentPage = false,
   customIcon = null,
