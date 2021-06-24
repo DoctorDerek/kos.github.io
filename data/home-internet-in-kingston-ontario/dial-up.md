@@ -1,6 +1,6 @@
 ---
 title: "Residential **Dial Up Internet** in Kingston & Belleville, Ontario"
-heading: "Can’t get high speed in your area? Don’t use the internet very much but would like an email address? KOS-dial up service will do the trick. We offer a local call service area from Brighton to Gananoque."
+heading: "Can’t get high speed in your area? Don’t use the internet very much but would like an email address? KOS dial up service will do the trick. We offer a local call service area from Brighton to Gananoque."
 fullWidth: true
 hoverBulletNavMenu: "Residential"
 showGetConnectedButton: true
