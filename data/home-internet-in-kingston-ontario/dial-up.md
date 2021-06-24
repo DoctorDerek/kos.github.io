@@ -87,6 +87,23 @@ pricingPackages:
           "Concurrent logins charged at $1.00 per hour",
         ],
     },
+    {
+      packageName: "ACCELERATED DIAL UP",
+      packagePrices: ["FREE with existing package"],
+      packageHeadings:
+        [
+          "IMPROVE DIAL UP SPEED BY AS MUCH AS 5 TIMES",
+          "FREE WITH ANY OF OUR DIAL UP PACKAGES",
+        ],
+      packageDescription: "This is a FREE service from Kingston Online Services.",
+      modalBullets:
+        [
+          "#Why do customers want Accelerated Dial-up?",
+          "#It can improve the speed of dial-up as much as FIVE TIMES and really does make a tremendous difference in the speed of your dial-up services. This is a FREE service from Kingston Online Services.",
+          "#How Does it Work?",
+          "#When you browse to a web page with graphic images, our Accelerated Dial-up server first compresses the graphics, before sending them to your browser. The final result is up to five times more speed, with minimal loss in graphics quality. Start using Accelerated Dial-up by calling our office today, to get set up.",
+        ],
+    },
   ]
 pricingPackagesSectionDetails:
   [
