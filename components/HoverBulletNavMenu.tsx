@@ -19,6 +19,7 @@ export default function HoverBulletNavMenu({
 }: {
   type: "Residential" | "Business"
 }): JSX.Element {
+  // The heading is the main page, business-services or residential-services
   const headingForNavMenu = bullets[type].slice(0, 1)
   const [title, href] = headingForNavMenu[0] as string[]
   const headingNavMenuItem = [
