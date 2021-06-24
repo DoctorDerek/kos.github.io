@@ -158,7 +158,7 @@ export default function PricingPackageColumn({
       <>
         {(packageHeadings as string[]).map((packageHeading: string) => (
           <span
-            className="text-2xl leading-6 text-blue-brand"
+            className="text-3xl leading-6 text-blue-brand"
             key={packageHeading}
           >
             {
