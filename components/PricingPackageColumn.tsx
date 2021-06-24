@@ -100,20 +100,7 @@ export default function PricingPackageColumn({
           </div>
         </div>
         <div className="flex flex-col px-10 mx-2 mt-56 space-y-6 text-center">
-          <>
-            {(packageHeadings as string[]).map((packageHeading: string) => (
-              <span
-                className="text-2xl leading-6 text-blue-brand"
-                key={packageHeading}
-              >
-                {
-                  // wrap any footnotes in the format ^1,2 that are found in
-                  // { packageHeading } inside a <sup> superscript tag
-                  formatFootnotesAsSuperscriptIfPresent(packageHeading)
-                }
-              </span>
-            ))}
-          </>
+          <PricingPackageHeadings />
           <PricingPackageNameH3 />
           <PricingPackageDescription />
           <PricingPackageModalWithButton />
@@ -165,6 +152,24 @@ export default function PricingPackageColumn({
 
   function PricingPackageNameH3() {
     return <h3 className="text-base text-gray-700">{packageName}</h3>
+  }
+  function PricingPackageHeadings() {
+    return (
+      <>
+        {(packageHeadings as string[]).map((packageHeading: string) => (
+          <span
+            className="text-2xl leading-6 text-blue-brand"
+            key={packageHeading}
+          >
+            {
+              // wrap any footnotes in the format ^1,2 that are found in
+              // { packageHeading } inside a <sup> superscript tag
+              formatFootnotesAsSuperscriptIfPresent(packageHeading)
+            }
+          </span>
+        ))}
+      </>
+    )
   }
   function PricingPackageDescription() {
     return <p className="text-black">{packageDescription}</p>
