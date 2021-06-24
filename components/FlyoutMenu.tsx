@@ -161,9 +161,9 @@ export default function FlyoutMenu({
                   static
                   className={classNames(
                     (layout === "inner" &&
-                      "absolute top-0 z-10 w-64 left-44") as string,
+                      "absolute top-0 z-20 w-64 left-44") as string,
                     (layout === "outer" &&
-                      "absolute left-[-1.75rem] z-10 w-64 px-2 mt-2") as string
+                      "absolute left-[-1.75rem] z-20 w-64 px-2 mt-2") as string
                   )}
                   ref={dropdownRef}
                   key={"PopoverPanel" + parent + title}
