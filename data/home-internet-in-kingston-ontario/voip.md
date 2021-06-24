@@ -76,7 +76,7 @@ pricingPackages:
     },
     {
       packageName: "GLOBAL",
-      packagePrices: ["$14.95^7,8 per month"],
+      packagePrices: ["$29.95^7,8 per month"],
       packageHeadings:
         [
           "UNLIMITED LOCAL AND CANADA-WIDE CALLING^7",
