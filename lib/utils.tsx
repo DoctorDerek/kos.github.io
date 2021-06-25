@@ -49,7 +49,7 @@ export const formatFootnotesAsSuperscriptIfPresent = (stringToTest: string) => {
   if (footnotesMatchArray) {
     const [, before, footnotesWithCommas, after] = footnotesMatchArray
     if (footnotesWithCommas) {
-      const footnotesWithSpaces = footnotesWithCommas.replaceAll(",", " ")
+      const footnotesWithSpaces = footnotesWithCommas.replace(/,/g, " ")
       return (
         <>
           {before}
