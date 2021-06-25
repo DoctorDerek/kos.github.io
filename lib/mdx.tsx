@@ -1,10 +1,12 @@
+import MDXComponents from "@/components/MDXComponents"
 import fs from "fs"
 import matter from "gray-matter"
-import { visit } from "unist-util-visit"
+import { serialize } from "next-mdx-remote/serialize"
 import path from "path"
 import readingTime from "reading-time"
-import { serialize } from "next-mdx-remote/serialize"
+import visit from "unist-util-visit"
 import imgToJsx from "./img-to-jsx"
+import getAllFilesRecursively from "./utils/files"
 
 const root = process.cwd()
 
@@ -22,21 +24,26 @@ const tokenClassNames = {
   comment: "text-gray-400 italic",
 }
 
-export async function getFiles(type: any) {
-  return fs.readdirSync(path.join(root, "data", type))
+export function getFiles(type: string) {
+  const prefixPaths = path.join(root, "data", type)
+  const files = getAllFilesRecursively(prefixPaths)
+  // Only want to return blog/path and ignore root, replace is needed to work on Windows
+  return files.map((file: any) =>
+    file.slice(prefixPaths.length + 1).replace(/\\/g, "/")
+  )
 }
 
-export function formatSlug(slug: any) {
+export function formatSlug(slug: string) {
   return slug.replace(/\.(mdx|md)/, "")
 }
 
-export function dateSortDesc(a: any, b: any) {
+export function dateSortDesc(a: Date, b: Date) {
   if (a > b) return -1
   if (a < b) return 1
   return 0
 }
 
-export async function getFileBySlug(type: any, slug: any) {
+export async function getFileBySlug(type: string, slug: string) {
   const mdxPath = path.join(root, "data", type, `${slug}.mdx`)
   const mdPath = path.join(root, "data", type, `${slug}.md`)
   const source = fs.existsSync(mdxPath)
@@ -45,6 +52,7 @@ export async function getFileBySlug(type: any, slug: any) {
 
   const { data, content } = matter(source)
   const mdxSource = await serialize(content, {
+    components: MDXComponents,
     mdxOptions: {
       remarkPlugins: [
         require("remark-slug"),
@@ -53,31 +61,18 @@ export async function getFileBySlug(type: any, slug: any) {
         require("remark-math"),
         imgToJsx,
       ],
-      // inlineNotes: true,
+      // @ts-expect-error
+      inlineNotes: true,
       rehypePlugins: [
         require("rehype-katex"),
         require("@mapbox/rehype-prism"),
         () => {
           return (tree) => {
-            /*tag: string; "attr-name": string; "attr-value": string; deleted: string; inserted: string; punctuation: string; keyword: string; string: string; function: string; boolean: string; comment*/
-            visit(tree, "element", (node: any) => {
-              let [token, type]: [
-                string,
-                (
-                  | "tag"
-                  | "attr-name"
-                  | "attr-value"
-                  | "deleted"
-                  | "inserted"
-                  | "punctuation"
-                  | "keyword"
-                  | "string"
-                  | "function"
-                  | "boolean"
-                  | "comment"
-                )
-              ] = node.properties.className || []
-              if (token === "token" && typeof type === "string") {
+            visit(tree, "element", (node, index, parent) => {
+              // @ts-expect-error
+              let [token, type] = node.properties.className || []
+              if (token === "token") {
+                // @ts-expect-error
                 node.properties.className = [tokenClassNames[type]]
               }
             })
@@ -90,7 +85,6 @@ export async function getFileBySlug(type: any, slug: any) {
   return {
     mdxSource,
     frontMatter: {
-      wordCount: content.split(/\s+/gu).length,
       readingTime: readingTime(content),
       slug: slug || null,
       fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
@@ -99,22 +93,23 @@ export async function getFileBySlug(type: any, slug: any) {
   }
 }
 
-export async function getAllFilesFrontMatter(
-  type: any
-): Promise<FrontMatter[]> {
-  const files = fs.readdirSync(path.join(root, "data", type))
+// @ts-expect-error
+export async function getAllFilesFrontMatter(folder) {
+  const prefixPaths = path.join(root, "data", folder)
 
-  const allFrontMatter = []
+  const files = getAllFilesRecursively(prefixPaths)
 
-  files.forEach((file) => {
-    const source = fs.readFileSync(path.join(root, "data", type, file), "utf8")
+  const allFrontMatter: any[] = []
+
+  files.forEach((file: any) => {
+    // Replace is needed to work on Windows
+    const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, "/")
+    const source = fs.readFileSync(file, "utf8")
     const { data } = matter(source)
     if (data.draft !== true) {
-      allFrontMatter.push({ ...data, slug: formatSlug(file) })
+      allFrontMatter.push({ ...data, slug: formatSlug(fileName) })
     }
   })
 
-  // @ts-expect-error
-  return getAllFilesFrontMatter
-  // Type '(type: any) => Promise<FrontMatter>' is missing the following properties from type 'FrontMatter': slug, date, title, summary, and 5 more.
+  return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
 }

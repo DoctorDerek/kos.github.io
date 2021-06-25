@@ -1,9 +1,8 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "@/components/Link"
-import { useRouter } from "next/router"
+import { useCurrentPath } from "@/lib/utils"
 const DEBUG = false
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)
@@ -45,14 +44,6 @@ const partOfCurrentPagePath = (
   }
 
   return false // not a match
-}
-
-const useCurrentPath = () => {
-  // fetch current page URL
-  const router = useRouter() // next/router
-  const currentPagePath = router.asPath
-
-  return currentPagePath
 }
 
 function classNames(...classes: string[]) {
@@ -170,9 +161,9 @@ export default function FlyoutMenu({
                   static
                   className={classNames(
                     (layout === "inner" &&
-                      "absolute top-0 z-10 w-64 left-44") as string,
+                      "absolute top-0 z-20 w-64 left-44") as string,
                     (layout === "outer" &&
-                      "absolute left-[-1.75rem] z-10 w-64 px-2 mt-2") as string
+                      "absolute left-[-1.75rem] z-20 w-64 px-2 mt-2") as string
                   )}
                   ref={dropdownRef}
                   key={"PopoverPanel" + parent + title}

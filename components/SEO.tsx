@@ -73,8 +73,11 @@ export const BlogSeo = ({
   tags: string[]
   images: OpenGraphImages[]
 }) => {
-  const publishedAt = new Date(date).toISOString()
-  const modifiedAt = new Date(lastmod || date).toISOString()
+  // use right now (current timestamp) if an empty string was passed in
+  const publishedAt = new Date(date ? date : new Date()).toISOString()
+  const modifiedAt = new Date(
+    lastmod || date ? lastmod || date : new Date()
+  ).toISOString()
   let imagesArr =
     images.length === 0
       ? [siteMetadata.socialBanner]

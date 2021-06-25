@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 w-36">
           <Link
             href="/order/"
-            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange active:focus:bg-[#005395] bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
+            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange active:focus:bg-blue-brand bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
           >
             Order now
           </Link>
@@ -41,12 +41,11 @@ export default function Header() {
               </div>
               <div className="text-xl font-bold lg:text-xl md:text-base whitespace-nowrap">
                 <div>
-                  Kingston:{" "}
-                  <span style={{ color: "#A80532" }}>613-549-8667</span>
+                  Kingston: <span className="text-red-brand">613-549-8667</span>
                 </div>
                 <div>
                   Belleville:{" "}
-                  <span style={{ color: "#A80532" }}>613-968-7137</span>
+                  <span className="text-red-brand">613-968-7137</span>
                 </div>
               </div>
             </div>

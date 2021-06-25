@@ -5,9 +5,11 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
     [
       [
         "Residential",
+        // old slug: /res/[slug]
+        // new slug: /home-internet-in-kingston-ontario/[slug]
         [
           [
-            "Residential Internet",
+            "Home Internet",
             "/home-internet-in-kingston-ontario/residential-services",
           ],
           [
@@ -29,15 +31,32 @@ const NAVIGATION_MENU: NAVIGATION_MENU_TYPE[] = [
       ],
       [
         "Business",
+        // old slug: /bus/[slug]
+        // new slug: /business-internet-in-kingston-ontario/[slug]
         [
-          ["Business Internet", "/business/"],
-          ["High Speed Cable", "/bus/high-speed-cable/"],
-          ["Wireless", "/bus/wireless/"],
-          ["High Speed DSL", "/bus/high-speed-dsl/"],
-          ["VoIP", "/bus/voip/"],
-          ["Mail", "/bus/mail/"],
-          ["Co Locate Server", "/bus/colocate-server/"],
-          ["Dial Up", "/bus/dial-up/"],
+          [
+            "Business Internet",
+            "/business-internet-in-kingston-ontario/business-services",
+          ],
+          [
+            "High Speed Cable",
+            "/business-internet-in-kingston-ontario/high-speed-cable",
+          ],
+          [
+            "Wireless Broadband",
+            "/business-internet-in-kingston-ontario/wireless-broadband",
+          ],
+          [
+            "High Speed DSL",
+            "/business-internet-in-kingston-ontario/high-speed-dsl",
+          ],
+          ["VoIP", "/business-internet-in-kingston-ontario/voip"],
+          ["Mail", "/business-internet-in-kingston-ontario/mail"],
+          [
+            "Co Locate Server",
+            "/business-internet-in-kingston-ontario/colocate-server",
+          ],
+          ["Dial Up", "/business-internet-in-kingston-ontario/dial-up"],
         ],
       ],
       ["Campgrounds", "/campgrounds/"],
