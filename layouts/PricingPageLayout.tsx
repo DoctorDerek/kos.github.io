@@ -44,7 +44,7 @@ export default function PricingPageLayout({
     return (
       <>
         <PageSeo
-          title={title.replaceAll("*", "")}
+          title={title.replace(/\*/g, "")}
           description=""
           url={`${siteMetadata.siteUrl}/${slug}`}
         />
