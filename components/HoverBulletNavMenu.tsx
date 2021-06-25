@@ -27,10 +27,7 @@ export default function HoverBulletNavMenu({
   ] as NAVIGATION_MENU_TYPE[]
 
   // calculate where to split the menu items array with .slice()
-  const midPointIndex =
-    bullets[type].length % 2 === 0
-      ? bullets[type].length / 2 + 1
-      : bullets[type].length / 2 / 2
+  const midPointIndex = bullets[type].length / 2 + 1
   const lastItemIndex = bullets[type].length
   return (
     <>
