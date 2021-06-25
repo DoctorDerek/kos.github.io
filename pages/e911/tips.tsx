@@ -1,5 +1,5 @@
 import Link from "@/components/Link"
-import { InternalTemplate } from "@/components/InternalTemplate"
+import { InternalTemplate } from "@/layouts/InternalTemplate"
 
 export default function E911Tips(): JSX.Element {
   const title = "e911 Tips"
