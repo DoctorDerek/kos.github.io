@@ -116,7 +116,7 @@ function PricingPackagesSectionDetailsSectionIndividual({
   }) {
     if (!detailsSectionHeading) return null
     return (
-      <div className="ml-2 font-bold text-blue-brand">
+      <div className="ml-2 text-lg font-bold text-blue-brand">
         {detailsSectionHeading}
       </div>
     )
