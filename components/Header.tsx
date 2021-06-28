@@ -66,7 +66,7 @@ export default function Header() {
                 </table>
               </div>
             </div>
-            <div className="text-base font-bold text-right text-blue-800 uppercase">
+            <div className="text-xs font-bold text-right text-blue-800 uppercase lg:text-base">
               CALL &amp; DISCUSS YOUR INTERNET NEEDS
             </div>
           </div>
