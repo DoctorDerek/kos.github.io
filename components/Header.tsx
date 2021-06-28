@@ -34,22 +34,39 @@ export default function Header() {
         </div>
 
         <Column>
-          <div className="text-xs font-normal text-right text-blue-800 uppercase">
+          <div className="flex flex-col group ">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
-              <div className="grid self-center w-8 h-8 p-1 mr-1 border-2 border-current border-solid rounded-full fill-current">
+              <div className="grid self-center w-12 h-12 p-1 mx-3 transition-all duration-500 border-2 border-current border-solid rounded-full fill-current group-hover:bg-blue-brand group-hover:text-gray-100">
                 <PhoneIcon />
               </div>
               <div className="text-xl font-bold lg:text-xl md:text-base whitespace-nowrap">
-                <div>
-                  Kingston: <span className="text-red-brand">613-549-8667</span>
-                </div>
-                <div>
-                  Belleville:{" "}
-                  <span className="text-red-brand">613-968-7137</span>
-                </div>
+                <table>
+                  <tr>
+                    <td>Kingston:&nbsp;</td>
+                    <td>
+                      <a
+                        href="tel:+1-613-549-8667"
+                        className="text-red-brand hover:underline"
+                      >
+                        613-549-8667
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Belleville:&nbsp;</td>
+                    <td>
+                      <a
+                        href="tel:+1-613-968-7137"
+                        className="text-red-brand hover:underline"
+                      >
+                        613-968-7137
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
-            <div className="text-xs text-right">
+            <div className="text-base font-bold text-right text-blue-800 uppercase">
               CALL &amp; DISCUSS YOUR INTERNET NEEDS
             </div>
           </div>

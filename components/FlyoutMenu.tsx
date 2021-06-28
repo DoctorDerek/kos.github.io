@@ -81,7 +81,7 @@ export default function FlyoutMenu({
   }
 
   const LINK_STYLES = classNames(
-    "py-5 px-1 text-base text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
+    "py-5 px-1 text-lg text-gray-900 uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
 
   const currentPagePath = useCurrentPath()
