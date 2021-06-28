@@ -1,29 +1,23 @@
 import { MDXRemote } from "next-mdx-remote"
-import { getFiles, getFileBySlug, formatSlug } from "@/lib/mdx"
+import getFilesRecursively from "@/lib/utils/files"
+import { getFileBySlug } from "@/lib/mdx"
 import PricingPageLayout from "@/layouts/PricingPageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 
-const PATHS = [
-  "home-internet-in-kingston-ontario",
-  "business-internet-in-kingston-ontario",
-]
-
 export async function getStaticPaths() {
-  let posts: string[] = []
   let paths: any[] = []
-  PATHS.forEach(async (path: string) => {
-    posts = await getFiles(path)
-    posts.forEach((postSlug: string) => {
-      paths.push({
-        params: {
-          path: path,
-          slug: formatSlug(postSlug),
-        },
-      })
-    })
-  })
-
+  const dataRegExpMarkdown = /(.+)?\\(.+)?\\(.+)?\.md/
+  // ["data\\hosting\\packages.md", "data", "hosting", "packages"]
+  paths = getFilesRecursively("data") // search 1 level recursively in @/data/
+    .map((path: string) => dataRegExpMarkdown.exec(path))
+    .filter((item: any[]) => Boolean(item)) // remove falsy
+    .map((item: any[]) => ({
+      params: {
+        path: item[2], // "hosting" (supports 1 directory)
+        slug: item[3], // "packages" (excluding .md or .mdx)
+      },
+    }))
   return {
     paths: paths,
     fallback: false,
