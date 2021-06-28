@@ -102,7 +102,7 @@ export default function PricingPackageColumn({
         <div className="flex flex-col px-2 mx-2 mt-56 space-y-6 text-center">
           <PricingPackageHeadings />
           <PricingPackageNameH3 />
-          <PricingPackageDescription />
+          {packageDescription && <PricingPackageDescription />}
           <PricingPackageModalWithButton />
           {promotionHeading && (
             <PricingPackagePromotionHoverBox
