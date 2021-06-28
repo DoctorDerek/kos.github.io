@@ -6,10 +6,10 @@ import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 
 export async function getStaticPaths() {
-  let paths: any[] = []
+  // search 1 level recursively in @/data/
   const dataRegExpMarkdown = /(.+)?\\(.+)?\\(.+)?\.md/
   // ["data\\hosting\\packages.md", "data", "hosting", "packages"]
-  paths = getFilesRecursively("data") // search 1 level recursively in @/data/
+  const paths: any[] = getFilesRecursively("data")
     .map((path: string) => dataRegExpMarkdown.exec(path))
     .filter((item: any[]) => Boolean(item)) // remove falsy
     .map((item: any[]) => ({
