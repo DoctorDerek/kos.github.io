@@ -99,7 +99,7 @@ export default function PricingPackageColumn({
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-2 mx-2 mt-56 space-y-6 text-center">
+        <div className="flex flex-col px-2 mx-2 space-y-5 text-center mt-58">
           <PricingPackageHeadings />
           <PricingPackageNameH3 />
           {packageDescription && <PricingPackageDescription />}
@@ -158,7 +158,7 @@ export default function PricingPackageColumn({
       <>
         {(packageHeadings as string[]).map((packageHeading: string) => (
           <span
-            className="text-3xl leading-6 text-blue-brand"
+            className="text-3xl leading-8 text-blue-brand"
             key={packageHeading}
           >
             {
