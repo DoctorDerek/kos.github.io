@@ -6,7 +6,7 @@ const pipe =
   (x: any) =>
     fns.reduce((v, f) => f(v), x)
 
-const flatternArray = (input: any) =>
+const flattenArray = (input: any) =>
   input.reduce(
     (acc: any, item: any) => [...acc, ...(Array.isArray(item) ? item : [item])],
     []
@@ -27,7 +27,7 @@ const getAllFilesRecursively = (folder: any) =>
   pipe(
     fs.readdirSync,
     map(pipe(pathJoinPrefix(folder), walkDir)),
-    flatternArray
+    flattenArray
   )(folder)
 
 export default getAllFilesRecursively

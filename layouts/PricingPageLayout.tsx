@@ -63,17 +63,20 @@ export default function PricingPageLayout({
               <PricingPackagesSection pricingPackages={pricingPackages} />
             </div>
           )}
-          {pricingPackagesSectionFootnotes && (
+          {(pricingPackagesSectionFootnotes ||
+            (Array.isArray(pricingPackagesSectionDetails) &&
+              pricingPackagesSectionDetails.length > 0)) && (
             <div className="py-6">
-              <div className="pt-12 text-center">
-                <PricingPackagesSectionFootnotes
-                  pricingPackagesSectionFootnotes={
-                    pricingPackagesSectionFootnotes
-                  }
-                />
-              </div>
-              {pricingPackagesSectionDetails &&
-                Array.isArray(pricingPackagesSectionDetails) &&
+              {pricingPackagesSectionFootnotes && (
+                <div className="pt-12 text-center">
+                  <PricingPackagesSectionFootnotes
+                    pricingPackagesSectionFootnotes={
+                      pricingPackagesSectionFootnotes
+                    }
+                  />
+                </div>
+              )}
+              {Array.isArray(pricingPackagesSectionDetails) &&
                 pricingPackagesSectionDetails.length > 0 && (
                   <>
                     <div className="py-12 text-3xl font-bold text-center text-blue-brand">
