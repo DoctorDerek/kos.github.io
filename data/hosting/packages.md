@@ -197,13 +197,7 @@ pricingPackages:
       modalFootnotes: "",
     },
   ]
-pricingPackagesSectionFootnotes:
-  [
-    {
-      footnoteLabel: "6",
-      description: "Only in regions where technology is available.",
-    },
-  ]
+pricingPackagesSectionFootnotes: ""
 pricingPackagesSectionDetails:
   [
     {
