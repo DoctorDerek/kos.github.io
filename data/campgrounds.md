@@ -9,27 +9,27 @@ pricingPackagesBlue:
     {
       packageName: "Daily*",
       packagePrices: ["$7.95 plus tax"],
-      useSmallHoverBox: true,
+      useSmallBlueBox: true,
     },
     {
       packageName: "Daily*",
       packagePrices: ["$7.95 plus tax"],
-      useSmallHoverBox: true,
+      useSmallBlueBox: true,
     },
     {
       packageName: "Daily*",
       packagePrices: ["$7.95 plus tax"],
-      useSmallHoverBox: true,
+      useSmallBlueBox: true,
     },
     {
       packageName: "Daily*",
       packagePrices: ["$7.95 plus tax"],
-      useSmallHoverBox: true,
+      useSmallBlueBox: true,
     },
     {
       packageName: "Daily*",
       packagePrices: ["$7.95 plus tax"],
-      useSmallHoverBox: false,
+      useSmallBlueBox: false,
     },
   ]
 pricingPackagesBlueFootnotes:

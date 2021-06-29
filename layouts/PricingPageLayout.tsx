@@ -97,12 +97,12 @@ export default function PricingPageLayout({
           {pricingPackagesBlue && (
             <>
               {pricingPackagesBlue.map((pricingPackageBlue) => {
-                const { packageName, packagePrices, useBlueHoverBox } =
+                const { packageName, packagePrices, useSmallBlueBox } =
                   pricingPackageBlue
                 return (
                   <div
                     key={packageName}
-                    className={classNames(useBlueHoverBox ? "w-64" : "w-full")}
+                    className={classNames(useSmallBlueBox ? "w-64" : "w-full")}
                   >
                     {packageName}
                     {packagePrices}
