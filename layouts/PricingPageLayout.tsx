@@ -92,7 +92,9 @@ export default function PricingPageLayout({
                 )}
             </div>
           )}
-          <HoverBulletNavMenuAndOrderNowButton />
+          {(hoverBulletNavMenu || showGetConnectedButton) && (
+            <HoverBulletNavMenuAndOrderNowButton />
+          )}
         </div>
       </>
     )
@@ -109,12 +111,19 @@ export default function PricingPageLayout({
         <h1 className="text-left color decor">
           <TitleJSXWithOptionalHighlighting />
         </h1>
-        <DIVIDER />
-        <div className="flex flex-col space-y-6">
-          <HeadingH2 />
-          <div className="prose">{children}</div>
-          {showAvailabilityTool && <PostalCodeCheckForm />}
-        </div>
+        {headings.length > 0 && (
+          <>
+            <DIVIDER />
+            <HeadingH2 />
+          </>
+        )}
+        <div className="prose">{children}</div>
+        {showAvailabilityTool && (
+          <>
+            <DIVIDER />
+            <PostalCodeCheckForm />
+          </>
+        )}
       </div>
     )
   }
