@@ -153,6 +153,7 @@ export default function PricingPackageColumn({
   function PricingPackageNameH3() {
     return <h3 className="text-2xl text-gray-700">{packageName}</h3>
   }
+
   function PricingPackageHeadings() {
     return (
       <>
@@ -171,9 +172,11 @@ export default function PricingPackageColumn({
       </>
     )
   }
+
   function PricingPackageDescription() {
     return <p className="text-xl text-black">{packageDescription}</p>
   }
+
   function PricingPackageModalWithButton() {
     return (
       <>
