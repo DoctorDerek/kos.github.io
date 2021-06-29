@@ -130,7 +130,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.gray.700"),
+            color: "black",
             a: {
               color: theme("colors.blue.500"),
               "&:hover": {
@@ -148,7 +148,7 @@ module.exports = {
               color: theme("colors.gray.900"),
             },
             h3: {
-              fontWeight: "600",
+              fontWeight: "700",
               color: theme("colors.red.brand"),
             },
             "h4,h5,h6": {
@@ -162,7 +162,6 @@ module.exports = {
             "ul li:before": {
               backgroundColor: theme("colors.red.brand"),
             },
-            strong: { color: theme("colors.gray.600") },
             blockquote: {
               color: theme("colors.gray.900"),
               borderLeftColor: theme("colors.gray.200"),
