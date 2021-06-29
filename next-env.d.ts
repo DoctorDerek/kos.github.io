@@ -76,6 +76,9 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
  * in the format of "$dollars.cents^footnotes duration" ... for example: ("ADD
  * HOME PHONE SERVICE TO ANY HIGH SPEED INTERNET PACKAGE FOR $9.95^6 / month")
+ * @typeParam pricingPackagesBlue - Rounded blue gradient boxes that can be
+ * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
+ * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
@@ -93,6 +96,8 @@ type PageFrontMatter = {
   pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
   pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
   pricingPackagesSectionDetailsPromotion?: string
+  pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
+  pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
 }
 
 /**
@@ -102,7 +107,6 @@ type PageFrontMatter = {
  * @typeParam packageName - The name of the package being advertised
  * @typeParam packagePrices - An array of "$dollars.cents^footnotes duration"
  *            (["$39.95^1,2 per month","$200.00^1 per year","No setup fee"])
- * @typeParam pricePerMonth - If present, price/yr^any,footnotes ("$39.95^1,2")
  * @typeParam packageHeadings - An array of headings (["UP TO 10.0 ...","DATA"])
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")

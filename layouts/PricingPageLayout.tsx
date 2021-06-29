@@ -36,6 +36,8 @@ export default function PricingPageLayout({
     pricingPackagesSectionFootnotes,
     pricingPackagesSectionDetails,
     pricingPackagesSectionDetailsPromotion,
+    pricingPackagesBlue,
+    pricingPackagesBlueFootnotes,
   } = frontMatter
   const headings = Array.isArray(heading) ? heading : [heading]
   // support heading type, which is string | string[]
@@ -91,6 +93,23 @@ export default function PricingPageLayout({
                   </>
                 )}
             </div>
+          )}
+          {pricingPackagesBlue && (
+            <>
+              {pricingPackagesBlue.map((pricingPackageBlue) => {
+                const { packageName, packagePrices, useBlueHoverBox } =
+                  pricingPackageBlue
+                return (
+                  <div
+                    key={packageName}
+                    className={classNames(useBlueHoverBox ? "w-64" : "w-full")}
+                  >
+                    {packageName}
+                    {packagePrices}
+                  </div>
+                )
+              })}
+            </>
           )}
           {(hoverBulletNavMenu || showGetConnectedButton) && (
             <HoverBulletNavMenuAndOrderNowButton />
