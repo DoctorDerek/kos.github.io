@@ -149,7 +149,7 @@ module.exports = {
             },
             h3: {
               fontWeight: "600",
-              color: theme("colors.gray.900"),
+              color: theme("colors.red.brand"),
             },
             "h4,h5,h6": {
               color: theme("colors.gray.900"),
@@ -160,7 +160,7 @@ module.exports = {
               color: theme("colors.gray.500"),
             },
             "ul li:before": {
-              backgroundColor: theme("colors.gray.500"),
+              backgroundColor: theme("colors.red.brand"),
             },
             strong: { color: theme("colors.gray.600") },
             blockquote: {
