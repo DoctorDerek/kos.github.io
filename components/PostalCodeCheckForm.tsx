@@ -1,7 +1,8 @@
 export default function PostalCodeCheckForm() {
   return (
     <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
-      <div className="flex flex-col px-2 py-2 space-y-2 transition duration-500 border-t-4 border-transparent border-solid hover:border-blue-brand md:py-4">
+      {/* modified <HoverBox> */}
+      <div className="flex flex-col px-0 py-0 transition duration-500 border-t-4 border-transparent border-solid hover:border-blue-brand">
         <form
           action="https://kos.net/dslavail/dslavail-check.php"
           method="post"
