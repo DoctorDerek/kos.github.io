@@ -43,9 +43,11 @@ export function dateSortDesc(a: Date, b: Date) {
   return 0
 }
 
-export async function getFileBySlug(type: string, slug: string) {
-  const mdxPath = path.join(root, "data", type, `${slug}.mdx`)
-  const mdPath = path.join(root, "data", type, `${slug}.md`)
+export async function getFileBySlug(slug: string | string[]) {
+  slug = Array.isArray(slug) ? slug.join("/") : slug
+  // the slug "hosting/campgrounds.md" is the entire path in the /data folder
+  const mdxPath = path.join(root, "data", `${slug}.mdx`)
+  const mdPath = path.join(root, "data", `${slug}.md`)
   const source = fs.existsSync(mdxPath)
     ? fs.readFileSync(mdxPath, "utf8")
     : fs.readFileSync(mdPath, "utf8")
