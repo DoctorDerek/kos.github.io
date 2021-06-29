@@ -5,27 +5,38 @@ import PricingPageLayout from "@/layouts/PricingPageLayout"
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
 
+/**
+ * [...slug] is a catch-all dynamic route in Next.js that globs all possible
+ * paths. The params object needs the query parameter slug as a string[] array.
+ */
 export async function getStaticPaths() {
-  // search 1 level recursively in @/data/
-  const dataRegExpMarkdown = /(.+)?\\(.+)?\\(.+)?\.md/
-  // ["data\\hosting\\packages.md", "data", "hosting", "packages"]
+  // search recursively in @/data/**
+  const dataRegExpMarkdown = /data\\(.+)?\.md/
+  // /data\\(.+)?\.md/.exec("data\\hosting\\packages.md")[1].split(/\\/).pop()
+  // => ["data\\hosting\\packages.md", "hosting\\packages"]
   const paths: any[] = getFilesRecursively("data")
     .map((path: string) => dataRegExpMarkdown.exec(path))
-    .filter((item: any[]) => Boolean(item)) // remove falsy
-    .map((item: any[]) => ({
-      params: {
-        path: item[2], // "hosting" (supports 1 directory)
-        slug: item[3], // "packages" (excluding .md or .mdx)
-      },
-    }))
+    .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
+    .map((matchItem: any[]) => {
+      const splitArray = matchItem[1].split("\\") // ["hosting","packages"]
+      return {
+        params: {
+          slug: splitArray,
+        },
+      }
+    })
   return {
     paths: paths,
     fallback: false,
   }
 }
 
-export async function getStaticProps({ params }: { params: any }) {
-  const post = await getFileBySlug(params.path, params.slug)
+export async function getStaticProps({
+  params,
+}: {
+  params: { slug: string[] }
+}) {
+  const post = await getFileBySlug(params.slug)
 
   return { props: { post } }
 }

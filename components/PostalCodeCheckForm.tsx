@@ -1,12 +1,19 @@
+import { useState } from "react"
+import { classNames } from "@/lib/utils"
+
 export default function PostalCodeCheckForm() {
+  const [showIframe, setShowIframe] = useState(false)
   return (
     <div className="transition duration-500 border border-gray-300 border-solid hover:shadow-md">
-      <div className="flex flex-col px-2 py-2 space-y-2 transition duration-500 border-t-4 border-transparent border-solid hover:border-blue-brand md:py-4">
+      {/* modified <HoverBox> */}
+      <div className="flex flex-col px-0 py-0 transition duration-500 border-t-4 border-transparent border-solid hover:border-blue-brand">
+        {" "}
         <form
           action="https://kos.net/dslavail/dslavail-check.php"
           method="post"
           name="dslcheck"
           className="flex"
+          target="Postal Code Search"
         >
           <input type="hidden" name="minidslc" value="1" />
           <input type="hidden" name="docheck" value="1" />
@@ -31,10 +38,22 @@ export default function PostalCodeCheckForm() {
                 name="sub"
                 id="sub"
                 className="px-1 text-white border border-black border-solid shadow-sm from-blue-600 bg-gradient-to-b to-blue-800"
+                onClick={() => setShowIframe(true)}
               />
             </div>
           </div>
         </form>
+        <iframe
+          frameBorder="0"
+          className={classNames(
+            showIframe ? "block" : "hidden",
+            "w-full h-64 mt-8"
+          )}
+          scrolling="no"
+          src=""
+          title="Postal Code Search"
+          name="Postal Code Search"
+        ></iframe>
       </div>
     </div>
   )
