@@ -540,17 +540,11 @@ button::-moz-focus-inner {
 
 body {
   font-family: "Open Sans", sans-serif;
-  @apply text-sm font-medium leading-5 text-black bg-white;
+  @apply text-lg font-medium leading-5 text-black bg-white;
 }
 
 p {
-  @apply mb-5 text-sm leading-5;
-}
-
-@media (max-width: 767px) {
-  p {
-    @apply mb-5 text-sm leading-5;
-  }
+  @apply mb-5 text-lg leading-5;
 }
 
 .color {
