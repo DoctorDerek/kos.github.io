@@ -159,8 +159,11 @@ export default function PricingPageLayout({
         {hoverBulletNavMenu && (
           <>
             <div className="pb-4 text-2xl font-semibold tracking-tight color">
-              Please <Link href="/contact">contact our office</Link> for more
-              information, or select from one of our services below.
+              Please{" "}
+              <Link href="/contact" className="hover:underline">
+                contact our office
+              </Link>{" "}
+              for more information, or select from one of our services below.
             </div>
             <HoverBulletNavMenu type={hoverBulletNavMenu} />
           </>
