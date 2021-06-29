@@ -127,14 +127,14 @@ export default function PricingPackageColumn({
     const [, dollars, cents, footnotes, duration] =
       extractDollarsCentsAndFootnotesFromPrice(packagePrice)
     return (
-      <div>
+      <div className="text-white">
         {dollars && (
-          <div className="text-white">
+          <div>
             <span className="text-5xl font-bold">${dollars}</span>
             {cents && <sup className="text-xl">.{cents}</sup>}
           </div>
         )}
-        <div className="text-xl text-white">
+        <div className="text-xl">
           {duration}
           {footnotes && (
             <>
