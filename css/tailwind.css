@@ -18,7 +18,7 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
 :focus {
   outline: none !important;
   box-shadow: 0 0 0 4px rgb(7, 89, 133) !important;
-  /* text-blue-800 === rgb(7, 89, 133) */
+  /* text-blue-brand === rgb(7, 89, 133) */
   border-color: transparent !important;
   border-radius: 3px;
 }
@@ -464,7 +464,7 @@ button::-moz-focus-inner {
 }
 
 .back-to-top:hover a {
-  @apply text-blue-800;
+  @apply text-blue-brand;
 }
 
 #footerSea {
@@ -554,7 +554,7 @@ p {
 }
 
 .color {
-  @apply text-blue-800;
+  @apply text-blue-brand;
 }
 
 h1,
@@ -754,7 +754,7 @@ button:active,
 
 .btn:hover,
 .btn:active {
-  @apply text-blue-800;
+  @apply text-blue-brand;
   background: #fff;
 }
 
@@ -797,7 +797,7 @@ button:active,
 }
 
 .social-links ul li a:hover {
-  @apply text-blue-800;
+  @apply text-blue-brand;
 }
 
 .service-item {
@@ -872,7 +872,7 @@ button:active,
 }
 
 .category-item .category-title {
-  @apply mb-3 text-blue-800;
+  @apply mb-3 text-blue-brand;
 }
 
 .category-item .category-image h5.category-title {
@@ -917,7 +917,7 @@ button:active,
 }
 
 .category-item .category-more-link > span {
-  @apply text-3xl text-blue-800 no-underline;
+  @apply text-3xl no-underline text-blue-brand;
 }
 
 .category-item .category-more-link:hover {
@@ -1037,7 +1037,7 @@ h2 + .category-carousel {
 }
 
 .text-num-num span {
-  @apply relative block w-20 h-20 text-4xl font-normal text-blue-800 bg-white rounded-full;
+  @apply relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand;
   line-height: 74px;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -1166,7 +1166,7 @@ h2 + .category-carousel {
 }
 
 .testimonials-item .testimonials-text:before {
-  @apply absolute text-6xl not-italic text-blue-800;
+  @apply absolute text-6xl not-italic text-blue-brand;
   content: "\e906";
   left: 22px;
   top: -25px;
@@ -1221,7 +1221,7 @@ h2 + .category-carousel {
 }
 
 .news-item-title {
-  @apply mb-2 text-blue-800;
+  @apply mb-2 text-blue-brand;
   line-height: 1.2em;
 }
 
@@ -1248,7 +1248,7 @@ h2 + .category-carousel {
 }
 
 .news-item-more-link a {
-  @apply text-3xl text-blue-800 no-underline;
+  @apply text-3xl no-underline text-blue-brand;
 }
 
 .news-item-more-link:hover {
@@ -2447,11 +2447,11 @@ h2 + .category-carousel {
   .navbar-nav > li > a:focus,
   .navbar-nav > li > button:hover,
   .navbar-nav > li > button:focus {
-    @apply text-blue-800 bg-transparent;
+    @apply bg-transparent text-blue-brand;
   }
   .navbar-nav > li.active > a,
   .navbar-nav > li.active > button {
-    @apply text-blue-800;
+    @apply text-blue-brand;
   }
   .navbar-nav .dropdown .dropdown-menu {
     @apply bottom-auto rounded-none;
@@ -2472,7 +2472,7 @@ h2 + .category-carousel {
   .navbar-nav .dropdown .dropdown-menu li > a:focus,
   .navbar-nav .dropdown .dropdown-menu li > button:hover,
   .navbar-nav .dropdown .dropdown-menu li > button:focus {
-    @apply text-blue-800 bg-transparent;
+    @apply bg-transparent text-blue-brand;
     border-bottom: 1px solid #f0f0f0;
   }
   .navbar-nav .dropdown .dropdown-menu li:last-child > a,
@@ -2569,7 +2569,7 @@ h2 + .category-carousel {
     @apply text-white;
   }
   header .navbar-toggle {
-    @apply absolute m-0 text-3xl text-blue-800;
+    @apply absolute m-0 text-3xl text-blue-brand;
     top: 16px;
     left: 5px;
     padding: 0 10px;
@@ -2654,7 +2654,7 @@ h2 + .category-carousel {
   .navbar-nav .dropdown .dropdown-menu li > a:focus,
   .navbar-nav .dropdown .dropdown-menu li > button:hover,
   .navbar-nav .dropdown .dropdown-menu li > button:focus {
-    @apply text-blue-800 bg-transparent;
+    @apply bg-transparent text-blue-brand;
     border-bottom: 1px solid #f0f0f0;
   }
   .navbar-nav .dropdown .dropdown-menu li:last-child > a {
