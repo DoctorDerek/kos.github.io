@@ -104,14 +104,16 @@ module.exports = {
         blue: {
           ...colors.lightBlue,
           // blue colors for PricingPackage & branding throughout
-          brand: "#005395", // KOS - main color
-          dark: "#00467e",
+          brand: "#005395", // KOS - main color - used in PricingPackageColumn
+          dark: "#00467e", // dark blue used for border of PricingPackageColumn
+          light: "#0a6eab", // light blue for bottom of BlueBox gradient
         },
         teal: {
           ...colors.lightBlue,
           // teal colors for PricingPackage
-          brand: "#28bceb", // KOS - rarely used
-          dark: "#1db3e3",
+          brand: "#28bceb", // KOS - rarely used - used in PricingPackageColumn
+          dark: "#1db3e3", // dark teal used for border of PricingPackageColumn
+          light: "#27bae9", // light teal for top of BlueBox gradient
         },
         red: {
           ...colors.red,
