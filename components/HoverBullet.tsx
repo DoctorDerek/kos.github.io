@@ -32,6 +32,7 @@ export default function HoverBullet({
         <Link
           href={href as string}
           className={classNames(
+            "text-black",
             hover || isCurrentPage ? "underline" : "no-underline"
           )}
         >
