@@ -91,6 +91,11 @@ module.exports = {
         228: "57rem",
         256: "64rem",
       },
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+        "10xl": "104rem",
+      },
       lineHeight: {
         11: "2.75rem",
         12: "3rem",
