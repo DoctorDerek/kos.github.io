@@ -2,7 +2,7 @@ import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import { Fragment } from "react"
 import Image from "@/components/CustomImage"
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
 import {
   classNames,

@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import Mail from "./mail.svg"
 import Github from "./github.svg"
 import Facebook from "./facebook.svg"

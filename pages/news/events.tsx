@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import { InternalTemplate } from "@/layouts/InternalTemplate"
 
 export default function Events(): JSX.Element {

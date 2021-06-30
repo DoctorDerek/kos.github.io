@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import Image from "@/components/CustomImage"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"

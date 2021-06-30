@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import ImageFixed from "next/image"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"

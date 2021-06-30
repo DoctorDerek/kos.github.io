@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 
 export const kebabCase = (str: string) => {
   const result =
