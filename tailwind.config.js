@@ -91,6 +91,11 @@ module.exports = {
         228: "57rem",
         256: "64rem",
       },
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+        "10xl": "104rem",
+      },
       lineHeight: {
         11: "2.75rem",
         12: "3rem",
@@ -104,14 +109,16 @@ module.exports = {
         blue: {
           ...colors.lightBlue,
           // blue colors for PricingPackage & branding throughout
-          brand: "#005395", // KOS - main color
-          dark: "#00467e",
+          brand: "#005395", // KOS - main color - used in PricingPackageColumn
+          dark: "#00467e", // dark blue used for border of PricingPackageColumn
+          light: "#0a6eab", // light blue for bottom of BlueBox gradient
         },
         teal: {
           ...colors.lightBlue,
           // teal colors for PricingPackage
-          brand: "#28bceb", // KOS - rarely used
-          dark: "#1db3e3",
+          brand: "#28bceb", // KOS - rarely used - used in PricingPackageColumn
+          dark: "#1db3e3", // dark teal used for border of PricingPackageColumn
+          light: "#27bae9", // light teal for top of BlueBox gradient
         },
         red: {
           ...colors.red,
@@ -130,13 +137,12 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme("colors.gray.700"),
+            color: "black",
             a: {
               color: theme("colors.blue.500"),
               "&:hover": {
                 color: theme("colors.blue.600"),
               },
-              code: { color: theme("colors.blue.400") },
             },
             h1: {
               fontWeight: "700",
@@ -149,26 +155,11 @@ module.exports = {
               color: theme("colors.gray.900"),
             },
             h3: {
-              fontWeight: "600",
-              color: theme("colors.gray.900"),
+              fontWeight: "700",
+              color: theme("colors.red.brand"),
             },
             "h4,h5,h6": {
               color: theme("colors.gray.900"),
-            },
-            code: {
-              color: theme("colors.pink.500"),
-              backgroundColor: theme("colors.gray.100"),
-              paddingLeft: "4px",
-              paddingRight: "4px",
-              paddingTop: "2px",
-              paddingBottom: "2px",
-              borderRadius: "0.25rem",
-            },
-            "code:before": {
-              content: "none",
-            },
-            "code:after": {
-              content: "none",
             },
             hr: { borderColor: theme("colors.gray.200") },
             "ol li:before": {
@@ -176,9 +167,8 @@ module.exports = {
               color: theme("colors.gray.500"),
             },
             "ul li:before": {
-              backgroundColor: theme("colors.gray.500"),
+              backgroundColor: theme("colors.red.brand"),
             },
-            strong: { color: theme("colors.gray.600") },
             blockquote: {
               color: theme("colors.gray.900"),
               borderLeftColor: theme("colors.gray.200"),

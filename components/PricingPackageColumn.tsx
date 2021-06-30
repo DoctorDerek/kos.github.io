@@ -127,14 +127,14 @@ export default function PricingPackageColumn({
     const [, dollars, cents, footnotes, duration] =
       extractDollarsCentsAndFootnotesFromPrice(packagePrice)
     return (
-      <div>
+      <div className="text-white">
         {dollars && (
-          <div className="text-white">
+          <div>
             <span className="text-5xl font-bold">${dollars}</span>
             {cents && <sup className="text-xl">.{cents}</sup>}
           </div>
         )}
-        <div className="text-xl text-white">
+        <div className="text-xl">
           {duration}
           {footnotes && (
             <>
@@ -153,6 +153,7 @@ export default function PricingPackageColumn({
   function PricingPackageNameH3() {
     return <h3 className="text-2xl text-gray-700">{packageName}</h3>
   }
+
   function PricingPackageHeadings() {
     return (
       <>
@@ -171,9 +172,11 @@ export default function PricingPackageColumn({
       </>
     )
   }
+
   function PricingPackageDescription() {
     return <p className="text-xl text-black">{packageDescription}</p>
   }
+
   function PricingPackageModalWithButton() {
     return (
       <>

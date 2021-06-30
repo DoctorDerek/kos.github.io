@@ -73,7 +73,9 @@ function PricingPackagesSectionDetailsSectionIndividual({
     return (
       <HoverBox
         className={classNames(
-          useSmallHoverBox ? "text-center w-96" : "text-left max-w-3xl",
+          // w-96 x 2 = max-w-3xl (2 "small" = 1 "full-width")
+          useSmallHoverBox ? "text-center w-96" : "text-left max-w-3xl w-full",
+          // small <HoverBox>s alternate gray / white (transparent) bg color
           useSmallHoverBox && backgroundColor === "gray"
             ? "bg-gray-100"
             : "bg-transparent"
