@@ -1,3 +1,5 @@
+import { addLinkToTextIfPresent } from "@/lib/utils"
+
 export default function PricingPackagesSectionFootnotes({
   pricingPackagesSectionFootnotes,
 }: {
@@ -10,7 +12,7 @@ export default function PricingPackagesSectionFootnotes({
           const { footnoteLabel, description } = pricingPackagesSectionFootnote
           return (
             <li id={footnoteLabel} key={footnoteLabel + description}>
-              {footnoteLabel}) {description}
+              {footnoteLabel}) {addLinkToTextIfPresent(description)}
             </li>
           )
         }
