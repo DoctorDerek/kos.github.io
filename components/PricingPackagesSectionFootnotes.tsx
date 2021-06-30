@@ -12,7 +12,10 @@ export default function PricingPackagesSectionFootnotes({
           const { footnoteLabel, description } = pricingPackagesSectionFootnote
           return (
             <li id={footnoteLabel} key={footnoteLabel + description}>
-              {footnoteLabel}) {addLinkToTextIfPresent(description)}
+              {footnoteLabel.includes("*")
+                ? footnoteLabel
+                : `${footnoteLabel}) `}
+              {addLinkToTextIfPresent(description)}
             </li>
           )
         }
