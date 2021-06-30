@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import Link from "next/link"
+import { classNames } from "@/lib/utils"
 
 const CustomLink = ({
   href,
@@ -15,6 +16,15 @@ const CustomLink = ({
 }) => {
   const isInternalLink = href && href.startsWith("/")
   const isAnchorLink = href && href.startsWith("#")
+
+  // add default Tailwind classes to Link styles
+  className = className ? className : "" // handle undefined
+  className = className.includes("underline") // handle "no-underline"
+    ? className
+    : classNames(className, "underline")
+  className = className.includes("text-") // handle "text-black"
+    ? className
+    : classNames(className, "text-blue-brand")
 
   if (isInternalLink) {
     return (
