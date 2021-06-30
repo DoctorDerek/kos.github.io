@@ -19,9 +19,9 @@ const CustomLink = ({
 
   // add default Tailwind classes to Link styles
   className = className ? className : "" // handle undefined
-  className = className.includes("underline") // handle "no-underline"
+  className = className.includes("underline") // handle "underline"
     ? className
-    : classNames(className, "underline")
+    : classNames(className, "no-underline hover:underline")
   className = className.includes("text-") // handle "text-black"
     ? className
     : classNames(className, "text-blue-brand")
