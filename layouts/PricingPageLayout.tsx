@@ -277,7 +277,7 @@ export default function PricingPageLayout({
           <>
             <div className="pb-4 text-2xl font-semibold tracking-tight color">
               Please{" "}
-              <Link href="/contact" className="hover:underline">
+              <Link href="/contact" className="text-black">
                 contact our office
               </Link>{" "}
               for more information, or select from one of our services below.

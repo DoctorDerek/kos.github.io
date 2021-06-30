@@ -43,14 +43,13 @@ pricingPackagesBlueFootnotes:
     { footnoteLabel: "1", description: "Connection limited to one device" },
     {
       footnoteLabel: "2",
-      description: 'Connection limited to two devices – Please <Link href="contact">call</Link> to activate second device',
+      description: "Connection limited to two devices – Please [call](/contact) to activate second device",
     },
     {
       footnoteLabel: "*",
       description: "Credit card required for all packages",
     },
   ]
-pricingPackagesSectionDetails: 'Connection limited to two devices – Please <Link href="contact">call</Link> to activate second device'
 ---
 
 ### KOS is offering wireless internet service at the following campgrounds in Ontario:

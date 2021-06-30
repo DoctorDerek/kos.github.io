@@ -87,7 +87,10 @@ export default function Footer() {
           <div className="footer-bot">
             <div className="text-base">
               <div id="plemx-root" />
-              <Link href="https://www.theweathernetwork.com">
+              <Link
+                href="https://www.theweathernetwork.com"
+                className="text-gray-900"
+              >
                 The Weather Network
               </Link>
             </div>

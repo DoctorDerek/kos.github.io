@@ -64,26 +64,42 @@ export const formatFootnotesAsSuperscriptIfPresent = (stringToTest: string) => {
 
 /**
  * Add a Next.js <Link> to replace a single <a> or <Link> found in the
- * given string, if any. Full Markdown support is not wanted here.
+ * given string, if any. Full Markdown support is not wanted here, but
+ * Markdown format of [title](https://www.example.com) is supported.
+ *
  * @returns JSX Element including the correct <Link href=""> element
  */
 export const addLinkToTextIfPresent = (stringToTest: string) => {
   const linkRegExp =
     /(.*)<[aL]i?n?k?.+href=['"](.+)['"].*>(.+)<\/[aL]i?n?k?>(.*)/
-  const matchResults = linkRegExp.exec(stringToTest)
-  if (matchResults) {
-    const [, before, href, linkText, after] = matchResults
+  const linkMatchResults = linkRegExp.exec(stringToTest)
+  if (linkMatchResults) {
+    const [, before, href, linkText, after] = linkMatchResults
     if (href && linkText) {
       return (
         <>
           {before}
-          <Link href={href} className="underline text-blue-brand">
-            {linkText}
-          </Link>
+          <Link href={href}>{linkText}</Link>
           {after}
         </>
       )
     }
   }
+
+  const markdownRegExp = /(.*)\[(.+)\]\((.+)\)(.*)/
+  const markdownMatchResults = markdownRegExp.exec(stringToTest)
+  if (markdownMatchResults) {
+    const [, before, linkText, href, after] = markdownMatchResults
+    if (href && linkText) {
+      return (
+        <>
+          {before}
+          <Link href={href}>{linkText}</Link>
+          {after}
+        </>
+      )
+    }
+  }
+
   return <>{stringToTest}</>
 }
