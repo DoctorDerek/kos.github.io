@@ -139,9 +139,10 @@ module.exports = {
           css: {
             color: "black",
             a: {
-              color: theme("colors.blue.500"),
+              color: theme("colors.blue.brand"),
+              textDecoration: "none",
               "&:hover": {
-                color: theme("colors.blue.600"),
+                textDecoration: "underline",
               },
             },
             h1: {
