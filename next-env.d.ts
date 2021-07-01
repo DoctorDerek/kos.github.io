@@ -82,6 +82,7 @@ type BlogPostFrontMatter = {
  * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
  * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
  * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
+ * Note: prose has "width: 65ch" for readability (720px) so is not "fullWidth"
  *
  * @remarks
  * This type is used for reading the Markdown (.md) files that generate the site
