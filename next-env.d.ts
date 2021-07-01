@@ -61,7 +61,7 @@ type BlogPostFrontMatter = {
 }
 
 /**
- * Frontmatter type used as pages array in PageLayout.tsx
+ * Frontmatter type used as pages array in PricingPageLayout.tsx
  *
  * @typeParam slug - The URL slug - based on the filename of the Markdown file
  * @typeParam title - The page title as a string ("**Home Internet** in ON")
