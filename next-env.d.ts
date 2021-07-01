@@ -84,20 +84,19 @@ type BlogPostFrontMatter = {
  * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
  *
  * @remarks
- * This type is used for the Markdown for pricing pages of the site like
- * /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
+ * This type is used for reading the Markdown (.md) files that generate the site
  */
 type PageFrontMatter = {
   slug: string
   title: string
-  heading: string | string[]
+  heading?: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   hoverBulletNavMenu?: "Residential" | "Business"
   showGetConnectedButton?: boolean
-  pricingPackages: PricingPackage[]
-  pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
-  pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
+  pricingPackages?: PricingPackage[]
+  pricingPackagesSectionFootnotes?: PricingPackagesSectionFootnote[]
+  pricingPackagesSectionDetails?: PricingPackagesSectionDetail[]
   pricingPackagesSectionDetailsPromotion?: string
   pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
@@ -111,6 +110,7 @@ type PageFrontMatter = {
  * @typeParam packagePrices - An array of "$dollars.cents^footnotes duration"
  *            (["$39.95^1,2 per month","$200.00^1 per year","No setup fee"])
  * @typeParam packageHeadings - An array of headings (["UP TO 10.0 ...","DATA"])
+ * If no packageHeadings are desired, use an empty string "" instead of nothing
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
  * @typeParam promotionSubheading: The second line of the promotion ("Add...")
@@ -118,22 +118,26 @@ type PageFrontMatter = {
  * @typeParam modalBullets - An array of bullets for the "details" pop-up modal;
  * headings start with # (["#Account Includes:","Up to 15.0 Mbps...","#Email"])
  * @typeParam modalFootnotes - An array of modal footnotes (["1. ...","* ..."])
+ * Note: At least one of modalBullets AND/OR modalFootnotes is required here
  *
  * @remarks
  * A PricingPackage contains the prices listed for sale to consumers on the
  * site, with optional promotion like an unlimited data project. If a package
  * doesn't have a promotion, leave promotionHeading blank (the empty string "").
+ *
+ * This type is used for each pricing packge on the pricing pages of the site,
+ * such as /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
  */
 type PricingPackage = {
   packageName: string
   packagePrices: string | string[]
   packageHeadings: string | string[]
-  packageDescription: string
-  promotionHeading: string
-  promotionSubheading: string
-  promotionPrice: string
-  modalBullets: string | string[]
-  modalFootnotes: string | string[]
+  packageDescription?: string
+  promotionHeading?: string
+  promotionSubheading?: string
+  promotionPrice?: string
+  modalBullets?: string | string[]
+  modalFootnotes?: string | string[]
 }
 
 /**
@@ -181,5 +185,5 @@ type PricingPackagesSectionDetail = {
   detailsSectionList2?: string[]
   detailsSectionListIndent2?: string[]
   showOrderNowButton?: boolean
-  useSmallHoverBox: boolean
+  useSmallHoverBox?: boolean
 }
