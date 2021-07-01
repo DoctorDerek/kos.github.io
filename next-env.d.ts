@@ -70,6 +70,7 @@ type BlogPostFrontMatter = {
  *                         or narrow like the informational pages (false).
  *                         Note: for readability "fullWidth" is max-5xl for text
  * @typeParam showAvailabilityTool? - Whether to show the post code search tool
+ * @typeParam featuredImage? - If present, show a image that matches "fullWidth"
  * @typeParam hoverBulletNavMenu? - Whether to show the <HoverBulletNavMenu>
  *                                  and if so which: "Residential" or "Business"
  * @typeParam showGetConnectedButton - Whether to show a "Get Connected" button
@@ -93,6 +94,7 @@ type PageFrontMatter = {
   heading?: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
+  featuredImage?: FeaturedImage
   hoverBulletNavMenu?: "Residential" | "Business"
   showGetConnectedButton?: boolean
   pricingPackages?: PricingPackage[]
@@ -101,6 +103,21 @@ type PageFrontMatter = {
   pricingPackagesSectionDetailsPromotion?: string
   pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
+}
+
+/**
+ * A FeaturedImage will be shown after the heading. All fields are required.
+ *
+ * @typeParam src - The URL: /public/images/image.jpg => "/images/image.jpg"
+ * @typeParam alt - The alternate text describing the image (without "Image of")
+ * @typeParam width - The width of the image in pixels ("500" or "500px")
+ * @typeParam height - The height of the image in pixels ("500" or "500px")
+ */
+type FeaturedImage = {
+  src: string
+  alt: string
+  width: string
+  height: string
 }
 
 /**

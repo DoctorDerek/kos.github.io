@@ -2,6 +2,7 @@ import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import { Fragment } from "react"
 import Image from "@/components/CustomImage"
+import ImageFixed from "next/image"
 import Link from "@/components/CustomLink"
 import { BUTTON, DIVIDER } from "@/components/UTILS"
 import {
@@ -30,6 +31,7 @@ export default function PricingPageLayout({
     heading,
     fullWidth,
     showAvailabilityTool,
+    featuredImage,
     hoverBulletNavMenu,
     showGetConnectedButton,
     pricingPackages,
@@ -225,6 +227,7 @@ export default function PricingPageLayout({
             <HeadingH2 />
           </>
         )}
+        {featuredImage && <ImageFixed {...featuredImage} />}
         {children && <div className="mb-4 prose">{children}</div>}
         {showAvailabilityTool && (
           <>
