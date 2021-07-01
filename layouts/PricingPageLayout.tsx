@@ -39,8 +39,8 @@ export default function PricingPageLayout({
     pricingPackagesBlue,
     pricingPackagesBlueFootnotes,
   } = frontMatter
-  const headings = Array.isArray(heading) ? heading : [heading]
   // support heading type, which is string | string[]
+  const headings = Array.isArray(heading) ? heading : [heading]
 
   function PageLayoutJSX() {
     return (
@@ -259,7 +259,7 @@ export default function PricingPageLayout({
   function HeadingH2() {
     return (
       <div className="flex flex-col space-y-6">
-        {headings.map((headingString: string) => (
+        {(headings as string[]).map((headingString: string) => (
           <h2 className="text-xl text-left" key={headingString}>
             {/*Up to one <a> or <Link> is supported in {headingString}*/}
             {addLinkToTextIfPresent(headingString)}

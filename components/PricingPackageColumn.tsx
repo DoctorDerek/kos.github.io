@@ -104,7 +104,7 @@ export default function PricingPackageColumn({
           <PricingPackageNameH3 />
           {packageDescription && <PricingPackageDescription />}
           <PricingPackageModalWithButton />
-          {promotionHeading && (
+          {promotionHeading && promotionSubheading && promotionPrice && (
             <PricingPackagePromotionHoverBox
               {...{
                 promotionHeading,
