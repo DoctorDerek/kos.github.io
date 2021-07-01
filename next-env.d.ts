@@ -67,10 +67,12 @@ type BlogPostFrontMatter = {
  * @typeParam title - The page title as a string ("**Home Internet** in ON")
  * @typeParam heading - The page heading(s) as a string or array (["One","Two"])
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
- *                        or narrow like the informational pages (false)
+ *                         or narrow like the informational pages (false).
+ *                         Note: for readability "fullWidth" is max-5xl for text
  * @typeParam showAvailabilityTool? - Whether to show the post code search tool
- * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
- * @typeParam showGetConnectedButton - Whether to show "Get Connected" button
+ * @typeParam hoverBulletNavMenu? - Whether to show the <HoverBulletNavMenu>
+ *                                  and if so which: "Residential" or "Business"
+ * @typeParam showGetConnectedButton - Whether to show a "Get Connected" button
  * @typeParam pricingPackages - An array of the PricingPackage objects / columns
  * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
@@ -79,6 +81,7 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackagesBlue - Rounded blue gradient boxes that can be
  * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
  * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
+ * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
  *
  * @remarks
  * This type is used for the Markdown for pricing pages of the site like
