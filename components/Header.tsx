@@ -41,28 +41,32 @@ export default function Header() {
               </div>
               <div className="text-xl font-bold lg:text-xl md:text-base whitespace-nowrap">
                 <table>
-                  <tr>
-                    <td>Kingston:&nbsp;</td>
-                    <td>
-                      <a
-                        href="tel:+1-613-549-8667"
-                        className="text-red-brand hover:underline"
-                      >
-                        613-549-8667
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Belleville:&nbsp;</td>
-                    <td>
-                      <a
-                        href="tel:+1-613-968-7137"
-                        className="text-red-brand hover:underline"
-                      >
-                        613-968-7137
-                      </a>
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <td>Kingston:&nbsp;</td>
+                      <td>
+                        <a
+                          href="tel:+1-613-549-8667"
+                          className="text-red-brand hover:underline"
+                        >
+                          613-549-8667
+                        </a>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <td>Belleville:&nbsp;</td>
+                      <td>
+                        <a
+                          href="tel:+1-613-968-7137"
+                          className="text-red-brand hover:underline"
+                        >
+                          613-968-7137
+                        </a>
+                      </td>
+                    </tr>
+                  </tfoot>
                 </table>
               </div>
             </div>
