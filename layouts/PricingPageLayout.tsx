@@ -222,18 +222,22 @@ export default function PricingPageLayout({
           <TitleJSXWithOptionalHighlighting />
         </h1>
         {headings.length > 0 && (
-          <>
+          <div className="mb-8">
             <DIVIDER />
             <HeadingH2 />
-          </>
+          </div>
         )}
-        {featuredImage && <ImageFixed {...featuredImage} />}
+        {featuredImage && (
+          <div className="mb-8">
+            <ImageFixed {...featuredImage} />
+          </div>
+        )}
         {children && <div className="mb-4 prose">{children}</div>}
         {showAvailabilityTool && (
-          <>
+          <div className="mb-4">
             <DIVIDER />
             <PostalCodeCheckForm />
-          </>
+          </div>
         )}
       </div>
     )
