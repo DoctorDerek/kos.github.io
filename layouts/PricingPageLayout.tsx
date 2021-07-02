@@ -17,6 +17,7 @@ import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSection
 import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
 import HoverBox from "@/components/HoverBox"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function PricingPageLayout({
   children,
@@ -41,6 +42,7 @@ export default function PricingPageLayout({
     pricingPackagesBlue,
     pricingPackagesBlueFootnotes,
     ourTeamSection,
+    iconColumnSection,
   } = frontMatter
   // support heading type, which is string | string[]
   const headings = Array.isArray(heading) ? heading : [heading]
@@ -203,12 +205,71 @@ export default function PricingPageLayout({
               )}
             </div>
           )}
+          {iconColumnSection && (
+            <div className="mb-16 text-center text-white">
+              <div className="grid w-full h-[600px]">
+                <Image src="/images/block-bg.jpg" alt="ocean" />
+              </div>
+              <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-490px]">
+                {iconColumnSection.heading && (
+                  <div className="text-5xl font-semibold">
+                    {iconColumnSection.heading}
+                    <div className="block mx-auto">
+                      <ImageFixed
+                        src="/images/h-decor-white.png"
+                        height="4px"
+                        width="64px"
+                        alt="ocean"
+                      />
+                    </div>
+                  </div>
+                )}
+                {iconColumnSection.iconColumns && (
+                  <div
+                    className={classNames(
+                      "grid",
+                      `grid-cols-${iconColumnSection.iconColumns.length}`
+                    )}
+                  >
+                    {(iconColumnSection.iconColumns as IconColumn[]).map(
+                      (iconColumn) => (
+                        <Fragment key={iconColumn.heading}>
+                          <IconColumn {...iconColumn} />
+                        </Fragment>
+                      )
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           {ourTeamSection && <OurTeamSection />}
           {(hoverBulletNavMenu || showGetConnectedButton) && (
             <HoverBulletNavMenuAndOrderNowButton />
           )}
         </div>
       </>
+    )
+  }
+
+  function IconColumn({
+    icon,
+    heading,
+    subheading,
+  }: {
+    icon: HeroIcon
+    heading: string
+    subheading: string
+  }) {
+    const HeroIconComponent = HERO_ICONS[icon]
+    return (
+      <div className="text-center">
+        <div className="w-16 h-16 mx-auto mt-6 mb-8">
+          {<HeroIconComponent />}
+        </div>
+        <div className="mb-3 text-4xl font-semibold">{heading}</div>
+        <div className="text-lg font-semibold leading-5">{subheading}</div>
+      </div>
     )
   }
 
@@ -240,7 +301,6 @@ export default function PricingPageLayout({
     name: string
     image: FeaturedImage
   }) {
-    console.table(image)
     return (
       <div className="mx-8 group">
         <ImageFixed
