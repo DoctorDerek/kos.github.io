@@ -82,6 +82,10 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackagesBlue - Rounded blue gradient boxes that can be
  * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
  * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
+ * @typeParam iconColumnSection? - Used to show <IconColumn>s on the /about page
+ * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
+ *
+ * The "children" are the React components generated from any included Markdown:
  * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
  * Note: prose has "width: 65ch" for readability (720px) so is not "fullWidth"
  *
@@ -103,8 +107,28 @@ type PageFrontMatter = {
   pricingPackagesSectionDetailsPromotion?: string
   pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
+  iconColumnSection?: { heading: string; iconColumns: IconColumn[] }
   ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
 }
+
+/**
+ * <IconColumn>s display marketing copy with an icon, heading, and subheading.
+ *
+ * @typeParam icon - The desired icon to be used ("user-group")
+ * @typeParam heading - The first line of text ("2500+")
+ * @typeParam subheading - The second line of text ("HAPPY CLIENTS")
+ */
+type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
+
+/**
+ * <HeroIcon>s are the supported icons from https://heroicons.com/ (free icons)
+ * All icons are used in their normal "outline" form, not their "solid" form.
+ * To add new <HeroIcon>s, add them here and in the file /lib/HERO_ICONS.tsx
+ *
+ * @typeParam icon - The name of the icon, hyphenated; they are imported as
+ * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
+ */
+type HeroIcon = "user-group" | "cog" | "clock"
 
 /**
  * A FeaturedImage will be shown after the heading. All fields are required.
