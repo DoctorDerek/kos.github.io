@@ -103,6 +103,7 @@ type PageFrontMatter = {
   pricingPackagesSectionDetailsPromotion?: string
   pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
+  ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
 }
 
 /**
@@ -118,6 +119,17 @@ type FeaturedImage = {
   alt: string
   width: string
   height: string
+}
+
+/**
+ * A TeamHeadshot is an employee's name & headshot for the About page.
+ *
+ * @typeParam name - Employee's name, as it should be shown on the site
+ * @typeParam image - The Employee's headshot with all required fields
+ */
+type TeamHeadshot = {
+  name: string
+  image: FeaturedImage
 }
 
 /**
