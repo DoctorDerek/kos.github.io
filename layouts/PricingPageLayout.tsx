@@ -40,6 +40,7 @@ export default function PricingPageLayout({
     pricingPackagesSectionDetailsPromotion,
     pricingPackagesBlue,
     pricingPackagesBlueFootnotes,
+    ourTeamSection,
   } = frontMatter
   // support heading type, which is string | string[]
   const headings = Array.isArray(heading) ? heading : [heading]
@@ -202,11 +203,53 @@ export default function PricingPageLayout({
               )}
             </div>
           )}
+          {ourTeamSection && <OurTeamSection />}
           {(hoverBulletNavMenu || showGetConnectedButton) && (
             <HoverBulletNavMenuAndOrderNowButton />
           )}
         </div>
       </>
+    )
+  }
+
+  function OurTeamSection() {
+    if (ourTeamSection) {
+      const { heading, teamHeadshots } = ourTeamSection
+      return (
+        <div className="mx-auto text-center">
+          <h2 className="text-blue-brand">{heading}</h2>
+          <DIVIDER />
+          <div className="flex flex-wrap justify-center">
+            {teamHeadshots.map(({ name, image }) => {
+              return (
+                <Fragment key={name}>
+                  <TeamHeadshot name={name} image={image} />
+                </Fragment>
+              )
+            })}
+          </div>
+        </div>
+      )
+    }
+    return null
+  }
+  function TeamHeadshot({
+    name,
+    image,
+  }: {
+    name: string
+    image: FeaturedImage
+  }) {
+    console.table(image)
+    return (
+      <div className="mx-8 group">
+        <ImageFixed
+          {...image}
+          className="transition-all duration-700 ease-out rounded-full group-hover:rounded-3xl transform-gpu"
+        />
+        {/* hover effect to transform from rounded-full to rounded-3xl */}
+        <div className="my-1 text-xl font-semibold text-blue-brand">{name}</div>
+      </div>
     )
   }
 
