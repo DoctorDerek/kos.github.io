@@ -14,8 +14,7 @@ import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
 import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
-import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
-import HoverBox from "@/components/HoverBox"
+import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPackagesSectionFootnotesAndDetails"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 import IconColumnSection from "@/components/IconColumnSection"
 
@@ -45,68 +44,34 @@ export default function PricingPageLayout({
     headings = headings === undefined ? [] : [headings]
   }
 
-  return <PageLayoutJSX />
-
-  function PageLayoutJSX() {
-    return (
-      <>
-        <PageSeo
-          title={title.replace(/\*/g, "")}
-          description=""
-          url={`${siteMetadata.siteUrl}/${slug}`}
-        />
-        <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
-          <Image src="/images/footer-bg.jpg" alt="" />
-          {/* alt="" acceptable for purely decorative elements */}
-        </div>
-        <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">
-          <TitleHeadingAndChildren />
-          <PricingPackagesSection pricingPackages={pricingPackages} />
-          <PricingPackagesSectionFootnotesAndDetails />
-          <PricingPackagesBlueSection />
-          <IconColumnSection iconColumnSection={iconColumnSection} />
-          <OurTeamSection />
-          <HoverBulletNavMenuAndGetConnectedButton />
-        </div>
-      </>
-    )
-  }
-
-  function PricingPackagesSectionFootnotesAndDetails() {
-    if (
-      !(
-        pricingPackagesSectionFootnotes ||
-        (Array.isArray(pricingPackagesSectionDetails) &&
-          pricingPackagesSectionDetails.length > 0)
-      )
-    ) {
-      return null
-    }
-
-    return (
-      <div className="py-6">
-        {pricingPackagesSectionFootnotes && (
-          <div className="pt-12 text-center">
-            <PricingPackagesSectionFootnotes
-              pricingPackagesSectionFootnotes={pricingPackagesSectionFootnotes}
-            />
-          </div>
-        )}
-        {Array.isArray(pricingPackagesSectionDetails) &&
-          pricingPackagesSectionDetails.length > 0 && (
-            <>
-              <div className="py-12 text-3xl font-bold text-center text-blue-brand">
-                Additional Details & Options
-              </div>
-              <PricingPackagesSectionDetailsPromotion />
-              <PricingPackagesSectionDetailsSection
-                pricingPackagesSectionDetails={pricingPackagesSectionDetails}
-              />
-            </>
-          )}
+  return (
+    <>
+      <PageSeo
+        title={title.replace(/\*/g, "")}
+        description=""
+        url={`${siteMetadata.siteUrl}/${slug}`}
+      />
+      <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
+        <Image src="/images/footer-bg.jpg" alt="" />
+        {/* alt="" acceptable for purely decorative elements */}
       </div>
-    )
-  }
+      <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">
+        <TitleHeadingAndChildren />
+        <PricingPackagesSection pricingPackages={pricingPackages} />
+        <PricingPackagesSectionFootnotesAndDetails
+          pricingPackagesSectionFootnotes={pricingPackagesSectionFootnotes}
+          pricingPackagesSectionDetails={pricingPackagesSectionDetails}
+          pricingPackagesSectionDetailsPromotion={
+            pricingPackagesSectionDetailsPromotion
+          }
+        />
+        <PricingPackagesBlueSection />
+        <IconColumnSection iconColumnSection={iconColumnSection} />
+        <OurTeamSection />
+        <HoverBulletNavMenuAndGetConnectedButton />
+      </div>
+    </>
+  )
 
   function PricingPackagesBlueSection() {
     if (!pricingPackagesBlue) return null
@@ -349,56 +314,6 @@ export default function PricingPageLayout({
           </div>
         )}
       </div>
-    )
-  }
-
-  function PricingPackagesSectionDetailsPromotion() {
-    if (!pricingPackagesSectionDetailsPromotion) return null
-
-    const [match, dollars, cents, footnotes, duration] =
-      extractDollarsCentsAndFootnotesFromPrice(
-        pricingPackagesSectionDetailsPromotion
-      )
-
-    let beforeMatch = ""
-    if (match !== duration) {
-      // we found a valid price match
-      const beforeMatchArray = /(.*)\$(\d+)\.?(\d+)?\^?([\d,]+)?(.+)?/.exec(
-        pricingPackagesSectionDetailsPromotion
-      )
-      // separate out the before subgroup i.e. beforeMatchArray[1], if any
-      beforeMatch = beforeMatchArray ? beforeMatchArray[1] : ""
-    }
-
-    return (
-      <>
-        <div className="max-w-6xl mx-auto mb-12">
-          <HoverBox>
-            <div className="max-w-3xl px-4 mx-auto text-3xl font-bold text-center text-red-brand">
-              {beforeMatch}
-              <span className="text-black">
-                {" "}
-                {dollars && (
-                  <>
-                    <span className="font-bold">${dollars}</span>
-                    {cents && <sup className="text-lg">.{cents}</sup>}
-                  </>
-                )}
-                {duration}
-                {footnotes && (
-                  <sup className="text-lg">
-                    {" "}
-                    <PricingPackageColumnFootnotesAsLinks
-                      color="black"
-                      footnotes={footnotes}
-                    />
-                  </sup>
-                )}
-              </span>
-            </div>
-          </HoverBox>
-        </div>
-      </>
     )
   }
 }
