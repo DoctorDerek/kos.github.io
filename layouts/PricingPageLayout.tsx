@@ -223,7 +223,7 @@ export default function PricingPageLayout({
     const { heading, iconColumns } = iconColumnSection
     if (!(heading && iconColumns)) return null
     return (
-      <div className="mb-16 text-center text-white">
+      <div className="my-16 text-center text-white">
         <div className="grid w-full h-[600px]">
           <Image src="/images/block-bg.jpg" alt="ocean" />
         </div>
