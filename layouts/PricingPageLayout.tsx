@@ -243,9 +243,7 @@ export default function PricingPageLayout({
             </div>
           )}
           {iconColumns && (
-            <div
-              className={classNames("grid", `grid-cols-${iconColumns.length}`)}
-            >
+            <div className="grid md:grid-cols-3">
               {iconColumns.map((iconColumn) => (
                 <Fragment key={iconColumn.heading}>
                   <IconColumn {...iconColumn} />
