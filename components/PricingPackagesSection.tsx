@@ -4,8 +4,9 @@ import PricingPackageColumn from "@/components/PricingPackageColumn"
 export default function PricingPackagesSection({
   pricingPackages,
 }: {
-  pricingPackages: PricingPackage[]
+  pricingPackages?: PricingPackage[]
 }) {
+  if (!pricingPackages) return null
   return (
     <div className="flex flex-wrap justify-center pt-6">
       {pricingPackages.map((pricingPackage, index) => (
