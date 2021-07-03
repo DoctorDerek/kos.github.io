@@ -17,6 +17,7 @@ import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSection
 import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPackagesSectionFootnotesAndDetails"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 import IconColumnSection from "@/components/IconColumnSection"
+import OurTeamSection from "@/components/OurTeamSection"
 
 export default function PricingPageLayout({
   slug,
@@ -67,7 +68,7 @@ export default function PricingPageLayout({
         />
         <PricingPackagesBlueSection />
         <IconColumnSection iconColumnSection={iconColumnSection} />
-        <OurTeamSection />
+        <OurTeamSection ourTeamSection={ourTeamSection} />
         <HoverBulletNavMenuAndGetConnectedButton />
       </div>
     </>
@@ -179,49 +180,6 @@ export default function PricingPageLayout({
             pricingPackagesSectionFootnotes={pricingPackagesBlueFootnotes}
           />
         )}
-      </div>
-    )
-  }
-
-  function OurTeamSection() {
-    if (!ourTeamSection) return null
-
-    const { heading, teamHeadshots } = ourTeamSection
-    if (!(heading && teamHeadshots)) return null
-
-    return (
-      <div className="mx-auto text-center">
-        <h2 className="text-blue-brand">{heading}</h2>
-        <DIVIDER />
-        <div className="flex flex-wrap justify-center">
-          {teamHeadshots.map(({ name, image }) => {
-            return (
-              <Fragment key={name}>
-                <TeamHeadshot name={name} image={image} />
-              </Fragment>
-            )
-          })}
-        </div>
-      </div>
-    )
-  }
-
-  function TeamHeadshot({
-    name,
-    image,
-  }: {
-    name: string
-    image: FeaturedImage
-  }) {
-    if (!(name && image)) return null
-    return (
-      <div className="mx-8 my-2 group">
-        <ImageFixed
-          {...image}
-          className="transition-all duration-700 ease-out rounded-full group-hover:rounded-3xl transform-gpu"
-        />
-        {/* hover effect to transform from rounded-full to rounded-3xl */}
-        <div className="my-1 text-xl font-semibold text-blue-brand">{name}</div>
       </div>
     )
   }
