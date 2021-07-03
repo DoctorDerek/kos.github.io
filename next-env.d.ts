@@ -122,6 +122,14 @@ type PageFrontMatter = {
 }
 
 /**
+ * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>
+ */
+type Post = {
+  mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
+  frontMatter: PageFrontMatter
+}
+
+/**
  * <IconColumn>s display marketing copy with an icon, heading, and subheading.
  *
  * @typeParam icon - The desired icon to be used ("user-group")
