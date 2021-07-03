@@ -95,7 +95,7 @@ type BlogPostFrontMatter = {
 type PageFrontMatter = {
   slug: string
   title: string
-  heading?: string | string[]
+  headings?: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage

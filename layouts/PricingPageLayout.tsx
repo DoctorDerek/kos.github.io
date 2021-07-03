@@ -20,33 +20,30 @@ import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageCol
 import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function PricingPageLayout({
+  slug,
+  title,
+  headings,
+  fullWidth,
+  showAvailabilityTool,
+  featuredImage,
+  hoverBulletNavMenu,
+  showGetConnectedButton,
+  pricingPackages,
+  pricingPackagesSectionFootnotes,
+  pricingPackagesSectionDetails,
+  pricingPackagesSectionDetailsPromotion,
+  pricingPackagesBlue,
+  pricingPackagesBlueFootnotes,
+  ourTeamSection,
+  iconColumnSection,
   children,
-  frontMatter,
-}: {
+}: PageFrontMatter & {
   children?: JSX.Element | JSX.Element[] | React.ReactNode
-  frontMatter: PageFrontMatter
 }): JSX.Element {
-  const {
-    slug,
-    title,
-    heading,
-    fullWidth,
-    showAvailabilityTool,
-    featuredImage,
-    hoverBulletNavMenu,
-    showGetConnectedButton,
-    pricingPackages,
-    pricingPackagesSectionFootnotes,
-    pricingPackagesSectionDetails,
-    pricingPackagesSectionDetailsPromotion,
-    pricingPackagesBlue,
-    pricingPackagesBlueFootnotes,
-    ourTeamSection,
-    iconColumnSection,
-  } = frontMatter
-
-  // support heading type, which is string | string[]
-  const headings = Array.isArray(heading) ? heading : [heading]
+  // support string | string[] for convenience by wrapping strings with an array
+  if (!Array.isArray(headings)) {
+    headings = headings === undefined ? [] : [headings]
+  }
 
   return <PageLayoutJSX />
 
