@@ -1,5 +1,5 @@
 ---
-title: "Our Company"
+title: "About Our Company **Kingston Online Services**"
 fullWidth: false
 ourTeamSection:
   {
