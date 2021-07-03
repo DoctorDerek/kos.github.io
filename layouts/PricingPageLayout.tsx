@@ -313,7 +313,7 @@ export default function PricingPageLayout({
   }) {
     if (!(name && image)) return null
     return (
-      <div className="mx-8 group">
+      <div className="mx-8 my-2 group">
         <ImageFixed
           {...image}
           className="transition-all duration-700 ease-out rounded-full group-hover:rounded-3xl transform-gpu"
