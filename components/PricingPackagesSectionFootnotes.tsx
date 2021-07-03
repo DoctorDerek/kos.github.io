@@ -3,8 +3,16 @@ import { addLinkToTextIfPresent } from "@/lib/utils"
 export default function PricingPackagesSectionFootnotes({
   pricingPackagesSectionFootnotes,
 }: {
-  pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
-}): JSX.Element {
+  pricingPackagesSectionFootnotes?: PricingPackagesSectionFootnote[]
+}) {
+  if (
+    !(
+      pricingPackagesSectionFootnotes &&
+      Array.isArray(pricingPackagesSectionFootnotes) &&
+      pricingPackagesSectionFootnotes.length > 0
+    )
+  )
+    return null
   return (
     <ol>
       {pricingPackagesSectionFootnotes.map(
