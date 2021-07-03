@@ -1,6 +1,6 @@
 ---
 title: "Business **High Speed DSL** Packages in Kingston & Belleville, Ontario"
-heading: "KOS Business DSL uses fast, reliable digital connections over your phone circuit, to let you talk on the phone and use the Internet at the same time. Ask about dry-loop services, if you do not have an active phone line."
+headings: "KOS Business DSL uses fast, reliable digital connections over your phone circuit, to let you talk on the phone and use the Internet at the same time. Ask about dry-loop services, if you do not have an active phone line."
 fullWidth: true
 hoverBulletNavMenu: "Business"
 showGetConnectedButton: true

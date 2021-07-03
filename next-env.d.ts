@@ -61,16 +61,19 @@ type BlogPostFrontMatter = {
 }
 
 /**
- * Frontmatter type used as pages array in PageLayout.tsx
+ * Frontmatter type used as pages array in PricingPageLayout.tsx
  *
  * @typeParam slug - The URL slug - based on the filename of the Markdown file
  * @typeParam title - The page title as a string ("**Home Internet** in ON")
  * @typeParam heading - The page heading(s) as a string or array (["One","Two"])
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
- *                        or narrow like the informational pages (false)
+ *                         or narrow like the informational pages (false).
+ *                         Note: for readability "fullWidth" is max-5xl for text
  * @typeParam showAvailabilityTool? - Whether to show the post code search tool
- * @typeParam hoverBulletNavMenu? - Whether to show the HoverBulletNavMenu
- * @typeParam showGetConnectedButton - Whether to show "Get Connected" button
+ * @typeParam featuredImage? - If present, show a image that matches "fullWidth"
+ * @typeParam hoverBulletNavMenu? - Whether to show the <HoverBulletNavMenu>
+ *                                  and if so which: "Residential" or "Business"
+ * @typeParam showGetConnectedButton - Whether to show a "Get Connected" button
  * @typeParam pricingPackages - An array of the PricingPackage objects / columns
  * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
@@ -79,25 +82,78 @@ type BlogPostFrontMatter = {
  * @typeParam pricingPackagesBlue - Rounded blue gradient boxes that can be
  * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
  * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
+ * @typeParam iconColumnSection? - Used to show <IconColumn>s on the /about page
+ * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
+ *
+ * The "children" are the React components generated from any included Markdown:
+ * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
+ * Note: prose has "width: 65ch" for readability (720px) so is not "fullWidth"
  *
  * @remarks
- * This type is used for the Markdown for pricing pages of the site like
- * /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
+ * This type is used for reading the Markdown (.md) files that generate the site
  */
 type PageFrontMatter = {
   slug: string
   title: string
-  heading: string | string[]
+  headings?: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
+  featuredImage?: FeaturedImage
   hoverBulletNavMenu?: "Residential" | "Business"
   showGetConnectedButton?: boolean
-  pricingPackages: PricingPackage[]
-  pricingPackagesSectionFootnotes: PricingPackagesSectionFootnote[]
-  pricingPackagesSectionDetails: PricingPackagesSectionDetail[]
+  pricingPackages?: PricingPackage[]
+  pricingPackagesSectionFootnotes?: PricingPackagesSectionFootnote[]
+  pricingPackagesSectionDetails?: PricingPackagesSectionDetail[]
   pricingPackagesSectionDetailsPromotion?: string
   pricingPackagesBlue?: (PricingPackage & { useSmallBlueBox: boolean })[]
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
+  iconColumnSection?: { heading: string; iconColumns: IconColumn[] }
+  ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
+}
+
+/**
+ * <IconColumn>s display marketing copy with an icon, heading, and subheading.
+ *
+ * @typeParam icon - The desired icon to be used ("user-group")
+ * @typeParam heading - The first line of text ("2500+")
+ * @typeParam subheading - The second line of text ("HAPPY CLIENTS")
+ */
+type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
+
+/**
+ * <HeroIcon>s are the supported icons from https://heroicons.com/ (free icons)
+ * All icons are used in their normal "outline" form, not their "solid" form.
+ * To add new <HeroIcon>s, add them here and in the file /lib/HERO_ICONS.tsx
+ *
+ * @typeParam icon - The name of the icon, hyphenated; they are imported as
+ * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
+ */
+type HeroIcon = "user-group" | "cog" | "clock"
+
+/**
+ * A FeaturedImage will be shown after the heading. All fields are required.
+ *
+ * @typeParam src - The URL: /public/images/image.jpg => "/images/image.jpg"
+ * @typeParam alt - The alternate text describing the image (without "Image of")
+ * @typeParam width - The width of the image in pixels ("500" or "500px")
+ * @typeParam height - The height of the image in pixels ("500" or "500px")
+ */
+type FeaturedImage = {
+  src: string
+  alt: string
+  width: string
+  height: string
+}
+
+/**
+ * A TeamHeadshot is an employee's name & headshot for the About page.
+ *
+ * @typeParam name - Employee's name, as it should be shown on the site
+ * @typeParam image - The Employee's headshot with all required fields
+ */
+type TeamHeadshot = {
+  name: string
+  image: FeaturedImage
 }
 
 /**
@@ -108,6 +164,7 @@ type PageFrontMatter = {
  * @typeParam packagePrices - An array of "$dollars.cents^footnotes duration"
  *            (["$39.95^1,2 per month","$200.00^1 per year","No setup fee"])
  * @typeParam packageHeadings - An array of headings (["UP TO 10.0 ...","DATA"])
+ * If no packageHeadings are desired, use an empty string "" instead of nothing
  * @typeParam packageDescription - The description paragraph for the package
  * @typeParam promotionHeading - If present, the promotion ("Make It Unlimited")
  * @typeParam promotionSubheading: The second line of the promotion ("Add...")
@@ -115,22 +172,26 @@ type PageFrontMatter = {
  * @typeParam modalBullets - An array of bullets for the "details" pop-up modal;
  * headings start with # (["#Account Includes:","Up to 15.0 Mbps...","#Email"])
  * @typeParam modalFootnotes - An array of modal footnotes (["1. ...","* ..."])
+ * Note: At least one of modalBullets AND/OR modalFootnotes is required here
  *
  * @remarks
  * A PricingPackage contains the prices listed for sale to consumers on the
  * site, with optional promotion like an unlimited data project. If a package
  * doesn't have a promotion, leave promotionHeading blank (the empty string "").
+ *
+ * This type is used for each pricing packge on the pricing pages of the site,
+ * such as /home-internet-in-kingston-and-belleville-ontario/high-speed-cable
  */
 type PricingPackage = {
   packageName: string
   packagePrices: string | string[]
   packageHeadings: string | string[]
-  packageDescription: string
-  promotionHeading: string
-  promotionSubheading: string
-  promotionPrice: string
-  modalBullets: string | string[]
-  modalFootnotes: string | string[]
+  packageDescription?: string
+  promotionHeading?: string
+  promotionSubheading?: string
+  promotionPrice?: string
+  modalBullets?: string | string[]
+  modalFootnotes?: string | string[]
 }
 
 /**
@@ -178,5 +239,5 @@ type PricingPackagesSectionDetail = {
   detailsSectionList2?: string[]
   detailsSectionListIndent2?: string[]
   showOrderNowButton?: boolean
-  useSmallHoverBox: boolean
+  useSmallHoverBox?: boolean
 }

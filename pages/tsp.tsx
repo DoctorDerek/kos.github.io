@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 export default function TechnicalSupportPolicy() {
   return (
     <div className="container">

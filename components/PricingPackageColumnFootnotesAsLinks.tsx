@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import { classNames } from "@/lib/utils"
 
 /**

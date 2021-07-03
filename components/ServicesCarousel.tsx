@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import Image from "@/components/CustomImage"
 
 export default function ServicesCarousel({ children }: { children?: any }) {

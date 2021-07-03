@@ -1,7 +1,7 @@
 import { Fragment, useRef } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import { useCurrentPath } from "@/lib/utils"
 const DEBUG = false
 

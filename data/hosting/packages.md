@@ -1,6 +1,6 @@
 ---
 title: "KOS **Web Hosting** Packages & Prices"
-heading: "Kingston Online Services offers a variety of options for getting information on your company or past-time out onto the Internet in style. From self-built content hosting to co-located systems designed for complex requirements, we can help you carry your message to the world."
+headings: "Kingston Online Services offers a variety of options for getting information on your company or past-time out onto the Internet in style. From self-built content hosting to co-located systems designed for complex requirements, we can help you carry your message to the world."
 fullWidth: true
 showAvailabilityTool: false
 hoverBulletNavMenu: false

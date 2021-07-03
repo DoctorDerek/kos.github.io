@@ -1,6 +1,6 @@
 ---
 title: "Residential **Mail** Packages in Kingston & Belleville, Ontario"
-heading:
+headings:
   [
     "Advanced Mail (VIP) services provide an outsourced e-mail solution with scalability, security and performance required by businesses that wish to offload the costs of company mail services to their ISP. This service offers remote relaying using authentication, large mailboxes, web-based domain administration, SSL support for security, as well as an advanced suite of mail protection from viruses and unsolicited bulk email. Also available for individual mailboxes.",
     "KOS offers an advanced mail service for individuals or companies who wish to administrate their own mail with a secured web service, and who have the need for larger attachments and/or mailboxes than standard accounts include. This service offers an economical way to outsource corporate e-mail.",

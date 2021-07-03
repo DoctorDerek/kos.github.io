@@ -1,7 +1,7 @@
 import { classNames } from "@/lib/utils"
 import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
 import { CheckIcon } from "@heroicons/react/solid"
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import ImageFixed from "next/image"
 
 export function BULLET({

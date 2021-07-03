@@ -50,9 +50,7 @@ export default function Blog({ post }: { post: any }) {
   return (
     <>
       {frontMatter.draft !== true ? (
-        <PricingPageLayout frontMatter={frontMatter}>
-          {content}
-        </PricingPageLayout>
+        <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>

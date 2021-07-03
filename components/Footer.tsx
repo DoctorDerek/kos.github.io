@@ -1,4 +1,4 @@
-import Link from "@/components/Link"
+import Link from "@/components/CustomLink"
 import Image from "@/components/CustomImage"
 import { useEffect } from "react"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
