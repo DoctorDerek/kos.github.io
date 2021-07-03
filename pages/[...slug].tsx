@@ -42,7 +42,7 @@ export async function getStaticProps({
   return { props: { post } }
 }
 
-export default function Blog({
+export default function PricingPage({
   post,
 }: {
   post: {
