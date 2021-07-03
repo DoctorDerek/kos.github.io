@@ -28,6 +28,7 @@ export default function PricingPageLayout({
   iconColumnSection,
   children,
 }: PageFrontMatter) {
+  if (!title) throw new Error("title is a required field in Markdown files")
   return (
     <>
       <PageSeo
