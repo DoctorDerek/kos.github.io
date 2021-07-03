@@ -1,18 +1,16 @@
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
-import { Fragment } from "react"
 import Image from "@/components/CustomImage"
 import ImageFixed from "next/image"
-import Link from "@/components/CustomLink"
-import { BUTTON, DIVIDER } from "@/components/UTILS"
+import { DIVIDER } from "@/components/UTILS"
 import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
-import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
 import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPackagesSectionFootnotesAndDetails"
 import IconColumnSection from "@/components/IconColumnSection"
 import OurTeamSection from "@/components/OurTeamSection"
 import PricingPackagesBlueSection from "@/components/PricingPackagesBlueSection"
+import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
 
 export default function PricingPageLayout({
   slug,
@@ -67,7 +65,10 @@ export default function PricingPageLayout({
         />
         <IconColumnSection iconColumnSection={iconColumnSection} />
         <OurTeamSection ourTeamSection={ourTeamSection} />
-        <HoverBulletNavMenuAndGetConnectedButton />
+        <HoverBulletNavMenuAndGetConnectedButton
+          hoverBulletNavMenu={hoverBulletNavMenu}
+          showGetConnectedButton={showGetConnectedButton}
+        />
       </div>
     </>
   )
@@ -99,67 +100,41 @@ export default function PricingPageLayout({
         )}
       </div>
     )
-  }
 
-  /**
-   * Highlight the part of the title marked with * asterisks (Markdown bold)
-   * if any. For example a Markdown file might read `title: "Residential
-   * **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
-   */
-  function TitleJSXWithOptionalHighlighting() {
-    if (!title) return null
-    if (title.includes("**")) {
-      const highlightRegExp = /(.*)\*\*(.+)\*\*(.*)/
-      return (
-        <>
-          {title.replace(highlightRegExp, "$1")}
-          <span className="text-red-brand">
-            {title.replace(highlightRegExp, "$2")}
-          </span>
-          {title.replace(highlightRegExp, "$3")}
-        </>
-      )
-    } else return <>{title}</>
-  }
-
-  function HeadingH2() {
-    if (!(headings && Array.isArray(headings) && headings.length > 0))
-      return null
-    return (
-      <div className="flex flex-col mb-8 space-y-6">
-        {(headings as string[]).map((headingString: string) => (
-          <h2 className="text-xl text-left" key={headingString}>
-            {/*Up to one <a> or <Link> is supported in {headingString}*/}
-            {addLinkToTextIfPresent(headingString)}
-          </h2>
-        ))}
-      </div>
-    )
-  }
-
-  function HoverBulletNavMenuAndGetConnectedButton() {
-    if (!(hoverBulletNavMenu || showGetConnectedButton)) return null
-    return (
-      <div className="max-w-xl mx-auto">
-        <DIVIDER />
-        {hoverBulletNavMenu && (
+    /**
+     * Highlight the part of the title marked with * asterisks (Markdown bold)
+     * if any. For example a Markdown file might read `title: "Residential
+     * **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
+     */
+    function TitleJSXWithOptionalHighlighting() {
+      if (!title) return null
+      if (title.includes("**")) {
+        const highlightRegExp = /(.*)\*\*(.+)\*\*(.*)/
+        return (
           <>
-            <div className="pb-4 text-2xl font-semibold tracking-tight color">
-              Please{" "}
-              <Link href="/contact" className="text-black">
-                contact our office
-              </Link>{" "}
-              for more information, or select from one of our services below.
-            </div>
-            <HoverBulletNavMenu type={hoverBulletNavMenu} />
+            {title.replace(highlightRegExp, "$1")}
+            <span className="text-red-brand">
+              {title.replace(highlightRegExp, "$2")}
+            </span>
+            {title.replace(highlightRegExp, "$3")}
           </>
-        )}
-        {showGetConnectedButton && (
-          <div className="py-6">
-            <BUTTON href="/order/" text="Get connected" />
-          </div>
-        )}
-      </div>
-    )
+        )
+      } else return <>{title}</>
+    }
+
+    function HeadingH2() {
+      if (!(headings && Array.isArray(headings) && headings.length > 0))
+        return null
+      return (
+        <div className="flex flex-col mb-8 space-y-6">
+          {(headings as string[]).map((headingString: string) => (
+            <h2 className="text-xl text-left" key={headingString}>
+              {/*Up to one <a> or <Link> is supported in {headingString}*/}
+              {addLinkToTextIfPresent(headingString)}
+            </h2>
+          ))}
+        </div>
+      )
+    }
   }
 }
