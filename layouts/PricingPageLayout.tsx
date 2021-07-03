@@ -27,9 +27,7 @@ export default function PricingPageLayout({
   ourTeamSection,
   iconColumnSection,
   children,
-}: PageFrontMatter & {
-  children?: JSX.Element | JSX.Element[] | React.ReactNode
-}) {
+}: PageFrontMatter) {
   return (
     <>
       <PageSeo

@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote"
+import type { MDXRemoteSerializeResult } from "next-mdx-remote"
 import getFilesRecursively from "@/lib/utils/files"
 import { getFileBySlug } from "@/lib/mdx"
 import PricingPageLayout from "@/layouts/PricingPageLayout"
@@ -14,7 +15,7 @@ export async function getStaticPaths() {
   const dataRegExpMarkdown = /data\\(.+)?\.md/
   // /data\\(.+)?\.md/.exec("data\\hosting\\packages.md")[1].split(/\\/).pop()
   // => ["data\\hosting\\packages.md", "hosting\\packages"]
-  const paths: any[] = getFilesRecursively("data")
+  const paths: { params: { slug: string } }[] = getFilesRecursively("data")
     .map((path: string) => dataRegExpMarkdown.exec(path))
     .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
     .map((matchItem: any[]) => {
@@ -41,26 +42,34 @@ export async function getStaticProps({
   return { props: { post } }
 }
 
-export default function Blog({ post }: { post: any }) {
+export default function Blog({
+  post,
+}: {
+  post: {
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
+    frontMatter: PageFrontMatter
+  }
+}) {
   const { mdxSource, frontMatter } = post
+  if (frontMatter.draft) return <UnderConstruction /> // hide draft pages
+
+  // generate the {children} props for the layout:
   const content = (
     <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
   )
 
-  return (
-    <>
-      {frontMatter.draft !== true ? (
-        <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
-      ) : (
-        <div className="mt-24 text-center">
-          <PageTitle>
-            Under Construction{" "}
-            <span role="img" aria-label="roadwork sign">
-              🚧
-            </span>
-          </PageTitle>
-        </div>
-      )}
-    </>
-  )
+  return <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
+
+  function UnderConstruction() {
+    return (
+      <div className="mt-24 text-center">
+        <PageTitle>
+          Under Construction{" "}
+          <span role="img" aria-label="roadwork sign">
+            🚧
+          </span>
+        </PageTitle>
+      </div>
+    )
+  }
 }
