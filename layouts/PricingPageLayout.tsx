@@ -339,13 +339,9 @@ export default function PricingPageLayout({
       >
         <h1 className="text-left color decor">
           <TitleJSXWithOptionalHighlighting />
+          <DIVIDER />
         </h1>
-        {headings.length > 0 && (
-          <div className="mb-8">
-            <DIVIDER />
-            <HeadingH2 />
-          </div>
-        )}
+        <HeadingH2 />
         {featuredImage && (
           <div className="mb-8">
             <ImageFixed {...featuredImage} />
@@ -368,6 +364,7 @@ export default function PricingPageLayout({
    * **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
    */
   function TitleJSXWithOptionalHighlighting() {
+    if (!title) return null
     if (title.includes("**")) {
       const highlightRegExp = /(.*)\*\*(.+)\*\*(.*)/
       return (
@@ -383,8 +380,10 @@ export default function PricingPageLayout({
   }
 
   function HeadingH2() {
+    if (!(headings && Array.isArray(headings) && headings.length > 0))
+      return null
     return (
-      <div className="flex flex-col space-y-6">
+      <div className="flex flex-col mb-8 space-y-6">
         {(headings as string[]).map((headingString: string) => (
           <h2 className="text-xl text-left" key={headingString}>
             {/*Up to one <a> or <Link> is supported in {headingString}*/}
@@ -423,10 +422,12 @@ export default function PricingPageLayout({
 
   function PricingPackagesSectionDetailsPromotion() {
     if (!pricingPackagesSectionDetailsPromotion) return null
+
     const [match, dollars, cents, footnotes, duration] =
       extractDollarsCentsAndFootnotesFromPrice(
         pricingPackagesSectionDetailsPromotion
       )
+
     let beforeMatch = ""
     if (match !== duration) {
       // we found a valid price match
@@ -436,6 +437,7 @@ export default function PricingPageLayout({
       // separate out the before subgroup i.e. beforeMatchArray[1], if any
       beforeMatch = beforeMatchArray ? beforeMatchArray[1] : ""
     }
+
     return (
       <>
         <div className="max-w-6xl mx-auto mb-12">
