@@ -1,6 +1,6 @@
 ---
 title: "**CO LOCATE SERVER** in Kingston & Belleville, Ontario"
-heading:
+headings:
   [
     "Rack space and a direct Ethernet connection to Kingston Online’s ATM backbone. Meant for IPPs and other businesses where reliability is required and low costs are key.",
     "Kingston Online provides a secured data centre on an upper floor of its building with only employee access, and meets a multiple-lock entry-point requirement. With co-location, we offer UPS power with battery backup, 24 hour monitoring, a customer monitoring service, and climate control.",

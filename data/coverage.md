@@ -1,6 +1,6 @@
 ---
 title: "Kingston Online Services **Coverage** Area"
-heading:
+headings:
   [
     "We provide services from Brighton to Gananoque, including Prince Edward County, Napanee, Belleville, Trenton and Picton as well as some of the St. Lawrence Islands.",
     "KOS also provides DSL and CABLE services to most of Ontario and Quebec, so we can often move with you. Thank you for taking an interest in our company.",

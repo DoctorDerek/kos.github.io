@@ -1,6 +1,6 @@
 ---
 title: "**Campground Internet** for Quinte's Isle, Wesley Acres, and Edgewater"
-heading: ""
+headings: ""
 fullWidth: false
 hoverBulletNavMenu: false
 showGetConnectedButton: false

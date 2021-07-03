@@ -1,6 +1,6 @@
 ---
 title: "Residential **Wireless Broadband** Packages in Kingston & Belleville, Ontario"
-heading: 'Kingston Online Services has aggressively built a wireless broadband network in Southeastern Ontario to accommodate the needs of our rural customers. <Link href="/coverage">Click here for our coverage area</Link>.'
+headings: 'Kingston Online Services has aggressively built a wireless broadband network in Southeastern Ontario to accommodate the needs of our rural customers. <Link href="/coverage">Click here for our coverage area</Link>.'
 fullWidth: true
 showAvailabilityTool: true
 hoverBulletNavMenu: "Residential"

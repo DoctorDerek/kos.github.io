@@ -1,6 +1,6 @@
 ---
 title: "**Registering a Domain** with Kingston Online Services"
-heading: ""
+headings: ""
 ---
 
 <div className="text-center">

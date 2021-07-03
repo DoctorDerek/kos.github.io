@@ -1,6 +1,6 @@
 ---
 title: "Residential **High Speed DSL** Packages in Kingston & Belleville, Ontario"
-heading: "KOS DSL uses fast, reliable digital connections over your phone circuit, to let you talk on the phone and use the Internet at the same time. Ask about dry loop services, if you do not have an active phone line."
+headings: "KOS DSL uses fast, reliable digital connections over your phone circuit, to let you talk on the phone and use the Internet at the same time. Ask about dry loop services, if you do not have an active phone line."
 fullWidth: true
 hoverBulletNavMenu: "Residential"
 showGetConnectedButton: true

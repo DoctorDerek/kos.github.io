@@ -1,6 +1,6 @@
 ---
 title: "Business **Voice over IP (VoIP)** Phone Service in Kingston & Belleville, ON"
-heading: "KOS VoIP brings you inexpensive, convenient premium phone service over your High Speed Internet connection!"
+headings: "KOS VoIP brings you inexpensive, convenient premium phone service over your High Speed Internet connection!"
 fullWidth: true
 hoverBulletNavMenu: "Business"
 showGetConnectedButton: true

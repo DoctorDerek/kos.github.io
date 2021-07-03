@@ -1,6 +1,6 @@
 ---
 title: "**Payment Options** Kingston Online Services"
-heading: ""
+headings: ""
 ---
 
 <div className="text-center">

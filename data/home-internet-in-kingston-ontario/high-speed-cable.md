@@ -1,6 +1,6 @@
 ---
 title: "Residential **High Speed Cable** Packages in Kingston & Belleville, Ontario"
-heading: "Get an instant connection with Internet over cable at a price that suits your needs."
+headings: "Get an instant connection with Internet over cable at a price that suits your needs."
 fullWidth: true
 showAvailabilityTool: true
 hoverBulletNavMenu: "Residential"
