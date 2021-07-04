@@ -4,7 +4,7 @@ import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
 
-export default function TitleHeadingAndChildren({
+export default function TitleHeadingsAndChildren({
   title,
   headings,
   fullWidth,
@@ -35,7 +35,7 @@ export default function TitleHeadingAndChildren({
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
-      <HeadingH2 />
+      <HeadingsH2 />
       {featuredImage && (
         <div className="mb-8">
           <ImageFixed {...featuredImage} />
@@ -51,7 +51,7 @@ export default function TitleHeadingAndChildren({
     </div>
   )
 
-  function HeadingH2() {
+  function HeadingsH2() {
     if (!(headings && Array.isArray(headings) && headings.length > 0))
       return null
     return (

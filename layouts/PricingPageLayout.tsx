@@ -7,7 +7,7 @@ import IconColumnSection from "@/components/IconColumnSection"
 import OurTeamSection from "@/components/OurTeamSection"
 import PricingPackagesBlueSection from "@/components/PricingPackagesBlueSection"
 import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
-import TitleHeadingAndChildren from "@/components/TitleHeadingAndChildren"
+import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
 
 export default function PricingPageLayout({
   slug,
@@ -41,7 +41,7 @@ export default function PricingPageLayout({
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">
-        <TitleHeadingAndChildren
+        <TitleHeadingsAndChildren
           {...{
             title,
             headings,
