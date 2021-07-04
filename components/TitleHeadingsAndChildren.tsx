@@ -1,8 +1,9 @@
 import ImageFixed from "next/image"
 import { DIVIDER } from "@/components/UTILS"
-import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
+import { classNames } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
+import HeadingsH2 from "@/components/HeadingsH2"
 
 export default function TitleHeadingsAndChildren({
   title,
@@ -19,11 +20,6 @@ export default function TitleHeadingsAndChildren({
   featuredImage?: FeaturedImage
   children?: JSX.Element | JSX.Element[] | React.ReactNode
 }) {
-  // support string | string[] for convenience by wrapping strings with an array
-  if (!Array.isArray(headings)) {
-    headings = headings === undefined ? [] : [headings]
-  }
-
   return (
     <div
       className={classNames(
@@ -35,7 +31,9 @@ export default function TitleHeadingsAndChildren({
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
-      <HeadingsH2 />
+      <div className="mb-8">
+        <HeadingsH2 headings={headings} />
+      </div>
       {featuredImage && (
         <div className="mb-8">
           <ImageFixed {...featuredImage} />
@@ -50,19 +48,4 @@ export default function TitleHeadingsAndChildren({
       )}
     </div>
   )
-
-  function HeadingsH2() {
-    if (!(headings && Array.isArray(headings) && headings.length > 0))
-      return null
-    return (
-      <div className="flex flex-col mb-8 space-y-6">
-        {(headings as string[]).map((headingString: string) => (
-          <h2 className="text-xl text-left" key={headingString}>
-            {/*Up to one <a> or <Link> is supported in {headingString}*/}
-            {addLinkToTextIfPresent(headingString)}
-          </h2>
-        ))}
-      </div>
-    )
-  }
 }
