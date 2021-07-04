@@ -2,6 +2,7 @@ import ImageFixed from "next/image"
 import { DIVIDER } from "@/components/UTILS"
 import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
+import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
 
 export default function TitleHeadingAndChildren({
   title,
@@ -31,7 +32,7 @@ export default function TitleHeadingAndChildren({
       )}
     >
       <h1 className="text-left color decor">
-        <TitleJSXWithOptionalHighlighting />
+        <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
       <HeadingH2 />
@@ -49,27 +50,6 @@ export default function TitleHeadingAndChildren({
       )}
     </div>
   )
-
-  /**
-   * Highlight the part of the title marked with * asterisks (Markdown bold)
-   * if any. For example a Markdown file might read `title: "Residential
-   * **High Speed Cable** Packages in Kingston & Belleville, Ontario"`
-   */
-  function TitleJSXWithOptionalHighlighting() {
-    if (!title) return null
-    if (title.includes("**")) {
-      const highlightRegExp = /(.*)\*\*(.+)\*\*(.*)/
-      return (
-        <>
-          {title.replace(highlightRegExp, "$1")}
-          <span className="text-red-brand">
-            {title.replace(highlightRegExp, "$2")}
-          </span>
-          {title.replace(highlightRegExp, "$3")}
-        </>
-      )
-    } else return <>{title}</>
-  }
 
   function HeadingH2() {
     if (!(headings && Array.isArray(headings) && headings.length > 0))
