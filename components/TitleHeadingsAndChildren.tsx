@@ -14,7 +14,7 @@ export default function TitleHeadingsAndChildren({
   children,
 }: {
   title: string
-  headings?: string | string[]
+  headings?: string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
@@ -31,9 +31,11 @@ export default function TitleHeadingsAndChildren({
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
-      <div className="mb-8">
-        <HeadingsH2 headings={headings} />
-      </div>
+      {headings && headings.length > 0 && (
+        <div className="mb-8">
+          <HeadingsH2 headings={headings} />
+        </div>
+      )}
       {featuredImage && (
         <div className="mb-8">
           <ImageFixed {...featuredImage} />
@@ -42,7 +44,6 @@ export default function TitleHeadingsAndChildren({
       {children && <div className="mb-4 prose">{children}</div>}
       {showAvailabilityTool && (
         <div className="mb-4">
-          <DIVIDER />
           <PostalCodeCheckForm />
         </div>
       )}
