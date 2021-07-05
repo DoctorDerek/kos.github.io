@@ -21,7 +21,7 @@ export async function getStaticPaths() {
       const splitArray = matchItem[1].split("\\") // ["hosting","packages"]
       return {
         params: {
-          slug: splitArray,
+          slug: splitArray.join(""),
         },
       }
     })
