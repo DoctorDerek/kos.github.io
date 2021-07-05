@@ -15,10 +15,11 @@ export async function getStaticPaths() {
   // /data\\(.+)?\.md/.exec("data\\hosting\\packages.md")[1].split(/\\/).pop()
   // => ["data\\hosting\\packages.md", "hosting\\packages"]
   const paths: any[] = getFilesRecursively("data")
+    .map((path: string) => path.replace("\\", "/")) // Windows: \\, Linux: /
     .map((path: string) => dataRegExpMarkdown.exec(path))
     .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
     .map((matchItem: any[]) => {
-      const splitArray = matchItem[1].split("\\") // ["hosting","packages"]
+      const splitArray = matchItem[1].split("/") // ["hosting","packages"]
       return {
         params: {
           slug: splitArray.join(""),
