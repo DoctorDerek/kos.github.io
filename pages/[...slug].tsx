@@ -11,7 +11,8 @@ import PageTitle from "@/components/PageTitle"
  */
 export async function getStaticPaths() {
   // search recursively in @/data/**
-  const dataRegExpMarkdown = /data\\(.+)?\.md/
+  // Note: Windows paths use \\ instead of / (data\\about.md vs. data/about.md)
+  const dataRegExpMarkdown = /data[\\/]+(.+)?\.md/
   // /data\\(.+)?\.md/.exec("data\\hosting\\packages.md")[1].split(/\\/).pop()
   // => ["data\\hosting\\packages.md", "hosting\\packages"]
   const paths: any[] = getFilesRecursively("data")
@@ -22,10 +23,11 @@ export async function getStaticPaths() {
       const splitArray = matchItem[1].split("/") // ["hosting","packages"]
       return {
         params: {
-          slug: splitArray.join(""),
+          slug: splitArray,
         },
       }
     })
+  console.log(paths)
   return {
     paths: paths,
     fallback: false,
