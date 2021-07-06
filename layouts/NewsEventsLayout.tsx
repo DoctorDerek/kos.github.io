@@ -60,7 +60,7 @@ export default function NewsEventsLayout({
                 const linkSlug = slug
                 const href = generateAnchorLink(linkSlug)
                 return (
-                  <div key={linkTitle} className="py-2">
+                  <div key={linkTitle} className="py-3">
                     <HoverBullet text={linkTitle} href={href} />
                   </div>
                 )
@@ -76,15 +76,17 @@ export default function NewsEventsLayout({
                 />
               </div>
             )}
-            <h1 className="text-center color decor">
+            <h1 className="pb-0 text-center color decor">
               <TitleJSXWithOptionalHighlighting title={title} />
               <DIVIDER />
             </h1>
-            {posts.map((post: Post) => (
-              <Fragment key={post.frontMatter.title}>
-                <NewsEventsIndividualPost post={post} />
-              </Fragment>
-            ))}
+            <div className="border-gray-400 border-solid divide-y-1">
+              {posts.map((post: Post) => (
+                <Fragment key={post.frontMatter.title}>
+                  <NewsEventsIndividualPost post={post} />
+                </Fragment>
+              ))}
+            </div>
             <div className="flex content-center py-6">
               <BUTTON href="/order/" text="Get connected" />
             </div>
@@ -107,20 +109,21 @@ export default function NewsEventsLayout({
     if (!title) throw new Error("title is a required field in Markdown files")
 
     return (
-      <div id={generateAnchorID(slug)}>
-        <h6 className="text-left uppercase color decor">
+      <div id={generateAnchorID(slug)} className="pt-6 pb-2">
+        <h6 className="mb-5 text-xl text-left uppercase color decor">
           <TitleJSXWithOptionalHighlighting title={title} />
         </h6>
-        <div className="mb-8">
-          <HeadingsH2 headings={headings} />
-        </div>
+        {headings && headings.length > 0 && (
+          <div className="mb-4">
+            <HeadingsH2 headings={headings} />
+          </div>
+        )}
         {featuredImage && (
-          <div className="mb-8">
+          <div className="mb-4">
             <ImageFixed {...featuredImage} />
           </div>
         )}
         {children && <div className="mb-4 prose">{children}</div>}
-        <hr />
       </div>
     )
   }
