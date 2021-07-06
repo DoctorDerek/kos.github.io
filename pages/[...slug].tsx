@@ -24,11 +24,9 @@ export async function getStaticPaths() {
     .map(
       (matchItem: RegExpExecArray | null) => (matchItem as RegExpExecArray)[1]
     ) // extract the complete path, including the filename
-    .map((matchedPath: string) => ({
-      params: {
-        slug: matchedPath, // "slug" is the complete path, including the slug
-      },
-    }))
+    .map((matchedPath: string) => matchedPath.split("/"))
+    // "slug" is the complete path, including the slug, as an array
+    .map((slug: string[]) => ({ params: { slug } }))
   return {
     paths: paths,
     fallback: false,
