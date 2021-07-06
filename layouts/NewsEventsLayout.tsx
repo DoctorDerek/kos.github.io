@@ -49,20 +49,23 @@ export default function NewsEventsLayout({
       <div className="px-6 py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10 md:px-8 lg:px-10">
         <div className="grid max-w-5xl grid-cols-4 mx-auto space-x-4">
           <div className="col-span-1">
-            <div className="pl-4 mb-6 font-semibold text-gray-700 uppercase border-l-2 border-solid border-blue-light">
+            {/* Left side: all news & event posts as <HoverBullet> links */}
+            <div className="pl-4 mb-6 text-xl font-semibold text-gray-700 uppercase border-l-2 border-solid border-blue-light">
               {indexTitle}
             </div>
-            {posts.map((post: Post) => {
-              const { title, slug } = post.frontMatter
-              const linkTitle = title
-              const linkSlug = slug
-              const href = generateAnchorLink(linkSlug)
-              return (
-                <Fragment key={linkTitle}>
-                  <HoverBullet text={linkTitle} href={href} />
-                </Fragment>
-              )
-            })}
+            <div className="border-gray-400 border-solid divide-y-1">
+              {posts.map((post: Post) => {
+                const { title, slug } = post.frontMatter
+                const linkTitle = title
+                const linkSlug = slug
+                const href = generateAnchorLink(linkSlug)
+                return (
+                  <div key={linkTitle} className="py-2">
+                    <HoverBullet text={linkTitle} href={href} />
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <div className="col-span-3">
             {indexFeaturedImage && (
