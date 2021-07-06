@@ -18,7 +18,10 @@ export default function HoverBullet({
   const [hover, setHover] = useState(false)
   return (
     <li
-      className="flex items-center"
+      className={classNames(
+        "flex items-center transition duration-300 transform hover:translate-x-3",
+        responsive ? "md:hover:translate-x-4,md:hover:translate-x-5" : ""
+      )}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
