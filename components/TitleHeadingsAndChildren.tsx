@@ -1,9 +1,10 @@
 import ImageFixed from "next/image"
-import { DIVIDER } from "@/components/UTILS"
-import { classNames } from "@/lib/utils"
+
+import HeadingsH2 from "@/components/HeadingsH2"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
-import HeadingsH2 from "@/components/HeadingsH2"
+import { DIVIDER } from "@/components/UTILS"
+import { classNames } from "@/lib/utils"
 
 export default function TitleHeadingsAndChildren({
   title,
