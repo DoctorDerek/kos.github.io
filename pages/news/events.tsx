@@ -13,6 +13,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       (matchItem: RegExpExecArray | null) => (matchItem as RegExpExecArray)[1]
     ) // extract the filename
     .filter((slug: string) => !slug.includes("index")) // remove index.md
+    .reverse()
 
   const posts = await Promise.all(
     slugs.map(async (slug) => await getFileBySlug(["news", "events", slug]))
