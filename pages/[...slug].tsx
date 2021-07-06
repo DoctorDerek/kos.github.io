@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote"
+import type { MDXRemoteSerializeResult } from "next-mdx-remote"
 import getFilesRecursively from "@/lib/utils/files"
 import { getFileBySlug } from "@/lib/mdx"
 import PricingPageLayout from "@/layouts/PricingPageLayout"
@@ -18,16 +19,14 @@ export async function getStaticPaths() {
   const paths: any[] = getFilesRecursively("data")
     .map((path: string) => path.replace(/\\/g, "/")) // Windows: \\, Linux: /
     .map((path: string) => dataRegExpMarkdown.exec(path))
-    .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
-    .map((matchItem: any[]) => {
-      const splitArray = matchItem[1].split("/") // ["hosting","packages"]
-      return {
-        params: {
-          slug: splitArray,
-        },
-      }
-    })
-  console.log(paths)
+    .filter((matchItem: RegExpExecArray | null) => Boolean(matchItem))
+    // remove falsy
+    .map(
+      (matchItem: RegExpExecArray | null) => (matchItem as RegExpExecArray)[1]
+    ) // extract the complete path, including the filename
+    .map((matchedPath: string) => matchedPath.split("/"))
+    // "slug" is the complete path, including the slug, as an array
+    .map((slug: string[]) => ({ params: { slug } }))
   return {
     paths: paths,
     fallback: false,
@@ -44,26 +43,34 @@ export async function getStaticProps({
   return { props: { post } }
 }
 
-export default function Blog({ post }: { post: any }) {
+export default function PricingPage({
+  post,
+}: {
+  post: {
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
+    frontMatter: PageFrontMatter
+  }
+}) {
   const { mdxSource, frontMatter } = post
+  if (frontMatter.draft) return <UnderConstruction /> // hide draft pages
+
+  // generate the {children} props for the layout:
   const content = (
     <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
   )
 
-  return (
-    <>
-      {frontMatter.draft !== true ? (
-        <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
-      ) : (
-        <div className="mt-24 text-center">
-          <PageTitle>
-            Under Construction{" "}
-            <span role="img" aria-label="roadwork sign">
-              🚧
-            </span>
-          </PageTitle>
-        </div>
-      )}
-    </>
-  )
+  return <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
+
+  function UnderConstruction() {
+    return (
+      <div className="mt-24 text-center">
+        <PageTitle>
+          Under Construction{" "}
+          <span role="img" aria-label="roadwork sign">
+            🚧
+          </span>
+        </PageTitle>
+      </div>
+    )
+  }
 }

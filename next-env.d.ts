@@ -61,11 +61,15 @@ type BlogPostFrontMatter = {
 }
 
 /**
- * Frontmatter type used as pages array in PricingPageLayout.tsx
+ * This type is used when reading the Markdown (*.md or *.mdx) files that
+ * generate the site. Specifically, these are the props for <PricingPageLayout>
  *
- * @typeParam slug - The URL slug - based on the filename of the Markdown file
+ * These types are specified as individual fields in the Markdown file:
  * @typeParam title - The page title as a string ("**Home Internet** in ON")
- * @typeParam heading - The page heading(s) as a string or array (["One","Two"])
+ *                    where the part highlighted with ** will be shown red.
+ * @typeParam draft? - If true, the page won't be shown; instead, a placeholder
+ *                     reading "Under Construction" will be shown for that page.
+ * @typeParam headings? - The page headings as a string or array (["One","Two"])
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                         or narrow like the informational pages (false).
  *                         Note: for readability "fullWidth" is max-5xl for text
@@ -73,29 +77,32 @@ type BlogPostFrontMatter = {
  * @typeParam featuredImage? - If present, show a image that matches "fullWidth"
  * @typeParam hoverBulletNavMenu? - Whether to show the <HoverBulletNavMenu>
  *                                  and if so which: "Residential" or "Business"
- * @typeParam showGetConnectedButton - Whether to show a "Get Connected" button
- * @typeParam pricingPackages - An array of the PricingPackage objects / columns
- * @typeParam pricingPackagesSectionFootnotes - The footnotes before the details
+ * @typeParam showGetConnectedButton? - Whether to show a "Get Connected" button
+ * @typeParam pricingPackages? - An array of PricingPackage objects to generate
+ *                               the <PricingPackageColumn>s for the sales pages
+ * @typeParam pricingPackagesSectionFootnotes? - The footnotes above the details
  * @typeParam pricingPackagesSectionDetailsPromotion? - Optional promotion price
  * in the format of "$dollars.cents^footnotes duration" ... for example: ("ADD
  * HOME PHONE SERVICE TO ANY HIGH SPEED INTERNET PACKAGE FOR $9.95^6 / month")
- * @typeParam pricingPackagesBlue - Rounded blue gradient boxes that can be
- * displayed up to 4 per column (like <PricingPackageColumn>) but can also be
- * displayed full-width ala useSmallHoverBox in <PricingPackagesSectionDetails>
+ * @typeParam pricingPackagesBlue? - An array of PricingPackage objects to make
+ * rounded blue gradient boxes that can be displayed up to 4 per column (like
+ * <PricingPackageColumn>) but can also be displayed "fullWidth" in the same
+ * way the useSmallHoverBox boolean functions in <PricingPackagesSectionDetails>
  * @typeParam iconColumnSection? - Used to show <IconColumn>s on the /about page
  * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
  *
- * The "children" are the React components generated from any included Markdown:
- * @typeParam children - Any Markdown/MDX will be "prose" (Tailwind typography)
+ * These types are automatically generated from the Markdown files themselves:
+ * @typeParam slug - The URL slug, which is the filename of the Markdown file
+ *                   Note: null would result from fetching the empty string ""
+ * @typeParam filename - The entire name of the Markdown file (*.md or *.mdx)
+ * @typeParam children? - Any Markdown/MDX will be "prose" (Tailwind typography)
+ * The "children" are the React components generated from any included Markdown.
  * Note: prose has "width: 65ch" for readability (720px) so is not "fullWidth"
- *
- * @remarks
- * This type is used for reading the Markdown (.md) files that generate the site
  */
 type PageFrontMatter = {
-  slug: string
   title: string
   headings?: string | string[]
+  draft?: boolean
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
@@ -109,6 +116,17 @@ type PageFrontMatter = {
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
   iconColumnSection?: { heading: string; iconColumns: IconColumn[] }
   ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
+  slug: string | null
+  filename: string
+  children?: ReactElement | ReactElement[]
+}
+
+/**
+ * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>
+ */
+type Post = {
+  mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
+  frontMatter: PageFrontMatter
 }
 
 /**

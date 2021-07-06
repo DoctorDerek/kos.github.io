@@ -3,10 +3,9 @@ import fs from "fs"
 import matter from "gray-matter"
 import { serialize } from "next-mdx-remote/serialize"
 import path from "path"
-import readingTime from "reading-time"
 import visit from "unist-util-visit"
-import imgToJsx from "./img-to-jsx"
-import getAllFilesRecursively from "./utils/files"
+import imgToJsx from "@/lib/img-to-jsx"
+import getAllFilesRecursively from "@/lib/utils/files"
 
 const root = process.cwd()
 
@@ -87,31 +86,9 @@ export async function getFileBySlug(slug: string | string[]) {
   return {
     mdxSource,
     frontMatter: {
-      readingTime: readingTime(content),
       slug: slug || null,
       fileName: fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`,
       ...data,
     },
   }
-}
-
-// @ts-expect-error
-export async function getAllFilesFrontMatter(folder) {
-  const prefixPaths = path.join(root, "data", folder)
-
-  const files = getAllFilesRecursively(prefixPaths)
-
-  const allFrontMatter: any[] = []
-
-  files.forEach((file: any) => {
-    // Replace is needed to work on Windows
-    const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, "/")
-    const source = fs.readFileSync(file, "utf8")
-    const { data } = matter(source)
-    if (data.draft !== true) {
-      allFrontMatter.push({ ...data, slug: formatSlug(fileName) })
-    }
-  })
-
-  return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
 }
