@@ -53,7 +53,6 @@ export default function NewsEventsLayout({
               {indexTitle}
             </div>
             {posts.map((post: Post) => {
-              console.log(indexSlug)
               const { title, slug } = post.frontMatter
               const linkTitle = title
               const linkSlug = slug
