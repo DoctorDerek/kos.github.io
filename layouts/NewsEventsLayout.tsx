@@ -47,7 +47,7 @@ export default function NewsEventsLayout({
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="px-6 py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10 md:px-8 lg:px-10">
-        <div className="grid max-w-5xl grid-cols-4 mx-auto space-x-4">
+        <div className="grid max-w-5xl grid-cols-1 mx-auto space-x-4 md:grid-cols-4">
           <div className="col-span-1">
             {/* Left side: all news & event posts as <HoverBullet> links */}
             <div className="pl-4 mb-6 text-xl font-semibold text-gray-700 uppercase border-l-2 border-solid border-blue-light">
