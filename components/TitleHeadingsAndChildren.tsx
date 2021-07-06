@@ -15,12 +15,17 @@ export default function TitleHeadingsAndChildren({
   children,
 }: {
   title: string
-  headings?: string[]
+  headings?: string | string[]
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
   children?: JSX.Element | JSX.Element[] | React.ReactNode
 }) {
+  // support string | string[] for convenience
+  if (headings && !Array.isArray(headings)) {
+    headings = [headings]
+  }
+
   return (
     <div
       className={classNames(
