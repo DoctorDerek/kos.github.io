@@ -1,10 +1,11 @@
 import { Fragment } from "react"
+
+import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
+import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
 import {
   classNames,
   extractDollarsCentsAndFootnotesFromPrice,
 } from "@/lib/utils"
-import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
-import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
 export default function PricingPackagesBlueSection({
   pricingPackagesBlue,

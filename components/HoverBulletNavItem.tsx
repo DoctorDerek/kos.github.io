@@ -1,6 +1,7 @@
-import { useCurrentPath } from "@/lib/utils"
-import { HomeIcon, BriefcaseIcon } from "@heroicons/react/outline"
 import HoverBullet from "@/components/HoverBullet"
+import { useCurrentPath } from "@/lib/utils"
+import { BriefcaseIcon, HomeIcon } from "@heroicons/react/outline"
+
 export default function HoverBulletNavItem({
   item,
   responsive = true,

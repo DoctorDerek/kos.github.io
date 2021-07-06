@@ -1,7 +1,9 @@
 import { useState } from "react"
+
+import Link from "@/components/CustomLink"
 import { BULLET } from "@/components/UTILS"
 import { classNames, formatFootnotesAsSuperscriptIfPresent } from "@/lib/utils"
-import Link from "@/components/CustomLink"
+
 export default function HoverBullet({
   text,
   href = "",

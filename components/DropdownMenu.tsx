@@ -1,5 +1,6 @@
-import { useRef, useEffect, useState } from "react"
 import PropTypes from "prop-types"
+import { useEffect, useRef, useState } from "react"
+
 import FlyoutMenu from "@/components/FlyoutMenu"
 import NAVIGATION_MENU from "@/data/NAVIGATION_MENU"
 

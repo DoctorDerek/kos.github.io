@@ -1,8 +1,9 @@
 import { Fragment } from "react"
-import { classNames, addLinkToTextIfPresent } from "@/lib/utils"
+
 import HoverBox from "@/components/HoverBox"
-import OrderNowButton from "@/components/OrderNowButton"
 import HoverBulletList from "@/components/HoverBulletList"
+import OrderNowButton from "@/components/OrderNowButton"
+import { addLinkToTextIfPresent, classNames } from "@/lib/utils"
 
 export default function PricingPackagesSectionDetails({
   pricingPackagesSectionDetails,

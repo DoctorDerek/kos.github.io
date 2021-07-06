@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from "react"
-import ImageFixed from "next/image"
-import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+
+import { useKeenSlider } from "keen-slider/react"
+import ImageFixed from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 export default function Testimonials() {
   const [pause, setPause] = useState(false)

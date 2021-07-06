@@ -1,6 +1,6 @@
-import { extractDollarsCentsAndFootnotesFromPrice } from "@/lib/utils"
 import HoverBox from "@/components/HoverBox"
 import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
+import { extractDollarsCentsAndFootnotesFromPrice } from "@/lib/utils"
 
 export default function PricingPackagesSectionDetailsPromotion({
   pricingPackagesSectionDetailsPromotion,

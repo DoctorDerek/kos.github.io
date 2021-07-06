@@ -1,7 +1,8 @@
 import { Fragment } from "react"
-import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
+
 import PricingPackagesSectionDetailsSection from "@/components/PricingPackagesSectionDetails"
 import PricingPackagesSectionDetailsPromotion from "@/components/PricingPackagesSectionDetailsPromotion"
+import PricingPackagesSectionFootnotes from "@/components/PricingPackagesSectionFootnotes"
 
 export default function PricingPackagesSectionFootnotesAndDetails({
   pricingPackagesSectionFootnotes,

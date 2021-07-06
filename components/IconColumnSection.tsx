@@ -1,6 +1,7 @@
-import Image from "@/components/CustomImage"
 import ImageFixed from "next/image"
 import { Fragment } from "react"
+
+import Image from "@/components/CustomImage"
 import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function IconColumnSection({

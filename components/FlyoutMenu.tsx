@@ -1,8 +1,10 @@
 import { Fragment, useRef } from "react"
-import { Popover, Transition } from "@headlessui/react"
-import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
+
 import Link from "@/components/CustomLink"
 import { useCurrentPath } from "@/lib/utils"
+import { Popover, Transition } from "@headlessui/react"
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/solid"
+
 const DEBUG = false
 
 // lookup RegExp objects to match subpages from current URL href (router.asPath)

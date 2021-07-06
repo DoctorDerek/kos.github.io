@@ -1,8 +1,9 @@
-import Link from "@/components/CustomLink"
 import ImageFixed from "next/image"
+
+import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
-import Image from "@/components/CustomImage"
 
 export function InternalTemplate({
   title,

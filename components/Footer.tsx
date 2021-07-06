@@ -1,6 +1,7 @@
-import Link from "@/components/CustomLink"
-import Image from "@/components/CustomImage"
 import { useEffect } from "react"
+
+import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
 
 const useScript = (url: string) => {

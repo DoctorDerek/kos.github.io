@@ -1,8 +1,9 @@
-import { Fragment, Dispatch, SetStateAction } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
+import { Dispatch, Fragment, SetStateAction } from "react"
+
 import HoverBulletList from "@/components/HoverBulletList"
 import OrderNowButton from "@/components/OrderNowButton"
+import { Dialog, Transition } from "@headlessui/react"
+import { BadgeCheckIcon, XIcon } from "@heroicons/react/outline"
 
 export default function PricingPackageModal({
   openModal,

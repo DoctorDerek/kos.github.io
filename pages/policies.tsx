@@ -1,4 +1,5 @@
 import Link from "@/components/CustomLink"
+
 export default function Policies() {
   return (
     <div className="container">

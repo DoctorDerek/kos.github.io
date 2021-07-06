@@ -1,8 +1,9 @@
-import { classNames } from "@/lib/utils"
-import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
-import { CheckIcon } from "@heroicons/react/solid"
-import Link from "@/components/CustomLink"
 import ImageFixed from "next/image"
+
+import Link from "@/components/CustomLink"
+import RightArrow from "@/data/material-icons/keyboard_arrow_right_black_48dp.svg"
+import { classNames } from "@/lib/utils"
+import { CheckIcon } from "@heroicons/react/solid"
 
 export function BULLET({
   hover = false,

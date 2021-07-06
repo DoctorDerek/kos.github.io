@@ -1,6 +1,6 @@
 import Link from "@/components/CustomLink"
-import { BUTTON, DIVIDER } from "@/components/UTILS"
 import HoverBulletNavMenu from "@/components/HoverBulletNavMenu"
+import { BUTTON, DIVIDER } from "@/components/UTILS"
 
 export default function HoverBulletNavMenuAndGetConnectedButton({
   hoverBulletNavMenu,

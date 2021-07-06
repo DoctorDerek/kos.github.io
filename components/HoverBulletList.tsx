@@ -1,7 +1,9 @@
 import { Fragment } from "react"
+
 import HoverBullet from "@/components/HoverBullet"
 import HoverBulletNavItem from "@/components/HoverBulletNavItem"
 import { classNames } from "@/lib/utils"
+
 export default function HoverBulletList({
   hoverBulletAsStrings = null,
   hoverBulletAsNavMenuItems = null,

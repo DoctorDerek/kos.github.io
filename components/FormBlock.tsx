@@ -1,6 +1,7 @@
-import React from "react"
-import Image from "@/components/CustomImage"
 import ImageFixed from "next/image"
+import React from "react"
+
+import Image from "@/components/CustomImage"
 
 export default function FormBlock() {
   return (

@@ -1,6 +1,8 @@
-import { useEffect, useState, useRef } from "react"
-import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+
+import { useKeenSlider } from "keen-slider/react"
+import { useEffect, useRef, useState } from "react"
+
 import SlideshowSlide from "./SlideshowSlide"
 
 const Slideshow = () => {

@@ -1,13 +1,13 @@
-import { PageSeo } from "@/components/SEO"
-import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
-import PricingPackagesSection from "@/components/PricingPackagesSection"
-import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPackagesSectionFootnotesAndDetails"
+import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
 import IconColumnSection from "@/components/IconColumnSection"
 import OurTeamSection from "@/components/OurTeamSection"
 import PricingPackagesBlueSection from "@/components/PricingPackagesBlueSection"
-import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
+import PricingPackagesSection from "@/components/PricingPackagesSection"
+import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPackagesSectionFootnotesAndDetails"
+import { PageSeo } from "@/components/SEO"
 import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
+import siteMetadata from "@/data/siteMetadata.json"
 
 export default function PricingPageLayout({
   slug,

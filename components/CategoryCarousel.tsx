@@ -1,6 +1,7 @@
-import Link from "@/components/CustomLink"
 import ImageFixed from "next/image"
+
 import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 
 export default function CategoryCarousel() {
   return (

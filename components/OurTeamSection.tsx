@@ -1,5 +1,6 @@
-import { Fragment } from "react"
 import ImageFixed from "next/image"
+import { Fragment } from "react"
+
 import { DIVIDER } from "@/components/UTILS"
 
 export default function OurTeamSection({

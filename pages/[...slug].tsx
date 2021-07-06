@@ -1,11 +1,12 @@
 import { MDXRemote } from "next-mdx-remote"
-import type { MDXRemoteSerializeResult } from "next-mdx-remote"
-import getFilesRecursively from "@/lib/utils/files"
-import { getFileBySlug } from "@/lib/mdx"
-import PricingPageLayout from "@/layouts/PricingPageLayout"
+
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
+import PricingPageLayout from "@/layouts/PricingPageLayout"
+import { getFileBySlug } from "@/lib/mdx"
+import getFilesRecursively from "@/lib/utils/files"
 
+import type { MDXRemoteSerializeResult } from "next-mdx-remote"
 /**
  * [...slug] is a catch-all dynamic route in Next.js that globs all possible
  * paths. The params object needs the query parameter slug as a string[] array.

@@ -1,6 +1,7 @@
-import { NextSeo, ArticleJsonLd } from "next-seo"
-import siteMetadata from "@/data/siteMetadata.json"
+import { ArticleJsonLd, NextSeo } from "next-seo"
 import { OpenGraphImages } from "next-seo/lib/types"
+
+import siteMetadata from "@/data/siteMetadata.json"
 
 export const SEO = {
   title: siteMetadata.title,

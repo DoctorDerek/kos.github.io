@@ -1,8 +1,10 @@
-import { useState, useRef, useEffect } from "react"
-import Link from "@/components/CustomLink"
-import Image from "@/components/CustomImage"
-import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+
+import { useKeenSlider } from "keen-slider/react"
+import { useEffect, useRef, useState } from "react"
+
+import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 
 export default function Pricing() {
   const [pause, setPause] = useState(false)

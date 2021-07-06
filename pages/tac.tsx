@@ -1,4 +1,5 @@
 import Link from "@/components/CustomLink"
+
 export default function TermsAndConditions() {
   return (
     <div className="container">

@@ -1,5 +1,5 @@
-import Link from "@/components/CustomLink"
 import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 
 export default function ServicesCarousel({ children }: { children?: any }) {
   return (

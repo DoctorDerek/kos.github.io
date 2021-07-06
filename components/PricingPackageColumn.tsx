@@ -1,13 +1,14 @@
-import { useState, Fragment } from "react"
-import PricingPackageModal from "@/components/PricingPackageModal"
+import { Fragment, useState } from "react"
+
 import OrderNowButton from "@/components/OrderNowButton"
+import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 import PricingPackagePromotionHoverBox from "@/components/PricingPackageColumnPromotionHoverBox"
+import PricingPackageModal from "@/components/PricingPackageModal"
 import {
   classNames,
   extractDollarsCentsAndFootnotesFromPrice,
   formatFootnotesAsSuperscriptIfPresent,
 } from "@/lib/utils"
-import PricingPackageColumnFootnotesAsLinks from "@/components/PricingPackageColumnFootnotesAsLinks"
 
 export default function PricingPackageColumn({
   color = "navy",

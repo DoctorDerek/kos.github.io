@@ -1,4 +1,4 @@
-import { UserGroupIcon, CogIcon, ClockIcon } from "@heroicons/react/outline"
+import { ClockIcon, CogIcon, UserGroupIcon } from "@heroicons/react/outline"
 
 // New icons also needed to be added to the <HeroIcon> type in next-env.d.ts
 const HeroIcons: {

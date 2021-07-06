@@ -1,5 +1,5 @@
-import Link from "@/components/CustomLink"
 import Image from "@/components/CustomImage"
+import Link from "@/components/CustomLink"
 
 const isRequired = () => {
   throw new Error("Missing required attribute in SlideshowSlide component")

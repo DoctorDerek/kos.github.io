@@ -1,9 +1,10 @@
-import MDXComponents from "@/components/MDXComponents"
 import fs from "fs"
 import matter from "gray-matter"
 import { serialize } from "next-mdx-remote/serialize"
 import path from "path"
 import visit from "unist-util-visit"
+
+import MDXComponents from "@/components/MDXComponents"
 import imgToJsx from "@/lib/img-to-jsx"
 import getAllFilesRecursively from "@/lib/utils/files"
 
