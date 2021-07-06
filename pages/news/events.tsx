@@ -7,8 +7,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const newsEventsRegExpMarkdown = /data\\news\\events\\(.+)?\.md/
   const slugs: string[] = getFilesRecursively("data")
     .map((path: string) => newsEventsRegExpMarkdown.exec(path))
-    .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
-    .map((matchItem: any[]) => matchItem[1])
+    .filter((matchItem: RegExpExecArray | null) => Boolean(matchItem))
+    // remove falsy
+    .map(
+      (matchItem: RegExpExecArray | null) => (matchItem as RegExpExecArray)[1]
+    ) // extract the filename
     .filter((slug: string) => !slug.includes("index")) // remove index.md
 
   const posts = await Promise.all(

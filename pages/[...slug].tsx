@@ -19,15 +19,16 @@ export async function getStaticPaths() {
   const paths: any[] = getFilesRecursively("data")
     .map((path: string) => path.replace(/\\/g, "/")) // Windows: \\, Linux: /
     .map((path: string) => dataRegExpMarkdown.exec(path))
-    .filter((matchItem: any[]) => Boolean(matchItem)) // remove falsy
-    .map((matchItem: any[]) => {
-      const splitArray = matchItem[1].split("/") // ["hosting","packages"]
-      return {
-        params: {
-          slug: splitArray,
-        },
-      }
-    })
+    .filter((matchItem: RegExpExecArray | null) => Boolean(matchItem))
+    // remove falsy
+    .map(
+      (matchItem: RegExpExecArray | null) => (matchItem as RegExpExecArray)[1]
+    ) // extract the complete path, including the filename
+    .map((matchedPath: string) => ({
+      params: {
+        slug: matchedPath, // "slug" is the complete path, including the slug
+      },
+    }))
   return {
     paths: paths,
     fallback: false,
