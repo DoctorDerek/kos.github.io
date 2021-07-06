@@ -1,12 +1,11 @@
 import { PageSeo } from "@/components/SEO"
 import siteMetadata from "@/data/siteMetadata.json"
 import Image from "@/components/CustomImage"
-import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
 import { MDXRemote } from "next-mdx-remote"
 import MDXComponents from "@/components/MDXComponents"
 import { Fragment } from "react"
 import ImageFixed from "next/image"
-import { DIVIDER } from "@/components/UTILS"
+import { BUTTON, DIVIDER } from "@/components/UTILS"
 import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
 import HeadingsH2 from "@/components/HeadingsH2"
 import HoverBullet from "@/components/HoverBullet"
@@ -85,9 +84,9 @@ export default function NewsEventsLayout({
                 <NewsEventsIndividualPost post={post} />
               </Fragment>
             ))}
-            <HoverBulletNavMenuAndGetConnectedButton
-              showGetConnectedButton={true}
-            />
+            <div className="flex content-center py-6">
+              <BUTTON href="/order/" text="Get connected" />
+            </div>
           </div>
         </div>
       </div>
