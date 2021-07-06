@@ -21,6 +21,8 @@ export default function TitleHeadingsAndChildren({
   featuredImage?: FeaturedImage
   children?: JSX.Element | JSX.Element[] | React.ReactNode
 }) {
+  if (!title) return null
+
   // support string | string[] for convenience
   if (headings && !Array.isArray(headings)) {
     headings = [headings]
