@@ -150,7 +150,7 @@ type PageFrontMatter = {
  */
 type ContactField = {
   field: string
-  type: "text" | "select" | "textarea" | "submit" | "endpoint"
+  type: ContactFieldType
   placeholder?: string
   size?: "half" | "full"
   options?: string[]
@@ -158,6 +158,17 @@ type ContactField = {
   color?: "red" | "blue"
   optional?: boolean
 }
+
+/**
+ * ContactFieldType is a helper type that specifies valid ContactField types.
+ */
+type ContactFieldType =
+  | "text"
+  | "email"
+  | "select"
+  | "textarea"
+  | "submit"
+  | "endpoint"
 
 /**
  * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>

@@ -60,7 +60,7 @@ contactForm:
     },
     {
       field: "Email",
-      type: "text",
+      type: "email",
       placeholder: "address@example.com",
       size: "full",
     },
@@ -68,7 +68,7 @@ contactForm:
       field: "How did you hear about us?",
       type: "select",
       placeholder: "Please select one...",
-      bold: true
+      bold: true,
       options:
         [
           "Current KOS user",
@@ -83,6 +83,6 @@ contactForm:
     },
     { field: "Message", type: "textarea" },
     { field: "SEND MESSAGE", type: "submit", color: "blue" },
-    { field: "xpzklvvj", type: "endpoint" }
+    { field: "xpzklvvj", type: "endpoint" },
   ]
 ---
