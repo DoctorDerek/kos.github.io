@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 
+import ContactForm from "@/components/ContactForm"
 import Image from "@/components/CustomImage"
 import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
 import IconCard from "@/components/IconCard"
@@ -78,7 +79,7 @@ export default function PricingPageLayout({
           {officeAddressLeft && (
             <OfficeAddressColumn iconCards={officeAddressLeft} />
           )}
-          <div>Contact Form</div>
+          <ContactForm />
           {officeAddressRight && (
             <OfficeAddressColumn iconCards={officeAddressRight} />
           )}
