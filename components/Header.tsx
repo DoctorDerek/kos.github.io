@@ -47,7 +47,10 @@ export default function Header() {
                     <tr>
                       <td>Kingston:&nbsp;</td>
                       <td>
-                        {addPhoneLinkToTextIfPresent("613-549-8667", "red")}
+                        {addPhoneLinkToTextIfPresent({
+                          stringToTest: "613-549-8667",
+                          color: "red",
+                        })}
                       </td>
                     </tr>
                   </thead>
@@ -55,7 +58,10 @@ export default function Header() {
                     <tr>
                       <td>Belleville:&nbsp;</td>
                       <td>
-                        {addPhoneLinkToTextIfPresent("613-968-7137", "red")}
+                        {addPhoneLinkToTextIfPresent({
+                          stringToTest: "613-968-7137",
+                          color: "red",
+                        })}
                       </td>
                     </tr>
                   </tfoot>

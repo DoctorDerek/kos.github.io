@@ -111,11 +111,15 @@ export const addLinkToTextIfPresent = (stringToTest: string) => {
  *
  * @returns JSX Element including the correct <a href=""> element
  */
-export const addPhoneLinkToTextIfPresent = (
-  stringToTest: string,
-  color: "red" | "black" = "black",
-  bold: "bold" | "semibold" | "normal" = "bold"
-) => {
+export const addPhoneLinkToTextIfPresent = ({
+  stringToTest,
+  color = "black",
+  bold = "bold",
+}: {
+  stringToTest: string
+  color?: "red" | "black"
+  bold?: "bold" | "semibold" | "normal"
+}) => {
   const phoneLinkRegExp = /(.*)1?-?(\d\d\d-\d\d\d-\d\d\d\d)(.*)/
   const phoneLinkMatchResults = phoneLinkRegExp.exec(stringToTest)
   if (phoneLinkMatchResults) {
