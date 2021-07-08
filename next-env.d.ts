@@ -90,6 +90,8 @@ type BlogPostFrontMatter = {
  * way the useSmallHoverBox boolean functions in <PricingPackagesSectionDetails>
  * @typeParam iconColumnSection? - Used to show <IconColumn>s on the /about page
  * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
+ * @typeParam officeAddressLeft? - Left /contact column as an <IconCard>s array
+ * @typeParam officeAddressRight? - Right /contact column as <IconCard>s array
  *
  * These types are automatically generated from the Markdown files themselves:
  * @typeParam slug - The URL slug, which is the filename of the Markdown file
@@ -116,6 +118,8 @@ type PageFrontMatter = {
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
   iconColumnSection?: { heading: string; iconColumns: IconColumn[] }
   ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
+  officeAddressLeft?: IconCard[]
+  officeAddressRight?: IconCard[]
   slug: string | null
   filename: string
   children?: ReactElement | ReactElement[]
@@ -132,7 +136,7 @@ type Post = {
 /**
  * <IconColumn>s display marketing copy with an icon, heading, and subheading.
  *
- * @typeParam icon - The desired icon to be used ("user-group")
+ * @typeParam icon - The desired <HeroIcon> to be used ("user-group")
  * @typeParam heading - The first line of text ("2500+")
  * @typeParam subheading - The second line of text ("HAPPY CLIENTS")
  */
@@ -146,7 +150,7 @@ type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
  * @typeParam icon - The name of the icon, hyphenated; they are imported as
  * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
  */
-type HeroIcon = "user-group" | "cog" | "clock"
+type HeroIcon = "user-group" | "cog" | "clock" | "location-marker" | "phone"
 
 /**
  * A FeaturedImage will be shown after the heading. All fields are required.
@@ -258,4 +262,20 @@ type PricingPackagesSectionDetail = {
   detailsSectionListIndent2?: string[]
   showOrderNowButton?: boolean
   useSmallHoverBox?: boolean
+}
+
+/**
+ * <IconCards>s display icons on the left side with a label and text on the
+ * right side. The icon has a hover effect like the header phone numbers.
+ * A phone number (in the format "613-549-8667") will become an actual link.
+ * If an array of strings is used, each string will appear on a separate line.
+ *
+ * @typeParam icon - The desired <HeroIcon> to be used ("phone")
+ * @typeParam label - The first line of text, which will be bold ("KINGSTON")
+ * @typeParam text - The second line of text ("The LaSalle 303...")
+ */
+type IconCard = {
+  icon: HeroIcon
+  label: string | string[]
+  text: string | string[]
 }

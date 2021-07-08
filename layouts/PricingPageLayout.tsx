@@ -1,5 +1,8 @@
+import { Fragment } from "react"
+
 import Image from "@/components/CustomImage"
 import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
+import IconCard from "@/components/IconCard"
 import IconColumnSection from "@/components/IconColumnSection"
 import OurTeamSection from "@/components/OurTeamSection"
 import PricingPackagesBlueSection from "@/components/PricingPackagesBlueSection"
@@ -24,8 +27,10 @@ export default function PricingPageLayout({
   pricingPackagesSectionDetailsPromotion,
   pricingPackagesBlue,
   pricingPackagesBlueFootnotes,
-  ourTeamSection,
   iconColumnSection,
+  ourTeamSection,
+  officeAddressLeft,
+  officeAddressRight,
   children,
 }: PageFrontMatter) {
   if (!title) throw new Error("title is a required field in Markdown files")
@@ -69,7 +74,28 @@ export default function PricingPageLayout({
           hoverBulletNavMenu={hoverBulletNavMenu}
           showGetConnectedButton={showGetConnectedButton}
         />
+        <div className="grid max-w-5xl grid-cols-1 mx-auto space-x-4 md:grid-cols-3">
+          {officeAddressLeft && (
+            <OfficeAddressColumn iconCards={officeAddressLeft} />
+          )}
+          <div>Contact Form</div>
+          {officeAddressRight && (
+            <OfficeAddressColumn iconCards={officeAddressRight} />
+          )}
+        </div>
       </div>
     </>
+  )
+}
+
+function OfficeAddressColumn({ iconCards }: { iconCards: IconCard[] }) {
+  return (
+    <div className="w-80">
+      {iconCards.map((iconCard: IconCard) => (
+        <Fragment key={`${iconCard.text}${iconCard.label}`}>
+          <IconCard {...iconCard} />
+        </Fragment>
+      ))}
+    </div>
   )
 }
