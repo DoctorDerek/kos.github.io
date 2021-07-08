@@ -104,3 +104,49 @@ export const addLinkToTextIfPresent = (stringToTest: string) => {
 
   return <>{stringToTest}</>
 }
+
+/**
+ * Add a phone number link in the format <a href="tel:+1-613-549-8667"> to
+ * replace a single phone number found in the given string, if any.
+ *
+ * @returns JSX Element including the correct <a href=""> element
+ */
+export const addPhoneLinkToTextIfPresent = (
+  stringToTest: string,
+  color: "red" | "black" = "black",
+  bold: "bold" | "semibold" | "normal" = "bold"
+) => {
+  const phoneLinkRegExp = /(.*)1?-?(\d\d\d-\d\d\d-\d\d\d\d)(.*)/
+  const phoneLinkMatchResults = phoneLinkRegExp.exec(stringToTest)
+  if (phoneLinkMatchResults) {
+    const [, before, phoneNumber, after] = phoneLinkMatchResults
+    if (phoneNumber) {
+      return (
+        <>
+          {before}
+          <a
+            href={`tel:+1-${phoneNumber}`}
+            className={classNames(
+              color === "red"
+                ? "text-red-brand"
+                : color === "black"
+                ? "text-black"
+                : "",
+              bold === "bold"
+                ? "font-bold"
+                : bold === "semibold"
+                ? "font-semibold"
+                : "font-normal",
+              "hover:underline"
+            )}
+          >
+            {phoneNumber}
+          </a>
+          {after}
+        </>
+      )
+    }
+  }
+
+  return <>{stringToTest}</>
+}
