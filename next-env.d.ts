@@ -120,9 +120,41 @@ type PageFrontMatter = {
   ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
   officeAddressLeft?: IconCard[]
   officeAddressRight?: IconCard[]
+  contactForm?: ContactField[]
   slug: string | null
   filename: string
   children?: ReactElement | ReactElement[]
+}
+
+/**
+ * ContactField is used to build contact forms like on the /contact and /order
+ * pages using customizable HTML form elements. All forms require at least
+ * three form elements, of which "submit" and "endpoint" are both required.
+ *
+ * The "endpoint" is the endpoint given in the Formspree configuration; all
+ * other fields are standard HTML form fields. If a ContactField needs to be a
+ * a dropdown menu (<select>), then each value given as options will be used.
+ *
+ * @typeparam field - The label for the field (also used for id="" and name="")
+ * @typeparam type - The type of HTML form element *OR* the Formspree "endpoint"
+ * @typeparam placeholder? - The placeholder text to use, if any. For <select>
+ *                           elements, this is the first option (with value="")
+ * @typeparam size? - Form elements are full-width unless "half" is given here
+ * @typeparam options? - Dropdown menu ("select") options as an array of strings
+ * @typeparam bold? - If specified, the field label will have the style given
+ * @typeparam color? - The "submit" <BUTTON>s are either "red" or "blue" and
+ *                     will use the placeholder text given as the button text
+ * @typeparam optional? - All fields are required unless optional is true.
+ */
+type ContactField = {
+  field: string
+  type: "text" | "select" | "textarea" | "submit" | "endpoint"
+  placeholder?: string
+  size?: "half" | "full"
+  options?: string[]
+  bold?: "bold" | "semibold" | "normal"
+  color?: "red" | "blue"
+  optional?: boolean
 }
 
 /**
