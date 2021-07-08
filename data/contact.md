@@ -49,4 +49,40 @@ officeAddressRight:
         ],
     },
   ]
+contactForm:
+  [
+    { field: "Name", type: "text", placeholder: "Your Name", size: "half" },
+    {
+      field: "Phone",
+      type: "text",
+      placeholder: "(555) 555-5555",
+      size: "half",
+    },
+    {
+      field: "Email",
+      type: "text",
+      placeholder: "address@example.com",
+      size: "full",
+    },
+    {
+      field: "How did you hear about us?",
+      type: "select",
+      placeholder: "Please select one...",
+      bold: true
+      options:
+        [
+          "Current KOS user",
+          "Family or Friend",
+          "Radio Ad",
+          "Print Ad",
+          "Internet Search",
+          "Social Media",
+          "Direct Mail",
+          "Other",
+        ],
+    },
+    { field: "Message", type: "textarea" },
+    { field: "SEND MESSAGE", type: "submit", color: "blue" },
+    { field: "xpzklvvj", type: "endpoint" }
+  ]
 ---
