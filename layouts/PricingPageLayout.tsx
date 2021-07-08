@@ -12,6 +12,7 @@ import PricingPackagesSectionFootnotesAndDetails from "@/components/PricingPacka
 import { PageSeo } from "@/components/SEO"
 import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
 import siteMetadata from "@/data/siteMetadata.json"
+import { classNames } from "@/lib/utils"
 
 export default function PricingPageLayout({
   slug,
@@ -32,6 +33,7 @@ export default function PricingPageLayout({
   ourTeamSection,
   officeAddressLeft,
   officeAddressRight,
+  contactForm,
   children,
 }: PageFrontMatter) {
   if (!title) throw new Error("title is a required field in Markdown files")
@@ -75,17 +77,48 @@ export default function PricingPageLayout({
           hoverBulletNavMenu={hoverBulletNavMenu}
           showGetConnectedButton={showGetConnectedButton}
         />
-        <div className="grid max-w-5xl grid-cols-1 mx-auto space-x-4 md:grid-cols-3">
-          {officeAddressLeft && (
-            <OfficeAddressColumn iconCards={officeAddressLeft} />
-          )}
-          <ContactForm />
-          {officeAddressRight && (
-            <OfficeAddressColumn iconCards={officeAddressRight} />
-          )}
-        </div>
+        <ContactFormSection
+          officeAddressLeft={officeAddressLeft}
+          officeAddressRight={officeAddressRight}
+          contactForm={contactForm}
+        />
       </div>
     </>
+  )
+}
+
+function ContactFormSection({
+  officeAddressLeft,
+  officeAddressRight,
+  contactForm,
+}: {
+  officeAddressLeft?: IconCard[]
+  officeAddressRight?: IconCard[]
+  contactForm?: ContactField[]
+}) {
+  // the contact form is always required
+  if (!contactForm) return null
+  // if either is present, both left and right office addresses are required
+  if (officeAddressLeft && !officeAddressRight) return null
+  if (!officeAddressLeft && officeAddressRight) return null
+  return (
+    <div
+      className={classNames(
+        "grid max-w-5xl mx-auto",
+        officeAddressLeft && officeAddressRight
+          ? "grid-cols-1 md:space-x-4 md:grid-cols-3"
+          : ""
+        // 3 column layout is used for /contact and 1 column for /order
+      )}
+    >
+      {officeAddressLeft && (
+        <OfficeAddressColumn iconCards={officeAddressLeft} />
+      )}
+      {contactForm && <ContactForm contactForm={contactForm} />}
+      {officeAddressRight && (
+        <OfficeAddressColumn iconCards={officeAddressRight} />
+      )}
+    </div>
   )
 }
 
