@@ -143,8 +143,8 @@ type PageFrontMatter = {
  * @typeparam options? - Dropdown menu ("select") options as an array of strings
  * @typeparam bold? - If specified, the field label will have the style given
  * @typeparam color? - The "submit" <BUTTON>s are either "red" or "blue" and
- *                     will use the placeholder text given as the button text
- * @typeparam optional? - All fields are required unless optional is true.
+ *                     will use the text given as "field" as the button text
+ * @typeparam optional? - All fields are required unless optional is true
  */
 type ContactField = {
   field: string
