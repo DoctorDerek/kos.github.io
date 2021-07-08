@@ -135,7 +135,9 @@ type PageFrontMatter = {
  * other fields are standard HTML form fields. If a ContactField needs to be a
  * a dropdown menu (<select>), then each value given as options will be used.
  *
- * @typeparam field - The label for the field (also used for id="" and name="")
+ * @typeparam field - The label for the field (also used for id="" and name="");
+ *                    for "submit" this will be the button text and for
+ *                    "endpoint" this should be the endpoint given by Formspree
  * @typeparam type - The type of HTML form element *OR* the Formspree "endpoint"
  * @typeparam placeholder? - The placeholder text to use, if any. For <select>
  *                           elements, this is the first option (with value="")
