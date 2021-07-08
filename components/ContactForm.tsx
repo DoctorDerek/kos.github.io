@@ -39,7 +39,7 @@ export default function ContactForm({
     <form
       onSubmit={handleSubmit}
       id="get-in-touch"
-      className="space-y-2 text-gray-900 dark:text-gray-100"
+      className="grid grid-cols-2 gap-3 text-gray-900 dark:text-gray-100"
     >
       {contactForm.map(
         ({
@@ -53,68 +53,63 @@ export default function ContactForm({
           optional,
         }: ContactField) => {
           const name = field // the attribute name="" can be basically anything
-          const id = field.replace(/\w/g, "") // id="" can't have whitespace
+          const id = field.replace(/\W/g, "") // id="" can't have whitespace
           type = type.toLocaleLowerCase() as ContactFieldType
+          if (
+            !(
+              type === "text" ||
+              type === "email" ||
+              type === "select" ||
+              type === "textarea" ||
+              type === "submit" ||
+              type === "endpoint"
+            )
+          ) {
+            throw new Error(
+              `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "text" | "email" | "select" | "textarea" | "submit" | "endpoint"`
+            )
+          }
           switch (type) {
             case "text" || "email":
               return (
-                <Fragment key={field}>
-                  <label htmlFor={id}>{field}</label>
-                  <input type={type} name={name} id={id} required={!optional} />
+                <div
+                  key={field}
+                  className={size === "half" ? "col-span-1" : "col-span-2"}
+                >
+                  <label
+                    htmlFor={id}
+                    className={
+                      bold === "bold"
+                        ? "font-bold"
+                        : bold === "semibold"
+                        ? "font-semibold"
+                        : "font-normal"
+                    }
+                  >
+                    {field}
+                  </label>
+                  <input
+                    type={type}
+                    name={name}
+                    id={id}
+                    placeholder={placeholder}
+                    required={!optional}
+                    className="w-full rounded"
+                  />
                   <ValidationError
                     field={name} // field — the name of the field for which to display errors (required)
                     prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
                     errors={state.errors} // errors — the object containing validation errors (required)
                   />
-                </Fragment>
+                </div>
               )
             case "endpoint" || "submit" || "select" || "textarea":
               return <Fragment key={field} /> // not a real field
+            default:
+              return <Fragment key={field} /> // not a real field
           }
-          /*throw new Error(
-            'An unknown type was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "text" | "email" | "select" | "textarea" | "submit" | "endpoint"'
-          )*/
-          return <Fragment key={field} />
         }
       )}
-      <label htmlFor="name">
-        <strong>Name</strong>{" "}
-        <span className="text-xl md:text-2xl">(required)</span>
-      </label>
-      <input
-        type="text"
-        className="w-full h-10 pl-1 text-xl align-top border-2 border-black border-solid rounded-xl md:text-2xl dark:bg-gray-700"
-        name="email"
-        id="email"
-        placeholder="Steven Terner, LLC"
-        required
-      />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label htmlFor="email">
-        <strong>Email</strong>{" "}
-        <span className="text-xl md:text-2xl">(required)</span>
-      </label>
-      <input
-        type="text"
-        className="w-full h-10 pl-1 text-xl align-top border-2 border-black border-solid rounded-xl md:text-2xl dark:bg-gray-700"
-        name="name"
-        id="name"
-        placeholder="hello@gmail.com"
-        required
-      />
-      <label htmlFor="message">
-        <strong>Message</strong>{" "}
-        <span className="text-xl md:text-2xl">(required)</span>
-      </label>
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <input
-        type="textarea"
-        className="w-full pb-48 pl-1 text-lg align-top border-2 border-black border-solid md:text-3xl sm:text-2xl rounded-3xl h-60"
-        placeholder="Let us know how we can help 💼"
-        name="message"
-        id="message"
-        required
-      />
       {/*padding-bottom for vertical alignment of placeholder to top*/}
       <button
         className="hover:border-gray-900 dark:hover:border-gray-100 px-4 py-2.5 mx-auto font-bold text-center rounded-lg text-base bg-green-dark border-transparent border-2 border-solid transition-all duration-700 text-gray-100 w-full"
