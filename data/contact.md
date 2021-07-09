@@ -58,12 +58,7 @@ contactForm:
       placeholder: "(555) 555-5555",
       size: "half",
     },
-    {
-      field: "Email",
-      type: "email",
-      placeholder: "address@example.com",
-      size: "full",
-    },
+    { field: "Email", type: "email", placeholder: "address@example.com" },
     {
       field: "How did you hear about us?",
       type: "select",
