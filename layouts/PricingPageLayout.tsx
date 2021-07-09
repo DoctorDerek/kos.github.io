@@ -18,6 +18,7 @@ export default function PricingPageLayout({
   slug,
   title,
   headings,
+  centerTitleAndHeadings,
   fullWidth,
   showAvailabilityTool,
   featuredImage,
@@ -53,6 +54,7 @@ export default function PricingPageLayout({
           {...{
             title,
             headings,
+            centerTitleAndHeadings,
             fullWidth,
             showAvailabilityTool,
             featuredImage,

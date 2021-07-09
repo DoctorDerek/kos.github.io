@@ -9,6 +9,7 @@ import { classNames } from "@/lib/utils"
 export default function TitleHeadingsAndChildren({
   title,
   headings,
+  centerTitleAndHeadings,
   fullWidth,
   showAvailabilityTool,
   featuredImage,
@@ -16,6 +17,7 @@ export default function TitleHeadingsAndChildren({
 }: {
   title: string
   headings?: string | string[]
+  centerTitleAndHeadings?: boolean
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
@@ -35,13 +37,21 @@ export default function TitleHeadingsAndChildren({
         "px-4 mx-auto"
       )}
     >
-      <h1 className="text-left color decor">
+      <h1
+        className={classNames(
+          "color decor",
+          centerTitleAndHeadings ? "text-center" : "text-left"
+        )}
+      >
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
       {headings && headings.length > 0 && (
         <div className="mb-8">
-          <HeadingsH2 headings={headings} />
+          <HeadingsH2
+            headings={headings}
+            centerTitleAndHeadings={centerTitleAndHeadings}
+          />
         </div>
       )}
       {featuredImage && (
