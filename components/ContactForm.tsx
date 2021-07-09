@@ -28,10 +28,10 @@ export default function ContactForm({
     return (
       <div
         id="get-in-touch"
-        className="flex flex-col justify-center w-full h-48 space-y-12 text-3xl text-gray-900 dark:text-gray-100 md:h-60 md:text-4xl md:space-y-16 lg:h-72 md:pb-16 lg:pb-24 xl:pb-0"
+        className="flex flex-col justify-start w-full h-48 space-y-12 text-2xl text-gray-900 dark:text-gray-100 md:h-60 md:space-y-16 lg:h-72 md:pb-16 lg:pb-24 xl:pb-0"
       >
-        <p>Thanks for contacting us!</p>
-        <p>We will be in touch shortly.</p>
+        <div>Thanks for contacting us!</div>
+        <div>We will be in touch shortly.</div>
       </div>
     )
   }
@@ -70,6 +70,14 @@ export default function ContactForm({
             )
           }
           if (type === "endpoint") return <Fragment /> // not a real input
+          if (
+            (type === "select" && !options) ||
+            (Array.isArray(options) && options.length <= 1)
+          ) {
+            throw new Error(
+              `The field options is required and needs at least 2 entries when using the dropdown menu <select> element as a ContactField in <ContactForm>. Please correct the Markdown file, and note the first entry will be used as the placeholder text. The options field should be an array of strings, and this is what was found: ${options}`
+            )
+          }
           return (
             <div
               key={field}
@@ -99,15 +107,24 @@ export default function ContactForm({
                   className="w-full rounded"
                 />
               )}
-              {type === "select" && (
-                <select
-                  name={name}
-                  id={id}
-                  placeholder={placeholder}
-                  required={!optional}
-                  className="w-full rounded"
-                />
-              )}
+              {type === "select" &&
+                Array.isArray(options) &&
+                options.length > 0 && (
+                  <select
+                    name={name}
+                    id={id}
+                    placeholder={placeholder}
+                    required={!optional}
+                    className="w-full rounded"
+                  >
+                    {options.map((option, index) => (
+                      <option key={option} value={index === 0 ? "" : option}>
+                        {/* value="" indicates the placeholder field */}
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                )}
               {type === "textarea" && (
                 <textarea
                   name={name}
