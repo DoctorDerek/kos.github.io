@@ -1,7 +1,8 @@
 ---
 title: "Contact Us"
 headings: "Our offices are currently closed to walk-in traffic"
-centerTitleAndHeadings: true
+centerTitle: true
+centerHeadings: true
 officeAddressLeft:
   [
     {
