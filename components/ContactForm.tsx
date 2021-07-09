@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 
+import IconCard from "@/components/IconCard"
 import { useForm, ValidationError } from "@formspree/react"
 
 export default function ContactForm({
@@ -26,13 +27,11 @@ export default function ContactForm({
 
   if (state.succeeded) {
     return (
-      <div
-        id="get-in-touch"
-        className="flex flex-col justify-start w-full h-48 space-y-12 text-2xl text-gray-900 dark:text-gray-100 md:h-60 md:space-y-16 lg:h-72 md:pb-16 lg:pb-24 xl:pb-0"
-      >
-        <div>Thanks for contacting us!</div>
-        <div>We will be in touch shortly.</div>
-      </div>
+      <IconCard
+        icon="check"
+        label="Thanks for contacting us!"
+        text="We'll be in touch shortly."
+      />
     )
   }
   return (

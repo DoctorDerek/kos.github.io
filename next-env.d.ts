@@ -197,7 +197,13 @@ type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
  * @typeParam icon - The name of the icon, hyphenated; they are imported as
  * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
  */
-type HeroIcon = "user-group" | "cog" | "clock" | "location-marker" | "phone"
+type HeroIcon =
+  | "check"
+  | "clock"
+  | "cog"
+  | "location-marker"
+  | "phone"
+  | "user-group"
 
 /**
  * A FeaturedImage will be shown after the heading. All fields are required.

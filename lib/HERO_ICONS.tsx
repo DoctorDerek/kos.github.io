@@ -1,4 +1,5 @@
 import {
+  CheckIcon,
   ClockIcon,
   CogIcon,
   LocationMarkerIcon,
@@ -11,11 +12,12 @@ const HeroIcons: {
   [key in HeroIcon]: HeroIconFunction
 } = {
   // "kebab-case": CamelCase
-  "user-group": UserGroupIcon,
-  cog: CogIcon,
+  check: CheckIcon,
   clock: ClockIcon,
+  cog: CogIcon,
   "location-marker": LocationMarkerIcon,
   phone: PhoneIcon,
+  "user-group": UserGroupIcon,
 }
 
 type HeroIconFunction = (props: React.ComponentProps<"svg">) => JSX.Element
