@@ -63,7 +63,6 @@ contactForm:
     {
       field: "How did you hear about us?",
       type: "select",
-      placeholder: "Please select one...",
       bold: "bold",
       options:
         [

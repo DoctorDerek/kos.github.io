@@ -113,7 +113,6 @@ export default function ContactForm({
                   <select
                     name={name}
                     id={id}
-                    placeholder={placeholder}
                     required={!optional}
                     className="w-full rounded"
                   >
