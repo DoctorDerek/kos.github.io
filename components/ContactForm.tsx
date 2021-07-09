@@ -58,7 +58,7 @@ export default function ContactForm({
           optional,
         }: ContactField) => {
           const name = field // the attribute name="" can be basically anything
-          const id = field.replace(/\W/g, "") // id="" can't have whitespace
+          const id = field.replace(/\s/g, "") // id="" can't have whitespace
           type = type.toLocaleLowerCase() as ContactFieldType
           if (
             !(
