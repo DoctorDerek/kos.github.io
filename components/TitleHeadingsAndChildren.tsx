@@ -25,11 +25,6 @@ export default function TitleHeadingsAndChildren({
 }) {
   if (!title) return null
 
-  // support string | string[] for convenience
-  if (headings && !Array.isArray(headings)) {
-    headings = [headings]
-  }
-
   return (
     <div
       className={classNames(
@@ -46,7 +41,7 @@ export default function TitleHeadingsAndChildren({
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
-      {headings && headings.length > 0 && (
+      {headings && (
         <div className="mb-8">
           <HeadingsH2
             headings={headings}
