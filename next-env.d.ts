@@ -70,7 +70,8 @@ type BlogPostFrontMatter = {
  * @typeParam draft? - If true, the page won't be shown; instead, a placeholder
  *                     reading "Under Construction" will be shown for that page.
  * @typeParam headings? - The page headings as a string or array (["One","Two"])
- * @typeParam centerTitleAndHeadings? - If true, title & headings align center
+ * @typeParam centerTitle? - If true, center title instead of left alignment
+ * @typeParam centerHeadings? - If true, center headings instead of left align
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                         or narrow like the informational pages (false).
  *                         Note: for readability "fullWidth" is max-5xl for text
@@ -106,7 +107,8 @@ type PageFrontMatter = {
   title: string
   draft?: boolean
   headings?: string | string[]
-  centerTitleAndHeadings?: boolean
+  centerTitle?: boolean
+  centerHeadings?: boolean
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage

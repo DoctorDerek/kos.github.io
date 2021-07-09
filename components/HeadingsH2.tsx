@@ -2,10 +2,10 @@ import { addLinkToTextIfPresent, classNames } from "@/lib/utils"
 
 export default function HeadingsH2({
   headings,
-  centerTitleAndHeadings,
+  centerHeadings,
 }: {
   headings?: string | string[]
-  centerTitleAndHeadings?: boolean
+  centerHeadings?: boolean
 }) {
   // support string | string[] for convenience by wrapping strings with an array
   if (!Array.isArray(headings)) {
@@ -16,7 +16,7 @@ export default function HeadingsH2({
     <div
       className={classNames(
         "flex flex-col space-y-6",
-        centerTitleAndHeadings ? "text-center" : "text-left"
+        centerHeadings ? "text-center" : "text-left"
       )}
     >
       {(headings as string[]).map((headingString: string) => (
