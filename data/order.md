@@ -1,6 +1,10 @@
 ---
 title: "Order Now"
-headings: "Our offices are currently closed to walk-in traffic"
+headings:
+  [
+    "Place your order and a KOS sales specialist will contact you shortly to get your payment information and book your service appointment.",
+    "Thank you for choosing KOS Internet.",
+  ]
 centerTitleAndHeadings: true
 contactForm:
   [
@@ -52,5 +56,3 @@ contactForm:
     { field: "xpzklvvj", type: "endpoint" },
   ]
 ---
-
-Place your order and a KOS sales specialist will contact you shortly to get your payment information and book your service appointment. Thank you for choosing KOS Internet.
