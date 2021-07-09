@@ -167,12 +167,14 @@ type ContactField = {
  * ContactFieldType is a helper type that specifies valid ContactField types.
  */
 type ContactFieldType =
-  | "text"
+  | "checkbox"
   | "email"
-  | "select"
-  | "textarea"
-  | "submit"
   | "endpoint"
+  | "radio"
+  | "select"
+  | "submit"
+  | "text"
+  | "textarea"
 
 /**
  * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>

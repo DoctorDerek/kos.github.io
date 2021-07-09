@@ -24,6 +24,11 @@ export default function ContactForm({
 
   // Configure the Formspree endpoint using the given "field" value
   const endpoint = endpointContactField.field
+  if (!endpoint) {
+    throw new Error(
+      `The Formspree "endpoint" is required, but the value ${endpoint} was found. Please correct the Markdown file.`
+    )
+  }
   const [state, handleSubmit] = useForm(endpoint)
 
   if (state.succeeded) {
@@ -57,25 +62,28 @@ export default function ContactForm({
           type = type.toLocaleLowerCase() as ContactFieldType
           if (
             !(
-              type === "text" ||
+              type === "checkbox" ||
               type === "email" ||
+              type === "endpoint" ||
+              type === "radio" ||
               type === "select" ||
-              type === "textarea" ||
               type === "submit" ||
-              type === "endpoint"
+              type === "text" ||
+              type === "textarea"
             )
           ) {
             throw new Error(
-              `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "text" | "email" | "select" | "textarea" | "submit" | "endpoint"`
+              `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "checkbox" | "email" | "endpoint" | "radio" | "select" | "submit" | "text" | "textarea"`
             )
           }
           if (type === "endpoint") return <Fragment /> // not a real input
           if (
-            (type === "select" && !options) ||
+            (!options &&
+              (type === "select" || type === "checkbox" || type === "radio")) ||
             (Array.isArray(options) && options.length <= 1)
           ) {
             throw new Error(
-              `The field options is required and needs at least 2 entries when using the dropdown menu <select> element as a ContactField in <ContactForm>. Please correct the Markdown file, and note the first entry will be used as the placeholder text. The options field should be an array of strings, and this is what was found: ${options}`
+              `The field options is required and needs at least 2 entries when using type="select", type="checkbox", or type="radio" as a ContactField in <ContactForm>. The options field should be an array of strings, and this is what was found: ${options}. Please correct the Markdown file. For type="select", please note that the first entry will be used as the placeholder text -- and any value given as placeholder will not be used.`
             )
           }
           return (
@@ -83,7 +91,8 @@ export default function ContactForm({
               key={field}
               className={size === "half" ? "col-span-1" : "col-span-2"}
             >
-              {type !== "submit" && (
+              {type !== "submit" && type !== "checkbox" && type !== "radio" && (
+                // "endpoint" is screened out above with a return statement
                 <label
                   htmlFor={id}
                   className={
@@ -107,6 +116,39 @@ export default function ContactForm({
                   className="w-full rounded"
                 />
               )}
+              {(type === "checkbox" || type === "radio") &&
+                Array.isArray(options) &&
+                options.length > 0 && (
+                  <div id={id} className={"flex flex-wrap"}>
+                    {options.map((option) => (
+                      <div key={option}>
+                        <input
+                          type={type}
+                          name={name}
+                          id={option}
+                          required={!optional}
+                          className={classNames(
+                            type === "radio" ? "rounded-full" : "rounded",
+                            "mr-1"
+                          )}
+                        />
+                        <label
+                          htmlFor={option}
+                          className={classNames(
+                            bold === "bold"
+                              ? "font-bold"
+                              : bold === "semibold"
+                              ? "font-semibold"
+                              : "font-normal",
+                            "mr-3"
+                          )}
+                        >
+                          {option}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                )}
               {type === "select" &&
                 Array.isArray(options) &&
                 options.length > 0 && (

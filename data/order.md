@@ -16,22 +16,13 @@ contactForm:
     { field: "Email:", type: "email" },
     {
       field: "Residential or Business?",
-      type: "select",
-      options: ["Please select one...", "Residential", "Business"],
+      type: "radio",
+      options: ["Residential", "Business"],
     },
     {
       field: "Type of service?",
-      type: "select",
-      options:
-        [
-          "Please select one...",
-          "DSL",
-          "CABLE",
-          "WIRELESS",
-          "VoIP",
-          "DIAL UP",
-          "HOSTING",
-        ],
+      type: "checkbox",
+      options: ["DSL", "CABLE", "WIRELESS", "VoIP", "DIAL UP", "HOSTING"],
     },
     {
       field: "How did you hear about us?",
