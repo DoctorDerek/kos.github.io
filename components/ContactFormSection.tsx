@@ -22,6 +22,7 @@ export function ContactFormSection({
     <div
       className={classNames(
         "mx-auto",
+        // Note: fullWidth is not used here, but the widths are the same
         officeAddressLeft && officeAddressRight
           ? "max-w-5xl md:px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 auto-cols-min gap-6 px-2" // 3 column layout is used on /contact
           : "max-w-xl px-4" // just the contact form, i.e. /order
