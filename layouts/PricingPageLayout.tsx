@@ -108,7 +108,7 @@ function ContactFormSection({
       className={classNames(
         "grid max-w-5xl mx-auto",
         officeAddressLeft && officeAddressRight
-          ? "grid-cols-1 md:space-x-4 md:grid-cols-3"
+          ? "grid-cols-1 md:grid-cols-3 auto-cols-min gap-6 px-2"
           : ""
         // 3 column layout is used for /contact and 1 column for /order
       )}
@@ -126,7 +126,7 @@ function ContactFormSection({
 
 function OfficeAddressColumn({ iconCards }: { iconCards: IconCard[] }) {
   return (
-    <div className="w-80">
+    <div>
       {iconCards.map((iconCard: IconCard) => (
         <Fragment key={`${iconCard.text}${iconCard.label}`}>
           <IconCard {...iconCard} />
