@@ -1,5 +1,3 @@
-import { Fragment } from "react"
-
 import { useForm, ValidationError } from "@formspree/react"
 
 export default function ContactForm({
@@ -39,7 +37,7 @@ export default function ContactForm({
     <form
       onSubmit={handleSubmit}
       id="get-in-touch"
-      className="grid grid-cols-2 gap-3 text-gray-900 dark:text-gray-100"
+      className="grid grid-cols-2 gap-3 text-gray-900 auto-rows-min dark:text-gray-100"
     >
       {contactForm.map(
         ({
@@ -69,45 +67,40 @@ export default function ContactForm({
               `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "text" | "email" | "select" | "textarea" | "submit" | "endpoint"`
             )
           }
-          switch (type) {
-            case "text" || "email":
-              return (
-                <div
-                  key={field}
-                  className={size === "half" ? "col-span-1" : "col-span-2"}
-                >
-                  <label
-                    htmlFor={id}
-                    className={
-                      bold === "bold"
-                        ? "font-bold"
-                        : bold === "semibold"
-                        ? "font-semibold"
-                        : "font-normal"
-                    }
-                  >
-                    {field}
-                  </label>
-                  <input
-                    type={type}
-                    name={name}
-                    id={id}
-                    placeholder={placeholder}
-                    required={!optional}
-                    className="w-full rounded"
-                  />
-                  <ValidationError
-                    field={name} // field — the name of the field for which to display errors (required)
-                    prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
-                    errors={state.errors} // errors — the object containing validation errors (required)
-                  />
-                </div>
-              )
-            case "endpoint" || "submit" || "select" || "textarea":
-              return <Fragment key={field} /> // not a real field
-            default:
-              return <Fragment key={field} /> // not a real field
-          }
+          return (
+            <div
+              key={field}
+              className={size === "half" ? "col-span-1" : "col-span-2"}
+            >
+              <label
+                htmlFor={id}
+                className={
+                  bold === "bold"
+                    ? "font-bold"
+                    : bold === "semibold"
+                    ? "font-semibold"
+                    : "font-normal"
+                }
+              >
+                {field}
+              </label>
+              {(type === "text" || type === "email") && (
+                <input
+                  type={type}
+                  name={name}
+                  id={id}
+                  placeholder={placeholder}
+                  required={!optional}
+                  className="w-full rounded"
+                />
+              )}
+              <ValidationError
+                field={name} // field — the name of the field for which to display errors (required)
+                prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
+                errors={state.errors} // errors — the object containing validation errors (required)
+              />
+            </div>
+          )
         }
       )}
       {/*padding-bottom for vertical alignment of placeholder to top*/}
