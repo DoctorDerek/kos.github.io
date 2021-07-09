@@ -1,6 +1,8 @@
 import { Fragment } from "react"
 
 import IconCard from "@/components/IconCard"
+import { BUTTON } from "@/components/UTILS"
+import { classNames } from "@/lib/utils"
 import { useForm, ValidationError } from "@formspree/react"
 
 export default function ContactForm({
@@ -142,11 +144,15 @@ export default function ContactForm({
               )}
               {type === "submit" && (
                 <button
-                  className="px-4 py-2.5 mx-auto font-bold text-center rounded-lg text-base bg-green-dark border-black border-2 border-solid transition-all duration-700 text-black w-full"
+                  className={classNames(
+                    "flex-shrink-0 py-4 text-center",
+                    color === "red" ? "btn-orange" : "",
+                    "transition duration-500 btn"
+                  )}
                   formAction="submit"
                   disabled={state.submitting}
                 >
-                  Submit
+                  {field}
                 </button>
               )}
             </div>
