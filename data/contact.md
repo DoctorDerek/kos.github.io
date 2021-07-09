@@ -64,7 +64,7 @@ contactForm:
       field: "How did you hear about us?",
       type: "select",
       placeholder: "Please select one...",
-      bold: true,
+      bold: "bold",
       options:
         [
           "Current KOS user",
