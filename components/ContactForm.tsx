@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 import { useForm, ValidationError } from "@formspree/react"
 
 export default function ContactForm({
@@ -67,23 +69,26 @@ export default function ContactForm({
               `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "text" | "email" | "select" | "textarea" | "submit" | "endpoint"`
             )
           }
+          if (type === "endpoint") return <Fragment /> // not a real input
           return (
             <div
               key={field}
               className={size === "half" ? "col-span-1" : "col-span-2"}
             >
-              <label
-                htmlFor={id}
-                className={
-                  bold === "bold"
-                    ? "font-bold"
-                    : bold === "semibold"
-                    ? "font-semibold"
-                    : "font-normal"
-                }
-              >
-                {field}
-              </label>
+              {type !== "submit" && (
+                <label
+                  htmlFor={id}
+                  className={
+                    bold === "bold"
+                      ? "font-bold"
+                      : bold === "semibold"
+                      ? "font-semibold"
+                      : "font-normal"
+                  }
+                >
+                  {field}
+                </label>
+              )}
               {(type === "text" || type === "email") && (
                 <input
                   type={type}
@@ -94,23 +99,44 @@ export default function ContactForm({
                   className="w-full rounded"
                 />
               )}
-              <ValidationError
-                field={name} // field — the name of the field for which to display errors (required)
-                prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
-                errors={state.errors} // errors — the object containing validation errors (required)
-              />
+              {type === "select" && (
+                <select
+                  name={name}
+                  id={id}
+                  placeholder={placeholder}
+                  required={!optional}
+                  className="w-full rounded"
+                />
+              )}
+              {type === "textarea" && (
+                <textarea
+                  name={name}
+                  id={id}
+                  placeholder={placeholder}
+                  required={!optional}
+                  className="w-full rounded"
+                />
+              )}
+              {type !== "submit" && (
+                <ValidationError
+                  field={name} // field — the name of the field for which to display errors (required)
+                  prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
+                  errors={state.errors} // errors — the object containing validation errors (required)
+                />
+              )}
+              {type === "submit" && (
+                <button
+                  className="px-4 py-2.5 mx-auto font-bold text-center rounded-lg text-base bg-green-dark border-black border-2 border-solid transition-all duration-700 text-black w-full"
+                  formAction="submit"
+                  disabled={state.submitting}
+                >
+                  Submit
+                </button>
+              )}
             </div>
           )
         }
       )}
-      {/*padding-bottom for vertical alignment of placeholder to top*/}
-      <button
-        className="hover:border-gray-900 dark:hover:border-gray-100 px-4 py-2.5 mx-auto font-bold text-center rounded-lg text-base bg-green-dark border-transparent border-2 border-solid transition-all duration-700 text-gray-100 w-full"
-        formAction="submit"
-        disabled={state.submitting}
-      >
-        Submit
-      </button>
     </form>
   )
 }
