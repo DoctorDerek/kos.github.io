@@ -5,7 +5,7 @@ headings:
     "Place your order and a KOS sales specialist will contact you shortly to get your payment information and book your service appointment.",
     "Thank you for choosing KOS Internet.",
   ]
-centerTitleAndHeadings: true
+centerTitle: true
 contactForm:
   [
     { field: "Name:", type: "text" },
