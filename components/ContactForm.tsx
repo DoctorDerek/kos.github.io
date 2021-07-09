@@ -1,7 +1,6 @@
 import { Fragment } from "react"
 
 import IconCard from "@/components/IconCard"
-import { BUTTON } from "@/components/UTILS"
 import { classNames } from "@/lib/utils"
 import { useForm, ValidationError } from "@formspree/react"
 
@@ -132,7 +131,7 @@ export default function ContactForm({
                   id={id}
                   placeholder={placeholder}
                   required={!optional}
-                  className="w-full rounded"
+                  className="w-full h-40 rounded"
                 />
               )}
               {type !== "submit" && (
