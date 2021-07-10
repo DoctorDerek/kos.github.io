@@ -140,15 +140,22 @@ export default function ContactForm({
                 // "endpoint" is screened out above with a return statement
                 <label
                   htmlFor={id}
-                  className={
+                  className={classNames(
+                    "flex items-center space-x-2",
                     bold === "bold"
                       ? "font-bold"
                       : bold === "semibold"
                       ? "font-semibold"
                       : "font-normal"
-                  }
+                  )}
                 >
-                  {field}
+                  <span>{field}</span>
+                  <ValidationError
+                    field={name} // field — the name of the field for which to display errors (required)
+                    prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
+                    errors={state.errors} // errors — the object containing validation errors (required)
+                    className="text-sm text-red-600"
+                  />
                 </label>
               )}
               {(type === "text" || type === "email") && (
@@ -245,13 +252,6 @@ export default function ContactForm({
                       ? true
                       : undefined
                   }
-                />
-              )}
-              {type !== "submit" && (
-                <ValidationError
-                  field={name} // field — the name of the field for which to display errors (required)
-                  prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
-                  errors={state.errors} // errors — the object containing validation errors (required)
                 />
               )}
               {type === "submit" && (
