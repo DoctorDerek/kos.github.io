@@ -213,7 +213,9 @@ export default function ContactForm({
                   defaultValue={value ? value : undefined}
                   disabled={
                     // gray out and disable the "Selected Plan", if any
-                    name.toLocaleLowerCase().includes("plan") ? true : undefined
+                    name.toLocaleLowerCase().includes("selected plan")
+                      ? true
+                      : undefined
                   }
                 />
               )}
