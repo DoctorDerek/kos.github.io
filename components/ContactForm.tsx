@@ -29,12 +29,19 @@ export default function ContactForm({
   }
 
   // Verify the contactForm data
-  const submitContactField = contactForm.find(
+  const submitContactFields = contactForm.filter(
     (item: ContactField) => item.type === "submit" && Boolean(item.field)
   )
-  const endpointContactField = contactForm.find(
+  const endpointContactFields = contactForm.filter(
     (item: ContactField) => item.type === "endpoint" && Boolean(item.field)
   )
+  if (submitContactFields.length > 1 || endpointContactFields.length > 1) {
+    throw new Error(
+      `There should be exactly one each of "submit" or "endpoint" fields in <ContactForm>. Please correct the Markdown file to fix this error. ${submitContactFields} was found for "submit" fields, and ${endpointContactFields} was found for "endpoint fields.`
+    )
+  }
+  const submitContactField = submitContactFields[0]
+  const endpointContactField = endpointContactFields[0]
   if (contactForm.length < 3 || !submitContactField || !endpointContactField) {
     throw new Error(
       'At least 3 fields are required in <ContactForm>: a "submit" button, an "endpoint" destination for Formspree, and at least one form field. Please correct the Markdown file to fix this error.'
