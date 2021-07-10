@@ -96,7 +96,7 @@ export default function ContactForm({
               `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "checkbox" | "email" | "endpoint" | "radio" | "select" | "submit" | "text" | "textarea"`
             )
           }
-          if (type === "endpoint") return <Fragment /> // not a real input
+          if (type === "endpoint") return <Fragment key={endpoint} /> // not a real input
           if (
             (!options &&
               (type === "select" || type === "checkbox" || type === "radio")) ||
