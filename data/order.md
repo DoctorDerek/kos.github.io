@@ -42,7 +42,7 @@ contactForm:
           "Other",
         ],
     },
-    { field: "Comments", type: "textarea" },
+    { field: "Comments", type: "textarea", optional: true },
     { field: "SUBMIT ORDER FORM", type: "submit", color: "red" },
     { field: "xpzklvvj", type: "endpoint" },
   ]
