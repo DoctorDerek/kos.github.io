@@ -147,7 +147,10 @@ export default function ContactForm({
                           type={type}
                           name={name}
                           id={option}
-                          required={!optional}
+                          // required={!optional}
+                          // ^^^required does not apply to the group of radio or
+                          // checkbox inputs, it would apply to each one, so we
+                          // ignore the optional prop because of the HTML5 spec
                           className={classNames(
                             type === "radio" ? "rounded-full" : "rounded",
                             "mr-1"
