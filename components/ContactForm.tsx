@@ -207,7 +207,7 @@ export default function ContactForm({
                   className={classNames(
                     "w-full rounded",
                     name.toLocaleLowerCase().includes("plan")
-                      ? "text-gray-800 bg-gray-100 h-24" // Selected Plan
+                      ? "text-gray-800 bg-gray-200 h-24" // Selected Plan
                       : "h-40" // other <textarea>s, such as Comments or Message
                   )}
                   defaultValue={value ? value : undefined}
