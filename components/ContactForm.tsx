@@ -163,7 +163,7 @@ export default function ContactForm({
                             "mr-1"
                           )}
                           value={option} // this will be passed on to the form
-                          checked={
+                          defaultChecked={
                             // check if this option is part of the selectedPlan
                             // e.g. pre-select the "Residential" radio button
                             selectedPlan &&
