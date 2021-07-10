@@ -44,6 +44,6 @@ contactForm:
     },
     { field: "Comments", type: "textarea", optional: true },
     { field: "SUBMIT ORDER FORM", type: "submit", color: "red" },
-    { field: "xpzklvvj", type: "endpoint" },
+    { field: "xoqynqgy", type: "endpoint" },
   ]
 ---
