@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Fragment } from "react"
+import { Fragment, useEffect, useState } from "react"
 
 import IconCard from "@/components/IconCard"
 import { classNames } from "@/lib/utils"
@@ -11,28 +11,41 @@ export default function ContactForm({
   contactForm: ContactField[]
 }) {
   // get the GET parameters object, query
-  const { query } = useRouter()
-  // /order?plan=... from an OrderNow button
-  const selectedPlan = query.selectedPlan ? String(query.selectedPlan) : ""
-  if (selectedPlan) {
-    // insert the selected plan as a new <input> of type "text"
-    // just before the how did you hear about us field
-    const commentsIndex = contactForm.findIndex((value: ContactField) =>
-      value.field.toLocaleLowerCase().includes("how")
-    ) // returns -1 if not found; with .splice() a -1 index is second from last
-    contactForm.splice(commentsIndex, 0, {
-      field: "Selected Plan",
-      type: "textarea",
-      bold: "semibold",
-      value: selectedPlan,
-    })
-  }
+  // i.e. /order?selectedPlan=... originating from an <OrderNow> button
+  const { query } = useRouter() // isReady means client has loaded
 
-  // Verify the contactForm data
-  const submitContactFields = contactForm.filter(
+  const [selectedPlanState, setSelectedPlanState] = useState("")
+
+  const [contactFormState, setContactFormState] = useState(contactForm)
+  useEffect(() => {
+    setSelectedPlanState(() => {
+      const selectedPlan = query.selectedPlan ? String(query.selectedPlan) : ""
+      if (selectedPlan) {
+        setContactFormState((currentContactFormState) => {
+          // insert the selected plan as a new <input> of type "text"
+          // just before the how did you hear about us field
+          const commentsIndex = currentContactFormState.findIndex(
+            (value: ContactField) =>
+              value.field.toLocaleLowerCase().includes("how")
+          ) // returns -1 if not found; .splice() a -1 index is second from last
+          currentContactFormState.splice(commentsIndex, 0, {
+            field: "Selected Plan",
+            type: "textarea",
+            bold: "semibold",
+            value: selectedPlan,
+          })
+          return currentContactFormState
+        })
+      }
+      return selectedPlan
+    })
+  }, [query.selectedPlan])
+
+  // Verify the contactFormState data
+  const submitContactFields = contactFormState.filter(
     (item: ContactField) => item.type === "submit" && Boolean(item.field)
   )
-  const endpointContactFields = contactForm.filter(
+  const endpointContactFields = contactFormState.filter(
     (item: ContactField) => item.type === "endpoint" && Boolean(item.field)
   )
   if (submitContactFields.length > 1 || endpointContactFields.length > 1) {
@@ -42,7 +55,11 @@ export default function ContactForm({
   }
   const submitContactField = submitContactFields[0]
   const endpointContactField = endpointContactFields[0]
-  if (contactForm.length < 3 || !submitContactField || !endpointContactField) {
+  if (
+    contactFormState.length < 3 ||
+    !submitContactField ||
+    !endpointContactField
+  ) {
     throw new Error(
       'At least 3 fields are required in <ContactForm>: a "submit" button, an "endpoint" destination for Formspree, and at least one form field. Please correct the Markdown file to fix this error.'
     )
@@ -72,7 +89,7 @@ export default function ContactForm({
       id="get-in-touch"
       className="grid grid-cols-2 gap-3 text-gray-900 auto-rows-min dark:text-gray-100"
     >
-      {contactForm.map(
+      {contactFormState.map(
         ({
           field,
           type,
@@ -165,10 +182,10 @@ export default function ContactForm({
                           )}
                           value={option} // this will be passed on to the form
                           defaultChecked={
-                            // check if this option is part of the selectedPlan
+                            // check if this option is part of the selectedPlanState
                             // e.g. pre-select the "Residential" radio button
-                            selectedPlan &&
-                            selectedPlan
+                            selectedPlanState &&
+                            selectedPlanState
                               .toLocaleLowerCase()
                               .includes(option.toLocaleLowerCase())
                               ? true
