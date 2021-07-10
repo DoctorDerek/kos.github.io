@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { Fragment } from "react"
 
 import IconCard from "@/components/IconCard"
@@ -9,6 +10,24 @@ export default function ContactForm({
 }: {
   contactForm: ContactField[]
 }) {
+  // get the GET parameters object, query
+  const { query } = useRouter()
+  // /order?plan=... from an OrderNow button
+  const selectedPlan = query.selectedPlan ? String(query.selectedPlan) : ""
+  if (selectedPlan) {
+    // insert the selected plan as a new <input> of type "text"
+    // just before the how did you hear about us field
+    const commentsIndex = contactForm.findIndex((value: ContactField) =>
+      value.field.toLocaleLowerCase().includes("how")
+    ) // returns -1 if not found; with .splice() a -1 index is second from last
+    contactForm.splice(commentsIndex, 0, {
+      field: "Selected Plan",
+      type: "textarea",
+      bold: "semibold",
+      value: selectedPlan,
+    })
+  }
+
   // Verify the contactForm data
   const submitContactField = contactForm.find(
     (item: ContactField) => item.type === "submit" && Boolean(item.field)
@@ -56,6 +75,7 @@ export default function ContactForm({
           bold,
           color,
           optional,
+          value,
         }: ContactField) => {
           const name = field // the attribute name="" can be basically anything
           const id = field.replace(/\s/g, "") // id="" can't have whitespace
@@ -113,12 +133,22 @@ export default function ContactForm({
                   id={id}
                   placeholder={placeholder}
                   required={!optional}
-                  className="w-full rounded"
+                  className={classNames(
+                    "w-full rounded",
+                    name.toLocaleLowerCase().includes("plan")
+                      ? "text-gray-800 bg-gray-100" // Selected Plan
+                      : "" // normal text or email inputs
+                  )}
+                  value={value ? value : ""}
+                  disabled={
+                    // gray out and disable the "Selected Plan", if any
+                    name.toLocaleLowerCase().includes("plan") ? true : undefined
+                  }
                 />
               )}
               {(type === "checkbox" || type === "radio") &&
                 Array.isArray(options) &&
-                options.length > 0 && (
+                options.length > 0 && ( // make radio buttons or checkboxes
                   <div id={id} className={"flex flex-wrap"}>
                     {options.map((option) => (
                       <div key={option}>
@@ -131,6 +161,17 @@ export default function ContactForm({
                             type === "radio" ? "rounded-full" : "rounded",
                             "mr-1"
                           )}
+                          value={option} // this will be passed on to the form
+                          checked={
+                            // check if this option is part of the selectedPlan
+                            // e.g. pre-select the "Residential" radio button
+                            selectedPlan &&
+                            selectedPlan
+                              .toLocaleLowerCase()
+                              .includes(option.toLocaleLowerCase())
+                              ? true
+                              : undefined // false does not work here 😀
+                          }
                         />
                         <label
                           htmlFor={option}
@@ -172,7 +213,17 @@ export default function ContactForm({
                   id={id}
                   placeholder={placeholder}
                   required={!optional}
-                  className="w-full h-40 rounded"
+                  className={classNames(
+                    "w-full rounded",
+                    name.toLocaleLowerCase().includes("plan")
+                      ? "text-gray-800 bg-gray-100 h-24" // Selected Plan
+                      : "h-40" // other <textarea>s, such as Comments or Message
+                  )}
+                  value={value ? value : ""}
+                  disabled={
+                    // gray out and disable the "Selected Plan", if any
+                    name.toLocaleLowerCase().includes("plan") ? true : undefined
+                  }
                 />
               )}
               {type !== "submit" && (

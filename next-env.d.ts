@@ -150,7 +150,9 @@ type PageFrontMatter = {
  * @typeparam bold? - If specified, the field label will have the style given
  * @typeparam color? - The "submit" <BUTTON>s are either "red" or "blue" and
  *                     will use the text given as "field" as the button text
- * @typeparam optional? - All fields are required unless optional is true
+ * @typeparam optional? - All fields are required unless optional is set to true
+ * @typeparam value? - The value prop is used only on the /order page when
+ *                     passing in the selected plan via GET (/order?plan=...)
  */
 type ContactField = {
   field: string
@@ -161,6 +163,7 @@ type ContactField = {
   bold?: "bold" | "semibold" | "normal"
   color?: "red" | "blue"
   optional?: boolean
+  value?: string
 }
 
 /**

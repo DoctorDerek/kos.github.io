@@ -60,7 +60,10 @@ export default function PricingPageLayout({
             children,
           }}
         />
-        <PricingPackagesSection pricingPackages={pricingPackages} />
+        <PricingPackagesSection
+          pricingPackages={pricingPackages}
+          title={title} // pass in the page title to pass to <OrderNowButton>
+        />
         <PricingPackagesSectionFootnotesAndDetails
           pricingPackagesSectionFootnotes={pricingPackagesSectionFootnotes}
           pricingPackagesSectionDetails={pricingPackagesSectionDetails}

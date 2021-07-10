@@ -4,8 +4,10 @@ import PricingPackageColumn from "@/components/PricingPackageColumn"
 
 export default function PricingPackagesSection({
   pricingPackages,
+  title,
 }: {
   pricingPackages?: PricingPackage[]
+  title?: string // pass in the page title to pass to <OrderNowButton>
 }) {
   if (!pricingPackages) return null
   return (
@@ -16,6 +18,7 @@ export default function PricingPackagesSection({
             color={index % 2 === 1 ? "teal" : "navy"}
             pricingPackage={pricingPackage}
             columnNumber={index + 1}
+            title={title}
           />
           {(index + 1) % 3 === 0 && pricingPackages.length > 4 && (
             <div className="w-full h-0">
