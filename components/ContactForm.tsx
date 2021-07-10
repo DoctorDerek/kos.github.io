@@ -139,7 +139,7 @@ export default function ContactForm({
                       ? "text-gray-800 bg-gray-100" // Selected Plan
                       : "" // normal text or email inputs
                   )}
-                  value={value ? value : ""}
+                  defaultValue={value ? value : undefined}
                   disabled={
                     // gray out and disable the "Selected Plan", if any
                     name.toLocaleLowerCase().includes("plan") ? true : undefined
@@ -219,7 +219,7 @@ export default function ContactForm({
                       ? "text-gray-800 bg-gray-100 h-24" // Selected Plan
                       : "h-40" // other <textarea>s, such as Comments or Message
                   )}
-                  value={value ? value : ""}
+                  defaultValue={value ? value : undefined}
                   disabled={
                     // gray out and disable the "Selected Plan", if any
                     name.toLocaleLowerCase().includes("plan") ? true : undefined
