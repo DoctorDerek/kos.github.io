@@ -245,14 +245,15 @@ export default function ContactForm({
                       ? "text-gray-800 bg-gray-200 h-24" // Selected Plan
                       : "h-40" // other <textarea>s, such as Comments or Message
                   )}
-                  defaultValue={value ? value : undefined}
                   disabled={
                     // gray out and disable the "Selected Plan", if any
                     name.toLocaleLowerCase().includes("selected plan")
                       ? true
                       : undefined
                   }
-                />
+                >
+                  {value ? value : ""}
+                </textarea>
               )}
               {type === "submit" && (
                 <button
