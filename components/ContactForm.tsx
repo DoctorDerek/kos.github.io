@@ -243,7 +243,7 @@ export default function ContactForm({
                     color === "red" ? "btn-orange" : "",
                     "transition duration-500 btn"
                   )}
-                  formAction="submit"
+                  type="submit"
                   disabled={state.submitting}
                 >
                   {field}
