@@ -106,39 +106,6 @@ pricingPackages:
         ],
       modalFootnotes: ["6) Only in regions where technology is available"],
     },
-    {
-      packageName: "BIZ 10",
-      packagePrices: ["$99.95^6 per month"],
-      packageHeadings:
-        ["UP TO 10.0 MBPS DOWNLOAD SPEED", "350 GB OF DATA TRANSFER PER MONTH"],
-      packageDescription: "FREE DOWNLOADING BETWEEN 1AM-6AM",
-      promotionHeading: "",
-      promotionSubheading: "",
-      promotionPrice: "",
-      modalBullets:
-        [
-          "#Account Includes:",
-          "350 GB per month",
-          "Up to 10 Mbps performance^6",
-          "Free downloading between 1am – 6am",
-          "7 day tech support",
-          "Email anti-virus and spam protection",
-          "Packages include rental of all hardware to activate one system",
-          "5 email addresses",
-          "Separate dial-up back up account",
-          "$1.95 per extra gigabyte",
-          "#Installation Includes:",
-          "Subscriber Module",
-          "Basic configuration of one computer",
-          "Reflector Dish (if required)",
-          "Up to 20 metres of cable ($3 per additional metre)",
-          "#Installation Fee:",
-          "3 Year Contract $0 Install fee",
-          "2 Year Contract $99.95 Install fee",
-          "1 Year Contract $199.95 Install fee",
-        ],
-      modalFootnotes: ["6) Only in regions where technology is available"],
-    },
   ]
 pricingPackagesSectionFootnotes:
   [
