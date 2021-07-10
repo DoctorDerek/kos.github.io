@@ -133,17 +133,8 @@ export default function ContactForm({
                   id={id}
                   placeholder={placeholder}
                   required={!optional}
-                  className={classNames(
-                    "w-full rounded",
-                    name.toLocaleLowerCase().includes("plan")
-                      ? "text-gray-800 bg-gray-100" // Selected Plan
-                      : "" // normal text or email inputs
-                  )}
+                  className="w-full rounded"
                   defaultValue={value ? value : undefined}
-                  disabled={
-                    // gray out and disable the "Selected Plan", if any
-                    name.toLocaleLowerCase().includes("plan") ? true : undefined
-                  }
                 />
               )}
               {(type === "checkbox" || type === "radio") &&
