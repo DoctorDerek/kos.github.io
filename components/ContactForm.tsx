@@ -11,15 +11,18 @@ export default function ContactForm({
   contactForm: ContactField[]
 }) {
   // get the GET parameters object, query
-  // i.e. /order?selectedPlan=... originating from an <OrderNow> button
   const { query } = useRouter() // isReady means client has loaded
-
+  // i.e. /order?selectedPlan=... originating from an <OrderNow> button
   const [selectedPlanState, setSelectedPlanState] = useState("")
   const [contactFormState, setContactFormState] = useState(contactForm)
   useEffect(() => {
     setSelectedPlanState(() => {
       const selectedPlan = query.selectedPlan ? String(query.selectedPlan) : ""
-      if (selectedPlan) {
+      if (
+        selectedPlan &&
+        !selectedPlanState
+        // dummy check, just to be sure not to double-add Selected Plan
+      ) {
         setContactFormState((currentContactFormState) => {
           // insert the selected plan as a new <input> of type "text"
           // just before the how did you hear about us field
@@ -44,7 +47,7 @@ export default function ContactForm({
       }
       return selectedPlan
     })
-  }, [query.selectedPlan])
+  }, [query.selectedPlan, selectedPlanState])
 
   // Verify the contactFormState data
   const submitContactFields = contactFormState.filter(
