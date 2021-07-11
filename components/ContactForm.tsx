@@ -20,8 +20,11 @@ export default function ContactForm({
       const selectedPlan = query.selectedPlan ? String(query.selectedPlan) : ""
       if (
         selectedPlan &&
-        !selectedPlanState
-        // dummy check, just to be sure not to double-add Selected Plan
+        // dummy checks, just to be extra sure not to double-add Selected Plan
+        !selectedPlanState &&
+        !contactFormState.find(
+          (value: ContactField) => value.field === "Selected Plan"
+        )
       ) {
         setContactFormState((currentContactFormState) => {
           // insert the selected plan as a new <input> of type "text"
@@ -47,7 +50,7 @@ export default function ContactForm({
       }
       return selectedPlan
     })
-  }, [query.selectedPlan, selectedPlanState])
+  }, [query.selectedPlan, selectedPlanState, contactFormState])
 
   // Verify the contactFormState data
   const submitContactFields = contactFormState.filter(
