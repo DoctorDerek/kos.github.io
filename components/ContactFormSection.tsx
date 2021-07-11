@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { Fragment } from "react"
 
 import ContactForm from "@/components/ContactForm"
@@ -13,6 +14,7 @@ export function ContactFormSection({
   officeAddressRight?: IconCard[]
   contactForm?: ContactField[]
 }) {
+  const { asPath } = useRouter() // get the current page's path (location)
   // the contact form is always required
   if (!contactForm) return null
   // if either is present, both left and right office addresses are required
@@ -31,7 +33,12 @@ export function ContactFormSection({
       {officeAddressLeft && (
         <OfficeAddressColumn iconCards={officeAddressLeft} />
       )}
-      {contactForm && <ContactForm contactForm={contactForm} />}
+      {contactForm && (
+        <ContactForm
+          contactForm={contactForm}
+          key={asPath} // reset the form state if user moves to a different page
+        />
+      )}
       {officeAddressRight && (
         <OfficeAddressColumn iconCards={officeAddressRight} />
       )}
