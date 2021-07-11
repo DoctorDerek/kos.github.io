@@ -11,7 +11,7 @@ export default function ContactForm({
   contactForm: ContactField[]
 }) {
   // get the GET parameters object, query
-  const { query } = useRouter() // isReady means client has loaded
+  const { query } = useRouter()
   // i.e. /order?selectedPlan=... originating from an <OrderNow> button
   const [selectedPlanState, setSelectedPlanState] = useState("")
   const [contactFormState, setContactFormState] = useState(contactForm)
