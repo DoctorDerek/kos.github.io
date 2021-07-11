@@ -79,8 +79,8 @@ export default function PricingPackageColumn({
               .replace(/\s+Packages.+/gi, "")
               .replace(/\s+in.+/gi, ""),
             packageName,
-            ...packagePrices.map(Boolean), // remove falsy, just in case
-            ...packageHeadings.map(Boolean), // remove falsy, as "" is valid
+            ...packagePrices.filter(Boolean), // remove falsy, just in case
+            ...packageHeadings.filter(Boolean), // remove falsy, as "" is valid
           ]
             .join(" - ")
             // remove footnotes (in the format ^1,2) i.e. from prices & headings
