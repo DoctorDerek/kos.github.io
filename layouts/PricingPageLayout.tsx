@@ -9,10 +9,14 @@ import { PageSeo } from "@/components/SEO"
 import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
 import siteMetadata from "@/data/siteMetadata.json"
 
+import { ContactFormSection } from "../components/ContactFormSection"
+
 export default function PricingPageLayout({
   slug,
   title,
   headings,
+  centerTitle,
+  centerHeadings,
   fullWidth,
   showAvailabilityTool,
   featuredImage,
@@ -24,8 +28,11 @@ export default function PricingPageLayout({
   pricingPackagesSectionDetailsPromotion,
   pricingPackagesBlue,
   pricingPackagesBlueFootnotes,
-  ourTeamSection,
   iconColumnSection,
+  ourTeamSection,
+  officeAddressLeft,
+  officeAddressRight,
+  contactForm,
   children,
 }: PageFrontMatter) {
   if (!title) throw new Error("title is a required field in Markdown files")
@@ -45,13 +52,18 @@ export default function PricingPageLayout({
           {...{
             title,
             headings,
+            centerTitle,
+            centerHeadings,
             fullWidth,
             showAvailabilityTool,
             featuredImage,
             children,
           }}
         />
-        <PricingPackagesSection pricingPackages={pricingPackages} />
+        <PricingPackagesSection
+          pricingPackages={pricingPackages}
+          title={title} // pass in the page title to pass to <OrderNowButton>
+        />
         <PricingPackagesSectionFootnotesAndDetails
           pricingPackagesSectionFootnotes={pricingPackagesSectionFootnotes}
           pricingPackagesSectionDetails={pricingPackagesSectionDetails}
@@ -68,6 +80,11 @@ export default function PricingPageLayout({
         <HoverBulletNavMenuAndGetConnectedButton
           hoverBulletNavMenu={hoverBulletNavMenu}
           showGetConnectedButton={showGetConnectedButton}
+        />
+        <ContactFormSection
+          officeAddressLeft={officeAddressLeft}
+          officeAddressRight={officeAddressRight}
+          contactForm={contactForm}
         />
       </div>
     </>

@@ -11,6 +11,7 @@ export default function PricingPackageModal({
   packageName,
   modalBullets,
   modalFootnotes,
+  selectedPlanForOrderNow,
 }: {
   openModal: boolean
   setOpenModal: Dispatch<SetStateAction<boolean>>
@@ -19,6 +20,7 @@ export default function PricingPackageModal({
   modalFootnotes: string[]
   // for modalBullets and modalFootnotes, any string type has been
   // converted to string[] already in <PricingPackageColumn>
+  selectedPlanForOrderNow?: string // created in <PricingPackageColumn>
 }) {
   function PricingPackageModalJSX() {
     return (
@@ -79,7 +81,10 @@ export default function PricingPackageModal({
                   >
                     <span>Close</span>
                   </button>
-                  <OrderNowButton color="blue" />
+                  <OrderNowButton
+                    color="blue"
+                    selectedPlanForOrderNow={selectedPlanForOrderNow}
+                  />
                 </div>
               </div>
             </Transition.Child>

@@ -3,6 +3,7 @@ import ImageFixed from "next/image"
 import Link from "@/components/CustomLink"
 import DropdownMenu from "@/components/DropdownMenu"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
+import { addPhoneLinkToTextIfPresent } from "@/lib/utils"
 
 const Column = ({ children }: { children?: any }) => (
   <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 lg:flex-grow-0 sm:flex-grow">
@@ -35,7 +36,7 @@ export default function Header() {
         </div>
 
         <Column>
-          <div className="flex flex-col group ">
+          <div className="flex flex-col group">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
               <div className="grid self-center w-12 h-12 p-1 mx-3 transition-all duration-500 border-2 border-current border-solid rounded-full fill-current group-hover:bg-blue-brand group-hover:text-gray-100">
                 <PhoneIcon />
@@ -46,12 +47,10 @@ export default function Header() {
                     <tr>
                       <td>Kingston:&nbsp;</td>
                       <td>
-                        <a
-                          href="tel:+1-613-549-8667"
-                          className="text-red-brand hover:underline"
-                        >
-                          613-549-8667
-                        </a>
+                        {addPhoneLinkToTextIfPresent({
+                          stringToTest: "613-549-8667",
+                          color: "red",
+                        })}
                       </td>
                     </tr>
                   </thead>
@@ -59,12 +58,10 @@ export default function Header() {
                     <tr>
                       <td>Belleville:&nbsp;</td>
                       <td>
-                        <a
-                          href="tel:+1-613-968-7137"
-                          className="text-red-brand hover:underline"
-                        >
-                          613-968-7137
-                        </a>
+                        {addPhoneLinkToTextIfPresent({
+                          stringToTest: "613-968-7137",
+                          color: "red",
+                        })}
                       </td>
                     </tr>
                   </tfoot>

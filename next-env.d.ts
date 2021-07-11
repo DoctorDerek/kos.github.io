@@ -70,6 +70,8 @@ type BlogPostFrontMatter = {
  * @typeParam draft? - If true, the page won't be shown; instead, a placeholder
  *                     reading "Under Construction" will be shown for that page.
  * @typeParam headings? - The page headings as a string or array (["One","Two"])
+ * @typeParam centerTitle? - If true, center title instead of left alignment
+ * @typeParam centerHeadings? - If true, center headings instead of left align
  * @typeParam fullWidth? - Whether to be wide like the pricing pages (true)
  *                         or narrow like the informational pages (false).
  *                         Note: for readability "fullWidth" is max-5xl for text
@@ -90,6 +92,8 @@ type BlogPostFrontMatter = {
  * way the useSmallHoverBox boolean functions in <PricingPackagesSectionDetails>
  * @typeParam iconColumnSection? - Used to show <IconColumn>s on the /about page
  * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
+ * @typeParam officeAddressLeft? - Left /contact column as an <IconCard>s array
+ * @typeParam officeAddressRight? - Right /contact column as <IconCard>s array
  *
  * These types are automatically generated from the Markdown files themselves:
  * @typeParam slug - The URL slug, which is the filename of the Markdown file
@@ -101,8 +105,10 @@ type BlogPostFrontMatter = {
  */
 type PageFrontMatter = {
   title: string
-  headings?: string | string[]
   draft?: boolean
+  headings?: string | string[]
+  centerTitle?: boolean
+  centerHeadings?: boolean
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
@@ -116,10 +122,66 @@ type PageFrontMatter = {
   pricingPackagesBlueFootnotes?: PricingPackagesSectionFootnote[]
   iconColumnSection?: { heading: string; iconColumns: IconColumn[] }
   ourTeamSection?: { heading: string; teamHeadshots: TeamHeadshot[] }
+  officeAddressLeft?: IconCard[]
+  officeAddressRight?: IconCard[]
+  contactForm?: ContactField[]
   slug: string | null
   filename: string
   children?: ReactElement | ReactElement[]
 }
+
+/**
+ * ContactField is used to build contact forms like on the /contact and /order
+ * pages using customizable HTML form elements. All forms require at least
+ * three form elements, of which "submit" and "endpoint" are both required.
+ *
+ * The "endpoint" is the endpoint given in the Formspree configuration; all
+ * other fields are standard HTML form fields. If a ContactField needs to be a
+ * a dropdown menu (<select>), then each value given as options will be used.
+ *
+ * @typeparam field - The label for the field (also used for id="" and name="");
+ *                    for "submit" this will be the button text and for
+ *                    "endpoint" this should be the endpoint given by Formspree
+ * @typeparam type - The type of HTML form element *OR* the Formspree "endpoint"
+ * @typeparam placeholder? - The placeholder text to use, if any. For <select>
+ *                           elements, this is the first option (with value="")
+ * @typeparam size? - Form elements are full-width unless "half" is given here
+ * @typeparam options? - Dropdown menu ("select") options as an array of strings
+ * @typeparam bold? - If specified, the field label will have the style given
+ * @typeparam color? - The "submit" <BUTTON>s are either "red" or "blue" and
+ *                     will use the text given as "field" as the button text
+ * @typeparam optional? - All fields are required unless optional is true, with
+ *                        the exception of radio and checkbox inputs, for which
+ *                        the "required" attribute does not apply to the group.
+ *                        For these inputs, they are always considered optional.
+ * @typeparam value? - The value prop is used only on the /order page when
+ *                     passing in the selected plan via GET (/order?plan=...)
+ */
+type ContactField = {
+  field: string
+  type: ContactFieldType
+  placeholder?: string
+  size?: "half" | "full"
+  options?: string[]
+  bold?: "bold" | "semibold" | "normal"
+  color?: "red" | "blue"
+  optional?: boolean
+  value?: string
+}
+
+/**
+ * ContactFieldType is a helper type that specifies valid ContactField types.
+ */
+type ContactFieldType =
+  | "checkbox"
+  | "email"
+  | "endpoint"
+  | "hidden"
+  | "radio"
+  | "select"
+  | "submit"
+  | "text"
+  | "textarea"
 
 /**
  * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>
@@ -132,7 +194,7 @@ type Post = {
 /**
  * <IconColumn>s display marketing copy with an icon, heading, and subheading.
  *
- * @typeParam icon - The desired icon to be used ("user-group")
+ * @typeParam icon - The desired <HeroIcon> to be used ("user-group")
  * @typeParam heading - The first line of text ("2500+")
  * @typeParam subheading - The second line of text ("HAPPY CLIENTS")
  */
@@ -146,7 +208,13 @@ type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
  * @typeParam icon - The name of the icon, hyphenated; they are imported as
  * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
  */
-type HeroIcon = "user-group" | "cog" | "clock"
+type HeroIcon =
+  | "check"
+  | "clock"
+  | "cog"
+  | "location-marker"
+  | "phone"
+  | "user-group"
 
 /**
  * A FeaturedImage will be shown after the heading. All fields are required.
@@ -258,4 +326,20 @@ type PricingPackagesSectionDetail = {
   detailsSectionListIndent2?: string[]
   showOrderNowButton?: boolean
   useSmallHoverBox?: boolean
+}
+
+/**
+ * <IconCards>s display icons on the left side with a label and text on the
+ * right side. The icon has a hover effect like the header phone numbers.
+ * A phone number (in the format "613-549-8667") will become an actual link.
+ * If an array of strings is used, each string will appear on a separate line.
+ *
+ * @typeParam icon - The desired <HeroIcon> to be used ("phone")
+ * @typeParam label - The first line of text, which will be bold ("KINGSTON")
+ * @typeParam text - The second line of text ("The LaSalle 303...")
+ */
+type IconCard = {
+  icon: HeroIcon
+  label: string | string[]
+  text: string | string[]
 }

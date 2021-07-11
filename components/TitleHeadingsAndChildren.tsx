@@ -9,6 +9,8 @@ import { classNames } from "@/lib/utils"
 export default function TitleHeadingsAndChildren({
   title,
   headings,
+  centerTitle,
+  centerHeadings,
   fullWidth,
   showAvailabilityTool,
   featuredImage,
@@ -16,17 +18,14 @@ export default function TitleHeadingsAndChildren({
 }: {
   title: string
   headings?: string | string[]
+  centerTitle?: boolean
+  centerHeadings?: boolean
   fullWidth?: boolean
   showAvailabilityTool?: boolean
   featuredImage?: FeaturedImage
   children?: JSX.Element | JSX.Element[] | React.ReactNode
 }) {
   if (!title) return null
-
-  // support string | string[] for convenience
-  if (headings && !Array.isArray(headings)) {
-    headings = [headings]
-  }
 
   return (
     <div
@@ -35,13 +34,18 @@ export default function TitleHeadingsAndChildren({
         "px-4 mx-auto"
       )}
     >
-      <h1 className="text-left color decor">
+      <h1
+        className={classNames(
+          "color decor",
+          centerTitle ? "text-center" : "text-left"
+        )}
+      >
         <TitleJSXWithOptionalHighlighting title={title} />
         <DIVIDER />
       </h1>
-      {headings && headings.length > 0 && (
+      {headings && (
         <div className="mb-8">
-          <HeadingsH2 headings={headings} />
+          <HeadingsH2 headings={headings} centerHeadings={centerHeadings} />
         </div>
       )}
       {featuredImage && (

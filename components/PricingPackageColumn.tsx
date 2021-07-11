@@ -14,10 +14,12 @@ export default function PricingPackageColumn({
   color = "navy",
   pricingPackage,
   columnNumber,
+  title,
 }: {
   color?: "navy" | "teal"
   pricingPackage: PricingPackage
   columnNumber: number
+  title?: string
 }) {
   const [openModal, setOpenModal] = useState(false) // track modal open/close
 
@@ -62,63 +64,89 @@ export default function PricingPackageColumn({
     modalFootnotes = modalFootnotes === undefined ? [] : [modalFootnotes]
   }
 
-  function PricingPackageColumnJSX() {
-    return (
-      <div
-        className={classNames(
-          color === "teal"
-            ? "hover:text-teal-brand hover:border-teal-brand"
-            : "hover:text-blue-brand hover:border-blue-brand ",
-          "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
-        )}
-      >
-        <div className="absolute z-10 text-6xl font-bold left-3 top-2">
-          {columnNumber}
-        </div>
-        <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
+  // create the "Selected Plan" to pass via GET to the /order page
+  const selectedPlanForOrderNow =
+    title && packageName
+      ? encodeURIComponent(
+          // since this will be passed via GET (i.e. as part of a URI), call
+          // encodeURIComponent to handle special characters such as $, &, and ?
+          [
+            // remove **highlighting** and anything after " Packages" or " in"
+            // e.g. "Residential **High Speed Cable** Packages in Kingston..."
+            // will become "Residential High Speed Cable" for the Selected Plan
+            title
+              .replace(/\*/g, "")
+              .replace(/\s+Packages.+/gi, "")
+              .replace(/\s+in.+/gi, ""),
+            packageName,
+            ...packagePrices.filter(Boolean), // remove falsy, just in case
+            ...packageHeadings.filter(Boolean), // remove falsy, as "" is valid
+          ]
+            .join(" - ")
+            // remove footnotes (in the format ^1,2) i.e. from prices & headings
+            .replace(/\^[\d,]+/g, "")
+            .replace(/\*/g, "") // remove asterisks, i.e. asterisk footnotes
+        )
+      : ""
+
+  return (
+    <div
+      className={classNames(
+        color === "teal"
+          ? "hover:text-teal-brand hover:border-teal-brand"
+          : "hover:text-blue-brand hover:border-blue-brand ",
+        "relative flex flex-col h-full m-3 transition duration-500 shadow-2xl w-96 border-t-4 border-transparent border-solid text-white pb-6"
+      )}
+    >
+      <div className="absolute z-10 text-6xl font-bold left-3 top-2">
+        {columnNumber}
+      </div>
+      <div className="flex flex-col items-center justify-center h-48 bg-[#e8eff2]">
+        <div
+          className={classNames(
+            color === "teal" ? "bg-teal-brand" : "bg-blue-brand",
+            "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
+          )}
+        >
           <div
             className={classNames(
-              color === "teal" ? "bg-teal-brand" : "bg-blue-brand",
-              "border-[#e8eff2] absolute flex flex-col justify-center border-solid rounded-full shadow-xl top-8 w-92 h-92 border-20"
+              color === "teal"
+                ? "bg-teal-brand border-teal-dark"
+                : "bg-blue-brand border-blue-dark",
+              packagePrices.length >= 2 ? "space-y-1 pt-6" : "space-y-6",
+              "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
             )}
           >
-            <div
-              className={classNames(
-                color === "teal"
-                  ? "bg-teal-brand border-teal-dark"
-                  : "bg-blue-brand border-blue-dark",
-                packagePrices.length >= 2 ? "space-y-1 pt-6" : "space-y-6",
-                "z-10 flex flex-col justify-center flex-shrink-0 mx-auto text-center border-solid rounded-full top-4 w-84 h-84 border-20"
-              )}
-            >
-              <PricingPackageNameH2 />
-              {(packagePrices as string[]).map((packagePrice) => (
-                <Fragment key={packagePrice}>
-                  <PricingPackagePrice packagePrice={packagePrice} />
-                </Fragment>
-              ))}
-            </div>
+            <PricingPackageNameH2 />
+            {(packagePrices as string[]).map((packagePrice) => (
+              <Fragment key={packagePrice}>
+                <PricingPackagePrice packagePrice={packagePrice} />
+              </Fragment>
+            ))}
           </div>
         </div>
-        <div className="flex flex-col px-2 mx-2 space-y-5 text-center mt-58">
-          <PricingPackageHeadings />
-          <PricingPackageNameH3 />
-          {packageDescription && <PricingPackageDescription />}
-          <PricingPackageModalWithButton />
-          {promotionHeading && promotionSubheading && promotionPrice && (
-            <PricingPackagePromotionHoverBox
-              {...{
-                promotionHeading,
-                promotionSubheading,
-                promotionPrice,
-              }}
-            />
-          )}
-          <OrderNowButton color="blue" />
-        </div>
       </div>
-    )
-  }
+      <div className="flex flex-col px-2 mx-2 space-y-5 text-center mt-58">
+        <PricingPackageHeadings />
+        <PricingPackageNameH3 />
+        {packageDescription && <PricingPackageDescription />}
+        <PricingPackageModalWithButton />
+        {promotionHeading && promotionSubheading && promotionPrice && (
+          <PricingPackagePromotionHoverBox
+            {...{
+              promotionHeading,
+              promotionSubheading,
+              promotionPrice,
+            }}
+          />
+        )}
+        <OrderNowButton
+          color="blue"
+          selectedPlanForOrderNow={selectedPlanForOrderNow}
+        />
+      </div>
+    </div>
+  )
 
   function PricingPackageNameH2() {
     return <span className="text-5xl font-bold text-white">{packageName}</span>
@@ -196,10 +224,9 @@ export default function PricingPackageColumn({
           packageName={packageName}
           modalBullets={modalBullets as string[]}
           modalFootnotes={modalFootnotes as string[]}
+          selectedPlanForOrderNow={selectedPlanForOrderNow}
         />
       </>
     )
   }
-
-  return <PricingPackageColumnJSX />
 }
