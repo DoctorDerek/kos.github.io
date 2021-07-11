@@ -73,16 +73,18 @@ export default function PricingPackageColumn({
           [
             // remove **highlighting** and anything after " Packages" or " in"
             // e.g. "Residential **High Speed Cable** Packages in Kingston..."
-            // will become "Residential High Speed Cable"
+            // will become "Residential High Speed Cable" for the Selected Plan
             title
               .replace(/\*/g, "")
               .replace(/\s+Packages.+/gi, "")
               .replace(/\s+in.+/gi, ""),
             packageName,
-            // remove footnotes (in the format ^1,2) from the prices, if any
-            packagePrices.join(" - ").replace(/\^[\d,]+/g, ""),
+            ...packagePrices,
             ...packageHeadings,
-          ].join(" - ")
+          ]
+            .join(" - ")
+            // remove footnotes (in the format ^1,2) from prices and headings
+            .replace(/\^[\d,]+/g, "")
         )
       : ""
 
