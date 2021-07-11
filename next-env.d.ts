@@ -176,6 +176,7 @@ type ContactFieldType =
   | "checkbox"
   | "email"
   | "endpoint"
+  | "hidden"
   | "radio"
   | "select"
   | "submit"

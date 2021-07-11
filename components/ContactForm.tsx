@@ -15,7 +15,6 @@ export default function ContactForm({
   const { query } = useRouter() // isReady means client has loaded
 
   const [selectedPlanState, setSelectedPlanState] = useState("")
-
   const [contactFormState, setContactFormState] = useState(contactForm)
   useEffect(() => {
     setSelectedPlanState(() => {
@@ -32,6 +31,12 @@ export default function ContactForm({
             field: "Selected Plan",
             type: "textarea",
             bold: "semibold",
+            value: selectedPlan,
+          })
+          // disabled fields are not submitted with forms, so add a hidden input
+          currentContactFormState.splice(commentsIndex, 0, {
+            field: "Selected Plan",
+            type: "hidden",
             value: selectedPlan,
           })
           return currentContactFormState
@@ -109,6 +114,7 @@ export default function ContactForm({
               type === "checkbox" ||
               type === "email" ||
               type === "endpoint" ||
+              type === "hidden" ||
               type === "radio" ||
               type === "select" ||
               type === "submit" ||
@@ -116,6 +122,7 @@ export default function ContactForm({
               type === "textarea"
             )
           ) {
+            // an invalid or undefined type could be given in the Markdown file
             throw new Error(
               `An unknown type "${type}" was found in a ContactField in <ContactForm>, please correct the Markdown file. Valid types are: "checkbox" | "email" | "endpoint" | "radio" | "select" | "submit" | "text" | "textarea"`
             )
@@ -136,29 +143,32 @@ export default function ContactForm({
               key={field}
               className={size === "half" ? "col-span-1" : "col-span-2"}
             >
-              {type !== "submit" && type !== "checkbox" && type !== "radio" && (
-                // "endpoint" is screened out above with a return statement
-                <label
-                  htmlFor={id}
-                  className={classNames(
-                    "flex items-center space-x-2",
-                    bold === "bold"
-                      ? "font-bold"
-                      : bold === "semibold"
-                      ? "font-semibold"
-                      : "font-normal"
-                  )}
-                >
-                  <span>{field}</span>
-                  <ValidationError
-                    field={name} // field — the name of the field for which to display errors (required)
-                    prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
-                    errors={state.errors} // errors — the object containing validation errors (required)
-                    className="text-sm text-red-600"
-                  />
-                </label>
-              )}
-              {(type === "text" || type === "email") && (
+              {type !== "submit" &&
+                type !== "checkbox" &&
+                type !== "radio" &&
+                type !== "hidden" && (
+                  // "endpoint" is screened out above with a return statement
+                  <label
+                    htmlFor={id}
+                    className={classNames(
+                      "flex items-center space-x-2",
+                      bold === "bold"
+                        ? "font-bold"
+                        : bold === "semibold"
+                        ? "font-semibold"
+                        : "font-normal"
+                    )}
+                  >
+                    <span>{field}</span>
+                    <ValidationError
+                      field={name} // field — the name of the field for which to display errors (required)
+                      prefix={field} // prefix — the human-friendly name of the field (optional, defaults to "This field")
+                      errors={state.errors} // errors — the object containing validation errors (required)
+                      className="text-sm text-red-600"
+                    />
+                  </label>
+                )}
+              {(type === "text" || type === "email" || type === "hidden") && (
                 <input
                   type={type}
                   name={name}
@@ -243,7 +253,7 @@ export default function ContactForm({
                     "w-full rounded",
                     name.toLocaleLowerCase().includes("plan")
                       ? "text-gray-800 bg-gray-200 h-24" // Selected Plan
-                      : "h-40" // other <textarea>s, such as Comments or Message
+                      : "h-40" // other <textarea>s, e.g. Comments or Message
                   )}
                   disabled={
                     // gray out and disable the "Selected Plan", if any
