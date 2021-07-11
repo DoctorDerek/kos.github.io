@@ -14,7 +14,8 @@ export default function PricingPackagesSectionFootnotes({
   )
     return null
   return (
-    <ol>
+    <ol className="space-y-4">
+      {/* <ul> would be equivalent here as the numbers are not shown */}
       {pricingPackagesSectionFootnotes.map(
         (pricingPackagesSectionFootnote: PricingPackagesSectionFootnote) => {
           const { footnoteLabel, description } = pricingPackagesSectionFootnote
