@@ -79,12 +79,13 @@ export default function PricingPackageColumn({
               .replace(/\s+Packages.+/gi, "")
               .replace(/\s+in.+/gi, ""),
             packageName,
-            ...packagePrices,
-            ...packageHeadings,
+            ...packagePrices.map(Boolean), // remove falsy, just in case
+            ...packageHeadings.map(Boolean), // remove falsy, as "" is valid
           ]
             .join(" - ")
-            // remove footnotes (in the format ^1,2) from prices and headings
+            // remove footnotes (in the format ^1,2) i.e. from prices & headings
             .replace(/\^[\d,]+/g, "")
+            .replace(/\*/g, "") // remove asterisks, i.e. asterisk footnotes
         )
       : ""
 
