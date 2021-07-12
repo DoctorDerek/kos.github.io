@@ -157,7 +157,7 @@ module.exports = {
               color: theme("colors.blue.brand"),
             },
             h5: {
-              // used in pp.md (Privacy Policy)
+              // used in pp.md (Privacy Policy) and tac.md
               borderWidth: "2px 0px 2px 0px",
               borderStyle: "solid",
               borderColor: theme("colors.black"),
