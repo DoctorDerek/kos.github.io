@@ -4,11 +4,13 @@ import React, { useEffect, useRef, useState } from "react"
 import Image from "@/components/CustomImage"
 
 export default function DynamicImage({
-  featuredImage,
-}: {
-  featuredImage?: FeaturedImage
-}) {
-  const [dynamicWidth, setDynamicWidth] = useState(Number(featuredImage?.width))
+  src,
+  alt,
+  width,
+  height,
+  fullWidth,
+}: FeaturedImage) {
+  const [dynamicWidth, setDynamicWidth] = useState(Number(width))
   const dynamicImageRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -28,35 +30,30 @@ export default function DynamicImage({
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  if (!featuredImage) return null
-  if (
-    !featuredImage.alt &&
-    !featuredImage.src &&
-    !featuredImage.width &&
-    !featuredImage.height
-  ) {
+  if (!src) return null // i.e. no featuredImage
+  if (!alt && !src && !width && !height) {
     throw new Error(
-      `All attributes except "fullWidth" are required for the FeaturedImage type, but {src: "${featuredImage.src}", alt: "${featuredImage.alt}", width: "${featuredImage.width}", height: "${featuredImage.height}"} was found. Please correct the Markdown file.`
+      `All attributes except "fullWidth" are required for the FeaturedImage type, but {src: "${src}", alt: "${alt}", width: "${width}", height: "${height}"} was found. Please correct the Markdown file.`
     )
   }
-  if (!featuredImage.fullWidth)
+  if (!fullWidth)
     return (
       <div className="mx-auto">
-        <ImageFixed {...featuredImage} />
+        <ImageFixed {...{ alt, src, width, height }} />
       </div>
     )
   // Dynamically-sized image
-  const width = Number(featuredImage.width.replace(/px/g, ""))
-  const height = Number(featuredImage.height.replace(/px/g, ""))
-  const dynamicHeight = Math.round((height / width) * dynamicWidth)
-  console.log(width, height, dynamicWidth, dynamicHeight)
+  const widthNumber = Number(width.replace(/px/g, ""))
+  const heightNumber = Number(height.replace(/px/g, ""))
+  const dynamicHeight = Math.round((heightNumber / widthNumber) * dynamicWidth)
+  console.log(widthNumber, heightNumber, dynamicWidth, dynamicHeight)
   return (
     <div
       className="grid w-full mx-auto"
       style={{ height: dynamicHeight }}
       ref={dynamicImageRef}
     >
-      <Image src={featuredImage.src} alt={featuredImage.alt} />
+      <Image src={src} alt={alt} />
     </div>
   )
 }

@@ -49,7 +49,7 @@ export default function TitleHeadingsAndChildren({
       )}
       {featuredImage && (
         <div className="mb-8">
-          <DynamicImage featuredImage={featuredImage} />
+          <DynamicImage {...featuredImage} />
         </div>
       )}
       {children && <div className="mb-4 prose">{children}</div>}

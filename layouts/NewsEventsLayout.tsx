@@ -70,9 +70,7 @@ export default function NewsEventsLayout({
           </div>
           <div className="col-span-3">
             <div className="mb-8">
-              {indexFeaturedImage && (
-                <DynamicImage featuredImage={indexFeaturedImage} />
-              )}
+              {indexFeaturedImage && <DynamicImage {...indexFeaturedImage} />}
             </div>
             <h1 className="pb-0 text-center color decor">
               <TitleJSXWithOptionalHighlighting title={title} />
