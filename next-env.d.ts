@@ -94,6 +94,10 @@ type BlogPostFrontMatter = {
  * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
  * @typeParam officeAddressLeft? - Left /contact column as an <IconCard>s array
  * @typeParam officeAddressRight? - Right /contact column as <IconCard>s array
+ * @typeParam leftColumnMenuTitle? - The title for the top of the left column
+ *                                   menu, which is an optional menu of links
+ * @typeParam leftColumnMenuLinks? - An array of links for the left column menu,
+ *                                   in the format {title: string, href: string}
  *
  * These types are automatically generated from the Markdown files themselves:
  * @typeParam slug - The URL slug, which is the filename of the Markdown file
@@ -125,6 +129,8 @@ type PageFrontMatter = {
   officeAddressLeft?: IconCard[]
   officeAddressRight?: IconCard[]
   contactForm?: ContactField[]
+  leftColumnMenuTitle?: string
+  leftColumnMenuLinks?: { title: string; href: string }[]
   slug: string | null
   filename: string
   children?: ReactElement | ReactElement[]
