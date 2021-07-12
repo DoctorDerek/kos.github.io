@@ -13,7 +13,7 @@ export default function LeftColumnMenu({
   const currentPagePath = useCurrentPath() // used to indicate current page
 
   // {children} here is the <TitleHeadingsAndChildren> component
-  // passed in from PricingPageLayout; if we are not actually using
+  // passed in from PageLayout; if we are not actually using
   // the <LeftColumnMenu> then we should just return the {children}
   const validLeftColumnMenu =
     leftColumnMenuTitle &&

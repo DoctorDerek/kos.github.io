@@ -2,7 +2,7 @@ import { MDXRemote } from "next-mdx-remote"
 
 import MDXComponents from "@/components/MDXComponents"
 import PageTitle from "@/components/PageTitle"
-import PricingPageLayout from "@/layouts/PageLayout"
+import PageLayout from "@/layouts/PageLayout"
 import { getFileBySlug } from "@/lib/mdx"
 import getFilesRecursively from "@/lib/utils/files"
 
@@ -60,7 +60,7 @@ export default function PricingPage({
     <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
   )
 
-  return <PricingPageLayout {...frontMatter}>{content}</PricingPageLayout>
+  return <PageLayout {...frontMatter}>{content}</PageLayout>
 
   function UnderConstruction() {
     return (

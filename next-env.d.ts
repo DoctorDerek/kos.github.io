@@ -62,7 +62,7 @@ type BlogPostFrontMatter = {
 
 /**
  * This type is used when reading the Markdown (*.md or *.mdx) files that
- * generate the site. Specifically, these are the props for <PricingPageLayout>
+ * generate the site. Specifically, these are the props for <PageLayout>
  *
  * These types are specified as individual fields in the Markdown file:
  * @typeParam title - The page title as a string ("**Home Internet** in ON")

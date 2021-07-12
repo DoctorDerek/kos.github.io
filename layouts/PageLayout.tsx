@@ -11,7 +11,7 @@ import { PageSeo } from "@/components/SEO"
 import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
 import siteMetadata from "@/data/siteMetadata.json"
 
-export default function PricingPageLayout({
+export default function PageLayout({
   slug,
   title,
   headings,
