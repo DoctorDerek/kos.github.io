@@ -223,18 +223,22 @@ type HeroIcon =
   | "user-group"
 
 /**
- * A FeaturedImage will be shown after the heading. All fields are required.
+ * A FeaturedImage will be shown after the heading. All attributes are required,
+ * except for fullWidth. If fullWidth is true, then the width and height given
+ * will be used to dynamically calculate the correct width and height.
  *
  * @typeParam src - The URL: /public/images/image.jpg => "/images/image.jpg"
  * @typeParam alt - The alternate text describing the image (without "Image of")
  * @typeParam width - The width of the image in pixels ("500" or "500px")
  * @typeParam height - The height of the image in pixels ("500" or "500px")
+ * @typeParam fullWidth? - If true, a dynamically-sized image will be used
  */
 type FeaturedImage = {
   src: string
   alt: string
   width: string
   height: string
+  fullWidth: boolean
 }
 
 /**
