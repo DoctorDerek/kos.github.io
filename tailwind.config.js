@@ -151,6 +151,9 @@ module.exports = {
             h3: {
               color: theme("colors.red.brand"),
             },
+            h4: {
+              color: theme("colors.blue.brand"),
+            },
             "h1,h2,h3,h4,h5,h6": {
               fontWeight: "700",
             },
