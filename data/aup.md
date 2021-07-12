@@ -1,5 +1,15 @@
 ---
 title: "Acceptable Use Policy"
+centerTitle: true
+leftColumnMenuTitle: "Policies"
+leftColumnMenuLinks:
+  [
+    { title: "Acceptable Use Policy", href: "/aup" },
+    { title: "Privacy Policy", href: "/pp" },
+    { title: "Technical Support Policy", href: "/tsp" },
+    { title: "Website Privacy Policy", href: "/wpp" },
+    { title: "Resolution Services", href: "/resolution" },
+  ]
 ---
 
 **1. Introduction**
