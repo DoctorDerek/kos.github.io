@@ -163,14 +163,26 @@ module.exports = {
             },
             "ol li": {
               // use lowercase letters (a. b. c.) for ordered lists in Markdown
-              // for example, on the Acceptable Use Policy page /aup
+              // e.g. on the Acceptable Use Policy page /aup
               color: theme("colors.black"),
               listStyleType: "lower-alpha",
               paddingLeft: "0",
               marginLeft: "1.75rem",
+              // Note: This means that to generate regular numerals (1. 2. 3.)
+              // then you should write "&enbp;&enbp;1. &enbp;&enbp;2." etc.
+              // in the Markdown file to generate a psuedolist; or you could
+              // write a custom <ol> with list-style-type (not recommended!)
+              // --> &enbp; is a space character used for custom indenting
             },
             "ol li:before": {
               display: "none",
+              // by default Tailwind typopgraphy is going to use ::before to
+              // display the character instead of letting the browser handle it
+            },
+            "ol ol li": {
+              // use lowercase roman numerals (i. ii. iii.) for nested ordered
+              // lists, e.g. on the Privacy Policy page /pp
+              listStyleType: "lower-roman",
             },
           },
         },
