@@ -238,7 +238,7 @@ type FeaturedImage = {
   alt: string
   width: string
   height: string
-  fullWidth: boolean
+  fullWidth?: boolean
 }
 
 /**
