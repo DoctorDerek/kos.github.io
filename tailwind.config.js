@@ -145,34 +145,14 @@ module.exports = {
                 textDecoration: "underline",
               },
             },
-            h1: {
-              fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
-              color: theme("colors.gray.900"),
-            },
-            h2: {
-              fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
-              color: theme("colors.gray.900"),
-            },
             h3: {
-              fontWeight: "700",
               color: theme("colors.red.brand"),
             },
-            "h4,h5,h6": {
-              color: theme("colors.gray.900"),
-            },
-            hr: { borderColor: theme("colors.gray.200") },
-            "ol li:before": {
-              fontWeight: "600",
-              color: theme("colors.gray.500"),
+            "h1,h2,h3,h4,h5,h6": {
+              fontWeight: "700",
             },
             "ul li:before": {
               backgroundColor: theme("colors.red.brand"),
-            },
-            blockquote: {
-              color: theme("colors.gray.900"),
-              borderLeftColor: theme("colors.gray.200"),
             },
           },
         },
