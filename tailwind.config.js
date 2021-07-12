@@ -153,7 +153,7 @@ module.exports = {
               color: theme("colors.red.brand"),
             },
             h4: {
-              // used in e911/faqs.md
+              // used in e911/faqs.md and support/faqs.md
               color: theme("colors.blue.brand"),
             },
             h5: {
