@@ -31,7 +31,7 @@ export default function LeftColumnMenu({
           <div className="pl-4 mb-6 text-xl font-semibold text-gray-700 uppercase border-l-2 border-solid border-blue-light">
             {leftColumnMenuTitle}
           </div>
-          <div className="border-gray-400 border-solid divide-y-1">
+          <div className="mb-8 border-gray-400 border-solid divide-y-1">
             {leftColumnMenuLinks &&
               leftColumnMenuLinks.map(
                 ({ title, href }: { title: string; href: string }) => {
