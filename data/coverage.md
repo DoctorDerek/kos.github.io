@@ -12,5 +12,6 @@ featuredImage:
     alt: "Map showing Kingston Online Services coverage area",
     width: "1170px",
     height: "600px",
+    fullWidth: true,
   }
 ---
