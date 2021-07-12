@@ -149,10 +149,20 @@ module.exports = {
               fontWeight: "700",
             },
             h3: {
+              // used in campgrounds.md and options.md
               color: theme("colors.red.brand"),
             },
             h4: {
+              // used in e911/faqs.md
               color: theme("colors.blue.brand"),
+            },
+            h5: {
+              // used in pp.md (Privacy Policy)
+              borderWidth: "2px 0px 2px 0px",
+              borderStyle: "solid",
+              borderColor: theme("colors.black"),
+              color: theme("colors.black"),
+              textAlign: "center",
             },
             "h1,h2,h3,h4,h5,h6": {
               fontWeight: "700",
