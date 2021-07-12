@@ -37,8 +37,8 @@ export default function HoverBullet({
         <Link
           href={href as string}
           className={classNames(
-            "text-black",
-            hover || isCurrentPage ? "underline" : "no-underline"
+            hover ? "underline" : "no-underline",
+            isCurrentPage || hover ? "text-blue-light" : "text-black"
           )}
         >
           {text}
