@@ -145,6 +145,9 @@ module.exports = {
                 textDecoration: "underline",
               },
             },
+            strong: {
+              fontWeight: "700",
+            },
             h3: {
               color: theme("colors.red.brand"),
             },
