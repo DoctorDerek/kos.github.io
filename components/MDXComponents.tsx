@@ -1,14 +1,12 @@
-import ImageFixed from "next/image"
-
-import Image from "@/components/CustomImage"
 import CustomLink from "@/components/CustomLink"
+import DynamicImage from "@/components/DynamicImage"
 
 const MDXComponents = {
-  Image,
   a: CustomLink,
   Link: CustomLink,
-  img: ImageFixed,
-  ImageFixed: ImageFixed,
+  img: DynamicImage,
+  Image: DynamicImage,
+  ImageFixed: DynamicImage,
 }
 
 export default MDXComponents
