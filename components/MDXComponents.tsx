@@ -7,6 +7,7 @@ const MDXComponents = {
   img: DynamicImage,
   Image: DynamicImage,
   ImageFixed: DynamicImage,
+  DynamicImage: DynamicImage,
 }
 
 export default MDXComponents
