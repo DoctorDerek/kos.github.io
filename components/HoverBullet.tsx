@@ -22,7 +22,7 @@ export default function HoverBullet({
     <li
       className={classNames(
         "flex items-center transition duration-300 transform hover:translate-x-3",
-        responsive ? "md:hover:translate-x-4,md:hover:translate-x-5" : ""
+        responsive ? "md:hover:translate-x-4,xl:hover:translate-x-5" : ""
       )}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
