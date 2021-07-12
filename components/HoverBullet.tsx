@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useState } from "react"
 
 import Link from "@/components/CustomLink"
@@ -19,12 +18,11 @@ export default function HoverBullet({
   responsive?: boolean
 }): JSX.Element {
   const [hover, setHover] = useState(false)
-  const { asPath } = useRouter() // get the current URL
   return (
     <li
       className={classNames(
         "flex items-center transition duration-300 transform hover:translate-x-3",
-        responsive ? "md:hover:translate-x-4,xl:hover:translate-x-5" : ""
+        responsive ? "md:hover:translate-x-4,md:hover:translate-x-5" : ""
       )}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
