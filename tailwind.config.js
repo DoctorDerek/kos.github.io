@@ -158,7 +158,19 @@ module.exports = {
               fontWeight: "700",
             },
             "ul li:before": {
+              // use red bullets for unordered lists in Markdown
               backgroundColor: theme("colors.red.brand"),
+            },
+            "ol li": {
+              // use lowercase letters (a. b. c.) for ordered lists in Markdown
+              // for example, on the Acceptable Use Policy page /aup
+              color: theme("colors.black"),
+              listStyleType: "lower-alpha",
+              paddingLeft: "0",
+              marginLeft: "1.75rem",
+            },
+            "ol li:before": {
+              display: "none",
             },
           },
         },
