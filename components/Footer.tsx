@@ -1,28 +1,13 @@
-import { useEffect } from "react"
+import Script from "next/script"
 
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
 
-const useScript = (url: string) => {
-  useEffect(() => {
-    const script = document.createElement("script")
-
-    script.src = url
-    script.async = true
-
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [url])
-}
-
 export default function Footer() {
-  useScript("/js/theWeatherNetwork.js")
   return (
     <footer>
+      <Script src="/js/theWeatherNetwork.js" />
       <div className="page-footer w-full h-[450px]">
         <div className="grid w-full h-[450px]">
           <Image src="/images/footer-bg.jpg" alt="ocean" />
