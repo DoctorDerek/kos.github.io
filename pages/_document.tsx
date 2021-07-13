@@ -18,7 +18,6 @@ class MyDocument extends Document {
               __html: process.env.googleAnalytics as string,
             }}
           ></script>
-
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="description" content="KOS Internet" />
@@ -34,7 +33,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans"
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
             rel="stylesheet"
           />
         </Head>
