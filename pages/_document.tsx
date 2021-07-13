@@ -34,7 +34,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lato|Open+Sans"
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans"
             rel="stylesheet"
           />
         </Head>
