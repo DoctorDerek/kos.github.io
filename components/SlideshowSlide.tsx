@@ -1,25 +1,24 @@
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 
-const isRequired = () => {
-  throw new Error("Missing required attribute in SlideshowSlide component")
-}
-
 const SlideshowSlide = ({
-  src = isRequired(),
-  alt = isRequired(),
-  text1 = isRequired(),
-  text2 = isRequired(),
-  href = isRequired(),
-  text3 = isRequired(),
+  src,
+  alt,
+  text1,
+  text2,
+  href,
+  text3,
 }: {
-  src: string | never
-  alt: string | never
-  text1: string | never
-  text2: string | never
-  href: string | never
-  text3: string | never
+  src: string
+  alt: string
+  text1: string
+  text2: string
+  href: string
+  text3: string
 }) => {
+  if (!(src && alt && text1 && text2 && href && text3)) {
+    throw new Error("Missing required attribute in <SlideshowSlide>")
+  }
   // Both transform-gpu and style={{ minWidth: 0, maxWidth: 0 }}
   // are required to eliminate Cumulative Layout Shift (CLS) here.
   return (
