@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/" className="md:max-w-[250px] lg:max-w-full">
             <ImageFixed
               src="/assets/images/news/logo.png"
-              alt="Logo for Kingston Online Services - KOS is an Internet Service Provider serving Kingston and Belleville, Ontario"
+              alt="Logo for Kingston Online Services (KOS), an Internet Service Provider serving Kingston and Belleville, Ontario"
               height="125"
               width="300"
             />
