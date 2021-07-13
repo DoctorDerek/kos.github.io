@@ -1,8 +1,6 @@
 import Image from "next/image"
 
-const isRequired = () => {
-  throw new Error("Both alt and src parameters are required in CustomImage")
-}
+import { classNames } from "@/lib/utils"
 
 enum ValidSizes {
   screen = "100vw", // full screen size
@@ -16,27 +14,31 @@ enum ValidSizes {
   //"(max-width: 1280px) 576px, (max-width: 768px) 384px, 50vw"
 }
 
-declare type CustomImageProps = {
-  alt: string | never
-  src: string | never
+export default function CustomImage({
+  alt,
+  src,
+  layout = "fill", // Assume dynamic sizing
+  className = "object-cover", // Assume dynamic sizing
+  sizes = ValidSizes.screen, // Next.js default
+  quality = "75", // Next.js default
+}: {
+  alt: string
+  src: string
   layout?: "fill"
   // "fixed" | "intrinsic" | "responsive" | "fill" | undefined
   className?: string
   sizes?: ValidSizes
   quality?: string
-}
-const CustomImage = ({
-  alt = isRequired(),
-  src = isRequired(),
-  layout = "fill", // Assume dynamic sizing
-  className = "object-cover", // Assume dynamic sizing
-  sizes = ValidSizes.screen, // Next.js default
-  quality = "75", // Next.js default
-  ...rest
-}: CustomImageProps) => {
+}) {
+  if (!alt || !src) {
+    throw new Error(
+      `Both src and alt parameters are required in <CustomImage>;src was given as ${src} and alt was given as ${alt}`
+    )
+  }
+
   // Add object-cover to className if other classes were added like rounded-full
   if (className !== "object-cover") {
-    className += " object-cover"
+    className = classNames(className ? className : "", "object-cover")
   }
 
   const resultingProps = {
@@ -46,7 +48,6 @@ const CustomImage = ({
     className,
     sizes,
     quality,
-    ...rest,
   }
 
   // We need a wrapper div with position: relative for dynamic sizing
@@ -56,5 +57,3 @@ const CustomImage = ({
     </div>
   )
 }
-
-export default CustomImage
