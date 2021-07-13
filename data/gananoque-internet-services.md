@@ -10,7 +10,7 @@ headings:
 featuredImage:
   {
     src: "/assets/images/news/logo.png",
-    alt: "Logo for Kingston Online Services (KOS), an Internet Service Provider based in Kingston, Ontario",
+    alt: "Logo for Kingston Online Services (KOS), an Internet Service Provider serving Gananoque, Ontario",
     height: "125",
     width: "300",
   }
