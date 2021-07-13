@@ -38,7 +38,7 @@ export default function DynamicImage({
   }
   if (!fullWidth)
     return (
-      <div className="mx-auto">
+      <div className="flex justify-center w-full mx-auto">
         <ImageFixed {...{ alt, src, width, height }} />
       </div>
     )
