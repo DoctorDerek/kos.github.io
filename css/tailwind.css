@@ -2,15 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  color: #000;
-}
-
-html {
-  @apply overflow-auto;
-}
-
 /*
+  Inline Google Fonts as Next.js Automatic Webfont Optimization isn't working
+
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
     rel="stylesheet"
@@ -250,176 +244,9 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
   border-radius: 3px;
 }
 
-/*! CSS Used from: /css/plugins/slick.css */
-
-.slick-slider {
-  @apply box-border relative block p-0 m-0 list-none select-none;
-  -moz-box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  @apply relative block p-0 m-0 overflow-hidden;
-}
-
-.slick-list:focus {
-  @apply outline-none;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  @apply relative top-0 left-0 block;
-}
-
-.slick-track:before,
-.slick-track:after {
-  @apply table;
-  content: "";
-}
-
-.slick-track:after {
-  @apply clear-both;
-}
-
-.slick-slide {
-  @apply hidden float-left h-full;
-  min-height: 1px;
-}
-
-.slick-initialized .slick-slide {
-  @apply block;
-}
-
-/*! CSS Used from: /css/plugins/magnific-popup.css */
-
-button::-moz-focus-inner {
-  @apply p-0 border-none;
-}
-
-/*! CSS Used from: /css/custom.css */
-
-/*! @import /css/accessibilitymenu.css */
-
-.accessibilityimage {
-  @apply w-10;
-}
-
-#slideout {
-  @apply fixed right-0 text-base;
-  top: 40px;
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-  z-index: 10000;
-  direction: ltr;
-}
-
-#slideout_inner {
-  @apply fixed w-64 p-5 bg-white;
-  top: 40px;
-  right: -250px;
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-  border: 1px solid #777;
-  z-index: 10000;
-}
-
-.accessibilityMenuButton {
-  @apply block w-full p-1 mb-1 font-bold bg-white cursor-pointer;
-  border: 1px solid #999;
-  color: #444;
-}
-
-.accessibilityMenuButton:disabled {
-  @apply cursor-not-allowed;
-  border: 1px solid #ccc;
-  color: #ccc;
-}
-
-.accessibilityMenuButton:focus,
-.accessibilityMenuButton:active {
-  @apply text-indigo-600 border border-indigo-600;
-}
-
-#slideout_inner ul {
-  @apply pl-0 pr-0;
-}
-
-.transparentButton {
-  @apply p-0 bg-transparent border-none;
-}
-
-.alignRight {
-  text-align: right !important;
-}
-
-.alignLeft {
-  @apply text-left !important;
-}
-
-.rtl {
-  direction: rtl;
-}
-
-.ltr {
-  direction: ltr;
-}
-
-.myLogo {
-  width: 40px;
-  padding-top: 10px;
-}
-
-@-moz-document url-prefix() {
-  #btnGrayscaleOn,
-  #btnGrayscaleOff {
-    display: none;
-  }
-}
-
-@-moz-document url-prefix() {
-  #btnGrayscaleOn,
-  #btnGrayscaleOff {
-    display: none;
-  }
-}
-
-/*@-moz-document url-prefix() {
-    #slideout {
-    position: sticky;
-        float: left;
-
-
-}
-#slideout_inner {
-    position: absolute;
-    float: left;
-
-}
-    .transparentButton {
-        margin-top: 40px;
-    }
-}*/
-
-/*! end @import */
+/*
+block-class
+*/
 
 @media print {
   .footer-bot {
@@ -1256,14 +1083,6 @@ h2 + .category-carousel {
   }
 }
 
-.testimonials-item .testimonials-text:before {
-  @apply absolute text-6xl not-italic text-blue-brand;
-  content: "\e906";
-  left: 22px;
-  top: -25px;
-  font-family: "pool", serif;
-}
-
 @media (max-width: 767px) {
   .testimonials-item .testimonials-text:before {
     font-size: 40px;
@@ -1376,14 +1195,6 @@ h2 + .category-carousel {
   @apply opacity-100;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  @apply text-4xl leading-8 text-white cursor-pointer;
-  font-family: "pool", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .slick-prev {
   left: -55px;
 }
@@ -1442,62 +1253,6 @@ h2 + .category-carousel {
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   @apply outline-none;
-}
-
-/*! CSS Used from: /font/icons/style.css */
-
-[class^="icon-"],
-[class*=" icon-"] {
-  @apply not-italic font-normal leading-none normal-case;
-  font-family: "pool", serif !important;
-  speak: none;
-  font-variant: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-cart:before {
-  content: "\e915";
-}
-
-.icon-cancel:before {
-  content: "\e91b";
-}
-
-.icon-menu:before {
-  content: "\e91c";
-}
-
-.icon-wrench:before {
-  content: "\e900";
-}
-
-.icon-clock:before {
-  content: "\e903";
-}
-
-.icon-medal:before {
-  content: "\e905";
-}
-
-.icon-up-arrow:before {
-  content: "\e907";
-}
-
-.icon-social-facebook:before {
-  content: "\e908";
-}
-
-.icon-location:before {
-  content: "\e90b";
-}
-
-.icon-call-telephone:before {
-  content: "\e90c";
-}
-
-.icon-right-arrow:before {
-  content: "\e913";
 }
 
 /*! CSS Used keyframes */

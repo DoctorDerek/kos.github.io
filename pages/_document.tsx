@@ -43,17 +43,3 @@ class MyDocument extends Document {
 }
 
 export default MyDocument
-
-/*
-          <script src="js/jquery.js"></script>
-          <script src="js/plugins/bootstrap.min.js"></script>
-          <script src="js/plugins/jquery.nivo.slider.js"></script>
-          <script src="js/plugins/slick.min.js"></script>
-          <script src="js/plugins/jquery.magnific-popup.min.js"></script>
-          <script src="js/plugins/jquery.waypoints.min.js"></script>
-          <script src="js/plugins/jquery.countTo.js"></script>
-          <script src="js/plugins/jquery.form.js"></script>
-          <script src="js/plugins/jquery.validate.min.js"></script>
-          <script src="js/custom.js"></script>
-          <script src="/js/accessibilitymenu.js"></script>
-*/
