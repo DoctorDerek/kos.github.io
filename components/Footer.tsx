@@ -96,7 +96,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="copyright">
-              Copyright © KOS - 2021 {" | "}
+              Copyright © KOS - {new Date().getFullYear()} {" | "}
               <Link className="text-white" href="/policies/">
                 KOS Policies
               </Link>
@@ -150,7 +150,7 @@ export default function Footer() {
                   className="text-white"
                   href="/belleville-internet-services/"
                 >
-                  Belleville{" "}
+                  Belleville
                 </Link>
                 {" | "}
                 <Link className="text-white" href="/napanee-internet-services/">

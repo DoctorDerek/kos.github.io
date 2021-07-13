@@ -2,6 +2,7 @@ import ImageFixed from "next/image"
 
 import Link from "@/components/CustomLink"
 import DropdownMenu from "@/components/DropdownMenu"
+import OrderNowButton from "@/components/OrderNowButton"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
 import { addPhoneLinkToTextIfPresent } from "@/lib/utils"
 
@@ -19,21 +20,14 @@ export default function Header() {
           <Link href="/" className="md:max-w-[250px] lg:max-w-full">
             <ImageFixed
               src="/assets/images/news/logo.png"
-              alt="Logo for Kingston Online Services - KOS is an Internet Service Provider serving Kingston and Belleville, Ontario"
+              alt="Logo for Kingston Online Services (KOS), an Internet Service Provider serving Kingston and Belleville, Ontario"
               height="125"
               width="300"
             />
           </Link>
         </Column>
 
-        <div className="flex items-center justify-center flex-grow-0 flex-shrink-0 h-full col-span-1 w-36">
-          <Link
-            href="/order/"
-            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl font-bold border-none uppercase no-underline btn btn-orange active:focus:bg-blue-brand bg-[#b0243d] shadow-xl border:none whitespace-nowrap"
-          >
-            Order now
-          </Link>
-        </div>
+        <OrderNowButton />
 
         <Column>
           <div className="flex flex-col group">

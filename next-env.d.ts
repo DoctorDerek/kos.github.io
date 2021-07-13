@@ -62,7 +62,7 @@ type BlogPostFrontMatter = {
 
 /**
  * This type is used when reading the Markdown (*.md or *.mdx) files that
- * generate the site. Specifically, these are the props for <PricingPageLayout>
+ * generate the site. Specifically, these are the props for <PageLayout>
  *
  * These types are specified as individual fields in the Markdown file:
  * @typeParam title - The page title as a string ("**Home Internet** in ON")
@@ -94,6 +94,10 @@ type BlogPostFrontMatter = {
  * @typeParam ourTeamSection? - Used to show <TeamHeadshot>s on the /about page
  * @typeParam officeAddressLeft? - Left /contact column as an <IconCard>s array
  * @typeParam officeAddressRight? - Right /contact column as <IconCard>s array
+ * @typeParam leftColumnMenuTitle? - The title for the top of the left column
+ *                                   menu, which is an optional menu of links
+ * @typeParam leftColumnMenuLinks? - An array of links for the left column menu,
+ *                                   in the format {title: string, href: string}
  *
  * These types are automatically generated from the Markdown files themselves:
  * @typeParam slug - The URL slug, which is the filename of the Markdown file
@@ -125,6 +129,8 @@ type PageFrontMatter = {
   officeAddressLeft?: IconCard[]
   officeAddressRight?: IconCard[]
   contactForm?: ContactField[]
+  leftColumnMenuTitle?: string
+  leftColumnMenuLinks?: { title: string; href: string }[]
   slug: string | null
   filename: string
   children?: ReactElement | ReactElement[]
@@ -217,18 +223,22 @@ type HeroIcon =
   | "user-group"
 
 /**
- * A FeaturedImage will be shown after the heading. All fields are required.
+ * A FeaturedImage will be shown after the heading. All attributes are required,
+ * except for fullWidth. If fullWidth is true, then the width and height given
+ * will be used to dynamically calculate the correct width and height.
  *
  * @typeParam src - The URL: /public/images/image.jpg => "/images/image.jpg"
  * @typeParam alt - The alternate text describing the image (without "Image of")
  * @typeParam width - The width of the image in pixels ("500" or "500px")
  * @typeParam height - The height of the image in pixels ("500" or "500px")
+ * @typeParam fullWidth? - If true, a dynamically-sized image will be used
  */
 type FeaturedImage = {
   src: string
   alt: string
   width: string
   height: string
+  fullWidth?: boolean
 }
 
 /**

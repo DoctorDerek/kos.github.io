@@ -145,34 +145,54 @@ module.exports = {
                 textDecoration: "underline",
               },
             },
-            h1: {
+            strong: {
               fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
-              color: theme("colors.gray.900"),
-            },
-            h2: {
-              fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
-              color: theme("colors.gray.900"),
             },
             h3: {
-              fontWeight: "700",
+              // used in campgrounds.md and options.md
               color: theme("colors.red.brand"),
             },
-            "h4,h5,h6": {
-              color: theme("colors.gray.900"),
+            h4: {
+              // used in e911/faqs.md and support/faqs.md
+              color: theme("colors.blue.brand"),
             },
-            hr: { borderColor: theme("colors.gray.200") },
-            "ol li:before": {
-              fontWeight: "600",
-              color: theme("colors.gray.500"),
+            h5: {
+              // used in pp.md (Privacy Policy) and tac.md
+              borderWidth: "2px 0px 2px 0px",
+              borderStyle: "solid",
+              borderColor: theme("colors.black"),
+              color: theme("colors.black"),
+              textAlign: "center",
+            },
+            "h1,h2,h3,h4,h5,h6": {
+              fontWeight: "700",
             },
             "ul li:before": {
+              // use red bullets for unordered lists in Markdown
               backgroundColor: theme("colors.red.brand"),
             },
-            blockquote: {
-              color: theme("colors.gray.900"),
-              borderLeftColor: theme("colors.gray.200"),
+            "ol li": {
+              // use lowercase letters (a. b. c.) for ordered lists in Markdown
+              // e.g. on the Acceptable Use Policy page /aup
+              color: theme("colors.black"),
+              listStyleType: "lower-alpha",
+              paddingLeft: "0",
+              marginLeft: "1.75rem",
+              // Note: This means that to generate regular numerals (1. 2. 3.)
+              // then you should write "&enbp;&enbp;1. &enbp;&enbp;2." etc.
+              // in the Markdown file to generate a psuedolist; or you could
+              // write a custom <ol> with list-style-type (not recommended!)
+              // --> &enbp; is a space character used for custom indenting
+            },
+            "ol li:before": {
+              display: "none",
+              // by default Tailwind typopgraphy is going to use ::before to
+              // display the character instead of letting the browser handle it
+            },
+            "ol ol li": {
+              // use lowercase roman numerals (i. ii. iii.) for nested ordered
+              // lists, e.g. on the Privacy Policy page /pp
+              listStyleType: "lower-roman",
             },
           },
         },

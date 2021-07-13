@@ -1,6 +1,8 @@
+import { ContactFormSection } from "@/components/ContactFormSection"
 import Image from "@/components/CustomImage"
 import HoverBulletNavMenuAndGetConnectedButton from "@/components/HoverBulletNavMenuAndGetConnectedButton"
 import IconColumnSection from "@/components/IconColumnSection"
+import LeftColumnMenu from "@/components/LeftColumnMenu"
 import OurTeamSection from "@/components/OurTeamSection"
 import PricingPackagesBlueSection from "@/components/PricingPackagesBlueSection"
 import PricingPackagesSection from "@/components/PricingPackagesSection"
@@ -9,9 +11,7 @@ import { PageSeo } from "@/components/SEO"
 import TitleHeadingsAndChildren from "@/components/TitleHeadingsAndChildren"
 import siteMetadata from "@/data/siteMetadata.json"
 
-import { ContactFormSection } from "../components/ContactFormSection"
-
-export default function PricingPageLayout({
+export default function PageLayout({
   slug,
   title,
   headings,
@@ -33,6 +33,8 @@ export default function PricingPageLayout({
   officeAddressLeft,
   officeAddressRight,
   contactForm,
+  leftColumnMenuTitle,
+  leftColumnMenuLinks,
   children,
 }: PageFrontMatter) {
   if (!title) throw new Error("title is a required field in Markdown files")
@@ -48,18 +50,23 @@ export default function PricingPageLayout({
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">
-        <TitleHeadingsAndChildren
-          {...{
-            title,
-            headings,
-            centerTitle,
-            centerHeadings,
-            fullWidth,
-            showAvailabilityTool,
-            featuredImage,
-            children,
-          }}
-        />
+        <LeftColumnMenu
+          leftColumnMenuTitle={leftColumnMenuTitle}
+          leftColumnMenuLinks={leftColumnMenuLinks}
+        >
+          <TitleHeadingsAndChildren
+            {...{
+              title,
+              headings,
+              centerTitle,
+              centerHeadings,
+              fullWidth,
+              showAvailabilityTool,
+              featuredImage,
+              children,
+            }}
+          />
+        </LeftColumnMenu>
         <PricingPackagesSection
           pricingPackages={pricingPackages}
           title={title} // pass in the page title to pass to <OrderNowButton>

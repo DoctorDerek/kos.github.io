@@ -3,6 +3,7 @@ import ImageFixed from "next/image"
 import { Fragment } from "react"
 
 import Image from "@/components/CustomImage"
+import DynamicImage from "@/components/DynamicImage"
 import HeadingsH2 from "@/components/HeadingsH2"
 import HoverBullet from "@/components/HoverBullet"
 import MDXComponents from "@/components/MDXComponents"
@@ -68,14 +69,9 @@ export default function NewsEventsLayout({
             </div>
           </div>
           <div className="col-span-3">
-            {indexFeaturedImage && (
-              <div className="grid w-full h-48 mb-8">
-                <Image
-                  alt={indexFeaturedImage.alt}
-                  src={indexFeaturedImage.src}
-                />
-              </div>
-            )}
+            <div className="mb-8">
+              {indexFeaturedImage && <DynamicImage {...indexFeaturedImage} />}
+            </div>
             <h1 className="pb-0 text-center color decor">
               <TitleJSXWithOptionalHighlighting title={title} />
               <DIVIDER />

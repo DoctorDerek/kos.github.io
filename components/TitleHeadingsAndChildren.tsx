@@ -1,5 +1,4 @@
-import ImageFixed from "next/image"
-
+import DynamicImage from "@/components/DynamicImage"
 import HeadingsH2 from "@/components/HeadingsH2"
 import PostalCodeCheckForm from "@/components/PostalCodeCheckForm"
 import TitleJSXWithOptionalHighlighting from "@/components/TitleJSXWithOptionalHighlighting"
@@ -50,7 +49,7 @@ export default function TitleHeadingsAndChildren({
       )}
       {featuredImage && (
         <div className="mb-8">
-          <ImageFixed {...featuredImage} />
+          <DynamicImage {...featuredImage} />
         </div>
       )}
       {children && <div className="mb-4 prose">{children}</div>}

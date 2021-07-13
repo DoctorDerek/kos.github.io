@@ -27,7 +27,6 @@ class MyDocument extends Document {
             type="images/png"
             href="images/smallkos.png"
           />
-          <link rel="alternate" type="application/rss+xml" href="/index.xml" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Lato"
