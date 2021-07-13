@@ -32,10 +32,6 @@ class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin="anonymous"
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <body className="overflow-hidden home">
           <Main />
