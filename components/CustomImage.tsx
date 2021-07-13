@@ -15,16 +15,16 @@ enum ValidSizes {
 }
 
 export default function CustomImage({
-  alt,
   src,
+  alt,
   layout = "fill", // Assume dynamic sizing
   className = "object-cover", // Assume dynamic sizing
   sizes = ValidSizes.screen, // Next.js default
   quality = "75", // Next.js default
   preload = false, // Next.js default
 }: {
-  alt: string
   src: string
+  alt: string
   layout?: "fill"
   // "fixed" | "intrinsic" | "responsive" | "fill" | undefined
   className?: string
@@ -32,9 +32,10 @@ export default function CustomImage({
   quality?: string
   preload?: boolean
 }) {
-  if (!alt || !src) {
+  if (!src || (!alt && alt !== "")) {
+    // alt === "" is valid for purely decorative items
     throw new Error(
-      `Both src and alt parameters are required in <CustomImage>;src was given as ${src} and alt was given as ${alt}`
+      `Both src and alt parameters are required in <CustomImage>; src was given as ${src} and alt was given as ${alt}`
     )
   }
 
