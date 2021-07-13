@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ImageFixed from "next/image"
 
 import { classNames } from "@/lib/utils"
 
@@ -21,6 +21,7 @@ export default function CustomImage({
   className = "object-cover", // Assume dynamic sizing
   sizes = ValidSizes.screen, // Next.js default
   quality = "75", // Next.js default
+  preload = false, // Next.js default
 }: {
   alt: string
   src: string
@@ -29,6 +30,7 @@ export default function CustomImage({
   className?: string
   sizes?: ValidSizes
   quality?: string
+  preload?: boolean
 }) {
   if (!alt || !src) {
     throw new Error(
@@ -41,19 +43,20 @@ export default function CustomImage({
     className = classNames(className ? className : "", "object-cover")
   }
 
-  const resultingProps = {
-    alt,
-    src,
-    layout,
-    className,
-    sizes,
-    quality,
-  }
-
   // We need a wrapper div with position: relative for dynamic sizing
   return (
     <div className="relative">
-      <Image {...resultingProps} />
+      <ImageFixed
+        {...{
+          alt,
+          src,
+          layout,
+          className,
+          sizes,
+          quality,
+          preload,
+        }}
+      />
     </div>
   )
 }

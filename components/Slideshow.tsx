@@ -54,6 +54,7 @@ const Slideshow = () => {
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
+          preload={true}
         />
         <SlideshowSlide
           src="/images/slider/slide2.jpg"
