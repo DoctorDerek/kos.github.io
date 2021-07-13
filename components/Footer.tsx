@@ -150,7 +150,7 @@ export default function Footer() {
                   className="text-white"
                   href="/belleville-internet-services/"
                 >
-                  Belleville{" "}
+                  Belleville
                 </Link>
                 {" | "}
                 <Link className="text-white" href="/napanee-internet-services/">
