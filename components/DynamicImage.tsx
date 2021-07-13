@@ -10,7 +10,10 @@ export default function DynamicImage({
   height,
   fullWidth,
 }: FeaturedImage) {
-  const [dynamicWidth, setDynamicWidth] = useState(Number(width))
+  const widthNumber = Number(width.replace(/px/g, ""))
+  const heightNumber = Number(height.replace(/px/g, ""))
+  const [dynamicWidth, setDynamicWidth] = useState(widthNumber)
+  const dynamicHeight = Math.round((heightNumber / widthNumber) * dynamicWidth)
   const dynamicImageRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -43,9 +46,6 @@ export default function DynamicImage({
       </div>
     )
   // Dynamically-sized image
-  const widthNumber = Number(width.replace(/px/g, ""))
-  const heightNumber = Number(height.replace(/px/g, ""))
-  const dynamicHeight = Math.round((heightNumber / widthNumber) * dynamicWidth)
   return (
     <div
       className="grid w-full mx-auto"
