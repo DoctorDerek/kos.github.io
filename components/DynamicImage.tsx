@@ -46,7 +46,6 @@ export default function DynamicImage({
   const widthNumber = Number(width.replace(/px/g, ""))
   const heightNumber = Number(height.replace(/px/g, ""))
   const dynamicHeight = Math.round((heightNumber / widthNumber) * dynamicWidth)
-  console.log(widthNumber, heightNumber, dynamicWidth, dynamicHeight)
   return (
     <div
       className="grid w-full mx-auto"
