@@ -28,11 +28,19 @@ A gigabyte is approximately 1,000 megabytes.
 Each of these activities represents approximately 1 gigabyte of usage:
 
 - View 26,000 Web pages OR
+
 - Send 105,000 e-mails OR
+
 - Attach over 2,000 Microsoft Word documents (of about 10 pages each) OR
+
 - Receive up to 500 digital photos OR
+
 - Download more than 200 songs OR
+
 - Stream 18 hours of music from the Web OR
+
 - Download 1.5 movies (or 2/3 of a movie in high definition) OR
+
 - Play games online for 240 hours (or 10 days) OR
+
 - Stream 1 hour of Netfiix Standard Definition Video
