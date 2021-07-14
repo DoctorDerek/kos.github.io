@@ -997,54 +997,6 @@ h2 + .category-carousel {
   }
 }
 
-.text-icon {
-  @apply relative text-center;
-  margin: 16px 0 24px;
-}
-
-.text-icon-icon {
-  @apply mb-6 text-center;
-}
-
-.text-icon-icon span {
-  @apply relative inline-block w-20 h-20 text-xl font-bold rounded-full;
-  line-height: 82px;
-  background: #27b9e8;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#27b9e8),
-    to(#0b6fac)
-  );
-  background: -webkit-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -moz-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -ms-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -o-linear-gradient(top, #27b9e8, #0b6fac);
-}
-
-.text-icon-icon span .icon {
-  @apply absolute text-white translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 transform-gpu;
-  z-index: 1;
-  font-size: 42px;
-}
-
-.text-icon-icon .icon-hover {
-  @apply absolute top-0 left-0 z-0 w-full h-full bg-blue-800 opacity-0;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-}
-
-.text-icon:hover .icon-hover {
-  @apply opacity-100;
-}
-
-.text-icon-title {
-  @apply mb-4 leading-7 text-gray-900 uppercase;
-}
-
 .testimonials-item {
   @apply text-center;
   margin: 12px 0 20px;
