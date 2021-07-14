@@ -41,7 +41,7 @@ export default function IconBadge({
           <div key={line}>{line}</div>
         ))}
       </h5>
-      <div className="text-icon-text">
+      <div className="text-base">
         {text.map((line) => (
           <div key={line}>{line}</div>
         ))}
