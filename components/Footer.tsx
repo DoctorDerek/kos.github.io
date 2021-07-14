@@ -18,10 +18,106 @@ export default function Footer() {
     text: "613-968-7137",
   }
 
+  /* page-footer {
+  @apply relative clear-both text-white;
+  padding: 0 0 54px;
+}
+
+.page-footer .container {
+  @apply relative;
+  z-index: 100;
+}
+
+.page-footer .logo {
+  @apply text-center;
+}
+
+.page-footer .logo img {
+  @apply inline-block max-w-full;
+}
+
+.page-footer .location {
+  @apply relative text-base leading-5 text-left text-white uppercase;
+  margin: 32px 0 0 0;
+  padding: 0 0 0 38px;
+}
+
+.page-footer .location span {
+  @apply inline-block align-bottom;
+}
+
+.page-footer .location .icon {
+  @apply absolute top-0 text-2xl align-middle;
+  left: 2px;
+  padding: 0 7px 0 0;
+}
+
+.page-footer .first-mobile {
+  @apply float-right;
+}
+
+.page-footer .footer-bot {
+  @apply text-center;
+}
+
+.page-footer .copyright {
+  @apply text-base leading-5;
+  margin: 18px 0 20px;
+}
+
+@media (max-width: 767px) {
+  .page-footer {
+    padding: 30px 10px;
+  }
+  .page-footer .location {
+    @apply text-base leading-5;
+    margin: 0 0 10px;
+    padding: 0 0 0 38px;
+  }
+  .page-footer .first-mobile {
+    @apply float-none;
+  }
+}
+
+.back-to-top {
+  @apply absolute;
+  bottom: 205px;
+  right: 5%;
+}
+
+@media (max-width: 1199px) {
+  .back-to-top {
+    bottom: 50px;
+  }
+}
+
+.back-to-top a {
+  @apply block text-6xl text-center text-white no-underline;
+  line-height: 60px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.back-to-top:hover a {
+  @apply text-blue-brand;
+}
+
+#footerSea {
+  @apply absolute bottom-0 z-0 w-full pointer-events-none;
+  opacity: 0.55;
+}
+
+#sea {
+  @apply absolute bottom-0 w-full pointer-events-none;
+  z-index: 1000;
+  opacity: 0.15;
+} */
   return (
     <footer>
-      <div className="page-footer w-full h-[450px]">
-        <div className="grid w-full h-[450px]">
+      <div className="w-full h-full">
+        <div className="grid w-full h-full">
           <Image src="/images/footer-bg.jpg" alt="ocean" />
         </div>
         <div className="back-to-top hidden-xs">
