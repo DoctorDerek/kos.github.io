@@ -9,7 +9,7 @@ import HERO_ICONS from "@/lib/HERO_ICONS"
 export default function Footer() {
   const officeAddressLeft: IconCard = {
     icon: "location-marker",
-    label: ["The LaSalle", "303 Bagot St., 16A", "Kingston ON K7K 5W"],
+    label: ["The LaSalle", "303 Bagot St., 16A", "Kingston, ON K7K 5W"],
     text: "613-549-8667",
   }
 
@@ -23,14 +23,14 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
-      <div className="grid w-full h-96">
+      <div className="grid w-full h-160 md:h-96">
         <Image
           src="/images/footer-bg.jpg"
           alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
         />
       </div>
       <div className="w-full h-full flex flex-col justify-evenly items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <div className="grid grid-cols-1 sm:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           <FooterColumn officeAddress={officeAddressLeft} />
           <FooterColumn logo={true} />
           <FooterColumn officeAddress={officeAddressRight} />

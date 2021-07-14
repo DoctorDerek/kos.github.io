@@ -16,7 +16,7 @@ export default function FooterColumn({
       {logo && (
         <Link
           href="/"
-          className="flex items-center flex-shrink-0 w-full h-full mx-auto"
+          className="flex items-center flex-shrink-0 w-full h-full pb-4 mx-auto"
         >
           <DynamicImage
             src="/images/logo-invert.png"
@@ -27,7 +27,11 @@ export default function FooterColumn({
           />
         </Link>
       )}
-      {officeAddress && <IconCard {...officeAddress} location="footer" />}
+      {officeAddress && (
+        <div className="transform translate-x-[-2rem] md:translate-x-0">
+          <IconCard {...officeAddress} location="footer" />
+        </div>
+      )}
     </div>
   )
 }
