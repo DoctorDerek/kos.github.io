@@ -547,21 +547,9 @@ button:active,
 }
 
 .service-item .icon-circle {
-  @apply relative block w-48 h-48 overflow-hidden text-white no-underline bg-blue-500 rounded-full;
+  @apply relative block w-48 h-48 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand;
   z-index: 1;
   margin: 0 auto 45px;
-  background: #27b9e8;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#27b9e8),
-    to(#0b6fac)
-  );
-  background: -webkit-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -moz-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -ms-linear-gradient(top, #27b9e8, #0b6fac);
-  background: -o-linear-gradient(top, #27b9e8, #0b6fac);
 }
 
 .service-item .icon-circle .icon-hover {
