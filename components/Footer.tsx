@@ -30,7 +30,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
-          <div className="flex flex-wrap footer-row">
+          <div className="grid grid-cols-1 sm:grid-cols-3">
             <FooterColumn officeAddress={officeAddressLeft} />
             <FooterColumn logo={true} />
             <FooterColumn officeAddress={officeAddressRight} />

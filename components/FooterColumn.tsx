@@ -1,5 +1,5 @@
-import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
+import DynamicImage from "@/components/DynamicImage"
 import IconCard from "@/components/IconCard"
 
 export default function FooterColumn({
@@ -12,15 +12,17 @@ export default function FooterColumn({
   if (!officeAddress && !logo) return null
 
   return (
-    <div className="px-1 sm:w-1/3">
+    <div className="col-span-1 px-1">
       {logo && (
-        <div className="logo">
-          <Link href="/">
-            <div className="grid w-[300px] h-[125px] mx-auto">
-              <Image src="/images/logo-invert.png" alt="Logo" />
-            </div>
-          </Link>
-        </div>
+        <Link href="/" className="grid h-full mx-auto">
+          <DynamicImage
+            src="/images/logo-invert.png"
+            width="300px"
+            height="125px"
+            alt="Logo for KOS Internet Service Provider in Kingston, ON"
+            fullWidth={true}
+          />
+        </Link>
       )}
       {officeAddress && <IconCard {...officeAddress} location="footer" />}
     </div>
