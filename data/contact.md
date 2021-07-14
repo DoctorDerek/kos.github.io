@@ -8,7 +8,7 @@ officeAddressLeft:
     {
       icon: "location-marker",
       label: "KINGSTON",
-      text: ["The LaSalle", "303 Bagot St., 16A", "Kingston ON K7K 5W"],
+      text: ["The LaSalle", "303 Bagot St., 16A", "Kingston, ON K7K 5W"],
     },
     { icon: "phone", label: "CALL US", text: "613-549-8667" },
     {
