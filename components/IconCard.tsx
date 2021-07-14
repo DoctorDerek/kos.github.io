@@ -1,15 +1,7 @@
 import HERO_ICONS from "@/lib/HERO_ICONS"
 import { addPhoneLinkToTextIfPresent, classNames } from "@/lib/utils"
 
-export default function IconCard({
-  icon,
-  label,
-  text,
-}: {
-  icon: HeroIcon
-  label: string | string[]
-  text: string | string[]
-}) {
+export default function IconCard({ icon, label, text }: IconCard) {
   // support string | string[] for convenience by wrapping strings with an array
   if (!Array.isArray(label)) {
     label = label === undefined ? [] : [label]
