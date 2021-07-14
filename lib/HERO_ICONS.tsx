@@ -1,6 +1,6 @@
 import {
-  ArrowUpIcon,
   CheckIcon,
+  ChevronUpIcon,
   ClockIcon,
   CogIcon,
   LocationMarkerIcon,
@@ -17,8 +17,8 @@ const HERO_ICONS: {
   [key in HeroIcon]: HeroIconFunction
 } = {
   // Format: "kebab-case": CamelCaseIcon
-  "arrow-up": ArrowUpIcon,
   check: CheckIcon,
+  "chevron-up": ChevronUpIcon,
   clock: ClockIcon,
   cog: CogIcon,
   "location-marker": LocationMarkerIcon,

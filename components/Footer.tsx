@@ -19,7 +19,7 @@ export default function Footer() {
     text: "613-968-7137",
   }
 
-  const ArrowUpIcon = HERO_ICONS["arrow-up"]
+  const ChevronUpIcon = HERO_ICONS["chevron-up"]
 
   return (
     <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
           <Link href="#top" className="text-white group-hover:text-blue-brand">
-            <ArrowUpIcon />
+            <ChevronUpIcon />
           </Link>
         </div>
         <div>
