@@ -139,7 +139,7 @@ function FooterColumn({
   if (!officeAddress && !logo) return null
 
   return (
-    <div className="pl-4 pr-4 sm:w-1/3">
+    <div className="px-1 sm:w-1/3">
       {logo && (
         <div className="logo">
           <Link href="/">
