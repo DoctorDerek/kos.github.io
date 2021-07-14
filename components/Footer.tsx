@@ -4,7 +4,6 @@ import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 import IconCard from "@/components/IconCard"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
-import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function Footer() {
   const officeAddressLeft: IconCard = {
@@ -32,17 +31,9 @@ export default function Footer() {
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
           <div className="flex flex-wrap footer-row">
-            <FooterColumn
-              officeAddress={officeAddressLeft}
-              phone="613-549-8667"
-            />
-            <div className="pl-4 pr-4 sm:w-1/3">
-              <FooterColumn logo={true} />
-            </div>
-            <FooterColumn
-              officeAddress={officeAddressRight}
-              phone="613-968-7137"
-            />
+            <FooterColumn officeAddress={officeAddressLeft} />
+            <FooterColumn logo={true} />
+            <FooterColumn officeAddress={officeAddressRight} />
           </div>
           <div className="footer-bot">
             <div className="text-base">
@@ -140,14 +131,12 @@ export default function Footer() {
 
 function FooterColumn({
   officeAddress,
-  phone,
   logo,
 }: {
   officeAddress?: IconCard
-  phone?: string
   logo?: boolean
 }) {
-  if (!(officeAddress && phone) && !logo) return null
+  if (!officeAddress && !logo) return null
 
   return (
     <div className="pl-4 pr-4 sm:w-1/3">
@@ -160,9 +149,7 @@ function FooterColumn({
           </Link>
         </div>
       )}
-      {officeAddress && phone && (
-        <IconCard {...officeAddress} location="footer" />
-      )}
+      {officeAddress && <IconCard {...officeAddress} location="footer" />}
     </div>
   )
 }
