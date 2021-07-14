@@ -2,12 +2,25 @@ import Script from "next/script"
 
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
+import IconCard from "@/components/IconCard"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function Footer() {
+  const officeAddressLeft: IconCard = {
+    icon: "location-marker",
+    label: ["The LaSalle", "303 Bagot St., 16A", "Kingston ON K7K 5W"],
+    text: "613-549-8667",
+  }
+
+  const officeAddressRight: IconCard = {
+    icon: "location-marker",
+    label: ["183 Front Street", "(near City Hall)", "Belleville, ON K8N 2Y9"],
+    text: "613-968-7137",
+  }
+
   return (
     <footer>
-      <Script src="/js/theWeatherNetwork.js" />
       <div className="page-footer w-full h-[450px]">
         <div className="grid w-full h-[450px]">
           <Image src="/images/footer-bg.jpg" alt="ocean" />
@@ -19,60 +32,23 @@ export default function Footer() {
         </div>
         <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
           <div className="flex flex-wrap footer-row">
+            <FooterColumn
+              officeAddress={officeAddressLeft}
+              phone="613-549-8667"
+            />
             <div className="pl-4 pr-4 sm:w-1/3">
-              <div className="location">
-                <i className="icon icon-location" />
-                The LaSalle Mews
-                <br />
-                303 Bagot Street, 16A
-                <br />
-                Kingston, ON K7K 5W7
-                <br />
-                <br />
-                <span
-                  style={{
-                    fontSize: 26,
-                    fontWeight: "bolder",
-                    color: "#c70000",
-                  }}
-                >
-                  613-549-8667
-                </span>
-              </div>
+              <FooterColumn logo={true} />
             </div>
-            <div className="pl-4 pr-4 sm:w-1/3">
-              <div className="logo">
-                <Link href="/">
-                  <div className="grid w-[300px] h-[125px] mx-auto">
-                    <Image src="/images/logo-invert.png" alt="Logo" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="pl-4 pr-4 sm:w-1/3">
-              <div className="location">
-                <i className="icon icon-location" />
-                183 Front Street
-                <br />
-                (near City Hall)
-                <br />
-                Belleville, ON K8N 2Y9 <br />
-                <br />
-                <span
-                  style={{
-                    fontSize: 26,
-                    fontWeight: "bolder",
-                    color: "#c70000",
-                  }}
-                >
-                  613-968-7137
-                </span>
-              </div>
-            </div>{" "}
+            <FooterColumn
+              officeAddress={officeAddressRight}
+              phone="613-968-7137"
+            />
           </div>
           <div className="footer-bot">
             <div className="text-base">
-              <div id="plemx-root" />
+              <div id="plemx-root">
+                <Script src="/js/theWeatherNetwork.js" />
+              </div>
               <Link
                 href="https://www.theweathernetwork.com"
                 className="text-gray-900"
@@ -159,5 +135,34 @@ export default function Footer() {
         <canvas id="footerSea" />
       </div>
     </footer>
+  )
+}
+
+function FooterColumn({
+  officeAddress,
+  phone,
+  logo,
+}: {
+  officeAddress?: IconCard
+  phone?: string
+  logo?: boolean
+}) {
+  if (!(officeAddress && phone) && !logo) return null
+
+  return (
+    <div className="pl-4 pr-4 sm:w-1/3">
+      {logo && (
+        <div className="logo">
+          <Link href="/">
+            <div className="grid w-[300px] h-[125px] mx-auto">
+              <Image src="/images/logo-invert.png" alt="Logo" />
+            </div>
+          </Link>
+        </div>
+      )}
+      {officeAddress && phone && (
+        <IconCard {...officeAddress} location="footer" />
+      )}
+    </div>
   )
 }
