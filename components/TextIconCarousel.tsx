@@ -36,24 +36,23 @@ export default function TextIconCarousel() {
     },
   ]
   return (
-    <div className="block-class bottom-sm-margin">
-      <div className="container mx-auto">
-        <h2 className="text-center decor flex-growor">
-          Why choose us?
-          <div className="block mx-auto">
-            <ImageFixed
-              src="/images/h-decor.png"
-              height="4px"
-              width="64px"
-              alt="Decoration"
-            />
-          </div>
-        </h2>
-        <div className="flex flex-wrap text-icon-carousel step-animation-container">
-          {iconBadges.map((badge) => (
-            <IconBadge key={String(badge.label)} {...badge} />
-          ))}
+    <div>
+      {" "}
+      <h2 className="text-center decor">
+        Why choose us?
+        <div className="block mx-auto">
+          <ImageFixed
+            src="/images/h-decor.png"
+            height="4px"
+            width="64px"
+            alt="Decoration"
+          />
         </div>
+      </h2>
+      <div className="flex flex-wrap">
+        {iconBadges.map((badge) => (
+          <IconBadge key={String(badge.label)} {...badge} />
+        ))}
       </div>
     </div>
   )
