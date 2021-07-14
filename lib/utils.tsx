@@ -117,7 +117,7 @@ export const addPhoneLinkToTextIfPresent = ({
   bold = "bold",
 }: {
   stringToTest: string
-  color?: "red" | "black"
+  color?: "red" | "red-light" | "black"
   bold?: "bold" | "semibold" | "normal"
 }) => {
   const phoneLinkRegExp = /(.*)1?-?(\d\d\d-\d\d\d-\d\d\d\d)(.*)/
@@ -133,6 +133,8 @@ export const addPhoneLinkToTextIfPresent = ({
             className={classNames(
               color === "red"
                 ? "text-red-brand"
+                : color === "red-light"
+                ? "text-red-light"
                 : color === "black"
                 ? "text-black"
                 : "",
