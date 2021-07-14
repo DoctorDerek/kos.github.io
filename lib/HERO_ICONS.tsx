@@ -3,7 +3,11 @@ import {
   ClockIcon,
   CogIcon,
   LocationMarkerIcon,
+  MenuIcon,
   PhoneIcon,
+  ShoppingCartIcon,
+  TruckIcon,
+  UserCircleIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline"
 
@@ -16,7 +20,11 @@ const HeroIcons: {
   clock: ClockIcon,
   cog: CogIcon,
   "location-marker": LocationMarkerIcon,
+  menu: MenuIcon,
   phone: PhoneIcon,
+  "shopping-cart": ShoppingCartIcon,
+  truck: TruckIcon,
+  "user-circle": UserCircleIcon,
   "user-group": UserGroupIcon,
 }
 

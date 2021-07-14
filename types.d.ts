@@ -217,7 +217,11 @@ type HeroIcon =
   | "clock"
   | "cog"
   | "location-marker"
+  | "menu"
   | "phone"
+  | "shopping-cart"
+  | "truck"
+  | "user-circle"
   | "user-group"
 
 /**
@@ -337,7 +341,7 @@ type PricingPackagesSectionDetail = {
 }
 
 /**
- * <IconCards>s display icons on the left side with a label and text on the
+ * <IconCard>s display icons on the left side with a label and text on the
  * right side. The icon has a hover effect like the header phone numbers.
  * A phone number (in the format "613-549-8667") will become an actual link.
  * If an array of strings is used, each string will appear on a separate line.
@@ -350,4 +354,21 @@ type IconCard = {
   icon: HeroIcon
   label: string | string[]
   text: string | string[]
+}
+/**
+ * <IconBadge>s display icons on the top of a single column with a label and
+ * text below. The icon has a hover effect where the bg dims to darker blue.
+ * There are two size options: large (2 per column) and small (3 per column).
+ *
+ * @typeParam icon - The desired <HeroIcon> to be used ("phone")
+ * @typeParam label - The first line of text, which will be bold ("KINGSTON")
+ * @typeParam text - The second line of text ("The LaSalle 303...")
+ * @typeparam size - Whether the flex item should display 2 or 3 per column
+ */
+type IconBadge = {
+  icon: HeroIcon
+  label: string | string[]
+  text: string | string[]
+  size?: "large" | "small" = "small"
+  uppercase?: boolean = true
 }
