@@ -43,6 +43,7 @@ module.exports = {
       40: "40px",
     },
     extend: {
+      screens: { print: { raw: "print" } },
       spacing: {
         "9/16": "56.25%",
         13: "3.25rem",

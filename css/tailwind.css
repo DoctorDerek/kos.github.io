@@ -248,12 +248,6 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
 block-class
 */
 
-@media print {
-  .footer-bot {
-    @apply hidden;
-  }
-}
-
 .block-class {
   @apply mb-24;
 }
