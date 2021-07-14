@@ -5,8 +5,8 @@ export default function IconCard({
   icon,
   label,
   text,
-  location = "",
-}: IconCard & { location: "" | "footer" }) {
+  location,
+}: IconCard & { location?: "" | "footer" }) {
   // support string | string[] for convenience by wrapping strings with an array
   if (!Array.isArray(label)) {
     label = label === undefined ? [] : [label]
