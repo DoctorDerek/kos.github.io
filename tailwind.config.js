@@ -124,6 +124,7 @@ module.exports = {
           ...colors.red,
           // red color for highlighting titles & branding throughout
           brand: "#A80532", // KOS - secondary color
+          light: "#C70000", // bright red - footer phone numbers over blue bg
         },
         code: {
           green: "#b5f4a5",
