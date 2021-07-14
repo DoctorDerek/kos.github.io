@@ -364,7 +364,8 @@ type IconCard = {
  * @typeParam icon - The desired <HeroIcon> to be used ("phone")
  * @typeParam label - The first line of text, which will be bold ("KINGSTON")
  * @typeParam text - The second line of text ("The LaSalle 303...")
- * @typeparam size - Whether the flex item should display 2 or 3 per column
+ * @typeParam size? - Whether the flex item should display 2 or 3 per column
+ * @typeParam boolean? - Whether the label should be displayed uppercase or not
  */
 type IconBadge = {
   icon: HeroIcon
