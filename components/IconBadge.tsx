@@ -28,12 +28,12 @@ export default function IconBadge({
   return (
     <div
       className={classNames(
-        "pl-4 pr-4 sm:w-1/3 mb-6 text-center space-y-4",
+        "pl-4 pr-4 sm:w-1/3 mb-6 text-center space-y-4 group",
         size === "large" ? "sm:w-1/2" : "sm:w-1/3",
         uppercase ? "uppercase" : ""
       )}
     >
-      <div className="flex items-center justify-center w-20 h-20 mx-auto text-xl font-bold text-white rounded-full fill-current bg-gradient-to-b to-blue-light from-teal-brand hover:to-blue-800 transform-gpu">
+      <div className="flex items-center justify-center w-20 h-20 mx-auto text-xl font-bold text-white rounded-full fill-current bg-gradient-to-b to-blue-light from-teal-brand group-hover:to-blue-800 transform-gpu">
         <div className="w-12 h-12">{<HeroIconComponent />}</div>
       </div>
       <h5 className={classNames("text-gray-900", uppercase ? "uppercase" : "")}>
