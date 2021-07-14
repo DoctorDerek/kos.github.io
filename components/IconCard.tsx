@@ -1,7 +1,12 @@
 import HERO_ICONS from "@/lib/HERO_ICONS"
 import { addPhoneLinkToTextIfPresent, classNames } from "@/lib/utils"
 
-export default function IconCard({ icon, label, text }: IconCard) {
+export default function IconCard({
+  icon,
+  label,
+  text,
+  location = "",
+}: IconCard & { location: "" | "footer" }) {
   // support string | string[] for convenience by wrapping strings with an array
   if (!Array.isArray(label)) {
     label = label === undefined ? [] : [label]
@@ -24,25 +29,49 @@ export default function IconCard({ icon, label, text }: IconCard) {
       <div
         className={classNames(
           "grid self-start flex-shrink-0 w-12 h-12 p-1 mx-3",
+          location === "footer" ? "mt-4" : "",
           icon
-            ? "transition-all duration-500 border-4 border-blue-brand border-solid rounded-full fill-current group-hover:bg-blue-brand group-hover:text-gray-100 text-blue-brand"
+            ? classNames(
+                "transition-all duration-500 border-solid rounded-full fill-current border-2",
+                location === "footer"
+                  ? "border-white group-hover:bg-white bg-transparent text-white group-hover:text-blue-brand"
+                  : "group-hover:text-white group-hover:bg-blue-brand group-hover:border-blue-brand border-blue-brand text-blue-brand"
+              )
             : ""
         )}
       >
         <HeroIconComponent />
       </div>
       <div>
-        <div className="text-xl font-semibold text-gray-900 uppercase">
+        <div
+          className={classNames(
+            location === "footer"
+              ? "font-normal text-white pb-4"
+              : "font-semibold text-black",
+            "uppercase text-xl"
+          )}
+        >
           {label.map((line) => (
             <div key={line}>
-              {addPhoneLinkToTextIfPresent({ stringToTest: line })}
+              {addPhoneLinkToTextIfPresent({
+                stringToTest: line,
+                color: location === "footer" ? "red-light" : "red",
+              })}
             </div>
           ))}
         </div>
-        <div className="leading-6">
+        <div
+          className={classNames(
+            location === "footer" ? "text-3xl" : "",
+            "leading-6"
+          )}
+        >
           {text.map((line) => (
             <div key={line}>
-              {addPhoneLinkToTextIfPresent({ stringToTest: line })}
+              {addPhoneLinkToTextIfPresent({
+                stringToTest: line,
+                color: location === "footer" ? "red-light" : "red",
+              })}
             </div>
           ))}
         </div>
