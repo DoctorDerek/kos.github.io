@@ -1,4 +1,5 @@
 import {
+  ArrowUpIcon,
   CheckIcon,
   ClockIcon,
   CogIcon,
@@ -12,10 +13,11 @@ import {
 } from "@heroicons/react/outline"
 
 // New icons also needed to be added to the <HeroIcon> type in next-env.d.ts
-const HeroIcons: {
+const HERO_ICONS: {
   [key in HeroIcon]: HeroIconFunction
 } = {
-  // "kebab-case": CamelCase
+  // Format: "kebab-case": CamelCaseIcon
+  "arrow-up": ArrowUpIcon,
   check: CheckIcon,
   clock: ClockIcon,
   cog: CogIcon,
@@ -30,4 +32,4 @@ const HeroIcons: {
 
 type HeroIconFunction = (props: React.ComponentProps<"svg">) => JSX.Element
 
-export default HeroIcons
+export default HERO_ICONS
