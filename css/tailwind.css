@@ -931,7 +931,7 @@ h2 + .category-carousel {
 }
 
 /*! CSS Used keyframes */
-
+/*
 @-webkit-keyframes fadeIn {
   0% {
     @apply opacity-0;
@@ -1084,6 +1084,7 @@ h2 + .category-carousel {
     left: -270px;
   }
 }
+*/
 
 /*! CSS Used from: /css/custom.css */
 
