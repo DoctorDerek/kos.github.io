@@ -591,28 +591,6 @@ button:active,
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#740018', endColorstr='#b0243d', GradientType=0);
 }
 
-.social-links ul {
-  @apply p-0 m-0;
-}
-
-.social-links ul li {
-  @apply inline-block text-center list-none;
-  margin: 0 5px;
-}
-
-.social-links ul li a {
-  @apply text-white no-underline cursor-pointer;
-  font-size: 44px;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-}
-
-.social-links ul li a:hover {
-  @apply text-blue-brand;
-}
-
 .service-item {
   @apply relative mb-5 text-center;
 }

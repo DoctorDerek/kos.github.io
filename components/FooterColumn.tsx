@@ -12,9 +12,12 @@ export default function FooterColumn({
   if (!officeAddress && !logo) return null
 
   return (
-    <div className="col-span-1 px-1">
+    <div className="flex justify-center col-span-1 px-1">
       {logo && (
-        <Link href="/" className="grid h-full mx-auto">
+        <Link
+          href="/"
+          className="flex items-center flex-shrink-0 w-full h-full mx-auto"
+        >
           <DynamicImage
             src="/images/logo-invert.png"
             width="300px"

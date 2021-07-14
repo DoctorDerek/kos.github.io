@@ -4,6 +4,7 @@ import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 import FooterColumn from "@/components/FooterColumn"
 import FacebookIcon from "@/data/material-icons/facebook.svg"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function Footer() {
   const officeAddressLeft: IconCard = {
@@ -18,209 +19,160 @@ export default function Footer() {
     text: "613-968-7137",
   }
 
-  /* page-footer {
-  @apply relative clear-both text-white;
-  padding: 0 0 54px;
-}
+  const ArrowUpIcon = HERO_ICONS["arrow-up"]
 
-.page-footer .container {
-  @apply relative;
-  z-index: 100;
-}
-
-.page-footer .logo {
-  @apply text-center;
-}
-
-.page-footer .logo img {
-  @apply inline-block max-w-full;
-}
-
-.page-footer .location {
-  @apply relative text-base leading-5 text-left text-white uppercase;
-  margin: 32px 0 0 0;
-  padding: 0 0 0 38px;
-}
-
-.page-footer .location span {
-  @apply inline-block align-bottom;
-}
-
-.page-footer .location .icon {
-  @apply absolute top-0 text-2xl align-middle;
-  left: 2px;
-  padding: 0 7px 0 0;
-}
-
-.page-footer .first-mobile {
-  @apply float-right;
-}
-
-.page-footer .footer-bot {
-  @apply text-center;
-}
-
-.page-footer .copyright {
-  @apply text-base leading-5;
-  margin: 18px 0 20px;
-}
-
-@media (max-width: 767px) {
-  .page-footer {
-    padding: 30px 10px;
-  }
-  .page-footer .location {
-    @apply text-base leading-5;
-    margin: 0 0 10px;
-    padding: 0 0 0 38px;
-  }
-  .page-footer .first-mobile {
-    @apply float-none;
-  }
-}
-
-.back-to-top {
-  @apply absolute;
-  bottom: 205px;
-  right: 5%;
-}
-
-@media (max-width: 1199px) {
-  .back-to-top {
-    bottom: 50px;
-  }
-}
-
-.back-to-top a {
-  @apply block text-6xl text-center text-white no-underline;
-  line-height: 60px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-.back-to-top:hover a {
-  @apply text-blue-brand;
-}
-
-#footerSea {
-  @apply absolute bottom-0 z-0 w-full pointer-events-none;
-  opacity: 0.55;
-}
-
-#sea {
-  @apply absolute bottom-0 w-full pointer-events-none;
-  z-index: 1000;
-  opacity: 0.15;
-} */
   return (
-    <footer>
-      <div className="w-full h-full">
-        <div className="grid w-full h-full">
-          <Image src="/images/footer-bg.jpg" alt="ocean" />
+    <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
+      <div className="grid w-full h-96">
+        <Image
+          src="/images/footer-bg.jpg"
+          alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
+        />
+      </div>
+      <div className="w-full h-full flex flex-col justify-evenly items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <div className="grid grid-cols-1 sm:grid-cols-3">
+          <FooterColumn officeAddress={officeAddressLeft} />
+          <FooterColumn logo={true} />
+          <FooterColumn officeAddress={officeAddressRight} />
         </div>
-        <div className="back-to-top hidden-xs">
-          <Link href="#top">
-            <span className="flex-wrap icon icon-up-arrow" />
+        <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
+          <Link href="#top" className="text-white group-hover:text-blue-brand">
+            <ArrowUpIcon />
           </Link>
         </div>
-        <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-400px]">
-          <div className="grid grid-cols-1 sm:grid-cols-3">
-            <FooterColumn officeAddress={officeAddressLeft} />
-            <FooterColumn logo={true} />
-            <FooterColumn officeAddress={officeAddressRight} />
-          </div>
-          <div className="footer-bot">
-            <div className="text-base">
-              <div id="plemx-root">
-                <Script src="/js/theWeatherNetwork.js" />
-              </div>
-              <Link
-                href="https://www.theweathernetwork.com"
-                className="text-gray-900"
-              >
-                The Weather Network
-              </Link>
-            </div>
-            <div className="copyright">
-              Copyright © KOS - {new Date().getFullYear()} {" | "}
-              <Link className="text-white" href="/policies/">
-                KOS Policies
-              </Link>
-              {" | "}
-              <Link className="text-white" href="/tac/">
-                Terms and Conditions
-              </Link>
-              {" | "}
-              <Link className="text-white" href="/e911">
-                e911
-              </Link>
-              {" | "}
-              <Link className="text-white" href="/wst/">
-                Personal Web Space TAC
-              </Link>
-              <br />
-              <div>
-                <span className="text-white">
-                  <strong>Serving Eastern Ontario: </strong>
-                </span>
-                <Link
-                  className="text-white"
-                  href="/kingston-internet-services/"
-                >
-                  Kingston
-                </Link>
-                {" | "}
-                <Link
-                  className="text-white"
-                  href="/gananoque-internet-services/"
-                >
-                  Gananoque
-                </Link>
-                {" | "}
-                <Link className="text-white" href="/picton-internet-services/">
-                  Picton
-                </Link>
-                {" | "}
-                <Link
-                  className="text-white"
-                  href="/brighton-internet-services/"
-                >
-                  Brighton
-                </Link>
-                {" | "}
-                <Link className="text-white" href="/trenton-internet-services/">
-                  Trenton
-                </Link>
-                {" | "}
-                <Link
-                  className="text-white"
-                  href="/belleville-internet-services/"
-                >
-                  Belleville
-                </Link>
-                {" | "}
-                <Link className="text-white" href="/napanee-internet-services/">
-                  Napanee
-                </Link>
-              </div>
-            </div>
-            <div className="social-links">
-              <ul>
-                <li>
-                  <Link href="https://www.facebook.com/Kingston-Online-Services-120301901358202/">
-                    <div className="grid self-center w-12 h-12 p-2 text-white border-4 border-white border-solid rounded-full fill-current">
-                      <FacebookIcon />
-                    </div>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        <div>
+          <div id="plemx-root" className="h-6">
+            <Script src="/js/theWeatherNetwork.js" />
           </div>
         </div>
-        <canvas id="footerSea" />
+        <div className="text-base leading-5 text-white">
+          Copyright © KOS - {new Date().getFullYear()} {" | "}
+          <Link className="text-white" href="/policies/">
+            KOS Policies
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/tac/">
+            Terms and Conditions
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/e911">
+            e911
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/wst/">
+            Personal Web Space TAC
+          </Link>
+          <br />
+          <div>
+            <span className="text-white">
+              <strong>Serving Eastern Ontario: </strong>
+            </span>
+            <Link className="text-white" href="/kingston-internet-services/">
+              Kingston
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/gananoque-internet-services/">
+              Gananoque
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/picton-internet-services/">
+              Picton
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/brighton-internet-services/">
+              Brighton
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/trenton-internet-services/">
+              Trenton
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/belleville-internet-services/">
+              Belleville
+            </Link>
+            {" | "}
+            <Link className="text-white" href="/napanee-internet-services/">
+              Napanee
+            </Link>
+          </div>
+        </div>
+        <Link href="https://www.facebook.com/Kingston-Online-Services-120301901358202/">
+          <div className="grid self-center w-12 h-12 p-2 text-white transition-all duration-300 border-4 border-white border-solid rounded-full fill-current hover:text-blue-brand hover:bg-white">
+            <FacebookIcon />
+          </div>
+        </Link>
       </div>
+      <canvas
+        id="footerSea"
+        className="absolute bottom-0 z-0 w-full opacity-50 pointer-events-none"
+      />
+      <div
+        id="sea"
+        className="bottom-0 w-full pointer-events-none opacity-10"
+      ></div>
     </footer>
   )
 }
+
+// wave effect
+/*
+function waveEffect(canvas: any, parent: any, color: any) {
+  var TAU = Math.PI * 2
+  var density = 1
+  var speed = 1
+  var res = 0.005 // percentage of screen per x segment
+  var outerScale = 0.05 / density
+  var inc = 0
+  var c = $(canvas)[0]
+  var ctx = c.getContext("2d")
+  var grad = ctx.createLinearGradient(0, 0, 0, c.height * 4)
+
+  function onResize() {
+    $(canvas).attr({
+      width: $(parent).width() + "px",
+      height: $(parent).height() + "px",
+    })
+  }
+
+  onResize()
+  loop()
+  $window.resize(onResize)
+
+  function loop() {
+    inc -= speed
+    drawWave(color)
+    requestAnimationFrame(loop)
+  }
+
+  function drawWave(color) {
+    var w = c.offsetWidth
+    var h = c.offsetHeight
+    var cx = w * 0.5
+    var cy = h * 0.5
+    ctx.clearRect(0, 0, w, h)
+    var segmentWidth = w * res
+    ctx.fillStyle = color
+    ctx.beginPath()
+    ctx.moveTo(0, cy)
+    for (var i = 0, endi = 1 / res; i <= endi; i++) {
+      var _y =
+        cy +
+        Math.sin((i + inc) * TAU * res * density) *
+          cy *
+          Math.sin(i * TAU * res * density * outerScale)
+      var _x = i * segmentWidth
+      ctx.lineTo(_x, _y)
+    }
+    ctx.lineTo(w, h)
+    ctx.lineTo(0, h)
+    ctx.closePath()
+    ctx.fill()
+  }
+}
+if (plugins.waveSliderFooter.length) {
+  waveEffect(plugins.waveSliderFooter, ".page-footer", "#28bceb")
+}
+if (plugins.waveSlider.length) {
+  waveEffect(plugins.waveSlider, "#slider", "#ffffff")
+}
+*/
