@@ -33,8 +33,11 @@ export default function IconBadge({
         uppercase ? "uppercase" : ""
       )}
     >
-      <div className="flex items-center justify-center w-20 h-20 mx-auto text-xl font-bold text-white rounded-full fill-current bg-gradient-to-b to-blue-light from-teal-brand group-hover:to-blue-800 group-hover:from-blue-800 transform-gpu">
-        <div className="w-12 h-12">{<HeroIconComponent />}</div>
+      <div className="relative flex items-center justify-center w-20 h-20 mx-auto bg-blue-800 rounded-full">
+        <div className="absolute w-full h-full transition-all duration-300 rounded-full bg-gradient-to-b to-blue-light from-teal-brand group-hover:opacity-0" />
+        <div className="absolute w-12 h-12 text-white fill-current">
+          {<HeroIconComponent />}
+        </div>
       </div>
       <h5 className={classNames("text-gray-900", uppercase ? "uppercase" : "")}>
         {label.map((line) => (
