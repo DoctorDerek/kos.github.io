@@ -1,10 +1,10 @@
 # [`kos-github-io.vercel.app`](kos-github-io.vercel.app) by @DoctorDerek
 
-⚠ WIP Site - Will Launch June 2021
+⚠ WIP Site - Will Launch July 2021
 
 ---
 
-🟢 Target: >90/100 Lighthouse Performance
+🟢 >90/100 Lighthouse Performance
 
 ⚛ Next.js (React)
 
