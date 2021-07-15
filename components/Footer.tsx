@@ -29,16 +29,16 @@ export default function Footer() {
           alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
         />
       </div>
+      <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
+        <Link href="#top" className="text-white group-hover:text-blue-brand">
+          <ChevronUpIcon aria-label="Back to top of page" />
+        </Link>
+      </div>
       <div className="w-full h-full flex flex-col justify-center items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-2 space-y-6 md:space-y-4">
         <div className="grid grid-cols-1 space-y-6 md:grid-cols-3 md:space-y-0">
           <FooterColumn officeAddress={officeAddressLeft} />
           <FooterColumn logo={true} />
           <FooterColumn officeAddress={officeAddressRight} />
-        </div>
-        <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
-          <Link href="#top" className="text-white group-hover:text-blue-brand">
-            <ChevronUpIcon aria-label="Back to top of page" />
-          </Link>
         </div>
         <div>
           <div id="plemx-root" className="h-6">
