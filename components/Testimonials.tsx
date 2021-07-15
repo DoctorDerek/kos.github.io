@@ -69,7 +69,7 @@ export default function Testimonials() {
               <div className="testimonials-carousel">
                 <div
                   ref={sliderRef as React.RefObject<HTMLDivElement>}
-                  className="keen-slider"
+                  className="space-x-6 keen-slider"
                 >
                   <div className="keen-slider__slide number-slide1">
                     <QuoteIcon />
