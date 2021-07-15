@@ -69,9 +69,9 @@ export default function Testimonials() {
               <div className="testimonials-carousel">
                 <div
                   ref={sliderRef as React.RefObject<HTMLDivElement>}
-                  className="space-x-6 keen-slider"
+                  className="keen-slider"
                 >
-                  <div className="keen-slider__slide number-slide1">
+                  <div className="px-6 keen-slider__slide number-slide1">
                     <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
@@ -90,7 +90,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                  <div className="keen-slider__slide number-slide2">
+                  <div className="px-6 keen-slider__slide number-slide2">
                     <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
@@ -113,7 +113,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                  <div className="keen-slider__slide number-slide3">
+                  <div className="px-6 keen-slider__slide number-slide3">
                     <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
@@ -137,7 +137,7 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                  <div className="keen-slider__slide number-slide4">
+                  <div className="px-6 keen-slider__slide number-slide4">
                     <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
