@@ -28,6 +28,7 @@ export default function FooterColumn({
         </Link>
       )}
       {officeAddress && (
+        // translate-x-[-2rem] so that the text appears centered with the logo
         <div className="transform translate-x-[-2rem] md:translate-x-0">
           <IconCard {...officeAddress} location="footer" />
         </div>
