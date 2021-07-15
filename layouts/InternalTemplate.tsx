@@ -41,7 +41,7 @@ export function InternalTemplate({
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
       <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-[#005395] border-solid border-t-[6px]">
-        <Image src="/images/footer-bg.jpg" alt="" />
+        <Image src="/images/footer-bg.jpg" alt="Decoration" />
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="max-w-xl px-4 py-8 mx-auto md:px-0 xl:py-16 lg:py-14 md:py-12 sm:py-10">
@@ -51,7 +51,7 @@ export function InternalTemplate({
             src="/images/h-decor.png"
             height="4px"
             width="64px"
-            alt=""
+            alt="Decoration"
           />
           {/* alt="" acceptable for purely decorative elements */}
         </div>

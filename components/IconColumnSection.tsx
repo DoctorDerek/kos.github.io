@@ -28,7 +28,7 @@ export default function IconColumnSection({
                 src="/images/h-decor-white.png"
                 height="4px"
                 width="64px"
-                alt=""
+                alt="Decoration"
               />
               {/* alt="" acceptable for purely decorative items */}
             </div>

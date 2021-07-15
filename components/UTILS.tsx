@@ -65,7 +65,12 @@ export function BUTTON({ href, text }: { href: string; text: string }) {
 export function DIVIDER() {
   return (
     <div className="pb-4 text-center">
-      <ImageFixed src="/images/h-decor.png" height="4px" width="64px" alt="" />
+      <ImageFixed
+        src="/images/h-decor.png"
+        height="4px"
+        width="64px"
+        alt="Decoration"
+      />
       {/* alt="" acceptable for purely decorative elements */}
     </div>
   )
