@@ -46,7 +46,7 @@ export default function PageLayout({
         url={`${siteMetadata.siteUrl}/${slug}`}
       />
       <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
-        <Image src="/images/footer-bg.jpg" alt="" />
+        <Image src="/images/footer-bg.jpg" alt="Decoration" />
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">

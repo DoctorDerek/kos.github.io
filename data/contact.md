@@ -8,7 +8,7 @@ officeAddressLeft:
     {
       icon: "location-marker",
       label: "KINGSTON",
-      text: "The LaSalle 303 Bagot St., 16A Kingston ON K7K 5W",
+      text: ["The LaSalle", "303 Bagot St., 16A", "Kingston, ON K7K 5W"],
     },
     { icon: "phone", label: "CALL US", text: "613-549-8667" },
     {
@@ -32,7 +32,7 @@ officeAddressRight:
     {
       icon: "location-marker",
       label: "BELLEVILLE",
-      text: "183 Front Street (near City Hall) Belleville, ON K8N 2Y9",
+      text: ["183 Front Street", "(near City Hall)", "Belleville, ON K8N 2Y9"],
     },
     { icon: "phone", label: "CALL US", text: "613-968-7137" },
     {

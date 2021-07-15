@@ -49,16 +49,16 @@ const Slideshow = () => {
       >
         <SlideshowSlide
           src="/images/slider/slide1.jpg"
-          alt="ocean"
+          alt="Decoration"
           text1="We get you connected and keep you connected"
           text2="worry-free connectivity"
           href="/order/"
           text3="Get connected!"
-          preload={true}
+          preload="true"
         />
         <SlideshowSlide
           src="/images/slider/slide2.jpg"
-          alt="ocean"
+          alt="Decoration"
           text1="Reliable service for 100% internet enjoyment"
           text2="worry-free connectivity"
           href="/order/"

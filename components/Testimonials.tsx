@@ -4,6 +4,8 @@ import { useKeenSlider } from "keen-slider/react"
 import ImageFixed from "next/image"
 import { useEffect, useRef, useState } from "react"
 
+import FormatQuoteRoundedIcon from "@/data/material-icons/format_quote_black_48dp.svg"
+
 export default function Testimonials() {
   const [pause, setPause] = useState(false)
   const timer: React.MutableRefObject<NodeJS.Timeout> =
@@ -41,6 +43,12 @@ export default function Testimonials() {
     }
   }, [pause, slider])
 
+  const QuoteIcon = () => (
+    <div className="grid self-center w-24 h-24 p-1 mx-3 transition-all duration-500 rounded-full fill-current scale-x-[-1] text-blue-brand absolute left-0 top-[-1rem] z-10">
+      <FormatQuoteRoundedIcon aria-hidden="true" className="w-full h-full" />
+    </div>
+  )
+
   return (
     <div className="">
       <div className="container mx-auto">
@@ -54,16 +62,17 @@ export default function Testimonials() {
                     src="/images/h-decor.png"
                     height="4px"
                     width="64px"
-                    alt="ocean"
+                    alt="Decoration"
                   />
                 </div>
               </h3>
               <div className="testimonials-carousel">
                 <div
                   ref={sliderRef as React.RefObject<HTMLDivElement>}
-                  className="keen-slider"
+                  className="space-x-6 keen-slider"
                 >
                   <div className="keen-slider__slide number-slide1">
+                    <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
                         <p>
@@ -82,6 +91,7 @@ export default function Testimonials() {
                     </div>
                   </div>
                   <div className="keen-slider__slide number-slide2">
+                    <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
                         <p>
@@ -103,8 +113,8 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-
                   <div className="keen-slider__slide number-slide3">
+                    <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
                         <p>
@@ -128,6 +138,7 @@ export default function Testimonials() {
                     </div>
                   </div>
                   <div className="keen-slider__slide number-slide4">
+                    <QuoteIcon />
                     <div className="testimonials-item">
                       <div className="testimonials-text">
                         <p>

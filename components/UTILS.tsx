@@ -17,7 +17,7 @@ export function BULLET({
   responsive?: boolean
 }) {
   function CustomIcon() {
-    return <>{customIcon}</>
+    return <div className="w-full h-full">{customIcon}</div>
   }
   // current page bullets are blue background, white checkmark
   const currentBulletStyles = isCurrentPage
@@ -38,14 +38,14 @@ export function BULLET({
       )}
     >
       {customIcon ? (
-        <CustomIcon />
+        <CustomIcon aria-hidden="true" />
       ) : isCurrentPage ? (
         <CheckIcon
           aria-label={isCurrentPage ? "Current page" : ""}
           aria-hidden={!isCurrentPage ? "true" : "false"}
         />
       ) : (
-        <RightArrow aria-hidden="true" />
+        <RightArrow aria-hidden="true" className="w-full h-full" />
       )}
     </div>
   )
@@ -65,7 +65,12 @@ export function BUTTON({ href, text }: { href: string; text: string }) {
 export function DIVIDER() {
   return (
     <div className="pb-4 text-center">
-      <ImageFixed src="/images/h-decor.png" height="4px" width="64px" alt="" />
+      <ImageFixed
+        src="/images/h-decor.png"
+        height="4px"
+        width="64px"
+        alt="Decoration"
+      />
       {/* alt="" acceptable for purely decorative elements */}
     </div>
   )

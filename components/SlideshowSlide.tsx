@@ -16,7 +16,7 @@ const SlideshowSlide = ({
   text2: string
   href: string
   text3: string
-  preload?: boolean
+  preload?: string
 }) => {
   if (!(src && alt && text1 && text2 && href && text3)) {
     throw new Error("Missing required attribute in <SlideshowSlide>")
@@ -29,7 +29,7 @@ const SlideshowSlide = ({
       style={{ minWidth: 0, maxWidth: 0 }}
     >
       <div className="grid w-full h-full">
-        <Image src={src} alt={alt} preload={preload ? preload : false} />
+        <Image src={src} alt={alt} preload={preload ? preload : ""} />
       </div>
       <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
         <div className="text text1">

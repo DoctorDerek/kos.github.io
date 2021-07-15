@@ -17,7 +17,7 @@ export default function IconColumnSection({
   return (
     <div className="my-16 text-center text-white">
       <div className="grid w-full h-[600px]">
-        <Image src="/images/block-bg.jpg" alt="ocean" />
+        <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-490px]">
         {heading && (
@@ -28,7 +28,7 @@ export default function IconColumnSection({
                 src="/images/h-decor-white.png"
                 height="4px"
                 width="64px"
-                alt=""
+                alt="Decoration"
               />
               {/* alt="" acceptable for purely decorative items */}
             </div>
@@ -64,7 +64,7 @@ export default function IconColumnSection({
     return (
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mt-6 mb-8">
-          <HeroIconComponent />
+          <HeroIconComponent aria-hidden="true" />
         </div>
         <div className="mb-3 text-4xl font-semibold">{heading}</div>
         <div className="text-lg font-semibold leading-5">{subheading}</div>

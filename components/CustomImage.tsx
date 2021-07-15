@@ -19,18 +19,17 @@ export default function CustomImage({
   alt,
   layout = "fill", // Assume dynamic sizing
   className = "object-cover", // Assume dynamic sizing
-  sizes = ValidSizes.screen, // Next.js default
-  quality = "75", // Next.js default
-  preload = false, // Next.js default
+  sizes = ValidSizes.screen, // Next.js default, 100vw
+  quality = "75", // Next.js default, 75/100
+  preload = "", // Next.js default, off
 }: {
   src: string
   alt: string
-  layout?: "fill"
-  // "fixed" | "intrinsic" | "responsive" | "fill" | undefined
+  layout?: "fill" // "fixed" | "intrinsic" | "responsive" | "fill" | undefined
   className?: string
   sizes?: ValidSizes
   quality?: string
-  preload?: boolean
+  preload?: string
 }) {
   if (!src || (!alt && alt !== "")) {
     // alt === "" is valid for purely decorative items

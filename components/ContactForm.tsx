@@ -267,9 +267,8 @@ export default function ContactForm({
                       ? true
                       : undefined
                   }
-                >
-                  {value ? value : ""}
-                </textarea>
+                  value={value ? value : ""}
+                />
               )}
               {type === "submit" && (
                 <button

@@ -12,12 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            type="text/javascript"
-            dangerouslySetInnerHTML={{
-              __html: process.env.googleAnalytics as string,
-            }}
-          ></script>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="description" content="KOS Internet" />
@@ -33,7 +27,7 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="overflow-hidden home">
+        <body>
           <Main />
           <NextScript />
         </body>
@@ -43,17 +37,3 @@ class MyDocument extends Document {
 }
 
 export default MyDocument
-
-/*
-          <script src="js/jquery.js"></script>
-          <script src="js/plugins/bootstrap.min.js"></script>
-          <script src="js/plugins/jquery.nivo.slider.js"></script>
-          <script src="js/plugins/slick.min.js"></script>
-          <script src="js/plugins/jquery.magnific-popup.min.js"></script>
-          <script src="js/plugins/jquery.waypoints.min.js"></script>
-          <script src="js/plugins/jquery.countTo.js"></script>
-          <script src="js/plugins/jquery.form.js"></script>
-          <script src="js/plugins/jquery.validate.min.js"></script>
-          <script src="js/custom.js"></script>
-          <script src="/js/accessibilitymenu.js"></script>
-*/

@@ -7,7 +7,7 @@ export default function FormBlock() {
   return (
     <div className="block-class bg-1">
       <div className="grid w-full h-[1000px]">
-        <Image src="/images/block-bg.jpg" alt="ocean" />
+        <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
         <h2 className="text-center decor decor-white">
@@ -17,7 +17,7 @@ export default function FormBlock() {
               src="/images/h-decor-white.png"
               height="4px"
               width="64px"
-              alt="ocean"
+              alt="Decoration"
             />
           </div>
         </h2>
