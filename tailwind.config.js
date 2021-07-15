@@ -87,6 +87,7 @@ module.exports = {
         144: "36rem",
         160: "40rem",
         172: "43rem",
+        180: "45rem",
         192: "48rem",
         200: "50rem",
         228: "57rem",
@@ -108,14 +109,14 @@ module.exports = {
       },
       colors: {
         blue: {
-          ...colors.lightBlue,
+          ...colors.sky,
           // blue colors for PricingPackage & branding throughout
           brand: "#005395", // KOS - main color - used in PricingPackageColumn
           dark: "#00467e", // dark blue used for border of PricingPackageColumn
           light: "#0a6eab", // light blue for bottom of BlueBox gradient
         },
         teal: {
-          ...colors.lightBlue,
+          ...colors.sky,
           // teal colors for PricingPackage
           brand: "#28bceb", // KOS - rarely used - used in PricingPackageColumn
           dark: "#1db3e3", // dark teal used for border of PricingPackageColumn
