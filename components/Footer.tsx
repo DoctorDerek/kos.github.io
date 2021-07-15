@@ -23,13 +23,13 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
-      <div className="grid w-full h-180 md:h-112">
+      <div className="grid w-full h-180 md:h-90">
         <Image
           src="/images/footer-bg.jpg"
           alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
         />
       </div>
-      <div className="w-full h-full flex flex-col justify-center items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-2 space-y-6">
+      <div className="w-full h-full flex flex-col justify-center items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-2 space-y-6 md:space-y-4">
         <div className="grid grid-cols-1 space-y-6 md:grid-cols-3 md:space-y-0">
           <FooterColumn officeAddress={officeAddressLeft} />
           <FooterColumn logo={true} />
