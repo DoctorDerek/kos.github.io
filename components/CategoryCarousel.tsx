@@ -14,7 +14,7 @@ export default function CategoryCarousel() {
               src="/images/h-decor.png"
               height="4px"
               width="64px"
-              alt="ocean"
+              alt="Decoration"
             />
           </div>
         </h2>
@@ -28,7 +28,7 @@ export default function CategoryCarousel() {
             >
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/cable.jpg" alt="ocean" />
+                  <Image src="/assets/images/cable.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span
@@ -62,7 +62,7 @@ export default function CategoryCarousel() {
             <Link href="/res/wireless-broadband/" className="category-item">
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/wireless.jpg" alt="ocean" />
+                  <Image src="/assets/images/wireless.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span
@@ -95,7 +95,7 @@ export default function CategoryCarousel() {
             <Link href="/res/high-speed-dsl/" className="category-item">
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/dsl.jpg" alt="ocean" />
+                  <Image src="/assets/images/dsl.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span
@@ -129,7 +129,7 @@ export default function CategoryCarousel() {
             >
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/voip.jpg" alt="ocean" />
+                  <Image src="/assets/images/voip.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span
@@ -163,7 +163,7 @@ export default function CategoryCarousel() {
             >
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/mail.jpg" alt="ocean" />
+                  <Image src="/assets/images/mail.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span
@@ -198,7 +198,7 @@ export default function CategoryCarousel() {
             >
               <div className="category-image">
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/hosting.jpg" alt="ocean" />
+                  <Image src="/assets/images/hosting.jpg" alt="Decoration" />
                 </div>
                 <h5 className="category-title">
                   <span

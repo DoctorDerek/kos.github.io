@@ -15,7 +15,10 @@ export default function ServicesCarousel({ children }: { children?: any }) {
               <Link href="/residential/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/home/icon-home.png" alt="ocean" />
+                  <Image
+                    src="/assets/images/home/icon-home.png"
+                    alt="Decoration"
+                  />
                 </div>
               </Link>
               <div className="service-title">
@@ -40,7 +43,7 @@ export default function ServicesCarousel({ children }: { children?: any }) {
                 <div className="grid w-48 h-48">
                   <Image
                     src="/assets/images/home/icon-business.png"
-                    alt="ocean"
+                    alt="Decoration"
                   />
                 </div>
               </Link>
@@ -74,7 +77,7 @@ export default function ServicesCarousel({ children }: { children?: any }) {
               <Link href="/residential/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/home/icon-home.png" alt="ocean" />
+                  <Image src="/assets/images/home/icon-home.png" alt="Decoration" />
                 </div>
               </Link>
               <div className="service-title">
@@ -97,7 +100,7 @@ export default function ServicesCarousel({ children }: { children?: any }) {
               <Link href="/business/" className="icon-circle">
                 <div className="icon-hover" />
                 <div className="grid w-48 h-48">
-                  <Image src="/assets/images/home/icon-business.png" alt="ocean" />
+                  <Image src="/assets/images/home/icon-business.png" alt="Decoration" />
                 </div>
               </Link>
               <div className="service-title">

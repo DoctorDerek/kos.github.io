@@ -17,7 +17,7 @@ export default function IconColumnSection({
   return (
     <div className="my-16 text-center text-white">
       <div className="grid w-full h-[600px]">
-        <Image src="/images/block-bg.jpg" alt="ocean" />
+        <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="container absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-490px]">
         {heading && (

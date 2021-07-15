@@ -14,7 +14,7 @@ export default function NewsAndEvents() {
               src="/images/h-decor.png"
               height="4px"
               width="64px"
-              alt="ocean"
+              alt="Decoration"
             />
           </div>
         </h2>
@@ -27,7 +27,7 @@ export default function NewsAndEvents() {
             >
               <div className="news-item-image">
                 <div className="grid w-full h-40">
-                  <Image src="/assets/images/news/logo.png" alt="ocean" />
+                  <Image src="/assets/images/news/logo.png" alt="Decoration" />
                 </div>
               </div>
               <div className="news-item-text">
@@ -60,7 +60,7 @@ export default function NewsAndEvents() {
             >
               <div className="news-item-image">
                 <div className="grid w-full h-40">
-                  <Image src="/assets/images/news/logo.png" alt="ocean" />
+                  <Image src="/assets/images/news/logo.png" alt="Decoration" />
                 </div>
               </div>
               <div className="news-item-text">
@@ -96,7 +96,7 @@ export default function NewsAndEvents() {
                 <div className="grid w-full h-40">
                   <Image
                     src="/assets/images/news/814185689_news-unlimited-packages.jpg"
-                    alt="ocean"
+                    alt="Decoration"
                   />
                 </div>
               </div>

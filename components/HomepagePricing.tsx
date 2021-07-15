@@ -45,7 +45,7 @@ export default function Pricing() {
   return (
     <div className="block-class bg-2">
       <div className="grid w-full h-[615px]">
-        <Image src="/images/block-bg-2.jpg" alt="ocean" />
+        <Image src="/images/block-bg-2.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu right-[15%] translate-y-[-615px]">
         <div className="pricing">
