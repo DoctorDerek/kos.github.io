@@ -25,7 +25,9 @@ export default function IconCard({
   const HeroIconComponent = icon ? HERO_ICONS[icon] : () => null
 
   return (
-    <div className="flex mb-6 group">
+    <div
+      className={classNames("flex group", location === "footer" ? "" : "mb-6")}
+    >
       <div
         className={classNames(
           "grid self-start flex-shrink-0 w-12 h-12 p-1 mx-3",
