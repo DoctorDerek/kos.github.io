@@ -17,7 +17,7 @@ export function BULLET({
   responsive?: boolean
 }) {
   function CustomIcon() {
-    return <>{customIcon}</>
+    return <div className="w-full h-full">{customIcon}</div>
   }
   // current page bullets are blue background, white checkmark
   const currentBulletStyles = isCurrentPage
@@ -45,7 +45,7 @@ export function BULLET({
           aria-hidden={!isCurrentPage ? "true" : "false"}
         />
       ) : (
-        <RightArrow aria-hidden="true" />
+        <RightArrow aria-hidden="true" className="w-full h-full" />
       )}
     </div>
   )

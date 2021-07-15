@@ -97,7 +97,10 @@ export default function Footer() {
         </div>
         <Link href="https://www.facebook.com/Kingston-Online-Services-120301901358202/">
           <div className="grid self-center w-12 h-12 p-2 text-white transition-all duration-300 border-4 border-white border-solid rounded-full fill-current hover:text-blue-brand hover:bg-white">
-            <FacebookIcon aria-label="Facebook page for KOS" />
+            <FacebookIcon
+              aria-label="Facebook page for KOS"
+              className="w-full h-full"
+            />
           </div>
         </Link>
       </div>
