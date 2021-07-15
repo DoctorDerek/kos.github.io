@@ -16,7 +16,7 @@ export default function FooterColumn({
       {logo && (
         <Link
           href="/"
-          className="flex items-center flex-shrink-0 w-full h-full pb-4 mx-auto"
+          className="flex items-center flex-shrink-0 w-full h-full mx-auto"
         >
           <DynamicImage
             src="/images/logo-invert.png"

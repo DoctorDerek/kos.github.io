@@ -23,21 +23,21 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
-      <div className="grid w-full h-160 md:h-96">
+      <div className="grid w-full h-180 md:h-112">
         <Image
           src="/images/footer-bg.jpg"
           alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
         />
       </div>
-      <div className="w-full h-full flex flex-col justify-evenly items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="w-full h-full flex flex-col justify-center items-center absolute transform-gpu left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-2 space-y-6">
+        <div className="grid grid-cols-1 space-y-6 md:grid-cols-3 md:space-y-0">
           <FooterColumn officeAddress={officeAddressLeft} />
           <FooterColumn logo={true} />
           <FooterColumn officeAddress={officeAddressRight} />
         </div>
         <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
           <Link href="#top" className="text-white group-hover:text-blue-brand">
-            <ChevronUpIcon />
+            <ChevronUpIcon aria-label="Back to top of page" />
           </Link>
         </div>
         <div>
@@ -62,43 +62,42 @@ export default function Footer() {
           <Link className="text-white" href="/wst/">
             Personal Web Space TAC
           </Link>
-          <br />
-          <div>
-            <span className="text-white">
-              <strong>Serving Eastern Ontario: </strong>
-            </span>
-            <Link className="text-white" href="/kingston-internet-services/">
-              Kingston
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/gananoque-internet-services/">
-              Gananoque
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/picton-internet-services/">
-              Picton
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/brighton-internet-services/">
-              Brighton
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/trenton-internet-services/">
-              Trenton
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/belleville-internet-services/">
-              Belleville
-            </Link>
-            {" | "}
-            <Link className="text-white" href="/napanee-internet-services/">
-              Napanee
-            </Link>
-          </div>
+        </div>
+        <div className="text-base leading-5 text-white">
+          <span className="text-white">
+            <strong>Serving Eastern Ontario: </strong>
+          </span>
+          <Link className="text-white" href="/kingston-internet-services/">
+            Kingston
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/gananoque-internet-services/">
+            Gananoque
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/picton-internet-services/">
+            Picton
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/brighton-internet-services/">
+            Brighton
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/trenton-internet-services/">
+            Trenton
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/belleville-internet-services/">
+            Belleville
+          </Link>
+          {" | "}
+          <Link className="text-white" href="/napanee-internet-services/">
+            Napanee
+          </Link>
         </div>
         <Link href="https://www.facebook.com/Kingston-Online-Services-120301901358202/">
           <div className="grid self-center w-12 h-12 p-2 text-white transition-all duration-300 border-4 border-white border-solid rounded-full fill-current hover:text-blue-brand hover:bg-white">
-            <FacebookIcon />
+            <FacebookIcon aria-label="Facebook page for KOS" />
           </div>
         </Link>
       </div>
