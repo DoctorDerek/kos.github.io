@@ -64,7 +64,7 @@ export default function IconColumnSection({
     return (
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mt-6 mb-8">
-          <HeroIconComponent />
+          <HeroIconComponent aria-hidden="true" />
         </div>
         <div className="mb-3 text-4xl font-semibold">{heading}</div>
         <div className="text-lg font-semibold leading-5">{subheading}</div>

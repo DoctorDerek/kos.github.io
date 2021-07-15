@@ -36,7 +36,7 @@ export default function IconBadge({
       <div className="relative flex items-center justify-center w-20 h-20 mx-auto bg-blue-800 rounded-full">
         <div className="absolute w-full h-full transition-all duration-300 rounded-full bg-gradient-to-b to-blue-light from-teal-brand group-hover:opacity-0" />
         <div className="absolute w-12 h-12 text-white fill-current">
-          {<HeroIconComponent />}
+          {<HeroIconComponent aria-hidden="true" />}
         </div>
       </div>
       <h5 className={classNames("text-gray-900", uppercase ? "uppercase" : "")}>

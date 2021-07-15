@@ -33,7 +33,7 @@ export default function Header() {
           <div className="flex flex-col group">
             <div className="flex mb-1 text-3xl leading-8 text-gray-700">
               <div className="grid self-center w-12 h-12 p-1 mx-3 transition-all duration-500 border-2 border-current border-solid rounded-full fill-current group-hover:bg-blue-brand group-hover:text-gray-100">
-                <PhoneIcon />
+                <PhoneIcon aria-hidden="true" />
               </div>
               <div className="text-xl font-bold lg:text-xl md:text-base whitespace-nowrap">
                 <table>

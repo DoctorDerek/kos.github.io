@@ -40,7 +40,7 @@ export default function IconCard({
             : ""
         )}
       >
-        <HeroIconComponent />
+        <HeroIconComponent aria-hidden="true" />
       </div>
       <div>
         <div

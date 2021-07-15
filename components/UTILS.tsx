@@ -38,7 +38,7 @@ export function BULLET({
       )}
     >
       {customIcon ? (
-        <CustomIcon />
+        <CustomIcon aria-hidden="true" />
       ) : isCurrentPage ? (
         <CheckIcon
           aria-label={isCurrentPage ? "Current page" : ""}
