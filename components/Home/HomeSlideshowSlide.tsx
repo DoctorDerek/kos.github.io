@@ -31,7 +31,7 @@ const SlideshowSlide = ({
       <div className="grid w-full h-full">
         <Image src={src} alt={alt} preload={preload ? preload : ""} />
       </div>
-      <div className="absolute flex flex-col content-center justify-center w-full h-full text-center opacity-80">
+      <div className="absolute flex flex-col justify-center w-full h-full text-center">
         <div className="text text1">
           <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
             {text1}
