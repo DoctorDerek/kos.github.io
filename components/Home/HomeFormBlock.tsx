@@ -29,7 +29,9 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span>1</span>
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                  1
+                </span>
               </div>
               <div className="text-num-info">
                 <h5 className="text-num-title">Fill out the form</h5>
@@ -42,7 +44,9 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span>2</span>
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                  2
+                </span>
               </div>
               <div className="text-num-info">
                 <h5 className="text-num-title">Receive a prompt response</h5>
@@ -58,7 +62,9 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span>3</span>
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                  3
+                </span>
               </div>
               <div className="text-num-info">
                 <h5 className="text-num-title">Get connected</h5>
@@ -74,7 +80,9 @@ export default function HomeFormBlock() {
               data-animation-delay="0.8s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span>4</span>
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                  4
+                </span>
               </div>
               <div className="text-num-info">
                 <h5 className="text-num-title">Up and running</h5>

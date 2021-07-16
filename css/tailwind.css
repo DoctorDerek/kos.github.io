@@ -703,20 +703,6 @@ h2 + .category-carousel {
   @apply relative mb-4;
 }
 
-.text-num-num {
-  @apply absolute w-16 text-center;
-  top: -15px;
-}
-
-.text-num-num span {
-  @apply relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand;
-  line-height: 74px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-}
-
 .text-num:hover .text-num-num span {
   @apply text-white bg-blue-500;
 }
