@@ -1,6 +1,6 @@
 import NewsEventsLayout from "@/layouts/NewsEventsLayout"
+import getFilesRecursively from "@/lib/files"
 import { getFileBySlug } from "@/lib/mdx"
-import getFilesRecursively from "@/lib/utils/files"
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   // search recursively in @/data/news/events/**

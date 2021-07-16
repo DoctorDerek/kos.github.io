@@ -4,9 +4,9 @@ import { DefaultSeo } from "next-seo"
 import { ThemeProvider } from "next-themes"
 import Head from "next/head"
 
-import LayoutWrapper from "@/components/LayoutWrapper"
-import MDXComponents from "@/components/MDXComponents"
-import { SEO } from "@/components/SEO"
+import LayoutWrapper from "@/components/PageLayout/LayoutWrapper"
+import MDXComponents from "@/components/PageLayout/MDXComponents"
+import SEO from "@/components/Utils/SEO"
 //@ts-expect-error Could not find a declaration file for module '@mdx-js/react'.
 import { MDXProvider } from "@mdx-js/react"
 

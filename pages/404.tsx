@@ -1,4 +1,4 @@
-import Link from "@/components/CustomLink"
+import Link from "@/components/Utils/CustomLink"
 
 export default function FourZeroFour() {
   return (

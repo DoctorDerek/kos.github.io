@@ -1,7 +1,7 @@
 import ImageFixed from "next/image"
 import React from "react"
 
-import Image from "@/components/CustomImage"
+import Image from "@/components/Utils/CustomImage"
 
 export default function HomeFormBlock() {
   return (

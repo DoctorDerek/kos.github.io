@@ -3,8 +3,8 @@ import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
 import { useEffect, useRef, useState } from "react"
 
-import Image from "@/components/CustomImage"
-import Link from "@/components/CustomLink"
+import Image from "@/components/Utils/CustomImage"
+import Link from "@/components/Utils/CustomLink"
 
 export default function HomePricing() {
   const [pause, setPause] = useState(false)

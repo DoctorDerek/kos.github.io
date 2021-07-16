@@ -1,10 +1,10 @@
 import { MDXRemote } from "next-mdx-remote"
 
-import MDXComponents from "@/components/MDXComponents"
-import PageTitle from "@/components/PageTitle"
+import MDXComponents from "@/components/PageLayout/MDXComponents"
+import DraftUnderConstruction from "@/components/Slug/DraftUnderConstruction"
 import PageLayout from "@/layouts/PageLayout"
+import getFilesRecursively from "@/lib/files"
 import { getFileBySlug } from "@/lib/mdx"
-import getFilesRecursively from "@/lib/utils/files"
 
 import type { MDXRemoteSerializeResult } from "next-mdx-remote"
 /**
@@ -53,7 +53,7 @@ export default function PricingPage({
   }
 }) {
   const { mdxSource, frontMatter } = post
-  if (frontMatter.draft) return <UnderConstruction /> // hide draft pages
+  if (frontMatter.draft) return <DraftUnderConstruction /> // hide draft pages
 
   // generate the {children} props for the layout:
   const content = (
@@ -61,17 +61,4 @@ export default function PricingPage({
   )
 
   return <PageLayout {...frontMatter}>{content}</PageLayout>
-
-  function UnderConstruction() {
-    return (
-      <div className="mt-24 text-center">
-        <PageTitle>
-          Under Construction{" "}
-          <span role="img" aria-label="roadwork sign">
-            🚧
-          </span>
-        </PageTitle>
-      </div>
-    )
-  }
 }

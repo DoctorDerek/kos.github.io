@@ -1,6 +1,6 @@
 import ImageFixed from "next/image"
 
-import IconBadge from "@/components/IconBadge"
+import IconBadge from "@/components/Hover/IconBadge"
 
 export default function HomeTextIconCarousel() {
   const iconBadges: IconBadge[] = [
