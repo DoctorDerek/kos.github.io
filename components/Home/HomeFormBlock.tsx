@@ -28,7 +28,7 @@ export default function HomeFormBlock() {
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
-              <div className="text-num-num">
+              <div className="absolute w-16 text-center top-[-15px]">
                 <span>1</span>
               </div>
               <div className="text-num-info">
@@ -41,7 +41,7 @@ export default function HomeFormBlock() {
               data-animation="fadeInRight"
               data-animation-delay="0s"
             >
-              <div className="text-num-num">
+              <div className="absolute w-16 text-center top-[-15px]">
                 <span>2</span>
               </div>
               <div className="text-num-info">
@@ -57,7 +57,7 @@ export default function HomeFormBlock() {
               data-animation="fadeInRight"
               data-animation-delay="0s"
             >
-              <div className="text-num-num">
+              <div className="absolute w-16 text-center top-[-15px]">
                 <span>3</span>
               </div>
               <div className="text-num-info">
@@ -73,7 +73,7 @@ export default function HomeFormBlock() {
               data-animation="fadeInLeft"
               data-animation-delay="0.8s"
             >
-              <div className="text-num-num">
+              <div className="absolute w-16 text-center top-[-15px]">
                 <span>4</span>
               </div>
               <div className="text-num-info">
