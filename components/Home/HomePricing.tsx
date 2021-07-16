@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 
-export default function Pricing() {
+export default function HomePricing() {
   const [pause, setPause] = useState(false)
   const timer = useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({

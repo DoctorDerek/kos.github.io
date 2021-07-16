@@ -1,7 +1,7 @@
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 
-export default function ServicesCarousel({ children }: { children?: any }) {
+export default function HomeServicesCarousel({ children }: { children?: any }) {
   return (
     <div className="pt-20 block-class">
       <div className="container mx-auto">

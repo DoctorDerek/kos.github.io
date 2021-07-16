@@ -3,7 +3,7 @@ import React from "react"
 
 import Image from "@/components/CustomImage"
 
-export default function FormBlock() {
+export default function HomeFormBlock() {
   return (
     <div className="block-class bg-1">
       <div className="grid w-full h-[1000px]">

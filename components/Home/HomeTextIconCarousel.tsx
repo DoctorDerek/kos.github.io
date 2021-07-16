@@ -2,7 +2,7 @@ import ImageFixed from "next/image"
 
 import IconBadge from "@/components/IconBadge"
 
-export default function TextIconCarousel() {
+export default function HomeTextIconCarousel() {
   const iconBadges: IconBadge[] = [
     {
       icon: "user-circle",
