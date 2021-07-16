@@ -6,7 +6,7 @@ import Link from "@/components/Utils/CustomLink"
 export default function HomeCategoryCarousel() {
   return (
     <div className="block-class bottom-sm-margin">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <h2 className="text-center decor flex-growor">
           Internet Packages
           <div className="block mx-auto">

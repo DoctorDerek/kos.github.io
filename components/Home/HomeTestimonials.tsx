@@ -51,7 +51,7 @@ export default function Testimonials() {
 
   return (
     <div className="">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full">
             <div className="testimonials" data-animation="fadeInLeft">
