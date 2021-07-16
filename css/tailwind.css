@@ -306,7 +306,6 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
 
 body {
   font-family: "Open Sans", "Lato", sans-serif;
-  @apply text-lg font-medium leading-5 text-black bg-white;
 }
 
 p {
