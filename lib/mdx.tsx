@@ -2,27 +2,10 @@ import fs from "fs"
 import matter from "gray-matter"
 import { serialize } from "next-mdx-remote/serialize"
 import path from "path"
-import visit from "unist-util-visit"
 
-import MDXComponents from "@/components/MDXComponents"
-import imgToJsx from "@/lib/img-to-jsx"
-import getAllFilesRecursively from "@/lib/utils/files"
+import getAllFilesRecursively from "@/lib/files"
 
 const root = process.cwd()
-
-const tokenClassNames = {
-  tag: "text-code-red",
-  "attr-name": "text-code-yellow",
-  "attr-value": "text-code-green",
-  deleted: "text-code-red",
-  inserted: "text-code-green",
-  punctuation: "text-code-white",
-  keyword: "text-code-purple",
-  string: "text-code-green",
-  function: "text-code-blue",
-  boolean: "text-code-red",
-  comment: "text-gray-400 italic",
-}
 
 export function getFiles(type: string) {
   const prefixPaths = path.join(root, "data", type)
@@ -54,32 +37,10 @@ export async function getFileBySlug(slug: string | string[]) {
 
   const { data, content } = matter(source)
   const mdxSource = await serialize(content, {
-    components: MDXComponents,
     mdxOptions: {
       remarkPlugins: [
         require("remark-slug"),
         require("remark-autolink-headings"),
-        require("remark-code-titles"),
-        require("remark-math"),
-        imgToJsx,
-      ],
-      // @ts-expect-error
-      inlineNotes: true,
-      rehypePlugins: [
-        require("rehype-katex"),
-        require("@mapbox/rehype-prism"),
-        () => {
-          return (tree) => {
-            visit(tree, "element", (node, index, parent) => {
-              // @ts-expect-error
-              let [token, type] = node.properties.className || []
-              if (token === "token") {
-                // @ts-expect-error
-                node.properties.className = [tokenClassNames[type]]
-              }
-            })
-          }
-        },
       ],
     },
   })

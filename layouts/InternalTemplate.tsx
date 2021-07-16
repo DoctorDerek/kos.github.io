@@ -1,8 +1,8 @@
 import ImageFixed from "next/image"
 
-import Image from "@/components/CustomImage"
-import Link from "@/components/CustomLink"
-import { PageSeo } from "@/components/SEO"
+import Image from "@/components/Utils/CustomImage"
+import Link from "@/components/Utils/CustomLink"
+import PageSeo from "@/components/Utils/PageSeo"
 import siteMetadata from "@/data/siteMetadata.json"
 
 export function InternalTemplate({

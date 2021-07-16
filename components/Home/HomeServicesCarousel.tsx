@@ -1,5 +1,5 @@
-import Image from "@/components/CustomImage"
-import Link from "@/components/CustomLink"
+import Image from "@/components/Utils/CustomImage"
+import Link from "@/components/Utils/CustomLink"
 
 export default function HomeServicesCarousel({ children }: { children?: any }) {
   return (
