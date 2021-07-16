@@ -43,7 +43,7 @@ export default function HomePricing() {
   }, [pause, slider])
 
   return (
-    <div className="block-class bg-2">
+    <div className="mb-24 bg-2">
       <div className="grid w-full h-[615px]">
         <Image src="/images/block-bg-2.jpg" alt="Decoration" />
       </div>

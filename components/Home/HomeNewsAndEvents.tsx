@@ -5,7 +5,7 @@ import Link from "@/components/Utils/CustomLink"
 
 export default function HomeNewsAndEvents() {
   return (
-    <div className="block-class bottom-sm-margin">
+    <div className="mb-16">
       <div className="mx-auto">
         <h2 className="text-center decor flex-growor">
           News and Events

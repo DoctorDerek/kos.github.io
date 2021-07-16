@@ -46,8 +46,13 @@ module.exports = {
       screens: { print: { raw: "print" } },
       spacing: {
         "9/16": "56.25%",
+        11: "2.75rem",
         13: "3.25rem",
+        14: "3.5rem",
         15: "3.75rem",
+        17: "4.25rem",
+        18: "4.5rem",
+        19: "4.75rem",
         58: "14.5rem",
         60: "15rem",
         62: "15.5rem",

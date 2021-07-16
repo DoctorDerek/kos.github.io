@@ -5,7 +5,7 @@ import Image from "@/components/Utils/CustomImage"
 
 export default function HomeFormBlock() {
   return (
-    <div className="block-class bg-1">
+    <div className="mb-24 text-white px-18 py-11">
       <div className="grid w-full h-[1000px]">
         <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>

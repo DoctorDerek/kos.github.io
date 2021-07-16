@@ -3,7 +3,7 @@ import Link from "@/components/Utils/CustomLink"
 
 export default function HomeServicesCarousel({ children }: { children?: any }) {
   return (
-    <div className="pt-20 block-class">
+    <div className="pt-20 mb-24">
       <div className="mx-auto">
         <div className="flex flex-wrap justify-between services-carousel">
           <div
@@ -65,7 +65,7 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
 }
 
 /*
-    <div className="block-class">
+    <div className="mb-24">
       <div className="mx-auto">
         <div className="flex flex-wrap justify-between services-carousel">
           <div

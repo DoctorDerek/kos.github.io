@@ -244,44 +244,6 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
   border-radius: 3px;
 }
 
-/*
-block-class
-*/
-
-.block-class {
-  @apply mb-24;
-}
-
-.block-class.bottom-md-margin {
-  @apply mb-20;
-}
-
-.block-class.bottom-sm-margin {
-  @apply mb-16;
-}
-
-.block-class.bg-1 {
-  @apply text-white bg-cover;
-  /*background: url(/images/block-bg.jpg) no-repeat fixed center center;*/
-  padding: 75px 0 44px;
-}
-
-.block-class.bg-1 h2 {
-  @apply text-white;
-}
-
-.block-class.bg-2 {
-  @apply p-0 text-white bg-cover;
-  /*background: url(/images/block-bg-2.jpg) no-repeat fixed center center;*/
-  min-height: 578px;
-}
-
-@media (max-width: 767px) {
-  .block-class {
-    @apply mb-12;
-  }
-}
-
 @media (min-width: 768px) {
   #page-content {
     @apply left-0 !important;
