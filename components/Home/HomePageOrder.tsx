@@ -1,11 +1,11 @@
 import HomeCategoryCarousel from "@/components/Home/HomeCategoryCarousel"
-import HomeFormBlock from "@/components/HomeFormBlock"
-import HomePricing from "@/components/HomePricing"
-import HomeServicesCarousel from "@/components/HomeServicesCarousel"
-import HomeSlideshow from "@/components/HomeSlideshow"
-import HomeTestimonials from "@/components/HomeTestimonials"
-import HomeTextIconCarousel from "@/components/HomeTextIconCarousel"
-import HomeNewsAndEvents from "@/components/NewsAndEvents"
+import HomeFormBlock from "@/components/Home/HomeFormBlock"
+import HomeNewsAndEvents from "@/components/Home/HomeNewsAndEvents"
+import HomePricing from "@/components/Home/HomePricing"
+import HomeServicesCarousel from "@/components/Home/HomeServicesCarousel"
+import HomeSlideshow from "@/components/Home/HomeSlideshow"
+import HomeTestimonials from "@/components/Home/HomeTestimonials"
+import HomeTextIconCarousel from "@/components/Home/HomeTextIconCarousel"
 
 export default function HomePageOrder() {
   return (

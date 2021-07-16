@@ -3,7 +3,7 @@ import ImageFixed from "next/image"
 import Image from "@/components/CustomImage"
 import Link from "@/components/CustomLink"
 
-export default function NewsAndEvents() {
+export default function HomeNewsAndEvents() {
   return (
     <div className="block-class bottom-sm-margin">
       <div className="container mx-auto">
