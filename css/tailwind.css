@@ -244,15 +244,6 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
   border-radius: 3px;
 }
 
-@media (min-width: 768px) {
-  #page-content {
-    @apply left-0 !important;
-  }
-  .navbar-header {
-    @apply left-0 !important;
-  }
-}
-
 .keen-slider .text {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
