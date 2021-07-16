@@ -116,7 +116,7 @@ Personal Information includes, without limitation, an individual’s:
 
 By mail at:
 
-&ensp;&ensp;&ensp;&ensp;&ensp;Privacy Officer
+&ensp;&ensp;&ensp;&ensp;&ensp;Privacy Officer - Rob Pritchard
 
 &ensp;&ensp;&ensp;&ensp;&ensp;THE LASALLE MEWS
 
@@ -124,9 +124,9 @@ By mail at:
 
 &ensp;&ensp;&ensp;&ensp;&ensp;Kingston, ON K7K 5W7
 
-By email at: \*
+By email at: <Link href="mailto:rpritchard@kos.net">rpritchard@kos.net</Link>
 
-By phone at: \*
+By phone at: 613-549-8667 x 229
 
 1.2 KOS is responsible for Personal Information in its possession or control, including information that has been transferred to a third party for processing. KOS shall use means to provide an appropriate level of protection while information is being processed by a third party (see Principle 7).
 
