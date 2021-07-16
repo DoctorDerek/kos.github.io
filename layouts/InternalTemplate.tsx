@@ -45,7 +45,7 @@ export function InternalTemplate({
         {/* alt="" acceptable for purely decorative elements */}
       </div>
       <div className="max-w-xl px-4 py-8 mx-auto md:px-0 xl:py-16 lg:py-14 md:py-12 sm:py-10">
-        <h1 className="text-left color decor">{title}</h1>
+        <h1 className="text-left text-blue-brand decor">{title}</h1>
         <div className="pb-4 text-center">
           <ImageFixed
             src="/images/h-decor.png"

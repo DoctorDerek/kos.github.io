@@ -55,7 +55,7 @@ export default function Testimonials() {
         <div className="flex flex-wrap">
           <div className="w-full">
             <div className="testimonials" data-animation="fadeInLeft">
-              <h3 className="text-center color decor">
+              <h3 className="text-center text-blue-brand decor">
                 What our customers are saying
                 <div className="block mx-auto">
                   <ImageFixed

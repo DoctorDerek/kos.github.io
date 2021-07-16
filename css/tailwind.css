@@ -312,10 +312,6 @@ p {
   @apply mb-5 text-lg leading-5;
 }
 
-.color {
-  @apply text-blue-brand;
-}
-
 h1,
 h2 {
   @apply text-5xl font-semibold text-gray-700;

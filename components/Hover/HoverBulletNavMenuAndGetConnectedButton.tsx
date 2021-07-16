@@ -16,7 +16,7 @@ export default function HoverBulletNavMenuAndGetConnectedButton({
       <DIVIDER />
       {hoverBulletNavMenu && (
         <>
-          <div className="pb-4 text-2xl font-semibold tracking-tight color">
+          <div className="pb-4 text-2xl font-semibold tracking-tight text-blue-brand">
             Please{" "}
             <Link href="/contact" className="text-black">
               contact our office
