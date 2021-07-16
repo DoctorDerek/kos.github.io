@@ -26,7 +26,7 @@ const SlideshowSlide = ({
   return (
     <div
       className="grid grid-cols-1 transform-gpu keen-slider__slide"
-      style={{ minWidth: 0, maxWidth: 0 }}
+      style={{ minWidth: 0, maxWidth: 0 /* needed to eliminate CLS */ }}
     >
       <div className="grid w-full h-full">
         <Image src={src} alt={alt} preload={preload ? preload : ""} />
