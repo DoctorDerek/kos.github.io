@@ -1,7 +1,5 @@
-import ImageFixed from "next/image"
-import React from "react"
-
 import Image from "@/components/Utils/CustomImage"
+import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 
 export default function HomeFormBlock() {
   return (
@@ -12,14 +10,7 @@ export default function HomeFormBlock() {
       <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
         <h2 className="text-center decor decor-white">
           Let's Get Started
-          <div className="block mx-auto">
-            <ImageFixed
-              src="/images/h-decor-white.png"
-              height="4px"
-              width="64px"
-              alt="Decoration"
-            />
-          </div>
+          <DIVIDER color="white" />
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap">
           <div className="pl-4 pr-4 sm:w-1/2">

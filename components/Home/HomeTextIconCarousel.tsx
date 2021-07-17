@@ -1,6 +1,5 @@
-import ImageFixed from "next/image"
-
 import IconBadge from "@/components/Hover/IconBadge"
+import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 
 export default function HomeTextIconCarousel() {
   const iconBadges: IconBadge[] = [
@@ -40,14 +39,7 @@ export default function HomeTextIconCarousel() {
       {" "}
       <h2 className="text-center decor">
         Why choose us?
-        <div className="block mx-auto">
-          <ImageFixed
-            src="/images/h-decor.png"
-            height="4px"
-            width="64px"
-            alt="Decoration"
-          />
-        </div>
+        <DIVIDER />
       </h2>
       <div className="flex flex-wrap">
         {iconBadges.map((badge) => (

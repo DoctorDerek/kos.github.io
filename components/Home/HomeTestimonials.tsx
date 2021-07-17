@@ -1,9 +1,9 @@
 import "keen-slider/keen-slider.min.css"
 
 import { useKeenSlider } from "keen-slider/react"
-import ImageFixed from "next/image"
 import { useEffect, useRef, useState } from "react"
 
+import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import FormatQuoteRoundedIcon from "@/data/material-icons/format_quote_black_48dp.svg"
 
 export default function Testimonials() {
@@ -57,14 +57,7 @@ export default function Testimonials() {
             <div className="testimonials" data-animation="fadeInLeft">
               <h3 className="text-center text-blue-brand decor">
                 What our customers are saying
-                <div className="block mx-auto">
-                  <ImageFixed
-                    src="/images/h-decor.png"
-                    height="4px"
-                    width="64px"
-                    alt="Decoration"
-                  />
-                </div>
+                <DIVIDER />
               </h3>
               <div className="testimonials-carousel">
                 <div

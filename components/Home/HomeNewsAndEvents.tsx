@@ -1,7 +1,6 @@
-import ImageFixed from "next/image"
-
 import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
+import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 
 export default function HomeNewsAndEvents() {
   return (
@@ -9,14 +8,7 @@ export default function HomeNewsAndEvents() {
       <div className="mx-auto">
         <h2 className="text-center decor flex-growor">
           News and Events
-          <div className="block mx-auto">
-            <ImageFixed
-              src="/images/h-decor.png"
-              height="4px"
-              width="64px"
-              alt="Decoration"
-            />
-          </div>
+          <DIVIDER />
         </h2>
         <div className="flex flex-wrap news-item-row">
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">

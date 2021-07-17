@@ -1,7 +1,7 @@
-import ImageFixed from "next/image"
 import { Fragment } from "react"
 
 import Image from "@/components/Utils/CustomImage"
+import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function IconColumnSection({
@@ -23,15 +23,7 @@ export default function IconColumnSection({
         {heading && (
           <div className="text-5xl font-semibold">
             {heading}
-            <div className="block mx-auto">
-              <ImageFixed
-                src="/images/h-decor-white.png"
-                height="4px"
-                width="64px"
-                alt="Decoration"
-              />
-              {/* alt="" acceptable for purely decorative items */}
-            </div>
+            <DIVIDER color="white" />{" "}
           </div>
         )}
         {iconColumns && (
