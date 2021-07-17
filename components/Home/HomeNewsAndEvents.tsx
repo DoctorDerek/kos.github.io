@@ -1,8 +1,10 @@
 import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
 import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function HomeNewsAndEvents() {
+  const ChevronRightIconComponent = HERO_ICONS["chevron-right"]
   return (
     <div className="mb-16">
       <div className="mx-auto">
@@ -10,7 +12,7 @@ export default function HomeNewsAndEvents() {
           News and Events
           <DIVIDER />
         </h2>
-        <div className="flex flex-wrap news-item-row">
+        <div className="flex justify-evenly">
           <HomeNewsAndEventsItem />
           <HomeNewsAndEventsItem />
           <HomeNewsAndEventsItem />
@@ -21,37 +23,21 @@ export default function HomeNewsAndEvents() {
 
   function HomeNewsAndEventsItem() {
     return (
-      <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
-        <div
-          className="news-item"
-          data-animation="fadeInLeft"
-          data-animation-delay="0s"
-        >
-          <div className="news-item-image">
-            <div className="grid w-full h-40">
-              <Image src="/assets/images/news/logo.png" alt="Decoration" />
-            </div>
-          </div>
-          <div className="news-item-text">
-            <h5 className="news-item-title">
-              Fibre cut causing major outage **RESOLVED**
-            </h5>
-            <p>
-              Today's outage was resolved at 6:15pm. All towers are back online
-              and are fully functional.
-              <Link
-                href="/news/events/#57"
-                className="underline text-blue-brand"
-              >
-                more...
-              </Link>
-            </p>
-            <span className="news-item-more-link">
-              <Link href="/news/events/#57">
-                <span className="flex-wrap icon icon-right-arrow" />
-              </Link>
-            </span>
-          </div>
+      <div className="flex flex-col p-4 mx-4 shadow-outer group rounded-2xl">
+        <h5 className="mb-2 text-blue-brand">
+          Fibre cut causing major outage **RESOLVED**
+        </h5>
+        <p className="pr-4 mb-3">
+          Today's outage was resolved at 6:15pm. All towers are back online and
+          are fully functional.
+          <Link href="/news/events/#57" className="">
+            more...
+          </Link>
+        </p>
+        <div className="absolute w-8 h-8 transition-all duration-500 border-2 border-solid rounded-full fill-curren right-4 bottom-4 group-hover:text-white group-hover:bg-blue-brand group-hover:border-blue-brand border-blue-brand text-blue-brand">
+          <Link href="/news/events/#57">
+            <ChevronRightIconComponent />
+          </Link>
         </div>
       </div>
     )
