@@ -6,7 +6,7 @@ export default function HomeCategoryCarousel() {
   return (
     <div className="mb-16">
       <div className="mx-auto">
-        <h2 className="text-center decor flex-growor">
+        <h2 className="text-center">
           Internet Packages
           <DIVIDER />
         </h2>

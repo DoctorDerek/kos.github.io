@@ -6,7 +6,7 @@ export default function HomeNewsAndEvents() {
   return (
     <div className="mb-16">
       <div className="mx-auto">
-        <h2 className="text-center decor flex-growor">
+        <h2 className="text-center">
           News and Events
           <DIVIDER />
         </h2>
