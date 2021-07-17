@@ -11,13 +11,19 @@ export default function HomePageOrder() {
   return (
     <>
       <HomeSlideshow />
-      <HomeServicesCarousel />
-      <HomeCategoryCarousel />
+      <div className="mx-auto max-w-7xl">
+        <HomeServicesCarousel />
+        <HomeCategoryCarousel />
+      </div>
       <HomePricing />
-      <HomeTextIconCarousel />
+      <div className="mx-auto max-w-7xl">
+        <HomeTextIconCarousel />
+      </div>
       <HomeFormBlock />
-      <HomeNewsAndEvents />
-      <HomeTestimonials />
+      <div className="mx-auto max-w-7xl">
+        <HomeNewsAndEvents />
+        <HomeTestimonials />
+      </div>
     </>
   )
 }
