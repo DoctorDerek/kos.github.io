@@ -1,4 +1,3 @@
-import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
 import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import HERO_ICONS from "@/lib/HERO_ICONS"
