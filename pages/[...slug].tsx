@@ -6,7 +6,6 @@ import PageLayout from "@/layouts/PageLayout"
 import getFilesRecursively from "@/lib/files"
 import { getFileBySlug } from "@/lib/mdx"
 
-import type { MDXRemoteSerializeResult } from "next-mdx-remote"
 /**
  * [...slug] is a catch-all dynamic route in Next.js that globs all possible
  * paths. The params object needs the query parameter slug as a string[] array.
@@ -44,14 +43,7 @@ export async function getStaticProps({
   return { props: { post } }
 }
 
-export default function PricingPage({
-  post,
-}: {
-  post: {
-    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
-    frontMatter: PageFrontMatter
-  }
-}) {
+export default function PricingPage({ post }: { post: Post }) {
   const { mdxSource, frontMatter } = post
   if (frontMatter.draft) return <DraftUnderConstruction /> // hide draft pages
 

@@ -188,7 +188,7 @@ type ContactFieldType =
   | "textarea"
 
 /**
- * The Post type is used in [...slug], events.tsx, and <NewsEventLayout>
+ * The Post type is used in [...slug], @/pages/news/events, and @/pages/index
  */
 type Post = {
   mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>
