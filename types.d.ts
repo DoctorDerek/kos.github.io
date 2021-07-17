@@ -214,6 +214,7 @@ type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
  */
 type HeroIcon =
   | "check"
+  | "chevron-right"
   | "chevron-up"
   | "clock"
   | "cog"

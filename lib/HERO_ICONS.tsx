@@ -1,5 +1,6 @@
 import {
   CheckIcon,
+  ChevronRightIcon,
   ChevronUpIcon,
   ClockIcon,
   CogIcon,
@@ -18,6 +19,7 @@ const HERO_ICONS: {
 } = {
   // Format: "kebab-case": CamelCaseIcon
   check: CheckIcon,
+  "chevron-right": ChevronRightIcon,
   "chevron-up": ChevronUpIcon,
   clock: ClockIcon,
   cog: CogIcon,
