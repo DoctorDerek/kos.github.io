@@ -31,25 +31,21 @@ const SlideshowSlide = ({
       <div className="grid w-full h-full">
         <Image src={src} alt={alt} preload={preload ? preload : ""} />
       </div>
-      <div className="absolute flex flex-col justify-center w-full h-full text-center">
-        <div className="text text1">
+      <div className="absolute flex flex-col justify-center w-full h-full space-y-8 text-center">
+        <div className="text-7xl">
           <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
             {text1}
           </span>
         </div>
-        <div className="text text2">
+        <div className="text-3xl">
           <strong>
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
               {text2}
             </span>
           </strong>
         </div>
-        <div className="text text3">
-          <Link
-            href={href}
-            className="text-white active:focus:hover:outline-none active:focus:hover:shadow-none py-4 px-6 leading-normal h-[51px] rounded-xl align-top font-bold border-none uppercase no-underline btn btn-orange focus:a
-            ctive:bg-blue-brand bg-[#b0243d] shadow-xl"
-          >
+        <div className="pt-6">
+          <Link href={href} className="btn btn-orange">
             {text3}
           </Link>
         </div>

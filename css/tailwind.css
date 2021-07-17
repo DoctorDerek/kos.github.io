@@ -244,64 +244,8 @@ https://uxdesign.cc/create-better-accessible-focus-effects-75a3de27b8ba
   border-radius: 3px;
 }
 
-.keen-slider .text {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-  -moz-animation-fill-mode: backwards;
-  -ms-animation-fill-mode: backwards;
-  -o-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-iteration-count: none;
-  animation-iteration-count: none;
-}
-
-.keen-slider .text1 {
+.keen-slider {
   font-family: "Lato", "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 80px;
-  margin-bottom: 0.6em;
-  line-height: 1em;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-@media (max-width: 1199px) {
-  .keen-slider .text1 {
-    font-size: calc(3.8vw + 10px);
-  }
-}
-
-.keen-slider .text2 {
-  @apply text-3xl font-light;
-  font-family: "Lato", "Open Sans", sans-serif;
-  margin-bottom: 1.7em;
-  line-height: 1em;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@media (max-width: 1199px) {
-  .keen-slider .text2 {
-    font-size: calc(0.65vw + 15px);
-  }
-}
-
-@media (max-width: 767px) {
-  .keen-slider .text2 {
-    margin-bottom: 1em;
-  }
-}
-
-.keen-slider .text3 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
 }
 
 body {
