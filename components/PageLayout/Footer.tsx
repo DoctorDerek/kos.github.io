@@ -22,7 +22,7 @@ export default function Footer() {
   const ChevronUpIcon = HERO_ICONS["chevron-up"]
 
   return (
-    <footer className="relative w-full h-full text-center border-blue-brand border-solid border-b-[6px] print:hidden">
+    <footer className="relative w-full h-full text-center print:hidden">
       <div className="grid w-full h-180 md:h-90">
         <Image
           src="/images/footer-bg.jpg"
