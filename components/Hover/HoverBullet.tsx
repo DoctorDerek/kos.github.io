@@ -16,23 +16,10 @@ export default function HoverBullet({
   isCurrentPage?: boolean
   customIcon?: JSX.Element | null
   responsive?: boolean
-}): JSX.Element {
+}) {
   const [hover, setHover] = useState(false)
   return (
-    <li
-      className={classNames(
-        "flex items-center transition duration-300 transform hover:translate-x-3",
-        responsive ? "md:hover:translate-x-4 xl:hover:translate-x-5" : ""
-      )}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <BULLET
-        hover={hover}
-        isCurrentPage={isCurrentPage}
-        customIcon={customIcon}
-        responsive={responsive}
-      />
+    <>
       {href ? (
         <Link
           href={href as string}
@@ -41,13 +28,33 @@ export default function HoverBullet({
             isCurrentPage || hover ? "text-blue-light" : "text-black"
           )}
         >
-          {text}
+          <InnerJSX />
         </Link>
       ) : (
-        // wrap any footnotes found in {text} in a <sup> superscript tag
-        // these footnotes are used in modalBullets <PricingPackageModal/>
-        formatFootnotesAsSuperscriptIfPresent(text)
+        <InnerJSX />
       )}
-    </li>
+    </>
   )
+  function InnerJSX() {
+    return (
+      <li
+        className={classNames(
+          "flex items-center transition duration-300 transform hover:translate-x-3",
+          responsive ? "md:hover:translate-x-4 xl:hover:translate-x-5" : ""
+        )}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <BULLET
+          hover={hover}
+          isCurrentPage={isCurrentPage}
+          customIcon={customIcon}
+          responsive={responsive}
+        />
+        {/* wrap any footnotes found in {text} in a <sup> superscript tag */}
+        {/* these footnotes are used in modalBullets <PricingPackageModal/> */}
+        {formatFootnotesAsSuperscriptIfPresent(text)}
+      </li>
+    )
+  }
 }
