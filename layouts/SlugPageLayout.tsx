@@ -11,7 +11,7 @@ import Image from "@/components/Utils/CustomImage"
 import PageSeo from "@/components/Utils/PageSeo"
 import siteMetadata from "@/data/siteMetadata.json"
 
-export default function PageLayout({
+export default function SlugPageLayout({
   slug,
   title,
   headings,
