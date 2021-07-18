@@ -229,5 +229,12 @@ module.exports = {
   },*/
   /* Tailwind has a new engine called jit (just-in-time) compiler changes;
      see: https://youtu.be/3O_3X7InOw8?t=333 (Adam Wathan video) */
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"), // A plugin that provides a basic reset for
+    // form styles that makes form elements easy to override with utilities.
+    require("@tailwindcss/typography"), // A plugin that provides a set of
+    // prose classes you can use to add beautiful typographic defaults to HTML.
+    require("@tailwindcss/line-clamp"), // A plugin that provides utilities for
+    // visually truncating text after a fixed number of lines.
+  ],
 }
