@@ -18,13 +18,13 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     .filter((slug: string) => !slug.includes("index")) // remove index.md
     .reverse()
 
+  const indexPost = await getFileBySlug(["news", "events", "index"])
+
   const posts = await Promise.all(
     slugs.map(async (slug) => await getFileBySlug(["news", "events", slug]))
   )
 
-  const indexPost = await getFileBySlug(["news", "events", "index"])
-
-  return { props: { posts, indexPost } }
+  return { props: { indexPost, posts } }
 }
 
 export default function NewsEvents({
@@ -34,11 +34,13 @@ export default function NewsEvents({
   indexPost: Post
   posts: Post[]
 }) {
-  const { mdxSource, frontMatter } = indexPost
-  const indexFrontMatter = frontMatter
+  const indexFrontMatter = indexPost.frontMatter
   // generate the {children} props for the index layout:
   indexFrontMatter.children = (
-    <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
+    <MDXRemote
+      {...indexPost.mdxSource}
+      components={{ components: MDXComponents }}
+    />
   )
 
   const postsFrontMatter = posts.map(({ mdxSource, frontMatter }: Post) => {
