@@ -98,7 +98,7 @@ export default function ContactForm({
     <form
       onSubmit={handleSubmit}
       id="get-in-touch"
-      className="grid grid-cols-2 gap-3 text-gray-900 auto-rows-min dark:text-gray-100"
+      className="grid grid-cols-2 gap-3 text-black auto-rows-min dark:text-gray-100"
     >
       {contactFormState.map(
         ({

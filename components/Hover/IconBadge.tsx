@@ -39,7 +39,7 @@ export default function IconBadge({
           {<HeroIconComponent aria-hidden="true" />}
         </div>
       </div>
-      <h5 className={classNames("text-gray-900", uppercase ? "uppercase" : "")}>
+      <h5 className={classNames("text-black", uppercase ? "uppercase" : "")}>
         {label.map((line) => (
           <div key={line}>{line}</div>
         ))}
