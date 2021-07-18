@@ -13,52 +13,46 @@ export default function HomeFormBlock() {
           <DIVIDER color="white" />
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap">
-          <div className="pl-4 pr-4 sm:w-1/2">
-            <div
-              className="text-num"
-              data-animation="fadeInLeft"
-              data-animation-delay="0s"
-            >
+          <div className="pl-4 pr-4 space-x-4 sm:w-1/2">
+            <div data-animation="fadeInLeft" data-animation-delay="0s">
               <div className="absolute w-16 text-center top-[-15px]">
                 <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   1
                 </span>
               </div>
-              <div className="text-num-info">
-                <h5 className="text-num-title">Fill out the form</h5>
+              <div className="p-0 md:pb-24">
+                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                  Fill out the form
+                </h5>
                 <p>Tell us who you are and how we can reach you.</p>
               </div>
             </div>
-            <div
-              className="text-num"
-              data-animation="fadeInRight"
-              data-animation-delay="0s"
-            >
+            <div data-animation="fadeInRight" data-animation-delay="0s">
               <div className="absolute w-16 text-center top-[-15px]">
                 <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   2
                 </span>
               </div>
-              <div className="text-num-info">
-                <h5 className="text-num-title">Receive a prompt response</h5>
+              <div className="p-0 md:pb-24">
+                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                  Receive a prompt response
+                </h5>
                 <p>
                   A KOS sales specialist WILL REACH OUT TO YOU SHORTLY to get
                   you signed up and book your service appointment.
                 </p>
               </div>
             </div>
-            <div
-              className="text-num"
-              data-animation="fadeInRight"
-              data-animation-delay="0s"
-            >
+            <div data-animation="fadeInRight" data-animation-delay="0s">
               <div className="absolute w-16 text-center top-[-15px]">
                 <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   3
                 </span>
               </div>
-              <div className="text-num-info">
-                <h5 className="text-num-title">Get connected</h5>
+              <div className="p-0 md:pb-24">
+                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                  Get connected
+                </h5>
                 <p>
                   One of our professional technicians will perform an on-site,
                   quick and easy installation to get you set up.
@@ -75,13 +69,15 @@ export default function HomeFormBlock() {
                   4
                 </span>
               </div>
-              <div className="text-num-info">
-                <h5 className="text-num-title">Up and running</h5>
+              <div className="p-0 md:pb-24">
+                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                  Up and running
+                </h5>
                 <p>Start enjoying your customized internet package.</p>
               </div>
             </div>
           </div>
-          <div className="pl-4 pr-4 sm:w-1/2">
+          <div className="pl-4 pr-4 space-x-4 sm:w-1/2">
             <p>
               You have choices when it comes to internet. Switching to KOS is
               quick and easy to do. Fill in the form below and get connected

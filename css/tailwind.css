@@ -321,43 +321,6 @@ h6 {
   top: 20%;
 }
 
-.text-num {
-  @apply relative mb-4;
-}
-
-.text-num:hover .text-num-num span {
-  @apply text-white bg-blue-500;
-}
-
-.text-num-info {
-  padding: 0 0 0 100px;
-}
-
-.text-num-title {
-  @apply p-0 font-bold leading-7 text-white uppercase;
-  margin: 20px 0 15px;
-}
-
-.text-num.last {
-  @apply mb-0;
-}
-
-@media (max-width: 767px) {
-  .text-num {
-    @apply text-center;
-  }
-  .text-num-num {
-    @apply relative top-0 w-16 ml-auto mr-auto text-center;
-  }
-  .text-num-info {
-    @apply p-0;
-  }
-  .text-num-title {
-    @apply text-xl leading-6;
-    margin: 15px 0 15px;
-  }
-}
-
 .testimonials-item {
   @apply text-center;
   margin: 12px 0 20px;
