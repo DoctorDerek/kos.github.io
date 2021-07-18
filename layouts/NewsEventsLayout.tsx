@@ -76,7 +76,7 @@ export default function NewsEventsLayout({
                 </Fragment>
               ))}
             </div>
-            <div className="flex justify-center py-6">
+            <div className="flex justify-center">
               <BUTTON href="/order/" text="Get connected" />
             </div>
           </div>
