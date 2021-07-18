@@ -103,31 +103,31 @@ export default function HomeFormBlock() {
                 </p>
               </div>
               <input
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="name"
                 placeholder="Name:"
               />
               <input
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="phone"
                 placeholder="Phone:"
               />
               <input
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="email"
                 placeholder="Email:"
               />
               <input
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="city"
                 placeholder="City:"
               />
               <input
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="postal"
                 placeholder="Postal Code:"
@@ -241,7 +241,10 @@ export default function HomeFormBlock() {
               </div>
               <div>
                 <b>How did you hear about us:</b>
-                <select className="input-custom input-full" name="how">
+                <select
+                  className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                  name="how"
+                >
                   <option value="">Please select one...</option>
                   <option value="Current KOS user">Current KOS user</option>
                   <option value="Family or Friend">Family or Friend</option>
@@ -254,7 +257,7 @@ export default function HomeFormBlock() {
                 </select>
               </div>
               <textarea
-                className="input-custom input-full"
+                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 id="message"
                 name="message"
                 placeholder="Message:"

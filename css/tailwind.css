@@ -319,29 +319,6 @@ h5 {
 h6 {
   @apply p-0 m-0 text-lg font-bold leading-6 text-gray-900;
 }
-.input-custom {
-  @apply mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding: 13px 15px 13px;
-  min-height: 46px;
-  background: #fff;
-  border: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
-
-.input-custom:hover,
-.input-custom:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: none;
-}
-
-.input-custom.input-full {
-  @apply w-full;
-}
 
 .service-item {
   @apply relative mb-5 text-center;
