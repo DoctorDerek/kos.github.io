@@ -46,12 +46,11 @@ export default function NavDropdownMenu() {
             onClick={() => onToggleNav()}
             className="flex mx-auto my-4 text-2xl sm:hidden"
           >
-            <div className="w-8 h-8 rounded">
+            <div className="w-8 h-8 text-black rounded fill-current">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
-                fill="currentColor"
-                className="text-gray-900 dark:text-gray-100"
+                aria-hidden="true"
               >
                 {/* menu icon when closed and X icon when open*/}
                 {navIsOpen ? (
@@ -75,7 +74,7 @@ export default function NavDropdownMenu() {
           <div
             className={classNames(
               navIsOpen ? "flex" : "hidden sm:flex",
-              "justify-between sm:max-w-lg flex-wrap px-4 py-6 mx-auto lg:max-w-full w-full sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              "justify-between sm:max-w-lg flex-wrap px-4 py-6 mx-auto lg:max-w-full w-full sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
             {NAVIGATION_MENU.map(
