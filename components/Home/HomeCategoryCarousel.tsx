@@ -10,7 +10,7 @@ export default function HomeCategoryCarousel() {
           Internet Packages
           <DIVIDER />
         </h2>
-        <div className="flex flex-wrap category-carousel">
+        <div className="flex flex-wrap category-carousel font-lato">
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <Link
               href="/res/high-speed-cable/"
