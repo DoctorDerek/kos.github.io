@@ -29,7 +29,7 @@ export default function Footer() {
           alt="Decoration for Kingston Online Services serving Kingston and Belleville, ON"
         />
       </div>
-      <div className="absolute bottom-0 right-0 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
+      <div className="absolute bottom-0 right-0 z-10 w-12 h-12 mb-6 mr-6 transition-all duration-300 border-2 border-white rounded-full fill-current group hover:bg-white">
         <Link href="#top" className="text-white group-hover:text-blue-brand">
           <ChevronUpIcon aria-label="Back to top of page" />
         </Link>
