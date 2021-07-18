@@ -1,5 +1,4 @@
-import Link from "@/components/Utils/CustomLink"
-import { classNames } from "@/lib/utils"
+import BUTTON from "@/components/Utils/DECOR/BUTTON"
 
 export default function OrderNowButton({
   color = "red",
@@ -9,21 +8,17 @@ export default function OrderNowButton({
   selectedPlanForOrderNow?: string // created in <PricingPackageColumn>
 }) {
   return (
-    <div className="flex-shrink-0 py-4 text-center">
-      <Link
+    <div className="mx-auto">
+      <BUTTON
         href={[
           "/order/",
           selectedPlanForOrderNow
             ? `?selectedPlan=${selectedPlanForOrderNow}`
             : "",
         ].join("")}
-        className={classNames(
-          color === "red" ? "btn-orange" : "",
-          "transition duration-500 btn"
-        )}
-      >
-        Order Now
-      </Link>
+        text="Order Now"
+        color={color}
+      />
     </div>
   )
 }
