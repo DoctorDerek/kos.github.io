@@ -153,6 +153,8 @@ module.exports = {
           // red color for highlighting titles & branding throughout
           brand: "#A80532", // KOS - secondary color
           light: "#C70000", // bright red - footer phone numbers over blue bg
+          "button-light": "#b0243d", // lighter color for red "Order Now" button
+          "button-dark": "#740018", // darker color for red "Order Now" button
         },
         code: {
           green: "#b5f4a5",

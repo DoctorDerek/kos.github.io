@@ -2,11 +2,13 @@ import Link from "@/components/Utils/CustomLink"
 
 export default function BUTTON({ href, text }: { href: string; text: string }) {
   return (
-    <Link
-      href={href}
-      className="inline-block px-4 py-2 text-base font-normal leading-normal text-center no-underline whitespace-no-wrap align-middle border rounded select-none btn btn-orange"
-    >
-      {text}
-    </Link>
+    <div className="flex items-center">
+      <Link
+        href={href}
+        className="relative px-4 py-3 font-bold text-center text-white no-underline uppercase shadow-md select-none font-lato rounded-xl bg-red-button-dark bg-gradient-to-t from-red-button-light to-red-button-dark hover:bg-gradient-to-b"
+      >
+        {text}
+      </Link>
+    </div>
   )
 }
