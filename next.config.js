@@ -20,6 +20,87 @@ module.exports = withBundleAnalyzer({
         destination: "/home-internet-in-kingston-ontario/residential-services",
         permanent: true,
       },
+      {
+        source: "/res/high-speed-cable",
+        destination: "/home-internet-in-kingston-ontario/high-speed-cable",
+        permanent: true,
+      },
+      {
+        source: "/res/wireless",
+        destination: "/home-internet-in-kingston-ontario/wireless-broadband",
+        permanent: true,
+      },
+      {
+        source: "/res/high-speed-dsl",
+        destination: "/home-internet-in-kingston-ontario/high-speed-dsl",
+        permanent: true,
+      },
+      {
+        source: "/res/voip",
+        destination: "/home-internet-in-kingston-ontario/voip",
+        permanent: true,
+      },
+      {
+        source: "/res/mail",
+        destination: "/home-internet-in-kingston-ontario/mail",
+        permanent: true,
+      },
+      {
+        source: "/res/dial-up",
+        destination: "/home-internet-in-kingston-ontario/dial-up",
+        permanent: true,
+      },
+      {
+        source: "/bus",
+        destination: "/business-internet-in-kingston-ontario/business-services",
+        permanent: true,
+      },
+      {
+        source: "/business",
+        destination: "/business-internet-in-kingston-ontario/business-services",
+        permanent: true,
+      },
+      {
+        source: "/business-internet-in-kingston-ontario",
+        destination: "/business-internet-in-kingston-ontario/business-services",
+        permanent: true,
+      },
+      {
+        source: "/bus/high-speed-cable",
+        destination: "/business-internet-in-kingston-ontario/high-speed-cable",
+        permanent: true,
+      },
+      {
+        source: "/bus/wireless",
+        destination:
+          "/business-internet-in-kingston-ontario/wireless-broadband",
+        permanent: true,
+      },
+      {
+        source: "/bus/high-speed-dsl",
+        destination: "/business-internet-in-kingston-ontario/high-speed-dsl",
+        permanent: true,
+      },
+      {
+        source: "/bus/voip",
+        destination: "/business-internet-in-kingston-ontario/voip",
+        permanent: true,
+      },
+      {
+        source: "/bus/mail",
+        destination: "/business-internet-in-kingston-ontario/mail",
+        permanent: true,
+      },
+      {
+        source: "/bus/colocate-server",
+        destination: "/business-internet-in-kingston-ontario/colocate-server",
+        permanent: true,
+      },
+      {
+        source: "/res/dial-up",
+        destination: "/business-internet-in-kingston-ontario/dial-up",
+        permanent: true,
+      },
     ]
   },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
