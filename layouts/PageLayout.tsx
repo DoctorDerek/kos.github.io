@@ -1,5 +1,3 @@
-import React from "react"
-
 import HoverBulletNavMenuAndGetConnectedButton from "@/components/Hover/HoverBulletNavMenuAndGetConnectedButton"
 import PricingPackagesBlueSection from "@/components/Pricing/PricingPackagesBlueSection"
 import PricingPackagesSection from "@/components/Pricing/PricingPackagesSection"
