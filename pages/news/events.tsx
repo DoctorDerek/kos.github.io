@@ -1,3 +1,6 @@
+import { MDXRemote } from "next-mdx-remote"
+
+import MDXComponents from "@/components/PageLayout/MDXComponents"
 import NewsEventsLayout from "@/layouts/NewsEventsLayout"
 import getFilesRecursively from "@/lib/files"
 import { getFileBySlug } from "@/lib/mdx"
@@ -25,11 +28,31 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 }
 
 export default function NewsEvents({
-  posts,
   indexPost,
+  posts,
 }: {
-  posts: Post[]
   indexPost: Post
+  posts: Post[]
 }) {
-  return <NewsEventsLayout posts={posts} indexPost={indexPost} />
+  const { mdxSource, frontMatter } = indexPost
+  const indexFrontMatter = frontMatter
+  // generate the {children} props for the index layout:
+  indexFrontMatter.children = (
+    <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
+  )
+
+  const postsFrontMatter = posts.map(({ mdxSource, frontMatter }: Post) => {
+    // generate the {children} props for the each post's layout:
+    frontMatter.children = (
+      <MDXRemote {...mdxSource} components={{ components: MDXComponents }} />
+    )
+    return frontMatter
+  })
+
+  return (
+    <NewsEventsLayout
+      indexFrontMatter={indexFrontMatter}
+      postsFrontMatter={postsFrontMatter}
+    />
+  )
 }
