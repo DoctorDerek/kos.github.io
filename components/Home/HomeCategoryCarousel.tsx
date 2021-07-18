@@ -14,15 +14,15 @@ export default function HomeCategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <Link
               href="/res/high-speed-cable/"
-              className="category-item"
+              className="block mb-10 no-underline group"
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
-              <div className="category-image">
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/cable.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -33,14 +33,14 @@ export default function HomeCategoryCarousel() {
                     Cable
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 Surf, shop, stream music. Stay connected with family and
                 friends.
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
@@ -51,12 +51,15 @@ export default function HomeCategoryCarousel() {
             data-animation="fadeIn"
             data-animation-delay="0s"
           >
-            <Link href="/res/wireless-broadband/" className="category-item">
-              <div className="category-image">
+            <Link
+              href="/res/wireless-broadband/"
+              className="block mb-10 no-underline group"
+            >
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/wireless.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -67,13 +70,13 @@ export default function HomeCategoryCarousel() {
                     Wireless
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 High speed rural internet at a price that suits your needs.
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
@@ -84,12 +87,15 @@ export default function HomeCategoryCarousel() {
             data-animation="fadeInRight"
             data-animation-delay="0s"
           >
-            <Link href="/res/high-speed-dsl/" className="category-item">
-              <div className="category-image">
+            <Link
+              href="/res/high-speed-dsl/"
+              className="block mb-10 no-underline group"
+            >
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/dsl.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -100,13 +106,13 @@ export default function HomeCategoryCarousel() {
                     DSL
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 High speed internet plans beginning at only $26.95 / month!
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
@@ -115,15 +121,15 @@ export default function HomeCategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <Link
               href="/res/voip/"
-              className="category-item"
+              className="block mb-10 no-underline group"
               data-animation="fadeInLeft"
               data-animation-delay="0s"
             >
-              <div className="category-image">
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/voip.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -134,13 +140,13 @@ export default function HomeCategoryCarousel() {
                     VOIP
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 Premium phone service over your high speed internet connection.
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
@@ -149,15 +155,15 @@ export default function HomeCategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <Link
               href="/res/mail/"
-              className="category-item"
+              className="block mb-10 no-underline group"
               data-animation="fadeIn"
               data-animation-delay="0s"
             >
-              <div className="category-image">
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/mail.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -168,14 +174,14 @@ export default function HomeCategoryCarousel() {
                     Mail
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 Excellent, dynamic e-mail service with automatic spam and virus
                 protection.
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
@@ -184,15 +190,15 @@ export default function HomeCategoryCarousel() {
           <div className="pl-4 pr-4 sm:w-1/2 md:w-1/3">
             <Link
               href="/hosting/packages/"
-              className="category-item"
+              className="block mb-10 no-underline group"
               data-animation="fadeInRight"
               data-animation-delay="0s"
             >
-              <div className="category-image">
+              <div className="relative mb-5 overflow-hidden rounded-3xl">
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/hosting.jpg" alt="Decoration" />
                 </div>
-                <h5 className="category-title">
+                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -203,14 +209,14 @@ export default function HomeCategoryCarousel() {
                     HOSTING
                   </span>
                 </h5>
-                <div className="wave-wrapper">
+                <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
               </div>
-              <div className="category-text">
+              <div className="relative mr-11">
                 A variety of options for getting your information out onto the
                 Internet in style.
-                <span className="category-more-link">
+                <span className="transition-all duration-300">
                   <span className="flex-wrap icon icon-right-arrow" />
                 </span>
               </div>
