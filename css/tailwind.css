@@ -344,10 +344,6 @@ h6 {
   @apply w-full;
 }
 
-label {
-  @apply mb-1 text-base font-medium leading-6 text-black;
-}
-
 .successform,
 .errorform {
   @apply hidden;

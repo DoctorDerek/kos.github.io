@@ -157,7 +157,7 @@ export default function ContactForm({
                   <label
                     htmlFor={id}
                     className={classNames(
-                      "flex items-center space-x-2",
+                      "flex items-center space-x-2 mb-1",
                       bold === "bold"
                         ? "font-bold"
                         : bold === "semibold"

@@ -19,7 +19,7 @@ export default function PostalCodeCheckForm() {
           <input type="hidden" name="minidslc" value="1" />
           <input type="hidden" name="docheck" value="1" />
           <div className="flex flex-col px-2 pt-1 pb-2 mx-auto space-y-1 text-center border border-black border-solid shadow">
-            <label htmlFor="postalcode" className="text-lg">
+            <label htmlFor="postalcode" className="mb-1">
               Enter your Postal Code to check for services available in your
               area:
             </label>
