@@ -14,7 +14,7 @@ const Column = ({ children }: { children?: any }) => (
 
 export default function Header() {
   return (
-    <header>
+    <header id="top">
       <div className="flex flex-col items-center justify-between w-full mx-auto space-y-6 lg:p-6 md:space-y-0 md:flex-row">
         <Column>
           <Link href="/" className="md:max-w-[250px] lg:max-w-full">
