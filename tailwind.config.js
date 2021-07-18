@@ -125,6 +125,12 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", "Lato", ...defaultTheme.fontFamily.sans],
       },
+      lineClamp: {
+        7: "7",
+        8: "8",
+        9: "9",
+        10: "10",
+      },
       colors: {
         blue: {
           ...colors.sky,
