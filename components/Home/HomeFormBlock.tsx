@@ -20,7 +20,7 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   1
                 </span>
               </div>
@@ -35,7 +35,7 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   2
                 </span>
               </div>
@@ -53,7 +53,7 @@ export default function HomeFormBlock() {
               data-animation-delay="0s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   3
                 </span>
               </div>
@@ -71,7 +71,7 @@ export default function HomeFormBlock() {
               data-animation-delay="0.8s"
             >
               <div className="absolute w-16 text-center top-[-15px]">
-                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200">
+                <span className="relative block w-20 h-20 text-4xl font-normal bg-white rounded-full text-blue-brand leading-[74px] transition-all duration-200 font-lato">
                   4
                 </span>
               </div>
