@@ -48,7 +48,7 @@ export default function HomePricing() {
         <Image src="/images/block-bg-2.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu right-[15%] translate-y-[-615px]">
-        <div className="pricing">
+        <div className="pricing font-lato">
           <div className="pricing-box">
             <div className="inside">
               <h3>Special Offer</h3>
