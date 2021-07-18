@@ -56,7 +56,7 @@ export default function HomePricing() {
               <div className="price-carousel">
                 <div
                   ref={sliderRef as React.RefObject<HTMLDivElement>}
-                  className="keen-slider"
+                  className="keen-slider font-lato"
                 >
                   <div className="keen-slider__slide number-slide1">
                     <div className="price-item">
