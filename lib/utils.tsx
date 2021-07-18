@@ -156,3 +156,28 @@ export const addPhoneLinkToTextIfPresent = ({
 
   return <>{stringToTest}</>
 }
+
+/**
+ * anchor text is #slug, e.g. /news/events#2021-07-01
+ */
+export const generateAnchorID = ({
+  indexSlug,
+  targetSlug,
+}: {
+  indexSlug: string | null
+  targetSlug: string | null
+}) => (targetSlug && indexSlug ? targetSlug.replace(indexSlug + "/", "") : "")
+
+/**
+ * anchor link is indexSlug#targetSlug, e.g. /news/events#2021-07-01
+ */
+export const generateAnchorLink = ({
+  indexSlug,
+  targetSlug,
+}: {
+  indexSlug: string | null
+  targetSlug: string | null
+}) =>
+  targetSlug && indexSlug
+    ? "/" + indexSlug + "#" + generateAnchorID({ indexSlug, targetSlug })
+    : ""

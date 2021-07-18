@@ -10,6 +10,7 @@ import DynamicImage from "@/components/Utils/DynamicImage"
 import PageSeo from "@/components/Utils/PageSeo"
 import TitleJSXWithOptionalHighlighting from "@/components/Utils/TitleJSXWithOptionalHighlighting"
 import siteMetadata from "@/data/siteMetadata.json"
+import { generateAnchorID, generateAnchorLink } from "@/lib/utils"
 
 export default function NewsEventsLayout({
   indexFrontMatter,
@@ -25,31 +26,6 @@ export default function NewsEventsLayout({
   const indexTitle = title
   const indexFeaturedImage = featuredImage
   const url = `${siteMetadata.siteUrl}/${slug}`
-
-  /**
-   * anchor text is #slug, e.g. /news/events#2021-07-01
-   */
-  const generateAnchorID = ({
-    indexSlug,
-    targetSlug,
-  }: {
-    indexSlug: string | null
-    targetSlug: string | null
-  }) => (targetSlug && indexSlug ? targetSlug.replace(indexSlug + "/", "") : "")
-
-  /**
-   * anchor link is indexSlug#targetSlug, e.g. /news/events#2021-07-01
-   */
-  const generateAnchorLink = ({
-    indexSlug,
-    targetSlug,
-  }: {
-    indexSlug: string | null
-    targetSlug: string | null
-  }) =>
-    targetSlug && indexSlug
-      ? "/" + indexSlug + "#" + generateAnchorID({ indexSlug, targetSlug })
-      : ""
 
   return (
     <>
