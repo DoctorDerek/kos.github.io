@@ -11,9 +11,12 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
             data-animation="fadeInLeft"
             data-animation-delay="0s"
           >
-            <div className="service-item">
-              <Link href="/residential/" className="icon-circle">
-                <div className="icon-hover" />
+            <div className="relative mb-5 text-center">
+              <Link
+                href="/residential/"
+                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand"
+              >
+                <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 bg-blue-800 opacity-0 hover:opacity-100" />
                 <div className="grid w-48 h-48">
                   <Image
                     src="/assets/images/home/icon-home.png"
@@ -21,15 +24,20 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
                   />
                 </div>
               </Link>
-              <div className="service-title">
+              <div className="mb-6">
                 <h4>
-                  <Link href="/residential/">
+                  <Link
+                    href="/residential/"
+                    className="text-gray-700 no-underline hover:text-blue-brand"
+                  >
                     RESIDENTIAL <br />
                     SERVICES
                   </Link>
                 </h4>
               </div>
-              <div className="service-text">Stay connected with family</div>
+              <div className="w-4/5 mx-auto my-0">
+                Stay connected with family
+              </div>
             </div>
           </div>
           <div
@@ -37,9 +45,12 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
             data-animation="fadeInUp"
             data-animation-delay="0s"
           >
-            <div className="service-item">
-              <Link href="/business/" className="icon-circle">
-                <div className="icon-hover" />
+            <div className="relative mb-5 text-center">
+              <Link
+                href="/business/"
+                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand"
+              >
+                <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 bg-blue-800 opacity-0 hover:opacity-100" />
                 <div className="grid w-48 h-48">
                   <Image
                     src="/assets/images/home/icon-business.png"
@@ -47,15 +58,20 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
                   />
                 </div>
               </Link>
-              <div className="service-title">
+              <div className="mb-6">
                 <h4>
-                  <Link href="/business/">
+                  <Link
+                    href="/business/"
+                    className="text-gray-700 no-underline hover:text-blue-brand"
+                  >
                     BUSINESS <br />
                     SERVICES
                   </Link>
                 </h4>
               </div>
-              <div className="service-text">Keep your business connected</div>
+              <div className="w-4/5 mx-auto my-0">
+                Keep your business connected
+              </div>
             </div>
           </div>
         </div>
@@ -63,57 +79,3 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
     </div>
   )
 }
-
-/*
-    <div className="mb-24">
-      <div className="mx-auto">
-        <div className="flex flex-wrap justify-between services-carousel">
-          <div
-            className="pl-4 pr-4 sm:w-1/2 animation"
-            data-animation="fadeInLeft"
-            data-animation-delay="0s"
-          >
-            <div className="service-item">
-              <Link href="/residential/" className="icon-circle">
-                <div className="icon-hover" />
-                <div className="grid w-48 h-48">
-                  <Image src="/assets/images/home/icon-home.png" alt="Decoration" />
-                </div>
-              </Link>
-              <div className="service-title">
-                <h4>
-                  <Link href="/residential/">
-                    RESIDENTIAL <br />
-                    SERVICES
-                  </Link>
-                </h4>
-              </div>
-              <div className="service-text">Stay connected with family</div>
-            </div>
-          </div>
-          <div
-            className="pl-4 pr-4 sm:w-1/2 animation"
-            data-animation="fadeInUp"
-            data-animation-delay="0s"
-          >
-            <div className="service-item">
-              <Link href="/business/" className="icon-circle">
-                <div className="icon-hover" />
-                <div className="grid w-48 h-48">
-                  <Image src="/assets/images/home/icon-business.png" alt="Decoration" />
-                </div>
-              </Link>
-              <div className="service-title">
-                <h4>
-                  <Link href="/business/">
-                    BUSINESS <br />
-                    SERVICES
-                  </Link>
-                </h4>
-              </div>
-              <div className="service-text">Keep your business connected</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>*/

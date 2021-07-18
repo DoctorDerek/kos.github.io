@@ -316,45 +316,6 @@ h6 {
   @apply p-0 m-0 text-lg font-bold leading-6 text-gray-900;
 }
 
-.service-item {
-  @apply relative mb-5 text-center;
-}
-
-.service-item .icon-circle {
-  @apply relative block w-48 h-48 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand;
-  z-index: 1;
-  margin: 0 auto 45px;
-}
-
-.service-item .icon-circle .icon-hover {
-  @apply absolute top-0 left-0 w-full h-full bg-blue-800 opacity-0;
-  z-index: -1;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-}
-
-.service-item .service-title {
-  @apply mb-6;
-}
-
-.service-item .service-title a {
-  @apply text-gray-700 no-underline;
-}
-
-.service-item .service-title a:hover {
-  color: #005395;
-}
-
-.service-item .service-text {
-  @apply w-4/5 mx-auto my-0;
-}
-
-.service-item:hover .icon-hover {
-  @apply opacity-100;
-}
-
 .category-item {
   @apply block mb-10 no-underline;
 }
