@@ -344,33 +344,6 @@ h6 {
   @apply w-full;
 }
 
-.successform,
-.errorform {
-  @apply hidden;
-}
-
-button:focus,
-.btn:focus,
-button:active:focus,
-.btn:active:focus {
-  @apply shadow-none outline-none;
-  outline: 0;
-}
-
-button:hover,
-.btn:hover,
-button:focus,
-.btn:focus {
-  @apply shadow-none outline-none;
-  outline: 0;
-}
-
-button:active,
-.btn:active {
-  @apply shadow-none outline-none;
-  outline: 0;
-}
-
 .btn {
   @apply h-12 text-base font-bold leading-5 no-underline uppercase align-top;
   padding: 15px 22px;
