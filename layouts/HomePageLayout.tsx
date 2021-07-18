@@ -7,7 +7,13 @@ import HomeSlideshow from "@/components/Home/HomeSlideshow"
 import HomeTestimonials from "@/components/Home/HomeTestimonials"
 import HomeTextIconCarousel from "@/components/Home/HomeTextIconCarousel"
 
-export default function HomePageOrder() {
+export default function HomePageLayout({
+  newsAndEventsIndexFrontMatter,
+  newsAndEventsPostsFrontMatter,
+}: {
+  newsAndEventsIndexFrontMatter: PageFrontMatter
+  newsAndEventsPostsFrontMatter: PageFrontMatter[]
+}) {
   return (
     <>
       <HomeSlideshow />
@@ -21,7 +27,10 @@ export default function HomePageOrder() {
       </div>
       <HomeFormBlock />
       <div className="mx-auto max-w-7xl">
-        <HomeNewsAndEvents />
+        <HomeNewsAndEvents
+          newsAndEventsIndexFrontMatter={newsAndEventsIndexFrontMatter}
+          newsAndEventsPostsFrontMatter={newsAndEventsPostsFrontMatter}
+        />
         <HomeTestimonials />
       </div>
     </>
