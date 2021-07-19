@@ -35,7 +35,7 @@ export default function TitleHeadingsAndChildren({
     >
       <h1
         className={classNames(
-          "color decor",
+          "text-blue-brand decor",
           centerTitle ? "text-center" : "text-left"
         )}
       >
