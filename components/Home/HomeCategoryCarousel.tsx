@@ -6,7 +6,7 @@ export default function HomeCategoryCarousel() {
   return (
     <div className="mb-16">
       <div className="mx-auto">
-        <h2 className="text-center">
+        <h2 className="mb-2 text-5xl font-semibold leading-4 text-center text-gray-700 md:mb-5">
           Internet Packages
           <DIVIDER />
         </h2>
@@ -22,7 +22,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/cable.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -32,7 +32,7 @@ export default function HomeCategoryCarousel() {
                   >
                     Cable
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
@@ -59,7 +59,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/wireless.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -69,7 +69,7 @@ export default function HomeCategoryCarousel() {
                   >
                     Wireless
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
@@ -95,7 +95,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/dsl.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -105,7 +105,7 @@ export default function HomeCategoryCarousel() {
                   >
                     DSL
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
@@ -129,7 +129,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/voip.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -139,7 +139,7 @@ export default function HomeCategoryCarousel() {
                   >
                     VOIP
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
@@ -163,7 +163,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/mail.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -173,7 +173,7 @@ export default function HomeCategoryCarousel() {
                   >
                     Mail
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>
@@ -198,7 +198,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/hosting.jpg" alt="Decoration" />
                 </div>
-                <h5 className="absolute p-0 m-0 text-xl font-bold leading-7 text-white uppercase bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -208,7 +208,7 @@ export default function HomeCategoryCarousel() {
                   >
                     HOSTING
                   </span>
-                </h5>
+                </div>
                 <div className="bg-teal-light transform skew-[59deg] translate-x-[-75%] duration-300 absolute top-0 bottom-0 w-full opacity-0 left--1/2 right-1/2 hover:opacity-100 hover:left-1/4 hover:right-1/2 transition-all duration-600">
                   <div className="wave" />
                 </div>

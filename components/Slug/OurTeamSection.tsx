@@ -18,7 +18,9 @@ export default function OurTeamSection({
 
   return (
     <div className="mx-auto text-center">
-      <h2 className="text-blue-brand">{heading}</h2>
+      <h2 className="mb-2 text-5xl font-semibold leading-4 md:mb-5 text-blue-brand">
+        {heading}
+      </h2>
       <DIVIDER />
       <div className="flex flex-wrap justify-center">
         {teamHeadshots.map(({ name, image }) => {

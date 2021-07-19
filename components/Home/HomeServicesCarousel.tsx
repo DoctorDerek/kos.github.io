@@ -24,16 +24,14 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
                   />
                 </div>
               </Link>
-              <div className="mb-6">
-                <h4>
-                  <Link
-                    href="/residential/"
-                    className="text-gray-700 no-underline hover:text-blue-brand"
-                  >
-                    RESIDENTIAL <br />
-                    SERVICES
-                  </Link>
-                </h4>
+              <div className="p-0 mb-10 text-2xl font-bold text-gray-700 font-lato md:mb-5">
+                <Link
+                  href="/residential/"
+                  className="text-gray-700 no-underline hover:text-blue-brand"
+                >
+                  RESIDENTIAL <br />
+                  SERVICES
+                </Link>
               </div>
               <div className="w-4/5 mx-auto my-0">
                 Stay connected with family
@@ -58,16 +56,14 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
                   />
                 </div>
               </Link>
-              <div className="mb-6">
-                <h4>
-                  <Link
-                    href="/business/"
-                    className="text-gray-700 no-underline hover:text-blue-brand"
-                  >
-                    BUSINESS <br />
-                    SERVICES
-                  </Link>
-                </h4>
+              <div className="p-0 mb-10 text-2xl font-bold text-gray-700 font-lato md:mb-5">
+                <Link
+                  href="/business/"
+                  className="text-gray-700 no-underline hover:text-blue-brand"
+                >
+                  BUSINESS <br />
+                  SERVICES
+                </Link>
               </div>
               <div className="w-4/5 mx-auto my-0">
                 Keep your business connected

@@ -20,7 +20,10 @@ export default function HeadingsH2({
       )}
     >
       {(headings as string[]).map((headingString: string) => (
-        <h2 className="text-xl" key={headingString}>
+        <h2
+          className="mb-2 text-xl font-semibold leading-4 text-gray-700 md:mb-5"
+          key={headingString}
+        >
           {/*Up to one <a> or <Link> is supported in {headingString}*/}
           {addLinkToTextIfPresent(headingString)}
         </h2>

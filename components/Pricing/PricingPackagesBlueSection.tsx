@@ -56,7 +56,9 @@ export default function PricingPackagesBlueSection({
                   "transition-all duration-500 hover:shadow-md"
                 )}
               >
-                <h4 className="text-white">{packageName}</h4>
+                <h4 className="p-0 mb-4 text-2xl font-bold text-white font-lato md:mb-5">
+                  {packageName}
+                </h4>
                 <div className="py-4 pl-12 bg-white rounded-2xl">
                   <div className="text-blue-brand">
                     {

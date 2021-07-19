@@ -8,7 +8,7 @@ export default function HomeFormBlock() {
         <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
-        <h2 className="text-center">
+        <h2 className="mb-2 text-5xl font-semibold leading-4 text-center text-gray-700 md:mb-5">
           Let's Get Started
           <DIVIDER color="white" />
         </h2>
@@ -21,9 +21,9 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
                   Fill out the form
-                </h5>
+                </div>
                 <p>Tell us who you are and how we can reach you.</p>
               </div>
             </div>
@@ -34,9 +34,9 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
                   Receive a prompt response
-                </h5>
+                </div>
                 <p>
                   A KOS sales specialist WILL REACH OUT TO YOU SHORTLY to get
                   you signed up and book your service appointment.
@@ -50,9 +50,9 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
                   Get connected
-                </h5>
+                </div>
                 <p>
                   One of our professional technicians will perform an on-site,
                   quick and easy installation to get you set up.
@@ -70,9 +70,9 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <h5 className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
                   Up and running
-                </h5>
+                </div>
                 <p>Start enjoying your customized internet package.</p>
               </div>
             </div>

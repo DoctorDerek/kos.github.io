@@ -31,7 +31,7 @@ export default function HoverBulletNavMenu({
   const lastItemIndex = bullets[type].length
   return (
     <>
-      <h4 className="font-bold">
+      <h4 className="p-0 mb-4 text-2xl font-bold text-gray-700 font-lato md:mb-5">
         <HoverBulletList
           hoverBulletAsNavMenuItems={headingNavMenuItem}
           responsive={true}

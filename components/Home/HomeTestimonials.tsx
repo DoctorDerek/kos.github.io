@@ -78,7 +78,7 @@ export default function Testimonials() {
 
   return (
     <div className="flex flex-wrap w-full mb-4">
-      <h3 className="mx-auto text-center text-blue-brand">
+      <h3 className="p-0 mx-auto mb-8 text-4xl font-semibold leading-4 text-center md:mb-10 text-blue-brand">
         What our customers are saying
         <DIVIDER />
       </h3>

@@ -180,7 +180,11 @@ export default function PricingPackageColumn({
   }
 
   function PricingPackageNameH3() {
-    return <h3 className="text-2xl text-gray-700">{packageName}</h3>
+    return (
+      <h3 className="p-0 mb-8 text-2xl font-semibold leading-4 text-gray-700 md:mb-10">
+        {packageName}
+      </h3>
+    )
   }
 
   function PricingPackageHeadings() {
