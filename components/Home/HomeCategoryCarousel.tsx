@@ -6,7 +6,7 @@ export default function HomeCategoryCarousel() {
   return (
     <div className="mb-16">
       <div className="mx-auto">
-        <h2 className="mb-2 text-5xl font-semibold leading-4 text-center text-gray-700 md:mb-5">
+        <h2 className="mb-2 text-5xl font-semibold text-center text-gray-700 md:mb-5">
           Internet Packages
           <DIVIDER />
         </h2>
@@ -22,7 +22,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/cable.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -59,7 +59,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/wireless.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -95,7 +95,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/dsl.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -129,7 +129,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/voip.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -163,7 +163,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/mail.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",
@@ -198,7 +198,7 @@ export default function HomeCategoryCarousel() {
                 <div className="grid w-48 h-48">
                   <Image src="/assets/images/hosting.jpg" alt="Decoration" />
                 </div>
-                <div className="absolute p-0 m-0 mb-5 text-xl font-bold leading-7 text-white uppercase font-lato bottom-4 left-5">
+                <div className="absolute p-0 m-0 mb-5 text-xl font-bold text-white uppercase font-lato bottom-4 left-5">
                   <span
                     style={{
                       textShadow: "2px 2px rgba(0, 0, 0, 0.5)",

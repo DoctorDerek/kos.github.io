@@ -8,7 +8,7 @@ export default function HomeFormBlock() {
         <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
-        <h2 className="mb-2 text-5xl font-semibold leading-4 text-center text-gray-700 md:mb-5">
+        <h2 className="mb-2 text-5xl font-semibold text-center text-gray-700 md:mb-5">
           Let's Get Started
           <DIVIDER color="white" />
         </h2>
@@ -21,7 +21,7 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold text-white uppercase font-lato md:text-lg ">
                   Fill out the form
                 </div>
                 <p>Tell us who you are and how we can reach you.</p>
@@ -34,7 +34,7 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold text-white uppercase font-lato md:text-lg ">
                   Receive a prompt response
                 </div>
                 <p>
@@ -50,7 +50,7 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold text-white uppercase font-lato md:text-lg ">
                   Get connected
                 </div>
                 <p>
@@ -70,7 +70,7 @@ export default function HomeFormBlock() {
                 </span>
               </div>
               <div className="p-0 md:pb-24">
-                <div className="p-0 my-4 text-xl font-bold leading-6 text-white uppercase font-lato md:text-lg md:leading-7">
+                <div className="p-0 my-4 text-xl font-bold text-white uppercase font-lato md:text-lg ">
                   Up and running
                 </div>
                 <p>Start enjoying your customized internet package.</p>
@@ -99,31 +99,31 @@ export default function HomeFormBlock() {
                 </p>
               </div>
               <input
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="name"
                 placeholder="Name:"
               />
               <input
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="phone"
                 placeholder="Phone:"
               />
               <input
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="email"
                 placeholder="Email:"
               />
               <input
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="city"
                 placeholder="City:"
               />
               <input
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 type="text"
                 name="postal"
                 placeholder="Postal Code:"
@@ -238,7 +238,7 @@ export default function HomeFormBlock() {
               <div>
                 <b>How did you hear about us:</b>
                 <select
-                  className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                  className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                   name="how"
                 >
                   <option value="">Please select one...</option>
@@ -253,7 +253,7 @@ export default function HomeFormBlock() {
                 </select>
               </div>
               <textarea
-                className="mb-1 text-base leading-5 text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
+                className="mb-1 text-base text-black rounded-sm shadow-none appearance-none bg-white border-0 p-4 min-h-[3rem] w-full"
                 id="message"
                 name="message"
                 placeholder="Message:"

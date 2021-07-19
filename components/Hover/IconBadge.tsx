@@ -41,7 +41,7 @@ export default function IconBadge({
       </div>
       <div
         className={classNames(
-          "p-0 mb-5 text-xl font-bold leading-5 uppercase font-lato",
+          "p-0 mb-5 text-xl font-bold uppercase font-lato",
           "text-black",
           uppercase ? "uppercase" : ""
         )}

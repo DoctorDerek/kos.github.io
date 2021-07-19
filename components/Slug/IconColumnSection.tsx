@@ -59,7 +59,7 @@ export default function IconColumnSection({
           <HeroIconComponent aria-hidden="true" />
         </div>
         <div className="mb-3 text-4xl font-semibold">{heading}</div>
-        <div className="text-lg font-semibold leading-5">{subheading}</div>
+        <div className="text-lg font-semibold ">{subheading}</div>
       </div>
     )
   }

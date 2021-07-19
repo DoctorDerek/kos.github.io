@@ -78,7 +78,7 @@ export default function Testimonials() {
 
   return (
     <div className="flex flex-wrap w-full mb-4">
-      <h3 className="p-0 mx-auto mb-8 text-4xl font-semibold leading-4 text-center md:mb-10 text-blue-brand">
+      <h3 className="p-0 mx-auto mb-8 text-4xl font-semibold text-center md:mb-10 text-blue-brand">
         What our customers are saying
         <DIVIDER />
       </h3>
@@ -90,7 +90,7 @@ export default function Testimonials() {
           <div className="px-6 keen-slider__slide" key={testimonial}>
             <QuoteIcon />
             <div className="pt-8 mx-5 my-3 text-center">
-              <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13 rounded-3xl">
+              <div className="relative p-6 font-serif text-lg italic text-gray-600 bg-gray-200 md:text-xl md:p-13 rounded-3xl">
                 {testimonial}
               </div>
               <div className="mt-10 mb-3 font-bold text-gray-700 md:text-xl">

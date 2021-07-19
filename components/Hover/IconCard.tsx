@@ -63,10 +63,7 @@ export default function IconCard({
           ))}
         </div>
         <div
-          className={classNames(
-            location === "footer" ? "text-3xl" : "",
-            "leading-6"
-          )}
+          className={classNames(location === "footer" ? "text-3xl" : "", "")}
         >
           {text.map((line) => (
             <div key={line}>

@@ -48,10 +48,10 @@ export default function HomePricing() {
         <Image src="/images/block-bg-2.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu right-[15%] translate-y-[-615px]">
-        <div className="relative w-full text-white min-h-[39rem] before:absolute before:top-0 before:bottom-0 before:z-0 before:text-base before:leading-6 before:bg-white before:opacity-0 before:right-[-6rem] before:w-160 px-15 py-24 before:transform before:skew-[-15deg] before:duration-300 before:transition-all hover:before:opacity-20 hover:before:right-[-3rem] font-lato">
-          <div className="absolute top-0 bottom-0 right-0 z-0 text-base leading-6 w-128 pt-17 pr-24 pb-15 pl-32 bg-teal-light transform skew-[-15deg] text-white">
+        <div className="relative w-full text-white min-h-[39rem] before:absolute before:top-0 before:bottom-0 before:z-0 before:text-base befobefore:bg-white before:opacity-0 before:right-[-6rem] before:w-160 px-15 py-24 before:transform before:skew-[-15deg] before:duration-300 before:transition-all hover:before:opacity-20 hover:before:right-[-3rem] font-lato">
+          <div className="absolute top-0 bottom-0 right-0 z-0 text-base w-128 pt-17 pr-24 pb-15 pl-32 bg-teal-light transform skew-[-15deg] text-white">
             <div className="inside">
-              <h3 className="pb-8 mb-12 text-4xl font-semibold leading-4 text-white">
+              <h3 className="pb-8 mb-12 text-4xl font-semibold text-white">
                 Special Offer
               </h3>
 
@@ -62,7 +62,7 @@ export default function HomePricing() {
                 >
                   <div className="keen-slider__slide number-slide1">
                     <div className="price-item">
-                      <div className="p-0 mb-3 text-lg font-bold leading-6 text-white uppercase font-lato">
+                      <div className="p-0 mb-3 text-lg font-bold text-white uppercase font-lato">
                         KOS Wireless Special
                       </div>
                       <div className="pb-8 mb-6 border-solid border-b-1 border-teal-light">
@@ -87,7 +87,7 @@ export default function HomePricing() {
                   </div>
                   <div className="keen-slider__slide number-slide2">
                     <div className="price-item">
-                      <div className="p-0 mb-3 text-lg font-bold leading-6 text-white uppercase font-lato">
+                      <div className="p-0 mb-3 text-lg font-bold text-white uppercase font-lato">
                         HOME PHONE SERVICES
                       </div>
                       <div className="pb-8 mb-6 border-solid border-b-1 border-teal-light">
@@ -116,7 +116,7 @@ export default function HomePricing() {
                   </div>
                   <div className="keen-slider__slide number-slide3">
                     <div className="price-item">
-                      <div className="p-0 mb-3 text-lg font-bold leading-6 text-white uppercase font-lato">
+                      <div className="p-0 mb-3 text-lg font-bold text-white uppercase font-lato">
                         High Speed Cable Internet
                       </div>
                       <div className="pb-8 mb-6 border-solid border-b-1 border-teal-light">

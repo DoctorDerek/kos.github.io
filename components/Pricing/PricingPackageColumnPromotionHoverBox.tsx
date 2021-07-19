@@ -23,7 +23,7 @@ export default function PricingPackageColumnPromotionHoverBox({
     return (
       <HoverBox>
         <PricingPackageColumnPromotionHeading />
-        <span className="text-base font-bold leading-3 text-teal-brand">
+        <span className="text-base font-bold text-teal-brand">
           <PricingPackageColumnPromotionSubheading />
           <PricingPackageColumnPromotionPrice />
           {promotionFootnotes && (

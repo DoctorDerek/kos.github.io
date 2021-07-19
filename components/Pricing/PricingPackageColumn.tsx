@@ -181,7 +181,7 @@ export default function PricingPackageColumn({
 
   function PricingPackageNameH3() {
     return (
-      <h3 className="p-0 mb-8 text-2xl font-semibold leading-4 text-gray-700 md:mb-10">
+      <h3 className="p-0 mb-8 text-2xl font-semibold text-gray-700 md:mb-10">
         {packageName}
       </h3>
     )
@@ -191,10 +191,7 @@ export default function PricingPackageColumn({
     return (
       <>
         {(packageHeadings as string[]).map((packageHeading: string) => (
-          <span
-            className="text-3xl leading-8 text-blue-brand"
-            key={packageHeading}
-          >
+          <span className="text-3xl text-blue-brand" key={packageHeading}>
             {
               // wrap any footnotes in the format ^1,2 that are found in
               // { packageHeading } inside a <sup> superscript tag

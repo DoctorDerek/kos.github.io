@@ -19,7 +19,7 @@ export default function HomeNewsAndEvents({
   return (
     <div className="mb-16">
       <div className="mx-auto">
-        <h2 className="mb-2 text-5xl font-semibold leading-4 text-center md:mb-5 text-blue-brand">
+        <h2 className="mb-2 text-5xl font-semibold text-center md:mb-5 text-blue-brand">
           News and Events
           <DIVIDER />
         </h2>
@@ -59,7 +59,7 @@ export default function HomeNewsAndEvents({
       <Link href={href} className="col-span-1 text-black hover:no-underline">
         <div className="relative flex flex-col p-8 h-80 shadow-outer group rounded-2xl">
           <div className="line-clamp-7">
-            <div className="p-0 mb-2 text-xl font-bold leading-5 uppercase font-lato text-blue-brand">
+            <div className="p-0 mb-2 text-xl font-bold uppercase font-lato text-blue-brand">
               {newsAndEventsPost.title}
             </div>
             <div className="pr-4 mb-3 prose prose-lg">

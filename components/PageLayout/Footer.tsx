@@ -45,7 +45,7 @@ export default function Footer() {
             <Script src="/js/theWeatherNetwork.js" />
           </div>
         </div>
-        <div className="text-base leading-5 text-white">
+        <div className="text-base text-white">
           Copyright © KOS - {new Date().getFullYear()} {" | "}
           <Link className="text-white" href="/policies/">
             KOS Policies
@@ -63,7 +63,7 @@ export default function Footer() {
             Personal Web Space TAC
           </Link>
         </div>
-        <div className="text-base leading-5 text-white">
+        <div className="text-base text-white">
           <span className="text-white">
             <strong>Serving Eastern Ontario: </strong>
           </span>

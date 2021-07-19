@@ -61,7 +61,7 @@ export default function NewsEventsLayout({
             <div className="mb-8">
               {indexFeaturedImage && <DynamicImage {...indexFeaturedImage} />}
             </div>
-            <h1 className="pb-0 mb-2 text-5xl font-semibold leading-4 text-center md:mb-5 text-blue-brand">
+            <h1 className="pb-0 mb-2 text-5xl font-semibold text-center md:mb-5 text-blue-brand">
               <TitleJSXWithOptionalHighlighting title={title} />
               <DIVIDER />
             </h1>
@@ -105,7 +105,7 @@ export default function NewsEventsLayout({
         id={generateAnchorID({ indexSlug, targetSlug })}
         className="pt-6 pb-2"
       >
-        <div className="p-0 mb-5 text-xl font-bold leading-6 text-left uppercase font-lato text-blue-brand">
+        <div className="p-0 mb-5 text-xl font-bold text-left uppercase font-lato text-blue-brand">
           <TitleJSXWithOptionalHighlighting title={title} />
         </div>
         {headings && headings.length > 0 && (
