@@ -1,9 +1,11 @@
 import {
+  BriefcaseIcon,
   CheckIcon,
   ChevronRightIcon,
   ChevronUpIcon,
   ClockIcon,
   CogIcon,
+  HomeIcon,
   LocationMarkerIcon,
   MenuIcon,
   PhoneIcon,
@@ -18,11 +20,13 @@ const HERO_ICONS: {
   [key in HeroIcon]: HeroIconFunction
 } = {
   // Format: "kebab-case": CamelCaseIcon
+  briefcase: BriefcaseIcon,
   check: CheckIcon,
   "chevron-right": ChevronRightIcon,
   "chevron-up": ChevronUpIcon,
   clock: ClockIcon,
   cog: CogIcon,
+  home: HomeIcon,
   "location-marker": LocationMarkerIcon,
   menu: MenuIcon,
   phone: PhoneIcon,

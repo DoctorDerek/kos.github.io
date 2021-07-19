@@ -1,6 +1,6 @@
 import HoverBullet from "@/components/Hover/HoverBullet"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 import { useCurrentPath } from "@/lib/utils"
-import { BriefcaseIcon, HomeIcon } from "@heroicons/react/outline"
 
 export default function HoverBulletNavItem({
   item,
@@ -12,12 +12,17 @@ export default function HoverBulletNavItem({
   const [title, href] = item as NAVIGATION_MENU_TYPE
   // isCurrentPage uses .includes() to account for # anchors in the URL
   const isCurrentPage = useCurrentPath().includes(href as string)
+
+  const HomeIconComponent = HERO_ICONS["home"]
+  const BriefcaseIconComponent = HERO_ICONS["briefcase"]
   const CUSTOM_ICONS = {
-    residential: <HomeIcon aria-hidden="true" />,
-    business: <BriefcaseIcon aria-hidden="true" />,
+    residential: <HomeIconComponent aria-hidden="true" />,
+    business: <BriefcaseIconComponent aria-hidden="true" />,
   }
+
   const titleIncludes = (keyword: string) =>
     new RegExp(keyword, "i").exec(title as string)
+
   const customIcon =
     titleIncludes("residential") || titleIncludes("home")
       ? CUSTOM_ICONS["residential"]

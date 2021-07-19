@@ -213,11 +213,13 @@ type IconColumn = { icon: HeroIcon; heading: string; subheading: string }
  * camelCase in the file /lib/HERO_ICONS.tsx ("user-group" => "UserGroupIcon")
  */
 type HeroIcon =
+  | "briefcase"
   | "check"
   | "chevron-right"
   | "chevron-up"
   | "clock"
   | "cog"
+  | "home"
   | "location-marker"
   | "menu"
   | "phone"
