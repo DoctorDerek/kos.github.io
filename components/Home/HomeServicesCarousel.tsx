@@ -1,6 +1,5 @@
 import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
-import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function HomeServicesCarousel({ children }: { children?: any }) {
   return (
