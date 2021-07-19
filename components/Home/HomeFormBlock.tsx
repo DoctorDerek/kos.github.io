@@ -8,7 +8,7 @@ export default function HomeFormBlock() {
         <Image src="/images/block-bg.jpg" alt="Decoration" />
       </div>
       <div className="absolute transform-gpu left-1/2 translate-x-[-50%] translate-y-[-900px]">
-        <h2 className="text-center decor decor-white">
+        <h2 className="text-center">
           Let's Get Started
           <DIVIDER color="white" />
         </h2>

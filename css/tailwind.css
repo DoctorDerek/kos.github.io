@@ -282,18 +282,6 @@ h3 {
   }
 }
 
-h3.decor {
-  padding: 0 0 45px;
-  margin-bottom: 28px;
-}
-
-@media (max-width: 767px) {
-  h3.decor {
-    padding: 0 0 25px;
-    margin-bottom: 25px;
-  }
-}
-
 h4 {
   @apply p-0 text-2xl font-bold text-gray-700;
   line-height: 1.154em;

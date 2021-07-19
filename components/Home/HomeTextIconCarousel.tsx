@@ -37,7 +37,7 @@ export default function HomeTextIconCarousel() {
   return (
     <div>
       {" "}
-      <h2 className="text-center decor">
+      <h2 className="text-center">
         Why choose us?
         <DIVIDER />
       </h2>
