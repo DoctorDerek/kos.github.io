@@ -1,5 +1,6 @@
 import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
+import BUTTON from "@/components/Utils/DECOR/BUTTON"
 
 const SlideshowSlide = ({
   src,
@@ -44,10 +45,8 @@ const SlideshowSlide = ({
             </span>
           </strong>
         </div>
-        <div className="pt-6">
-          <Link href={href} className="btn btn-orange">
-            {text3}
-          </Link>
+        <div className="pt-6 mx-auto">
+          <BUTTON href={href} text={text3} />
         </div>
       </div>
     </div>
