@@ -1,5 +1,6 @@
 import Image from "@/components/Utils/CustomImage"
 import Link from "@/components/Utils/CustomLink"
+import HERO_ICONS from "@/lib/HERO_ICONS"
 
 export default function HomeServicesCarousel({ children }: { children?: any }) {
   return (
@@ -14,9 +15,9 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
             <div className="relative mb-5 text-center">
               <Link
                 href="/residential/"
-                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand"
+                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand group"
               >
-                <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 bg-blue-800 opacity-0 hover:opacity-100" />
+                <div className="absolute top-0 left-0 w-full h-full transition-all duration-500 bg-blue-800 opacity-0 group-hover:opacity-100" />
                 <div className="grid w-48 h-48">
                   <Image
                     src="/assets/images/home/icon-home.png"
@@ -29,7 +30,8 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
                   href="/residential/"
                   className="text-gray-700 no-underline hover:text-blue-brand"
                 >
-                  RESIDENTIAL <br />
+                  RESIDENTIAL
+                  <br />
                   SERVICES
                 </Link>
               </div>
@@ -46,9 +48,9 @@ export default function HomeServicesCarousel({ children }: { children?: any }) {
             <div className="relative mb-5 text-center">
               <Link
                 href="/business/"
-                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand"
+                className="relative block w-48 h-48 mx-auto mb-12 overflow-hidden text-white no-underline rounded-full bg-gradient-to-b from-teal-brand to-blue-brand group"
               >
-                <div className="absolute top-0 left-0 w-full h-full transition-all duration-300 bg-blue-800 opacity-0 hover:opacity-100" />
+                <div className="absolute top-0 left-0 w-full h-full transition-all duration-500 bg-blue-800 opacity-0 group-hover:opacity-100" />
                 <div className="grid w-48 h-48">
                   <Image
                     src="/assets/images/home/icon-business.png"
