@@ -4,7 +4,7 @@ export default function FourZeroFour() {
   return (
     <div className="flex flex-col items-start justify-start mx-4 md:mt-24 md:mb-32 md:justify-center md:items-center md:flex-row md:space-x-6 md:mx-0">
       <div className="pt-6 pb-8 space-x-2 md:space-y-5">
-        <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-black dark:text-gray-100 md:text-8xl md:leading-14 md:border-r-2 md:px-6">
+        <h1 className="mb-2 text-5xl font-semibold leading-4 text-gray-700 md:mb-5 text-6xl font-extrabold leading-9 tracking-tight text-black dark:text-gray-100 md:text-8xl md:leading-14 md:border-r-2 md:px-6">
           404
         </h1>
       </div>
