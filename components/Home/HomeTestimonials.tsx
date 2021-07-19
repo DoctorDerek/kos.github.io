@@ -93,7 +93,7 @@ export default function Testimonials() {
               <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13 rounded-3xl">
                 {testimonial}
               </div>
-              <div className="mt-10 mb-3 text-sm font-bold text-gray-700 md:text-lg">
+              <div className="mt-10 mb-3 font-bold text-gray-700 md:text-xl">
                 {author}, <span className="italic font-thin">{business}</span>
               </div>
             </div>
