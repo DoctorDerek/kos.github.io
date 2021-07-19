@@ -71,7 +71,7 @@ export default function Testimonials() {
   ]
 
   const QuoteIcon = () => (
-    <div className="grid self-center w-24 h-24 p-1 mx-3 transition-all duration-500 rounded-full fill-current scale-x-[-1] text-blue-brand absolute left-0 top-[-1rem] z-10">
+    <div className="grid self-center w-30 h-30 p-1 mx-3 transition-all duration-500 rounded-full fill-current scale-x-[-1] text-blue-brand absolute left-8 top-[-1rem] z-10">
       <FormatQuoteRoundedIcon aria-hidden="true" className="w-full h-full" />
     </div>
   )
