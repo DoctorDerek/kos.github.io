@@ -55,13 +55,13 @@ module.exports = {
       none: "none",
       outer: "0 0 5px rgba(0, 0, 0, 0.2)", // used in <HomeNewsAndEvents>
     },
-    fontFamily: {
-      // Tailwind doesn't automatically escape font names, so we need quotes
-      sans: ['"Open Sans"', "Lato", ...defaultTheme.fontFamily.sans],
-      lato: ["Lato", '"Open Sans"', ...defaultTheme.fontFamily.sans],
-    },
     extend: {
-      screens: { print: { raw: "print" } },
+      screens: { print: { raw: "print" } }, // unused, previously in <Footer>
+      fontFamily: {
+        // Tailwind doesn't automatically escape font names, so we need quotes
+        sans: ['"Open Sans"', "Lato", ...defaultTheme.fontFamily.sans],
+        lato: ["Lato", '"Open Sans"', ...defaultTheme.fontFamily.sans],
+      },
       spacing: {
         "9/16": "56.25%",
         11: "2.75rem",

@@ -66,8 +66,8 @@ export default function Testimonials() {
                 >
                   <div className="px-6 keen-slider__slide number-slide1">
                     <QuoteIcon />
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
+                    <div className="pt-8 mx-5 my-3 text-center">
+                      <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13">
                         <p>
                           I have been a business customer of KOS for over 10
                           years. I rely on my web site to drive traffic to my
@@ -77,7 +77,7 @@ export default function Testimonials() {
                           wonderful to deal with.
                         </p>
                       </div>
-                      <div className="testimonials-username">
+                      <div className="mt-10 mb-3 text-sm font-bold text-gray-700 md:text-lg">
                         Donna,{" "}
                         <em style={{ fontWeight: 100 }}> Creative Effects</em>
                       </div>
@@ -85,8 +85,8 @@ export default function Testimonials() {
                   </div>
                   <div className="px-6 keen-slider__slide number-slide2">
                     <QuoteIcon />
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
+                    <div className="pt-8 mx-5 my-3 text-center">
+                      <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13">
                         <p>
                           Kingston Online Services is a very forward thinking
                           company and their innovative and up-to-date technology
@@ -100,7 +100,7 @@ export default function Testimonials() {
                           speed internet provider.
                         </p>
                       </div>
-                      <div className="testimonials-username">
+                      <div className="mt-10 mb-3 text-sm font-bold text-gray-700 md:text-lg">
                         Brenda,{" "}
                         <em style={{ fontWeight: 100 }}>Chalk Well Drilling</em>
                       </div>
@@ -108,8 +108,8 @@ export default function Testimonials() {
                   </div>
                   <div className="px-6 keen-slider__slide number-slide3">
                     <QuoteIcon />
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
+                    <div className="pt-8 mx-5 my-3 text-center">
+                      <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13">
                         <p>
                           Limestone Property Management has been a customer of
                           KOS since 2001.&nbsp; We&rsquo;re very pleased with
@@ -122,7 +122,7 @@ export default function Testimonials() {
                           service options.
                         </p>
                       </div>
-                      <div className="testimonials-username">
+                      <div className="mt-10 mb-3 text-sm font-bold text-gray-700 md:text-lg">
                         Jason Ruffolo,{" "}
                         <em style={{ fontWeight: 100 }}>
                           Limestone Property Management (President)
@@ -132,8 +132,8 @@ export default function Testimonials() {
                   </div>
                   <div className="px-6 keen-slider__slide number-slide4">
                     <QuoteIcon />
-                    <div className="testimonials-item">
-                      <div className="testimonials-text">
+                    <div className="pt-8 mx-5 my-3 text-center">
+                      <div className="relative p-6 font-serif text-lg italic leading-6 text-gray-600 bg-gray-200 md:text-xl md:p-13">
                         <p>
                           We love K.O.S.! We wanted something local, reliable
                           and affordable with no hidden surprises on our bill
@@ -141,7 +141,7 @@ export default function Testimonials() {
                           that and more including fabulous customer service!
                         </p>
                       </div>
-                      <div className="testimonials-username">
+                      <div className="mt-10 mb-3 text-sm font-bold text-gray-700 md:text-lg">
                         Kim and Jim Long,{" "}
                         <em style={{ fontWeight: 100 }}>Must Love Chocolate</em>
                       </div>
