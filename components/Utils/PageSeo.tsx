@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo"
 
 import siteMetadata from "@/data/siteMetadata.json"
 
-const PageSEO = ({
+const PageSeo = ({
   title,
   description,
   url,
@@ -24,4 +24,4 @@ const PageSEO = ({
     />
   )
 }
-export default PageSEO
+export default PageSeo

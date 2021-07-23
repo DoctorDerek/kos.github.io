@@ -7,7 +7,7 @@ import Image from "@/components/Utils/CustomImage"
 import BUTTON from "@/components/Utils/DECOR/BUTTON"
 import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import DynamicImage from "@/components/Utils/DynamicImage"
-import PageSEO from "@/components/Utils/PageSEO"
+import PageSeo from "@/components/Utils/PageSeo"
 import SectionWrapper from "@/components/Utils/SectionWrapper"
 import TitleJSXWithOptionalHighlighting from "@/components/Utils/TitleJSXWithOptionalHighlighting"
 import siteMetadata from "@/data/siteMetadata.json"
@@ -30,7 +30,7 @@ export default function NewsEventsLayout({
 
   return (
     <>
-      <PageSEO
+      <PageSeo
         title={indexTitle}
         description="Latest News and Events - KOS - Internet Outages in Kingston and Belleville, Ontario"
         url={url}

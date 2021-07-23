@@ -8,7 +8,7 @@ import OurTeamSection from "@/components/Slug/OurTeamSection"
 import TitleHeadingsAndChildren from "@/components/Slug/TitleHeadingsAndChildren"
 import { ContactFormSection } from "@/components/Utils/ContactFormSection"
 import Image from "@/components/Utils/CustomImage"
-import PageSEO from "@/components/Utils/PageSEO"
+import PageSeo from "@/components/Utils/PageSeo"
 import SectionWrapper from "@/components/Utils/SectionWrapper"
 import siteMetadata from "@/data/siteMetadata.json"
 
@@ -41,7 +41,7 @@ export default function SlugPageLayout({
   if (!title) throw new Error("title is a required field in Markdown files")
   return (
     <>
-      <PageSEO
+      <PageSeo
         title={title.replace(/\*/g, "")}
         description=""
         url={`${siteMetadata.siteUrl}/${slug ? slug : ""}`}

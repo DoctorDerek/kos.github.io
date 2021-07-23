@@ -5,7 +5,7 @@ import Head from "next/head"
 
 import LayoutWrapper from "@/components/PageLayout/LayoutWrapper"
 import MDXComponents from "@/components/PageLayout/MDXComponents"
-import DefaultSeo from "@/components/Utils/DefaultSEO"
+import DefaultSeo from "@/components/Utils/DefaultSeo"
 //@ts-expect-error Could not find a declaration file for module '@mdx-js/react'.
 import { MDXProvider } from "@mdx-js/react"
 
