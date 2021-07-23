@@ -367,13 +367,17 @@ type IconCard = {
  * @typeParam icon - The desired <HeroIcon> to be used ("phone")
  * @typeParam label - The first line of text, which will be bold ("KINGSTON")
  * @typeParam text - The second line of text ("The LaSalle 303...")
+ * @typeParam href? - Where the link should go ("/residential-services")
  * @typeParam size? - Whether the icon should be w-20 (small) or w-48 (large)
  * @typeParam uppercase? - Whether to show the label as all uppercase letters
+ * @typeParam color? - Whether the label color should be gray or black
  */
 type IconBadge = {
   icon: HeroIcon
   label: string | string[]
   text: string | string[]
+  href?: string
   size?: "large" | "small" = "small"
   uppercase?: boolean = true
+  color?: "gray" | "black" = "black"
 }
