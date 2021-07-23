@@ -6,6 +6,7 @@ import HomeServicesCarousel from "@/components/Home/HomeServicesCarousel"
 import HomeSlideshow from "@/components/Home/HomeSlideshow"
 import HomeTestimonials from "@/components/Home/HomeTestimonials"
 import HomeTextIconCarousel from "@/components/Home/HomeTextIconCarousel"
+import SectionWrapper from "@/components/Utils/SectionWrapper"
 
 export default function HomePageLayout({
   newsAndEventsIndexFrontMatter,
@@ -16,23 +17,29 @@ export default function HomePageLayout({
 }) {
   return (
     <>
-      <HomeSlideshow />
-      <div className="mx-auto max-w-7xl">
+      <SectionWrapper>
+        <HomeSlideshow />
+      </SectionWrapper>
+      <SectionWrapper useMaxWidth={true}>
         <HomeServicesCarousel />
         <HomeCategoryCarousel />
-      </div>
-      <HomePricing />
-      <div className="mx-auto max-w-7xl">
+      </SectionWrapper>
+      <SectionWrapper>
+        <HomePricing />
+      </SectionWrapper>
+      <SectionWrapper useMaxWidth={true}>
         <HomeTextIconCarousel />
-      </div>
-      <HomeFormBlock />
-      <div className="mx-auto max-w-7xl">
+      </SectionWrapper>
+      <SectionWrapper>
+        <HomeFormBlock />
+      </SectionWrapper>
+      <SectionWrapper useMaxWidth={true}>
         <HomeNewsAndEvents
           newsAndEventsIndexFrontMatter={newsAndEventsIndexFrontMatter}
           newsAndEventsPostsFrontMatter={newsAndEventsPostsFrontMatter}
         />
         <HomeTestimonials />
-      </div>
+      </SectionWrapper>
     </>
   )
 }

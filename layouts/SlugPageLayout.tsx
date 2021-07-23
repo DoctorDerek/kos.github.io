@@ -8,7 +8,8 @@ import OurTeamSection from "@/components/Slug/OurTeamSection"
 import TitleHeadingsAndChildren from "@/components/Slug/TitleHeadingsAndChildren"
 import { ContactFormSection } from "@/components/Utils/ContactFormSection"
 import Image from "@/components/Utils/CustomImage"
-import PageSeo from "@/components/Utils/PageSeo"
+import PageSEO from "@/components/Utils/PageSEO"
+import SectionWrapper from "@/components/Utils/SectionWrapper"
 import siteMetadata from "@/data/siteMetadata.json"
 
 export default function SlugPageLayout({
@@ -40,16 +41,18 @@ export default function SlugPageLayout({
   if (!title) throw new Error("title is a required field in Markdown files")
   return (
     <>
-      <PageSeo
+      <PageSEO
         title={title.replace(/\*/g, "")}
         description=""
-        url={`${siteMetadata.siteUrl}/${slug}`}
+        url={`${siteMetadata.siteUrl}/${slug ? slug : ""}`}
       />
+
       <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
         <Image src="/images/footer-bg.jpg" alt="Decoration" />
         {/* alt="" acceptable for purely decorative elements */}
       </div>
-      <div className="py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10">
+
+      <SectionWrapper>
         <LeftColumnMenu
           leftColumnMenuTitle={leftColumnMenuTitle}
           leftColumnMenuLinks={leftColumnMenuLinks}
@@ -93,7 +96,7 @@ export default function SlugPageLayout({
           officeAddressRight={officeAddressRight}
           contactForm={contactForm}
         />
-      </div>
+      </SectionWrapper>
     </>
   )
 }

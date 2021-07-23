@@ -8,6 +8,7 @@ import BUTTON from "@/components/Utils/DECOR/BUTTON"
 import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import DynamicImage from "@/components/Utils/DynamicImage"
 import PageSEO from "@/components/Utils/PageSEO"
+import SectionWrapper from "@/components/Utils/SectionWrapper"
 import TitleJSXWithOptionalHighlighting from "@/components/Utils/TitleJSXWithOptionalHighlighting"
 import siteMetadata from "@/data/siteMetadata.json"
 import { generateAnchorID, generateAnchorLink } from "@/lib/utils"
@@ -38,7 +39,7 @@ export default function NewsEventsLayout({
         <Image src="/images/footer-bg.jpg" alt="Decoration" />
         {/* alt="" acceptable for purely decorative elements */}
       </div>
-      <div className="px-6 py-8 mx-auto xl:py-16 lg:py-14 md:py-12 sm:py-10 md:px-8 lg:px-10">
+      <SectionWrapper>
         <div className="grid max-w-5xl grid-cols-1 mx-auto space-x-4 md:grid-cols-4">
           <div className="col-span-1">
             {/* Left side: all news & event posts as <HoverBullet> links */}
@@ -85,7 +86,7 @@ export default function NewsEventsLayout({
             </div>
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </>
   )
 
