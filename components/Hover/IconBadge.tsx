@@ -26,23 +26,27 @@ export default function IconBadge({
   const HeroIconComponent = icon ? HERO_ICONS[icon] : () => null
 
   return (
-    <div
-      className={classNames(
-        "pl-4 pr-4 sm:w-1/3 mb-6 text-center space-y-4 group",
-        size === "large" ? "sm:w-1/2" : "sm:w-1/3",
-        uppercase ? "uppercase" : ""
-      )}
-    >
-      <div className="relative flex items-center justify-center w-20 h-20 mx-auto bg-blue-800 rounded-full">
-        <div className="absolute w-full h-full transition-all duration-300 rounded-full bg-gradient-to-b to-blue-light from-teal-brand group-hover:opacity-0" />
-        <div className="absolute w-12 h-12 text-white fill-current">
+    <div className="pl-4 pr-4 mb-6 space-y-4 text-center group sm:w-1/3">
+      <div
+        className={classNames(
+          "relative flex items-center justify-center mx-auto rounded-full bg-blue-brand",
+          size ? "w-40 h-40" : "w-24 h-24"
+        )}
+      >
+        <div className="absolute w-full h-full transition-all duration-500 rounded-full bg-gradient-to-b to-blue-light from-teal-brand group-hover:opacity-0" />
+        {/* position: absolute for gradient hover fade-opacity effect */}
+        <div
+          className={classNames(
+            "absolute text-white fill-current",
+            size ? "w-24 h-24" : "w-12 h-12"
+          )}
+        >
           {<HeroIconComponent aria-hidden="true" />}
         </div>
       </div>
       <div
         className={classNames(
-          "p-0 mb-5 text-xl font-bold uppercase font-lato",
-          "text-black",
+          "p-0 mb-5 text-3xl font-bold uppercase font-lato text-gray-600",
           uppercase ? "uppercase" : ""
         )}
       >
@@ -50,7 +54,7 @@ export default function IconBadge({
           <div key={line}>{line}</div>
         ))}
       </div>
-      <div className="text-base">
+      <div className="text-xl">
         {text.map((line) => (
           <div key={line}>{line}</div>
         ))}
