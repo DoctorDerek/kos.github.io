@@ -7,7 +7,7 @@ import Image from "@/components/Utils/CustomImage"
 import BUTTON from "@/components/Utils/DECOR/BUTTON"
 import DIVIDER from "@/components/Utils/DECOR/DIVIDER"
 import DynamicImage from "@/components/Utils/DynamicImage"
-import PageSeo from "@/components/Utils/PageSeo"
+import PageSEO from "@/components/Utils/PageSEO"
 import TitleJSXWithOptionalHighlighting from "@/components/Utils/TitleJSXWithOptionalHighlighting"
 import siteMetadata from "@/data/siteMetadata.json"
 import { generateAnchorID, generateAnchorLink } from "@/lib/utils"
@@ -29,7 +29,11 @@ export default function NewsEventsLayout({
 
   return (
     <>
-      <PageSeo title={indexTitle} description="" url={url} />
+      <PageSEO
+        title={indexTitle}
+        description="Latest News and Events - KOS - Internet Outages in Kingston and Belleville, Ontario"
+        url={url}
+      />
       <div className="grid w-full xl:h-32 lg:h-28 md:h-24 sm:h-20 h-16 border-blue-brand border-solid border-t-[6px]">
         <Image src="/images/footer-bg.jpg" alt="Decoration" />
         {/* alt="" acceptable for purely decorative elements */}
