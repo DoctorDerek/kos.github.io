@@ -14,9 +14,9 @@ sections:
   label: KOS Website Pages
   create: all
   match: "**/*"
-  new_doc_ext: "."
-upload_dir: uploads
-public_path: "/uploads"
+  new_doc_ext: app
+upload_dir: public
+public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
