@@ -1,0 +1,7 @@
+---
+label: News & Events page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
