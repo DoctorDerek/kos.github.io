@@ -57,24 +57,25 @@ module.exports = {
     },
     extend: {
       animation: {
-        "fade-in-down": "fade-in-down 1s linear 1", // <HomeSlideshow> line 1
-        "fade-in-fast": "fade-in 1s linear 1", // reduced-motion variant line 1
-        "fade-in": "fade-in 1.5s linear 1", // <HomeSlideshow> line 2
-        "fade-in-up": "fade-in-up 2s linear 1", // <HomeSlideshow> line 3
-        "fade-in-slow": "fade-in 2s linear 1", // reduced-motion variant line 3
+        "fade-in-down": "fade-in-down 5s infinite", // <HomeSlideshow> line 1
+        "fade-in-fast": "fade-in 5s infinite", // reduced-motion variant line 1
+        "fade-in": "fade-in 5s infinite", // <HomeSlideshow> line 2
+        "fade-in-up": "fade-in-up 5s infinite", // <HomeSlideshow> line 3
+        "fade-in-slow": "fade-in 5s infinite", // reduced-motion variant line 3
       },
       keyframes: {
         "fade-in-down": {
           "0%": { opacity: "0%", transform: "translate3d(0, -100%, 0)" },
-          "100%": { opacity: "100%", transform: "none" },
+          "20%": { opacity: "100%", transform: "none" }, // 1s
+          // https://css-tricks.com/css-keyframe-animation-delay-iterations/
         },
         "fade-in": {
           "0%": { opacity: "0%" },
-          "100%": { opacity: "100%" },
+          "30%": { opacity: "100%" }, // 1.5s
         },
         "fade-in-up": {
-          "0%": { opacity: "100%", transform: "none" },
-          "100%": { opacity: "0%", transform: "translate3d(0, -100%, 0)" },
+          "0%": { opacity: "0%", transform: "translate3d(0, 100%, 0)" },
+          "40%": { opacity: "100%", transform: "none" }, //2s
         },
       },
       screens: { print: { raw: "print" } }, // unused, previously in <Footer>
