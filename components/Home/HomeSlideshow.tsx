@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react"
 
 import SlideshowSlide from "@/components/Home/HomeSlideshowSlide"
 
-const Slideshow = () => {
+export default function HomeSlideshow() {
   const [pause, setPause] = useState(false)
   const timer = useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
@@ -69,7 +69,3 @@ const Slideshow = () => {
     </>
   )
 }
-
-export default Slideshow
-
-/*             */
