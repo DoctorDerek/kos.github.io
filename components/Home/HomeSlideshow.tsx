@@ -45,7 +45,7 @@ export default function HomeSlideshow() {
     <>
       <div
         ref={sliderRef as React.RefObject<HTMLDivElement>}
-        className="text-white keen-slider font-lato h-80 sm:h-128"
+        className="w-full text-white keen-slider font-lato h-80 sm:h-128"
       >
         <SlideshowSlide
           src="/images/slider/slide1.jpg"

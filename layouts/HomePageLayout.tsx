@@ -17,9 +17,7 @@ export default function HomePageLayout({
 }) {
   return (
     <>
-      <SectionWrapper>
-        <HomeSlideshow />
-      </SectionWrapper>
+      <HomeSlideshow />
       <SectionWrapper useMaxWidth={true}>
         <HomeServicesCarousel />
         <HomeCategoryCarousel />
