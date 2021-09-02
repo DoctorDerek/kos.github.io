@@ -1,45 +1,26 @@
 import "keen-slider/keen-slider.min.css"
 
 import { useKeenSlider } from "keen-slider/react"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 
 import SlideshowSlide from "@/components/Home/HomeSlideshowSlide"
 
 export default function HomeSlideshow() {
-  const [pause, setPause] = useState(false)
   const timer = useRef() as React.MutableRefObject<NodeJS.Timeout>
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
-    duration: 3000, // animation duration in ms
-    dragStart: () => {
-      setPause(true)
-    },
-    dragEnd: () => {
-      setPause(false)
-    },
+    duration: 3000, // animation duration in milliseconds for slide transition
   })
 
   useEffect(() => {
-    sliderRef.current &&
-      sliderRef.current.addEventListener("mouseover", () => {
-        setPause(true)
-      })
-    sliderRef.current &&
-      sliderRef.current.addEventListener("mouseout", () => {
-        setPause(false)
-      })
-  }, [sliderRef])
-
-  useEffect(() => {
     timer.current = setInterval(() => {
-      if (!pause && slider) {
-        slider.next()
-      }
-    }, 5000) // autoplay interval in ms
+      if (slider) slider.next()
+    }, 5000) // autoplay interval in milliseconds (time between slides)
+    // note: autoplay interval should be the same as in @/tailwind.config.js
     return () => {
       clearInterval(timer.current)
     }
-  }, [pause, slider])
+  }, [slider])
 
   return (
     <>
