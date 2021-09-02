@@ -35,7 +35,7 @@ export default function HomeSlideshow() {
       if (!pause && slider) {
         slider.next()
       }
-    }, 15000) // autoplay interval in ms
+    }, 5000) // autoplay interval in ms
     return () => {
       clearInterval(timer.current)
     }
