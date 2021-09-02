@@ -44,7 +44,7 @@ const SlideshowSlide = ({
             </span>
           </strong>
         </div>
-        <div className="pt-6 mx-auto motion-safe:animate-fade-up motion-reduce:animate-fade-in-slow">
+        <div className="pt-6 mx-auto motion-safe:animate-fade-in-up motion-reduce:animate-fade-in-slow">
           <BUTTON href={href} text={text3} />
         </div>
       </div>
