@@ -32,19 +32,19 @@ const SlideshowSlide = ({
         <Image src={src} alt={alt} preload={preload ? preload : ""} />
       </div>
       <div className="absolute flex flex-col justify-center w-full h-full space-y-8 text-center">
-        <div className="text-7xl">
+        <div className="text-7xl motion-safe:animate-fade-in-down motion-reduce:animate-fade-in-fast">
           <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
             {text1}
           </span>
         </div>
-        <div className="text-3xl">
+        <div className="text-3xl motion-safe:animate-fade-in motion-reduce:animate-fade-in">
           <strong>
             <span style={{ textShadow: "2px 2px rgba(0, 0, 0, 0.5)" }}>
               {text2}
             </span>
           </strong>
         </div>
-        <div className="pt-6 mx-auto">
+        <div className="pt-6 mx-auto motion-safe:animate-fade-up motion-reduce:animate-fade-in-slow">
           <BUTTON href={href} text={text3} />
         </div>
       </div>

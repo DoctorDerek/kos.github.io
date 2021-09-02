@@ -56,6 +56,27 @@ module.exports = {
       outer: "0 0 5px rgba(0, 0, 0, 0.2)", // used in <HomeNewsAndEvents>
     },
     extend: {
+      animation: {
+        "fade-in-down": "fade-in-down 1s linear 1", // <HomeSlideshow> line 1
+        "fade-in-fast": "fade-in 1s linear 1", // reduced-motion variant line 1
+        "fade-in": "fade-in 1.5s linear 1", // <HomeSlideshow> line 2
+        "fade-in-up": "fade-in-up 2s linear 1", // <HomeSlideshow> line 3
+        "fade-in-slow": "fade-in 2s linear 1", // reduced-motion variant line 3
+      },
+      keyframes: {
+        "fade-in-down": {
+          "0%": { opacity: "0%", transform: "translate3d(0, -100%, 0)" },
+          "100%": { opacity: "100%", transform: "none" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "100%", transform: "none" },
+          "100%": { opacity: "0%", transform: "translate3d(0, -100%, 0)" },
+        },
+      },
       screens: { print: { raw: "print" } }, // unused, previously in <Footer>
       fontFamily: {
         // Tailwind doesn't automatically escape font names, so we need quotes
@@ -268,7 +289,10 @@ module.exports = {
       }),
     },
   },
-  // variants unnecessary thanks to new tailwindcss-jit (just-in-time) engine
+  variants: {
+    animation: ["responsive", "motion-safe", "motion-reduce"],
+  },
+  // most variants unnecessary thanks to tailwindcss-jit (just-in-time) engine
   /*variants: {
     typography: ["responsive", "dark"],
     extend: {
