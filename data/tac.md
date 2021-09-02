@@ -1,47 +1,34 @@
 ---
-title: "Terms and Conditions"
+title: Terms and Conditions
 centerTitle: true
----
 
+---
 **General**
 
 **1. What are the Terms and Conditions of Service?**
 
 The terms and conditions of service (**“Service Terms”**) throughout this document:
 
-- **“KOS”** means 1085459 Ontario Ltd. o/a Kingston Online Services, its parents, subsidiaries and affiliates;
-
-- **“KOS Parties”** means KOS, its partners, licensors, dealers, representatives, suppliers and agents (and their respective employees, officers, directors, shareholders and representatives);
-
-- **“E9-1-1”** means enhanced 9-1-1 service which may provide emergency services personnel with your location information and phone number;
-
-- **“Equipment”** means any device, equipment or hardware used to access the Services or used in conjunction with the Services;
-
-- **“Fixed Term”** means a minimum contract period for a particular Service;
-
-- **“I**”, **“me**”, “**you**”, “**your”** and “**yours”** refer to you but also to persons that you authorize to use the Service or act as your agent with regard to the Service;
-
-- **“Identifiers**” means e-mail addresses, phone numbers, account numbers, personal identification numbers (“**PINs”**), Internet Protocol addresses, personal web page addresses, access codes and any other identifier assigned to you by KOS;
-
-- **“Policies”** are defined in Section 11 of the Service Terms;
-
-- **“Service Agreement”** means an agreement setting out the terms for specific Services. Service Agreements are available on the Website at the following URL: <Link href="https://www.kos.net/policies/sa">https://www.kos.net/policies/sa</Link>;
-
-- **“Services”** mean any services that you subscribe to or receive through KOS, including but not limited to various Internet access services, hosted PBX and VoIP services. All Equipment and Software (as defined in this section) are considered elements of the Services;
-
-- **“Software”** means any software used to access the Services orused in conjunction with the Services;
-
-- **“Us**”, **“we**”, “**our”**, or “**ourselves”** means KOS;
-
-- **“VoIP”** means Voice over Internet Protocol services; and
-
-- **“Website”** means all content on the website <Link href="https://www.kos.net/">https://www.kos.net/</Link>
+* **“KOS”** means 1085459 Ontario Ltd. o/a Kingston Online Services, its parents, subsidiaries and affiliates;
+* **“KOS Parties”** means KOS, its partners, licensors, dealers, representatives, suppliers and agents (and their respective employees, officers, directors, shareholders and representatives);
+* **“E9-1-1”** means enhanced 9-1-1 service which may provide emergency services personnel with your location information and phone number;
+* **“Equipment”** means any device, equipment or hardware used to access the Services or used in conjunction with the Services;
+* **“Fixed Term”** means a minimum contract period for a particular Service;
+* **“I**”, **“me**”, “**you**”, “**your”** and “**yours”** refer to you but also to persons that you authorize to use the Service or act as your agent with regard to the Service;
+* **“Identifiers**” means e-mail addresses, phone numbers, account numbers, personal identification numbers (“**PINs”**), Internet Protocol addresses, personal web page addresses, access codes and any other identifier assigned to you by KOS;
+* **“Policies”** are defined in Section 11 of the Service Terms;
+* **“Service Agreement”** means an agreement setting out the terms for specific Services. Service Agreements are available on the Website at the following URL: <Link href="https://www.kos.net/policies/sa">https://www.kos.net/policies/sa</Link>;
+* **“Services”** mean any services that you subscribe to or receive through KOS, including but not limited to various Internet access services, hosted PBX and VoIP services. All Equipment and Software (as defined in this section) are considered elements of the Services;
+* **“Software”** means any software used to access the Services orused in conjunction with the Services;
+* **“Us**”, **“we**”, “**our”**, or “**ourselves”** means KOS;
+* **“VoIP”** means Voice over Internet Protocol services; and
+* **“Website”** means all content on the website <Link href="https://www.kos.net/">https://www.kos.net/</Link>
 
 **2. What is included as part of my Agreement for Services with KOS?**
 
 The **“Agreement”** includes the Service Terms, Service Agreements made available on the Website at the following URL: <Link href="https://www.kos.net/policies/sa">https://www.kos.net/policies/sa</Link> or Services to which you subscribe, any KOS document describing features, products or services and any other document incorporated by reference together with these Service Terms. In the event of an inconsistency between the constituent documents of the Agreement, the inconsistency will be resolved by giving preference first to a Service Agreement, then to the Service Terms, and lastly to any other KOS documentation describing features, products or services.
 
-**3. How do I accept this Agreement? **
+**3. How do I accept this Agreement?**
 
 By using the Services or allowing Services to be installed at your premises, you acknowledge that you have read, understood and agree to the Service Terms. If you do not agree to the Service Terms, you may not use the Services.
 
@@ -57,7 +44,7 @@ If you continue to use the Service after thirty (**30**) days from the effective
 
 The process for the introduction of new Policies and amendments to existing Policies is different. New Policies are effective as of the day they are posted by KOS on the Website. Likewise, changes to existing Policies are effective as of the date that they are posted to the Website.
 
-** 6. What if I do not agree with a change that KOS makes to the Agreement? **
+**6. What if I do not agree with a change that KOS makes to the Agreement?**
 
 If you do not agree with a change made by KOS, you may cancel the affected Services in accordance with Section 33.
 
@@ -79,13 +66,10 @@ You agree that we can charge any unpaid and outstanding amount, including any La
 
 Administrative charges in amounts up to $50.00 may be levied for administration or account processing activities in connection with your account, including as a result of the following:
 
-- collection efforts due to non-payment or having a balance overyour credit limit, including unbilled usage and pending charges,fees and adjustments;
-
-- returned or rejected payments due to non-sufficient funds (“NSF”)or any other reason;
-
-- change of any Identifier; and/or
-
-- the restoral of Service
+* collection efforts due to non-payment or having a balance overyour credit limit, including unbilled usage and pending charges,fees and adjustments;
+* returned or rejected payments due to non-sufficient funds (“NSF”)or any other reason;
+* change of any Identifier; and/or
+* the restoral of Service
 
 **10. What if I dispute Fees on my invoice?**
 
@@ -102,8 +86,7 @@ Yes. From time to time, KOS may establish policies, rules and limits (collective
 Yes. You agree to comply with and use the Services for your own personal use, in accordance with the Agreement and all applicable laws. You also agree not to:
 
 1. Resell the Services, receive any charge or benefit for the use of the Services; and
-
-1. Transfer your Services without our express consent. You must also follow any Policies setting out acceptable use guidelines for the Services and Equipment.
+2. Transfer your Services without our express consent. You must also follow any Policies setting out acceptable use guidelines for the Services and Equipment.
 
 **13. How can I be sure that KOS has accurate contact information for my account?**
 
@@ -143,13 +126,10 @@ Upon your request or at the request of your new service provider, if your assign
 
 Yes. Except for Equipment that you have fully paid for, all Equipment installed or provided by us remains our property and you agree that:
 
-- You will take reasonable care of the Equipment;
-
-- You may not sell, lease, mortgage, transfer, assign or encumber the Equipment;
-
-- You may not relocate the Equipment without our knowledge and permission; and
-
-- Pursuant to our instructions, you may be required to either (1) return certain Equipment to us at your own expense upon termination of the Services to which the Equipment is related; or (2) grant KOS access to your premises for the purpose of retrieving certain Equipment, such as fixed wireless equipment, that may require a technician for retrieval.
+* You will take reasonable care of the Equipment;
+* You may not sell, lease, mortgage, transfer, assign or encumber the Equipment;
+* You may not relocate the Equipment without our knowledge and permission; and
+* Pursuant to our instructions, you may be required to either (1) return certain Equipment to us at your own expense upon termination of the Services to which the Equipment is related; or (2) grant KOS access to your premises for the purpose of retrieving certain Equipment, such as fixed wireless equipment, that may require a technician for retrieval.
 
 If Equipment is lost, stolen or damaged or sold, leased, mortgaged, transferred, assigned, encumbered or not returned, you agree to pay us the undiscounted retail value of Equipment, together with any costs incurred by us in seeking possession of such Equipment.
 
@@ -205,19 +185,15 @@ No. There are some important differences and limitations in how 9-1-1 calling ov
 
 With both traditional basic 9-1-1 and E9-1-1 services, your call is sent directly to the nearest emergency response centre. In addition, with E9-1-1 service, your call back number and last address are visible to the emergency response centre call-taker. With KOS VoIP service 9-1-1 calling, your call is sent to a national emergency call centre. When you make a 9-1-1 call using KOS VoIP services, you will be asked to confirm your location information regardless of whether that information is visible to the call centre operator. The call centre operator will then transfer your 9-1-1 call to the emergency response centre nearest your location. You should be prepared to provide or confirm your name, address and call-back number with the operator. Do not hang up unless you are told to do so. If your call is disconnected, immediately dial 9-1-1 again.
 
-If you are unable to speak during a 9-1-1 call and the call centre operator has access to a call-back number and the last registered address associated with your KOS VoIP service, the operator will transfer the call to the emergency response centre closest to that address. In order for emergency services to be dispatched to the correct address in such cases, you must ensure that the registered address that you have provided to is always the same as the physical address at which your VoIP device is located. Whenever you move the physical location of your VoIP device or you add a line or port a number, you must update your registered address accordingly. You may update your location information by logging-in to your customer portal and changing your recorded location information. Your customer portal can be accessed using the following url: <Link href="https://voip.kos.net/">https://voip.kos.net/</Link>
+If you are unable to speak during a 9-1-1 call and the call centre operator has access to a call-back number and the last registered address associated with your KOS VoIP service, the operator will transfer the call to the emergency response centre closest to that address. In order for emergency services to be dispatched to the correct address in such cases, you must ensure that the registered address that you have provided to is always the same as the physical address at which your VoIP device is located. Whenever you move the physical location of your VoIP device or you add a line or port a number, you must update your registered address accordingly. You may update your location information by logging-in to your customer portal and changing your recorded location information. Your customer portal can be accessed using the following url: [https://voip.kos.net/](https://voip.kos.net "KOS VoIP Customer Portal")
 
 You acknowledge and understand that the KOS VoIP service or access to the KOS VoIP service, including 9-1-1, public alerts or special needs services, may not function correctly, or at all, in the following circumstances:
 
-- If your Equipment fails, is not configured correctly or does not meet KOS’ requirements;
-
-- In the event of a high-speed Internet service outage, regardless of the supplier providing the high-speed Internet service to you;
-
-- In the event of a network outage or power failure;
-
-- If you or somebody else tampers with or, in some cases, move the Equipment; or
-
-- Following suspension or termination of your KOS Services or Account.
+* If your Equipment fails, is not configured correctly or does not meet KOS’ requirements;
+* In the event of a high-speed Internet service outage, regardless of the supplier providing the high-speed Internet service to you;
+* In the event of a network outage or power failure;
+* If you or somebody else tampers with or, in some cases, move the Equipment; or
+* Following suspension or termination of your KOS Services or Account.
 
 There may be a greater possibility of network congestion and/or reduced speed in the routing of a 9-1-1 calls made utilizing KOS VoIP service as compared to traditional 9-1-1 calls dialled over traditional public telephone networks.
 
@@ -241,21 +217,14 @@ You agree that, unless otherwise specifically set out in a Service Agreement, to
 
 Other than the foregoing payment and to the maximum extent permitted by applicable law, KOS Parties are not responsible to anyone for:
 
-- Any direct, indirect, special, consequential, incidental, economic or punitive damages (including loss of profit or revenue, financial loss, loss of business opportunities, loss, destruction or alteration of data, files or software, breach of privacy or security property damage, personal injury, death or any other foreseeable or unforeseeable loss, however caused) resulting or relating directly or indirectly to the Service or any advertisements, promotions or statements relating to any of the foregoing, even if we were negligent or were advised of the possibility of such damages;
-
-  - The performance, availability, reliability, timeliness, quality, coverage, uninterrupted use, security, pricing or operation of the Service;
-
-  - Any error, inclusion or omission with respect to any telephone listings or directories;
-
-  - The denial, restriction, blocking, disruption or inaccessibility of any Services, including 9-1-1, public alerts or special needs services, Equipment or Identifiers;
-
-  - Any lost, stolen, damaged or expired Equipment, Identifiers, passwords, codes, benefits, discounts, rebates or credits;
-
-  - Any error, omission or delay in connection with the transfer of Identifiers to or from another telecommunications service provider or any limitation connected thereto;
-
-  - Any acts or omissions of a telecommunications carrier whose facilities are used to establish connections to points that we do not serve; or
-
-  - Any claims or damages resulting directly or indirectly from any claim that the use, intended use or combination of the service or any material transmitted through the Services infringes the intellectual property, industrial, contractual, privacy or other rights of a third party.
+* Any direct, indirect, special, consequential, incidental, economic or punitive damages (including loss of profit or revenue, financial loss, loss of business opportunities, loss, destruction or alteration of data, files or software, breach of privacy or security property damage, personal injury, death or any other foreseeable or unforeseeable loss, however caused) resulting or relating directly or indirectly to the Service or any advertisements, promotions or statements relating to any of the foregoing, even if we were negligent or were advised of the possibility of such damages;
+  * The performance, availability, reliability, timeliness, quality, coverage, uninterrupted use, security, pricing or operation of the Service;
+  * Any error, inclusion or omission with respect to any telephone listings or directories;
+  * The denial, restriction, blocking, disruption or inaccessibility of any Services, including 9-1-1, public alerts or special needs services, Equipment or Identifiers;
+  * Any lost, stolen, damaged or expired Equipment, Identifiers, passwords, codes, benefits, discounts, rebates or credits;
+  * Any error, omission or delay in connection with the transfer of Identifiers to or from another telecommunications service provider or any limitation connected thereto;
+  * Any acts or omissions of a telecommunications carrier whose facilities are used to establish connections to points that we do not serve; or
+  * Any claims or damages resulting directly or indirectly from any claim that the use, intended use or combination of the service or any material transmitted through the Services infringes the intellectual property, industrial, contractual, privacy or other rights of a third party.
 
 These limits are in addition to any other limits on KOS Parties’ liability set out elsewhere in the Agreement.
 
@@ -279,23 +248,15 @@ KOS may cancel any or all of your Services and corresponding Service Agreements 
 
 KOS may also restrict, block, suspend, disconnect or terminate any or all of your Services, including 9-1-1 service, for cause, without notice, if:
 
-- you are in breach of a Service Agreement, including non-payment of your charges or non-compliance with any Policies;
-
-- you do not maintain Service usage within the prescribed credit limit;
-
-- you exceed reasonable usage limits, as determined by us;
-
-- you have given us false, misleading or outdated information
-
-- we reasonably suspect or determine that any of your Services, Equipment and / or Identifiers are the subject of fraudulent, unlawful or improper usage or usage that adversely affects our operations or the use of our services, facilities or networks by others;
-
-- you harass, threaten or abuse us or our employees or agents;
-
-- you fraudulently or improperly seek to avoid payment to us;
-
-- we need to install, maintain, inspect, test, repair, remove, replace, investigate, protect, modify, upgrade or improve the operation of the Services, the Equipment or our facilities or networks; or
-
-- we reasonably believe that there is an emergency or extreme circumstance that would warrant such action.
+* you are in breach of a Service Agreement, including non-payment of your charges or non-compliance with any Policies;
+* you do not maintain Service usage within the prescribed credit limit;
+* you exceed reasonable usage limits, as determined by us;
+* you have given us false, misleading or outdated information
+* we reasonably suspect or determine that any of your Services, Equipment and / or Identifiers are the subject of fraudulent, unlawful or improper usage or usage that adversely affects our operations or the use of our services, facilities or networks by others;
+* you harass, threaten or abuse us or our employees or agents;
+* you fraudulently or improperly seek to avoid payment to us;
+* we need to install, maintain, inspect, test, repair, remove, replace, investigate, protect, modify, upgrade or improve the operation of the Services, the Equipment or our facilities or networks; or
+* we reasonably believe that there is an emergency or extreme circumstance that would warrant such action.
 
 **36. What are my obligations if my Service(s) are cancelled or transferred to another provider?**
 
@@ -310,10 +271,8 @@ If you cancel a Service that is subject to a Fixed Term prior to its expiry, or 
 KOS may, at its sole discretion, restore your Services, with or without conditions that may include:
 
 1. Full repayment of outstanding amounts owing to KOS;
-
-1. Compensation for costs incurred by KOS in connection with your breach of the Service Terms, including costs incurred to enforce your compliance; or
-
-1. Changes to your Fees on an ongoing basis
+2. Compensation for costs incurred by KOS in connection with your breach of the Service Terms, including costs incurred to enforce your compliance; or
+3. Changes to your Fees on an ongoing basis
 
 ##### ADDITIONAL TERMS
 
@@ -325,7 +284,7 @@ Yes. By entering into this Agreement, you represent and warrant that you have re
 
 If you have a dispute about Services, Software, about this Agreement, or about what we say outside this Agreement, then we want to resolve the dispute quickly and fairly, and will work with you in good faith to do so. If you have tried to work with us but remain unsatisfied, then you have a right to escalate the dispute.
 
-If you are a consumer or small business with a monthly bill under $2500, you may escalate certain types of complaints externally with the Commissioner for Complaints for Telecom-Television Service (“CCTS”) (www.ccts-cprst.ca, 1-888-221-1687). The CCTS is the telecommunications consumer agency designated by the CRTC to resolve consumer and small business disputes about telecommunications services. The CCTS accepts complaints relating to service delivery, contract disputes, billing, credit management and unauthorized transfers of service.
+If you are a consumer or small business with a monthly bill under $2500, you may escalate certain types of complaints externally with the Commissioner for Complaints for Telecom-Television Service (“CCTS”) ([www.ccts-cprst.ca](www.ccts-cprst.ca "CCTS Website"), 1-888-221-1687). The CCTS is the telecommunications consumer agency designated by the CRTC to resolve consumer and small business disputes about telecommunications services. The CCTS accepts complaints relating to service delivery, contract disputes, billing, credit management and unauthorized transfers of service.
 
 With the exception of billing disputes, which are resolved exclusively through the process described in Section 10 of these Service Terms, any unresolved dispute may also be referred to voluntary single arbitrator arbitration. In such event, the fees for the arbitrator shall be shared equally by the parties.
 
@@ -357,29 +316,25 @@ To contact KOS for any reason, including providing notices to KOS pursuant to th
 
 For Customers in Kingston and surrounding areas, you may reach us:
 
-- By Phone, locally: 613-549-8667
+* By Phone, locally: 613-549-8667
+* By email: <Link href="mailto:accounts@kos.net">accounts@kos.net</Link>
+* By Mail:
 
-- By email: <Link href="mailto:accounts@kos.net">accounts@kos.net</Link>
+     The LaSalle Mews
 
-- By Mail:
+     303 Bagot Street, 16A
 
-&ensp;&ensp;&ensp;&ensp;&ensp;The LaSalle Mews
-
-&ensp;&ensp;&ensp;&ensp;&ensp;303 Bagot Street, 16A
-
-&ensp;&ensp;&ensp;&ensp;&ensp;Kingston, ON K7K 5W7
+     Kingston, ON K7K 5W7
 
 For Customers in Belleville and surrounding areas, you may reach us:
 
-- By Phone, locally: 613-968-7137
+* By Phone, locally: 613-968-7137
+* By email: [accounts@kos.net](mailto:accounts@kos.net "accounts@kos.net")
+* By mail:
 
-- By email: <Link href="mailto:accounts@kos.net">accounts@kos.net</Link>
+     183 Front Street
 
-- By mail:
-
-&ensp;&ensp;&ensp;&ensp;&ensp;183 Front Street
-
-&ensp;&ensp;&ensp;&ensp;&ensp;Belleville, ON K8N 2Y9
+     Belleville, ON K8N 2Y9
 
 **46. How do I contact KOS for technical support?**
 
@@ -399,16 +354,16 @@ Yes. KOS will contact you by phone or email if you exceed your monthly data allo
 
 Here are some helpful estimates associated with common applications of Internet services:
 
-|                              | **Data use estimate**                     |
-| ---------------------------- | ----------------------------------------- |
-| **Emails**                   | 50-300 KB each                            |
-| **SD photos**                | 100-500 KB each                           |
-| **HD photos**                | 4 MB each                                 |
-| **SD video streaming**       | 1,000 MB per hour                         |
-| **HD video streaming**       | 3,000 MB per hour                         |
-| **4k / UHD video streaming** | 10,000 MB + per hour                      |
-| **Streaming audio**          | 100 MB per hour                           |
-| **Online gaming**            | 50-100 MB per hour                        |
-|                              | _(1 Megabyte “MB” = 1024 Kilobytes “KB”)_ |
+|  | Data use estimate |
+| --- | --- |
+| Emails | 50-300 KB each |
+| SD photos | 100-500 KB each |
+| HD photos | 4 MB each |
+| SD video streaming | 1,000 MB per hour |
+| HD video streaming | 3,000 MB per hour |
+| 4k / UHD video streaming | 10,000 MB + per hour |
+| Streaming audio | 100 MB per hour |
+| Online gaming | 50-100 MB per hour |
+|  | (1 Megabyte “MB” = 1024 Kilobytes “KB”) |
 
 _These estimates are intended as a guideline and actual use may vary._
