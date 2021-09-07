@@ -16,7 +16,7 @@ const Column = ({ children }: { children?: any }) => (
 export default function Header({ useMaxWidth }: { useMaxWidth?: boolean }) {
   return (
     <header id="top" className={useMaxWidth ? "max-w-7xl mx-auto" : ""}>
-      <div className="flex flex-col items-center justify-between w-full mx-auto space-y-6 lg:p-6 md:space-y-0 md:flex-row">
+      <div className="flex flex-col items-center justify-between w-full mx-auto space-y-6 md:items-end lg:p-6 md:space-y-0 md:flex-row">
         <Column>
           <Link href="/" className="md:max-w-[250px] lg:max-w-full">
             <img
@@ -27,9 +27,9 @@ export default function Header({ useMaxWidth }: { useMaxWidth?: boolean }) {
             />
           </Link>
         </Column>
-
-        <OrderNowButton />
-
+        <div className="md:flex md:items-center md:h-22">
+          <OrderNowButton />
+        </div>
         <Column>
           <div className="flex flex-col group">
             <div className="flex mb-1 text-3xl text-gray-700">
