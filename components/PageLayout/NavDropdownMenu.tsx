@@ -39,12 +39,12 @@ export default function NavDropdownMenu() {
         {/* OutsideAlerter is for the mobile menu --
         close with toggle or by clicking outside */}
         {/*as="nav"*/}
-        <nav role="navigation" className="flex flex-col items-center">
+        <nav role="navigation" className="flex flex-col items-center mt-4 mb-6">
           <button
             type="button"
             aria-label="Toggle Menu"
             onClick={() => onToggleNav()}
-            className="flex mx-auto my-4 text-2xl sm:hidden"
+            className="flex mx-auto text-2xl font-semibold sm:hidden"
           >
             <div className="w-8 h-8 text-black rounded fill-current">
               <svg
@@ -74,7 +74,7 @@ export default function NavDropdownMenu() {
           <div
             className={classNames(
               navIsOpen ? "flex" : "hidden sm:flex",
-              "justify-around sm:max-w-lg flex-wrap px-4 py-6 mx-auto lg:max-w-full w-full sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              "justify-around sm:max-w-lg flex-wrap px-4 mx-auto lg:max-w-full w-full sm:px-6 lg:px-8 group bg-white rounded-md text-base font-medium hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             )}
           >
             {NAVIGATION_MENU.map(
