@@ -1,5 +1,3 @@
-import ImageFixed from "next/image"
-
 import NavDropdownMenu from "@/components/PageLayout/NavDropdownMenu"
 import OrderNowButton from "@/components/Pricing/OrderNowButton"
 import Link from "@/components/Utils/CustomLink"
@@ -21,7 +19,7 @@ export default function Header({ useMaxWidth }: { useMaxWidth?: boolean }) {
       <div className="flex flex-col items-center justify-between w-full mx-auto space-y-6 lg:p-6 md:space-y-0 md:flex-row">
         <Column>
           <Link href="/" className="md:max-w-[250px] lg:max-w-full">
-            <ImageFixed
+            <img
               src="/assets/images/news/logo.png"
               alt="Logo for Kingston Online Services (KOS), an Internet Service Provider serving Kingston and Belleville, Ontario"
               height="125"
