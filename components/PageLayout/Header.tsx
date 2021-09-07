@@ -63,7 +63,7 @@ export default function Header({ useMaxWidth }: { useMaxWidth?: boolean }) {
                 </table>
               </div>
             </div>
-            <div className="text-xs font-bold text-right text-blue-800 uppercase lg:text-base">
+            <div className="text-base font-bold text-right text-blue-800 uppercase md:text-sm lg:text-base">
               CALL &amp; DISCUSS YOUR INTERNET NEEDS
             </div>
           </div>
