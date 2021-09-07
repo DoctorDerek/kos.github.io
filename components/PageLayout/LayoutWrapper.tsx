@@ -6,7 +6,7 @@ const LayoutWrapper = ({ children }: { children?: any }) => {
   // but placing global styles here is clearer than in _app.tsx or document.tsx
   return (
     <div className="font-sans text-lg text-black bg-white">
-      <Header />
+      <Header useMaxWidth={true} />
       {children}
       <Footer />
     </div>
