@@ -1,6 +1,6 @@
 import ImageFixed from "next/image"
 
-import DropdownMenu from "@/components/PageLayout/NavDropdownMenu"
+import NavDropdownMenu from "@/components/PageLayout/NavDropdownMenu"
 import OrderNowButton from "@/components/Pricing/OrderNowButton"
 import Link from "@/components/Utils/CustomLink"
 import PhoneIcon from "@/data/material-icons/phone_black_48dp.svg"
@@ -71,7 +71,7 @@ export default function Header({ useMaxWidth }: { useMaxWidth?: boolean }) {
           </div>
         </Column>
       </div>
-      <DropdownMenu />
+      <NavDropdownMenu />
     </header>
   )
 }
