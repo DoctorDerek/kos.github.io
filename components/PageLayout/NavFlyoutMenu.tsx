@@ -79,7 +79,7 @@ export default function NavFlyoutMenu({
   }
 
   const LINK_STYLES = classNames(
-    "py-5 px-1 text-lg text-black uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
+    "py-5 px-1 text-xl text-black uppercase transition duration-150 ease-in-out hover:text-blue-800 w-full font-bold"
   )
 
   const currentPagePath = useCurrentPath()
