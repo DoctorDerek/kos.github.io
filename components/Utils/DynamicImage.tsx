@@ -31,10 +31,10 @@ export default function DynamicImage({
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  }, [dynamicImageRef])
 
   if (!src) return null // i.e. no featuredImage
-  if (!alt && !src && !width && !height) {
+  if (!alt || !src || !width || !height) {
     throw new Error(
       `All attributes except "fullWidth" are required for the FeaturedImage type, but {src: "${src}", alt: "${alt}", width: "${width}", height: "${height}"} was found. Please correct the Markdown file.`
     )
