@@ -21,7 +21,7 @@ export default function CustomImage({
   className = "object-cover", // Assume dynamic sizing
   sizes = ValidSizes.screen, // Next.js default, 100vw
   quality = "75", // Next.js default, 75/100
-  preload = "", // Next.js default, off
+  preload = "false", // Next.js default, false
 }: {
   src: string
   alt: string
@@ -38,10 +38,12 @@ export default function CustomImage({
     )
   }
 
+  if (!className) className = "object-cover" // default className
   // Add object-cover to className if other classes were added like rounded-full
-  if (className !== "object-cover") {
-    className = classNames(className ? className : "", "object-cover")
+  if (typeof className === "string" && !className.includes("object-")) {
+    className = classNames(className, "object-cover")
   }
+  // Note: Other object- classNames such as object-contain are allowed here.
 
   // We need a wrapper div with position: relative for dynamic sizing
   return (
