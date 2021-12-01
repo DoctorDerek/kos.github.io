@@ -1,4 +1,4 @@
-# [`kos-github-io.vercel.app`](kos-github-io.vercel.app) by @DoctorDerek
+# [`kos-github-io.vercel.app`](https://kos-github-io.vercel.app) by @DoctorDerek
 
 ⚠ WIP Site - Will Launch Q1 2022
 
