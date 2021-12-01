@@ -1,6 +1,6 @@
 # [`kos-github-io.vercel.app`](kos-github-io.vercel.app) by @DoctorDerek
 
-⚠ WIP Site - Will Launch July 2021
+⚠ WIP Site - Will Launch Q1 2022
 
 ---
 
